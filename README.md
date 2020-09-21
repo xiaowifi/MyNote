@@ -60,7 +60,7 @@
 
 [github 主页](https://github.com/xiaowifi)
 
-[csdn 主页]()
+[csdn 主页](https://blog.csdn.net/u013962582)
+<span  style="color: #89c3eb; ">最近打算在CSDN 上写笔记。掘金也投放吧</span>
 
-[简书主页]()
 
