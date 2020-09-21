@@ -30,7 +30,7 @@
 
 ### Android
 
-[JAVA 部分修饰符笔记](https://juejin.im/post/6874857460092534791)
+[JAVA 部分修饰符笔记](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/Android/Java%20%E4%BF%AE%E9%A5%B0.md)
 
 
 
