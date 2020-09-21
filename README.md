@@ -1,3 +1,5 @@
+![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
+
 # 介绍
 
 > 当前项目为了总结各种知识点创建的图床。[当前地址](https://gitee.com/lalalaxiaowifi/pictures) 。主要用于博客中图片的存储等。
@@ -8,7 +10,7 @@
 
 ## 未完成
 
-[Android 中 content来源详解]()
+[Android中content来源]()
 
 [Android sqlite room 相关使用]()
 
@@ -18,9 +20,11 @@
 
 [android debug]()
 
-[android 传参]()
-
 [android gradle 参数]()
+
+[android ragmentManger]()
+
+[Android关于界面传参与activity与嵌套fragment传参设想]()
 
 ## 已经完成
 
