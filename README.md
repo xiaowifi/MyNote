@@ -18,7 +18,7 @@
 
 [SharedPreferences 多xml 实现与单xml 实现]()
 
-[android debug]()
+[android debug](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/Android/android%E5%BC%80%E5%90%AFdebug.md)
 
 [android gradle 参数]()
 
@@ -43,7 +43,8 @@
 [日常搬砖系列sqlite目录](https://juejin.im/post/6868506837000388615)
 
 
-
+### 其他
+[gitee+picgo 图床上传图片404]()
 
 
 # 其他链接
