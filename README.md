@@ -63,5 +63,7 @@
 
 [csdn 主页](https://blog.csdn.net/u013962582)
 <span  style="color: #89c3eb; ">最近打算在CSDN 上写笔记。掘金也投放吧</span>
+### 更新说明
+可能放多个平台，所以可能有的没有更新到。所以优先更新gitee本网站上面的内容。
 
 

@@ -26,7 +26,13 @@
 本篇我们也就主要是介绍下打断点。可能出现的问题。
 
 - debug 版本运行不到手机上。重新编译项目或者删除主项目下 build文件（不要删除错了），还有重新导入编译项目，一般就可以运行到手机上了。
+
+- 
+
 - idea 左边栏有一个 Build variants 工具（可能在其他位置）可以切马甲包配置或者release，debug等。![](https://i.loli.net/2020/09/22/SJHqoW5upjYnTPK.png)
+
+  同一个APP 下版本应该是一致的。切成同一个版本就好了。
+
 - release 版本是无法运行debug的。
 
 ![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20200921174309.png)主要使用的工具。attach debugger to  android  process。现在打断点分为两种：
@@ -35,6 +41,40 @@
 - 直接运行debug 版本，然后在需要进入debug 位置之前打断点，开启上面工具。
 
 个人还是比较推荐后面这种的。
+
+#### 直接打断点运行
+
+比如我写一个for 循环，像这个样子。
+
+```
+private void debug() {
+    int k=0;
+    for (int i=0;i<100;i++){
+        k=k+i;
+    }
+}
+```
+
+然后我直接代码上打断点。
+
+![](https://i.loli.net/2020/09/22/HLgoWqGate7kSYM.png)
+
+ 通过debug 直接运行。![](https://i.loli.net/2020/09/22/vZwCp7H6e4cbqDf.png)
+
+当运行到断点的代码块的时候就会进入断点。可以在底部的工具栏debug 中找到类似下面的图片。
+
+![](https://i.loli.net/2020/09/22/l12U4tsxvEPJoSq.png)
+
+下面我们对上面的按钮进行简单的介绍：用鼠标悬浮到按钮上面会提示英文的，我就再重复下。
+
+1. step over 
+2.  step into
+3.  Force step into 
+4.  Step out 
+5.  Run to cursor
+6.   打断点代码对象内容等。
+7.  resume program 
+8.  停止断点
 
 
 
