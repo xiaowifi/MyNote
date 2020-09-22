@@ -10,7 +10,7 @@
 
 我是通过 picgo+ gitee  图床的。这个教程很多，都写的蛮好的，就不贴了。今天准备认真工作<img src="https://i.loli.net/2020/09/22/RMG8JalA42dPnos.png" style="zoom:33%;" />的时候，发现图床上传不了图片，抛了一个404。具体log 稍后再贴。原因也很简单。gitee 的图床插件有两个。![](https://i.loli.net/2020/09/22/Fk4L7ejxmNXDIqz.png)
 
-我最开始用的是第一个，也就是![image-20200922102459594](/Users/yangfan/Library/Application Support/typora-user-images/image-20200922102459594.png) 第一天使用的时候是没有问题的。
+我最开始用的是第一个，也就是![](https://i.loli.net/2020/09/22/iCdSZHzjOxBGK3E.png) 第一天使用的时候是没有问题的。
 
 但是昨天404，我换成了另外一个就好了，今天又变成了第一个了？于是我把第一个禁用了，换成了第2个。
 
