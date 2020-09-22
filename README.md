@@ -44,7 +44,7 @@
 
 
 ### 其他
-[gitee+picgo 图床上传图片404]()
+[gitee+picgo 图床上传图片404](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/%E5%85%B6%E4%BB%96/gitee%20%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87404.md)
 
 
 # 其他链接
