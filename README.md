@@ -24,7 +24,7 @@
 [android ragmentManger]()
 
 [Android关于界面传参与activity与嵌套fragment传参设想]()
-[如何基于gitee pages 搭建一个属于自己的个人主页]()
+[如何基于gitee pages 搭建一个属于自己的个人主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/%E5%85%B6%E4%BB%96/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee%20pages%20%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5.md)
 
 ## 已经完成
 
