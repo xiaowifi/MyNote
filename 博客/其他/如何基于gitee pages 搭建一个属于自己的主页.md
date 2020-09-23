@@ -50,9 +50,19 @@
 
 本地是可以打开的。我没有修改的情况下，直接更新到gitee上面，通过gitee给我生成的域名打开。
 
+![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20200923161425.png)
 
+Emmmm?  好像可以，如果打开的网页没有更新到，需要清理下浏览器缓存就好了。
+
+我们来看一下这个网页的结构：
+
+![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20200923161634.png)
+
+支持多html结构，css,js 等都可以放到外面。emmmm？vue  那是不是也行？ vue 提供的单页应用是不是也可以？这个就需要自己验证了，毕竟我不会这个。我看了下这个界面的代码，这div 太多了吧。我感觉我不行，我还是适合 用下面的博客主页生成工具。
 
 ### Jekyll
+
+既然自己写静态网页对于我这种小白而言太复杂了，那么用博客主页生成工具就可以了，毕竟鲁迅曾经说过"成年人最大的有点就是及时止损"。
 
 ### Hugo
 
