@@ -18,7 +18,7 @@
 
 [SharedPreferences 多xml 实现与单xml 实现]()
 
-[android debug](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/Android/android%E5%BC%80%E5%90%AFdebug.md)
+[android 开启debug之路](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/Android/android%E5%BC%80%E5%90%AFdebug.md)
 
 [android gradle 参数]()
 
