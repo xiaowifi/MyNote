@@ -24,6 +24,7 @@
 [android ragmentManger]()
 
 [Android关于界面传参与activity与嵌套fragment传参设想]()
+[如何基于gitee pages 搭建一个属于自己的个人主页]()
 
 ## 已经完成
 
@@ -62,8 +63,5 @@
 [github 主页](https://github.com/xiaowifi)
 
 [csdn 主页](https://blog.csdn.net/u013962582)
-<span  style="color: #89c3eb; ">最近打算在CSDN 上写笔记。掘金也投放吧</span>
-### 更新说明
-可能放多个平台，所以可能有的没有更新到。所以优先更新gitee本网站上面的内容。
 
-
+[基于gitee pages的个人主页](http://lalalaxiaowifi.gitee.io/pictures)
