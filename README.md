@@ -18,7 +18,6 @@
 
 [SharedPreferences 多xml 实现与单xml 实现]()
 
-[android 开启debug之路](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/Android/android%E5%BC%80%E5%90%AFdebug.md)
 
 [android gradle 参数]()
 
@@ -32,6 +31,7 @@
 
 [JAVA 部分修饰符笔记](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/Android/Java%20%E4%BF%AE%E9%A5%B0.md)
 
+[android 开启debug之路](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/Android/android%E5%BC%80%E5%90%AFdebug.md)
 
 
 
