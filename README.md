@@ -46,7 +46,14 @@
 
 ### 其他
 [gitee+picgo 图床上传图片404](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/%E5%85%B6%E4%BB%96/gitee%20%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87404.md)
+### Gitee pages Jekyll、Hugo、Hexo
+[基于html拥有自己的主页]()
 
+[基于Jekyll拥有自己的主页]()
+
+[基于Hugo拥有自己的主页]()
+
+[基于Hexo拥有自己的主页]()
 
 # 其他链接
 
@@ -54,6 +61,7 @@
 
 [android  google 官网](https://developer.android.google.cn/)
 
+[Gitee pages 官方文档](https://gitee.com/help/articles/4136#article-header0) 
 
 
 ## 博客
