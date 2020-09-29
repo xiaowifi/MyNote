@@ -3,10 +3,10 @@
   <channel>
     <title>luoye@yangfan</title>
     <description>欢迎来到我的个人站~</description>
-    <link>http://localhost:4000/jekyllBlog/_site/</link>
-    <atom:link href="http://localhost:4000/jekyllBlog/_site/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Sep 2020 16:17:16 +0800</pubDate>
-    <lastBuildDate>Tue, 29 Sep 2020 16:17:16 +0800</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 29 Sep 2020 16:21:18 +0800</pubDate>
+    <lastBuildDate>Tue, 29 Sep 2020 16:21:18 +0800</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
     
       <item>
@@ -16,8 +16,8 @@
 &lt;p&gt;2&lt;/p&gt;
 </description>
         <pubDate>Tue, 29 Sep 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/jekyllBlog/_site/2020/09/%E6%B5%8B%E8%AF%95Demo2/</link>
-        <guid isPermaLink="true">http://localhost:4000/jekyllBlog/_site/2020/09/%E6%B5%8B%E8%AF%95Demo2/</guid>
+        <link>http://localhost:4000/2020/09/%E6%B5%8B%E8%AF%95Demo2/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/09/%E6%B5%8B%E8%AF%95Demo2/</guid>
         
         <category>debug</category>
         
@@ -29,8 +29,8 @@
         <description>&lt;p&gt;&lt;img src=&quot;https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20200923150601.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 29 Sep 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/jekyllBlog/_site/2020/09/%E6%B5%8B%E8%AF%95Demo/</link>
-        <guid isPermaLink="true">http://localhost:4000/jekyllBlog/_site/2020/09/%E6%B5%8B%E8%AF%95Demo/</guid>
+        <link>http://localhost:4000/2020/09/%E6%B5%8B%E8%AF%95Demo/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/09/%E6%B5%8B%E8%AF%95Demo/</guid>
         
         <category>debug</category>
         
@@ -419,7 +419,7 @@ tag: hexo
     
     
     &amp;lt;li class=&quot;next&quot;&amp;gt;
-        &amp;lt;a href=&quot;/jekyllBlog/_site/2020/09/%E6%B5%8B%E8%AF%95Demo/&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;测试Demo&quot;&amp;gt;下一篇：  &amp;lt;span&amp;gt;测试Demo&amp;lt;/span&amp;gt;
+        &amp;lt;a href=&quot;/2020/09/%E6%B5%8B%E8%AF%95Demo/&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;测试Demo&quot;&amp;gt;下一篇：  &amp;lt;span&amp;gt;测试Demo&amp;lt;/span&amp;gt;
         &amp;lt;/a&amp;gt;
     &amp;lt;/li&amp;gt;
     
@@ -509,8 +509,8 @@ tag: hexo
 &lt;p&gt;&lt;a href=&quot;http://lalalaxiaowifi.gitee.io/pictures&quot;&gt;基于gitee pages的个人主页&lt;/a&gt; 这个还是没有整出来。&lt;/p&gt;
 </description>
         <pubDate>Tue, 29 Sep 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/jekyllBlog/_site/2020/09/%E5%9F%BA%E4%BA%8EGitee-pages+Jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
-        <guid isPermaLink="true">http://localhost:4000/jekyllBlog/_site/2020/09/%E5%9F%BA%E4%BA%8EGitee-pages+Jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+        <link>http://localhost:4000/2020/09/%E5%9F%BA%E4%BA%8EGitee-pages+Jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/09/%E5%9F%BA%E4%BA%8EGitee-pages+Jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
         
         <category>其他</category>
         

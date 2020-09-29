@@ -7,7 +7,7 @@ avatarTitle: luoye
 # 头像里面的描述
 avatarDesc: android/java/搬砖
 url: ""
-baseurl: "/jekyllBlog/_site" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 # 博客是否自动生成目录，false为不生成
 enableToc: true
 
