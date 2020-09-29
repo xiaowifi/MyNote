@@ -31,8 +31,6 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
 
 我的是mac 环境。
 
-![image-20200928092758280](/Users/yangfan/Library/Application Support/typora-user-images/image-20200928092758280.png)
-
 这个是要Xcode ? 我一个Android  搬砖工，也没有安装这个调调啊，我觉得我的IDEA可以完成这个调调。那么直接[IDEA 插件官网](https://plugins.jetbrains.com/)。[IDEA Ruby 插件 ](https://plugins.jetbrains.com/plugin/1293-ruby)  根据自己的IDEA 版本号下载对应的版本就好，版本对不上就安装不了。然后自己将下载下来的插件安装到自己的idea 里面就好。然后就是用IDEA自身功能下载sdk就好。然后创建一个Ruby的空项目，创建一个Ruby文件。配置ruby的运行项中的sdk ：
 
 ![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20200928103005.png)
