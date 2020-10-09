@@ -54,7 +54,7 @@
 [gitee+picgo 图床上传图片404](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/%E5%85%B6%E4%BB%96/gitee%20%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87404.md)
 ### Gitee pages Jekyll、Hugo、Hexo
 [基于html拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/%E5%85%B6%E4%BB%96/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee%20pages%20%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5.md)
-
+[基于gitee pages+ jekyll主页Demo](http://lalalaxiaowifi.gitee.io/)
 # 其他链接
 
 [runoob 官网  ](https://www.runoob.com/) 
@@ -73,3 +73,4 @@
 [csdn 主页](https://blog.csdn.net/u013962582)
 
 [基于gitee pages的个人主页](http://lalalaxiaowifi.gitee.io/pictures)
+
