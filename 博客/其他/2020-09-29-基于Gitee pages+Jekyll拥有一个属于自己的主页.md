@@ -4,7 +4,7 @@ title: "基于Gitee pages +Jekyll 拥有一个属于自己的主页"
 date: 2020-09-29
 description: "其他"
 tag: 其他
----  
+​---  
 
 ![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
 
@@ -441,6 +441,9 @@ tag: debug
 ###  总结下
 
 感觉这个还行，比较简单。和Android DataBinding 很像。找一个主题，然后本地生成一下，更新到Gitee page,还是比较简单的。对于像我这种野路子，标签靠目录。文件没有时间头的，需要修改md 文件，整体来说，找到一个模板后，按照模板提供的东西改也蛮简单的。
+
+### 更新
+2020-10-10 更新一波，主要是才发现，gitee pages 好像一个个人账号只能显示一个主页，我把其他的关闭之后，非同名主页项目就显示不了。还是建议主页项目和gitee pages 项目一致比较好。如果可以放在非同名项目中，后期会更新一波。
 
 ## 结束
 
