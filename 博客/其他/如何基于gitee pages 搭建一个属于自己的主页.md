@@ -70,5 +70,3 @@ Emmmm?  好像可以，如果打开的网页没有更新到，需要清理下浏
 更新需要审核。更新通常优先更新到gitee上面。
 
 [博客目录](https://gitee.com/lalalaxiaowifi/pictures) 
-
-[基于gitee pages的个人主页](http://lalalaxiaowifi.gitee.io/pictures) 这个还没有设计出来。
