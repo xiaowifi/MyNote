@@ -6,14 +6,14 @@ description: 欢迎来到我的个人站~
 avatarTitle: luoye
 # 头像里面的描述
 avatarDesc: android/java/搬砖
-
-#baseurl: "/Blog/jekyllBlog/page"
+#url: "http://lalalaxiaowifi.gitee.io/pictures"
+baseurl: "/Blog/jekyllBlog"
 #baseurl: "/pictures/tree/master/jekyllBlog" # the subpath of your site, e.g. /blog
 # 博客是否自动生成目录，false为不生成
 enableToc: true
 
 # Comment
-#comment:
+#comment:do
     # livere: MTAyMC81MDk5NC8yNzQ3Ng  # https://www.livere.com
  #   disqus: luoye
     # uyan: 2143225  # 有言id,登录有言官网申请
