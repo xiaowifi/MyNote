@@ -1,10 +1,9 @@
----
 layout: post
 title: "基于Gitee pages +Jekyll 拥有一个属于自己的主页"
 date: 2020-09-29
 description: "其他"
 tag: 其他
-​---  
+---  
 
 ![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
 
@@ -82,8 +81,6 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
 #### 迷惑
 
 这个调调，我应该改那个文件，让他达到我想要的效果哦，那么我们就直接从github 上把他的所有代码拉下来，运行一下，应该就可以大概直到这个博客生成工具的一些东西了,但是很麻烦，毕竟创建myblog 的时候是有代码在里面的并不是空项目。到这里我们就可以还原修改后的部分了，或者删除myblog，然后新建一个。
-
----
 
 通过官网上提供的教程和demo，我们可以明显的看到。_config.yml 文件中的一些配置直接影响到整个界面的展示。比如说`theme: minima` 这个调调如果没有的话，整个界面就是白屏的，而我们上面使用的别人的主题也是修改这个值。如果将这个文件修改成：
 
