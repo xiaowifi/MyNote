@@ -26,9 +26,6 @@
 [Android关于界面传参与activity与嵌套fragment传参设想]()
 
 
-[基于Hugo拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8EGitee%20pages+Hugo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5.md)
-
-[基于Hexo拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8EGitee%20pages+Hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5.md)
 
 
 ## 已经完成
@@ -59,6 +56,8 @@
 [基于gitee pages+ jekyll主页Demo](http://lalalaxiaowifi.gitee.io/)
 
 [基于Hexo拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8EGitee%20pages+Hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5.md)
+
+[基于Hugo拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8EGitee%20pages+Hugo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5.md)
 
 # 其他链接
 
