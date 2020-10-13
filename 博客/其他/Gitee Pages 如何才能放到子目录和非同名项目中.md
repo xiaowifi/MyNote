@@ -75,6 +75,8 @@ baseurl: "/jekylldemo"
 
 因为是Android 搬砖工，对网页技术还是欠缺的，中途猜了很多问题，突然想到了，我适用的主题通常是基于github.github是不允许有这么骚的操作的，对于pages 是有固定的设置的。emmmm？那会不是是我baseurl 在代码中没有生效。我翻了好多博客，发现人家提供的教程就很简单，也没有出现我这种问题啊。那我直接整一个自带主题的那种项目上去？
 
+##### Jekyll 放到非同名项目根目录
+
 那就开整？
 
 Jekyll new myblog
@@ -95,19 +97,19 @@ Jekyll new myblog
 
 ____
 
-
+##### 将Jekyll放到非同名子目录
 
 问题来了，Jekyll的项目代码可以放到子目录下面执行吗？![](https://i.loli.net/2020/09/22/RMG8JalA42dPnos.png)
 
-那就开整？为了方便，那么我就直接将代码复制到pictures项目中。
+那就开整？为了方便，那么我就直接将代码复制到pictures项目中。当然baseurl还是需要改成pictures。然后更新，清除缓存。
 
+![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20201013153614.png)
 
+奈斯，运行成功。
 
+##### 直接运行jekyll编译后的文件
 
-
-#### 使用Jekyll生成文件作为主页
-
- 
+ 鲁迅曾经说过:"人能遇到的最大的问题，就是思想出了问题"。是吧，既然整，那就整完整，虽然现在已经快4点了，Jekyll 是可以生成静态网页的，Gitee Pages 是忽略了以下划线开头的文件夹的。那么将刚刚的生成的静态网页复制一份。
 
 
 
