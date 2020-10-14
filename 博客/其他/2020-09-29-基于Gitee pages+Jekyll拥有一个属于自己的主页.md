@@ -442,6 +442,8 @@ tag: debug
 ### 更新
 2020-10-10 更新一波，主要是才发现，gitee pages 好像一个个人账号只能显示一个主页，我把其他的关闭之后，非同名主页项目就显示不了。还是建议主页项目和gitee pages 项目一致比较好。如果可以放在非同名项目中，后期会更新一波。
 
+[Gitee Pages Jekyll如何才能放到子目录和非同名项目中](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/%E5%85%B6%E4%BB%96/Gitee%20Pages%20Jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD.md)
+后续更来了。
 ## 结束
 
 我感觉我这笔记也就图一乐，看官网还是比较好的，https://www.jekyll.com.cn/docs/usage/  毕竟真的很全面，完全可以按照自己的需求来整，因为我连需求都没有，所以就很迷茫，就很乱。

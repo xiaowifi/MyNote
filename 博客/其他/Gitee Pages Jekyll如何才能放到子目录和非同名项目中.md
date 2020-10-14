@@ -109,7 +109,7 @@ ____
 
 #### jekyll静态网页
 
- 鲁迅曾经说过:"人能遇到的最大的问题，就是思想出了问题"。是吧，既然整，那就整完整，虽然现在已经快4点了，Jekyll 是可以生成静态网页的，Gitee Pages 是忽略了以下划线开头的文件夹的。那么将刚刚的生成的静态网页复制一份。复制到shtml中，然后更新一下？部署目录：Blog/jekyllBlog/shtml
+ 鲁迅曾经说过:"普通人能遇到的最大的问题，就是思想出了问题"。是吧，既然整，那就整完整，虽然现在已经快4点了，Jekyll 是可以生成静态网页的，Gitee Pages 是忽略了以下划线开头的文件夹的。那么将刚刚的生成的静态网页复制一份。复制到shtml中，然后更新一下？部署目录：Blog/jekyllBlog/shtml
 
 ![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20201013154632.png)
 
