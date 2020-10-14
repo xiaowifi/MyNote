@@ -225,6 +225,9 @@ https://gitee.com/help/articles/4136#article-header1
 - 还是部署，部署到gitee 上面一直404。完全懵逼。和Jekyll 差不多，不进行配置，不是同名项目，根本就显示不了。比如说我的gitee 上面的名字叫：lalalaxiaowifi，那么我的主页的项目名也需要叫这个名字。
 
 容我把todo 都整完了再说，如果可以放到非同名网站上面，也会更新一波。
+## 更新
+2020-10-14 15:04:01 更新一波。
+[Hexo+Gitee pages进阶](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/%E5%85%B6%E4%BB%96/Hexo+Gitee%20pages%E8%BF%9B%E9%98%B6.md)
 
 ## 结束
 
