@@ -222,6 +222,10 @@ baseurl = "http://lalalaxiaowifi.gitee.io/"
 
 说一个个人感觉，我觉得hogo还是要比其他两个好一点。容我整理一波，毕竟hogo也就是了解，毕竟用别人的主题，提供Demo，和多主题切换什么的。
 
+## 更新
+2020-10-14 16:45:07 
+[Hugo+Gitee pages补充](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/%E5%85%B6%E4%BB%96/Hogo+Gitee%20pages%E8%BF%9B%E9%98%B6.md)
+
 ## 结束
 
 谢谢光临，若觉得还行麻烦点一下赞，若觉得写得垃圾，欢迎批评指正。笔者知道自己文笔和表达能力很弱，如果您可以提供点宝贵的意见不胜感激。谢谢。
