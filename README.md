@@ -25,7 +25,9 @@
 
 [Android关于界面传参与activity与嵌套fragment传参设想]()
 
+[Hexo+Gitee pages进阶](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/%E5%85%B6%E4%BB%96/Hexo+Gitee%20pages%E8%BF%9B%E9%98%B6.md)
 
+[Hugo+Gitee pages进阶](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/%E5%85%B6%E4%BB%96/Hogo+Gitee%20pages%E8%BF%9B%E9%98%B6.md)
 
 
 ## 已经完成
@@ -56,7 +58,6 @@
 [Gitee Pages Jekyll如何才能放到子目录和非同名项目中](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/%E5%85%B6%E4%BB%96/Gitee%20Pages%20Jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD.md)
 
 [基于Hexo拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8EGitee%20pages+Hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5.md)
-
 
 [基于Hugo拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/%E5%8D%9A%E5%AE%A2/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8EGitee%20pages+Hugo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5.md)
 
