@@ -1,0 +1,123 @@
+baseURL = "http://example.org/"#http://lalalaxiaowifi.gitee.io/pictures
+title = "主页"
+
+theme = "hugo-coder"
+
+languagecode = "cn"
+
+paginate = 20
+
+pygmentsstyle = "b2"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+disqusShortname = "luoye个人主页"
+
+[params]
+author = "luoye@yangfan"
+description = "luoye的个人主页，主要用于笔记整理"
+keywords = "blog,developer,personal"
+info = "个人笔记"
+avatarurl = "images/avatar.jpg"
+footercontent = "这个是我的个人主页，主要是用于笔记整理。技术类型的笔记会提交到博客网站，例如掘金，CSDN,简书等等。内容更新优先提供当前主页"
+
+dateformat = "January 2, 2006"
+
+hideFooter = false
+hideCredits = false
+hideCopyright = false
+since = 2019
+
+rtl = false
+
+# Specify light/dark colorscheme
+# Supported values:
+# "auto" (use preference set by browser)
+# "dark" (dark background, light foreground)
+# "light" (light background, dark foreground) (default)
+colorscheme = "auto"
+
+# Hide the toggle button, along with the associated vertical divider
+hidecolorschemetoggle = false
+
+# Series see also post count
+maxSeeAlsoItems = 5
+
+# Enable Twemoji
+enableTwemoji = true
+
+# Custom CSS
+customCSS = []
+
+# Custom SCSS
+customSCSS = []
+
+# Custom JS
+customJS = []
+
+
+# If you want to use goatcounter(https://goatcounter.com) for analytics, add this section
+[params.goatCounter]
+code = "code"
+
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+
+[[params.social]]
+name = "Github"
+icon = "fa fa-github"
+weight = 1
+url = "https://github.com/johndoe/"
+[[params.social]]
+name = "Gitlab"
+icon = "fa fa-gitlab"
+weight = 2
+url = "https://gitlab.com/johndoe/"
+[[params.social]]
+name = "Twitter"
+icon = "fa fa-twitter"
+weight = 3
+url = "https://twitter.com/johndoe/"
+[[params.social]]
+name = "LinkedIn"
+icon = "fa fa-linkedin"
+weight = 4
+url = "https://www.linkedin.com/in/johndoe/"
+[[params.social]]
+name = "Medium"
+icon = "fa fa-medium"
+weight = 5
+url = "https://medium.com/@johndoe"
+[[params.social]]
+name = "RSS"
+icon = "fa fa-rss"
+weight = 6
+url = "https://myhugosite.com/index.xml"
+rel = "alternate"
+type = "application/rss+xml"
+
+
+[menu]
+
+[[menu.main]]
+name = "关于"
+weight = 1
+url = "about/"
+
+[[menu.main]]
+name = "目录"
+weight = 2
+url = "posts/"
+
+[[menu.main]]
+name = "栏目"
+weight = 3
+url = "projects/"
+
+[[menu.main]]
+name = "联系我"
+weight = 5
+url = "contact/"
+
