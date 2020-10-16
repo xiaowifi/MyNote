@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>jekyll on 个人主页</title>
-    <link>https://example.com/tags/jekyll/</link>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/tags/jekyll/</link>
     <description>Recent content in jekyll on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jekyll&#43;Gitee pages 搭建个人主页</title>
-      <link>https://example.com/posts/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
       <description>前言 顺便推一下博客目录 。之前写过一个基于静态html的笔记。
 正文 Jekyll 既然自己写静态网页对于我这种小白而言太复杂了，那么用博客主页生成工具就可以了，毕竟鲁迅曾经说过&amp;quot;成年人最大的优点就是及时止损&amp;quot;。
 Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
@@ -28,10 +28,10 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
     
     <item>
       <title>Jekyll&#43;Gitee pages 搭建个人主页进阶</title>
-      <link>https://example.com/posts/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/</link>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/</guid>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/</guid>
       <description>前言 之前写了点gitee pages 相关的笔记。
 [基于html拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/如何基于gitee pages 搭建一个属于自己的主页.md)
 [基于Jekyll拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/2020-09-29-基于Gitee pages+Jekyll拥有一个属于自己的主页.md)

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>其他 on 个人主页</title>
-    <link>https://example.com/categories/%E5%85%B6%E4%BB%96/</link>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/categories/%E5%85%B6%E4%BB%96/</link>
     <description>Recent content in 其他 on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/%E5%85%B6%E4%BB%96/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/categories/%E5%85%B6%E4%BB%96/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jekyll&#43;Gitee pages 搭建个人主页</title>
-      <link>https://example.com/posts/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
       <description>前言 顺便推一下博客目录 。之前写过一个基于静态html的笔记。
 正文 Jekyll 既然自己写静态网页对于我这种小白而言太复杂了，那么用博客主页生成工具就可以了，毕竟鲁迅曾经说过&amp;quot;成年人最大的优点就是及时止损&amp;quot;。
 Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
