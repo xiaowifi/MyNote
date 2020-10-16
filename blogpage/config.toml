@@ -1,6 +1,6 @@
 # set `baseurl` to your root domain
 # if you set it to "/" share icons won't work properly on production
-baseurl = "http://lalalaxiaowifi.gitee.io/pictures/"  # Include trailing slash
+baseurl = ""  # Include trailing slash
 title = "个人主页"
 author = "luoye@yangfan"
 copyright = "Copyright © 2020-2099"

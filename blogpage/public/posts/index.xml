@@ -2,17 +2,136 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 个人主页</title>
-    <link>http://lalalaxiaowifi.gitee.io/pictures/posts/</link>
+    <link>/posts/</link>
     <description>Recent content in Posts on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>hexo&#43;Gitee pages 搭建个人主页</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <title>Android sqlite前言</title>
+      <link>/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%9B%AE%E5%BD%95/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <guid>/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%9B%AE%E5%BD%95/</guid>
+      <description>前言 话说现在已经2020年了，在Android 应用端上混混沌沌的搬砖已经3年多快4年了。之前也迷迷糊糊的写了些什么，但是却没有一个好一点的系列文章。大多数同行的评论都是&amp;quot;什么都懂一点，但是什么都不精&amp;quot;，还是蛮想改变这个现状的。所以打算认真写一个系列出来，因为最近在复习sqlite,想从各个大佬的项目中找到自己的不足。所以打算写一个sqlite的理解系列吧。
+sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite的时候并不需要导入jar或者aar 文件或者连接池等。
+  Android 中通过 SQLiteDatabase及其子类对表的创建，删除，改名，对内容的增删改查操作。同时可以获取版本号等其他操作。
+  Android 上使用sqlite是可以更改 sqlite 存在的位置的，但是默认是/data/data/PACKAGE NAME/DB NAME目录*（就像您在设备的内部存储空间中保存文件一样，Android 会将您的数据库存储在您应用的私有文件夹中。您的数据安全无虞，因为在默认情况下，其他应用或用户无法访问此区域。）*。
+  sqlite的更新和创建是在获取SQLiteDatabase的时候执行的（这个可以通过打印log知道）官方文档中提到*（SQLiteOpenHelper 类包含一组用于管理数据库的实用 API。当您使用此类获取对数据库的引用时，系统仅在需要时才执行可能需要长时间运行的数据库创建和更新操作，而不是在应用启动期间执行。您仅需调用 getWritableDatabase() 或 getReadableDatabase() 即可。）*
+  sqlite 的表不支持直接重命名表名。如果想要更改表的名字，需要将原表名设置一个临时表名，然后通过新表名创建表，然后删除零时表。
+  sqlite 只支持对表增加字段。如果需要删除字段，修改字段名，修改字段对应的类型，都需要通过创建新表，然后复制对应的数据到新表，再删除原表达到效果，这么一想，向表中增加字段也可以通过上面操作进行。
+  sqlite 更新是通过检测版本号进行的。
+  sqlite有一个sqlite_master 表，通过这个表可以查找所以表的表名，创建sql语句等。
+  sqlite 可以查看表的信息和字段 通过 PRAGMA table_info(student) 语句。
+  Cursir 使用完之后建议 执行cursor.close(); 关闭游标，但是SQLiteDatabase 不建议在SQLiteOpenHelper 中执行close() 方法，关闭了再同对象中使用可能会抛异常。同时再官方文档中提到（由于在数据库关闭时，调用 getWritableDatabase() 和 getReadableDatabase() 的成本比较高，因此只要您有可能需要访问数据库，就应保持数据库连接处于打开状态。通常情况下，最好在发出调用的 Activity 的 onDestroy() 中关闭数据库）。</description>
+    </item>
+    
+    <item>
+      <title>Android sqlite增删改查</title>
+      <link>/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/</guid>
+      <description>前言 日常搬砖sqlite目录 再目录中提到了一些东西，有兴趣可以点过去看一下，觉得还行麻烦点下赞。
+正文 第一步创建数据库 再目录文档中，引用了官方文档的一段话 SQLiteOpenHelper 类包含一组用于管理数据库的实用 API。当您使用此类获取对数据库的引用时，系统仅在需要时才执行可能需要长时间运行的数据库创建和更新操作，而不是在应用启动期间执行。您仅需调用 getWritableDatabase() 或 getReadableDatabase() 即可。
+  第一步应该是创建数据库文件。通过上面的引用可以知道 我们创建 数据库文件只需要 继承 SQLiteOpenHelper即可。而SQLiteOpenHelper的构造函数需要传入context，name，factory,version.通常情况下，我们创建数据库的时候只需要context，name，version，name 确定数据库文件的名字，version用于判断创建或更新数据库。
+  系统仅在需要时才执行可能需要长时间运行的数据库创建和更新操作，所以我们的创建表的sql语句是可以装到一个list 中的，当然也可以存放到一个map 中，通过表名+创建表的sql。只要我们不获取SQLiteDatabase 数据库就不会创建更新。
+  由于在数据库关闭时，调用 getWritableDatabase() 和 getReadableDatabase() 的成本比较高，因此只要您有可能需要访问数据库，就应保持数据库连接处于打开状态 * ，我们决定使用单例。
+  在onCreate 中通过execSQL();创建表。
+所以整个 SQLiteOpenHelper 可以长这个样子： ​
+1public class SqliteDBHelper extends SQLiteOpenHelper { 2 public static final String DATABASE_NAME = &amp;#34;base.db&amp;#34;; 3 public static final int DATABASE_VERSION = 1;//版本号 4 private static volatile SqliteDBHelper helper = null; 5 List&amp;lt;String&amp;gt; allTabs = new ArrayList&amp;lt;&amp;gt;();//这个存放所有的最新的SQL表。不同版本用户创建时候直接创建所以表。 6 7 private SqliteDBHelper(Context context) { 8 super(context, DATABASE_NAME, null, DATABASE_VERSION); 9 initAllSql(); 10 /*UpDateDao dao = new UpDateDao(getReadableDatabase(), allTabs); 11 dao.</description>
+    </item>
+    
+    <item>
+      <title>Android sqlite增删改查另类写法</title>
+      <link>/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E6%94%B9%E6%9F%A5%E5%8F%A6%E7%B1%BB%E5%86%99%E6%B3%95/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E6%94%B9%E6%9F%A5%E5%8F%A6%E7%B1%BB%E5%86%99%E6%B3%95/</guid>
+      <description>前言 啊哈，今天又更新了。接上一篇日常搬砖sqlite可用类型与存储类型 。
+顺便推一下日常搬砖sqlite目录
+之前又一篇博客提到了json 对象不仅仅可以通过对象class 解析，也可以解析成map.巧合的是sqlite 添加和更新需要的ContentValues 也是一个类似于map的结构。既然object 与map互转，同理可以解决 object可以和ContentValues 互相转化，是吧。还有一个点 cursor.getType(cursor.getColumnIndex(key)) 可以获取到值的type,所以开整。先总结下可能需要的逻辑。
+  ContentValues 也是一个类似于map的结构。 逻辑上object可以和ContentValues 互相转化 cursor.getType(cursor.getColumnIndex(key)) 可以获取到值的type。 通过反射可以获取到对应字段设定的type Cursor 获取到的type 包含 FIELD_TYPE_NULL，FIELD_TYPE_INTEGER，FIELD_TYPE_FLOAT，FIELD_TYPE_STRING，FIELD_TYPE_BLOB（ps:不要问我从哪里看到的，点开对应的class 都有） ContentValues 支持存放主要类型：String，Byte，Short，Integer，Long，Float，Double，Boolean，byte[]等。（ps:不要问我从哪里看到的，点开对应的class 都有）   正文 通过反射拿到所以的Field 1/** 2 * 获取所有的内容，解决父类中参数获取不到的bug 3 * @param object 4 * @return 5 */ 6private static Field[] getAllFieldsByObject(Object object){ 7 Class clazz = object.getClass(); 8 List&amp;lt;Field&amp;gt; fieldList = new ArrayList&amp;lt;&amp;gt;(); 9 while (clazz != null){ 10 fieldList.</description>
+    </item>
+    
+    <item>
+      <title>Android sqlite更新</title>
+      <link>/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E6%9B%B4%E6%96%B0/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E6%9B%B4%E6%96%B0/</guid>
+      <description>前言 顺便推一下日常搬砖sqlite目录
+这个目录里面有sqlite 初始化 增删改查等一些东西，我们就接着这个系列讲数据库更新，之前我们数据库更新判断是通过版本号进行的。而且有一个问题哈，如果我有1，2，3，4，5，共5个版本，通过为了分别应对每个版本，onUpgrade这个方法里面要写很长的东西，简单粗暴的方式当然就是用户强制升级到最新版本，那么我们就只需要处理最新版本的事情了，问题是每一次升级不都是当前最新版本吗？开发阶段中，通过数据库版本号升级要写一大堆逻辑，卸载的化数据又没有了。于是比较懒的我就开始思考一个问题，我每次用之前检测一次是否一致不就好了？那么就需要准备需要的理论知识了、
+ 系统仅在需要时才执行可能需要长时间运行的数据库创建和更新操作，而不是在应用启动期间执行。您仅需调用 getWritableDatabase() 或 getReadableDatabase() 即可。（这个获取运行时） sqlite 的表不支持直接重命名表名。如果想要更改表的名字，需要将原表名设置一个临时表名，然后通过新表名创建表，然后删除零时表。 sqlite 只支持对表增加字段。如果需要删除字段，修改字段名，修改字段对应的类型，都需要通过创建新表，然后复制对应的数据到新表，再删除原表达到效果，这么一想，向表中增加字段也可以通过上面操作进行。 sqlite有一个sqlite_master 表，通过这个表可以查找所以表的表名，创建sql语句等。 sqlite 可以查看表的信息和字段 通过 PRAGMA table_info(student) 语句。 cursor.getColumnNames()。  正文 通过上面的理论依据，我觉得下面的理论是可行的。
+  在获取SQLiteDatabase 之后立即运行一次更新检测逻辑。
+  将创建表的sql语句通过list 或者map 存储起来。
+  通过sqlite_master获得表名和创建语句
+  通过创建sql与sqlite_master获得的创建sql语句对比，同时优先判断是否有创建的表名。
+  如果没有则创建表，如果有比对创建sql是否一致。如果创建sql不一致，将原表名重命名为临时表，然后通过创建表，将原表中的数据通过ContentValues取出，赋值到创建表中，然后删除临时表。
+  这么写有一个逻辑问题，如果表中的一个字段修改类型之后，可能导致插入失败。建议参考 日常搬砖sqlite可用类型与存储类型，所以不建议对字段修改类型，汉语博大精深换一个名字我觉得是可以的。
+  如果忽略6这一点，那么我们的sqlite 启动检查更新的逻辑还是行得通的，毕竟只是对表名和表创建sql进行比对，这个还是很快的。当然性能肯定没有版本号更新好，但是胜在简单粗暴。ps(这只是一种思路，我孤陋寡闻的，反正我的没有见过别人这么写过，毕竟性价比太低了，还是应该老老实实的更新版本号的)那么就可以开整。
+通过sqlite_master 获取表名和创建sql 1public Map&amp;lt;String,String&amp;gt; getAllTabs() { 2 Map&amp;lt;String,String&amp;gt; map=new HashMap&amp;lt;&amp;gt;(); 3 String sql = &amp;#34; SELECT * FROM sqlite_master WHERE type = &amp;#39;table&amp;#39;&amp;#34;;//PRAGMA table_info(student) 这个也可以查询表信息。但是只能针对某一个知道表名的表。 4 Cursor cursor = db.</description>
+    </item>
+    
+    <item>
+      <title>Android sqlite约束</title>
+      <link>/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%BA%A6%E6%9D%9F/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%BA%A6%E6%9D%9F/</guid>
+      <description>前言 顺便推一下日常搬砖sqlite目录 。
+接着上面的写，之前有写到使用sqlite 实现增删改查等简单使用。sqlite是一个关系型数据库，既然是数据库那么它就一定不会这么简单了，是吧，要不然就没有专门做数据库设计的岗位了。当然了在Android上的应用通常可能没有这么复杂。那么简单的约束还是可以了解下的。毕竟我们可能不会做出超出我们逻辑认知的操作。如果想要实现某个功能，那么知道当前工具是否可以是很有必要的吧。
+正文 那么我们就直接上菜，Android 上无论是room 还是greendao，都是基于sqlite提供服务的，他们实现的sqlite 就必定有，是吧。我们知道一个表的设计包括 表名，字段名，字段名对应的类型（必须），字段名对应的其他约束。
+类型 之前有一篇文章关于sqlite可用类型与存储类型. 在这里就不再次描述了。
+约束 runoob sqlite  本文中大多数都是基于该教程，这个还是可以看一下的。SQLite 约束
+  primary key: 唯一标识数据库表中的各行/记录
+  autoincrement :自增 通常用于 int类型的字段。
+  NOT NULL:确保某列不能有 NULL 值
+  DEFAULT :当某列没有指定值时，为该列提供默认值
+  UNIQUE 约束：确保某列中的所有值是不同的.
+  CHECK 约束：CHECK 约束确保某列中的所有值满足一定条件。
+算了，感觉自己写的没有别人提供的约束教程好，这个就当做笔记算了，直接查看 上面的教程吧。心态有点难受。
+  结束 谢谢光临，若觉得还行麻烦点一下赞，若觉得写得垃圾，欢迎批评指正。笔者知道自己文笔和表达能力很弱，如果您可以提供点宝贵的意见不胜感激。谢谢。
+今天也可以是元气满满的一天哦。</description>
+    </item>
+    
+    <item>
+      <title>Android基础数据类型与sqlite存储类型</title>
+      <link>/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%8F%AF%E7%94%A8%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%8F%AF%E7%94%A8%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/</guid>
+      <description>前言 之前又一篇文章上讲到 cursor.getType(cursor.getColumnIndex(key)) 可以获取到对应值的类型，通过cursor 类可以知道，cursor 就提供了4种类型。而ContentValues 定义了不止4总类型，sqlite的插入与更新都可以通过ContentValues 对象进行操作的。目录地址
+ cursor 定义了4种类型 ContentValues 定义了不止4总类型 sqlite 插入更新都可以通过 ContentValues 对象进行 问题1：sqlite 在创建表的时候是否支持所以的ContentValues 定义类型。 问题2:sqlite 支持的类型 对应了cursor中的哪些类型。 有一个教程博客写的很清晰runoob SQLite 数据类型  安利一个软件sqlitestudio。/data/data/PACKAGE NAME/ 是sqlite 默认存储路径。
+正文 创建sqlite表 ContentValues 支持存放主要类型：String，Byte，Short，Integer，Long，Float，Double，Boolean，byte[]等。那么创建sql，我们知道 string 是通过varchar 存储。不知道直接写string 是否可以创建表。
+1 create table if not exists all_content_values ( _id Integer primary key autoincrement , string_key String, byte_key Byte,short_key Short ,long_key Long, float_key Float,double_key Double,Boolean_key Boolean,byte_array byte[] ) if not exists 这个是用于防止表重复创建。</description>
+    </item>
+    
+    <item>
+      <title>Android开启Debug</title>
+      <link>/posts/android/android%E5%BC%80%E5%90%AFdebug%E4%B9%8B%E8%B7%AF/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/android/android%E5%BC%80%E5%90%AFdebug%E4%B9%8B%E8%B7%AF/</guid>
+      <description>前言 电脑不是太好。现在用的也仅仅是mac air 1.8 GHz 双核Intel Core i5 8 GB 1600 MHz DDR3。电脑情况不是太好，需要经常清理缓存啊，运行代码量稍微大一点的项目就感觉慢。打算明年换一个好一点的。所以我本人是比较倾向于插件化和aar的使用的，fragment 使用比重也很高，毕竟只要写好了模板，debug功能还是比activity 简单些。
+说回正题。Android debug 模式也不多，常用的一般分为：
+ 打印log 打断点 测试代码 让测试复现bug 等  顺便推一下博客目录
+正文 打印log ​	这种情况，一般是检查参数或者接口的时候，如果电脑不怎么行，打log 电脑也不怎么卡，打断点可能就卡了。
+但是呢，string 虽说够长，但是log 的打印是有长度限制的。万一log体长度超出了怎么办？只能代码截取分log 打印了。像这种网络上还是蛮多的。
+打断点 本篇我们也就主要是介绍下打断点。可能出现的问题。
+先介绍下图标1是run（运行，如果手机上没有安装当前app 这个应该是三角形）.2是debug,3是attach debugger to android process。
+  debug 版本运行不到手机上。重新编译项目或者删除主项目下 build文件（不要删除错了），还有重新导入编译项目，一般就可以运行到手机上了。
+  idea 左边栏有一个 Build variants 工具（可能在其他位置）可以切马甲包配置或者release，debug等。同一个APP 下版本应该是一致的。切成同一个版本就好了。
+  release 版本是无法运行debug的。 如果使用release 版本debug 会提示:
+ Error running &#39;sqliteroom&#39; Cannot debug application from module sqliteroom on device huawei-lld_al00-MKJDU17C08001071.</description>
+    </item>
+    
+    <item>
+      <title>hexo&#43;Gitee pages 搭建个人主页</title>
+      <link>/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
       <description>前言 顺便推一下博客目录
 之前整过一个Jekyll和静态网页的主页笔记，最近换季，导致感冒拉肚子，又为国庆生等等耽搁了快一个月了，原本打算这个系列在一周内整出来的，结果到现在还有2个TODO未实现。那么本篇主要级hexo.先上文档官网：
 gitee pages 官方文档
@@ -40,10 +159,10 @@ Hexo 使用文档：https://hexo.io/docs/
     
     <item>
       <title>Hexo&#43;Gitee pages 搭建个人主页进阶</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/hexo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</link>
+      <link>/posts/%E5%85%B6%E4%BB%96/hexo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/hexo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</guid>
+      <guid>/posts/%E5%85%B6%E4%BB%96/hexo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</guid>
       <description>前言 之前整了一些笔记。
 [gitee+picgo 图床上传图片404](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/gitee 图床上传图片404.md)
 [基于html拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/如何基于gitee pages 搭建一个属于自己的主页.md)
@@ -63,10 +182,10 @@ Hexo 使用文档：https://hexo.io/docs/
     
     <item>
       <title>Hugo&#43;Gitee pages 搭建个人主页</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hugo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <link>/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hugo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hugo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <guid>/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hugo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
       <description>前言 之前整过一个静态网页，一个Jekyll，一个hexo.话说，如果我知道的不完整，我怎么才能知道什么才是适合自己的呢？那么，就开整。
 顺便推一下博客目录
 正文 老规矩，还是先贴官方教程:
@@ -88,10 +207,10 @@ https://golang.google.cn/dl/
     
     <item>
       <title>Hugo&#43;Gitee pages 搭建个人主页</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%9F%BA%E4%BA%8Ehogo%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <link>/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Ehogo%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%9F%BA%E4%BA%8Ehogo%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <guid>/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Ehogo%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
       <description>前言 在对比了Jekyll，hexo和hugo 之后，我决定使用Hugo搭建属于自己的主页。自己写静态网页这个调调就基本上放弃了。因为打算认真的写笔记什么的了。 选择hogo 原因还是蛮简单的，主要是他主题提供了Demo。虽然Jekyll主题可以下载别人项目的源码，但是还是需要去读和修改的。 顺便推一下博客目录
 结束 http://localhost:1313/images/avatar.jpg 谢谢光临，若觉得还行麻烦点一下赞，若觉得写得垃圾，欢迎批评指正。笔者知道自己文笔和表达能力很弱，如果您可以提供点宝贵的意见不胜感激。谢谢。
 今天也可以是元气满满的一天哦。 更新需要审核。更新通常优先更新到gitee上面。
@@ -100,10 +219,10 @@ https://golang.google.cn/dl/
     
     <item>
       <title>Hugo&#43;Gitee pages 搭建个人主页进阶</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/hogo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</link>
+      <link>/posts/%E5%85%B6%E4%BB%96/hogo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/hogo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</guid>
+      <guid>/posts/%E5%85%B6%E4%BB%96/hogo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</guid>
       <description>前言 之前整了一个Gitee page 的笔记。
 [gitee+picgo 图床上传图片404](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/gitee 图床上传图片404.md)
 [基于html拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/如何基于gitee pages 搭建一个属于自己的主页.md)
@@ -126,11 +245,39 @@ https://golang.google.cn/dl/
     </item>
     
     <item>
-      <title>Jekyll&#43;Gitee pages 搭建个人主页</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <title>java部分修饰符</title>
+      <link>/posts/android/java-%E4%BF%AE%E9%A5%B0/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <guid>/posts/android/java-%E4%BF%AE%E9%A5%B0/</guid>
+      <description>前言 明明刚刚在写另外一篇博客的，然后准备资料的时候发现了一些懵逼的东西。这个明显触及到了我的知识点盲区。主要是有一种很乱的感觉，没错是我菜，见识短浅啊。
+直接上教程runoob Java 教程。本篇主要介绍两个修饰符 final，volatile。当然了runoob java 修饰符 这个教程把修饰符都讲完了。为啥写，主要是缺点笔记。
+还有是为了认真工作嘛。
+如果领导路过不打招呼又在摸鱼影响不好，反正都是在认真工作的样子。。
+那么我们就开始罗列知识点:（具体使用请参考 上面教程）   final 变量：
+final 表示&amp;quot;最后的、最终的&amp;quot;含义，变量一旦赋值后，不能被重新赋值。被 final 修饰的实例变量必须显式指定初始值。
+final 修饰符通常和 static 修饰符一起使用来创建类常量。
+  final 方法
+父类中的 final 方法可以被子类继承，但是不能被子类重写。
+声明 final 方法的主要目的是防止该方法的内容被修改。
+  final 类
+final 类不能被继承，没有类能够继承 final 类的任何特性。
+  volatile 修饰符
+volatile 修饰的成员变量在每次被线程访问时，都强制从共享内存中重新读取该成员变量的值。而且，当成员变量发生变化时，会强制线程将变化值回写到共享内存。这样在任何时刻，两个不同的线程总是看到某个成员变量的同一个值。
+  顺便推一下博客目录 。
+正文 我去，上面总结完了，现在正文写啥？
+先说final 吧，修饰常量，Android 可以定义在xml 中 通过Context的getResources() 获取string或者int 值。常量是存储在内存中的，那么和Android 从xml 中获取到底谁的性能更加优秀？
+然后是在单例中使用，Android 中使用单例的机会也不是太多，大多数和生命周期绑定使用，只有哪些初始化成本比较高，使用较为频繁的功能才可能考虑单例。比如数据库的db对象和SharedPreferences.都是创建成本高，而且对象方法加锁执行，可能导致线程阻塞，如果是异步处理volatile 从逻辑上讲更好啊，
+final 修饰方法，这个主要是用于功能设计的底层逻辑编写。
+final 修饰类，类不能被继承，核心功能类设计吧，通常和包限制共同使用。</description>
+    </item>
+    
+    <item>
+      <title>Jekyll&#43;Gitee pages 搭建个人主页</title>
+      <link>/posts/%E5%85%B6%E4%BB%96/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/%E5%85%B6%E4%BB%96/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
       <description>前言 顺便推一下博客目录 。之前写过一个基于静态html的笔记。
 正文 Jekyll 既然自己写静态网页对于我这种小白而言太复杂了，那么用博客主页生成工具就可以了，毕竟鲁迅曾经说过&amp;quot;成年人最大的优点就是及时止损&amp;quot;。
 Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
@@ -146,10 +293,10 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
     
     <item>
       <title>Jekyll&#43;Gitee pages 搭建个人主页进阶</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/</link>
+      <link>/posts/%E5%85%B6%E4%BB%96/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/</guid>
+      <guid>/posts/%E5%85%B6%E4%BB%96/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/</guid>
       <description>前言 之前写了点gitee pages 相关的笔记。
 [基于html拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/如何基于gitee pages 搭建一个属于自己的主页.md)
 [基于Jekyll拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/2020-09-29-基于Gitee pages+Jekyll拥有一个属于自己的主页.md)
@@ -165,11 +312,22 @@ jekyll 配置不正常显示的url:http://lalalaxiaowifi.gitee.io/images/avatar.
     </item>
     
     <item>
-      <title>picgo&#43;gitee配置图床404</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/gitee-%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87404/</link>
+      <title>object与map项目转换</title>
+      <link>/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96objec%E5%92%8Cmap%E4%BA%92%E7%9B%B8%E8%BD%AC%E6%8D%A2/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/gitee-%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87404/</guid>
+      <guid>/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96objec%E5%92%8Cmap%E4%BA%92%E7%9B%B8%E8%BD%AC%E6%8D%A2/</guid>
+      <description>前言 搬砖生活中，有一种转换叫做序列化和反序列化。但是本文和这个没有多少关系，我们知道JAVA 的对象的存储是分键和值的，emmmm？map 好像也是哦，我们可能会遇到一个判断一个对象中是否包含多个值或者一个json 中只需要某个值的情况，那么是否可以针对简单对象提供一个json 转map的能力呢？emmmm？gson 实现了，比如这个样子：
+1new Gson().fromJson(&amp;#34;&amp;#34;,new TypeToken&amp;lt;Map&amp;lt;String,Object&amp;gt;&amp;gt;(){}.getType()) 但是，这个和本文还是没有关系。我只是顺便引导一下。需要对象转map 的情况通常在与服务器互动过程中。我们定义了一个专门用于传递参数的对象，如果服务器不要求传递json,那么就需要转map了，或者手动赋值。手动？那是不可能的。JAVA 中一个骚操作，叫反射，但是它有一个问题，那就是无法反射到父类的参数。比如有一个每个接口都需要传递的参数，要么每次添加，要么创建对象时候生成。但是这都不是问题。
+获取所以内容 1//这个方法可以解决获取不到父类的情况 2private static Field[] getAllFieldsByObject(Object object){ 3 Class clazz = object.getClass(); 4 List&amp;lt;Field&amp;gt; fieldList = new ArrayList&amp;lt;&amp;gt;(); 5 while (clazz != null){ 6 fieldList.addAll(new ArrayList&amp;lt;&amp;gt;(Arrays.asList(clazz.getDeclaredFields()))); 7 clazz = clazz.getSuperclass(); 8 } 9 Field[] fields = new Field[fieldList.size()]; 10 fieldList.toArray(fields); 11 return fields; 12} 13 14	/** 15 * 获取对象中所有可用字段。 16 * @param clazz 17 * @return 18 */ 19 private static Field[] getAllFieldsByClass(Class clazz){ 20 List&amp;lt;Field&amp;gt; fieldList = new ArrayList&amp;lt;&amp;gt;(); 21 while (clazz !</description>
+    </item>
+    
+    <item>
+      <title>picgo&#43;gitee配置图床404</title>
+      <link>/posts/%E5%85%B6%E4%BB%96/gitee-%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87404/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/%E5%85%B6%E4%BB%96/gitee-%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87404/</guid>
       <description>前言 之前逛掘金沸点的时候。得到了某些大佬的指点，然后知道了一个叫图床的神器，反正都是写笔记，搞一个图床也没有啥问题，表示非常喜欢md 的笔记风格。
 顺便推一下博客目录
 正文 我是通过 picgo+ gitee 图床的。这个教程很多，都写的蛮好的，就不贴了。今天准备认真工作的时候，发现图床上传不了图片，抛了一个404。具体log 稍后再贴。原因也很简单。gitee 的图床插件有两个。我最开始用的是第一个，也就是第一天使用的时候是没有问题的。
@@ -186,10 +344,10 @@ picgo 如何查看log 查看log 就很简单了，因为mac 通知无法复制�
     
     <item>
       <title>静态网页&#43;Gitee pages 搭建个人主页</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <link>/posts/%E5%85%B6%E4%BB%96/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <guid>/posts/%E5%85%B6%E4%BB%96/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
       <description>前言 话说，今天逛沸点的时候，看到一个大佬在推他的个人主页，感觉很有意思。
 这么好的东西，其实我也想要。那么就开整。需要先找到官方文档 ，毕竟官方提供的才是原汁原味的嘛(但是有些人提供的就没有那个味道了)。
 但是呢，东西是一个好东西，可惜我不会。gitee 推荐了3中静态网页方案，Jekyll、Hugo、Hexo ，这个，巧了，我又不会。突然想起大学的老师，老师们好像有教静态网页的吧，巧了，我好像没有去上课。
@@ -211,14 +369,74 @@ Emmmm? 好像可以，如果打开的网页没有更新到，需要清理下浏�
     
     <item>
       <title>笔记模板</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E6%A8%A1%E6%9D%BF/</link>
+      <link>/posts/%E6%A8%A1%E6%9D%BF/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E6%A8%A1%E6%9D%BF/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E6%A8%A1%E6%9D%BF/</guid>
+      <guid>/posts/%E6%A8%A1%E6%9D%BF/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E6%A8%A1%E6%9D%BF/</guid>
       <description>前言 顺便推一下博客目录
 结束 谢谢光临，若觉得还行麻烦点一下赞，若觉得写得垃圾，欢迎批评指正。笔者知道自己文笔和表达能力很弱，如果您可以提供点宝贵的意见不胜感激。谢谢。
 今天也可以是元气满满的一天哦。 更新需要审核。更新通常优先更新到gitee上面。
 博客目录</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/android/android-context/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/android/android-context/</guid>
+      <description>前言 我去，上午酝酿了半天，吃饭没有保存，白写了这么多字。有点难受。
+说正事吧，Context 这个对象几乎贯穿Android 所有事物。而 像Application，Activity 都是其间接子类。而这么屌的还有很多，这里就不一一列举了，直接上google Android Context 。Context 子类这么多，最常用的也就是 Application 和Activity了，而这两个子类都是有生命周期的。那么这两个子类获取到的Context有什么不同呢？
+  Application 和Activity都有自己的生命周期，那么获取到的Context 的也是有生命周期的。
+  JAVA 继承实现的关系，Application和Activity 无法直接强制转换。
+  顺便推一下博客目录
+正文 Application Application 通常都需要自己继承一个，然后在AndroidManifest 的Application节点中 对android:name 进行赋值。在Application 中获取 Context 也非常简单，就是它本身了。Application 也提供了2个获取 Context 的方法。
+Application 继承于ContextWrapper，getBaseContext()，getApplicationContext()这两个方法都是ContextWrapper 实现的。
+getBaseContext()     待完成，这个调调有点复杂，容我捋一捋、
+  getApplicationContext()  待完成。这个调调有点复杂，容我捋一捋、  Activity 中获取Application Activity 继承于ContextThemeWrapper，而ContextThemeWrapper 继承于ContextWrapper。这其中的逻辑就很复杂，但是获取方式很简单：
+1getApplication(); fragment 中获取Application Fragment 中可以直接获取到Activity，那么获取Application就需要先获取 Activity.
+1getActivity().getApplication(); 直接获取Application 1private static Application getApplicationByReflect() { 2 try { 3 @SuppressLint(&amp;#34;PrivateApi&amp;#34;) 4 Class&amp;lt;?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/android/android%E4%B8%AD%E5%85%B3%E4%BA%8E%E9%94%81%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/android/android%E4%B8%AD%E5%85%B3%E4%BA%8E%E9%94%81%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>前言 顺便推一下博客目录
+结束 谢谢光临，若觉得还行麻烦点一下赞，若觉得写得垃圾，欢迎批评指正。笔者知道自己文笔和表达能力很弱，如果您可以提供点宝贵的意见不胜感激。谢谢。
+今天也可以是元气满满的一天哦。 更新需要审核。更新通常优先更新到gitee上面。
+博客目录</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/sqlite/room/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96room%E6%9F%A5%E7%9C%8B%E8%A1%A8%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/sqlite/room/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96room%E6%9F%A5%E7%9C%8B%E8%A1%A8%E7%BB%93%E6%9E%84/</guid>
+      <description>前言 顺便推一下日常搬砖sqlite目录 。
+接上面内容。因为room会生根据 Database成一个 impl.java 文件，通过这个class可以看到创建表的sql。通过查看sqlite studio 需要把几个文件都复制到同一个文件夹中才可以查看完整的表，我通过room 创建的数据库有.db，.db-shm,.db-wal这3个后缀名文件，然后通过Stetho 发现我的id 竟然有两个，但是在Demo 上加上 Stetho 发现 Stetho获取的有一个rowid。emmmm？感觉情况完全不一样，所以我决定看看。
+sqlite 查看工具 之前找到了一篇博客对sqlite 表查看写得很详细的。Android Studio查看SQLite数据库方法大全 .如果是通过Stetho 查看数据库，可能出现一个问题，404或者空白页。这个时候就需要使用一些梯子(科学上网)了，等加载出来之后就不需要了。浏览器直接输入chrome://inspect 找到设备就好。
+正文 BasicRxJavaSample 这个Demo的地址 。这个Demo是room+rxjava.众所皆知，数据库的增删改查不应该存在于主线程中。好了我们直接看这个Demo所提供的实体类。
+实体类 1@Entity(tableName = &amp;#34;users&amp;#34;) 2public class User { 3 4 @NonNull 5 @PrimaryKey 6 @ColumnInfo(name = &amp;#34;userid&amp;#34;) 7 private String mId; 8 9 @ColumnInfo(name = &amp;#34;username&amp;#34;) 10 private String mUserName; 11 12 @Ignore 13 public User(String userName) { 14 mId = UUID.randomUUID().toString(); 15 mUserName = userName; 16 } 17 18 public User(@NonNull String id, String userName) { 19 this.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/sqlite/room/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E4%B9%8Broom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/sqlite/room/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E4%B9%8Broom/</guid>
+      <description>前言 欢迎光临。
+顺便推一下日常搬砖sqlite目录 。
+现在还是主要总结一些简单一点的，太复杂了的还是往后排一下，反正我是记得我留了不少的坑等着填，现在先写这个吧，免得分心又拖更了。
+之前有简单的描述了下sqlite的增删改查，google 还是推荐使用room android 的。国内也有很多大佬写的很详细，比如说Android Room 官方指南 这个感觉就很全面详细，我看完我就觉得，这个room 相关的博客我都不用写了，直接复制就好。通过这个大佬的博客呢，我找到了我们的组织 Android 的github 地址。就好比流浪多年的我找到了家的感觉。当然也不是之前不知道，就好比之前不知道家里面有宝贝，突然有一天一个同乡说&amp;quot;我们要拆迁啦，你要回去看看吗？&amp;quot;，我回头一想，&amp;quot;嗯？宝贝？我当初出来打工到处找第3方框架的时候咋没有发现？拆迁了？那我要回去看看&amp;quot;，结果一回去，只见靠近种花家那面墙上已经用红油漆喷了一个不怎么圆的圆。咦，果然是有好宝贝。
+说回正题。architecture-components-samples 这个里面就有google 提供的Demo。看到这么多的Demo？我觉得我好像真的没有写room 相关的必要了，要不我给你们说脱口秀？
+正文 为啥要使用room 其实，作为用sqlite 一向都是sql 的我再没有写博客之前，我还真的没有仔细想过这个问题。现在比较好友的sqlite的工具还是蛮多的，有点久了，不是这么容易记起来，以后慢慢列举吧。下面还是来说说个人认为的优点吧。
+ google 爸爸出品，而且现在已经到Android X了，是Jetpack 重要的一环，也便于升级到Android X，同时jetpack 使用量已经升上去了，出现问题的概率很小，有问题多半是使用有问题。jetpack多半是必会技能，哪怕是面试装杯。 google Demo 在as中导入贼快。可能我这山区才通网，用梯子导别人的Demo都很慢。 通过注解对象关系映射（应该是这个词）不必写创建表的sql，便于表字段约束，同时理解简单很多。同类型的也有好几个。 可以更加简单实现一表一数据库文件。对于哪些不常用的功能表可以整合到单独的数据库文件中，当然直通过SQLiteOpenHelper也可以达到这个效果。更新还是需要每个自己更新，个人感觉分数据库写处理更新逻辑要清晰很多。 通过 dao 注解 便于功能区分，耦合要低很多。通过自己写interface也可以实现。 不要杠，人家提供规则是为了使用方便，而不是为了找到其他相同效果的不同写法。个人感觉最主要的是jetpack，用这个如果想，可以把jetpack 所有组件都用上了。 sqlite 的查询可以直接写到主线程中，而room的相关操作抖需要写到子线程中，所以还可以学一盘rxjava ? 按照道理讲，数据库的读写都应该写到子线程中的。room 中 RoomDatabase 提供了很多约束方法。  好了，代码量和逻辑分化的增加在可以装杯的海量优势面前不值一提。那么我们就可以开整。这篇主要是简单的使用讲解，Demo是基于contentprovidersample
+导入room 1def room_version = &amp;#34;1.1.1&amp;#34; 2implementation &amp;#34;android.arch.persistence.room:runtime:$room_version&amp;#34; 3annotationProcessor &amp;#34;android.arch.persistence.room:compiler:$room_version&amp;#34; // use kapt for Kotlin 4// optional - RxJava support for Room 5implementation &amp;#34;android.</description>
     </item>
     
   </channel>
