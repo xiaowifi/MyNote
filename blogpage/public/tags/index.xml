@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 个人主页</title>
+    <link>https://example.com/tags/</link>
+    <description>Recent content in Tags on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright>
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gitee</title>
+      <link>https://example.com/tags/gitee/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/gitee/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gitee page</title>
+      <link>https://example.com/tags/gitee-page/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/gitee-page/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hexo</title>
+      <link>https://example.com/tags/hexo/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/hexo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://example.com/tags/hugo/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jekyll</title>
+      <link>https://example.com/tags/jekyll/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/jekyll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>picgo</title>
+      <link>https://example.com/tags/picgo/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/picgo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>个人主页</title>
+      <link>https://example.com/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>图床</title>
+      <link>https://example.com/tags/%E5%9B%BE%E5%BA%8A/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/%E5%9B%BE%E5%BA%8A/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>日常搬砖</title>
+      <link>https://example.com/tags/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>静态网页</title>
+      <link>https://example.com/tags/%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>日常搬砖模板</title>
+      <link>https://example.com/tags/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E6%A8%A1%E6%9D%BF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>笔记模板</title>
+      <link>https://example.com/tags/%E7%AC%94%E8%AE%B0%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/%E7%AC%94%E8%AE%B0%E6%A8%A1%E6%9D%BF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>index</title>
+      <link>https://example.com/tags/index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/index/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

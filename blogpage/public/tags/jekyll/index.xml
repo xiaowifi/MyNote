@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jekyll on 个人主页</title>
+    <link>https://example.com/tags/jekyll/</link>
+    <description>Recent content in jekyll on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright>
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jekyll&#43;Gitee pages 搭建个人主页</title>
+      <link>https://example.com/posts/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <description>前言 顺便推一下博客目录 。之前写过一个基于静态html的笔记。
+正文 Jekyll 既然自己写静态网页对于我这种小白而言太复杂了，那么用博客主页生成工具就可以了，毕竟鲁迅曾经说过&amp;quot;成年人最大的优点就是及时止损&amp;quot;。
+Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
+这个要安装Ruby 环境？ 这丫的感觉一个脚本语言，我觉得我还是用html 比较好，毕竟我这个是会的。
+基于IDEA 安装环境 先整一个ruby教程runoob Ruby 教程 。这个感觉和Python很像嘛。那就开整。这个调调的使用感觉和Node.js 很像啊，不会要Node.js 环境吧。怕是需要看一下Ruby 使用安装环境 。
+我的是mac 环境。
+这个是要Xcode ? 我一个Android 搬砖工，也没有安装这个调调啊，我觉得我的IDEA可以完成这个调调。那么直接IDEA 插件官网。IDEA Ruby 插件  根据自己的IDEA 版本号下载对应的版本就好，版本对不上就安装不了。然后自己将下载下来的插件安装到自己的idea 里面就好。然后就是用IDEA自身功能下载sdk就好。然后创建一个Ruby的空项目，创建一个Ruby文件。配置ruby的运行项中的sdk ：
+如果可以正常运行，那么环境就配置好了。当然也可能是运行项没有配置好，主要是配置sdk.这个必须要配置。
+下载运行Jekyll Demo 现在就是按照官网jekyll 操作指南 下载 Jekyll 和创建环境就好。
+下面来说说遇到的问题，
+ 1和2 需要 在前面加sudo 要不然可能没有目录权限，需要输入密码。 2 是在当前目录下创建一个myblog 目录用于生成文件。 3是进入目录，这个很重要，目录错了会导致运行不了。 jekyll --version 可以查看版本号。如果有说明这个安装成功了的。 bundler: failed to load command: jekyll (/usr/local/bin/jekyll) 这个问题，我从网络上找到的说需要 执行bundle install。 上面的问题是运行bundle exec jekyll serve 导致的，如果没有这个问题，直接打开 http://localhost:4000 会出现这个界面：  通过目录结构:</description>
+    </item>
+    
+    <item>
+      <title>Jekyll&#43;Gitee pages 搭建个人主页进阶</title>
+      <link>https://example.com/posts/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/</guid>
+      <description>前言 之前写了点gitee pages 相关的笔记。
+[基于html拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/如何基于gitee pages 搭建一个属于自己的主页.md)
+[基于Jekyll拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/2020-09-29-基于Gitee pages+Jekyll拥有一个属于自己的主页.md)
+[基于Hexo拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/基于Gitee pages+Hexo拥有一个属于自己的主页.md)
+[基于Hugo拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/基于Gitee pages+Hugo拥有一个属于自己的主页.md)
+但是都是基于同名的项目实现的，而且都是推到根目录下的。Jekyll 还是推的源码上去，hexo和Hugo都是推的编译后的文件。因为Jekyll，Hexo，Hugo都是用的静态网页，所以静态网页也是可以直接用的。顺便推一下博客目录
+正文 但是，我昨天认真工作(摸鱼的时候)突然想到了一个问题，既然都是生成的静态网页，为啥我直接写的静态网页可以放到非同名项目的子目录下运行，为啥Jekyll，hexo ,hugo 等就不行呢，按道理讲，都是编译生成静态网页啊。先放一个静态网页成功的例子：
+运行效果就先不贴了。那么问题来了，是什么导致gitee pages 上面Jekyll，Hexo，Hugo 生成的静态网页用不起的呢？为啥一定要推到根目录，且一定要同名项目呢？还是关于这个配置，我的理解有问题。先贴一个gitee pages 提供的教程：https://gitee.com/help/articles/4136#article-header0
+ Jekyll、Hugo、Hexo 编译判断依据  编译 Hugo 依据：仓库编译目录下存在config.toml|json|yaml文件和content目录的时候，会使用hugo生成静态文件。 编译 Hexo 依据：仓库编译目录下存在package.json，_config.yml文件和scaffolds目录的，会使用hexo generate生成静态文件，由于每次部署编译需要重新克隆编译并进行npm install，所以使用 Hexo 的时间相对 Hugo 和 Jekyll 会长一些。 当不符合上述1和2条件的时候，就默认使用Jekyll编译。   通过教程上面的这个内容，个人理解，Jekyll ，hugo，hexo 按道理讲都应该支持上传项目源码的啊。为啥我的只有jekyll 上传源码到同名根目录才可以有效果？其他的都不行呢？这个坑留着，后面慢慢解。另外还有一个问题。
+第2点中的:生成的资源 url 应该为 https://ipvb.gitee.io/blog/style.css 才对 ,我觉得他证明了非同名项目，且在字目录中是可以实现个人主页的。上传上去的效果不正确，那就是资源文件的url 不正确。于是我采集了静态网页显示正常的图片的url和jekyll 显示不正常的url.
+静态网页显示正常的url:http://lalalaxiaowifi.gitee.io/pictures/images/g2.jpg
+jekyll 配置不正常显示的url:http://lalalaxiaowifi.gitee.io/images/avatar.jpg 这个不正常的url 在同名项目的根目录下是运行正常的，我把整个Jekyll项目放到了pictures/tree/master/Blog/jekyllBlog 下面，等于说我的项目名叫pictures，使用分支是master，根目录下的Blog/jekyllBlog，他就显示不正常了，但是通过对比两个url，发现放到其他目录下，生成的链接地址都是错误的(原因参考 上面图片的第2点)。因为这个也证明了我之前的一个猜测，个人用户应该只有一个主页。开启一个后，其他的必定会被关闭，个人理解Gitee pages 对应的localhost 就是个人根目录，比如说我的根目录应该就是：http://lalalaxiaowifi.gitee.io，再比如说我的pictures地址就应该http://lalalaxiaowifi.gitee.io/pictures。也确实如此。那么既然如此，那就按照Gitee Pages 提供的再配置一次。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>静态网页 on 个人主页</title>
+    <link>https://example.com/tags/%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5/</link>
+    <description>Recent content in 静态网页 on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright>
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>静态网页&#43;Gitee pages 搭建个人主页</title>
+      <link>https://example.com/posts/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <description>前言 话说，今天逛沸点的时候，看到一个大佬在推他的个人主页，感觉很有意思。
+这么好的东西，其实我也想要。那么就开整。需要先找到官方文档 ，毕竟官方提供的才是原汁原味的嘛(但是有些人提供的就没有那个味道了)。
+但是呢，东西是一个好东西，可惜我不会。gitee 推荐了3中静态网页方案，Jekyll、Hugo、Hexo ，这个，巧了，我又不会。突然想起大学的老师，老师们好像有教静态网页的吧，巧了，我好像没有去上课。
+但是，作为一个成年人，敌方这么努力的守水晶，我都要想办法推掉它的人，岂是这种小问题能够阻挡的。
+ Jekyll、Hugo、Hexo 究竟是什么？
+Jekyll、Hugo、Hexo 是简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过 Markdown 以及 Liquid 转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll、Hugo、Hexo 也可以运行在 码云（Gitee.com） Pages 上，也就是说，你可以使用码云的服务来搭建你的仓库页面、博客或者网站，而且是完全免费的。
+Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/ Hugo 使用文档：https://gohugo.io/documentation/ Hexo 使用文档：https://hexo.io/docs/
+ 通过gieee提供的教程，我看了下这个这几个教程，
+我觉得作为一个成年人，应该学会及时止损。摸鱼应该比学习这个有意思多了，是吧。但是，静态网页我好像会？
+顺便推一下博客目录
+正文 反正都是摸鱼，只要不学习JAVA，sql,Android,c，ndk 之类的都应该算摸鱼吧，这么一想，瞬间就有动力了。这个摸鱼的概率大一点，还是建议看官方文档 。先按照步骤来。
+ 注册一个gitee 账号https://gitee.com/ (有账号的跳过这一步) 通过自己的账号创建一个公开的项目(个人主页搞私有的，别人访问不到);确定有master 分支 在项目的服务中找到gitee pages 点击，按照步骤一步一步的开始gitee pages 。这个时候你就得到了自己的个人主页的域名了。 在对应的文件夹下面创建一个index.html 文件（这样通过域名访问就不会404了） 最后通过 静态网页或Jekyll、Hugo、Hexo等博客主页生成工具实现自己的主页。 把做好的网页更新上去，然后在项目的服务中找到gitee pages 更新自己的主页。  静态网页 通过gitee pages 的文档我们可以知道，要想基于它创建主页需要下面几点：
+ 静态网页 必须包含index.html  据说，只要不进行网络请求的网页都可以叫静态网页？那可操作性就很大了啊。比如说，可以通过网络上下载静态网页模板，自己魔改。比如说这个是我从模板王上下载的一个个人主页：
+本地是可以打开的。我没有修改的情况下，直接更新到gitee上面，通过gitee给我生成的域名打开。
+Emmmm? 好像可以，如果打开的网页没有更新到，需要清理下浏览器缓存就好了。
+我们来看一下这个网页的结构：
+支持多html结构，css,js 等都可以放到外面。emmmm？vue 那是不是也行？ vue 提供的单页应用是不是也可以？这个就需要自己验证了，毕竟我不会这个。我看了下这个界面的代码，这div 太多了吧。我感觉我不行，我还是试试用博客主页生成工具吧。</description>
+    </item>
+    
+  </channel>
+</rss>
