@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>debug on 个人主页</title>
+    <link>https://example.com/tags/debug/</link>
+    <description>Recent content in debug on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright>
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/debug/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android开启Debug</title>
+      <link>https://example.com/posts/android/android%E5%BC%80%E5%90%AFdebug%E4%B9%8B%E8%B7%AF/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/android/android%E5%BC%80%E5%90%AFdebug%E4%B9%8B%E8%B7%AF/</guid>
+      <description>前言 电脑不是太好。现在用的也仅仅是mac air 1.8 GHz 双核Intel Core i5 8 GB 1600 MHz DDR3。电脑情况不是太好，需要经常清理缓存啊，运行代码量稍微大一点的项目就感觉慢。打算明年换一个好一点的。所以我本人是比较倾向于插件化和aar的使用的，fragment 使用比重也很高，毕竟只要写好了模板，debug功能还是比activity 简单些。
+说回正题。Android debug 模式也不多，常用的一般分为：
+ 打印log 打断点 测试代码 让测试复现bug 等  顺便推一下博客目录
+正文 打印log ​	这种情况，一般是检查参数或者接口的时候，如果电脑不怎么行，打log 电脑也不怎么卡，打断点可能就卡了。
+但是呢，string 虽说够长，但是log 的打印是有长度限制的。万一log体长度超出了怎么办？只能代码截取分log 打印了。像这种网络上还是蛮多的。
+打断点 本篇我们也就主要是介绍下打断点。可能出现的问题。
+先介绍下图标1是run（运行，如果手机上没有安装当前app 这个应该是三角形）.2是debug,3是attach debugger to android process。
+  debug 版本运行不到手机上。重新编译项目或者删除主项目下 build文件（不要删除错了），还有重新导入编译项目，一般就可以运行到手机上了。
+  idea 左边栏有一个 Build variants 工具（可能在其他位置）可以切马甲包配置或者release，debug等。同一个APP 下版本应该是一致的。切成同一个版本就好了。
+  release 版本是无法运行debug的。 如果使用release 版本debug 会提示:
+ Error running &#39;sqliteroom&#39; Cannot debug application from module sqliteroom on device huawei-lld_al00-MKJDU17C08001071.</description>
+    </item>
+    
+  </channel>
+</rss>
