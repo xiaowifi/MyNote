@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on 个人主页</title>
-    <link>https://example.com/series/</link>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/series/</link>
     <description>Recent content in Series on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>android基础</title>
-      <link>https://example.com/series/android%E5%9F%BA%E7%A1%80/</link>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/series/android%E5%9F%BA%E7%A1%80/</guid>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java基础</title>
-      <link>https://example.com/series/java%E5%9F%BA%E7%A1%80/</link>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/series/java%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/series/java%E5%9F%BA%E7%A1%80/</guid>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/java%E5%9F%BA%E7%A1%80/</guid>
       <description></description>
     </item>
     
     <item>
       <title>个人主页</title>
-      <link>https://example.com/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</link>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</guid>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</guid>
       <description></description>
     </item>
     

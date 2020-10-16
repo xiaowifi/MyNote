@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java基础 on 个人主页</title>
-    <link>https://example.com/series/java%E5%9F%BA%E7%A1%80/</link>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/series/java%E5%9F%BA%E7%A1%80/</link>
     <description>Recent content in Java基础 on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/series/java%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/series/java%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>java部分修饰符</title>
-      <link>https://example.com/posts/android/java-%E4%BF%AE%E9%A5%B0/</link>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/java-%E4%BF%AE%E9%A5%B0/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/android/java-%E4%BF%AE%E9%A5%B0/</guid>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/java-%E4%BF%AE%E9%A5%B0/</guid>
       <description>前言 明明刚刚在写另外一篇博客的，然后准备资料的时候发现了一些懵逼的东西。这个明显触及到了我的知识点盲区。主要是有一种很乱的感觉，没错是我菜，见识短浅啊。
 直接上教程runoob Java 教程。本篇主要介绍两个修饰符 final，volatile。当然了runoob java 修饰符 这个教程把修饰符都讲完了。为啥写，主要是缺点笔记。
 还有是为了认真工作嘛。
@@ -37,10 +37,10 @@ final 修饰类，类不能被继承，核心功能类设计吧，通常和包�
     
     <item>
       <title>object与map项目转换</title>
-      <link>https://example.com/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96objec%E5%92%8Cmap%E4%BA%92%E7%9B%B8%E8%BD%AC%E6%8D%A2/</link>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96objec%E5%92%8Cmap%E4%BA%92%E7%9B%B8%E8%BD%AC%E6%8D%A2/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96objec%E5%92%8Cmap%E4%BA%92%E7%9B%B8%E8%BD%AC%E6%8D%A2/</guid>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96objec%E5%92%8Cmap%E4%BA%92%E7%9B%B8%E8%BD%AC%E6%8D%A2/</guid>
       <description>前言 搬砖生活中，有一种转换叫做序列化和反序列化。但是本文和这个没有多少关系，我们知道JAVA 的对象的存储是分键和值的，emmmm？map 好像也是哦，我们可能会遇到一个判断一个对象中是否包含多个值或者一个json 中只需要某个值的情况，那么是否可以针对简单对象提供一个json 转map的能力呢？emmmm？gson 实现了，比如这个样子：
 1new Gson().fromJson(&amp;#34;&amp;#34;,new TypeToken&amp;lt;Map&amp;lt;String,Object&amp;gt;&amp;gt;(){}.getType()) 但是，这个和本文还是没有关系。我只是顺便引导一下。需要对象转map 的情况通常在与服务器互动过程中。我们定义了一个专门用于传递参数的对象，如果服务器不要求传递json,那么就需要转map了，或者手动赋值。手动？那是不可能的。JAVA 中一个骚操作，叫反射，但是它有一个问题，那就是无法反射到父类的参数。比如有一个每个接口都需要传递的参数，要么每次添加，要么创建对象时候生成。但是这都不是问题。
 获取所以内容 1//这个方法可以解决获取不到父类的情况 2private static Field[] getAllFieldsByObject(Object object){ 3 Class clazz = object.getClass(); 4 List&amp;lt;Field&amp;gt; fieldList = new ArrayList&amp;lt;&amp;gt;(); 5 while (clazz != null){ 6 fieldList.addAll(new ArrayList&amp;lt;&amp;gt;(Arrays.asList(clazz.getDeclaredFields()))); 7 clazz = clazz.getSuperclass(); 8 } 9 Field[] fields = new Field[fieldList.size()]; 10 fieldList.toArray(fields); 11 return fields; 12} 13 14	/** 15 * 获取对象中所有可用字段。 16 * @param clazz 17 * @return 18 */ 19 private static Field[] getAllFieldsByClass(Class clazz){ 20 List&amp;lt;Field&amp;gt; fieldList = new ArrayList&amp;lt;&amp;gt;(); 21 while (clazz !</description>
