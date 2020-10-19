@@ -1,6 +1,7 @@
 # set `baseurl` to your root domain
 # if you set it to "/" share icons won't work properly on production
 baseurl = "http://lalalaxiaowifi.gitee.io/pictures/"  #  https://example.com/
+#baseurl = "https://example.com/"  #  https://example.com/
 title = "个人主页"
 author = "luoye@yangfan"
 copyright = "Copyright © 2020-2099"
@@ -70,7 +71,6 @@ mainSections = ["posts"] # see config details here https://gohugo.io/functions/w
 centerLogo = false # Set to "true" for centering or "false" for left aligned.
 
 logo = "logos/logo.png"
-
 # Label Non inline images on an article body
 figurePositionShow = false # toggle on or off globally
 # you can toggle this behaviour on or off on per page using the same variable inside your articles frontmatter
@@ -105,3 +105,4 @@ languageMenuName = "🌐"
 
 # Date format. Checkout https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference for details.
 # dateFormat = "2006-01-02" # Default to "Jan 2, 2006".
+#2020-10-16 16:44:23  新增字段。主要用于单页显示头像等。
