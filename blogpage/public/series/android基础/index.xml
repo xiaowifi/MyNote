@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>android基础 on 个人主页</title>
-    <link>http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/</link>
+    <link>https://example.com/series/android%E5%9F%BA%E7%A1%80/</link>
     <description>Recent content in android基础 on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/series/android%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Android sqlite前言</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%9B%AE%E5%BD%95/</link>
+      <link>https://example.com/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%9B%AE%E5%BD%95/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%9B%AE%E5%BD%95/</guid>
+      <guid>https://example.com/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%9B%AE%E5%BD%95/</guid>
       <description>前言 话说现在已经2020年了，在Android 应用端上混混沌沌的搬砖已经3年多快4年了。之前也迷迷糊糊的写了些什么，但是却没有一个好一点的系列文章。大多数同行的评论都是&amp;quot;什么都懂一点，但是什么都不精&amp;quot;，还是蛮想改变这个现状的。所以打算认真写一个系列出来，因为最近在复习sqlite,想从各个大佬的项目中找到自己的不足。所以打算写一个sqlite的理解系列吧。
 sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite的时候并不需要导入jar或者aar 文件或者连接池等。
   Android 中通过 SQLiteDatabase及其子类对表的创建，删除，改名，对内容的增删改查操作。同时可以获取版本号等其他操作。
@@ -28,10 +28,10 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
     
     <item>
       <title>Android sqlite增删改查</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/</link>
+      <link>https://example.com/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/</guid>
+      <guid>https://example.com/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/</guid>
       <description>前言 日常搬砖sqlite目录 再目录中提到了一些东西，有兴趣可以点过去看一下，觉得还行麻烦点下赞。
 正文 第一步创建数据库 再目录文档中，引用了官方文档的一段话 SQLiteOpenHelper 类包含一组用于管理数据库的实用 API。当您使用此类获取对数据库的引用时，系统仅在需要时才执行可能需要长时间运行的数据库创建和更新操作，而不是在应用启动期间执行。您仅需调用 getWritableDatabase() 或 getReadableDatabase() 即可。
   第一步应该是创建数据库文件。通过上面的引用可以知道 我们创建 数据库文件只需要 继承 SQLiteOpenHelper即可。而SQLiteOpenHelper的构造函数需要传入context，name，factory,version.通常情况下，我们创建数据库的时候只需要context，name，version，name 确定数据库文件的名字，version用于判断创建或更新数据库。
@@ -44,10 +44,10 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
     
     <item>
       <title>Android sqlite增删改查另类写法</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E6%94%B9%E6%9F%A5%E5%8F%A6%E7%B1%BB%E5%86%99%E6%B3%95/</link>
+      <link>https://example.com/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E6%94%B9%E6%9F%A5%E5%8F%A6%E7%B1%BB%E5%86%99%E6%B3%95/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E6%94%B9%E6%9F%A5%E5%8F%A6%E7%B1%BB%E5%86%99%E6%B3%95/</guid>
+      <guid>https://example.com/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E6%94%B9%E6%9F%A5%E5%8F%A6%E7%B1%BB%E5%86%99%E6%B3%95/</guid>
       <description>前言 啊哈，今天又更新了。接上一篇日常搬砖sqlite可用类型与存储类型 。
 顺便推一下日常搬砖sqlite目录
 之前又一篇博客提到了json 对象不仅仅可以通过对象class 解析，也可以解析成map.巧合的是sqlite 添加和更新需要的ContentValues 也是一个类似于map的结构。既然object 与map互转，同理可以解决 object可以和ContentValues 互相转化，是吧。还有一个点 cursor.getType(cursor.getColumnIndex(key)) 可以获取到值的type,所以开整。先总结下可能需要的逻辑。
@@ -56,10 +56,10 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
     
     <item>
       <title>Android sqlite更新</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E6%9B%B4%E6%96%B0/</link>
+      <link>https://example.com/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E6%9B%B4%E6%96%B0/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E6%9B%B4%E6%96%B0/</guid>
+      <guid>https://example.com/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E6%9B%B4%E6%96%B0/</guid>
       <description>前言 顺便推一下日常搬砖sqlite目录
 这个目录里面有sqlite 初始化 增删改查等一些东西，我们就接着这个系列讲数据库更新，之前我们数据库更新判断是通过版本号进行的。而且有一个问题哈，如果我有1，2，3，4，5，共5个版本，通过为了分别应对每个版本，onUpgrade这个方法里面要写很长的东西，简单粗暴的方式当然就是用户强制升级到最新版本，那么我们就只需要处理最新版本的事情了，问题是每一次升级不都是当前最新版本吗？开发阶段中，通过数据库版本号升级要写一大堆逻辑，卸载的化数据又没有了。于是比较懒的我就开始思考一个问题，我每次用之前检测一次是否一致不就好了？那么就需要准备需要的理论知识了、
  系统仅在需要时才执行可能需要长时间运行的数据库创建和更新操作，而不是在应用启动期间执行。您仅需调用 getWritableDatabase() 或 getReadableDatabase() 即可。（这个获取运行时） sqlite 的表不支持直接重命名表名。如果想要更改表的名字，需要将原表名设置一个临时表名，然后通过新表名创建表，然后删除零时表。 sqlite 只支持对表增加字段。如果需要删除字段，修改字段名，修改字段对应的类型，都需要通过创建新表，然后复制对应的数据到新表，再删除原表达到效果，这么一想，向表中增加字段也可以通过上面操作进行。 sqlite有一个sqlite_master 表，通过这个表可以查找所以表的表名，创建sql语句等。 sqlite 可以查看表的信息和字段 通过 PRAGMA table_info(student) 语句。 cursor.getColumnNames()。  正文 通过上面的理论依据，我觉得下面的理论是可行的。
@@ -75,10 +75,10 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
     
     <item>
       <title>Android sqlite约束</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%BA%A6%E6%9D%9F/</link>
+      <link>https://example.com/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%BA%A6%E6%9D%9F/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%BA%A6%E6%9D%9F/</guid>
+      <guid>https://example.com/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%BA%A6%E6%9D%9F/</guid>
       <description>前言 顺便推一下日常搬砖sqlite目录 。
 接着上面的写，之前有写到使用sqlite 实现增删改查等简单使用。sqlite是一个关系型数据库，既然是数据库那么它就一定不会这么简单了，是吧，要不然就没有专门做数据库设计的岗位了。当然了在Android上的应用通常可能没有这么复杂。那么简单的约束还是可以了解下的。毕竟我们可能不会做出超出我们逻辑认知的操作。如果想要实现某个功能，那么知道当前工具是否可以是很有必要的吧。
 正文 那么我们就直接上菜，Android 上无论是room 还是greendao，都是基于sqlite提供服务的，他们实现的sqlite 就必定有，是吧。我们知道一个表的设计包括 表名，字段名，字段名对应的类型（必须），字段名对应的其他约束。
@@ -97,10 +97,10 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
     
     <item>
       <title>Android基础数据类型与sqlite存储类型</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%8F%AF%E7%94%A8%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/</link>
+      <link>https://example.com/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%8F%AF%E7%94%A8%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%8F%AF%E7%94%A8%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/</guid>
+      <guid>https://example.com/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%8F%AF%E7%94%A8%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/</guid>
       <description>前言 之前又一篇文章上讲到 cursor.getType(cursor.getColumnIndex(key)) 可以获取到对应值的类型，通过cursor 类可以知道，cursor 就提供了4种类型。而ContentValues 定义了不止4总类型，sqlite的插入与更新都可以通过ContentValues 对象进行操作的。目录地址
  cursor 定义了4种类型 ContentValues 定义了不止4总类型 sqlite 插入更新都可以通过 ContentValues 对象进行 问题1：sqlite 在创建表的时候是否支持所以的ContentValues 定义类型。 问题2:sqlite 支持的类型 对应了cursor中的哪些类型。 有一个教程博客写的很清晰runoob SQLite 数据类型  安利一个软件sqlitestudio。/data/data/PACKAGE NAME/ 是sqlite 默认存储路径。
 正文 创建sqlite表 ContentValues 支持存放主要类型：String，Byte，Short，Integer，Long，Float，Double，Boolean，byte[]等。那么创建sql，我们知道 string 是通过varchar 存储。不知道直接写string 是否可以创建表。
@@ -109,10 +109,10 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
     
     <item>
       <title>Android开启Debug</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E5%BC%80%E5%90%AFdebug%E4%B9%8B%E8%B7%AF/</link>
+      <link>https://example.com/posts/android/android%E5%BC%80%E5%90%AFdebug%E4%B9%8B%E8%B7%AF/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E5%BC%80%E5%90%AFdebug%E4%B9%8B%E8%B7%AF/</guid>
+      <guid>https://example.com/posts/android/android%E5%BC%80%E5%90%AFdebug%E4%B9%8B%E8%B7%AF/</guid>
       <description>前言 电脑不是太好。现在用的也仅仅是mac air 1.8 GHz 双核Intel Core i5 8 GB 1600 MHz DDR3。电脑情况不是太好，需要经常清理缓存啊，运行代码量稍微大一点的项目就感觉慢。打算明年换一个好一点的。所以我本人是比较倾向于插件化和aar的使用的，fragment 使用比重也很高，毕竟只要写好了模板，debug功能还是比activity 简单些。
 说回正题。Android debug 模式也不多，常用的一般分为：
  打印log 打断点 测试代码 让测试复现bug 等  顺便推一下博客目录

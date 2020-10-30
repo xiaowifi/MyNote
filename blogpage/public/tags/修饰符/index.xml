@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>修饰符 on 个人主页</title>
-    <link>http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%BF%AE%E9%A5%B0%E7%AC%A6/</link>
+    <link>https://example.com/tags/%E4%BF%AE%E9%A5%B0%E7%AC%A6/</link>
     <description>Recent content in 修饰符 on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%BF%AE%E9%A5%B0%E7%AC%A6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/%E4%BF%AE%E9%A5%B0%E7%AC%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>java部分修饰符</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/java-%E4%BF%AE%E9%A5%B0/</link>
+      <link>https://example.com/posts/android/java-%E4%BF%AE%E9%A5%B0/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/java-%E4%BF%AE%E9%A5%B0/</guid>
+      <guid>https://example.com/posts/android/java-%E4%BF%AE%E9%A5%B0/</guid>
       <description>前言 明明刚刚在写另外一篇博客的，然后准备资料的时候发现了一些懵逼的东西。这个明显触及到了我的知识点盲区。主要是有一种很乱的感觉，没错是我菜，见识短浅啊。
 直接上教程runoob Java 教程。本篇主要介绍两个修饰符 final，volatile。当然了runoob java 修饰符 这个教程把修饰符都讲完了。为啥写，主要是缺点笔记。
 还有是为了认真工作嘛。

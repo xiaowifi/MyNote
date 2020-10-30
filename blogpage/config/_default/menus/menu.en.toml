@@ -26,7 +26,7 @@
   name = "About"
   url = "about/"
   weight = -107
-[[main]]
-  name = "封面主页"
-  url = "/page/"
-  weight = -107
+#[[main]]
+#  name = "封面主页"
+#  url = "/page/"
+#  weight = -107

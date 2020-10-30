@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>个人主页</title>
-    <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</link>
+    <link>https://example.com/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</link>
     <description>Recent content on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hexo&#43;Gitee pages 搭建个人主页</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <link>https://example.com/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <guid>https://example.com/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
       <description>前言 顺便推一下博客目录
 之前整过一个Jekyll和静态网页的主页笔记，最近换季，导致感冒拉肚子，又为国庆生等等耽搁了快一个月了，原本打算这个系列在一周内整出来的，结果到现在还有2个TODO未实现。那么本篇主要级hexo.先上文档官网：
 gitee pages 官方文档
@@ -40,10 +40,10 @@ Hexo 使用文档：https://hexo.io/docs/
     
     <item>
       <title>Hexo&#43;Gitee pages 搭建个人主页进阶</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/hexo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</link>
+      <link>https://example.com/posts/%E5%85%B6%E4%BB%96/hexo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/hexo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</guid>
+      <guid>https://example.com/posts/%E5%85%B6%E4%BB%96/hexo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</guid>
       <description>前言 之前整了一些笔记。
 [gitee+picgo 图床上传图片404](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/gitee 图床上传图片404.md)
 [基于html拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/如何基于gitee pages 搭建一个属于自己的主页.md)
@@ -63,10 +63,10 @@ Hexo 使用文档：https://hexo.io/docs/
     
     <item>
       <title>Hugo&#43;Gitee pages 搭建个人主页</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hugo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <link>https://example.com/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hugo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hugo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <guid>https://example.com/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hugo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
       <description>前言 之前整过一个静态网页，一个Jekyll，一个hexo.话说，如果我知道的不完整，我怎么才能知道什么才是适合自己的呢？那么，就开整。
 顺便推一下博客目录
 正文 老规矩，还是先贴官方教程:
@@ -88,10 +88,10 @@ https://golang.google.cn/dl/
     
     <item>
       <title>Hugo&#43;Gitee pages 搭建个人主页</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Ehogo%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <link>https://example.com/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Ehogo%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Ehogo%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <guid>https://example.com/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Ehogo%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
       <description>前言 在对比了Jekyll，hexo和hugo 之后，我决定使用Hugo搭建属于自己的主页。自己写静态网页这个调调就基本上放弃了。因为打算认真的写笔记什么的了。 选择hogo 原因还是蛮简单的，主要是他主题提供了Demo。虽然Jekyll主题可以下载别人项目的源码，但是还是需要去读和修改的。 顺便推一下博客目录
 结束 http://localhost:1313/images/avatar.jpg 谢谢光临，若觉得还行麻烦点一下赞，若觉得写得垃圾，欢迎批评指正。笔者知道自己文笔和表达能力很弱，如果您可以提供点宝贵的意见不胜感激。谢谢。
 今天也可以是元气满满的一天哦。 更新需要审核。更新通常优先更新到gitee上面。
@@ -100,10 +100,10 @@ https://golang.google.cn/dl/
     
     <item>
       <title>Hugo&#43;Gitee pages 搭建个人主页进阶</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/hogo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</link>
+      <link>https://example.com/posts/%E5%85%B6%E4%BB%96/hogo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/hogo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</guid>
+      <guid>https://example.com/posts/%E5%85%B6%E4%BB%96/hogo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</guid>
       <description>前言 之前整了一个Gitee page 的笔记。
 [gitee+picgo 图床上传图片404](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/gitee 图床上传图片404.md)
 [基于html拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/如何基于gitee pages 搭建一个属于自己的主页.md)
@@ -127,10 +127,10 @@ https://golang.google.cn/dl/
     
     <item>
       <title>Jekyll&#43;Gitee pages 搭建个人主页</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <link>https://example.com/posts/%E5%85%B6%E4%BB%96/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <guid>https://example.com/posts/%E5%85%B6%E4%BB%96/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
       <description>前言 顺便推一下博客目录 。之前写过一个基于静态html的笔记。
 正文 Jekyll 既然自己写静态网页对于我这种小白而言太复杂了，那么用博客主页生成工具就可以了，毕竟鲁迅曾经说过&amp;quot;成年人最大的优点就是及时止损&amp;quot;。
 Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
@@ -146,10 +146,10 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
     
     <item>
       <title>Jekyll&#43;Gitee pages 搭建个人主页进阶</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/</link>
+      <link>https://example.com/posts/%E5%85%B6%E4%BB%96/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/</guid>
+      <guid>https://example.com/posts/%E5%85%B6%E4%BB%96/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/</guid>
       <description>前言 之前写了点gitee pages 相关的笔记。
 [基于html拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/如何基于gitee pages 搭建一个属于自己的主页.md)
 [基于Jekyll拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/2020-09-29-基于Gitee pages+Jekyll拥有一个属于自己的主页.md)
@@ -166,10 +166,10 @@ jekyll 配置不正常显示的url:http://lalalaxiaowifi.gitee.io/images/avatar.
     
     <item>
       <title>picgo&#43;gitee配置图床404</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/gitee-%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87404/</link>
+      <link>https://example.com/posts/%E5%85%B6%E4%BB%96/gitee-%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87404/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/gitee-%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87404/</guid>
+      <guid>https://example.com/posts/%E5%85%B6%E4%BB%96/gitee-%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87404/</guid>
       <description>前言 之前逛掘金沸点的时候。得到了某些大佬的指点，然后知道了一个叫图床的神器，反正都是写笔记，搞一个图床也没有啥问题，表示非常喜欢md 的笔记风格。
 顺便推一下博客目录
 正文 我是通过 picgo+ gitee 图床的。这个教程很多，都写的蛮好的，就不贴了。今天准备认真工作的时候，发现图床上传不了图片，抛了一个404。具体log 稍后再贴。原因也很简单。gitee 的图床插件有两个。我最开始用的是第一个，也就是第一天使用的时候是没有问题的。
@@ -186,10 +186,10 @@ picgo 如何查看log 查看log 就很简单了，因为mac 通知无法复制�
     
     <item>
       <title>静态网页&#43;Gitee pages 搭建个人主页</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <link>https://example.com/posts/%E5%85%B6%E4%BB%96/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <guid>https://example.com/posts/%E5%85%B6%E4%BB%96/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
       <description>前言 话说，今天逛沸点的时候，看到一个大佬在推他的个人主页，感觉很有意思。
 这么好的东西，其实我也想要。那么就开整。需要先找到官方文档 ，毕竟官方提供的才是原汁原味的嘛(但是有些人提供的就没有那个味道了)。
 但是呢，东西是一个好东西，可惜我不会。gitee 推荐了3中静态网页方案，Jekyll、Hugo、Hexo ，这个，巧了，我又不会。突然想起大学的老师，老师们好像有教静态网页的吧，巧了，我好像没有去上课。
