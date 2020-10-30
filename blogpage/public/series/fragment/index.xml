@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fragment on 个人主页</title>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/series/fragment/</link>
+    <description>Recent content in fragment on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright>
+    <lastBuildDate>Tue, 20 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/series/fragment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>摸鱼Android Fragmentmanger</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-fragmentmanger/</link>
+      <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-fragmentmanger/</guid>
+      <description>前言 话说，搬砖多年，我们的好朋友fragment已经需要适配到AndroidX了，毕竟我之前老是喜欢用V4包下的fragment。但是这个笔记却不是关于更新到Android X的,毕竟如果要整Android X，要改的地方应该有点多，还不知道 Android X和support 包可以共存吗？感觉没法共存，毕竟从activity 到view好像都变了，毕竟第3方包如果没有适配Android X就没法改。自己整是不可能自己整的，毕竟老板没有要求，那我们就永远不适配AndroidX的代码。感觉有点和Android 最新时代已经脱轨了。
+好了，回归正文，我们主要是整fragmentmanager。
+顺便推一下博客主页
+正文 显示fragment吧，这个老朋友了，不需要介绍，app 下的fragment和v4下的fragment调用对应的fragmentmanager就好了。而显示fragment 一般有几种:
+ 通过ViewPager 加载 通过FrameLayout 通过dialogFragment 显示  这个地方主要整:基于FrameLayout 显示fragment。
+显示fragment 代码大概是需要显示成这个样子。
+1public Fragment showFragment(String className, FragmentManager fragmentManager, int id) { 2 Fragment fragment = null; 3 try { 4 5 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction(); 6 //隐藏所有的那个啥。 7 for (Fragment fra : fragmentManager.getFragments()) { 8 fragmentTransaction.hide(fra); 9 } 10 Fragment fragmentByTag = fragmentManager.findFragmentByTag(className); 11 if (fragmentByTag !</description>
+    </item>
+    
+    <item>
+      <title>摸鱼DialogFragment</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/%E6%91%B8%E9%B1%BCdialogfragment/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/%E6%91%B8%E9%B1%BCdialogfragment/</guid>
+      <description>前言 话说dialogfragment。这个调调，我用的还是蛮多的。像popwindow,loading，或者一些dialog如果能够用dialogfragment 实现，我一般会选择用这个调调。毕竟有生命周期，感觉和写fragment没有区别。这就导致我基于dialog 实现自定义dialog的能力比较差，主要还是主题设置，设置好了还是感觉差不多的。当然了popwindow的优点还是dialog 或者dialogfragment 无法比拟的。还有一个原因，我比较喜欢将一些值存储到activity的intent中(这么写，还是要提供完整的注释的，要不然不习惯这种写法的会看得很难受)，感觉dialog 中获取activity 没有fragment中那么方便。但是我看好多UI库都是自己写了一个dialog(比如说QMUI) ?搞得我有点懵逼。但是我看别人的代码，很少用dialogfragment 为啥我看到的代码里面，大家都用dialog 而不是dialogfragment ?这个以后探讨吧。
+顺便推一下博客主页
+正文 话说这个调调DialogFragment和其他控件差不多，也是从28以后移出出去了。看来把代码适配更新到Android X是需要提上日程了。关于基础用法这个网络上很多大佬写过博客的，我觉得没有重复的必要的，和fragment 差不多，还是重要的一点，配置style会影响dialogfragment的显示效果的，状态栏也可以按照需求配置的。
+主题 我所使用的主题。通常是全屏的。这个需要通过自己的需求配置
+1&amp;lt;style name=&amp;#34;Dialog.FullScreen&amp;#34; parent=&amp;#34;AppTheme&amp;#34;&amp;gt; 2 &amp;lt;item name=&amp;#34;android:windowNoTitle&amp;#34;&amp;gt;true&amp;lt;/item&amp;gt; 3 &amp;lt;item name=&amp;#34;android:windowBackground&amp;#34;&amp;gt;@color/transparent&amp;lt;/item&amp;gt; 4 &amp;lt;item name=&amp;#34;android:windowIsFloating&amp;#34;&amp;gt;false&amp;lt;/item&amp;gt; 5 &amp;lt;item name=&amp;#34;android:textColor&amp;#34;&amp;gt;@color/color_333333&amp;lt;/item&amp;gt; 6 &amp;lt;item name=&amp;#34;android:textSize&amp;#34;&amp;gt;14sp&amp;lt;/item&amp;gt; 7 &amp;lt;item name=&amp;#34;android:backgroundDimEnabled&amp;#34;&amp;gt;true&amp;lt;/item&amp;gt; 8&amp;lt;/style&amp;gt; 9 10&amp;lt;style name=&amp;#34;DialogNoDim&amp;#34; parent=&amp;#34;Dialog.FullScreen&amp;#34;&amp;gt; 11 &amp;lt;item name=&amp;#34;android:backgroundDimEnabled&amp;#34;&amp;gt;false&amp;lt;/item&amp;gt; 12 &amp;lt;/style&amp;gt; 使用:
+1@Override 2public void onCreate(@Nullable Bundle savedInstanceState) { 3 super.onCreate(savedInstanceState); 4 setStyle(STYLE_NORMAL, R.style.Dialog_FullScreen); 5} 其他设置：
+1@Nullable 2@Override 3public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) { 4 getDialog().</description>
+    </item>
+    
+  </channel>
+</rss>

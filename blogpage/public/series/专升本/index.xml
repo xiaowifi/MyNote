@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>专升本 on 个人主页</title>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/</link>
+    <description>Recent content in 专升本 on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright>
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2020秋冬课程表</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/2020-10-19%E4%B8%93%E5%8D%87%E6%9C%AC%E8%AF%BE%E7%A8%8B%E8%A1%A8/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/2020-10-19%E4%B8%93%E5%8D%87%E6%9C%AC%E8%AF%BE%E7%A8%8B%E8%A1%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java EE</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/javaee/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%860/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/javaee/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%860/</guid>
+      <description>前言 结束 </description>
+    </item>
+    
+    <item>
+      <title>SQL server 创建和修改数据库</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/sql-server-%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/sql-server-%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <description>数据库定义 数据库是按照一定的数据模型组织起来并存放在存储介质中的数据集合。他是用来组织和存取大量数据大管理系统。
+正文 数据库对象  表 table 是包含数据库中所有数据的数据库对象，由行和列构成。 视图 view 是由一个表或者多个表导出的表，又称为虚拟表。 索引 index 为了加快数据检索速度并可以保证数据唯一性的数据结构。 存储过程 stored procedure 为了完成特定功能的T SQL 语句集合，编译后存放于服务器端的数据库中 触发器 trigger 他是一种特定的存储过程，当某个规定的事件发生时该存储过程自动执行。  系统数据库 sql Server 在安装时创建了4个系统数据库，master，model，msdb,tempdb.当系统数据库被破坏时sql Server 将不能正常启动工作。
+ master 数据库：记录sqlServer系统信息，如登录账号，系统配置，数据库位置，数据库错误信息。用于控制用户数据库和sqlServer 的运行。 model 数据库为创建数据库提供模板。 msdb 代理服务数据库，为调度信息，作业记录等提供存储空间。 tempdb 临时数据库，为临时表和临时存储过程提供存储空间。  物理数据库 页和区是sql Server 的两个主要的数据存储单位。
+ 页 每个页是 8KB,每1 MB 可以容纳128页。页是数据存储的基本单位。 区 每8个连接的页组成一个区，区的大小是64KB,1MB 的数据库有16个区，区用于控制表和索引的存储。  </description>
+    </item>
+    
+    <item>
+      <title>sql server 服务器组件</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/sql-server%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BB%84%E4%BB%B6/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/sql-server%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BB%84%E4%BB%B6/</guid>
+      <description>数据库定义 数据库是按照一定的数据模型组织起来并存放在存储介质中的数据集合。他是用来组织和存取大量数据大管理系统。
+SQL Server 服务器组件  数据库引擎  用于存储，处理，保护数据的核心服务，如创建数据库，创建表，视图，数据查询，可控制访问权限，快速事务处理等。   分析服务  联机数据处理和数据挖掘   报表服务  SSRS 报表平台 可以用来创建管理包含关系数据源中数据的表格，矩阵报表，图形报表，自由格式报表、   集成服务  SSIS 主要用于清理聚合，合并，复制数据转换以及管理SSIS包，提供生产并调试SSIS包的图形向导工具，执行FTP,电子邮件消息传递等操作。    同理 其他数据库 也应该有对应的服务器组件 </description>
+    </item>
+    
+    <item>
+      <title>sql server 表</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/sql-server-%E8%A1%A8/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/sql-server-%E8%A1%A8/</guid>
+      <description>数据库定义 数据库是按照一定的数据模型组织起来并存放在存储介质中的数据集合。他是用来组织和存取大量数据大管理系统。
+正文 sql Server 表是由行和列构成，又称为二维表。
+关键字 用于唯一的标识记录。可以有多个关键字和多个主键。
+Sql Server 数据类型   整数型
+  精确数值型
+  浮点型
+  货币型
+  位型
+  字符型
+  Unicode 字符型
+  文本型
+  二进制型
+  日期时间类型
+  时间戳型
+  图像型
+  位型
+  其他数据类型（竟然可以 XML ）
+  </description>
+    </item>
+    
+    <item>
+      <title>T-SQL与SQL基础</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/t-sql%E4%B8%8Esql%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/t-sql%E4%B8%8Esql%E5%9F%BA%E7%A1%80/</guid>
+      <description>数据库定义 数据库是按照一定的数据模型组织起来并存放在存储介质中的数据集合。他是用来组织和存取大量数据大管理系统。
+正文 SQL语言是关系数据库管理的标准语言，不同的数据库管理系统在SQL 语言基础上进行扩展。T-SQL 是SQL Server 在SQL的基础上增加控制语句和系统函数的扩展。
+SQL是应用于数据库的结构化查询语言，是一种非过程性语言，本身不能脱离数据库存在。由数据库系统完成具体的内部操作。
+工具使用:DataGrip：https://www.jetbrains.com/datagrip/
+创建数据库 T-SQL 这个是普通的创建。这个和SQL 创建是一样的。
+1CREATE DATABASE 数据库名; 其他字段内容创建：
+1create database 数据库名; 2on( 3name=&amp;#34;数据库名&amp;#34;,filename=&amp;#34;文件存储路径&amp;#34;,size=300mb,filecrowth=1mb 4) 5log on ( 6name=&amp;#34;log文件名&amp;#34;,filename=&amp;#34;log文件地址&amp;#34;,size=30mb,maxsize=1--mb,filegroeth=10% 7)  数据库 最多128个字符。 on 子句，指定数据库文件名和文件组属性。 log on 子句 指定log 文件属性。 Filespec 指定数据文件的属性，给出文件的逻辑名，存储路径，大小以及增长特性。就是on 和log on 的子句之一。 name:filespec 定义的文件名。 Filename :filespes 定义的文件路径。 Size filespes 定义的文件大小。 maxsize filespec 定义的文件最大大小。 filegrowth:指定 filespec 的文件增长量。  针对 数据库文件的增长量是绝对大小，比如说1MB,但是针对log 文件的增长量是百分比 比如说5%;
+SQL 在使用 my sql 中就没有其他字段内容。
+1CREATE DATABASE 数据库名; 修改数据库 通常修改数据名，存储位置，log 等。</description>
+    </item>
+    
+    <item>
+      <title>数据库系统与数据库设计</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A8%A1%E6%9D%BF/</guid>
+      <description>数据库定义 数据库是按照一定的数据模型组织起来并存放在存储介质中的数据集合。他是用来组织和存取大量数据大管理系统。</description>
+    </item>
+    
+    <item>
+      <title>数据库系统与数据库设计</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/</guid>
+      <description>数据库定义 数据库是按照一定的数据模型组织起来并存放在存储介质中的数据集合。他是用来组织和存取大量数据大管理系统。
+数据模型  层次模型 网状模型 关系模型  关系数据库 采用支持关系模型。一行Row 为一个元组Tuple.
+关系数据库操作称为关系运算，投影，选择，连接是最重要的关系运算。
+单目运算:是指运算符包括赋值运算符，算数运算符，逻辑运算符，位移运算符，关系运算符，自增自减运算符。
+ 选择是指选出满足给定条件的记录，他是从行的角度进行的单目运算，运算对象是一个表，运算结果形成一个新表。 投影是选择表中满足条件的列。他是从列的角度进行单目运算。结果也是形成一个新表。 连接是将两个表中的行按照一定条件横向结合生成新表。连接是双目运算，其操作对象是两个表。  关系中不允许出现相同的元组。</description>
+    </item>
+    
+    <item>
+      <title>统考英语B作文</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E4%BD%9C%E6%96%87/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E4%BD%9C%E6%96%87/</guid>
+      <description>第六部分 作文全新版 机考作文大致分以下10类, 精选频率高的8类范文8篇, 议论文12篇, 书信通知等4篇,共计14篇,学会套用 提示: 写作部分满分10分, 即使不能根据要求写出文章, 也不能空白, 写上自己认识的词或句子,都有可能拿到一定的辛苦分. 作文要求80字, 系统会随时告诉你此时字数是多了少,所以一定要写满80字, 最好是写到100字左右. 对于没有基础的考生, 如果遇见完全陌生的考题的话,就套用万能范文,可以拿到4分以上. 注意作文千万不能空白，只要写了就有分数，作文就在下面模板里面，同学们有空多看
+万能模板： 适用所有作文类型，如果基础很差， 看不了太多就把以下6小段掌握。 I think (此处抄写作文题目) is an interesting topic. 我认为（作文题目）是一个有趣的话题。 Many people around me are talking about this. 我周围的许多人都在谈论这个。 In my opinion, we should understand 此处抄写作文题目 like this. 在我看来，我们应该明白（作文题目）是这样的。 First, 此处翻译题目中的中文提示1（如果实在不会写，可抄写阅读理解中的意义有关的句子两到三个凑数， 如果能做适当的修改更好。 Second, 此处翻译题目中的中文提示2（如果实在不会写，可抄写阅读理解中的意义有关的句子两到三个凑数， 如果能做适当的修改更好。 In conclusion, let’s pay more and more attention to this together from now on. 总之，从现在开始，让我们越来越关注这个话题。
+that is all i want to say,now i want to be stronger ,thanks.</description>
+    </item>
+    
+    <item>
+      <title>英语</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E8%8B%B1%E8%AF%AD%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E8%8B%B1%E8%AF%AD%E6%A8%A1%E6%9D%BF/</guid>
+      <description>前言 结束 </description>
+    </item>
+    
+    <item>
+      <title>计算机编译原理0</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%860/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%860/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>重点单词</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E9%87%8D%E7%82%B9%E5%8D%95%E8%AF%8D/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E9%87%8D%E7%82%B9%E5%8D%95%E8%AF%8D/</guid>
+      <description>##大学英语 B 级
+重点词汇词性转换 动词变名词 1． V+ tion/sion 结尾 attract 吸引— attraction 有吸引力的事或人；令人向往的地方 conclude —conclusion 结论 compete—competition 竞争，比赛 educate-----education 教育 decide----decision 决定 describe —description 描写，描绘 express 表达 ----expression 词语；表达方式 graduate 毕业— graduation operate 操作，动手术— operation organize----organization 组织 instruct —instruction 指导， 介绍 invent —inventor 发明者 / invention 发明物 invite —invitation 调查 inspire---inspiration 灵感，鼓舞人心的 --- pollute----pollution 污染 predict---prediction 预言 pronounce ---pronunciation 发音 permit 允许 -----permission 允许 suggest- 建议， 暗示 --suggestion 建议 solve 解决 -----solution 解决方法</description>
+    </item>
+    
+    <item>
+      <title>重点短语句型</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E9%87%8D%E7%82%B9%E7%9F%AD%E8%AF%AD%E5%8F%A5%E5%9E%8B/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E9%87%8D%E7%82%B9%E7%9F%AD%E8%AF%AD%E5%8F%A5%E5%9E%8B/</guid>
+      <description>大学英语B重点短语/句型用法大总结  （答案在每题后括号里）  　◆1 . cost / take / spend / pay 花费 花费时间做某事 ： It takes sb some time to do sth . = sb spend some time (in)doing sth .= sb spend some time on sth . 某人花钱买某物 ： sb spend some money on sth . = sb pay some money for sth . = sth cost sb . some money . ※ spend 和 pay 主语都是人， cost 主语是物.</description>
+    </item>
+    
+  </channel>
+</rss>
