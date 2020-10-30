@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>index on 个人主页</title>
-    <link>https://example.com/tags/index/</link>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/tags/index/</link>
     <description>Recent content in index on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>Copyright © 2020-2099</copyright><atom:link href="https://example.com/tags/index/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2020-2099</copyright><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/tags/index/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Posts</title>
-      <link>https://example.com/posts/</link>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/</link>
+      <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/</guid>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/</guid>
       <description></description>
     </item>
     

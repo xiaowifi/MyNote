@@ -2,62 +2,98 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on 个人主页</title>
-    <link>https://example.com/series/</link>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/series/</link>
     <description>Recent content in Series on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fragment</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/series/fragment/</link>
+      <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/fragment/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>android基础</title>
-      <link>https://example.com/series/android%E5%9F%BA%E7%A1%80/</link>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/series/android%E5%9F%BA%E7%A1%80/</guid>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java基础</title>
-      <link>https://example.com/series/java%E5%9F%BA%E7%A1%80/</link>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/series/java%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/series/java%E5%9F%BA%E7%A1%80/</guid>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/java%E5%9F%BA%E7%A1%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MFC</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/series/mfc/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/mfc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/series/python/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>selenium</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/series/selenium/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/selenium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>专升本</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/</guid>
       <description></description>
     </item>
     
     <item>
       <title>个人主页</title>
-      <link>https://example.com/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</link>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</guid>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</guid>
       <description></description>
     </item>
     
     <item>
       <title>其他</title>
-      <link>https://example.com/series/%E5%85%B6%E4%BB%96/</link>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E5%85%B6%E4%BB%96/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/series/%E5%85%B6%E4%BB%96/</guid>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/%E5%85%B6%E4%BB%96/</guid>
       <description></description>
     </item>
     
     <item>
       <title>模板</title>
-      <link>https://example.com/series/%E6%A8%A1%E6%9D%BF/</link>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E6%A8%A1%E6%9D%BF/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/series/%E6%A8%A1%E6%9D%BF/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>课程表</title>
-      <link>https://example.com/series/%E8%AF%BE%E7%A8%8B%E8%A1%A8/</link>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/series/%E8%AF%BE%E7%A8%8B%E8%A1%A8/</guid>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/%E6%A8%A1%E6%9D%BF/</guid>
       <description></description>
     </item>
     
