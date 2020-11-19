@@ -3,17 +3,17 @@
 	"file": "styles.css",
 	"sourceRoot": "/Users/yangfan/BlogAndImages/blogpage",
 	"sources": [
-		"themes/hugo-clarity/assets/sass/main.sass",
-		"themes/hugo-clarity/assets/sass/_variables.sass",
-		"themes/hugo-clarity/assets/sass/_variables.sass",
-		"themes/hugo-clarity/assets/sass/_fonts.sass",
-		"themes/hugo-clarity/assets/sass/_base.sass",
-		"themes/hugo-clarity/assets/sass/_components.sass",
-		"themes/hugo-clarity/assets/sass/_utils.sass",
-		"themes/hugo-clarity/assets/sass/_mobile.sass",
-		"themes/hugo-clarity/assets/sass/_syntax.sass",
-		"themes/hugo-clarity/assets/sass/_custom.sass",
-		"themes/hugo-clarity/assets/sass/_custom.sass"
+		"themes/hugo-clarity-luoye/assets/sass/main.sass",
+		"themes/hugo-clarity-luoye/assets/sass/_variables.sass",
+		"themes/hugo-clarity-luoye/assets/sass/_variables.sass",
+		"themes/hugo-clarity-luoye/assets/sass/_fonts.sass",
+		"themes/hugo-clarity-luoye/assets/sass/_base.sass",
+		"themes/hugo-clarity-luoye/assets/sass/_components.sass",
+		"themes/hugo-clarity-luoye/assets/sass/_utils.sass",
+		"themes/hugo-clarity-luoye/assets/sass/_mobile.sass",
+		"themes/hugo-clarity-luoye/assets/sass/_syntax.sass",
+		"themes/hugo-clarity-luoye/assets/sass/_custom.sass",
+		"themes/hugo-clarity-luoye/assets/sass/_custom.sass"
 	],
 	"sourcesContent": [
 		"@import 'variables';\n@import '../../assets/sass/variables';\n@import 'fonts';\n@import 'base';\n@import 'components';\n@import 'utils';\n@import 'mobile';\n@import 'syntax';\n@import 'custom';\n@import '../../assets/sass/custom';\n",
