@@ -1,0 +1,31 @@
++++
+date = "2020-10-01"
+title = "Python入门搞事"
+description = "python"
+tags = [ "python"]
+categories = [
+    "技术类"
+]
+series = ["python"]
+featured = true
+
++++
+![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
+
+## 前言
+
+之前无聊逛github的时候，发现了一个Python爬虫的教程库，于是顺手点了一个赞。这里贴一下:https://github.com/wistbean/learn_python3_spider 。今年打算努力下，所以TODO 写了一大堆，然后专升本也要在线学习，晚上去学校上课，还要备考英语，Android 技术方向上又整了一个在线课程，虽然最近没有啥事情，但是总感觉事情整不完，特别是在线学习的这个调调，认真听吧，不好说，挂课吧，不会js,然后之前的也用不起了，手动点吧，一分钟一点，这一天天的就啥事情不用干了。本着能多学一点是一点的态度，我决定通过selenium，看看自己能不能整一个挂课脚本出来。
+
+话说这个调调 selenium 是web的自动化测试工具。emmm ?好像支持JAVA，ok python 先放下了，我大JAVA 要起来了。
+
+顺便推一下[博客主页](http://lalalaxiaowifi.gitee.io/pictures/) 
+
+## 结束
+
+谢谢光临，若觉得还行麻烦点一下赞，若觉得写得垃圾，欢迎批评指正。笔者知道自己文笔和表达能力很弱，如果您可以提供点宝贵的意见不胜感激。谢谢。
+
+今天也可以是元气满满的一天哦。
+更新需要审核。更新通常优先更新到gitee上面。
+
+[博客主页](http://lalalaxiaowifi.gitee.io/pictures/)  
+

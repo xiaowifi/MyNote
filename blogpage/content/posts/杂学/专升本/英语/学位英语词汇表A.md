@@ -1,21 +1,15 @@
 +++
-date = "2020-10-01"
-title = "杂学模块"
-description = "杂学模板"
-tags = [ "模板"]
+date = "2020-11-11"
+title = "学位英语词汇表A"
+description = "学位英语词汇表A"
+tags = [ "英语","学位英语","词汇表","A"]
 categories = [
     "杂学"
 ]
-series = ["模板"]
+series = ["专升本"]
 featured = true
 +++
 ![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
-
-## 前言
-
-
-
-## 结束
 
 
 
