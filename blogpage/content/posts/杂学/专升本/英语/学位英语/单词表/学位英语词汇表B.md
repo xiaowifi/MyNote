@@ -1,13 +1,13 @@
 +++
-date = "2020-10-01"
-title = "英语"
-description = "英语"
-tags = [ "英语"]
+date = "2020-11-11"
+title = "学位英语词汇表B"
+description = "学位英语词汇表B"
+tags = [ "英语","学位英语","词汇表","B"]
 categories = [
     "杂学"
 ]
 series = ["专升本"]
-featured = true
+featured = false
 +++
 ![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
 
