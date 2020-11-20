@@ -75,51 +75,79 @@ ahead of you on the right will be a lovely graden，在你的右前方有一个�
 * All at once there was somenoe knocking on the door ,忽然有人敲门。
 ### all of a sudden  突然的，出乎意料地
 #### 例子:
-### 
+* All of a sudden she didnot look sleepy any more，突然她看起来一点都不困。
+* So shy did he get interested all of a  sudden ? 为啥她突然感兴趣了？
+### all over 到处，遍及,全部完结
 #### 例子:
-### 
+* I am glad(高兴) it is all over.我很高兴一切都结束了
+* the water squirted（喷出，注射） all over me 
+### all right 行，顺利，良好，可接受的，满意的，健康的，尚可，（确保对方同意或者理解）如何，（回答对方的感谢或道歉）不要紧，没什么
 #### 例子:
-### 
+* is it all right with you if we go now ?我们现在走好吗？
+### all round 周围，处处
 #### 例子:
-### 
+Nerves(神经) are frayed(磨损的，烦躁的) all round ,每根神经都崩紧了
+### all the same 仍然，照样的
 #### 例子:
-### 
+we are all the same age;我们年龄一样。
+we are all the same loving chinase;   我们都一样热爱中国
+### all the time 所有时间,总是，一直
 #### 例子:
-### 
+* all  the time I was blind（盲，忽视，意识） to you suffering（痛苦 suffer）,一直以来，我都没有意识到你遭受的痛苦。
+* all the time i loving you.我一直爱着你
+###  and so forth 等等，诸如此类
 #### 例子:
-### 
+* I like cartoons,caricatures and so forth,我喜欢动画，动漫等等。
+* Any questions about going through thrse cycles and useing expressions lie this and so forth? 关于推导这些循环和使用，这样的表达式之类的有没有是什么问题？
+### and so on 等等,诸如此类
 #### 例子:
-### 
+和 and so forth 同样的使用方式
+### apply...to 将什么应用于，涂，抹
 #### 例子:
-### 
+* they may apply to join the organlzation,他们可以申请加入该组织
+###  approve of 赞赏，同意，批准，通过 ,对什么给予认可
 #### 例子:
-### 
+* I quite approve of the idea of you plan,我赞同你的计划  
+* I didnot approve of his manner(态度，方式),我不喜欢他的态度。
+### around the clock /round the clock ,昼夜不停的，24小时不间断的，全天候的
 #### 例子:
-### 
+* you are been working around the clock.你已经工作一整天了。
+### as a matter of fact 实际是,事实上，确切地说
 #### 例子:
-### 
+As a matter of fact,we are schoolmates,确切的说，我们是校友.  
+### as a result 因此
 #### 例子:
-### 
+* her hair started falling（下降，掉落 fall） out as a result of radiation treatment, 由于放射治疗，她的头发开始脱落。
+### as a rule 通常,一般而言
 #### 例子:
-### 
+* i go to work by bicycle as a rule，平常我都是骑自行车上班
+### as far as 只要，就什么而言，到什么为止，据什么，
 #### 例子:
-### 
+As far as i know,据我所知
+### as for / as to 至于，关于，就什么而言,谈到
+as for I know. 据我所知
+### as if / as though 好像，仿佛
 #### 例子:
-### 
+* it sounds as if you have grown apart from tom,听起来你和tom好像产生了隔阂。
+* it as if you loving me.
+### as long as/so long as 只要，如果,既然，由于
+可以放到句子开头
+### as soon as 一什么就什么 ,立刻
 #### 例子:
-### 
+she got married(已婚) sa soon as she graduated（毕业的）.她一毕业就结婚了
+### as usual 像往常一样
+### as well as 既什么又什么，出了什么之外还什么,此外
 #### 例子:
-### 
+* It is his best interests(兴趣爱好，关心，利益) as well as yours，这符合他的最大利益，同时也符合你的利益
+* as well as walking,he likes fishing and shooting，除了散步以外，他还喜欢钓鱼和打猎
+### as well 同样，到也不如，不妨,也，还
 #### 例子:
-### 
+it is just as well ,这样也无妨
+### as...as 与....一样
 #### 例子:
-### 
-#### 例子:
-### 
-#### 例子:
-### 
-#### 例子:
-### 
+this new transformation is at least as consequential sa that one was.这一新的转变至少和那一次一样重要。
+### ask for 请求，要求
+
 #### 例子:
 ### 
 #### 例子:
