@@ -28,7 +28,7 @@ Second, 此处翻译题目中的中文提示2（如果实在不会写，可抄�
 In conclusion, let’s pay more and more attention to this together from now on.
 总之，从现在开始，让我们越来越关注这个话题。
 
-that is all i want to say,now i want to be stronger ,thanks.
+at length, that is all i want to say,now i want to be stronger ,thanks.
 
 
 

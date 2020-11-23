@@ -147,12 +147,68 @@ it is just as well ,这样也无妨
 #### 例子:
 this new transformation is at least as consequential sa that one was.这一新的转变至少和那一次一样重要。
 ### ask for 请求，要求
+#### 例子:
+continue to ask for feedback on  your work. 继续征求对你的工作的反馈意见
+### at a loss 困惑，不知所措,亏本的，赔钱的
+#### 例子:
+* i was at a loss for what to do next,下一步怎么做我完全没谱。
+* all his goods sell at a loss，他的货物全部赔本出售
+### at a time 每次，一次,依次
+#### 例子:
+* can i borrow(借) tow books  at a time? 我可以一次借两本书吗
+* beat in the aggs,one at a time，一次一个的打入鸡蛋。
+### at best 充其量，至多,顶多
+#### 例子:
+* the rest of the acting is patchy at best,剩下的表演顶多算是差强人意了
+* the script was workmanlike at best,这个剧本充其量是一个匠人之作
+### at first 最初，首先,开始时
+#### 例子:
+* at first they all thought i was a loony,最初的时候他们都以为我是疯子
+### at hand 在手边，附近,即将到来
+#### 例子:
+the examination is near at hand,考试即将到来
+### at heart 在内心，实际上
+#### 例子:
+he was a very gentle boy at heart，他实际上是一个非常温柔的人。
+### at home 在家，在国内，自采，自如
+#### 例子:
+i was at home on  furlough 我正在家里休假
+### at large 总是，一般，在逃的
+#### 例子:
+so are the people at large,世上的人也都是如此。
+### at last 最终，终于
+#### 例子:
+At last you had good luck,这下子你算是走运了
+### at least 最低限度,至少，起码，不管怎么样
+#### 例子:
+he is been away for at least a week ,他走了总有一个星期吧
+### at most 最多，至多
+#### 例子:
+he is forty at most 他最多40岁
+### at once 立刻，马上
+#### 例子:
+i must bo going back at once,我得马上回去了
+### at present 目前，现在
+#### 例子:
+I am all alone here at present 目前我独自一人在这儿
+### at the cost of 以什么为代价
+#### 例子:
+the lessons learned at the cost of bood heped to sober us,血的教训使我们的头脑清醒。
+### at the moment 此刻,目前，当下
+#### 例子:
+i am off coffee at the moment ，我眼下不再喝咖啡了
+### at the same time 与此同时,然而
+#### 例子:
+at the same time she felt a prick on her neck ,同时他觉得脖子上一阵刺痛
+### at times 有时
+#### 例子:
+* i found ben is cynicism wearing at times,我有时觉得本的愤世嫉俗令人厌烦。
+* it has exported inflation at times,他有时会输出通货膨胀 
+### at work 在工作，忙于，起作用，发挥效用
+#### 例子:
+* i think this is an evil spirit at work,我觉得这是恶魔在作祟。
+### at worst 在最坏的情况下
+#### 例子:
+at worst ,they are not disclosed at all,在最坏的情况下，他们甚至没有得到披露。
 
-#### 例子:
-### 
-#### 例子:
-### 
-#### 例子:
-### 
-#### 例子:
 
