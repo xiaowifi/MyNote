@@ -82,6 +82,19 @@ featured = false
 **例子:**<br>
 ### focus on 集中于
 **例子:**<br>
-
-
-
+###  for example 例如
+**例子:**<br>
+###  for good 永久的，一劳永逸
+**例子:**<br>
+###  for instance 举例说，比如
+**例子:**<br>
+###  for short 简称，缩写
+**例子:**<br>
+###  for the moment 暂时，目前
+**例子:**<br>
+###  for the present 目前，暂时
+**例子:**<br>
+###  for the time being 目前，暂时
+**例子:**<br>
+###  from time to time 时常
+**例子:**<br>
