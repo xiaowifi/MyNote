@@ -148,7 +148,7 @@ featured = true
 #### how are you getting on  today? (very well )
 **翻译**<br> 今天过的怎么样？ 非常好
 #### how`s is your family ? (not too bad)
-**翻译**<br> 你的佳人都还好吗？都还行
+**翻译**<br> 你的家人都还好吗？都还行
 
 
 
