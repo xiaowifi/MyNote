@@ -149,25 +149,196 @@ featured = true
 * who  can help me clean the room ? 谁能帮我打扫房间？ 
 
 * we should encourage him to have confidence in himself.我们应该鼓励他对自己要有信心。 
-
-* you  need not go there anymore,he already knows  about it, 你不必再去那里了，他已经知道了
-
+   
 * you  and your team can discover the answers to problems together.你和你的团队能够一起找到问题的答案的 
+
 * you`d better do that again,你最好再做一遍。
+
+* in  the united states a lot of college students do not live at home,再美国，许多大学生都不在家住。
+
+* in the world,soccer of football is the most popular sport,在这个世界上，足球运动是一项受欢迎的运动。
+
+* in foreign languages department,a checking machine is  used to correct the students`test papers,在外语系中，用阅卷机给学生阅卷。
+
+* in many factories ,an assembly line is used to speed up the efficiency of the workforce,许多工厂采用流水线来提高工作效率。
+
+* in no other region in the world can you find such rare animals as giant pandas.在世界上任何地区，你都找不到像大熊猫这么珍惜的动物。
+
+* Jane has  told me a lot about her trip in,珍妮告诉了我很多关于她旅行的事情。
+
+* just  because you like ,it does not mean i will ,你喜欢它，并不意味着我也会喜欢。
+
+* Jenny is  fond of reading and often borrows books from the city library 珍妮喜欢读书，经常从市图书馆借很多书。
+
+* let is sit over here until it is time for you to board.我们就在这里坐到你上飞机的时间。(我们坐在这儿等你登机)
+
+* let is try something different,让我们尝尝它不同的口味。(让我们试试不同的方法)
+
+*  libai is one of the greatest poets that have ever lived in china,李白是中国有历以来最伟大的诗人之一。
+
+* my liassmate is more clever than i,我的同学比我聪明。
+
+* my grandpa is used to getting up early,我爷爷习惯早起。
+
+* my problem is that i do not have much time to do the work,我的问题在于我没有多少时间来做这个工作。
+
+* many valuable resources in china is west area are to be exploited and used.中国西部地区有许多宝贵的资源有待开发和利用。
+
+* not all americans are interested in sports ,of caurse,当然，并不是所有美国人都对运动感兴趣。 
+
+* nothing in the world moves faster than light, 世界上没有什么比光速快的了。
+
+* not until the child fell asleep did the mother leave the room .直到孩子睡着了，妈妈才离开房间。 
+
+* never had he thought that the project would have  been completed so fast,他从来没有预料到这项工程会完成得这么快。 
+
+* once all the information is completed ,you sign here.一旦所有信息都完成了，请在这里签字。 
+
+* one can never succeed without enough confidence in himself。一个人没有对自己足够的信心，就永远不会成功。
+
+* okay,and i need a pen to fill out the address,好了，我还得借一支笔来填写地址。
+
+* open the window and let the fresh air in,打开窗户让新鲜空气进来。
+
+* our library  is  as big as theirs ,我们的图书馆和他们的一样大。
+
+* people  use science  knowledge to understand and change nature,人们利用科学知识去了解自然，改造自然。
+* please call me back when you are free,你有时间给我回一个电话。
+
+* please  ring me up tomorrow morning 请明天早上给我打电话。
+
+* please move your chair to the window,请把你的椅子移动到窗口。
+
+* please give this book to whoever comes first ,请把这本书给最先来的人。
+
+* she begins cooking as  soon as she gets home ,她一回到家就开始做饭。
+
+* a dog is always  well=known as a clever and friendly animal,在动物中，狗素以聪明与和善而著称。
+
+* a good memory is  a great help in learning a language,好的记忆有助于语言的学习。
+
+* a teacher should have patience in his work,当老师应当有耐心。
+
+* a lot of  natural  resources  in  the  mountain are to  be exploited and used. 那个山区有许多的自然资源有待于开发利用。
+
+* although very important intelligent is not necessarily the key to success,虽然聪明很重要，但未必是成功的关键（虽然很重要，但是智慧不一定是成功的关键）
+
+* as long as there is water plants would not die quickly,只要有水，植物就不会很快死掉
+
+* as was expected he passed the exam easily,果不出所料，他轻而易举的通过了考试。
+
+* but it  looks like something i would never buy,但是它看起来就像是我绝不会买的东西。
+
+* bob was such a hardworking man that he always worked late till night, 鲍勃是个如此勤奋的人，他总是工作到深夜 
+
+* because of his carelessness , jack hit his car  into a  big  tree by the roadside。因为他的粗心，杰克把他的车撞倒了路边的树上。
+
+* can you express yourself clearly in english? 你能用英语清楚的表达自己的意思吗？
+
+* Christmas is the mast important festival in the west,圣诞节是西方最重要的节日。
+
+* do not you think smoking is harmful to tour health? 你不认为抽烟对你的身体有害吗？
+
+* do you mind my opening the window? 你不介意我打开窗户吧?
+
+* do you think  students should do a part-time job? 你认为学生应该做兼职吗?
+
+* did you get that e-mal from me ?你收到了我发的那份电子邮件吗？
+
+* everyone was in bed except me，除了我，所有人都上床睡觉了
+
+* excuse me,where is the nearest police station? 请问下，离这儿最近的派出所在那里。
+
+* go down this street until you reach the secound traffic lights,顺着这条街走，一直走到第2个交通灯处。
+
+* give us a few  more minutes to decide,再给我们一点时间来做决定。
+
+* he had a traffic accident last week ,他上周出了一起交通事故。
+
+* he has been learning english for years,多年来，他一直在学英语
+
+* he is always very active in student activities ,他总是积极参与学生活动
+ 
+* he is sweating all over,他出了一身汗
+ 
+* he is thinking about moving to a new place,他正在考虑搬到一个新的地方
+ 
+* he keeps looking at himself in the mirror ,他老是照镜子
+
+* he stopped smoking,他戒烟了 
+
+* he was too tired to go on reading ,他太困了，无法再阅读了
+
+* he has sympathy for all poor people, 他对所有的穷人有一颗同情心。
+
+* he told me that he had lived in america  for  10 years before he came to china,他告诉我，他来到中国之前，他再美国已经居住了10年。
+
+* i am not an  englishmajor student,我不是英语专业的学生。
+
+* i am now a distance education student,我现在是一名远程教育学员。
+
+* i am very much eager to improve my oral english 我非常渴望改进我的英语口语。
+
+* i am very familiar with his name,我很熟悉他的名字
+
+* i am wondering who broke the window,我想知道是谁打破了窗户。
+
+* how long will it take us to get there ？ 我们到那儿要用多长时间？
+
+* i feel satisfied with my life ,我对我的生活感到满意。
+
+* i got married  ten years ago,我10年前就结婚了
+
+* i have a pain in my back,我的背疼
+
+* i look forward to hearing from you 我期待着搜到你的回信。
+
 * 
+
 * 
+
 * 
+
 * 
+
 * 
+
 * 
+
 * 
+
 * 
+
 * 
+
 * 
+
 * 
+
 * 
+
 * 
+
 * 
+
 * 
+
+* 
+
+* 
+
+* 
+
+* 
+
+* 
+
+* 
+
+* 
+
+* 
+
+
 
 
