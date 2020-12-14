@@ -117,6 +117,94 @@
   <div class="excerpt">
     <div class="excerpt_header">
       <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%BA%A6%E6%9D%9F/">Android sqlite约束</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 顺便推一下日常搬砖sqlite目录 。
+接着上面的写，之前有写到使用sqlite 实现增删改查等简单使用。sqlite是一个关系型数据库，既然是数据库那么它就一定不会这么简单了，是吧，要不然就没有专门做数据库设计的岗位了。当然了在Android上的应用通常可能没有这么复杂。那么简单的约束还是可以了解下的。毕竟我们可能不会做出超出我们逻辑认知的操作。如果想要实现某个功能，那么知道当前工具是否可以是很有必要的吧。
+正文 那么我们就直接上菜，Android 上无论是room 还是greendao，都是基于sqlite提供服务的，他们实现的sqlite 就必定有，是吧。我们知道一个表的设计包括 表名，字段名，字段名对应的类型（必须）， …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%BA%A6%E6%9D%9F/" class="excerpt_more button">Read More</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%8F%AF%E7%94%A8%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/">Android基础数据类型与sqlite存储类型</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B' class="post_tag button button_translucent">数据类型
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 之前又一篇文章上讲到 cursor.getType(cursor.getColumnIndex(key)) 可以获取到对应值的类型，通过cursor 类可以知道，cursor 就提供了4种类型。而ContentValues 定义了不止4总类型，sqlite的插入与更新都可以通过ContentValues 对象进行操作的。目录地址
+ cursor 定义了4种类型 ContentValues 定义了不止4总类型 sqlite 插入更新都可以通过 ContentValues 对象进行 问题1：sqlite 在创建表的时候是否支持所以的ContentValues 定义类型。 问题2:sqlite 支持的类型 对应了cursor中的哪些 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%8F%AF%E7%94%A8%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/" class="excerpt_more button">Read More</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E5%BC%80%E5%90%AFdebug%E4%B9%8B%E8%B7%AF/">Android开启Debug</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android' class="post_tag button button_translucent">android
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/debug' class="post_tag button button_translucent">debug
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 电脑不是太好。现在用的也仅仅是mac air 1.8 GHz 双核Intel Core i5 8 GB 1600 MHz DDR3。电脑情况不是太好，需要经常清理缓存啊，运行代码量稍微大一点的项目就感觉慢。打算明年换一个好一点的。所以我本人是比较倾向于插件化和aar的使用的，fragment 使用比重也很高，毕竟只要写好了模板，debug功能还是比activity 简单些。
+说回正题。Android debug 模式也不多，常用的一般分为：
+ 打印log 打断点 测试代码 让测试复现bug 等  顺便推一下博客目录
+正文 打印log ​	这种情况，一般是检查参数或者接口的时候，如果电脑不怎么行，打log 电脑也不怎么卡，打断点 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E5%BC%80%E5%90%AFdebug%E4%B9%8B%E8%B7%AF/" class="excerpt_more button">Read More</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/">hexo&#43;Gitee pages 搭建个人主页</a>
       </h3>
       <div class="post_meta">
@@ -662,104 +750,6 @@ SQL Server 服务器组件  数据库引擎  用于存储，处理，保护数�
     </div>
   </li>
 
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/sql-server-%E8%A1%A8/">sql server 表</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Oct 1, 2020</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%95%B0%E6%8D%AE%E5%BA%93' class="post_tag button button_translucent">数据库
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">数据库定义 数据库是按照一定的数据模型组织起来并存放在存储介质中的数据集合。他是用来组织和存取大量数据大管理系统。
-正文 sql Server 表是由行和列构成，又称为二维表。
-关键字 用于唯一的标识记录。可以有多个关键字和多个主键。
-Sql Server 数据类型   整数型
-  精确数值型
-  浮点型
-  货币型
-  位型
-  字符型
-  Unicode 字符型
-  文本型
-  二进制型
-  日期时间类型
-  时间戳型
-  图像型
-  位型
-  其他数据类型（竟然可以 XML ）
-  </p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/sql-server-%E8%A1%A8/" class="excerpt_more button">Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/t-sql%E4%B8%8Esql%E5%9F%BA%E7%A1%80/">T-SQL与SQL基础</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Oct 1, 2020</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%95%B0%E6%8D%AE%E5%BA%93' class="post_tag button button_translucent">数据库
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">数据库定义 数据库是按照一定的数据模型组织起来并存放在存储介质中的数据集合。他是用来组织和存取大量数据大管理系统。
-正文 SQL语言是关系数据库管理的标准语言，不同的数据库管理系统在SQL 语言基础上进行扩展。T-SQL 是SQL Server 在SQL的基础上增加控制语句和系统函数的扩展。
-SQL是应用于数据库的结构化查询语言，是一种非过程性语言，本身不能脱离数据库存在。由数据库系统完成具体的内部操作。
-工具使用:DataGrip：https://www.jetbrains.com/datagrip/
-创建数据库 T-SQL 这个是普通的创建。这个和SQL 创建是一样的。
-1CREATE DATABASE 数据库名; 其他字段内容 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/t-sql%E4%B8%8Esql%E5%9F%BA%E7%A1%80/" class="excerpt_more button">Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/todo/">TODO</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Oct 1, 2020</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">TODO android  Android intent 保存参数与fragment 子fragment 互用。 fragment 无限套娃，是否可以在activity层判断fragment是否包含显示？ Android 加锁 通过手写array 备份activity 批量移除activity与通过intent 设置tag移除activity的区别。 探讨通过加锁机制，统一loading层延时关闭view。 摸鱼 dialogFragment dissmiss 之后通过fragmentmanger 还能获取到吗？ 通过加锁机制对轮转控件进行加强。  java  java 各种设计模式 JAVA 新特性  SQL  android …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/todo/" class="excerpt_more button">Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
     <li>
 <ul class="pagination">
   <li class="page-item">
@@ -801,6 +791,15 @@ SQL是应用于数据库的结构化查询语言，是一种非过程性语言�
     <h2 class="mt-4">Featured Posts</h2>
     <ul>
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E6%B6%89%E5%8F%8A%E5%8D%95%E8%AF%8D/" class="nav-link">统考英语B阅读理解涉及单词</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E7%AC%AC2%E9%83%A8%E5%88%86/" class="nav-link">统考英语B阅读理解第2部分</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86/" class="nav-link">统考英语B阅读理解第一部分</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E8%8B%B1%E7%BF%BB%E6%B1%89%E7%AC%94%E8%AE%B0/" class="nav-link">统考英语B英译汉</a>
       </li>
       <li>
@@ -814,20 +813,20 @@ SQL是应用于数据库的结构化查询语言，是一种非过程性语言�
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E4%BA%A4%E9%99%85%E7%94%A8%E8%AF%AD/" class="nav-link">统考英语B交际用语</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E4%BA%A4%E9%99%85%E7%94%A8%E4%BA%8E%E6%B6%89%E5%8F%8A%E8%AF%8D%E6%B1%87/" class="nav-link">统考英语B交际用语涉及词汇</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E4%B8%AA%E4%BA%BA%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/cost%E8%B4%A6%E6%9C%AC/cost%E8%B4%A6%E6%9C%AC/" class="nav-link">cost账本</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%8D%E8%A7%84%E5%88%99%E5%8A%A8%E8%AF%8D/" class="nav-link">学位英语不规则动词</a>
       </li>
     </ul>
     <h2 class="mt-4">Recent Posts</h2>
     <ul class="flex-column">
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E6%B6%89%E5%8F%8A%E5%8D%95%E8%AF%8D/" class="nav-link">统考英语B阅读理解涉及单词</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E7%AC%AC2%E9%83%A8%E5%88%86/" class="nav-link">统考英语B阅读理解第2部分</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86/" class="nav-link">统考英语B阅读理解第一部分</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E8%8B%B1%E7%BF%BB%E6%B1%89%E7%AC%94%E8%AE%B0/" class="nav-link">统考英语B英译汉</a>
       </li>
       <li>
@@ -841,15 +840,6 @@ SQL是应用于数据库的结构化查询语言，是一种非过程性语言�
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E4%BA%A4%E9%99%85%E7%94%A8%E8%AF%AD/" class="nav-link">统考英语B交际用语</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E4%BA%A4%E9%99%85%E7%94%A8%E4%BA%8E%E6%B6%89%E5%8F%8A%E8%AF%8D%E6%B1%87/" class="nav-link">统考英语B交际用语涉及词汇</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E4%B8%AA%E4%BA%BA%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/cost%E8%B4%A6%E6%9C%AC/cost%E8%B4%A6%E6%9C%AC/" class="nav-link">cost账本</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%8D%E8%A7%84%E5%88%99%E5%8A%A8%E8%AF%8D/" class="nav-link">学位英语不规则动词</a>
       </li>
     </ul>
     <div>
@@ -857,7 +847,7 @@ SQL是应用于数据库的结构化查询语言，是一种非过程性语言�
       <nav class="tags_nav">
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%9D%82%E5%AD%A6/' class="post_tag button button_translucent">
           杂学
-          <span class="button_tally">45</span>
+          <span class="button_tally">48</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/' class="post_tag button button_translucent">
@@ -867,7 +857,7 @@ SQL是应用于数据库的结构化查询语言，是一种非过程性语言�
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
           英语
-          <span class="button_tally">5</span>
+          <span class="button_tally">8</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
@@ -913,7 +903,7 @@ SQL是应用于数据库的结构化查询语言，是一种非过程性语言�
       <nav class="tags_nav">
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/' class="post_tag button button_translucent">
           专升本
-          <span class="button_tally">41</span>
+          <span class="button_tally">44</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class="post_tag button button_translucent">
@@ -984,7 +974,7 @@ SQL是应用于数据库的结构化查询语言，是一种非过程性语言�
       <nav class="tags_nav">
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
           英语
-          <span class="button_tally">29</span>
+          <span class="button_tally">32</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%AD%A6%E4%BD%8D%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
@@ -1012,6 +1002,11 @@ SQL是应用于数据库的结构化查询语言，是一种非过程性语言�
           <span class="button_tally">8</span>
         </a>
         
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/' class="post_tag button button_translucent">
+          统考英语B
+          <span class="button_tally">8</span>
+        </a>
+        
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite/' class="post_tag button button_translucent">
           SQLITE
           <span class="button_tally">7</span>
@@ -1020,11 +1015,6 @@ SQL是应用于数据库的结构化查询语言，是一种非过程性语言�
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/' class="post_tag button button_translucent">
           数据库
           <span class="button_tally">6</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/' class="post_tag button button_translucent">
-          统考英语B
-          <span class="button_tally">5</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/hugo/' class="post_tag button button_translucent">
@@ -1206,7 +1196,7 @@ SQL是应用于数据库的结构化查询语言，是一种非过程性语言�
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/' class=" post_tag button button_translucent" data-position=5>统考英语B<span class="button_tally">5</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/' class=" post_tag button button_translucent" data-position=8>统考英语B<span class="button_tally">8</span>
             </a>
             
             
@@ -1214,7 +1204,7 @@ SQL是应用于数据库的结构化查询语言，是一种非过程性语言�
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%AD/' class=" post_tag button button_translucent" data-position=29>英语<span class="button_tally">29</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%AD/' class=" post_tag button button_translucent" data-position=32>英语<span class="button_tally">32</span>
             </a>
             
             
@@ -1226,7 +1216,7 @@ SQL是应用于数据库的结构化查询语言，是一种非过程性语言�
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87/' class=" post_tag button button_translucent" data-position=2>词汇<span class="button_tally">2</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87/' class=" post_tag button button_translucent" data-position=3>词汇<span class="button_tally">3</span>
             </a>
             
             
@@ -1323,6 +1313,14 @@ SQL是应用于数据库的结构化查询语言，是一种非过程性语言�
             
             
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%BE%E7%A8%8B%E8%A1%A8/' class=" post_tag button button_translucent" data-position=1>课程表<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3/' class=" post_tag button button_translucent" data-position=2>阅读理解<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E5%88%A4%E6%96%AD%E5%AF%B9%E9%94%99/' class=" post_tag button button_translucent" data-position=1>阅读理解判断对错<span class="button_tally">1</span>
             </a>
             
             
