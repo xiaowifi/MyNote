@@ -293,51 +293,47 @@ featured = true
 
 * i look forward to hearing from you 我期待着搜到你的回信。
 
-* 
+* i  need  to buy some 50-cent stamps,我需要买一些50美分的有票。
 
-* 
+* i prefer tea to coffe,我宁可要茶，不要咖啡
 
-* 
+* i think the picture shows us how fruits is necessary to life,我想这幅画是告诉我们水果是生活中不可缺的。
 
-* 
+* i think our dream will become true,我想我们的梦想会成真的
 
-* 
+* i will call you as soon as i arrive.我一到就给你打电话。
 
-* 
+* i will write to you as soon as i get there,我一到那儿就给你写信。
 
-* 
+* i will have to try using the search engines,我必须试着使用搜索引擎
 
-* 
+* i am certain he will go to see the film,because he has bought a ticket,我肯定他会去看电影，因为他已经买票了。
 
-* 
+* i am going to buy a monthly ticket tomorrow,我想明天买张月票
 
-* 
+* i am going to run for the bus as soon as the bell rings,铃声一响，我就跑出去赶公交车。
 
-* 
+* she was the only daughter and the youngest child of five,她是家里面唯一的女儿也是五个孩子中最小的一个。
 
-* 
+* some football teams will have games there,有一些足球队将在这里比赛。
 
-* 
+* the earth on which we live is shaped like a ball,我们居住的地球，形状像一个打球
 
-* 
+* the more money i make,the happier i will be ,赚的钱越多，我就会越快乐
 
-* 
+* the plane took off very smoothly ，飞机起飞的很顺利
 
-* 
+* the price  of gasoline will come  down in chinese market,中国市场上的汽油价格会下降。
 
-* 
+* the most common samples of inorganic materials are the gases of the atmosphere ,water,rocks,etc,无机材料最常见的样品是大气中的气体，水，岩石等
 
-* 
+* tom is father has taught english here since he graduated from peking university,汤姆的父亲从北京大学毕业后就一直在这里教英语。
 
-* 
+* though it was beyond them,they tried their best to do it,尽管超出了他们的能力，但他们还是尽力去做。
 
-* 
+* though it was late,they kept on working,尽管已经很晚了，他们还在继续工作。
 
-* 
 
-* 
-
-* 
 
 
 
