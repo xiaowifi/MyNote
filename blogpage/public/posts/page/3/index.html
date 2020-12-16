@@ -116,6 +116,63 @@
   <div class="excerpt">
     <div class="excerpt_header">
       <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/">Android sqlite增删改查</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 日常搬砖sqlite目录 再目录中提到了一些东西，有兴趣可以点过去看一下，觉得还行麻烦点下赞。
+正文 第一步创建数据库 再目录文档中，引用了官方文档的一段话 SQLiteOpenHelper 类包含一组用于管理数据库的实用 API。当您使用此类获取对数据库的引用时，系统仅在需要时才执行可能需要长时间运行的数据库创建和更新操作，而不是在应用启动期间执行。您仅需调用 getWritableDatabase() 或 getReadableDatabase() 即可。
+  第一步应该是创建数据库文件。通过上面的引用可以知道 我们创建 数据库文件只需要 继承 SQLiteOpenHelper即可。而SQLiteOpenHelper的构造 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" class="excerpt_more button">Read More</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E6%94%B9%E6%9F%A5%E5%8F%A6%E7%B1%BB%E5%86%99%E6%B3%95/">Android sqlite增删改查另类写法</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 啊哈，今天又更新了。接上一篇日常搬砖sqlite可用类型与存储类型 。
+顺便推一下日常搬砖sqlite目录
+之前又一篇博客提到了json 对象不仅仅可以通过对象class 解析，也可以解析成map.巧合的是sqlite 添加和更新需要的ContentValues 也是一个类似于map的结构。既然object 与map互转，同理可以解决 object可以和ContentValues 互相转化，是吧。还有一个点 cursor.getType(cursor.getColumnIndex(key)) 可以获取到值的type,所以开整。先总结下可能需要的逻辑。
+  ContentValues 也是一个类似于map的结构。 逻辑 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E6%94%B9%E6%9F%A5%E5%8F%A6%E7%B1%BB%E5%86%99%E6%B3%95/" class="excerpt_more button">Read More</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E6%9B%B4%E6%96%B0/">Android sqlite更新</a>
       </h3>
       <div class="post_meta">
@@ -689,67 +746,6 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
     </div>
   </li>
 
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/selenium/selenium%E5%85%A5%E9%97%A81/">selenium入门1</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Oct 1, 2020</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/selenium' class="post_tag button button_translucent">selenium
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">前言 之前逛github的时候，发现了一个Python调用自动化测试工具的教程。然后发现了一个selenium的宝贝，在这位大佬的Demo中，我发现他可以直接操作浏览器。
-话说 我一个Android 搬砖工，好像也没有必要整这个自动化web。
-顺便推一下博客主页
-正文 先整需求:
-  基本需求，在线学习中，可以自己隔一段时候点一下下一页。
-  进阶一点的是，可以不吃焦点的点下一页。
-  再进阶一点的，可以最小化浏览器，然后还可以点下一页。
-  基于基本需求可以判断界面是否学习完毕，完毕后才点下一页，或者等待了3分钟没有完成直接点下一页。
-  基于上一条补充，先判断当前页有多少个课，如果有多个，先每一个跳转一下到最后一个，等完毕后再下 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/selenium/selenium%E5%85%A5%E9%97%A81/" class="excerpt_more button">Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/sql-server-%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E5%BA%93/">SQL server 创建和修改数据库</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Oct 1, 2020</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%95%B0%E6%8D%AE%E5%BA%93' class="post_tag button button_translucent">数据库
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">数据库定义 数据库是按照一定的数据模型组织起来并存放在存储介质中的数据集合。他是用来组织和存取大量数据大管理系统。
-正文 数据库对象  表 table 是包含数据库中所有数据的数据库对象，由行和列构成。 视图 view 是由一个表或者多个表导出的表，又称为虚拟表。 索引 index 为了加快数据检索速度并可以保证数据唯一性的数据结构。 存储过程 stored procedure 为了完成特定功能的T SQL 语句集合，编译后存放于服务器端的数据库中 触发器 trigger 他是一种特定的存储过程，当某个规定的事件发生时该存储过程自动执行。  系统数据库 sql Server 在安装时创建了4个系统数据 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%95%B0%E6%8D%AE%E5%BA%93/sql-server-%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E5%BA%93/" class="excerpt_more button">Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
     <li>
 <ul class="pagination">
   <li class="page-item">
@@ -771,10 +767,13 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
     <a class="page-link" href="/pictures/posts/page/4/">4</a>
   </li>
   <li class="page-item">
+    <a class="page-link" href="/pictures/posts/page/5/">5</a>
+  </li>
+  <li class="page-item">
     <a href="/pictures/posts/page/4/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/pictures/posts/page/4/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/pictures/posts/page/5/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 
@@ -791,6 +790,9 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
     <h2 class="mt-4">Featured Posts</h2>
     <ul>
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E5%AE%8C%E5%BD%A2%E5%A1%AB%E7%A9%BA/" class="nav-link">统考英语B完型填空</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E8%AF%8D%E6%B1%87%E4%B8%8E%E7%BB%93%E6%9E%84/" class="nav-link">统考英语B词汇与结构</a>
       </li>
       <li>
@@ -810,14 +812,14 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E6%B5%8B%E8%AF%95%E7%BD%91%E7%AB%99/" class="nav-link">2020-12月统考英语测试网站</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E8%8B%B1%E8%AF%AD%E6%A8%A1%E6%9D%BF/" class="nav-link">统考英语B</a>
       </li>
     </ul>
     <h2 class="mt-4">Recent Posts</h2>
     <ul class="flex-column">
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E5%AE%8C%E5%BD%A2%E5%A1%AB%E7%A9%BA/" class="nav-link">统考英语B完型填空</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E8%AF%8D%E6%B1%87%E4%B8%8E%E7%BB%93%E6%9E%84/" class="nav-link">统考英语B词汇与结构</a>
       </li>
       <li>
@@ -837,9 +839,6 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/%E4%B8%93%E5%8D%87%E6%9C%AC%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD%E6%B5%8B%E8%AF%95%E7%BD%91%E7%AB%99/" class="nav-link">2020-12月统考英语测试网站</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E8%8B%B1%E8%AF%AD%E6%A8%A1%E6%9D%BF/" class="nav-link">统考英语B</a>
       </li>
     </ul>
     <div>
@@ -847,7 +846,7 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
       <nav class="tags_nav">
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%9D%82%E5%AD%A6/' class="post_tag button button_translucent">
           杂学
-          <span class="button_tally">49</span>
+          <span class="button_tally">51</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/' class="post_tag button button_translucent">
@@ -857,7 +856,7 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
           英语
-          <span class="button_tally">9</span>
+          <span class="button_tally">11</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
@@ -885,13 +884,13 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
           <span class="button_tally">1</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
-          统考英语
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E4%BD%9C%E6%96%87/' class="post_tag button button_translucent">
+          作文
           <span class="button_tally">1</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%8B%B1%E8%AF%AD%E4%BD%9C%E6%96%87%E6%A8%A1%E6%9D%BF/' class="post_tag button button_translucent">
-          英语作文模板
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
+          统考英语
           <span class="button_tally">1</span>
         </a>
         
@@ -903,7 +902,7 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
       <nav class="tags_nav">
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/' class="post_tag button button_translucent">
           专升本
-          <span class="button_tally">45</span>
+          <span class="button_tally">47</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class="post_tag button button_translucent">
@@ -974,7 +973,7 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
       <nav class="tags_nav">
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
           英语
-          <span class="button_tally">33</span>
+          <span class="button_tally">35</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%AD%A6%E4%BD%8D%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
@@ -987,13 +986,13 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
           <span class="button_tally">15</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee/' class="post_tag button button_translucent">
-          GITEE
-          <span class="button_tally">9</span>
-        </a>
-        
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/' class="post_tag button button_translucent">
           统考英语B
+          <span class="button_tally">12</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee/' class="post_tag button button_translucent">
+          GITEE
           <span class="button_tally">9</span>
         </a>
         
@@ -1037,8 +1036,8 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
           <span class="button_tally">3</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%ADb/' class="post_tag button button_translucent">
-          英语B
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87/' class="post_tag button button_translucent">
+          词汇
           <span class="button_tally">3</span>
         </a>
         
@@ -1152,6 +1151,10 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
             </a>
             
             
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%BD%9C%E6%96%87/' class=" post_tag button button_translucent" data-position=2>作文<span class="button_tally">2</span>
+            </a>
+            
+            
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%BF%AE%E9%A5%B0%E7%AC%A6/' class=" post_tag button button_translucent" data-position=1>修饰符<span class="button_tally">1</span>
             </a>
             
@@ -1176,6 +1179,14 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
             </a>
             
             
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%AE%8C%E5%BD%A2%E5%A1%AB%E7%A9%BA/' class=" post_tag button button_translucent" data-position=1>完形填空<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%B0%8F%E6%8A%84/' class=" post_tag button button_translucent" data-position=1>小抄<span class="button_tally">1</span>
+            </a>
+            
+            
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/' class=" post_tag button button_translucent" data-position=6>数据库<span class="button_tally">6</span>
             </a>
             
@@ -1196,7 +1207,7 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/' class=" post_tag button button_translucent" data-position=9>统考英语B<span class="button_tally">9</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/' class=" post_tag button button_translucent" data-position=12>统考英语B<span class="button_tally">12</span>
             </a>
             
             
@@ -1204,11 +1215,11 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%AD/' class=" post_tag button button_translucent" data-position=33>英语<span class="button_tally">33</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%AD/' class=" post_tag button button_translucent" data-position=35>英语<span class="button_tally">35</span>
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%ADb/' class=" post_tag button button_translucent" data-position=3>英语B<span class="button_tally">3</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%ADb/' class=" post_tag button button_translucent" data-position=2>英语B<span class="button_tally">2</span>
             </a>
             
             

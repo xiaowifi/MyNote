@@ -2,7 +2,7 @@
 date = "2020-10-01"
 title = "统考英语B作文"
 description = "统考英语B作文"
-tags = [ "英语B"]
+tags = [ "统考英语B","作文"]
 categories = [
     "杂学"
 ]
