@@ -9,7 +9,6 @@ categories = [
 series = ["专升本"]
 featured = true
 +++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
 
 ### my hometown (我的家乡)
 My hometown Guangzhou is a very beautiful and modern city in the south of China. It is the capital of Guangdong Province with a long history of more than 2,000 years.Guangzhou is the center of economy, politics and education of the province. Everybody can have a good time here. You can visit a lot of museums, parks and universities here. You can do shopping like crazy in this city. People here are very friendly. For example, they are always ready to offer their seats to others who need them in buses and subway. I hope my hometown Guangzhou will attract more and more visitors each year.

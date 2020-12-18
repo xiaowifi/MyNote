@@ -9,7 +9,7 @@ categories = [
 series = ["专升本"]
 featured = true
 +++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
+
 > 本部分共6小题，共30分。翻译句子中一个单词正确会给0.5到1分，整句流畅翻译会给满分，认识一个单纯就写一个单词的意思，确定不会就不要写，只翻译自己会的单词部分。
 
 * in no other country in the world can you find such plants as this one (像这种植物再世界上的其他任何一个国家中都找不到)

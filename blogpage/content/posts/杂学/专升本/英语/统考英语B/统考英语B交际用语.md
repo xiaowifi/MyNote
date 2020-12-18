@@ -9,7 +9,7 @@ categories = [
 series = ["专升本"]
 featured = true
 +++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
+    
 > 交际用语答题要领总结:讲礼貌，多委婉，受帮助，要礼貌，遇坏事，先道歉。最长选项就是答案原则，有比较恐怖或者不认识的单词或者搞不清楚意思的选项就是答案。
 #### Do you mind of if I switch off the radio ?  (no,not at all) go ahead.
 **翻译**<br> 你介意我关闭收音机吗？ 不，不介意，请便。
