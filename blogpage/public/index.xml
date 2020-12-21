@@ -8,15 +8,17 @@
     <copyright>Copyright © 2020-2099</copyright>
     <lastBuildDate>Fri, 18 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>统考英语B错题集第2个版本</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/%E6%BC%8F%E7%BD%91%E4%B9%8B%E9%B1%BC/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E9%94%99%E9%A2%98%E9%9B%86%E7%AC%AC2%E4%B8%AA%E7%89%88%E6%9C%AC/</link>
-      <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
+      <title>更新日志</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/logs/</link>
+      <pubDate>Mon, 21 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/%E6%BC%8F%E7%BD%91%E4%B9%8B%E9%B1%BC/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E9%94%99%E9%A2%98%E9%9B%86%E7%AC%AC2%E4%B8%AA%E7%89%88%E6%9C%AC/</guid>
-      <description> 本笔记主要是记录备注打错了的题目等。错一次就上错题。 本错题主要分为 错一次和错多次，因为涉及多次答题，所以才有这个调调。分位易错和重点记忆。 同内容分为 交际英语，阅读理解，词汇与结构，完形填空，英译汉。当前不考虑作文
- 易错  模糊
- 交际英语    词汇与结构    英译汉    阅读理解    完形填空     重点记忆  直接错误
- 交际英语    词汇与结构    英译汉    阅读理解    完形填空    </description>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/logs/</guid>
+      <description>鸣谢 当前主页，主要用于本人学习总结笔记。不作为商业用途。
+当前主页基于Hugo，由Gitee page 提供服务支持。
+采用主题：Clarity 博客主页
+主页源码
+主页运行位置 感谢Gitee Pages提供静态网页服务。
+更新日志  2020-09-01 具体什么时间忘记了，创建该库 2020-09-20 采用Hugo 编译生成静态网页 2020-12-01 增加统考英语和学位英语模块 2020-12-21 增加更新日志界面 2020-12-21 修改主题中的语言为中文(zh)，用于解决浏览器自动提示翻译成中文导致的问题  </description>
     </item>
     
     <item>
