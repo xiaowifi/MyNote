@@ -118,6 +118,38 @@
   <div class="excerpt">
     <div class="excerpt_header">
       <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sqlite%E6%9F%A5%E8%AF%A2%E7%8C%9C%E6%83%B3/">androidSqlite查询思路整理</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Dec 23, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 今天有一个大佬的公众号推了一篇，sql查询慢的原因。 为什么大家都说SELECT * 效率低 上面是原文。 由于收集癖的原因，同时怕以后找不到了，就复制下觉得重要的部分到自己的笔记里面。
+复制内容 一、效率低的原因 先看一下最新《阿里java开发手册（泰山版）》中 MySQL 部分描述：
+4 - 1. 【强制】在表查询中，一律不要使用 * 作为查询的字段列表，需要哪些字段必须明确写明。 说明：
+增加查询分析器解析成本。
+增减字段容易与 resultMap 配置不一致。
+无用字段增加网络 消耗，尤其是 text 类型的字段。 开发手册中比较概括的提到了几点原因，让我们深入一些看看：
+1. 不需要的列会增加数据传输时间和网络开销  …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sqlite%E6%9F%A5%E8%AF%A2%E7%8C%9C%E6%83%B3/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1sqlite%E6%8F%92%E5%85%A5%E5%A4%9A%E4%BA%8E%E5%AD%97%E6%AE%B5%E5%AF%BC%E8%87%B4%E7%9A%84%E6%8F%92%E5%85%A5%E5%A4%B1%E8%B4%A5/">Android sqlite多余字段插入导致插入失败</a>
       </h3>
       <div class="post_meta">
@@ -722,44 +754,27 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
     </div>
   </li>
 
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/">静态网页&#43;Gitee pages 搭建个人主页</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Oct 1, 2020</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5' class="post_tag button button_translucent">静态网页
-    </a>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee' class="post_tag button button_translucent">gitee
-    </a>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee-page' class="post_tag button button_translucent">gitee page
-    </a>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5' class="post_tag button button_translucent">个人主页
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">前言 话说，今天逛沸点的时候，看到一个大佬在推他的个人主页，感觉很有意思。
-这么好的东西，其实我也想要。那么就开整。需要先找到官方文档 ，毕竟官方提供的才是原汁原味的嘛(但是有些人提供的就没有那个味道了)。
-但是呢，东西是一个好东西，可惜我不会。gitee 推荐了3中静态网页方案，Jekyll、Hugo、Hexo ，这个，巧了，我又不会。突然想起大学的老师，老师们好像有教静态网页的吧，巧了，我好像没有去上课。
-但是，作为一个成年人，敌方这么努力的守水晶，我都要想办法推掉它的人，岂是这种小问题能够阻挡的。
- Jekyll、Hugo、Hexo 究竟是什么？
-Jekyll、Hugo、Hexo 是简单的博客形态的静态站点生产机器。它有一个模 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
     <li>
+<ul class="pagination">
+  <li class="page-item">
+    <a href="/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+  </li>
+  <li class="page-item disabled">
+    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+  </li>
+  <li class="page-item active">
+    <a class="page-link" href="/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/">1</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/page/2/">2</a>
+  </li>
+  <li class="page-item">
+    <a href="/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+  </li>
+</ul>
 
 
     </li>
@@ -774,6 +789,9 @@ Jekyll、Hugo、Hexo 是简单的博客形态的静态站点生产机器。它�
     <h2 class="mt-4">精选文章</h2>
     <ul>
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sqlite%E6%9F%A5%E8%AF%A2%E7%8C%9C%E6%83%B3/" class="nav-link">androidSqlite查询思路整理</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/git%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6/" class="nav-link">Git 忽略提交 .gitignore</a>
       </li>
       <li>
@@ -793,14 +811,14 @@ Jekyll、Hugo、Hexo 是简单的博客形态的静态站点生产机器。它�
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/%E6%A8%A1%E6%8B%9F%E9%A2%98/%E7%94%B5%E5%AD%90%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E6%A8%A1%E6%8B%9F%E9%A2%983/" class="nav-link">电子科技大学统考英语B模拟试卷3</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/%E6%A8%A1%E6%8B%9F%E9%A2%98/%E7%94%B5%E5%AD%90%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E6%A8%A1%E6%8B%9F%E9%A2%984/" class="nav-link">电子科技大学统考英语B模拟试卷4</a>
       </li>
     </ul>
     <h2 class="mt-4">最新文章</h2>
     <ul class="flex-column">
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sqlite%E6%9F%A5%E8%AF%A2%E7%8C%9C%E6%83%B3/" class="nav-link">androidSqlite查询思路整理</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/git%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6/" class="nav-link">Git 忽略提交 .gitignore</a>
       </li>
       <li>
@@ -820,9 +838,6 @@ Jekyll、Hugo、Hexo 是简单的博客形态的静态站点生产机器。它�
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/%E6%A8%A1%E6%8B%9F%E9%A2%98/%E7%94%B5%E5%AD%90%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E6%A8%A1%E6%8B%9F%E9%A2%983/" class="nav-link">电子科技大学统考英语B模拟试卷3</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/%E6%A8%A1%E6%8B%9F%E9%A2%98/%E7%94%B5%E5%AD%90%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E6%A8%A1%E6%8B%9F%E9%A2%984/" class="nav-link">电子科技大学统考英语B模拟试卷4</a>
       </li>
     </ul>
     <div>
@@ -840,7 +855,7 @@ Jekyll、Hugo、Hexo 是简单的博客形态的静态站点生产机器。它�
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/' class="post_tag button button_translucent">
           技术类
-          <span class="button_tally">20</span>
+          <span class="button_tally">21</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
@@ -889,6 +904,11 @@ Jekyll、Hugo、Hexo 是简单的博客形态的静态站点生产机器。它�
           <span class="button_tally">58</span>
         </a>
         
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
+          ANDROID基础
+          <span class="button_tally">9</span>
+        </a>
+        
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class="post_tag button button_translucent">
           个人主页
           <span class="button_tally">9</span>
@@ -897,11 +917,6 @@ Jekyll、Hugo、Hexo 是简单的博客形态的静态站点生产机器。它�
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E5%85%B6%E4%BB%96/' class="post_tag button button_translucent">
           其他
           <span class="button_tally">9</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
-          ANDROID基础
-          <span class="button_tally">8</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E6%A8%A1%E6%9D%BF/' class="post_tag button button_translucent">
@@ -980,13 +995,13 @@ Jekyll、Hugo、Hexo 是简单的博客形态的静态站点生产机器。它�
           <span class="button_tally">9</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee-page/' class="post_tag button button_translucent">
-          GITEE-PAGE
-          <span class="button_tally">8</span>
-        </a>
-        
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite/' class="post_tag button button_translucent">
           SQLITE
+          <span class="button_tally">9</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee-page/' class="post_tag button button_translucent">
+          GITEE-PAGE
           <span class="button_tally">8</span>
         </a>
         
@@ -1110,7 +1125,7 @@ Jekyll、Hugo、Hexo 是简单的博客形态的静态站点生产机器。它�
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite/' class=" post_tag button button_translucent" data-position=8>SQLITE<span class="button_tally">8</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite/' class=" post_tag button button_translucent" data-position=9>SQLITE<span class="button_tally">9</span>
             </a>
             
             
