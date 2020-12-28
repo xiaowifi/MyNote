@@ -6,7 +6,17 @@
     <description>Recent content in 技术类 on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Wed, 23 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL知识点汇总</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sql%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sql%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/</guid>
+      <description>前言  最近写Demo的时候，经常发现自己对于sql好多都忘记了。
+ 简单使用  SELECT 查询 后面接查询字段 SELECT DISTINCT 查询 去重 WHERE 多条件查询，用and 连接 and or 多条件查询拼接 order by 对结果进行排序，默认是升序，ORDER BY DESC 降序，ORDER BY 多列（这个多列不是太懂） INSERT INTO 插入数据 UPDATE 更新数据 DELETE 删除数据  进阶  SELECT TOP, LIMIT, ROWNUM 用于规定返回记录的条目数 LIKE like查询 通配符  % 替代0个或者多个字符 &#39;-&#39; 替代一个字符 [charlist] 字符列中的任何单一字符 [^charlist] 或 [!charlist] 不在字符列中的任何单一字符   in 查询，有点类型 数组中的那个 indexof ,可传入同一个字段的多个值 BETWEEN 用于取两个值之间的范围值 两个值用 and 连接 NOT BETWEEN 不在范围内 别名 AS 比如说 name as n ,就是将name设置为 n, JOIN 将两个或者多个表结合起来，基于共同字段。 INNER JOIN 查询条件满足的行 LEFT JOIN 从左表（table1）返回所有的行，即使右表（table2）中没有匹配。如果右表中没有匹配，则结果为 NULL。 RIGHT JOIN 关键字从右表（table2）返回所有的行，即使左表（table1）中没有匹配。如果左表中没有匹配，则结果为 NULL。 FULL OUTER JOIN 关键字只要左表（table1）和右表（table2）其中一个表中存在匹配，则返回行.</description>
+    </item>
+    
     <item>
       <title>androidSqlite查询思路整理</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sqlite%E6%9F%A5%E8%AF%A2%E7%8C%9C%E6%83%B3/</link>

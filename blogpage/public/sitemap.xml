@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2020-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://lalalaxiaowifi.gitee.io/pictures/categories/android%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2020-12-28T00:00:00+00:00</lastmod>
   </url>
@@ -38,12 +43,27 @@
   </url>
   
   <url>
+    <loc>http://lalalaxiaowifi.gitee.io/pictures/tags/sql/</loc>
+    <lastmod>2020-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sql%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/</loc>
+    <lastmod>2020-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://lalalaxiaowifi.gitee.io/pictures/tags/</loc>
     <lastmod>2020-12-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://lalalaxiaowifi.gitee.io/pictures/</loc>
+    <lastmod>2020-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/</loc>
     <lastmod>2020-12-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -68,11 +88,6 @@
   </url>
   
   <url>
-    <loc>http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2020-12-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://lalalaxiaowifi.gitee.io/pictures/categories/git/</loc>
     <lastmod>2020-12-23T00:00:00+00:00</lastmod>
   </url>
@@ -84,11 +99,6 @@
   
   <url>
     <loc>http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite/</loc>
-    <lastmod>2020-12-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/</loc>
     <lastmod>2020-12-23T00:00:00+00:00</lastmod>
   </url>
   
