@@ -1,0 +1,1064 @@
+
+<!DOCTYPE html>
+<html lang="zh" data-figures="" class="page">
+  <head>
+<title>Android中关于Rxjava相关笔记整理 | 个人主页</title>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.76.3" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta property="og:locale" content="zh" />
+
+<meta property="og:type" content="article">
+<meta name="description" content="Android中关于Rxjava相关笔记整理">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="">
+<meta name="twitter:title" content="Android中关于Rxjava相关笔记整理" />
+<meta property="og:url" content="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/android%E4%B8%ADrxjava%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/" />
+<meta property="og:title" content="Android中关于Rxjava相关笔记整理" />
+<meta property="og:description" content="Android中关于Rxjava相关笔记整理" />
+<meta property="og:image" content="https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20201230114639.png" />
+<link rel="apple-touch-icon" sizes="180x180" href='http://lalalaxiaowifi.gitee.io/pictures/icons/apple-touch-icon.png'>
+<link rel="icon" type="image/png" sizes="32x32" href='http://lalalaxiaowifi.gitee.io/pictures/icons/favicon-32x32.png'>
+<link rel="manifest" href='http://lalalaxiaowifi.gitee.io/pictures/icons/site.webmanifest'>
+<link rel="mask-icon" href='http://lalalaxiaowifi.gitee.io/pictures/safari-pinned-tab.svg' color="#002538">
+<meta name="msapplication-TileColor" content="#002538">
+<meta name="theme-color" content="#002538">
+
+<link rel="canonical" href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/android%E4%B8%ADrxjava%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/">
+
+    
+
+    
+    
+    <link rel="preload" href="http://lalalaxiaowifi.gitee.io/pictures/css/styles.19822ef8d57c281b0ee1aa50d42585c2400da8137a121dec28cd58f48a7fec71bf92e0e20f91751c5622f183b719a2663b3c1766d877cd46e764de699307df61.css" integrity = "sha512-GYIu&#43;NV8KBsO4apQ1CWFwkANqBN6Eh3sKM1Y9Ip/7HG/kuDiD5F1HFYi8YO3GaJmOzwXZth3zUbnZN5pkwffYQ==" as="style" crossorigin="anonymous">
+    <link rel="preload" href="http://lalalaxiaowifi.gitee.io/pictures/js/bundle.min.dc1752cbb1c01a107e1e4afce7f618750185cca45821a7b8e3fccc074f8d9260a43990c47c4e3c1644438f24b907d3d3ba050d2aec63b573c3059f25cefbcb80.js" as="script" integrity=
+    "sha512-3BdSy7HAGhB&#43;Hkr85/YYdQGFzKRYIae44/zMB0&#43;NkmCkOZDEfE48FkRDjyS5B9PTugUNKuxjtXPDBZ8lzvvLgA==" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" type="text/css" href="http://lalalaxiaowifi.gitee.io/pictures/css/styles.19822ef8d57c281b0ee1aa50d42585c2400da8137a121dec28cd58f48a7fec71bf92e0e20f91751c5622f183b719a2663b3c1766d877cd46e764de699307df61.css" integrity="sha512-GYIu&#43;NV8KBsO4apQ1CWFwkANqBN6Eh3sKM1Y9Ip/7HG/kuDiD5F1HFYi8YO3GaJmOzwXZth3zUbnZN5pkwffYQ==" crossorigin="anonymous">
+    
+  </head>
+  
+  
+    
+  
+  <body data-code="7" data-lines="false" id="documentTop">
+
+<header class="nav_header" >
+  <nav class="nav">
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/' class="nav_brand nav_item">
+      <img src="http://lalalaxiaowifi.gitee.io/pictures/logos/logo.png" class="logo">
+      <div class="nav_close">
+        <div>
+          <svg class="icon">
+  <use xlink:href="#open-menu"></use>
+</svg>
+          <svg class="icon">
+  <use xlink:href="#closeme"></use>
+</svg>
+        </div>
+      </div>
+    </a>
+    <div class='nav_body nav_body_left'>
+      
+      
+      
+        
+
+  <div class="nav_parent">
+    <a href="http://lalalaxiaowifi.gitee.io/pictures/" class="nav_item">主页 </a>
+  </div>
+  <div class="nav_parent">
+    <a href="http://lalalaxiaowifi.gitee.io/pictures/about/" class="nav_item">About </a>
+  </div>
+  <div class="nav_parent">
+    <a href="http://lalalaxiaowifi.gitee.io/pictures/logs/" class="nav_item">更新日志 </a>
+  </div>
+      
+<div class='follow'>站外主页:[
+
+  
+  <a href="https://github.com/xiaowifi" style="padding: 10px">
+   github
+
+
+  </a>
+  
+  <a href="https://gitee.com/lalalaxiaowifi" style="padding: 10px">
+   Gitee
+
+
+  </a>
+  
+  <a href="https://juejin.im/user/1890815728168430" style="padding: 10px">
+   掘金
+
+
+  </a>
+  ]
+
+  <h6>&#12288 &#12288 切换主题 ☞</h6>
+<div class="color_mode">
+  <input type="checkbox" class="color_choice" id="mode">
+</div>
+
+</div>
+
+    </div>
+  </nav>
+</header>
+
+    <main>
+  
+<div class="grid-inverse wrap content">
+  <article class="post_content">
+    <h1 class="post_title">Android中关于Rxjava相关笔记整理</h1><div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Dec 30, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android' class="post_tag button button_translucent">android
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava' class="post_tag button button_translucent">Rxjava
+    </a>
+</div>
+
+    
+<div class="post_share">
+  分享到:
+  <a href="https://twitter.com/intent/tweet?text=Android%e4%b8%ad%e5%85%b3%e4%ba%8eRxjava%e7%9b%b8%e5%85%b3%e7%ac%94%e8%ae%b0%e6%95%b4%e7%90%86&url=http%3a%2f%2flalalaxiaowifi.gitee.io%2fpictures%2fposts%2fandroid%2frxjava%2fandroid%25E4%25B8%25ADrxjava%25E7%259B%25B8%25E5%2585%25B3%25E7%25AC%2594%25E8%25AE%25B0%25E6%2595%25B4%25E7%2590%2586%2f&tw_p=tweetbutton" class="twitter" title="分享到 Twitter" target="_blank" rel="nofollow">
+    <svg class="icon">
+  <use xlink:href="#twitter"></use>
+</svg>
+  </a>
+  <a href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flalalaxiaowifi.gitee.io%2fpictures%2fposts%2fandroid%2frxjava%2fandroid%25E4%25B8%25ADrxjava%25E7%259B%25B8%25E5%2585%25B3%25E7%25AC%2594%25E8%25AE%25B0%25E6%2595%25B4%25E7%2590%2586%2f&t=Android%e4%b8%ad%e5%85%b3%e4%ba%8eRxjava%e7%9b%b8%e5%85%b3%e7%ac%94%e8%ae%b0%e6%95%b4%e7%90%86" class="facebook" title="分享到 Facebook" target="_blank" rel="nofollow">
+    <svg class="icon">
+  <use xlink:href="#facebook"></use>
+</svg>
+  </a>
+  <a href="#linkedinshare" id = "linkedinshare" class="linkedin" title="分享到 LinkedIn" rel="nofollow">
+    <svg class="icon">
+  <use xlink:href="#linkedin"></use>
+</svg>
+  </a>
+  <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/android%E4%B8%ADrxjava%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/" title="复制链接地址" class="link link_yank">
+    <svg class="icon">
+  <use xlink:href="#copy"></use>
+</svg>
+  </a>
+</div>
+
+    
+    <h1 id="前言">前言</h1>
+<p>本Demo 主要是针对 Rxjava  Android 版本进行实践<br>
+<a href="https://github.com/ReactiveX/RxAndroid">Rxjava Android 版本 github 地址</a> <br>
+<a href="https://github.com/ReactiveX/RxJava">Rxjava 地址</a> <br>
+<a href="http://reactivex.io/">Rxjava 官方文档地址</a> <br></p>
+<h1 id="正文">正文</h1>
+<h2 id="被观察者">被观察者</h2>
+<h3 id="observable">Observable</h3>
+<blockquote>
+<p>2.0 import io.reactivex.Observable;
+<a href="http://reactivex.io/documentation/operators.html#utility">超级详细的官网地址</a></p>
+</blockquote>
+<ul>
+<li>Observable.create();基础的创建一个被观察者，基于ObservableOnSubscribe.class,ObservableOnSubscribe获得的 ObservableEmitter 可以发送多个消息。
+<ul>
+<li>emitter.onNext(1);// 传入的数据类型 是创建ObservableOnSubscribe传入的泛型。数据将传送导观察者(observer)的onNext()方法中。</li>
+<li>emitter.onComplete();  调用观察者(observer)的onComplete() 方法，表示不再发送onNext()方法数据。</li>
+<li>emitter.onError(); 这个同理。不再发送 onNext() 和onComplete();</li>
+</ul>
+</li>
+<li>Observable.just(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;); 依次通过onNext() 发送数据 <a href="http://reactivex.io/documentation/operators/just.html">文档地址</a></li>
+<li>Observable.fromArray(words);和just 相同，依次通过onNext() 发送数据。</li>
+<li>Observable.amb();<a href="http://reactivex.io/documentation/operators/amb.html">文档详解地址</a> 当您将多个源Observable传递给Amb时，它将通过这些Observable中的一个的发射和通知：第一个通过发出项目或发送或 通知向 Amb发送通知的通知。Amb将忽略并丢弃所有其他来源可观察到的排放物和通知。</li>
+<li>Observable.ambArray();<a href="http://reactivex.io/documentation/operators/amb.html">文档详解地址</a></li>
+<li>Observable.combineLatest();<a href="http://reactivex.io/documentation/operators/combinelatest.html">文档详解地址</a>  所述CombineLatest操作者的行为以类似的方式给 邮编，但同时邮编只有当发射项各压缩的源可观察量已发射的先前解压缩的项目， CombineLatest发射每当一个项目的任何来源的观测量发射的项目（只要各源Observables发出了至少一项）。当任何一个源Observable发出一个项目时， CombinateLatest会使用您提供的函数将每个其他源Observable的最近发射的项目组合在一起，并从该函数发出返回值。</li>
+<li>Observable.concat();<a href="http://reactivex.io/documentation/operators/concat.html">文档详解地址</a>  将通过Iterable序列提供的每个ObservableSource的元素连接成一个元素的单个序列，而无需对其进行交织。</li>
+<li>Observable.concatArray();</li>
+<li>Observable.defer();<a href="http://reactivex.io/documentation/operators/defer.html">文档详解地址</a>  该推迟操作者等待，直到观察者订阅了它，然后它产生可观察到的，典型地与可观察到的工厂函数。它为每个订户重新进行此操作，因此尽管每个订户可能认为自己正在订阅相同的Observable，但实际上每个订户都有自己的单独序列。在某些情况下，等到最后一分钟（即直到订阅时间）生成Observable才能确保此Observable包含最新数据。</li>
+<li>Observable.empty();<a href="http://reactivex.io/documentation/operators/empty-never-throw.html">文档详解地址</a>  创建一个不发射任何物品但正常终止的Observable</li>
+<li>Observable.never();和 empty同文档，创建一不发射任何物品且不会终止的 Observable</li>
+<li>Observable.throw();和empty同文档，创建一个不发出任何项目的并以错误终止的observable.</li>
+<li>Observable.fromCallable();返回一个Observable，当观察者订阅该Observable时，它将调用您指定的函数，然后发出从该函数返回的值。</li>
+<li>Observable.fromFuture();<a href="http://reactivex.io/documentation/operators/from.html">文档详解地址</a>  当您使用Observables时，如果您要使用的所有数据都可以表示为Observables，而不是Observables和其他类型的混合表示，则将更加方便。这使您可以使用一组运算符来控制数据流的整个生命周期。</li>
+<li>Observable.fromIterable();<a href="http://reactivex.io/documentation/operators/from.html">文档详解地址</a>  当您使用Observables时，如果您要使用的所有数据都可以表示为Observables，而不是Observables和其他类型的混合表示，则将更加方便。这使您可以使用一组运算符来控制数据流的整个生命周期。</li>
+<li>Observable.fromPublisher();将任意的Reactive-Streams Publisher转换为Observable。</li>
+<li>Observable.generate();返回冷的，同步的和无状态的值生成器。</li>
+<li>Observable.interval();<a href="http://reactivex.io/documentation/operators/interval.html">文档详解地址</a>  该间隔符返回一个可观察发出的递增整数的无限序列，与排放之间你选择的时间恒定的间隔</li>
+<li>Observable.intervalRange();发出一系列长值的信号，第一个在某个初始延迟之后发出，然后在其余时间之后周期性发出</li>
+<li>Observable.merge();<a href="http://reactivex.io/documentation/operators/merge.html">文档详解地址</a>  通过合并它们的排放将多个可观察物合并为一个</li>
+<li>Observable.range();<a href="http://reactivex.io/documentation/operators/range.html">文档详解地址</a>  创建一个Observable，它发出特定范围的连续整数</li>
+<li>Observable.sequenceEqual();<a href="http://reactivex.io/documentation/operators/sequenceequal.html">文档详解地址</a>  通过Sequence等于两个Observable，它将比较每个Observable发出的项目，并且true只有两个序列相同（相同的项目，相同的顺序，具有相同的终止状态）时，它返回的Observable才会发出。</li>
+<li>Observable.switchOnNext();<a href="http://reactivex.io/documentation/operators/switch.html">文档详解地址</a>  Switch订阅一个发出Observable的Observable。每次观察到这些已发射的可观测对象之一时，Switch从先前发出的可观测对象退订的可观测对象开始从最新的可观测对象中发射项目。请注意，当从源Observable发出新的Observable时，它将取消订阅先前发出的Observable，而不是在新Observable发出项目时取消订阅。这意味着在下一个Observable发出之时到后续Observable本身开始发射之时之间，上一个Observable发出的项目将被丢弃（如上图中的黄色圆圈所示）。
+<img src="https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20201230152212.png" alt=""></li>
+<li>Observable.timer();<a href="http://reactivex.io/documentation/operators/timer.html">文档详解地址</a>  该定时器操作创建一个可观察的是在您指定的时间跨度后，发射一种特定的项目</li>
+<li>Observable.unsafeCreate();通过包装必须根据基于Reactive-Streams的Observable规范实现的ObservableSource来创建Observable，方法是正确处理取消操作； Observable本身未提供任何防护措施。</li>
+<li>Observable.using();<a href="http://reactivex.io/documentation/operators/using.html">文档详解地址</a>  在使用操作是你可以指示可观察到的创建仅在可观测的寿命存在并设置当可观察终止的资源的方式。</li>
+<li>Observable.wrap();如果尚未将ObservableSource封装成Observable，则将其包装到Observable中。</li>
+<li>Observable.zip();<a href="http://reactivex.io/documentation/operators/zip.html">文档详解地址</a>  该对象将您选择的功能应用于两个（或多个）其他Observable依次发出的项的组合，此函数的结果成为返回的Observable发出的项。它按严格顺序应用此函数，因此新Observable发出的第一项将是函数应用于Observable＃1发出的第一项和Observable＃2发出的第一项的结果；新的zip-Observable发出的第二项将是函数应用于Observable＃1发出的第二项和Observable＃2发出的第二项的结果；等等。它只会发出与发出最少项目的源Observable发出的项目数量一样多的项目。</li>
+<li>Observable.all();<a href="http://reactivex.io/documentation/operators/all.html">文档详解地址</a>  将谓词函数传递给All运算符，该函数接受源Observable发出的项目，并基于对该项目的评估返回布尔值。All返回一个Observable，该Observable发出一个布尔值： true当且仅当Source Observable正常终止并且true根据此谓词评估Source Observable发出的每个项目时； false如果源Observable发出的任何项目均false 根据此谓词进行评估。</li>
+<li>Observable.ambWith();<a href="http://reactivex.io/documentation/operators/amb.html">文档详解地址</a>  当您将多个源Observable传递给Amb时，它将通过这些Observable中的一个的发射和通知：第一个通过发出项目或发送或 通知向 Amb发送通知的通知。Amb将忽略并丢弃所有其他来源可观察到的排放物和通知。</li>
+<li>Observable.any();<a href="http://reactivex.io/documentation/operators/contains.html">文档详解地址</a>  向Contains运算符传递一个特定的项目，true如果该项目由源Observable发出，或者false如果源Observable在不发出该项目的情况下终止，则它将返回该Observable 。 一个相关的运算符IsEmpty返回一个Observable，true 当且仅当源Observable完成而没有发出任何项目时，该Observable才发出。false如果源Observable发出项，则发出该消息。</li>
+<li>Observable.blockingFirst();<a href="http://reactivex.io/documentation/operators/first.html">文档详解地址</a>  如果您仅对Observable发出的第一项或满足某些条件的第一项感兴趣，则可以使用First运算符过滤Observable 。</li>
+<li>Observable.blockingLast();<a href="http://reactivex.io/documentation/operators/last.html">文档详解地址</a>  如果您仅对Observable发出的最后一项或符合某些条件的最后一项感兴趣，则可以使用Last运算符过滤Observable 。</li>
+<li>Observable.blockingNext();<a href="http://reactivex.io/documentation/operators/takelast.html">文档详解地址</a>  通过使用TakeLast运算符修改Observable， 您只能发出Observable发出的最后n个项目，而忽略它们之前的那些项目。</li>
+<li>Observable.blockingSingle();<a href="http://reactivex.io/documentation/operators/first.html">文档详解地址</a> 如果您仅对Observable发出的第一项或满足某些条件的第一项感兴趣，则可以使用First运算符过滤Observable 。</li>
+<li>Observable.toFuture();<a href="http://reactivex.io/documentation/operators/to.html">文档详解地址</a>  ReactiveX的各种特定于语言的实现具有多种运算符，可用于将Observable或Observable发出的一系列项目转换为另一种对象或数据结构。其中一些阻塞直到Observable终止，然后产生等效的对象或数据结构；其他返回的Observable发出这样的对象或数据结构。</li>
+<li>Observable.buffer();<a href="http://reactivex.io/documentation/operators/buffer.html">文档详解地址</a>  所述缓冲操作者变换可观察到的发射项目到可观察到的发射缓冲这些项目的集合。Buffer的各种特定于语言的实现中有许多变体，它们在选择将哪些项放入哪个缓冲区中时有所不同。</li>
+<li>Observable.cache();<a href="http://reactivex.io/documentation/operators/replay.html">文档详解地址</a>  一个可连接的Observable与一个普通的Observable相似，不同之处在于它在订阅时不会开始发出项目，而仅在将Connect 运算符应用于该对象时才开始发出项目。这样，您可以提示Observable在您选择的时间开始发射物品</li>
+<li>Observable.cast();<a href="http://reactivex.io/documentation/operators/map.html">文档详解地址</a>  过对每个项目应用函数来转换Observable发出的项目</li>
+<li>Observable.collect();<a href="http://reactivex.io/documentation/operators/reduce.html">文档详解地址</a>  将一个函数依次应用于Observable发出的每个项目，并发出最终值</li>
+<li>Observable.compose();<a href="https://github.com/ReactiveX/RxJava/wiki/Implementing-Your-Own-Operators">文档详解地址</a>  您可以实现自己的Observable运算符,通过向其应用特定的Transformer函数来转换ObservableSource。</li>
+<li>Observable.concatMap();<a href="http://reactivex.io/documentation/operators/flatmap.html">文档详解地址</a>  将可观察对象发出的项目转换为可观察项目，然后将这些项目的排放展平为单个可观察项目</li>
+<li>Observable.concatWith();<a href="http://reactivex.io/documentation/operators/concat.html">文档详解地址</a> 所述的毗连运算符连接的多个观测量的输出，使得它们的作用象一个单一的观察的，与所有通过之前的任何由第二可观察（等发射的物品发出的第一可观察被发射的项目，如果有多于二）</li>
+<li>Observable.contains();<a href="http://reactivex.io/documentation/operators/contains.html">文档详解地址</a>  向Contains运算符传递一个特定的项目，true如果该项目由源Observable发出，或者false如果源Observable在不发出该项目的情况下终止，则它将返回该Observable</li>
+<li>Observable.count();<a href="http://reactivex.io/documentation/operators/count.html">文档详解地址</a> 计数操作者变换可观察到的发射项目到可观察到的，其发射表示由源可观察发出的项数的单个值。如果源Observable因错误而终止，则Count将传递此错误通知，而不会先发出任何项。如果源Observable根本没有终止，则Count既不会发出项也不会终止。</li>
+<li>Observable.debounce();<a href="http://reactivex.io/documentation/operators/debounce.html">文档详解地址</a>  该防抖操作过滤了源可观察正在迅速紧接着又发射项目发出项目</li>
+<li>Observable.defaultIfEmpty();<a href="http://reactivex.io/documentation/operators/defaultifempty.html">文档详解地址</a>  该DefaultIfEmpty操作员只需镜源可观察准确，如果源可观察到发射的任何项目。如果源Observable正常终止（带有 onComplete）而没有发出任何项目，则从DefaultIfEmpty返回的Observable 将在完成之前发出您选择的默认项目。</li>
+<li>Observable.delay();<a href="http://reactivex.io/documentation/operators/delay.html">文档详解地址</a>  该延时运营商修改，每个发光部分源可观察的项目前，其源通过暂停的时间（即指定）一个特定的增量观测。这具有将Observable发出的整个项目序列在时间上向前移动指定的增量的效果。</li>
+<li>Observable.dematerialize();<a href="http://reactivex.io/documentation/operators/materialize-dematerialize.html">文档详解地址</a>  代表发出的项目和作为发出的项目发送的通知，或者逆转此过程</li>
+<li>Observable.distinct();<a href="http://reactivex.io/documentation/operators/distinct.html">文档详解地址</a>  该鲜明运营商只允许通过的项目还没有被发射滤波器可观察到的</li>
+<li>Observable.doAfterNext(); 将此项目发送到下游后，使用当前项目调用指定的使用者</li>
+<li>Observable.doAfterTerminate();<a href="http://reactivex.io/documentation/operators/do.html">文档详解地址</a>  注册一个动作以应对各种可观察的生命周期事件</li>
+<li>Observable.doFinally(); 在此Observable发出onError或onCompleted信号或由下游处置后，调用指定的操作</li>
+<li>Observable.doOnDispose();<a href="http://reactivex.io/documentation/operators/do.html">文档详解地址</a>   注册一个动作以应对各种可观察的生命周期事件</li>
+<li>Observable.doOnComplete();<a href="http://reactivex.io/documentation/operators/do.html">文档详解地址</a>   注册一个动作以应对各种可观察的生命周期事件</li>
+<li>Observable.doOnEach();<a href="http://reactivex.io/documentation/operators/do.html">文档详解地址</a>   注册一个动作以应对各种可观察的生命周期事件</li>
+<li>Observable.doOnError();<a href="http://reactivex.io/documentation/operators/do.html">文档详解地址</a>   注册一个动作以应对各种可观察的生命周期事件</li>
+<li>Observable.doOnLifecycle();<a href="http://reactivex.io/documentation/operators/do.html">文档详解地址</a>   注册一个动作以应对各种可观察的生命周期事件</li>
+<li>Observable.doOnNext();<a href="http://reactivex.io/documentation/operators/do.html">文档详解地址</a>   注册一个动作以应对各种可观察的生命周期事件</li>
+<li>Observable.doOnSubscribe();<a href="http://reactivex.io/documentation/operators/do.html">文档详解地址</a>   注册一个动作以应对各种可观察的生命周期事件</li>
+<li>Observable.doOnTerminate();<a href="http://reactivex.io/documentation/operators/do.html">文档详解地址</a>   注册一个动作以应对各种可观察的生命周期事件</li>
+<li>Observable.elementAt();<a href="http://reactivex.io/documentation/operators/elementat.html">文档详解地址</a>  在ElementAt操作者拉动位于指定索引位置由所述源发射的可观察的项目，并且发射序列中的项目，作为其自己的唯一发射项目。</li>
+<li>Observable.filter();<a href="http://reactivex.io/documentation/operators/filter.html">文档详解地址</a>  该过滤器操作者通过通过测试您在谓词函数的形式规定只允许项目筛选可观察到的。</li>
+<li>Observable.firstElement();<a href="http://reactivex.io/documentation/operators/first.html">文档详解地址</a>  如果您仅对Observable发出的第一项或满足某些条件的第一项感兴趣，则可以使用First运算符过滤Observable</li>
+<li>Observable.first();<a href="http://reactivex.io/documentation/operators/first.html">文档详解地址</a>  如果您仅对Observable发出的第一项或满足某些条件的第一项感兴趣，则可以使用First运算符过滤Observable</li>
+<li>Observable.flatMap();<a href="http://reactivex.io/documentation/operators/flatmap.html">文档详解地址</a>  所述FlatMap操作者变换可观察到的通过施加指定要由源观察的，其中该函数返回一个可观察的是自身发光的物品发出的每个项目的功能。然后，FlatMap合并这些结果Observable的发射，将这些合并的结果作为自己的序列发射。</li>
+<li>Observable.forEach();<a href="http://reactivex.io/documentation/operators/subscribe.html">文档详解地址</a>  该订阅运算符是一个观察者连接到可观察到的胶水。为了使观察者能够看到Observable发出的项目，或者从Observable接收错误或完整的通知，它必须首先通过此运算符订阅该Observable。</li>
+<li>Observable.groupBy();<a href="http://reactivex.io/documentation/operators/groupby.html">文档详解地址</a>  所述的GroupBy操作者划分可观察到的发射项目到可观察到的发射观测量，每一个其发射来自原始源可观察的项目的一些子集。哪些项目最终在哪个Observable上通常由区分函数决定，该函数对每个项目进行评估并为其分配键。具有相同键的所有项目均由相同的Observable发出。</li>
+<li>Observable.groupJoin();<a href="http://reactivex.io/documentation/operators/join.html">文档详解地址</a>  大多数具有Join操作符的ReactiveX实现也具有GroupJoin 类似的操作符，不同之处在于，您定义的功能是将两个Observable发出的项组合在一起，而不是将源Observable发出的单个项与第二个Observable的项组合在一起，而是与Observable的项组合在一起从第二个Observable发出属于同一窗口的项目。</li>
+<li>Observable.hide();  隐藏此Observable及其一次性对象的标识。</li>
+<li>Observable.ignoreElements();<a href="http://reactivex.io/documentation/operators/ignoreelements.html">文档详解地址</a>  所述IgnoreElements操作者抑制所有由所述源发射出可观察的项目，但允许其终止通知（或者onError或 onCompleted）穿过不变。</li>
+<li>Observable.isEmpty();<a href="http://reactivex.io/documentation/operators/contains.html">文档详解地址</a>  向Contains运算符传递一个特定的项目，true如果该项目由源Observable发出，或者false如果源Observable在不发出该项目的情况下终止，则它将返回该Observable 。</li>
+<li>Observable.join();<a href="http://reactivex.io/documentation/operators/join.html">文档详解地址</a>  大多数具有Join操作符的ReactiveX实现也具有GroupJoin 类似的操作符，不同之处在于，您定义的功能是将两个Observable发出的项组合在一起，而不是将源Observable发出的单个项与第二个Observable的项组合在一起，而是与Observable的项组合在一起从第二个Observable发出属于同一窗口的项目。</li>
+<li>Observable.lastElement();<a href="http://reactivex.io/documentation/operators/last.html">文档详解地址</a>  如果您仅对Observable发出的最后一项或符合某些条件的最后一项感兴趣，则可以使用Last运算符过滤Observable 。</li>
+<li>Observable.last();<a href="http://reactivex.io/documentation/operators/last.html">文档详解地址</a>  如果您仅对Observable发出的最后一项或符合某些条件的最后一项感兴趣，则可以使用Last运算符过滤Observable 。</li>
+<li>Observable.lift();<a href="https://github.com/ReactiveX/RxJava/wiki/Implementing-Your-Own-Operators">文档详解地址</a>  您可以实现自己的Observable运算符</li>
+<li>Observable.map();<a href="http://reactivex.io/documentation/operators/map.html">文档详解地址</a>  该地图操作员施加您选择由源发射可观察到每个项目的功能，并返回一个可观察到发射这些功能应用的结果。</li>
+<li>Observable.materialize();<a href="http://reactivex.io/documentation/operators/materialize-dematerialize.html">文档详解地址</a>  代表发出的项目和作为发出的项目发送的通知，或者逆转此过程</li>
+<li>Observable.mergeWith();<a href="http://reactivex.io/documentation/operators/merge.html">文档详解地址</a>  通过合并它们的排放将多个可观察物合并为一个</li>
+<li>Observable.ofType();<a href="http://reactivex.io/documentation/operators/filter.html">文档详解地址</a>  该过滤器操作者通过通过测试您在谓词函数的形式规定只允许项目筛选可观察到的</li>
+<li>Observable.onErrorResumeNext();<a href="http://reactivex.io/documentation/operators/catch.html">文档详解地址</a>  所述捕捉操作员截距一个onError 从源可观察通知和，而不是将其通过任何观察者在与项目的一些其它项目或序列来替换它，有可能使得到的可观察到正常地终止在所有终止。</li>
+<li>Observable.onErrorReturn();<a href="http://reactivex.io/documentation/operators/catch.html">文档详解地址</a>  所述捕捉操作员截距一个onError 从源可观察通知和，而不是将其通过任何观察者在与项目的一些其它项目或序列来替换它，有可能使得到的可观察到正常地终止在所有终止。</li>
+<li>Observable.onErrorReturnItem();<a href="http://reactivex.io/documentation/operators/catch.html">文档详解地址</a>  所述捕捉操作员截距一个onError 从源可观察通知和，而不是将其通过任何观察者在与项目的一些其它项目或序列来替换它，有可能使得到的可观察到正常地终止在所有终止。</li>
+<li>Observable.onExceptionResumeNext();<a href="http://reactivex.io/documentation/operators/catch.html">文档详解地址</a>  所述捕捉操作员截距一个onError 从源可观察通知和，而不是将其通过任何观察者在与项目的一些其它项目或序列来替换它，有可能使得到的可观察到正常地终止在所有终止。</li>
+<li>Observable.onTerminateDetach();<a href="">文档详解地址</a>  如果序列终止或下游调用dispose（），则取消对上游生产者和下游Observer的引用。</li>
+<li>Observable.publish();<a href="http://reactivex.io/documentation/operators/publish.html">文档详解地址</a>  一个可连接的Observable与一个普通的Observable相似，不同之处在于它在订阅时不会开始发出项目，而仅在将Connect 运算符应用于该对象时才开始发出项目。这样，您可以提示Observable在您选择的时间开始发射物品。</li>
+<li>Observable.reduce();<a href="http://reactivex.io/documentation/operators/reduce.html">文档详解地址</a>  将一个函数依次应用于Observable发出的每个项目，并发出最终值</li>
+<li>Observable.repeat();<a href="http://reactivex.io/documentation/operators/repeat.html">文档详解地址</a>  在重复操作多次发出的一个项目。此运算符的某些实现允许您重复一系列项目，而某些允许您限制重复的次数。</li>
+<li>Observable.replay();<a href="http://reactivex.io/documentation/operators/replay.html">文档详解地址</a>  一个可连接的Observable与一个普通的Observable相似，不同之处在于它在订阅时不会开始发出项目，而仅在将Connect 运算符应用于该对象时才开始发出项目。这样，您可以提示Observable在您选择的时间开始发射物品。</li>
+<li>Observable.safeSubscribe();订阅当前的Observable并将给定的Observer封装到SafeObserver 如果还不是SafeObserver）中，以处理行为异常的Observer引发的异常（不遵循Reactive-Streams规范）。</li>
+<li>Observable.sample();<a href="http://reactivex.io/documentation/operators/sample.html">文档详解地址</a> 返回一个Observable，它在定期的时间间隔内发出源ObservableSource *发出的最新发出的项（如果有）。</li>
+<li>Observable.scan();<a href="http://reactivex.io/documentation/operators/scan.html">文档详解地址</a>  将一个函数依次应用于Observable发出的每个项目，并发出每个连续的值</li>
+<li>Observable.serialize();<a href="http://reactivex.io/documentation/operators/serialize.html">文档详解地址</a>  一个Observable可能异步地（可能是从不同的线程）调用其观察者的方法。这可能会使Observable违反Observable约定，因为它可能会尝试在其通知之一之前发送OnCompleted或通知，或者可能同时从两个不同的线程发出通知。您可以通过将Serialize运算符应用于此Observable使其行为良好且同步。</li>
+<li>Observable.share();<a href="http://reactivex.io/documentation/operators/refcount.html">文档详解地址</a>  一个可连接的Observable与一个普通的Observable相似，不同之处在于它在订阅时不会开始发出项目，而仅在将Connect 运算符应用于该对象时才开始发出项目。这样，您可以提示Observable在您选择的时间开始发射物品</li>
+<li>Observable.singleElement();<a href="http://reactivex.io/documentation/operators/first.html">文档详解地址</a>  如果此Observable 仅发出一个项目，则返回一个Observable，该Observable发出该Observable发出的单个项目；否则，如果此Observable发出一个以上项目或不发送任何项目，则发出 {@code IllegalArgumentException}或{@code NoSuchElementException}信号分别。</li>
+<li>Observable.skip();<a href="http://reactivex.io/documentation/operators/skip.html">文档详解地址</a>  返回一个Observable，它跳过源ObservableSource发出的前{@code count}个项，并发出剩余的项。通过使用Skip运算符修改Observable， 可以忽略Observable发出的前n个项目，而仅关注其后的那些项目。</li>
+<li>Observable.skipUntil();<a href="http://reactivex.io/documentation/operators/skipuntil.html">文档详解地址</a>  所述SkipUntil订阅源观察的，但忽略其排放量，直到作为第二可观察发出的项，在该点 SkipUntil开始镜像源观察的。</li>
+<li>Observable.skipWhile();<a href="http://reactivex.io/documentation/operators/skipwhile.html">文档详解地址</a>  返回一个Observable，只要指定的条件成立，该Observable会跳过源ObservableSource发出的所有项目，但一旦条件变为false则发出所有其他源项目。</li>
+<li>Observable.sorted();  返回一个Observable，它以排序顺序发出源ObservableSource发出的事件。 ObservableSource发出的每个项目都必须针对序列中的所有其他项目实现{@link Comparable}。</li>
+<li>Observable.startWith();<a href="http://reactivex.io/documentation/operators/startwith.html">文档详解地址</a>  返回一个Observable，该对象在开始发射由源ObservableSource发出的项目之前，在指定的{@link Iterable}中发射这些项目。</li>
+<li>Observable.switchIfEmpty();<a href="">文档详解地址</a>  返回一个Observable，它发出源ObservableSource发出的项或备用 ObservableSource的项（如果源ObservableSource为空）。</li>
+<li>Observable.switchMap();<a href="http://reactivex.io/documentation/operators/flatmap.html">文档详解地址</a></li>
+<li>Observable.take();<a href="http://reactivex.io/documentation/operators/take.html">文档详解地址</a>  通过使用Take运算符修改Observable， 可以仅发出Observable发出的前n个项目，然后在忽略其余部分的情况下完成。</li>
+<li>Observable.takeLast();<a href="http://reactivex.io/documentation/operators/takelast.html">文档详解地址</a>  通过使用TakeLast运算符修改Observable， 您只能发出Observable发出的最后n个项目，而忽略它们之前的那些项目。</li>
+<li>Observable.takeUntil();<a href="http://reactivex.io/documentation/operators/takeuntil.html">文档详解地址</a>  在第二个Observable发出一个项目或终止之后，丢弃该Observable发出的任何项目</li>
+<li>Observable.takeWhile();<a href="http://reactivex.io/documentation/operators/takewhile.html">文档详解地址</a>  该TakeWhile镜源可观察，直到你指定一些条件为假，在这一点TakeWhile停止镜像源可观察并终止其自身的观测。</li>
+<li>Observable.throttleFirst();<a href="http://reactivex.io/documentation/operators/sample.html">文档详解地址</a>  返回一个Observable，该Observable在指定持续时间的连续*时间窗口内仅发出源ObservableSource发出的第一项。</li>
+<li>Observable.throttleLast();<a href="http://reactivex.io/documentation/operators/sample.html">文档详解地址</a>  返回一个Observable，该Observable在指定持续时间的连续*时间窗口内仅发出源ObservableSource发出的最后一项。</li>
+<li>Observable.throttleWithTimeout();<a href="http://reactivex.io/documentation/operators/debounce.html">文档详解地址</a>  该防抖操作过滤了源可观察正在迅速紧接着又发射项目发出项目。</li>
+<li>Observable.timeInterval();<a href="http://reactivex.io/documentation/operators/timeinterval.html">文档详解地址</a>  返回一个Observable，它发出由Source ObservableSource发出的连续项之间的时间间隔的记录。</li>
+<li>Observable.timeout();<a href="http://reactivex.io/documentation/operators/timeout.html">文档详解地址</a>  如果某个Observable在指定的时间段内未发出任何项目，则 使用Timeout运算符可以终止该Observable的 onError终止。</li>
+<li>Observable.timestamp();<a href="http://reactivex.io/documentation/operators/timestamp.html">文档详解地址</a>  的时间戳操作者将时间戳由源重新发射在其自己的序列项目之前可观察出射的每个项目。时间戳指示物品何时发射。</li>
+<li>Observable.to();<a href="http://reactivex.io/documentation/operators/to.html">文档详解地址</a> 在汇编期间调用指定的转换器函数，并返回其结果值。</li>
+<li>Observable.toList();<a href="http://reactivex.io/documentation/operators/to.html">文档详解地址</a>  ReactiveX的各种特定于语言的实现具有多种运算符，可用于将Observable或Observable发出的一系列项目转换为另一种对象或数据结构。其中一些阻塞直到Observable终止，然后产生等效的对象或数据结构；其他返回的Observable发出这样的对象或数据结构。</li>
+<li>Observable.toMap();<a href="http://reactivex.io/documentation/operators/to.html">文档详解地址</a>  ReactiveX的各种特定于语言的实现具有多种运算符，可用于将Observable或Observable发出的一系列项目转换为另一种对象或数据结构。其中一些阻塞直到Observable终止，然后产生等效的对象或数据结构；其他返回的Observable发出这样的对象或数据结构。</li>
+<li>Observable.unsubscribeOn();<a href="http://reactivex.io/documentation/operators/subscribeon.html">文档详解地址</a>  修改源ObservableSource，以便订阅者将在指定的位置取消订阅</li>
+<li>Observable.window();<a href="http://reactivex.io/documentation/operators/window.html">文档详解地址</a>  窗口类似于 Buffer，但是它不是从源Observable发出项目数据包，而是发出Observables，每个观测项目都从源Observable发出项目的子集，然后以onCompleted 通知终止。</li>
+<li>Observable.withLatestFrom();<a href="http://reactivex.io/documentation/operators/combinelatest.html">文档详解地址</a>  仅在源ObservableSource（此实例）发出一个项目时，才使用{@code resultSelector} *函数将指定的ObservableSource合并到此ObservableSource序列中。</li>
+<li>Observable.zipWith();<a href="http://reactivex.io/documentation/operators/zip.html">文档详解地址</a>  返回一个Observable，它发出的项是将指定函数应用于值对的结果，每对值来自源ObservableSource和指定的Iterable序列。</li>
+</ul>
+<h3 id="flowable">Flowable</h3>
+<p>这个是 java 版本中提供的，感觉需要和lambdas表达式一起使用，否则会代码爆红。创建方法感觉和Observable 差不多。但是Android中无法调用这个，无法通过编译。</p>
+<blockquote>
+<p>Flowable.just(&quot;&quot;).observeOn(Schedulers.newThread()).subscribeOn(AndroidSchedulers.mainThread()).subscribe(new Consumer<String>() {
+找不到org.reactivestreams.Publisher的类文件</p>
+</blockquote>
+<p>只有一句话也不行。</p>
+<blockquote>
+<p>Flowable.just(&quot;Hello world&quot;).subscribe(System.out::println);
+找不到org.reactivestreams.Publisher的类文件</p>
+</blockquote>
+<h3 id="single">Single</h3>
+<p>RxJava（及其衍生产品，如RxGroovy和RxScala）已经开发了一个称为“单一”的 Observable变体。<a href="http://reactivex.io/documentation/single.html">官方巨详细文档地址</a> <br>
+Single就像是一个Observable，但是不发出一系列值（从无到无到无限），它总是发出一个值或错误通知。
+因此，您无需使用三种方法来响应来自Observable的通知（onNext，onError和onCompleted）来订阅Single，而是仅使用两种方法进行订阅：</p>
+<ul>
+<li>onSuccess()
+Single通过此方法将Single发出的唯一项目</li>
+<li>onError</li>
+</ul>
+<h3 id="subject">Subject</h3>
+<p>一种在ReactiveX的某些实现中可用的桥梁或代理，它既充当观察者又充当Observable。因为它是观察者，所以可以订阅一个或多个Observable，并且因为它是Observable，所以可以通过释放观察到的项来传递它们，也可以发出新的项。
+因为一个主体订阅了一个Observable，它将触发Observable开始发出项目（如果Observable是“冷”的，也就是说，如果它在开始发出项目之前等待订阅）。这可以使最终的Subject成为原始“ cold”可观察到的“ hot”可观察到的变体。</p>
+<h3 id="observable中subscribe-方法重载">Observable中subscribe 方法重载</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span>    // 表示观察者不对被观察者发送的事件作出任何响应（但被观察者还是可以继续发送事件）
+<span class="ln"> 2</span>    public final Disposable subscribe(Consumer&lt;? super T&gt; onNext) {}
+<span class="ln"> 3</span>    // 表示观察者只对被观察者发送的Next事件作出响应
+<span class="ln"> 4</span>    public final Disposable subscribe(Consumer&lt;? super T&gt; onNext, Consumer&lt;? super Throwable&gt; onError) {} 
+<span class="ln"> 5</span>    // 表示观察者只对被观察者发送的Next事件 &amp; Error事件作出响应
+<span class="ln"> 6</span>    public final Disposable subscribe(Consumer&lt;? super T&gt; onNext, Consumer&lt;? super Throwable&gt; onError, Action onComplete) {}
+<span class="ln"> 7</span>    // 表示观察者只对被观察者发送的Next事件、Error事件 &amp; Complete事件作出响应
+<span class="ln"> 8</span>    public final Disposable subscribe(Consumer&lt;? super T&gt; onNext, Consumer&lt;? super Throwable&gt; onError, Action onComplete, Consumer&lt;? super Disposable&gt; onSubscribe) {}
+<span class="ln"> 9</span>    // 表示观察者只对被观察者发送的Next事件、Error事件 、Complete事件 &amp; onSubscribe事件作出响应
+<span class="ln">10</span>    public final void subscribe(Observer&lt;? super T&gt; observer) {}
+<span class="ln">11</span>    // 表示观察者对被观察者发送的任何事件都作出响应
+</code></pre></div><h2 id="观察者创建-observer">观察者创建 observer</h2>
+<blockquote>
+<p>2.0 import io.reactivex.Observer; 观察者用于接收 被观察者提供的数据信息。暂时不清楚被观察者调用其他观察者的逻辑。</p>
+</blockquote>
+<ul>
+<li>new Observer&lt;泛型&gt;(){};需要需要实现方法。Android上网络请求通常使用这个就好了。</li>
+<li>其他观察者 <a href="http://reactivex.io/RxJava/2.x/javadoc/">2.2.20 提供观察者 位于io.reactivex.functions 包下 </a></li>
+</ul>
+<h2 id="运行线程">运行线程</h2>
+<p>在Android 中主线程不建议进行耗时操作，通常耗时操作都是在子线程中进行的。而Rxjava 也提供了线程切换能力。通常上讲 观察者和被观察者创建线程就是他们的运行线程。</p>
+<blockquote>
+<p>使用包 : import io.reactivex.schedulers.Schedulers;</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:right">含义</th>
+<th style="text-align:center">应用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Schedulers.immediate()</td>
+<td style="text-align:right">当前线程 = 不指定线程</td>
+<td style="text-align:center">默认</td>
+</tr>
+<tr>
+<td style="text-align:left">AndroidSchedulers.mainThread()</td>
+<td style="text-align:right">Android主线程</td>
+<td style="text-align:center">操作UI</td>
+</tr>
+<tr>
+<td style="text-align:left">Schedulers.newThread()</td>
+<td style="text-align:right">常规新线程</td>
+<td style="text-align:center">耗时等操作</td>
+</tr>
+<tr>
+<td style="text-align:left">Schedulers.io()</td>
+<td style="text-align:right">io操作线程</td>
+<td style="text-align:center">网络请求、读写文件等io密集型操作</td>
+</tr>
+<tr>
+<td style="text-align:left">Schedulers.computation()</td>
+<td style="text-align:right">CPU计算操作线程</td>
+<td style="text-align:center">大量计算操作</td>
+</tr>
+</tbody>
+</table>
+<h3 id="方法">方法</h3>
+<ul>
+<li>subscribeOn() 传入上述类型表示 被观察者运行线程。</li>
+<li>observeOn() 传入上述类型表示 观察者运行线程</li>
+</ul>
+<blockquote>
+<p>多次指定被观察者生产事件线程，只有第一次有效果，其余指定线程无效。
+多次指定观察者接收线程，每次指定均生效，每指定一次，就切换一次。</p>
+</blockquote>
+<h2 id="scheduler">Scheduler</h2>
+<h2 id="观察者与被观察者连接关系">观察者与被观察者连接关系</h2>
+<p>使用方法subscribe() 进行连接。<br>
+通用连接格式是：被观察者(Observable). 被观察者运行线程(subscribeOn()).观察者运行线程(observeOn()).订阅（subscribe(观察者(observer))）<br></p>
+<h3 id="中断连接">中断连接</h3>
+<p>在观察者observer的开始连接回调方法:onSubscribe(Disposable d) 中，Disposable可用于中断连接，使用方法:<br>
+disposable.dispose();// 切断连接<br></p>
+<h3 id="多个disposable">多个Disposable</h3>
+<p>如果在非正确生命周期中出现UI调用，可能导致崩溃，对于多个Disposable，可以使用 CompositeDisposable，统一处理。</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>// 添加Disposable到CompositeDisposable容器
+<span class="ln">2</span>CompositeDisposable.add()
+<span class="ln">3</span>// 清空CompositeDisposable容器
+<span class="ln">4</span>CompositeDisposable.clear() 
+<span class="ln">5</span>// 这个需要尝试，这个clear是统一中断连接的意思吗？
+</code></pre></div><h3 id="延时">延时</h3>
+
+    
+      
+    
+  </article>
+<aside class="sidebar">
+  <section class="sidebar_inner">
+    <h2>luoye@yangfan</h2>
+    <div>
+      android,java,git,日常搬砖
+    </div>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/about/' class="button mt-1" role="button">阅读更多</a>
+    <h2 class="mt-4">精选文章</h2>
+    <ul>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B6%E4%BB%96%E8%BF%90%E7%AE%97/" class="nav-link">Rxjava其他运算</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava创建被观察者Observable</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E8%81%9A%E5%90%88%E8%BF%90%E7%AE%97%E7%AC%A6/" class="nav-link">Rxjava数学运算符和聚合运算符Observable</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava-%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E4%BD%BF%E7%94%A8/" class="nav-link">Rxjava最简单的使用</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/%E6%9D%A1%E4%BB%B6%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E5%B8%83%E5%B0%94%E8%BF%90%E7%AE%97%E7%AC%A6/" class="nav-link">Rxjava条件运算符和布尔运算符Observable</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E7%BB%93%E5%90%88%E7%BB%84%E5%90%88%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava组合结合被观察者Observable</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E8%BD%AC%E6%8D%A2%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava转换被观察者Observable</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E8%BF%87%E6%BB%A4%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava过滤被观察者Observable</a>
+      </li>
+    </ul>
+    <h2 class="mt-4">最新文章</h2>
+    <ul class="flex-column">
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B6%E4%BB%96%E8%BF%90%E7%AE%97/" class="nav-link">Rxjava其他运算</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava创建被观察者Observable</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E8%81%9A%E5%90%88%E8%BF%90%E7%AE%97%E7%AC%A6/" class="nav-link">Rxjava数学运算符和聚合运算符Observable</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava-%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E4%BD%BF%E7%94%A8/" class="nav-link">Rxjava最简单的使用</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/%E6%9D%A1%E4%BB%B6%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E5%B8%83%E5%B0%94%E8%BF%90%E7%AE%97%E7%AC%A6/" class="nav-link">Rxjava条件运算符和布尔运算符Observable</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E7%BB%93%E5%90%88%E7%BB%84%E5%90%88%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava组合结合被观察者Observable</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E8%BD%AC%E6%8D%A2%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava转换被观察者Observable</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E8%BF%87%E6%BB%A4%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava过滤被观察者Observable</a>
+      </li>
+    </ul>
+    <div>
+      <h2 class="mt-4 taxonomy" id="categories-section">分类</h2>
+      <nav class="tags_nav">
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%9D%82%E5%AD%A6/' class="post_tag button button_translucent">
+          杂学
+          <span class="button_tally">64</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/' class="post_tag button button_translucent">
+          技术类
+          <span class="button_tally">34</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
+          英语
+          <span class="button_tally">24</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
+          ANDROID基础
+          <span class="button_tally">3</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/' class="post_tag button button_translucent">
+          自动化测试
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/android-app/' class="post_tag button button_translucent">
+          ANDROID-APP
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/git/' class="post_tag button button_translucent">
+          GIT
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/mfc/' class="post_tag button button_translucent">
+          MFC
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/todo/' class="post_tag button button_translucent">
+          TODO
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E4%BD%9C%E6%96%87/' class="post_tag button button_translucent">
+          作文
+          <span class="button_tally">1</span>
+        </a>
+        
+        
+      </nav>
+    </div>
+    <div>
+      <h2 class="mt-4 taxonomy" id="series-section">专栏</h2>
+      <nav class="tags_nav">
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/' class="post_tag button button_translucent">
+          专升本
+          <span class="button_tally">58</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
+          ANDROID基础
+          <span class="button_tally">22</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class="post_tag button button_translucent">
+          个人主页
+          <span class="button_tally">9</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E5%85%B6%E4%BB%96/' class="post_tag button button_translucent">
+          其他
+          <span class="button_tally">9</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/fragment/' class="post_tag button button_translucent">
+          FRAGMENT
+          <span class="button_tally">3</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E6%A8%A1%E6%9D%BF/' class="post_tag button button_translucent">
+          模板
+          <span class="button_tally">3</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/java%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
+          JAVA基础
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/selenium/' class="post_tag button button_translucent">
+          SELENIUM
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/mfc/' class="post_tag button button_translucent">
+          MFC
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/python/' class="post_tag button button_translucent">
+          PYTHON
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AD%E6%96%87%E5%B8%B8%E8%AF%86/' class="post_tag button button_translucent">
+          中文常识
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E5%BA%94%E7%94%A8/' class="post_tag button button_translucent">
+          应用
+          <span class="button_tally">1</span>
+        </a>
+        
+        
+      </nav>
+    </div>
+    <div>
+      <h2 class="mt-4 taxonomy" id="tags-section">标签</h2>
+      <nav class="tags_nav">
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
+          英语
+          <span class="button_tally">47</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/' class="post_tag button button_translucent">
+          统考英语B
+          <span class="button_tally">25</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%AD%A6%E4%BD%8D%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
+          学位英语
+          <span class="button_tally">20</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84/' class="post_tag button button_translucent">
+          词组
+          <span class="button_tally">15</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class="post_tag button button_translucent">
+          ANDROID
+          <span class="button_tally">12</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class="post_tag button button_translucent">
+          RXJAVA
+          <span class="button_tally">12</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%8B%9F%E8%AF%95%E5%8D%B7/' class="post_tag button button_translucent">
+          模拟试卷
+          <span class="button_tally">10</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee/' class="post_tag button button_translucent">
+          GITEE
+          <span class="button_tally">9</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite/' class="post_tag button button_translucent">
+          SQLITE
+          <span class="button_tally">9</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee-page/' class="post_tag button button_translucent">
+          GITEE-PAGE
+          <span class="button_tally">8</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class="post_tag button button_translucent">
+          个人主页
+          <span class="button_tally">8</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/' class="post_tag button button_translucent">
+          数据库
+          <span class="button_tally">6</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/hugo/' class="post_tag button button_translucent">
+          HUGO
+          <span class="button_tally">3</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java/' class="post_tag button button_translucent">
+          JAVA
+          <span class="button_tally">3</span>
+        </a>
+        
+        
+        <br>
+        <div class="post_tags_toggle button">所有标签</div>
+        <div class="post_tags">
+          <div class="tags_list">
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class=" post_tag button button_translucent" data-position=12>ANDROID<span class="button_tally">12</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/chm/' class=" post_tag button button_translucent" data-position=1>CHM<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/cost%E8%B4%A6%E6%9C%AC/' class=" post_tag button button_translucent" data-position=1>COST账本<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/debug/' class=" post_tag button button_translucent" data-position=1>DEBUG<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/dialogfragment/' class=" post_tag button button_translucent" data-position=1>DIALOGFRAGMENT<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/fragment/' class=" post_tag button button_translucent" data-position=2>FRAGMENT<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/fragmentmanger/' class=" post_tag button button_translucent" data-position=1>FRAGMENTMANGER<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee/' class=" post_tag button button_translucent" data-position=9>GITEE<span class="button_tally">9</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee-page/' class=" post_tag button button_translucent" data-position=8>GITEE-PAGE<span class="button_tally">8</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/hexo/' class=" post_tag button button_translucent" data-position=2>HEXO<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/hugo/' class=" post_tag button button_translucent" data-position=3>HUGO<span class="button_tally">3</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/index/' class=" post_tag button button_translucent" data-position=1>INDEX<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java/' class=" post_tag button button_translucent" data-position=3>JAVA<span class="button_tally">3</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java-ee/' class=" post_tag button button_translucent" data-position=1>JAVA-EE<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/jekyll/' class=" post_tag button button_translucent" data-position=2>JEKYLL<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/map/' class=" post_tag button button_translucent" data-position=1>MAP<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/mfc/' class=" post_tag button button_translucent" data-position=1>MFC<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/object/' class=" post_tag button button_translucent" data-position=1>OBJECT<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/picgo/' class=" post_tag button button_translucent" data-position=1>PICGO<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/python/' class=" post_tag button button_translucent" data-position=1>PYTHON<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class=" post_tag button button_translucent" data-position=12>RXJAVA<span class="button_tally">12</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/selenium/' class=" post_tag button button_translucent" data-position=2>SELENIUM<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sql/' class=" post_tag button button_translucent" data-position=2>SQL<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite/' class=" post_tag button button_translucent" data-position=9>SQLITE<span class="button_tally">9</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%8D%E8%A7%84%E5%88%99%E5%8A%A8%E8%AF%8D/' class=" post_tag button button_translucent" data-position=1>不规则动词<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class=" post_tag button button_translucent" data-position=8>个人主页<span class="button_tally">8</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AD%E6%96%87%E5%B8%B8%E8%AF%86/' class=" post_tag button button_translucent" data-position=1>中文常识<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%BA%A4%E9%99%85%E7%94%A8%E8%AF%AD/' class=" post_tag button button_translucent" data-position=2>交际用语<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%BD%9C%E6%96%87/' class=" post_tag button button_translucent" data-position=2>作文<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%BF%AE%E9%A5%B0%E7%AC%A6/' class=" post_tag button button_translucent" data-position=1>修饰符<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%86%85%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/' class=" post_tag button button_translucent" data-position=1>内参考手册<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%89%8D%E7%BC%80/' class=" post_tag button button_translucent" data-position=1>前缀<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%8F%8D%E5%B0%84/' class=" post_tag button button_translucent" data-position=1>反射<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%9B%BE%E5%BA%8A/' class=" post_tag button button_translucent" data-position=1>图床<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%9B%BE%E8%A1%A8/' class=" post_tag button button_translucent" data-position=1>图表<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%AD%A6%E4%BD%8D%E8%8B%B1%E8%AF%AD/' class=" post_tag button button_translucent" data-position=20>学位英语<span class="button_tally">20</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%AE%8C%E5%BD%A2%E5%A1%AB%E7%A9%BA/' class=" post_tag button button_translucent" data-position=1>完形填空<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%B0%8F%E6%8A%84/' class=" post_tag button button_translucent" data-position=1>小抄<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/' class=" post_tag button button_translucent" data-position=6>数据库<span class="button_tally">6</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/' class=" post_tag button button_translucent" data-position=1>数据类型<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%8B%9F%E8%AF%95%E5%8D%B7/' class=" post_tag button button_translucent" data-position=10>模拟试卷<span class="button_tally">10</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%9D%BF/' class=" post_tag button button_translucent" data-position=3>模板<span class="button_tally">3</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%B5%8B%E8%AF%95%E7%BD%91%E7%AB%99/' class=" post_tag button button_translucent" data-position=1>测试网站<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/' class=" post_tag button button_translucent" data-position=25>统考英语B<span class="button_tally">25</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%91%E6%B1%89/' class=" post_tag button button_translucent" data-position=2>英译汉<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%AD/' class=" post_tag button button_translucent" data-position=47>英语<span class="button_tally">47</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/' class=" post_tag button button_translucent" data-position=1>计算机编译原理<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AE%B0%E5%BF%86/' class=" post_tag button button_translucent" data-position=2>记忆<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87/' class=" post_tag button button_translucent" data-position=3>词汇<span class="button_tally">3</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87a/' class=" post_tag button button_translucent" data-position=1>词汇A<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87b/' class=" post_tag button button_translucent" data-position=1>词汇B<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87c/' class=" post_tag button button_translucent" data-position=1>词汇C<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87%E4%B8%8E%E7%BB%93%E6%9E%84/' class=" post_tag button button_translucent" data-position=1>词汇与结构<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87%E8%A1%A8/' class=" post_tag button button_translucent" data-position=3>词汇表<span class="button_tally">3</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84/' class=" post_tag button button_translucent" data-position=15>词组<span class="button_tally">15</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84a/' class=" post_tag button button_translucent" data-position=1>词组A<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84b/' class=" post_tag button button_translucent" data-position=1>词组B<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84c/' class=" post_tag button button_translucent" data-position=1>词组C<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84def/' class=" post_tag button button_translucent" data-position=1>词组DEF<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84g/' class=" post_tag button button_translucent" data-position=1>词组G<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84h/' class=" post_tag button button_translucent" data-position=1>词组H<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84i/' class=" post_tag button button_translucent" data-position=1>词组I<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84jkl/' class=" post_tag button button_translucent" data-position=1>词组JKL<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84mn/' class=" post_tag button button_translucent" data-position=1>词组MN<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84o/' class=" post_tag button button_translucent" data-position=1>词组O<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84p/' class=" post_tag button button_translucent" data-position=1>词组P<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84qr/' class=" post_tag button button_translucent" data-position=1>词组QR<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84s/' class=" post_tag button button_translucent" data-position=1>词组S<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84t/' class=" post_tag button button_translucent" data-position=1>词组T<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84uw/' class=" post_tag button button_translucent" data-position=1>词组UW<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BC%80/' class=" post_tag button button_translucent" data-position=3>词缀<span class="button_tally">3</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BC%80%E5%89%8D%E7%BC%80/' class=" post_tag button button_translucent" data-position=1>词缀前缀<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BC%80%E5%90%8E%E7%BC%80/' class=" post_tag button button_translucent" data-position=1>词缀后缀<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%BE%E7%A8%8B%E8%A1%A8/' class=" post_tag button button_translucent" data-position=1>课程表<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%87%8D%E7%82%B9%E5%8D%95%E8%AF%8D/' class=" post_tag button button_translucent" data-position=1>重点单词<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%87%8D%E7%82%B9%E5%8F%A5%E5%9E%8B/' class=" post_tag button button_translucent" data-position=1>重点句型<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%94%99%E9%A2%98%E9%9B%86/' class=" post_tag button button_translucent" data-position=1>错题集<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3/' class=" post_tag button button_translucent" data-position=2>阅读理解<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E5%88%A4%E6%96%AD%E5%AF%B9%E9%94%99/' class=" post_tag button button_translucent" data-position=1>阅读理解判断对错<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5/' class=" post_tag button button_translucent" data-position=1>静态网页<span class="button_tally">1</span>
+            </a>
+            
+            <div class="tags_sort"><span title="sort alphabetically">[A~Z]</span><span title="sort by count">[0~9]</span>
+            </div>
+            <span class="tags_hide"><svg class="icon">
+            <use xlink:href="#closeme"></use>
+          </svg></span>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+</aside>
+
+</div>
+    </main><svg width="0" height="0" class="hidden">
+  <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
+    <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.001 18.001" id="twitter">
+    <path d="M15.891 4.013c.808-.496 1.343-1.173 1.605-2.034a8.68 8.68 0 0 1-2.351.861c-.703-.756-1.593-1.14-2.66-1.14-1.043 0-1.924.366-2.643 1.078a3.56 3.56 0 0 0-1.076 2.605c0 .309.039.585.117.819-3.076-.105-5.622-1.381-7.628-3.837-.34.601-.51 1.213-.51 1.846 0 1.301.549 2.332 1.645 3.089-.625-.053-1.176-.211-1.645-.47 0 .929.273 1.705.82 2.388a3.623 3.623 0 0 0 2.115 1.291c-.312.08-.641.118-.979.118-.312 0-.533-.026-.664-.083.23.757.664 1.371 1.291 1.841a3.652 3.652 0 0 0 2.152.743C4.148 14.173 2.625 14.69.902 14.69c-.422 0-.721-.006-.902-.038 1.697 1.102 3.586 1.649 5.676 1.649 2.139 0 4.029-.542 5.674-1.626 1.645-1.078 2.859-2.408 3.639-3.974a10.77 10.77 0 0 0 1.172-4.892v-.468a7.788 7.788 0 0 0 1.84-1.921 8.142 8.142 0 0 1-2.11.593z"
+      ></path>
+  </symbol>
+  <symbol aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="mail">
+    <path  d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="calendar">
+    <path d="M452 40h-24V0h-40v40H124V0H84v40H60C26.916 40 0 66.916 0 100v352c0 33.084 26.916 60 60 60h392c33.084 0 60-26.916 60-60V100c0-33.084-26.916-60-60-60zm20 412c0 11.028-8.972 20-20 20H60c-11.028 0-20-8.972-20-20V188h432v264zm0-304H40v-48c0-11.028 8.972-20 20-20h24v40h40V80h264v40h40V80h24c11.028 0 20 8.972 20 20v48z"></path>
+    <path d="M76 230h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 310h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 390h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80-80h40v40h-40z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="github">
+    <path d="M255.968 5.329C114.624 5.329 0 120.401 0 262.353c0 113.536 73.344 209.856 175.104 243.872 12.8 2.368 17.472-5.568 17.472-12.384 0-6.112-.224-22.272-.352-43.712-71.2 15.52-86.24-34.464-86.24-34.464-11.616-29.696-28.416-37.6-28.416-37.6-23.264-15.936 1.728-15.616 1.728-15.616 25.696 1.824 39.2 26.496 39.2 26.496 22.848 39.264 59.936 27.936 74.528 21.344 2.304-16.608 8.928-27.936 16.256-34.368-56.832-6.496-116.608-28.544-116.608-127.008 0-28.064 9.984-51.008 26.368-68.992-2.656-6.496-11.424-32.64 2.496-68 0 0 21.504-6.912 70.4 26.336 20.416-5.696 42.304-8.544 64.096-8.64 21.728.128 43.648 2.944 64.096 8.672 48.864-33.248 70.336-26.336 70.336-26.336 13.952 35.392 5.184 61.504 2.56 68 16.416 17.984 26.304 40.928 26.304 68.992 0 98.72-59.84 120.448-116.864 126.816 9.184 7.936 17.376 23.616 17.376 47.584 0 34.368-.32 62.08-.32 70.496 0 6.88 4.608 14.88 17.6 12.352C438.72 472.145 512 375.857 512 262.353 512 120.401 397.376 5.329 255.968 5.329z"></path>
+  </symbol>
+  <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="rss">
+    <circle cx="3.429" cy="20.571" r="3.429"></circle>
+    <path d="M11.429 24h4.57C15.999 15.179 8.821 8.001 0 8v4.572c6.302.001 11.429 5.126 11.429 11.428z"></path>
+    <path d="M24 24C24 10.766 13.234 0 0 0v4.571c10.714 0 19.43 8.714 19.43 19.429z"></path>
+  </symbol>
+  <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="linkedin">
+    <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h362c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zM181 406h-60V196h60zm0-240h-60v-60h60zm210 240h-60V286c0-16.54-13.46-30-30-30s-30 13.46-30 30v120h-60V196h60v11.309C286.719 202.422 296.93 196 316 196c40.691.043 75 36.547 75 79.688zm0 0"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612" id="arrow">
+    <path d="M604.501 440.509L325.398 134.956c-5.331-5.357-12.423-7.627-19.386-7.27-6.989-.357-14.056 1.913-19.387 7.27L7.499 440.509c-9.999 10.024-9.999 26.298 0 36.323s26.223 10.024 36.222 0l262.293-287.164L568.28 476.832c9.999 10.024 26.222 10.024 36.221 0 9.999-10.023 9.999-26.298 0-36.323z"></path>
+  </symbol>
+  <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="carly">
+    <path d="M504.971 239.029L448 182.059V84c0-46.317-37.682-84-84-84h-44c-13.255 0-24 10.745-24 24s10.745 24 24 24h44c19.851 0 36 16.149 36 36v108c0 6.365 2.529 12.47 7.029 16.971L454.059 256l-47.029 47.029A24.002 24.002 0 0 0 400 320v108c0 19.851-16.149 36-36 36h-44c-13.255 0-24 10.745-24 24s10.745 24 24 24h44c46.318 0 84-37.683 84-84v-98.059l56.971-56.971c9.372-9.372 9.372-24.568 0-33.941zM112 192V84c0-19.851 16.149-36 36-36h44c13.255 0 24-10.745 24-24S205.255 0 192 0h-44c-46.318 0-84 37.683-84 84v98.059l-56.971 56.97c-9.373 9.373-9.373 24.568 0 33.941L64 329.941V428c0 46.317 37.682 84 84 84h44c13.255 0 24-10.745 24-24s-10.745-24-24-24h-44c-19.851 0-36-16.149-36-36V320c0-6.365-2.529-12.47-7.029-16.971L57.941 256l47.029-47.029A24.002 24.002 0 0 0 112 192z"></path>
+  </symbol>
+  <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="copy">
+    <path d="M23 2.75A2.75 2.75 0 0 0 20.25 0H8.75A2.75 2.75 0 0 0 6 2.75v13.5A2.75 2.75 0 0 0 8.75 19h11.5A2.75 2.75 0 0 0 23 16.25zM18.25 14.5h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5zm0-3h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5zm0-3h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5z"></path>
+    <path d="M8.75 20.5a4.255 4.255 0 0 1-4.25-4.25V2.75c0-.086.02-.166.025-.25H3.75A2.752 2.752 0 0 0 1 5.25v16A2.752 2.752 0 0 0 3.75 24h12a2.752 2.752 0 0 0 2.75-2.75v-.75z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" id="closeme">
+    <path d="M284.286 256.002L506.143 34.144c7.811-7.811 7.811-20.475 0-28.285-7.811-7.81-20.475-7.811-28.285 0L256 227.717 34.143 5.859c-7.811-7.811-20.475-7.811-28.285 0-7.81 7.811-7.811 20.475 0 28.285l221.857 221.857L5.858 477.859c-7.811 7.811-7.811 20.475 0 28.285a19.938 19.938 0 0 0 14.143 5.857 19.94 19.94 0 0 0 14.143-5.857L256 284.287l221.857 221.857c3.905 3.905 9.024 5.857 14.143 5.857s10.237-1.952 14.143-5.857c7.811-7.811 7.811-20.475 0-28.285L284.286 256.002z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="open-menu">
+    <path d="M492 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20zm0-160H20C8.954 76 0 84.954 0 96s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20zm0 320H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="instagram">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id=youtube>
+    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+  </symbol>
+</svg>
+<footer class="footer">
+  <div class="footer_inner wrap pale">
+    <img src='http://lalalaxiaowifi.gitee.io/pictures/icons/apple-touch-icon.png' class="icon icon_2 transparent">
+    <p>Copyright &copy;&nbsp;<span class="year">2020</span>&nbsp;个人主页. All Rights Reserved</p><a class="to_top" href="#documentTop">
+  <svg class="icon">
+  <use xlink:href="#arrow"></use>
+</svg>
+</a>
+
+  </div>
+</footer>
+    <script type="text/javascript" src="http://lalalaxiaowifi.gitee.io/pictures/js/bundle.min.dc1752cbb1c01a107e1e4afce7f618750185cca45821a7b8e3fccc074f8d9260a43990c47c4e3c1644438f24b907d3d3ba050d2aec63b573c3059f25cefbcb80.js" integrity="sha512-3BdSy7HAGhB&#43;Hkr85/YYdQGFzKRYIae44/zMB0&#43;NkmCkOZDEfE48FkRDjyS5B9PTugUNKuxjtXPDBZ8lzvvLgA==" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
