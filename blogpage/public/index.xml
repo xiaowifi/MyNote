@@ -8,6 +8,17 @@
     <copyright>Copyright © 2020-2099</copyright>
     <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Rxjava使用CompositeDisposable进行统一注销监听</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/</guid>
+      <description>前言 本Demo 主要是针对 Rxjava Android 版本进行实践
+Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 正文  在观察者的回调方法中，有一个onSubscribe(Disposable d) 开始连接方法，Disposable 可以控制是否关闭后面的回调。JAVA 对象是有生命周期的。 这个时候，对于某些监听回调，就可以统一安排处理了。
+ 1 private final CompositeDisposable mDisposable = new CompositeDisposable(); 2// subscribe 需要使用返回 一个Disposable的那个方法。 3 Disposable md = Observable.create(new ObservableOnSubscribe&amp;lt;Integer&amp;gt;() { 4 @Override 5 public void subscribe(ObservableEmitter&amp;lt;Integer&amp;gt; e) throws Exception { 6 7 } 8 }).subscribe(integer -&amp;gt; Log.e(TAG, &amp;#34;demo2: &amp;#34; + integer)); 9 disposable.add(md); 10 11@Override 12 protected void onStop() { 13 super.</description>
+    </item>
+    
+    <item>
       <title>Rxjava其他运算</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B6%E4%BB%96%E8%BF%90%E7%AE%97/</link>
       <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
@@ -122,8 +133,10 @@ Delay —将排放量从可观察的时间向前移特定量 Do -注册一项行
       
       <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/android%E4%B8%ADrxjava%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/</guid>
       <description>前言 本Demo 主要是针对 Rxjava Android 版本进行实践
-Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 正文 被观察者 Observable  2.0 import io.reactivex.Observable; 超级详细的官网地址
-  Observable.create();基础的创建一个被观察者，基于ObservableOnSubscribe.class,ObservableOnSubscribe获得的 ObservableEmitter 可以发送多个消息。  emitter.onNext(1);// 传入的数据类型 是创建ObservableOnSubscribe传入的泛型。数据将传送导观察者(observer)的onNext()方法中。 emitter.onComplete(); 调用观察者(observer)的onComplete() 方法，表示不再发送onNext()方法数据。 emitter.onError(); 这个同理。不再发送 onNext() 和onComplete();   Observable.just(&amp;quot;A&amp;quot;,&amp;quot;B&amp;quot;,&amp;quot;C&amp;quot;); 依次通过onNext() 发送数据 文档地址 Observable.fromArray(words);和just 相同，依次通过onNext() 发送数据。 Observable.amb();文档详解地址 当您将多个源Observable传递给Amb时，它将通过这些Observable中的一个的发射和通知：第一个通过发出项目或发送或 通知向 Amb发送通知的通知。Amb将忽略并丢弃所有其他来源可观察到的排放物和通知。 Observable.ambArray();文档详解地址 Observable.combineLatest();文档详解地址 所述CombineLatest操作者的行为以类似的方式给 邮编，但同时邮编只有当发射项各压缩的源可观察量已发射的先前解压缩的项目， CombineLatest发射每当一个项目的任何来源的观测量发射的项目（只要各源Observables发出了至少一项）。当任何一个源Observable发出一个项目时， CombinateLatest会使用您提供的函数将每个其他源Observable的最近发射的项目组合在一起，并从该函数发出返回值。 Observable.concat();文档详解地址 将通过Iterable序列提供的每个ObservableSource的元素连接成一个元素的单个序列，而无需对其进行交织。 Observable.concatArray(); Observable.defer();文档详解地址 该推迟操作者等待，直到观察者订阅了它，然后它产生可观察到的，典型地与可观察到的工厂函数。它为每个订户重新进行此操作，因此尽管每个订户可能认为自己正在订阅相同的Observable，但实际上每个订户都有自己的单独序列。在某些情况下，等到最后一分钟（即直到订阅时间）生成Observable才能确保此Observable包含最新数据。 Observable.empty();文档详解地址 创建一个不发射任何物品但正常终止的Observable Observable.never();和 empty同文档，创建一不发射任何物品且不会终止的 Observable Observable.throw();和empty同文档，创建一个不发出任何项目的并以错误终止的observable. Observable.fromCallable();返回一个Observable，当观察者订阅该Observable时，它将调用您指定的函数，然后发出从该函数返回的值。 Observable.</description>
+Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 正文 被观察者 创建可观察物 产生新的Observable的运算符。
+ Create —通过编程调用观察者方法从头开始创建Observable Defer -在观察者订阅之前不要创建Observable，并为每个观察者创建一个新的Observable Empty/ Never/Throw -创建具有非常精确和限制行为观测量 From —将其他一些对象或数据结构转换为可观察的 Interval —创建一个Observable，它发出以特定时间间隔隔开的整数序列 Just —将一个对象或一组对象转换为发出该对象或那些对象的Observable Range —创建一个Observable，它发出一系列连续整数 Repeat —创建一个Observable，它反复发出特定的项目或项目序列 Start —创建一个Observable，它发出函数的返回值 Timer —创建一个Observable，它在给定的延迟后发出单个项目  转换可观察物 转换由Observable发出的项目的运算符。
+ Buffer —定期将来自一个Observable的项目收集成束，然后发出这些束，而不是一次发出一个 FlatMap —将可观察对象发出的项目转换为可观察项目，然后将这些项目的排放平展为单个可观察项目 GroupBy —将一个Observable划分为一组Observable，它们分别与原始Observable发射一组不同的项，并按key进行组织 Map —通过对每个项目应用函数来转换Observable发出的项目 Scan —将一个函数依次应用于Observable发出的每个项目，并发出每个连续的值 Window —定期将项目从“可观察”窗口细分为“可观察”窗口，然后发出这些窗口，而不是一次发出一个窗口  过滤可观察物 有选择地从Observable源发出项目的运算符。
+ Debounce —仅在经过特定时间跨度时才从Observable中发出一项，而不发出另一项 Distinct -抑制可观察对象发出的重复项 ElementAt—仅发射可观察对象发射的项目n Filter —仅从可观察对象中发出通过谓词测试的项 First —仅从Observable发出第一项或满足条件的第一项 IgnoreElements —不要从Observable发出任何项目，而是镜像其终止通知 Last —只发射可观察对象发射的最后一个项目 Sample —定期发射Observable发射的最新项目 Skip—抑制Observable发出的前n个项目 SkipLast—抑制Observable发出的最后n个项目 Take—仅发射可观察对象发射的前n个项目 TakeLast—只发射可观察对象发射的最后n个项目  结合可观察物 与多个源Observables一起创建单个Observable的运算符</description>
     </item>
     
     <item>

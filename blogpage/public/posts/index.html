@@ -119,6 +119,40 @@
   <div class="excerpt">
     <div class="excerpt_header">
       <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/">Rxjava使用CompositeDisposable进行统一注销监听</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Dec 31, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android' class="post_tag button button_translucent">android
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava' class="post_tag button button_translucent">Rxjava
+    </a>
+</div>
+
+    </div>
+    <div class="excerpt_footer partition">
+      <div class="excerpt_thumbnail">
+        <img src='https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20201230114639.png'>
+      </div>
+      
+        <div>
+          <p class="pale">前言 本Demo 主要是针对 Rxjava Android 版本进行实践
+Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 正文  在观察者的回调方法中，有一个onSubscribe(Disposable d) 开始连接方法，Disposable 可以控制是否关闭后面的回调。JAVA 对象是有生命周期的。 这个时候，对于某些监听回调，就可以统一安排处理了。
+ 1 private final CompositeDisposable mDisposable = new CompositeDisposable(); 2// subscribe 需要使用返回 一个Disposable的那 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B6%E4%BB%96%E8%BF%90%E7%AE%97/">Rxjava其他运算</a>
       </h3>
       <div class="post_meta">
@@ -478,8 +512,8 @@ Delay —将排放量从可观察的时间向前移特定量 Do -注册一项行
       
         <div>
           <p class="pale">前言 本Demo 主要是针对 Rxjava Android 版本进行实践
-Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 正文 被观察者 Observable  2.0 import io.reactivex.Observable; 超级详细的官网地址
-  Observable.create();基础的创建一个被观察者，基于ObservableOnSubscribe.class,ObservableOnSubscribe获得的 ObservableEmitter 可以发送多个消息。  emitter.onNext(1);// 传入的数据类型 是创 …</p>
+Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 正文 被观察者 创建可观察物 产生新的Observable的运算符。
+ Create —通过编程调用观察者方法从头开始创建Observable Defer -在观察者订阅之前不要创建Observable，并为每个观察者创建一个新的Observable Empty/ Never/Throw -创建具有非常精确和限制行为观测量 From —将其他一些对象或数据结构转换为可观察的 Interval —创建一个Observable， …</p>
           <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/android%E4%B8%ADrxjava%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/" class="excerpt_more button">阅读更多</a>
         </div>
       </div>
@@ -717,33 +751,6 @@ GroupBy+Group_concat ： 表示分组之后，根据分组结果，使用 group_
     </div>
   </li>
 
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1sqlite%E6%8F%92%E5%85%A5%E5%A4%9A%E4%BA%8E%E5%AD%97%E6%AE%B5%E5%AF%BC%E8%87%B4%E7%9A%84%E6%8F%92%E5%85%A5%E5%A4%B1%E8%B4%A5/">Android sqlite多余字段插入导致插入失败</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Dec 22, 2020</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">前言 顺着之前的sqlite写的统一插入语句。然后现在是需要多插入一个信息到一个表，由于来源挺多的，所以直接写到bean 中 顺便推一下博客主页
-正文 直接上错误。 SQLiteDatabase: Error inserting table expenses has no column named showMessage (Sqlite code 1 SQLITE_ERROR): , while compiling: INSERT INTO …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1sqlite%E6%8F%92%E5%85%A5%E5%A4%9A%E4%BA%8E%E5%AD%97%E6%AE%B5%E5%AF%BC%E8%87%B4%E7%9A%84%E6%8F%92%E5%85%A5%E5%A4%B1%E8%B4%A5/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
     <li>
 <ul class="pagination">
   <li class="page-item">
@@ -788,6 +795,9 @@ GroupBy+Group_concat ： 表示分组之后，根据分组结果，使用 group_
     <h2 class="mt-4">精选文章</h2>
     <ul>
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" class="nav-link">Rxjava使用CompositeDisposable进行统一注销监听</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B6%E4%BB%96%E8%BF%90%E7%AE%97/" class="nav-link">Rxjava其他运算</a>
       </li>
       <li>
@@ -807,14 +817,14 @@ GroupBy+Group_concat ： 表示分组之后，根据分组结果，使用 group_
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E8%BD%AC%E6%8D%A2%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava转换被观察者Observable</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E8%BF%87%E6%BB%A4%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava过滤被观察者Observable</a>
       </li>
     </ul>
     <h2 class="mt-4">最新文章</h2>
     <ul class="flex-column">
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" class="nav-link">Rxjava使用CompositeDisposable进行统一注销监听</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B6%E4%BB%96%E8%BF%90%E7%AE%97/" class="nav-link">Rxjava其他运算</a>
       </li>
       <li>
@@ -834,9 +844,6 @@ GroupBy+Group_concat ： 表示分组之后，根据分组结果，使用 group_
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E8%BD%AC%E6%8D%A2%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava转换被观察者Observable</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E8%BF%87%E6%BB%A4%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava过滤被观察者Observable</a>
       </li>
     </ul>
     <div>
@@ -849,7 +856,7 @@ GroupBy+Group_concat ： 表示分组之后，根据分组结果，使用 group_
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/' class="post_tag button button_translucent">
           技术类
-          <span class="button_tally">34</span>
+          <span class="button_tally">35</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
@@ -905,7 +912,7 @@ GroupBy+Group_concat ： 表示分组之后，根据分组结果，使用 group_
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
           ANDROID基础
-          <span class="button_tally">22</span>
+          <span class="button_tally">23</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class="post_tag button button_translucent">
@@ -986,12 +993,12 @@ GroupBy+Group_concat ： 表示分组之后，根据分组结果，使用 group_
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class="post_tag button button_translucent">
           ANDROID
-          <span class="button_tally">12</span>
+          <span class="button_tally">13</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class="post_tag button button_translucent">
           RXJAVA
-          <span class="button_tally">12</span>
+          <span class="button_tally">13</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%8B%9F%E8%AF%95%E5%8D%B7/' class="post_tag button button_translucent">
@@ -1040,7 +1047,7 @@ GroupBy+Group_concat ： 表示分组之后，根据分组结果，使用 group_
         <div class="post_tags">
           <div class="tags_list">
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class=" post_tag button button_translucent" data-position=12>ANDROID<span class="button_tally">12</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class=" post_tag button button_translucent" data-position=13>ANDROID<span class="button_tally">13</span>
             </a>
             
             
@@ -1120,7 +1127,7 @@ GroupBy+Group_concat ： 表示分组之后，根据分组结果，使用 group_
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class=" post_tag button button_translucent" data-position=12>RXJAVA<span class="button_tally">12</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class=" post_tag button button_translucent" data-position=13>RXJAVA<span class="button_tally">13</span>
             </a>
             
             
@@ -1426,7 +1433,7 @@ GroupBy+Group_concat ： 表示分组之后，根据分组结果，使用 group_
 <footer class="footer">
   <div class="footer_inner wrap pale">
     <img src='http://lalalaxiaowifi.gitee.io/pictures/icons/apple-touch-icon.png' class="icon icon_2 transparent">
-    <p>Copyright &copy;&nbsp;<span class="year">2020</span>&nbsp;个人主页. All Rights Reserved</p><a class="to_top" href="#documentTop">
+    <p>Copyright &copy;&nbsp;<span class="year">2021</span>&nbsp;个人主页. All Rights Reserved</p><a class="to_top" href="#documentTop">
   <svg class="icon">
   <use xlink:href="#arrow"></use>
 </svg>

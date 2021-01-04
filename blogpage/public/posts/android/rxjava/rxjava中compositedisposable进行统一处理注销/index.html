@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="zh" data-figures="" class="page">
   <head>
-<title>Android sqlite约束 | 个人主页</title>
+<title>Rxjava使用CompositeDisposable进行统一注销监听 | 个人主页</title>
 <meta charset="utf-8">
 <meta name="generator" content="Hugo 0.76.3" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -10,16 +10,14 @@
 <meta property="og:locale" content="zh" />
 
 <meta property="og:type" content="article">
-<meta name="description" content="前言 顺便推一下日常搬砖sqlite目录 。
-接着上面的写，之前有写到使用sqlite 实现增删改查等简单使用。sqlite是一个关系型数据库，既然是数据库那么它就一定不会这么简单了，是吧，要不然就没有专门做数据库设计的岗位了。当然了在Android上的应用通常可能没有这么复杂。那么简单的约束还是可以了解下的。毕竟我们 …">
+<meta name="description" content="Rxjava使用CompositeDisposable进行统一注销监听">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="">
-<meta name="twitter:title" content="Android sqlite约束" />
-<meta property="og:url" content="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%BA%A6%E6%9D%9F/" />
-<meta property="og:title" content="Android sqlite约束" />
-<meta property="og:description" content="前言 顺便推一下日常搬砖sqlite目录 。
-接着上面的写，之前有写到使用sqlite 实现增删改查等简单使用。sqlite是一个关系型数据库，既然是数据库那么它就一定不会这么简单了，是吧，要不然就没有专门做数据库设计的岗位了。当然了在Android上的应用通常可能没有这么复杂。那么简单的约束还是可以了解下的。毕竟我们 …" />
-<meta property="og:image" content="http://lalalaxiaowifi.gitee.io/pictures/images/thumbnail.png" />
+<meta name="twitter:title" content="Rxjava使用CompositeDisposable进行统一注销监听" />
+<meta property="og:url" content="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" />
+<meta property="og:title" content="Rxjava使用CompositeDisposable进行统一注销监听" />
+<meta property="og:description" content="Rxjava使用CompositeDisposable进行统一注销监听" />
+<meta property="og:image" content="https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20201230114639.png" />
 <link rel="apple-touch-icon" sizes="180x180" href='http://lalalaxiaowifi.gitee.io/pictures/icons/apple-touch-icon.png'>
 <link rel="icon" type="image/png" sizes="32x32" href='http://lalalaxiaowifi.gitee.io/pictures/icons/favicon-32x32.png'>
 <link rel="manifest" href='http://lalalaxiaowifi.gitee.io/pictures/icons/site.webmanifest'>
@@ -27,7 +25,7 @@
 <meta name="msapplication-TileColor" content="#002538">
 <meta name="theme-color" content="#002538">
 
-<link rel="canonical" href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%BA%A6%E6%9D%9F/">
+<link rel="canonical" href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/">
 
     
 
@@ -115,25 +113,27 @@
   
 <div class="grid-inverse wrap content">
   <article class="post_content">
-    <h1 class="post_title">Android sqlite约束</h1><div class="post_meta">
+    <h1 class="post_title">Rxjava使用CompositeDisposable进行统一注销监听</h1><div class="post_meta">
   <svg class="icon">
   <use xlink:href="#calendar"></use>
 </svg>
   <span class="post_date">
-    Oct 1, 2020</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
+    Dec 31, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android' class="post_tag button button_translucent">android
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava' class="post_tag button button_translucent">Rxjava
     </a>
 </div>
 
     
 <div class="post_share">
   分享到:
-  <a href="https://twitter.com/intent/tweet?text=Android%20sqlite%e7%ba%a6%e6%9d%9f&url=http%3a%2f%2flalalaxiaowifi.gitee.io%2fpictures%2fposts%2fsqlite%2f%25E6%2597%25A5%25E5%25B8%25B8%25E6%2590%25AC%25E7%25A0%2596sqlite%25E7%25BA%25A6%25E6%259D%259F%2f&tw_p=tweetbutton" class="twitter" title="分享到 Twitter" target="_blank" rel="nofollow">
+  <a href="https://twitter.com/intent/tweet?text=Rxjava%e4%bd%bf%e7%94%a8CompositeDisposable%e8%bf%9b%e8%a1%8c%e7%bb%9f%e4%b8%80%e6%b3%a8%e9%94%80%e7%9b%91%e5%90%ac&url=http%3a%2f%2flalalaxiaowifi.gitee.io%2fpictures%2fposts%2fandroid%2frxjava%2frxjava%25E4%25B8%25ADcompositedisposable%25E8%25BF%259B%25E8%25A1%258C%25E7%25BB%259F%25E4%25B8%2580%25E5%25A4%2584%25E7%2590%2586%25E6%25B3%25A8%25E9%2594%2580%2f&tw_p=tweetbutton" class="twitter" title="分享到 Twitter" target="_blank" rel="nofollow">
     <svg class="icon">
   <use xlink:href="#twitter"></use>
 </svg>
   </a>
-  <a href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flalalaxiaowifi.gitee.io%2fpictures%2fposts%2fsqlite%2f%25E6%2597%25A5%25E5%25B8%25B8%25E6%2590%25AC%25E7%25A0%2596sqlite%25E7%25BA%25A6%25E6%259D%259F%2f&t=Android%20sqlite%e7%ba%a6%e6%9d%9f" class="facebook" title="分享到 Facebook" target="_blank" rel="nofollow">
+  <a href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flalalaxiaowifi.gitee.io%2fpictures%2fposts%2fandroid%2frxjava%2frxjava%25E4%25B8%25ADcompositedisposable%25E8%25BF%259B%25E8%25A1%258C%25E7%25BB%259F%25E4%25B8%2580%25E5%25A4%2584%25E7%2590%2586%25E6%25B3%25A8%25E9%2594%2580%2f&t=Rxjava%e4%bd%bf%e7%94%a8CompositeDisposable%e8%bf%9b%e8%a1%8c%e7%bb%9f%e4%b8%80%e6%b3%a8%e9%94%80%e7%9b%91%e5%90%ac" class="facebook" title="分享到 Facebook" target="_blank" rel="nofollow">
     <svg class="icon">
   <use xlink:href="#facebook"></use>
 </svg>
@@ -143,7 +143,7 @@
   <use xlink:href="#linkedin"></use>
 </svg>
   </a>
-  <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%BA%A6%E6%9D%9F/" title="复制链接地址" class="link link_yank">
+  <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" title="复制链接地址" class="link link_yank">
     <svg class="icon">
   <use xlink:href="#copy"></use>
 </svg>
@@ -151,41 +151,32 @@
 </div>
 
     
-    <p><img src="https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png" alt=""></p>
-<h2 id="前言">前言</h2>
-<p>顺便推一下<a href="https://juejin.im/post/6868506837000388615">日常搬砖sqlite目录</a> 。</p>
-<p>接着上面的写，之前有写到使用sqlite 实现增删改查等简单使用。sqlite是一个关系型数据库，既然是数据库那么它就一定不会这么简单了，是吧，要不然就没有专门做数据库设计的岗位了<img src="https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20200910104356.png" style="zoom:25%;" />。当然了在Android上的应用通常可能没有这么复杂。那么简单的约束还是可以了解下的。毕竟我们可能不会做出超出我们逻辑认知的操作。如果想要实现某个功能，那么知道当前工具是否可以是很有必要的吧。</p>
-<h2 id="正文">正文</h2>
-<p>那么我们就直接上菜，Android 上无论是room 还是greendao，都是基于sqlite提供服务的，他们实现的sqlite 就必定有，是吧。我们知道一个表的设计包括 表名，字段名，字段名对应的类型（必须），字段名对应的其他约束。</p>
-<h3 id="类型">类型</h3>
-<p>之前有一篇文章关于<a href="https://juejin.im/post/6868510436254777357/">sqlite可用类型与存储类型</a>. 在这里就不再次描述了。</p>
-<h3 id="约束">约束</h3>
-<p><a href="https://www.runoob.com/sqlite/sqlite-tutorial.html">runoob sqlite </a> 本文中大多数都是基于该教程，这个还是可以看一下的。<a href="https://www.runoob.com/sqlite/sqlite-constraints.html">SQLite 约束</a></p>
-<ul>
-<li>
-<p>primary key: 唯一标识数据库表中的各行/记录</p>
-</li>
-<li>
-<p>autoincrement :自增 通常用于 int类型的字段。</p>
-</li>
-<li>
-<p>NOT NULL:确保某列不能有 NULL 值</p>
-</li>
-<li>
-<p>DEFAULT :当某列没有指定值时，为该列提供默认值</p>
-</li>
-<li>
-<p>UNIQUE 约束：确保某列中的所有值是不同的.</p>
-</li>
-<li>
-<p><strong>CHECK 约束</strong>：CHECK 约束确保某列中的所有值满足一定条件。</p>
-<p>算了，感觉自己写的没有别人提供的约束教程好，这个就当做笔记算了，直接查看 上面的教程吧。心态有点难受。</p>
-</li>
-</ul>
-<h2 id="结束">结束</h2>
-<p>谢谢光临，若觉得还行麻烦点一下赞，若觉得写得垃圾，欢迎批评指正。笔者知道自己文笔和表达能力很弱，如果您可以提供点宝贵的意见不胜感激。谢谢。</p>
-<p>今天也可以是元气满满的一天哦。</p>
-
+    <h1 id="前言">前言</h1>
+<p>本Demo 主要是针对 Rxjava  Android 版本进行实践<br>
+<a href="https://github.com/ReactiveX/RxAndroid">Rxjava Android 版本 github 地址</a> <br>
+<a href="https://github.com/ReactiveX/RxJava">Rxjava 地址</a> <br>
+<a href="http://reactivex.io/">Rxjava 官方文档地址</a> <br></p>
+<h1 id="正文">正文</h1>
+<blockquote>
+<p>在观察者的回调方法中，有一个onSubscribe(Disposable d) 开始连接方法，Disposable 可以控制是否关闭后面的回调。JAVA 对象是有生命周期的。
+这个时候，对于某些监听回调，就可以统一安排处理了。</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span> private final CompositeDisposable mDisposable = new CompositeDisposable();
+<span class="ln"> 2</span>// subscribe 需要使用返回 一个Disposable的那个方法。
+<span class="ln"> 3</span> Disposable md = Observable.create(new ObservableOnSubscribe&lt;Integer&gt;() {
+<span class="ln"> 4</span>            @Override
+<span class="ln"> 5</span>            public void subscribe(ObservableEmitter&lt;Integer&gt; e) throws Exception {
+<span class="ln"> 6</span>
+<span class="ln"> 7</span>            }
+<span class="ln"> 8</span>        }).subscribe(integer -&gt; Log.e(TAG, &#34;demo2: &#34; + integer));
+<span class="ln"> 9</span>        disposable.add(md);
+<span class="ln">10</span>
+<span class="ln">11</span>@Override
+<span class="ln">12</span>    protected void onStop() {
+<span class="ln">13</span>        super.onStop();
+<span class="ln">14</span>        mDisposable.clear();
+<span class="ln">15</span>    }
+</code></pre></div>
     
       
     
@@ -200,9 +191,6 @@
     <h2 class="mt-4">精选文章</h2>
     <ul>
       <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" class="nav-link">Rxjava使用CompositeDisposable进行统一注销监听</a>
-      </li>
-      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B6%E4%BB%96%E8%BF%90%E7%AE%97/" class="nav-link">Rxjava其他运算</a>
       </li>
       <li>
@@ -222,14 +210,14 @@
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E8%BD%AC%E6%8D%A2%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava转换被观察者Observable</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E8%BF%87%E6%BB%A4%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava过滤被观察者Observable</a>
       </li>
     </ul>
     <h2 class="mt-4">最新文章</h2>
     <ul class="flex-column">
       <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" class="nav-link">Rxjava使用CompositeDisposable进行统一注销监听</a>
-      </li>
-      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B6%E4%BB%96%E8%BF%90%E7%AE%97/" class="nav-link">Rxjava其他运算</a>
       </li>
       <li>
@@ -249,6 +237,9 @@
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E8%BD%AC%E6%8D%A2%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava转换被观察者Observable</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E8%BF%87%E6%BB%A4%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava过滤被观察者Observable</a>
       </li>
     </ul>
     <div>
