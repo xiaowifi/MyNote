@@ -6,7 +6,41 @@
     <description>Recent content in Posts on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>java 8 Lambda表达式</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java8-lambda/</link>
+      <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java8-lambda/</guid>
+      <description>1 2// 1. 不需要参数,返回值为 5 3() -&amp;gt; 5 4 5// 2. 接收一个参数(数字类型),返回其2倍的值 6x -&amp;gt; 2 * x 7 8// 3. 接受2个参数(数字),并返回他们的差值 9(x, y) -&amp;gt; x – y 10 11// 4. 接收2个int型整数,返回他们的和 12(int x, int y) -&amp;gt; x + y 13 14// 5. 接受一个 string 对象,并在控制台打印,不返回任何值(看起来像是返回void) 15(String s) -&amp;gt; System.out.print(s) 16 </description>
+    </item>
+    
+    <item>
+      <title>Rxjava观察者</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A7%82%E5%AF%9F%E8%80%85/</link>
+      <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A7%82%E5%AF%9F%E8%80%85/</guid>
+      <description>前言 本Demo 主要是针对 Rxjava Android 版本进行实践
+Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 观察者创建 observer  2.0 import io.reactivex.Observer; 观察者用于接收 被观察者提供的数据信息。暂时不清楚被观察者调用其他观察者的逻辑。
+  new Observer&amp;lt;泛型&amp;gt;(){};需要需要实现方法。Android上网络请求通常使用这个就好了。  其他观察者 其他观察者 2.2.20 提供观察者 位于io.reactivex.functions 包下 
+ Action BiConsumer BiFunction BiPredicate BooleanSupplier Cancellable Consumer Function Function3 Function4 Function5 Function6 Function7 Function8 Function9 IntFunction LongConsumer Predicate  action 一个类似于Runnable的功能接口，但允许抛出一个已检查的异常。
+1 2 </description>
+    </item>
+    
+    <item>
+      <title>关于JAVA中使用测试</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81/</guid>
+      <description>前言  最近认真工作(摸鱼)的时候，突然想起来之前立的诸多flag，其中就有
+ 1 testImplementation &amp;#39;junit:junit:4.12&amp;#39; 2 androidTestImplementation &amp;#39;com.android.support.test:runner:1.0.2&amp;#39; 3 androidTestImplementation &amp;#39;com.android.support.test.espresso:espresso-core:3.0.2&amp;#39; 这个调调还是蛮熟悉的，虽然没有怎么用过，每次创建应用的时候都会默认添加，虽然版本不一样。最近看熟悉Rxjava,然后JAVA版本的Demo就是 在test包下。 test包在src 下面。
+正文 上面的那个是Android的，但是Rxjava的却不一样。
+ JUnit 4 文档地址 junit 4github 地址 Java的面向程序员的测试框架。 mockito github 地址 最受欢迎的用Java编写的用于单元测试的Mocking框架 testng  TestNG是一个受JUnit和NUnit启发的测试框架，但引入了一些使其更强大且更易于使用的新功能 guava   </description>
+    </item>
+    
     <item>
       <title>Rxjava使用CompositeDisposable进行统一注销监听</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/</link>
@@ -58,7 +92,7 @@ Average —计算Observable发出的数字的平均值，并发出该平均值 C
       
       <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava-%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
       <description>前言 本Demo 主要是针对 Rxjava Android 版本进行实践
-Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 正文 链式调用 Observable 1 Observable.create(new ObservableOnSubscribe&amp;lt;Integer&amp;gt;() { 2 @Override 3 public void subscribe(ObservableEmitter&amp;lt;Integer&amp;gt; e) throws Exception { 4 e.onNext(5); 5 e.onComplete(); 6 } 7 }).observeOn(Schedulers.newThread()).subscribeOn(AndroidSchedulers.mainThread()) 8 .subscribe(new Observer&amp;lt;Integer&amp;gt;() { 9 @Override 10 public void onSubscribe(Disposable d) { 11 12 } 13 14 @Override 15 public void onNext(Integer value) { 16 17 } 18 19 @Override 20 public void onError(Throwable e) { 21 22 } 23 24 @Override 25 public void onComplete() { 26 27 } 28 }); 链式调用 Single 1Single.</description>
+Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 正文 链式调用 Observable 1 Observable.create(new ObservableOnSubscribe&amp;lt;Integer&amp;gt;() { 2 @Override 3 public void subscribe(ObservableEmitter&amp;lt;Integer&amp;gt; e) throws Exception { 4 e.onNext(5); 5 e.onComplete(); 6 } 7 }).observeOn(Schedulers.newThread()).subscribeOn(AndroidSchedulers.mainThread()) 8 .subscribe(new Observer&amp;lt;Integer&amp;gt;() { 9 @Override 10 public void onSubscribe(Disposable d) { 11 12 } 13 14 @Override 15 public void onNext(Integer value) { 16 17 } 18 19 @Override 20 public void onError(Throwable e) { 21 22 } 23 24 @Override 25 public void onComplete() { 26 27 } 28 }); Lambda 表达式版本 1 Observable.</description>
     </item>
     
     <item>
@@ -133,10 +167,11 @@ Delay —将排放量从可观察的时间向前移特定量 Do -注册一项行
       
       <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/android%E4%B8%ADrxjava%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/</guid>
       <description>前言 本Demo 主要是针对 Rxjava Android 版本进行实践
-Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 正文 被观察者 创建可观察物 产生新的Observable的运算符。
+Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxjava javaDoc地址
+正文 被观察者 创建可观察物 产生新的Observable的运算符。
  Create —通过编程调用观察者方法从头开始创建Observable Defer -在观察者订阅之前不要创建Observable，并为每个观察者创建一个新的Observable Empty/ Never/Throw -创建具有非常精确和限制行为观测量 From —将其他一些对象或数据结构转换为可观察的 Interval —创建一个Observable，它发出以特定时间间隔隔开的整数序列 Just —将一个对象或一组对象转换为发出该对象或那些对象的Observable Range —创建一个Observable，它发出一系列连续整数 Repeat —创建一个Observable，它反复发出特定的项目或项目序列 Start —创建一个Observable，它发出函数的返回值 Timer —创建一个Observable，它在给定的延迟后发出单个项目  转换可观察物 转换由Observable发出的项目的运算符。
  Buffer —定期将来自一个Observable的项目收集成束，然后发出这些束，而不是一次发出一个 FlatMap —将可观察对象发出的项目转换为可观察项目，然后将这些项目的排放平展为单个可观察项目 GroupBy —将一个Observable划分为一组Observable，它们分别与原始Observable发射一组不同的项，并按key进行组织 Map —通过对每个项目应用函数来转换Observable发出的项目 Scan —将一个函数依次应用于Observable发出的每个项目，并发出每个连续的值 Window —定期将项目从“可观察”窗口细分为“可观察”窗口，然后发出这些窗口，而不是一次发出一个窗口  过滤可观察物 有选择地从Observable源发出项目的运算符。
- Debounce —仅在经过特定时间跨度时才从Observable中发出一项，而不发出另一项 Distinct -抑制可观察对象发出的重复项 ElementAt—仅发射可观察对象发射的项目n Filter —仅从可观察对象中发出通过谓词测试的项 First —仅从Observable发出第一项或满足条件的第一项 IgnoreElements —不要从Observable发出任何项目，而是镜像其终止通知 Last —只发射可观察对象发射的最后一个项目 Sample —定期发射Observable发射的最新项目 Skip—抑制Observable发出的前n个项目 SkipLast—抑制Observable发出的最后n个项目 Take—仅发射可观察对象发射的前n个项目 TakeLast—只发射可观察对象发射的最后n个项目  结合可观察物 与多个源Observables一起创建单个Observable的运算符</description>
+ Debounce —仅在经过特定时间跨度时才从Observable中发出一项，而不发出另一项 Distinct -抑制可观察对象发出的重复项 ElementAt —仅发射可观察对象发射的项目n Filter —仅从可观察对象中发出通过谓词测试的项 First —仅从Observable发出第一项或满足条件的第一项 IgnoreElements —不要从Observable发出任何项目，而是镜像其终止通知 Last —只发射可观察对象发射的最后一个项目 Sample —定期发射Observable发射的最新项目 Skip —抑制Observable发出的前n个项目 SkipLast —抑制Observable发出的最后n个项目 Take —仅发射可观察对象发射的前n个项目 TakeLast —只发射可观察对象发射的最后n个项目  结合可观察物 与多个源Observables一起创建单个Observable的运算符</description>
     </item>
     
     <item>

@@ -15,7 +15,7 @@ thumbnail = "https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20201230
 [Rxjava Android 版本 github 地址](https://github.com/ReactiveX/RxAndroid) <br>
 [Rxjava 地址](https://github.com/ReactiveX/RxJava) <br>
 [Rxjava 官方文档地址](http://reactivex.io/) <br>
-
+[Rxjava javaDoc地址](http://reactivex.io/RxJava/2.x/javadoc/)
 # 正文
 
 ## 被观察者 
@@ -52,16 +52,16 @@ thumbnail = "https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20201230
 
 - [**`Debounce`**](http://reactivex.io/documentation/operators/debounce.html) —仅在经过特定时间跨度时才从Observable中发出一项，而不发出另一项
 - [**`Distinct`**](http://reactivex.io/documentation/operators/distinct.html) -抑制可观察对象发出的重复项
-- [**`ElementAt`**](http://reactivex.io/documentation/operators/elementat.html)—仅发射可观察对象发射的项目*n*
+- [**`ElementAt`**](http://reactivex.io/documentation/operators/elementat.html) —仅发射可观察对象发射的项目*n*
 - [**`Filter`**](http://reactivex.io/documentation/operators/filter.html) —仅从可观察对象中发出通过谓词测试的项
 - [**`First`**](http://reactivex.io/documentation/operators/first.html) —仅从Observable发出第一项或满足条件的第一项
 - [**`IgnoreElements`**](http://reactivex.io/documentation/operators/ignoreelements.html) —不要从Observable发出任何项目，而是镜像其终止通知
 - [**`Last`**](http://reactivex.io/documentation/operators/last.html) —只发射可观察对象发射的最后一个项目
 - [**`Sample`**](http://reactivex.io/documentation/operators/sample.html) —定期发射Observable发射的最新项目
-- [**`Skip`**](http://reactivex.io/documentation/operators/skip.html)—抑制Observable发出的前*n个*项目
-- [**`SkipLast`**](http://reactivex.io/documentation/operators/skiplast.html)—抑制Observable发出的最后*n个*项目
-- [**`Take`**](http://reactivex.io/documentation/operators/take.html)—仅发射可观察对象发射的前*n个*项目
-- [**`TakeLast`**](http://reactivex.io/documentation/operators/takelast.html)—只发射可观察对象发射的最后*n个*项目
+- [**`Skip`**](http://reactivex.io/documentation/operators/skip.html) —抑制Observable发出的前*n个*项目
+- [**`SkipLast`**](http://reactivex.io/documentation/operators/skiplast.html) —抑制Observable发出的最后*n个*项目
+- [**`Take`**](http://reactivex.io/documentation/operators/take.html) —仅发射可观察对象发射的前*n个*项目
+- [**`TakeLast`**](http://reactivex.io/documentation/operators/takelast.html) —只发射可观察对象发射的最后*n个*项目
 
 ## 结合可观察物
 
@@ -153,6 +153,37 @@ thumbnail = "https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20201230
 只有一句话也不行。
 >  Flowable.just("Hello world").subscribe(System.out::println);
   找不到org.reactivestreams.Publisher的类文件
+> 但是通过百度，查找诸位大佬的博客，然后整到了一句这个。如果上游发射的很快而下游处理的很慢，会怎样呢？
+> 将会产生很多下游没来得及处理的数据，这些数据既不会丢失，也不会被垃圾回收机制回收，而是存放在一个异步缓存池中，如果缓存池中的数据一直得不到处理，越积越多，最后就会造成内存溢出，这便是Rxjava中的背压问题。
+> Flowable类实现了反应式流模式，并提供了工厂方法，中间运算符以及使用反应式数据流的能力.
+````aidl
+    Flowable.create(new FlowableOnSubscribe<Integer>() {
+            @Override
+            public void subscribe(@NonNull FlowableEmitter<Integer> emitter) throws Exception {
+                
+            }
+        }, BackpressureStrategy.BUFFER).subscribeOn(Schedulers.newThread()).observeOn(Schedulers.newThread()).subscribe(new Subscriber<Integer>() {
+            @Override
+            public void onSubscribe(Subscription s) {
+
+            }
+
+            @Override
+            public void onNext(Integer integer) {
+
+            }
+
+            @Override
+            public void onError(Throwable t) {
+
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+````
 
 ### Single  
 RxJava（及其衍生产品，如RxGroovy和RxScala）已经开发了一个称为“单一”的 Observable变体。[官方巨详细文档地址](http://reactivex.io/documentation/single.html) <br>

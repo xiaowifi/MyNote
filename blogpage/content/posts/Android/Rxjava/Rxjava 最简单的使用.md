@@ -49,6 +49,21 @@ thumbnail = "https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20201230
                 });
 ````
 
+#### Lambda 表达式版本
+````aidl
+ Observable.create(emitter -> {
+            emitter.onNext("onNext"+1);
+        }).subscribeOn(Schedulers.newThread()).observeOn(Schedulers.newThread()).subscribe(integer ->{
+            System.out.print(integer);
+        },(e) ->{
+            System.out.print("onError");
+        },()->{
+            System.out.print("onComplete");
+        },(d)->{
+            System.out.print("onSubscribe");
+        });
+````
+
 ### 链式调用 Single
 ````
 Single.just("qqqq").observeOn(Schedulers.newThread()).subscribeOn(AndroidSchedulers.mainThread()).subscribe(new Consumer<String>() {

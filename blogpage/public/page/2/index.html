@@ -120,6 +120,93 @@
   <div class="excerpt">
     <div class="excerpt_header">
       <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java%E9%80%9A%E7%94%A8doc%E6%96%87%E6%A1%A3%E7%94%9F%E6%88%90%E5%99%A8/">java通用doc文档(类参考手册)生成</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Dec 24, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%86%85%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C' class="post_tag button button_translucent">内参考手册
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/chm' class="post_tag button button_translucent">chm
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">最近有点懵逼，考试整完了，然后又没有事情做，之前的学习计划拉下了一大片，不知道从何下手，然后医生要我减肥先减20斤，又开始锻炼了。 最近写的账本和之前写的代码，封装太严重了，隔一段时间去看，即使是注释写得还行，但是还是需要再简单整理下才行，于是动了java 代码生成 doc 或者chm 的想法。 其实感觉还是自己注释没有写好，但是呢，搞一个文档什么的，方便自己看，也方便提供给 他人，还是蛮好的。
+ chm 这个主要是之前学习的时候，老师会给一个这个文件，然后自己看api也是蛮好的，之前都一直觉得，只要我看代码注释就行，之前都是独立开发或者打下手，独立开发自己懂就行，然后打下手的时候，封装和工具类一般都不是我写，我只需要看git更新， …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java%E9%80%9A%E7%94%A8doc%E6%96%87%E6%A1%A3%E7%94%9F%E6%88%90%E5%99%A8/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sqlite%E6%9F%A5%E8%AF%A2%E7%8C%9C%E6%83%B3/">androidSqlite查询思路整理</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Dec 23, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 今天有一个大佬的公众号推了一篇，sql查询慢的原因。 为什么大家都说SELECT * 效率低 上面是原文。 由于收集癖的原因，同时怕以后找不到了，就复制下觉得重要的部分到自己的笔记里面。
+复制内容 一、效率低的原因 先看一下最新《阿里java开发手册（泰山版）》中 MySQL 部分描述：
+4 - 1. 【强制】在表查询中，一律不要使用 * 作为查询的字段列表，需要哪些字段必须明确写明。 说明：
+增加查询分析器解析成本。
+增减字段容易与 resultMap 配置不一致。
+无用字段增加网络 消耗，尤其是 text 类型的字段。 开发手册中比较概括的提到了几点原因，让我们深入一些看看：
+1. 不需要的列会增加数据传输时间和网络开销  …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sqlite%E6%9F%A5%E8%AF%A2%E7%8C%9C%E6%83%B3/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/git%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6/">Git 忽略提交 .gitignore</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Dec 23, 2020</span>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">在使用Git的过程中，我们喜欢有的文件比如日志，临时文件，编译的中间文件等不要提交到代码仓库，这时就要设置相应的忽略规则，来忽略这些文件的提交。
+规则 作用 /mtk 过滤整个文件夹 *.zip 过滤所有.zip文件 /mtk/do.c 过滤某个具体文件 !/mtk/one.txt 追踪（不过滤）某个具体文件 注意：如果你创建.gitignore文件之前就push了某一文件，那么即使你在.gitignore文件中写入过滤该文件的规则，该规则也不会起作用，git仍然会对该文件进行版本管理。
+配置语法  以斜杠“/”开头表示目录； 以星号“*”通配多个字符； 以问号“?”通配单个字符 以方括号“[]”包含单个字符的匹配列表； 以叹 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/git%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1sqlite%E6%8F%92%E5%85%A5%E5%A4%9A%E4%BA%8E%E5%AD%97%E6%AE%B5%E5%AF%BC%E8%87%B4%E7%9A%84%E6%8F%92%E5%85%A5%E5%A4%B1%E8%B4%A5/">Android sqlite多余字段插入导致插入失败</a>
       </h3>
       <div class="post_meta">
@@ -668,101 +755,6 @@
     </div>
   </li>
 
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E7%AC%AC2%E9%83%A8%E5%88%86/">统考英语B阅读理解第2部分</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Dec 14, 2020</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb' class="post_tag button button_translucent">统考英语B
-    </a>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%AD' class="post_tag button button_translucent">英语
-    </a>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3' class="post_tag button button_translucent">阅读理解
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">16篇，10分。
- 文章 害羞不快乐的原因 正文内容 Shyness is the cause of much unhappiness for a great many people. Shy people are anxious and self-conscious; that is, they are excessively concerned with their own appearance and actions. Worrisome thoughts are constantly occurring in their minds: what kind of impression am I making? Do they …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E7%AC%AC2%E9%83%A8%E5%88%86/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86/">统考英语B阅读理解第一部分</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Dec 14, 2020</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb' class="post_tag button button_translucent">统考英语B
-    </a>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%AD' class="post_tag button button_translucent">英语
-    </a>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E5%88%A4%E6%96%AD%E5%AF%B9%E9%94%99' class="post_tag button button_translucent">阅读理解判断对错
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">T 表示正确，F 表示错误
- 文章 1 英语正文 Sixteen-year-old Maria was waiting in line at the airport in Santo Domingo. She was leaving her native country to join her sister in the United States. She spoke English very well. Though she was very happy she could go abroad, she was feeling sad at leaving her family and fiends. As she was …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E8%8B%B1%E7%BF%BB%E6%B1%89%E7%AC%94%E8%AE%B0/">统考英语B英译汉</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Dec 8, 2020</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb' class="post_tag button button_translucent">统考英语B
-    </a>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%AD' class="post_tag button button_translucent">英语
-    </a>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%91%E6%B1%89' class="post_tag button button_translucent">英译汉
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">本部分共6小题，共30分。翻译句子中一个单词正确会给0.5到1分，整句流畅翻译会给满分，认识一个单纯就写一个单词的意思，确定不会就不要写，只翻译自己会的单词部分。
-   in no other country in the world can you find such plants as this one (像这种植物再世界上的其他任何一个国家中都找不到)
-  it is very important to maintain your current weight through execise and healthy eating (通过锻炼和健康饮食来保持你目前的体重是非常重要的)
-  it normally takes a …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb%E8%8B%B1%E7%BF%BB%E6%B1%89%E7%AC%94%E8%AE%B0/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
     <li>
 <ul class="pagination">
   <li class="page-item">
@@ -807,6 +799,15 @@
     <h2 class="mt-4">精选文章</h2>
     <ul>
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java8-lambda/" class="nav-link">java 8 Lambda表达式</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava观察者</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81/" class="nav-link">关于JAVA中使用测试</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" class="nav-link">Rxjava使用CompositeDisposable进行统一注销监听</a>
       </li>
       <li>
@@ -820,20 +821,20 @@
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava-%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E4%BD%BF%E7%94%A8/" class="nav-link">Rxjava最简单的使用</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/%E6%9D%A1%E4%BB%B6%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E5%B8%83%E5%B0%94%E8%BF%90%E7%AE%97%E7%AC%A6/" class="nav-link">Rxjava条件运算符和布尔运算符Observable</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E7%BB%93%E5%90%88%E7%BB%84%E5%90%88%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava组合结合被观察者Observable</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E8%BD%AC%E6%8D%A2%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava转换被观察者Observable</a>
       </li>
     </ul>
     <h2 class="mt-4">最新文章</h2>
     <ul class="flex-column">
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java8-lambda/" class="nav-link">java 8 Lambda表达式</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava观察者</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81/" class="nav-link">关于JAVA中使用测试</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" class="nav-link">Rxjava使用CompositeDisposable进行统一注销监听</a>
       </li>
       <li>
@@ -847,15 +848,6 @@
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava-%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E4%BD%BF%E7%94%A8/" class="nav-link">Rxjava最简单的使用</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/%E6%9D%A1%E4%BB%B6%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E5%B8%83%E5%B0%94%E8%BF%90%E7%AE%97%E7%AC%A6/" class="nav-link">Rxjava条件运算符和布尔运算符Observable</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E7%BB%93%E5%90%88%E7%BB%84%E5%90%88%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava组合结合被观察者Observable</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E8%BD%AC%E6%8D%A2%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava转换被观察者Observable</a>
       </li>
     </ul>
     <div>
@@ -868,7 +860,7 @@
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/' class="post_tag button button_translucent">
           技术类
-          <span class="button_tally">35</span>
+          <span class="button_tally">38</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
@@ -924,7 +916,7 @@
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
           ANDROID基础
-          <span class="button_tally">23</span>
+          <span class="button_tally">24</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class="post_tag button button_translucent">
@@ -1005,12 +997,12 @@
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class="post_tag button button_translucent">
           ANDROID
-          <span class="button_tally">13</span>
+          <span class="button_tally">14</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class="post_tag button button_translucent">
           RXJAVA
-          <span class="button_tally">13</span>
+          <span class="button_tally">14</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%8B%9F%E8%AF%95%E5%8D%B7/' class="post_tag button button_translucent">
@@ -1059,7 +1051,7 @@
         <div class="post_tags">
           <div class="tags_list">
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class=" post_tag button button_translucent" data-position=13>ANDROID<span class="button_tally">13</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class=" post_tag button button_translucent" data-position=14>ANDROID<span class="button_tally">14</span>
             </a>
             
             
@@ -1119,6 +1111,14 @@
             </a>
             
             
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/junit/' class=" post_tag button button_translucent" data-position=1>JUNIT<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/lambda/' class=" post_tag button button_translucent" data-position=1>LAMBDA<span class="button_tally">1</span>
+            </a>
+            
+            
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/map/' class=" post_tag button button_translucent" data-position=1>MAP<span class="button_tally">1</span>
             </a>
             
@@ -1139,7 +1139,7 @@
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class=" post_tag button button_translucent" data-position=13>RXJAVA<span class="button_tally">13</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class=" post_tag button button_translucent" data-position=14>RXJAVA<span class="button_tally">14</span>
             </a>
             
             

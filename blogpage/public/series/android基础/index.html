@@ -118,6 +118,41 @@
   <div class="excerpt">
     <div class="excerpt_header">
       <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A7%82%E5%AF%9F%E8%80%85/">Rxjava观察者</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Jan 4, 2021</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android' class="post_tag button button_translucent">android
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava' class="post_tag button button_translucent">Rxjava
+    </a>
+</div>
+
+    </div>
+    <div class="excerpt_footer partition">
+      <div class="excerpt_thumbnail">
+        <img src='https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20201230114639.png'>
+      </div>
+      
+        <div>
+          <p class="pale">前言 本Demo 主要是针对 Rxjava Android 版本进行实践
+Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 观察者创建 observer  2.0 import io.reactivex.Observer; 观察者用于接收 被观察者提供的数据信息。暂时不清楚被观察者调用其他观察者的逻辑。
+  new Observer&lt;泛型&gt;(){};需要需要实现方法。Android上网络请求通常使用这个就好了。  其他观察者 其他观察者 2.2.20 提供观察者 位于io.reactivex.functions 包下 
+ Action BiConsumer …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A7%82%E5%AF%9F%E8%80%85/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/">Rxjava使用CompositeDisposable进行统一注销监听</a>
       </h3>
       <div class="post_meta">
@@ -511,7 +546,8 @@ Delay —将排放量从可观察的时间向前移特定量 Do -注册一项行
       
         <div>
           <p class="pale">前言 本Demo 主要是针对 Rxjava Android 版本进行实践
-Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 正文 被观察者 创建可观察物 产生新的Observable的运算符。
+Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxjava javaDoc地址
+正文 被观察者 创建可观察物 产生新的Observable的运算符。
  Create —通过编程调用观察者方法从头开始创建Observable Defer -在观察者订阅之前不要创建Observable，并为每个观察者创建一个新的Observable Empty/ Never/Throw -创建具有非常精确和限制行为观测量 From —将其他一些对象或数据结构转换为可观察的 Interval —创建一个Observable， …</p>
           <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/android%E4%B8%ADrxjava%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/" class="excerpt_more button">阅读更多</a>
         </div>
@@ -720,34 +756,6 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
     </div>
   </li>
 
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E6%9B%B4%E6%96%B0/">Android sqlite更新</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Oct 1, 2020</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">前言 顺便推一下日常搬砖sqlite目录
-这个目录里面有sqlite 初始化 增删改查等一些东西，我们就接着这个系列讲数据库更新，之前我们数据库更新判断是通过版本号进行的。而且有一个问题哈，如果我有1，2，3，4，5，共5个版本，通过为了分别应对每个版本，onUpgrade这个方法里面要写很长的东西，简单粗暴的方式当然就是用户强制升级到最新版本，那么我们就只需要处理最新版本的事情了，问题是每一次升级不都是当前最新版本吗？开发阶段中，通过数据库版本号升级要写一大堆逻辑，卸载的化数据又没有了。于是比较懒的我就开始思考一个问题，我每次用之前检测一次是否一致不就好了？那么就需要准备需要的理论知识了、
- 系统仅在需要时才执行可能需要长时间运行 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E6%9B%B4%E6%96%B0/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
     <li>
 <ul class="pagination">
   <li class="page-item">
@@ -783,6 +791,15 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
     <h2 class="mt-4">精选文章</h2>
     <ul>
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java8-lambda/" class="nav-link">java 8 Lambda表达式</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava观察者</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81/" class="nav-link">关于JAVA中使用测试</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" class="nav-link">Rxjava使用CompositeDisposable进行统一注销监听</a>
       </li>
       <li>
@@ -796,20 +813,20 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava-%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E4%BD%BF%E7%94%A8/" class="nav-link">Rxjava最简单的使用</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/%E6%9D%A1%E4%BB%B6%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E5%B8%83%E5%B0%94%E8%BF%90%E7%AE%97%E7%AC%A6/" class="nav-link">Rxjava条件运算符和布尔运算符Observable</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E7%BB%93%E5%90%88%E7%BB%84%E5%90%88%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava组合结合被观察者Observable</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E8%BD%AC%E6%8D%A2%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava转换被观察者Observable</a>
       </li>
     </ul>
     <h2 class="mt-4">最新文章</h2>
     <ul class="flex-column">
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java8-lambda/" class="nav-link">java 8 Lambda表达式</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava观察者</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81/" class="nav-link">关于JAVA中使用测试</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" class="nav-link">Rxjava使用CompositeDisposable进行统一注销监听</a>
       </li>
       <li>
@@ -823,15 +840,6 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava-%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E4%BD%BF%E7%94%A8/" class="nav-link">Rxjava最简单的使用</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/%E6%9D%A1%E4%BB%B6%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E5%B8%83%E5%B0%94%E8%BF%90%E7%AE%97%E7%AC%A6/" class="nav-link">Rxjava条件运算符和布尔运算符Observable</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E7%BB%93%E5%90%88%E7%BB%84%E5%90%88%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava组合结合被观察者Observable</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E8%BD%AC%E6%8D%A2%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava转换被观察者Observable</a>
       </li>
     </ul>
     <div>
@@ -844,7 +852,7 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/' class="post_tag button button_translucent">
           技术类
-          <span class="button_tally">35</span>
+          <span class="button_tally">38</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
@@ -900,7 +908,7 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
           ANDROID基础
-          <span class="button_tally">23</span>
+          <span class="button_tally">24</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class="post_tag button button_translucent">
@@ -981,12 +989,12 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class="post_tag button button_translucent">
           ANDROID
-          <span class="button_tally">13</span>
+          <span class="button_tally">14</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class="post_tag button button_translucent">
           RXJAVA
-          <span class="button_tally">13</span>
+          <span class="button_tally">14</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%8B%9F%E8%AF%95%E5%8D%B7/' class="post_tag button button_translucent">
@@ -1035,7 +1043,7 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
         <div class="post_tags">
           <div class="tags_list">
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class=" post_tag button button_translucent" data-position=13>ANDROID<span class="button_tally">13</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class=" post_tag button button_translucent" data-position=14>ANDROID<span class="button_tally">14</span>
             </a>
             
             
@@ -1095,6 +1103,14 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
             </a>
             
             
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/junit/' class=" post_tag button button_translucent" data-position=1>JUNIT<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/lambda/' class=" post_tag button button_translucent" data-position=1>LAMBDA<span class="button_tally">1</span>
+            </a>
+            
+            
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/map/' class=" post_tag button button_translucent" data-position=1>MAP<span class="button_tally">1</span>
             </a>
             
@@ -1115,7 +1131,7 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class=" post_tag button button_translucent" data-position=13>RXJAVA<span class="button_tally">13</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class=" post_tag button button_translucent" data-position=14>RXJAVA<span class="button_tally">14</span>
             </a>
             
             

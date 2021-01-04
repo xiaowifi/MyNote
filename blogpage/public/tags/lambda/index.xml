@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lambda on 个人主页</title>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/tags/lambda/</link>
+    <description>Recent content in Lambda on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright>
+    <lastBuildDate>Mon, 04 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/tags/lambda/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>java 8 Lambda表达式</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java8-lambda/</link>
+      <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java8-lambda/</guid>
+      <description>1 2// 1. 不需要参数,返回值为 5 3() -&amp;gt; 5 4 5// 2. 接收一个参数(数字类型),返回其2倍的值 6x -&amp;gt; 2 * x 7 8// 3. 接受2个参数(数字),并返回他们的差值 9(x, y) -&amp;gt; x – y 10 11// 4. 接收2个int型整数,返回他们的和 12(int x, int y) -&amp;gt; x + y 13 14// 5. 接受一个 string 对象,并在控制台打印,不返回任何值(看起来像是返回void) 15(String s) -&amp;gt; System.out.print(s) 16 </description>
+    </item>
+    
+  </channel>
+</rss>
