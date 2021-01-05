@@ -524,6 +524,78 @@ Delay —将排放量从可观察的时间向前移特定量 Do -注册一项行
   <div class="excerpt">
     <div class="excerpt_header">
       <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B3%E4%BA%8Eflowable/">Android中关于Rxjava Flowable相关笔记整理</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Dec 30, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android' class="post_tag button button_translucent">android
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava' class="post_tag button button_translucent">Rxjava
+    </a>
+</div>
+
+    </div>
+    <div class="excerpt_footer partition">
+      <div class="excerpt_thumbnail">
+        <img src='https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20201230114639.png'>
+      </div>
+      
+        <div>
+          <p class="pale">前言 本Demo 主要是针对 Rxjava Android 版本进行实践
+Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxjava javaDoc地址
+正文  如果上游发射的很快而下游处理的很慢，会怎样呢？ 将会产生很多下游没来得及处理的数据，这些数据既不会丢失，也不会被垃圾回收机制回收，而是存放在一个异步缓存池中，如果缓存池中的数据一直得不到处理，越积越多，最后就会造成内存溢出，这便是Rxjava中的背压问题。 Flowable类实现了反应式流模式，并提供了工厂方法，中间运算符以及使用反应式数据流的能力.
+ 1Flowable.create(new …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B3%E4%BA%8Eflowable/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADflowable%E8%AF%A6%E7%BB%86%E7%AC%94%E8%AE%B0%E8%BD%AC%E8%BD%BD/">Android中关于Rxjava Flowable相关笔记整理(转载)</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Dec 30, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android' class="post_tag button button_translucent">android
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava' class="post_tag button button_translucent">Rxjava
+    </a>
+</div>
+
+    </div>
+    <div class="excerpt_footer partition">
+      <div class="excerpt_thumbnail">
+        <img src='https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20201230114639.png'>
+      </div>
+      
+        <div>
+          <p class="pale">前言 本Demo 主要是针对 Rxjava Android 版本进行实践
+Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxjava javaDoc地址
+正文 数据流发射，处理，响应可能在各自的线程中独立进行，上游在发射数据的时候，不知道下游是否处理完，也不会等下游处理完之后再发射。
+这样，如果上游发射的很快而下游处理的很慢，会怎样呢？
+将会产生很多下游没来得及处理的数据，这些数据既不会丢失，也不会被垃圾回收机制回收，而是存放在一个异步缓存池中，如果缓存池中的数据一直得不到处理，越积越多，最后就会造成内存溢出，这便是Rxjava中的背压问题。
+例如，运行以下代码： …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADflowable%E8%AF%A6%E7%BB%86%E7%AC%94%E8%AE%B0%E8%BD%AC%E8%BD%BD/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/android%E4%B8%ADrxjava%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/">Android中关于Rxjava相关笔记整理</a>
       </h3>
       <div class="post_meta">
@@ -699,63 +771,6 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
     </div>
   </li>
 
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/">Android sqlite增删改查</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Oct 1, 2020</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">前言 日常搬砖sqlite目录 再目录中提到了一些东西，有兴趣可以点过去看一下，觉得还行麻烦点下赞。
-正文 第一步创建数据库 再目录文档中，引用了官方文档的一段话 SQLiteOpenHelper 类包含一组用于管理数据库的实用 API。当您使用此类获取对数据库的引用时，系统仅在需要时才执行可能需要长时间运行的数据库创建和更新操作，而不是在应用启动期间执行。您仅需调用 getWritableDatabase() 或 getReadableDatabase() 即可。
-  第一步应该是创建数据库文件。通过上面的引用可以知道 我们创建 数据库文件只需要 继承 SQLiteOpenHelper即可。而SQLiteOpenHelper的构造 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E6%94%B9%E6%9F%A5%E5%8F%A6%E7%B1%BB%E5%86%99%E6%B3%95/">Android sqlite增删改查另类写法</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Oct 1, 2020</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">前言 啊哈，今天又更新了。接上一篇日常搬砖sqlite可用类型与存储类型 。
-顺便推一下日常搬砖sqlite目录
-之前又一篇博客提到了json 对象不仅仅可以通过对象class 解析，也可以解析成map.巧合的是sqlite 添加和更新需要的ContentValues 也是一个类似于map的结构。既然object 与map互转，同理可以解决 object可以和ContentValues 互相转化，是吧。还有一个点 cursor.getType(cursor.getColumnIndex(key)) 可以获取到值的type,所以开整。先总结下可能需要的逻辑。
-  ContentValues 也是一个类似于map的结构。 逻辑 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E6%94%B9%E6%9F%A5%E5%8F%A6%E7%B1%BB%E5%86%99%E6%B3%95/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
     <li>
 <ul class="pagination">
   <li class="page-item">
@@ -852,7 +867,7 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/' class="post_tag button button_translucent">
           技术类
-          <span class="button_tally">38</span>
+          <span class="button_tally">40</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
@@ -908,7 +923,7 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
           ANDROID基础
-          <span class="button_tally">24</span>
+          <span class="button_tally">26</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class="post_tag button button_translucent">
@@ -982,19 +997,19 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
           <span class="button_tally">20</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84/' class="post_tag button button_translucent">
-          词组
-          <span class="button_tally">15</span>
-        </a>
-        
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class="post_tag button button_translucent">
           ANDROID
-          <span class="button_tally">14</span>
+          <span class="button_tally">16</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class="post_tag button button_translucent">
           RXJAVA
-          <span class="button_tally">14</span>
+          <span class="button_tally">16</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84/' class="post_tag button button_translucent">
+          词组
+          <span class="button_tally">15</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%8B%9F%E8%AF%95%E5%8D%B7/' class="post_tag button button_translucent">
@@ -1043,7 +1058,7 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
         <div class="post_tags">
           <div class="tags_list">
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class=" post_tag button button_translucent" data-position=14>ANDROID<span class="button_tally">14</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class=" post_tag button button_translucent" data-position=16>ANDROID<span class="button_tally">16</span>
             </a>
             
             
@@ -1131,7 +1146,7 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class=" post_tag button button_translucent" data-position=14>RXJAVA<span class="button_tally">14</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class=" post_tag button button_translucent" data-position=16>RXJAVA<span class="button_tally">16</span>
             </a>
             
             

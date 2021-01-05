@@ -579,6 +579,78 @@ Delay —将排放量从可观察的时间向前移特定量 Do -注册一项行
   <div class="excerpt">
     <div class="excerpt_header">
       <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B3%E4%BA%8Eflowable/">Android中关于Rxjava Flowable相关笔记整理</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Dec 30, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android' class="post_tag button button_translucent">android
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava' class="post_tag button button_translucent">Rxjava
+    </a>
+</div>
+
+    </div>
+    <div class="excerpt_footer partition">
+      <div class="excerpt_thumbnail">
+        <img src='https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20201230114639.png'>
+      </div>
+      
+        <div>
+          <p class="pale">前言 本Demo 主要是针对 Rxjava Android 版本进行实践
+Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxjava javaDoc地址
+正文  如果上游发射的很快而下游处理的很慢，会怎样呢？ 将会产生很多下游没来得及处理的数据，这些数据既不会丢失，也不会被垃圾回收机制回收，而是存放在一个异步缓存池中，如果缓存池中的数据一直得不到处理，越积越多，最后就会造成内存溢出，这便是Rxjava中的背压问题。 Flowable类实现了反应式流模式，并提供了工厂方法，中间运算符以及使用反应式数据流的能力.
+ 1Flowable.create(new …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B3%E4%BA%8Eflowable/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADflowable%E8%AF%A6%E7%BB%86%E7%AC%94%E8%AE%B0%E8%BD%AC%E8%BD%BD/">Android中关于Rxjava Flowable相关笔记整理(转载)</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Dec 30, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android' class="post_tag button button_translucent">android
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava' class="post_tag button button_translucent">Rxjava
+    </a>
+</div>
+
+    </div>
+    <div class="excerpt_footer partition">
+      <div class="excerpt_thumbnail">
+        <img src='https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20201230114639.png'>
+      </div>
+      
+        <div>
+          <p class="pale">前言 本Demo 主要是针对 Rxjava Android 版本进行实践
+Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxjava javaDoc地址
+正文 数据流发射，处理，响应可能在各自的线程中独立进行，上游在发射数据的时候，不知道下游是否处理完，也不会等下游处理完之后再发射。
+这样，如果上游发射的很快而下游处理的很慢，会怎样呢？
+将会产生很多下游没来得及处理的数据，这些数据既不会丢失，也不会被垃圾回收机制回收，而是存放在一个异步缓存池中，如果缓存池中的数据一直得不到处理，越积越多，最后就会造成内存溢出，这便是Rxjava中的背压问题。
+例如，运行以下代码： …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADflowable%E8%AF%A6%E7%BB%86%E7%AC%94%E8%AE%B0%E8%BD%AC%E8%BD%BD/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/android%E4%B8%ADrxjava%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/">Android中关于Rxjava相关笔记整理</a>
       </h3>
       <div class="post_meta">
@@ -701,59 +773,6 @@ GroupBy+Group_concat ： 表示分组之后，根据分组结果，使用 group_
     </div>
   </li>
 
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/fragment%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">fragment生命周期导致数据初始化问题</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Dec 28, 2020</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/fragment' class="post_tag button button_translucent">fragment
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">前言 话说，activity 和fragment 都是有生命周期的，而且加载也并不是new完对象就加载出来了的，new 一个activity并不多见，但是基于activity new 一个fragment还是很常见的，但是很少有需要在activity中调用fragment方法的时候，但是存在可能性。 因为fragment加载的特性，所以像loading层保证唯一，这样子的就不能直接判断fragmentmanger 中是否包含了，需要一个其他值去判断。而且传参方面，也是这个样子。 比如说我的createPresenter() 方法是当fragment 走oncreate() 的时候创建调用的，但是我上一行代码创建完fragment就直 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/fragment%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sql%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/">SQL知识点汇总</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Dec 28, 2020</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sql' class="post_tag button button_translucent">sql
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">前言  最近写Demo的时候，经常发现自己对于sql好多都忘记了。
- 简单使用  SELECT 查询 后面接查询字段 SELECT DISTINCT 查询 去重 WHERE 多条件查询，用and 连接 and or 多条件查询拼接 order by 对结果进行排序，默认是升序，ORDER BY DESC 降序，ORDER BY 多列（这个多列不是太懂） INSERT INTO 插入数据 UPDATE 更新数据 DELETE 删除数据  进阶  SELECT TOP, LIMIT, ROWNUM 用于规定返回记录的条目数 LIKE like查询 通配符  % 替代0个或者多个字符 '-' 替代一个字符 [charlist] 字符列中的 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sql%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
     <li>
 <ul class="pagination">
   <li class="page-item">
@@ -859,7 +878,7 @@ GroupBy+Group_concat ： 表示分组之后，根据分组结果，使用 group_
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/' class="post_tag button button_translucent">
           技术类
-          <span class="button_tally">38</span>
+          <span class="button_tally">40</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
@@ -915,7 +934,7 @@ GroupBy+Group_concat ： 表示分组之后，根据分组结果，使用 group_
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
           ANDROID基础
-          <span class="button_tally">24</span>
+          <span class="button_tally">26</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class="post_tag button button_translucent">
@@ -989,19 +1008,19 @@ GroupBy+Group_concat ： 表示分组之后，根据分组结果，使用 group_
           <span class="button_tally">20</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84/' class="post_tag button button_translucent">
-          词组
-          <span class="button_tally">15</span>
-        </a>
-        
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class="post_tag button button_translucent">
           ANDROID
-          <span class="button_tally">14</span>
+          <span class="button_tally">16</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class="post_tag button button_translucent">
           RXJAVA
-          <span class="button_tally">14</span>
+          <span class="button_tally">16</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84/' class="post_tag button button_translucent">
+          词组
+          <span class="button_tally">15</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%8B%9F%E8%AF%95%E5%8D%B7/' class="post_tag button button_translucent">
@@ -1050,7 +1069,7 @@ GroupBy+Group_concat ： 表示分组之后，根据分组结果，使用 group_
         <div class="post_tags">
           <div class="tags_list">
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class=" post_tag button button_translucent" data-position=14>ANDROID<span class="button_tally">14</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class=" post_tag button button_translucent" data-position=16>ANDROID<span class="button_tally">16</span>
             </a>
             
             
@@ -1138,7 +1157,7 @@ GroupBy+Group_concat ： 表示分组之后，根据分组结果，使用 group_
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class=" post_tag button button_translucent" data-position=14>RXJAVA<span class="button_tally">14</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class=" post_tag button button_translucent" data-position=16>RXJAVA<span class="button_tally">16</span>
             </a>
             
             
