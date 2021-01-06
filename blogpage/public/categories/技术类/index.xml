@@ -6,7 +6,23 @@
     <description>Recent content in 技术类 on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Tue, 05 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>idea相关配置及其缓存清理</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/idea%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%85%B6%E7%BC%93%E5%AD%98%E6%B8%85%E7%90%86/</link>
+      <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/idea%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%85%B6%E7%BC%93%E5%AD%98%E6%B8%85%E7%90%86/</guid>
+      <description>主要针对mac idea.vmoptions 进行设置
+ 配置 通过idea 会根据电脑 自动设置一个 缓存之类下设置。
+默认（灰色标识） JetBrains 提供的默认设置：
+1-Xms128m 2-Xmx750m 3-XX:MaxPermSize=350m 4-XX:ReservedCodeCacheSize=240m 5-XX:+UseCompressedOops Big（大）（红色标识） 给 Xmx 配 4096MB， ReservedCodeCacheSize 设置 1024MB，这已经是相当多的内存了：
+1-Xms1024m 2-Xmx4096m 3-XX:ReservedCodeCacheSize=1024m 4-XX:+UseCompressedOops Balanced(平衡的)（蓝色标识） Xmx 和 Xms 都分配 2GB ，这是相当平衡的内存消耗：
+1-Xms2g 2-Xmx2g 3-XX:ReservedCodeCacheSize=1024m 4-XX:+UseCompressedOops Sophisticated（复杂的）（橘色标识） 和上面一样， Xmx 和 Xms 都分配2GB，但是给 GC 和内存管理指定不同的垃圾回收器和许多不同的标志：
+1-server 2-Xms2g-Xmx2g 3-XX:NewRatio=3-Xss16m 4-XX:+UseConcMarkSweepGC 5-XX:+CMSParallelRemarkEnabled 6-XX:ConcGCThreads=4 7-XX:ReservedCodeCacheSize=240m 8-XX:+AlwaysPreTouch 9-XX:+TieredCompilation 10-XX:+UseCompressedOops 11-XX:SoftRefLRUPolicyMSPerMB=50 12-Dsun.io.useCanonCaches=false 13-Djava.net.preferIPv4Stack=true 14-Djsse.enableSNIExtension=false 15-ea idea.vmoptions 比如Android的idea.vmoptions这个文件，一般都会在根目录。如果根目录没有。
+ 状态栏-&amp;gt;help-&amp;gt;edit custom vm option.</description>
+    </item>
+    
     <item>
       <title>java8 新特性</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java8-%E6%96%B0%E7%89%B9%E6%80%A7/</link>
