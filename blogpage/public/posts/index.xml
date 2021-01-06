@@ -1943,5 +1943,14 @@ sqlite 查看工具 之前找到了一篇博客对sqlite 表查看写得很详�
 导入room 1def room_version = &amp;#34;1.1.1&amp;#34; 2implementation &amp;#34;android.arch.persistence.room:runtime:$room_version&amp;#34; 3annotationProcessor &amp;#34;android.arch.persistence.room:compiler:$room_version&amp;#34; // use kapt for Kotlin 4// optional - RxJava support for Room 5implementation &amp;#34;android.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/gitee%E5%85%B3%E4%BA%8Ejavadoc%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/gitee%E5%85%B3%E4%BA%8Ejavadoc%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
