@@ -6,14 +6,31 @@
     <description>Recent content in Posts on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Mon, 04 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>java 8 Lambda表达式</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java8-lambda/</link>
-      <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
+      <title>java8 新特性</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java8-%E6%96%B0%E7%89%B9%E6%80%A7/</link>
+      <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java8-lambda/</guid>
-      <description>1 2// 1. 不需要参数,返回值为 5 3() -&amp;gt; 5 4 5// 2. 接收一个参数(数字类型),返回其2倍的值 6x -&amp;gt; 2 * x 7 8// 3. 接受2个参数(数字),并返回他们的差值 9(x, y) -&amp;gt; x – y 10 11// 4. 接收2个int型整数,返回他们的和 12(int x, int y) -&amp;gt; x + y 13 14// 5. 接受一个 string 对象,并在控制台打印,不返回任何值(看起来像是返回void) 15(String s) -&amp;gt; System.out.print(s) 16 </description>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java8-%E6%96%B0%E7%89%B9%E6%80%A7/</guid>
+      <description>Lambda 表达式 lambda表达式 允许我们将行为传到函数中，之前只能选择匿名内部类，现在可以直接使用lambda表达式。
+1 2// 1. 不需要参数,返回值为 5 3() -&amp;gt; 5 4 5// 2. 接收一个参数(数字类型),返回其2倍的值 6x -&amp;gt; 2 * x 7 8// 3. 接受2个参数(数字),并返回他们的差值 9(x, y) -&amp;gt; x – y 10 11// 4. 接收2个int型整数,返回他们的和 12(int x, int y) -&amp;gt; x + y 13 14// 5. 接受一个 string 对象,并在控制台打印,不返回任何值(看起来像是返回void) 15(String s) -&amp;gt; System.out.print(s) 16// 6 接收一个值，返回一个值 17( x) -&amp;gt; { 18 System.out.print(&amp;#34;QQQQQ&amp;#34;); 19 return x + x*0.05; 20 } 21 22// 对集合继续迭代 23 List&amp;lt;String&amp;gt; languages = Arrays.</description>
+    </item>
+    
+    <item>
+      <title>PropertyChangeListener关联属性的简单介绍</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/propertychangelistener%E5%85%B3%E8%81%94%E5%B1%9E%E6%80%A7%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/propertychangelistener%E5%85%B3%E8%81%94%E5%B1%9E%E6%80%A7%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/</guid>
+      <description>JavaBean的属性与一般Java程序中所指的属性，或者说与所有面向对象的程序设计语言中对象的属性是一个概念，在程序中的具体体现就是类中的变量。在JavaBean的设计中，按照属性的不同作用又细分为四类：单值属性；索引属性；*关联属性*；限制属性。
+　本文主要介绍如何使用PropertyChangeSupport类来支持关联属性事件的触发。
+1．关联属性 　关联属性，也称之为绑定属性。绑定属性会在属性值发生变化时，通知所有相关的监听器。为了实现一个绑定属性，必须实现两个机制。
+　1）　无论何时，只要属性的值发生变化，该bean必须发送一个PropertyChange事件给所有已注册的监听器。该变化可能发生在调用set方法时，或者程序的用户做出某种动作时。
+　2）　为了使感兴趣的监听器能够进行注册，bean必须实现以下两个方法：
+  1void addPropertyChangeListener(PropertyChangeListener listener);   1void removePropertyChangeListener(PropertyChangeListener listener);   2．使用PropertyChangeSupport 管理 监听器 　可以通过java.bean包下的PropertyChangeSupport类来管理监听器。要使用这个类，bean必须有一个此类的数据域。
+  1private PropertyChangeSupport changes = new PropertyChangeSupport(this);   　这样就可以将添加和移除监听器的任务交给这个对象。
+  1public void addPropertyChangeListener(PropertyChangeListener listener) {   1　changes.addPropertyChangeListener(listener);   1}   1public void removePropertyChangeListener(PropertyChangeListener listener) {   1　changes.removePropertyChangeListener(listener);   1}    当bean的属性发生变化时，使用PropertyChangeSupport对象的firePropertyChange方法，它会将一个事件发送给所有已经注册的监听器。该方法有三个参数：属性的名字、旧的值以及新的值。属性的值必须是对象，如果是简单数据类型，则必须进行包装。</description>
     </item>
     
     <item>
