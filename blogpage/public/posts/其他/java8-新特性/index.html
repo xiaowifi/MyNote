@@ -119,7 +119,7 @@
 </svg>
   <span class="post_date">
     Jan 5, 2021</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/lambda' class="post_tag button button_translucent">Lambda
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java8' class="post_tag button button_translucent">java8
     </a>
 </div>
 
@@ -509,7 +509,190 @@ Lambda 表达式和方法引用（实际上也可认为是Lambda表达式）上�
 <span class="ln">4</span>}
 <span class="ln">5</span>// 调用
 <span class="ln">6</span>set((x)-&gt;{return x;});
-</code></pre></div>
+</code></pre></div><h2 id="方法引用">方法引用</h2>
+<h3 id="方法引用的使用场景">方法引用的使用场景</h3>
+<p>　　我们用Lambda表达式来实现匿名方法。但有些情况下，我们用Lambda表达式仅仅是调用一些已经存在的方法，除了调用动作外，没有其他任何多余的动作，在这种情况下，我们倾向于通过方法名来调用它，而Lambda表达式可以帮助我们实现这一要求，它使得Lambda在调用那些已经拥有方法名的方法的代码更简洁、更容易理解。方法引用可以理解为Lambda表达式的另外一种表现形式。</p>
+<h3 id="方法引用的分类">方法引用的分类</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>语法</th>
+<th>对应的Lambda表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>静态方法引用</td>
+<td>类名::staticMethod</td>
+<td>(args) -&gt; 类名.staticMethod(args)</td>
+</tr>
+<tr>
+<td>实例方法引用</td>
+<td>inst::instMethod</td>
+<td>(args) -&gt; inst.instMethod(args)</td>
+</tr>
+<tr>
+<td>对象方法引用</td>
+<td>类名::instMethod</td>
+<td>(inst,args) -&gt; 类名.instMethod(args)</td>
+</tr>
+<tr>
+<td>构建方法引用</td>
+<td>类名::new</td>
+<td>(args) -&gt; new 类名(args)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="默认方法">默认方法</h2>
+<p><em>首先，之前的接口是个双刃剑，好处是面向抽象而不是面向具体编程，缺陷是，当需要修改接口时候，需要修改全部实现该接口的类，目前的 java 8 之前的集合框架没有 foreach 方法，通常能想到的解决办法是在JDK里给相关的接口添加新的方法及实现。然而，对于已经发布的版本，是没法在给接口添加新方法的同时不影响已有的实现。所以引进的默认方法。他们的目的是为了解决接口的修改与现有的实现不兼容的问题。</em></p>
+<p>方法使用：default 标记。</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>public interface Vehicle {
+<span class="ln">2</span>    default void print(){
+<span class="ln">3</span>        System.out.println(&#34;我是一辆车!&#34;);
+<span class="ln">4</span>    }
+<span class="ln">5</span>}
+</code></pre></div><p>使用的时候。</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>class Car implements Vehicle {
+<span class="ln">2</span>    public void print(){
+<span class="ln">3</span>        Vehicle.super.print();
+<span class="ln">4</span>    }
+<span class="ln">5</span>}
+</code></pre></div><h2 id="stream">Stream</h2>
+<p>Java 8 API添加了一个新的抽象称为流Stream，可以让你以一种声明的方式处理数据。</p>
+<p>Stream 使用一种类似用 SQL 语句从数据库查询数据的直观方式来提供一种对 Java 集合运算和表达的高阶抽象。</p>
+<p>Stream API可以极大提高Java程序员的生产力，让程序员写出高效率、干净、简洁的代码。</p>
+<p>这种风格将要处理的元素集合看作一种流， 流在管道中传输， 并且可以在管道的节点上进行处理， 比如筛选， 排序，聚合等。</p>
+<p>元素流在管道中经过中间操作（intermediate operation）的处理，最后由最终操作(terminal operation)得到前面处理的结果。</p>
+<h3 id="生成流">生成流</h3>
+<ul>
+<li><strong>stream()</strong> − 为集合创建串行流。</li>
+<li><strong>parallelStream()</strong> − 为集合创建并行流。</li>
+</ul>
+<h3 id="foreach">forEach</h3>
+<p>迭代流中的每个数据</p>
+<h3 id="map">map</h3>
+<p>map 方法用于映射每个元素到对应的结果</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>List&lt;Integer&gt; numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
+<span class="ln">2</span>// 获取对应的平方数
+<span class="ln">3</span>List&lt;Integer&gt; squaresList = numbers.stream().map( i -&gt; i*i).distinct().collect(Collectors.toList());
+</code></pre></div><h3 id="filter">filter</h3>
+<p>filter 方法用于通过设置的条件过滤出元素。以下代码片段使用 filter 方法过滤出空字符串：</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>List&lt;String&gt;strings = Arrays.asList(&#34;abc&#34;, &#34;&#34;, &#34;bc&#34;, &#34;efg&#34;, &#34;abcd&#34;,&#34;&#34;, &#34;jkl&#34;);
+<span class="ln">2</span>// 获取空字符串的数量
+<span class="ln">3</span>long count = strings.stream().filter(string -&gt; string.isEmpty()).count();
+</code></pre></div><h2 id="limit">limit</h2>
+<p>limit 方法用于获取指定数量的流。 以下代码片段使用 limit 方法打印出 10 条数据：</p>
+<p>Random random = new Random();</p>
+<p>random.ints().limit(10).forEach(System.out::println);</p>
+<hr>
+<h2 id="sorted">sorted</h2>
+<p>sorted 方法用于对流进行排序。以下代码片段使用 sorted 方法对输出的 10 个随机数进行排序：</p>
+<p>Random random = new Random();</p>
+<p>random.ints().limit(10).sorted().forEach(System.out::println);</p>
+<hr>
+<h2 id="并行parallel程序">并行（parallel）程序</h2>
+<p>parallelStream 是流并行处理程序的代替方法。以下实例我们使用 parallelStream 来输出空字符串的数量：</p>
+<p>List<String> strings = Arrays.asList(&quot;abc&quot;, &quot;&quot;, &quot;bc&quot;, &quot;efg&quot;, &quot;abcd&quot;,&quot;&quot;, &quot;jkl&quot;);</p>
+<p>// 获取空字符串的数量</p>
+<p>long count = strings.parallelStream().filter(string -&gt; string.isEmpty()).count();</p>
+<p>我们可以很容易的在顺序运行和并行直接切换。</p>
+<hr>
+<h2 id="collectors">Collectors</h2>
+<p>Collectors 类实现了很多归约操作，例如将流转换成集合和聚合元素。Collectors 可用于返回列表或字符串：</p>
+<p>List<String>strings = Arrays.asList(&quot;abc&quot;, &quot;&quot;, &quot;bc&quot;, &quot;efg&quot;, &quot;abcd&quot;,&quot;&quot;, &quot;jkl&quot;);</p>
+<p>List<String> filtered = strings.stream().filter(string -&gt; !string.isEmpty()).collect(Collectors.toList());</p>
+<p>System.out.println(&quot;筛选列表: &quot; + filtered);</p>
+<p>String mergedString = strings.stream().filter(string -&gt; !string.isEmpty()).collect(Collectors.joining(&quot;, &quot;));</p>
+<p>System.out.println(&quot;合并字符串: &quot; + mergedString);</p>
+<hr>
+<h2 id="统计">统计</h2>
+<p>另外，一些产生统计结果的收集器也非常有用。它们主要用于int、double、long等基本类型上，它们可以用来产生类似如下的统计结果。</p>
+<p>List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);</p>
+<p>IntSummaryStatistics stats = numbers.stream().mapToInt((x) -&gt; x).summaryStatistics();</p>
+<p>System.out.println(&quot;列表中最大的数 : &quot; + stats.getMax());</p>
+<p>System.out.println(&quot;列表中最小的数 : &quot; + stats.getMin());</p>
+<p>System.out.println(&quot;所有数之和 : &quot; + stats.getSum());</p>
+<p>System.out.println(&quot;平均数 : &quot; + stats.getAverage());</p>
+<h2 id="nashorn-javascript">Nashorn JavaScript</h2>
+<p>Nashorn 一个 javascript 引擎。</p>
+<p><strong>Nashorn JavaScript Engine 在 Java 15 已经不可用了。</strong></p>
+<p>这已经在 Java 11 标记为：@deprecated (forRemoval = true)</p>
+<p>从 JDK 1.8 开始，Nashorn取代Rhino(JDK 1.6, JDK1.7) 成为 Java 的嵌入式 JavaScript 引擎。Nashorn 完全支持 ECMAScript 5.1 规范以及一些扩展。它使用基于 JSR 292 的新语言特性，其中包含在 JDK 7 中引入的 invokedynamic，将 JavaScript 编译成 Java 字节码。</p>
+<p>与先前的 Rhino 实现相比，这带来了 2 到 10倍的性能提升。</p>
+<p><a href="https://www.runoob.com/java/java8-nashorn-javascript.html">教程</a></p>
+<h2 id="时间api">时间api</h2>
+<h3 id="本地化日期时间-api">本地化日期时间 API</h3>
+<p>LocalDateTime 简化了日期时间的处理，没有时区的问题。</p>
+<h3 id="zoneddatetime">ZonedDateTime</h3>
+<p>如果我们需要考虑到时区，就可以使用时区的日期时间API：</p>
+<h2 id="base64标准库">base64标准库</h2>
+<p>Base64工具类提供了一套静态方法获取下面三种BASE64编解码器：</p>
+<ul>
+<li>**基本：**输出被映射到一组字符A-Za-z0-9+/，编码不添加任何行标，输出的解码仅支持A-Za-z0-9+/。</li>
+<li>**URL：**输出映射到一组字符A-Za-z0-9+_，输出是URL和文件。</li>
+<li>**MIME：**输出隐射到MIME友好格式。输出每行不超过76字符，并且使用'\r'并跟随'\n'作为分割。编码输出最后没有行分割。</li>
+</ul>
+<h3 id="内嵌类">内嵌类</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">序号</th>
+<th style="text-align:left">内嵌类 &amp; 描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left"><strong>static class Base64.Decoder</strong>该类实现一个解码器用于，使用 Base64 编码来解码字节数据。</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left"><strong>static class Base64.Encoder</strong>该类实现一个编码器，使用 Base64 编码来编码字节数据。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="方法">方法</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">序号</th>
+<th style="text-align:left">方法名 &amp; 描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">**static Base64.Decoder getDecoder()**返回一个 Base64.Decoder ，解码使用基本型 base64 编码方案。</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">**static Base64.Encoder getEncoder()**返回一个 Base64.Encoder ，编码使用基本型 base64 编码方案。</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">**static Base64.Decoder getMimeDecoder()**返回一个 Base64.Decoder ，解码使用 MIME 型 base64 编码方案。</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">**static Base64.Encoder getMimeEncoder()**返回一个 Base64.Encoder ，编码使用 MIME 型 base64 编码方案。</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">**static Base64.Encoder getMimeEncoder(int lineLength, byte[] lineSeparator)**返回一个 Base64.Encoder ，编码使用 MIME 型 base64 编码方案，可以通过参数指定每行的长度及行的分隔符。</td>
+</tr>
+<tr>
+<td style="text-align:left">6</td>
+<td style="text-align:left">**static Base64.Decoder getUrlDecoder()**返回一个 Base64.Decoder ，解码使用 URL 和文件名安全型 base64 编码方案。</td>
+</tr>
+<tr>
+<td style="text-align:left">7</td>
+<td style="text-align:left">**static Base64.Encoder getUrlEncoder()**返回一个 Base64.Encoder ，编码使用 URL 和文件名安全型 base64 编码方案。</td>
+</tr>
+</tbody>
+</table>
+<p>**注意：**Base64 类的很多方法从 <strong>java.lang.Object</strong> 类继承。</p>
+
     
       
     
@@ -524,6 +707,9 @@ Lambda 表达式和方法引用（实际上也可认为是Lambda表达式）上�
     <h2 class="mt-4">精选文章</h2>
     <ul>
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java9%E6%96%B0%E7%89%B9%E6%80%A7/" class="nav-link">java9新特性</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/idea%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%85%B6%E7%BC%93%E5%AD%98%E6%B8%85%E7%90%86/" class="nav-link">idea相关配置及其缓存清理</a>
       </li>
       <li>
@@ -543,14 +729,14 @@ Lambda 表达式和方法引用（实际上也可认为是Lambda表达式）上�
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava创建被观察者Observable</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E8%81%9A%E5%90%88%E8%BF%90%E7%AE%97%E7%AC%A6/" class="nav-link">Rxjava数学运算符和聚合运算符Observable</a>
       </li>
     </ul>
     <h2 class="mt-4">最新文章</h2>
     <ul class="flex-column">
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java9%E6%96%B0%E7%89%B9%E6%80%A7/" class="nav-link">java9新特性</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/idea%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%85%B6%E7%BC%93%E5%AD%98%E6%B8%85%E7%90%86/" class="nav-link">idea相关配置及其缓存清理</a>
       </li>
       <li>
@@ -571,26 +757,18 @@ Lambda 表达式和方法引用（实际上也可认为是Lambda表达式）上�
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava创建被观察者Observable</a>
       </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E8%81%9A%E5%90%88%E8%BF%90%E7%AE%97%E7%AC%A6/" class="nav-link">Rxjava数学运算符和聚合运算符Observable</a>
-      </li>
     </ul>
     <div>
       <h2 class="mt-4 taxonomy" id="categories-section">分类</h2>
       <nav class="tags_nav">
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%9D%82%E5%AD%A6/' class="post_tag button button_translucent">
-          杂学
-          <span class="button_tally">64</span>
-        </a>
-        
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/' class="post_tag button button_translucent">
           技术类
-          <span class="button_tally">42</span>
+          <span class="button_tally">43</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
-          英语
-          <span class="button_tally">24</span>
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%9D%82%E5%AD%A6/' class="post_tag button button_translucent">
+          杂学
+          <span class="button_tally">6</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
@@ -613,18 +791,8 @@ Lambda 表达式和方法引用（实际上也可认为是Lambda表达式）上�
           <span class="button_tally">1</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/mfc/' class="post_tag button button_translucent">
-          MFC
-          <span class="button_tally">1</span>
-        </a>
-        
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/todo/' class="post_tag button button_translucent">
           TODO
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E4%BD%9C%E6%96%87/' class="post_tag button button_translucent">
-          作文
           <span class="button_tally">1</span>
         </a>
         
@@ -636,7 +804,7 @@ Lambda 表达式和方法引用（实际上也可认为是Lambda表达式）上�
       <nav class="tags_nav">
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/' class="post_tag button button_translucent">
           专升本
-          <span class="button_tally">58</span>
+          <span class="button_tally">59</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
@@ -672,11 +840,6 @@ Lambda 表达式和方法引用（实际上也可认为是Lambda表达式）上�
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/selenium/' class="post_tag button button_translucent">
           SELENIUM
           <span class="button_tally">2</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/mfc/' class="post_tag button button_translucent">
-          MFC
-          <span class="button_tally">1</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/python/' class="post_tag button button_translucent">
@@ -836,6 +999,14 @@ Lambda 表达式和方法引用（实际上也可认为是Lambda表达式）上�
             </a>
             
             
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java8/' class=" post_tag button button_translucent" data-position=1>JAVA8<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java9/' class=" post_tag button button_translucent" data-position=1>JAVA9<span class="button_tally">1</span>
+            </a>
+            
+            
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java%E5%9F%BA%E7%A1%80/' class=" post_tag button button_translucent" data-position=1>JAVA基础<span class="button_tally">1</span>
             </a>
             
@@ -848,15 +1019,7 @@ Lambda 表达式和方法引用（实际上也可认为是Lambda表达式）上�
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/lambda/' class=" post_tag button button_translucent" data-position=1>LAMBDA<span class="button_tally">1</span>
-            </a>
-            
-            
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/map/' class=" post_tag button button_translucent" data-position=1>MAP<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/mfc/' class=" post_tag button button_translucent" data-position=1>MFC<span class="button_tally">1</span>
             </a>
             
             

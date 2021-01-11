@@ -149,7 +149,187 @@
 </div>
 
     
-    
+    <ol>
+<li></li>
+</ol>
+<p>在SQL Server 2008中，有系统数据库master、model、msdb、tempdb和用户数据库。下列关于系统数据库和用户数据库的备份策略，最合理的是( )。
+(A)	对系统数据库和用户数据库都实行周期性备份
+(B)	对系统数据库和用户数据库都实行修改之后即备份
+(C)	对master、model、msdb实行修改之后即备份，对用户数据库实行周期性备份，对tempdb不备份
+(D)	对系统数据库实行修改之后即备份，对用户数据库实行周期性备份
+[参考答案：C]  分值：5</p>
+<ol start="2">
+<li></li>
+</ol>
+<p>下列关于日志备份的说法中，错误的是
+(A)	日志备份仅备份日志，不备份数据
+(B)	第一次对数据库进行的备份可以是日志备份
+(C)	日志备份的时间间隔通常比差异备份短
+(D)	日志备份的执行效率通常比差异备份和完整备份高
+[参考答案：B]  分值：5</p>
+<ol start="3">
+<li></li>
+</ol>
+<p>GRANT语句用于 ( )。
+(A)	拒绝用户权限
+(B)	撤销用户权限
+(C)	创建数据库用户
+(D)	授予用户权限
+[参考答案：D]  分值：5</p>
+<ol start="4">
+<li></li>
+</ol>
+<p>关于登录帐号与数据库用户帐号正确的是 ( )。
+(A)	同时拥有登录帐号和数据库用户帐号才能访问SQL Server数据库的数据
+(B)	拥有登录帐号自然拥有数据库用户帐号
+(C)	拥有数据库用户帐号自然拥有登录帐号
+(D)	二者没有却别
+[参考答案：A]  分值：5</p>
+<ol start="5">
+<li></li>
+</ol>
+<p>创建触发器使用的T-SQL语句是( )。&quot;
+(A)	DECLARE TRIGGER
+(B)	SET TRIGGER
+(C)	CREATE TRIGGER
+(D)	ALTER TRIGGER
+[参考答案：C]  分值：5</p>
+<ol start="6">
+<li></li>
+</ol>
+<p>建立数据库用户帐号的命令是 ( )。
+(A)	CREATE USER
+(B)	CREATE ROLE
+(C)	CREATE RULE
+(D)	CREATE LOGIN
+[参考答案：A]  分值：5</p>
+<ol start="7">
+<li></li>
+</ol>
+<p>提取当前日期函数为( )。
+(A)	GETUDCDATE ()
+(B)	DATEPART ()
+(C)	DATEDIFF()
+(D)	GETDATE ()
+[参考答案：D]  分值：5</p>
+<ol start="8">
+<li></li>
+</ol>
+<p>提取字符串的子串可以采用下列哪个函数 ( )。
+(A)	LTRIM()
+(B)	STR()
+(C)	SUBSTRING()
+(D)	CHAR()
+[参考答案：C]  分值：5</p>
+<ol start="9">
+<li></li>
+</ol>
+<p>关于DDL触发器错误的是 ( )。
+(A)	可以作为INSTEAD OF触发使用
+(B)	运行相应的DDL语句是触发
+(C)	可以用于记录数据库结构中的更改或事件
+(D)	能够防止对数据库结构进行某些修改
+[参考答案：A]  分值：5</p>
+<ol start="10">
+<li></li>
+</ol>
+<p>声明游标使用的T-SQL语句是( )。
+(A)	ALTER CURSOR
+(B)	CREATE CURSOR
+(C)	SET CURSOR
+(D)	DECLARE CURSOR
+[参考答案：D]  分值：5</p>
+<ol start="11">
+<li></li>
+</ol>
+<p>设某数据库在非工作时间(每天8:00以前、18:00以后、周六和周日)不允许授权用户在职工表中插入数据。下列方法中能够实现此需求且最为合理的是( )。
+(A)	建立前触发型触发器
+(B)	建立后触发型触发器
+(C)	定义内联表值函数
+(D)	建立存储过程
+[参考答案：A]  分值：5</p>
+<ol start="12">
+<li></li>
+</ol>
+<p>返回字符串表达式字符数的函数为( )。
+(A)	LEN()
+(B)	LOWER ()
+(C)	LEFT()
+(D)	LTRIM()
+[参考答案：A]  分值：5</p>
+<ol start="13">
+<li></li>
+</ol>
+<p>固定数据库角色中db_owner是( )。
+(A)	数据库所有者
+(B)	数据库数据写入者
+(C)	数据库数据读取者
+(D)	数据库安全管理员
+[参考答案：A]  分值：5</p>
+<ol start="14">
+<li></li>
+</ol>
+<p>创建触发器的用处主要是( )。
+(A)	增强数据的安全性
+(B)	加强数据的保密性
+(C)	提高数据查询效率
+(D)	实现复杂的约束
+[参考答案：D]  分值：5</p>
+<ol start="15">
+<li></li>
+</ol>
+<p>固定的服务器角色中sysadmin是 ( )。
+(A)	服务器管理员
+(B)	数据库创建者
+(C)	系统管理员
+(D)	安全管理员
+[参考答案：C]  分值：5</p>
+<ol start="16">
+<li></li>
+</ol>
+<p>在SQL Server 2008的某数据库中，设u1用户是R1角色中的成员，现已授予R1角色对T表具有SELECT和DENY UPDATE权限，同时授予了u1用户对T表具有INSERT和UPDATE权限，则U1用户最终对T表具有的权限是( )。
+(A)	INSERT
+(B)	INSERT和UPDATE
+(C)	SELECT、INSERT和UPDATE
+(D)	SELECT和INSERT
+[参考答案：B]  分值：5</p>
+<ol start="17">
+<li></li>
+</ol>
+<p>下列关于SQL Server数据库服务器登录账户的说法中，错误的是( )。
+(A)	所有的Windows用户都自动是SQL Server的合法账户
+(B)	登录账户的来源可以是Windows用户，也可以是非Windows用户
+(C)	sa是SQL Server提供的一个具有系统管理员权限的默认登录账户B
+(D)	在Windows身份验证模式下，不允许非Windows身份的用户登录到SQL Server服务器
+[参考答案：A]  分值：5</p>
+<ol start="18">
+<li></li>
+</ol>
+<p>下列关于游标的说法中，错误的是
+(A)	游标允许用户定位到结果集中的某行
+(B)	游标允许用户读取结果集中当前行的位置的数据
+(C)	游标中有个当前行指针，该指针只能在结果集中单向移动
+(D)	游标允许用户修改结果集中当前行的位置的数据
+[参考答案：C]  分值：5</p>
+<ol start="19">
+<li></li>
+</ol>
+<p>下列关于存储过程的说法，错误的是( )。
+(A)	存储过程可以接受输入参数，并可将执行结果以输出参数形式返回
+(B)	存储过程可以有多个输人参数，但只能有一个输出参数
+(C)	定义存储过程时，在一个存储过程中可以同时包含数据的增、删、改、查操作
+(D)	存储过程的输入参数和输出参数均可有默认值
+[参考答案：B]  分值：5</p>
+<ol start="20">
+<li></li>
+</ol>
+<p>创建存储过程使用的T-SQL语句是( )。
+(A)	CREATE PROCDURE
+(B)	ALTER PROCDURE
+(C)	SET PROCDURE
+(D)	DECLARE PROCDURE
+[参考答案：A]  分值：5</p>
+
     
       
     
@@ -164,6 +344,9 @@
     <h2 class="mt-4">精选文章</h2>
     <ul>
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java9%E6%96%B0%E7%89%B9%E6%80%A7/" class="nav-link">java9新特性</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/idea%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%85%B6%E7%BC%93%E5%AD%98%E6%B8%85%E7%90%86/" class="nav-link">idea相关配置及其缓存清理</a>
       </li>
       <li>
@@ -183,14 +366,14 @@
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B6%E4%BB%96%E8%BF%90%E7%AE%97/" class="nav-link">Rxjava其他运算</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava创建被观察者Observable</a>
       </li>
     </ul>
     <h2 class="mt-4">最新文章</h2>
     <ul class="flex-column">
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java9%E6%96%B0%E7%89%B9%E6%80%A7/" class="nav-link">java9新特性</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/idea%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%85%B6%E7%BC%93%E5%AD%98%E6%B8%85%E7%90%86/" class="nav-link">idea相关配置及其缓存清理</a>
       </li>
       <li>
@@ -211,26 +394,18 @@
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B6%E4%BB%96%E8%BF%90%E7%AE%97/" class="nav-link">Rxjava其他运算</a>
       </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A2%AB%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava创建被观察者Observable</a>
-      </li>
     </ul>
     <div>
       <h2 class="mt-4 taxonomy" id="categories-section">分类</h2>
       <nav class="tags_nav">
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%9D%82%E5%AD%A6/' class="post_tag button button_translucent">
-          杂学
-          <span class="button_tally">64</span>
-        </a>
-        
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/' class="post_tag button button_translucent">
           技术类
-          <span class="button_tally">42</span>
+          <span class="button_tally">43</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
-          英语
-          <span class="button_tally">24</span>
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%9D%82%E5%AD%A6/' class="post_tag button button_translucent">
+          杂学
+          <span class="button_tally">6</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
@@ -253,18 +428,8 @@
           <span class="button_tally">1</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/mfc/' class="post_tag button button_translucent">
-          MFC
-          <span class="button_tally">1</span>
-        </a>
-        
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/todo/' class="post_tag button button_translucent">
           TODO
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E4%BD%9C%E6%96%87/' class="post_tag button button_translucent">
-          作文
           <span class="button_tally">1</span>
         </a>
         
@@ -276,7 +441,7 @@
       <nav class="tags_nav">
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/' class="post_tag button button_translucent">
           专升本
-          <span class="button_tally">58</span>
+          <span class="button_tally">59</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
@@ -312,11 +477,6 @@
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/selenium/' class="post_tag button button_translucent">
           SELENIUM
           <span class="button_tally">2</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/mfc/' class="post_tag button button_translucent">
-          MFC
-          <span class="button_tally">1</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/python/' class="post_tag button button_translucent">
@@ -476,6 +636,14 @@
             </a>
             
             
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java8/' class=" post_tag button button_translucent" data-position=1>JAVA8<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java9/' class=" post_tag button button_translucent" data-position=1>JAVA9<span class="button_tally">1</span>
+            </a>
+            
+            
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java%E5%9F%BA%E7%A1%80/' class=" post_tag button button_translucent" data-position=1>JAVA基础<span class="button_tally">1</span>
             </a>
             
@@ -488,15 +656,7 @@
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/lambda/' class=" post_tag button button_translucent" data-position=1>LAMBDA<span class="button_tally">1</span>
-            </a>
-            
-            
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/map/' class=" post_tag button button_translucent" data-position=1>MAP<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/mfc/' class=" post_tag button button_translucent" data-position=1>MFC<span class="button_tally">1</span>
             </a>
             
             

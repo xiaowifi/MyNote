@@ -3,9 +3,7 @@ date = "2020-12-08"
 title = "统考英语B英译汉"
 description = "统考英语B英译汉"
 tags = [ "统考英语B","英语","英译汉"]
-categories = [
-    "杂学","英语"
-]
+ 
 series = ["专升本"]
 featured = true
 +++

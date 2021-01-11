@@ -3,9 +3,7 @@ date = "2020-12-16"
 title = "统考英语B完型填空"
 description = "统考英语完形填空"
 tags = [ "统考英语B","英语","完形填空"]
-categories = [
-    "杂学","英语"
-]
+ 
 series = ["专升本"]
 featured = true
 +++

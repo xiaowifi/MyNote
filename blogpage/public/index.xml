@@ -6,7 +6,16 @@
     <description>Recent content on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Wed, 06 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>java9新特性</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java9%E6%96%B0%E7%89%B9%E6%80%A7/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java9%E6%96%B0%E7%89%B9%E6%80%A7/</guid>
+      <description>Java 9 新特性  模块系统：模块是一个包的容器，Java 9 最大的变化之一是引入了模块系统（Jigsaw 项目）。 REPL (JShell)：交互式编程环境。 HTTP 2 客户端：HTTP/2标准是HTTP协议的最新版本，新的 HTTPClient API 支持 WebSocket 和 HTTP2 流以及服务器推送特性。 改进的 Javadoc：Javadoc 现在支持在 API 文档中的进行搜索。另外，Javadoc 的输出现在符合兼容 HTML5 标准。 多版本兼容 JAR 包：多版本兼容 JAR 功能能让你创建仅在特定版本的 Java 环境中运行库程序时选择使用的 class 版本。 集合工厂方法：List，Set 和 Map 接口中，新的静态工厂方法可以创建这些集合的不可变实例。 私有接口方法：在接口中使用private私有方法。我们可以使用 private 访问修饰符在接口中编写私有方法。 进程 API: 改进的 API 来控制和管理操作系统进程。引进 java.lang.ProcessHandle 及其嵌套接口 Info 来让开发者逃离时常因为要获取一个本地进程的 PID 而不得不使用本地代码的窘境。 改进的 Stream API：改进的 Stream API 添加了一些便利的方法，使流处理更容易，并使用收集器编写复杂的查询。 改进 try-with-resources：如果你已经有一个资源是 final 或等效于 final 变量,您可以在 try-with-resources 语句中使用该变量，而无需在 try-with-resources 语句中声明一个新变量。 改进的弃用注解 @Deprecated：注解 @Deprecated 可以标记 Java API 状态，可以表示被标记的 API 将会被移除，或者已经破坏。 改进钻石操作符(Diamond Operator) ：匿名类可以使用钻石操作符(Diamond Operator)。 改进 Optional 类：java.</description>
+    </item>
+    
     <item>
       <title>idea相关配置及其缓存清理</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/idea%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%85%B6%E7%BC%93%E5%AD%98%E6%B8%85%E7%90%86/</link>
@@ -1528,11 +1537,15 @@ https://golang.google.cn/dl/
     
     <item>
       <title>java EE</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/javaee/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%860/</link>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/javaee/%E5%9F%BA%E4%BA%8Ejavaee%E7%9A%84%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/javaee/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%860/</guid>
-      <description>前言 结束 </description>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/javaee/%E5%9F%BA%E4%BA%8Ejavaee%E7%9A%84%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/</guid>
+      <description>下列哪些表达式所存储的对象可以被servlet或jsp在session里使用 (A)	response.setAttribute(name，value); (B)	getSession().setAttribute(name，value); (C)	request.setAttribute(name，value); (D)	servlet.getServletContext().setAttribute(name，value); [参考答案：D] 分值：5
+  下面哪个jsp隐含对象可以实现多次请求共享（选择两个答案） (A)	applicatio (B)	request (C)	page (D)	get [参考答案：A] 分值：5
+  看下列HTML标签：
+1&amp;lt;html&amp;gt; 2 3 &amp;lt;body&amp;gt; 4 5 &amp;lt;a href=”/servlet/MyFirstServlet”&amp;gt;Make me say Hello World!&amp;lt;/a 6 7 &amp;lt;/body&amp;gt; 8 9&amp;lt;html&amp;gt; 点击超级链接后下列哪一个servlet方法将被调用： 。 (A)	doPost (B)	doGET (C)	doPOST (D)	doGet [参考答案：D] 分值：5
+  关于FORM表单提交的HTTP的GET方法，下列哪个说法是错误的？ (A)	不能向服务器提交无限长度的数据 (B)	不能向服务器提交多值参数 (C)	不能向服务器提交二进制数据 (D)	参数附在URL后面 [参考答案：B] 分值：5</description>
     </item>
     
     <item>
@@ -1600,15 +1613,6 @@ Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
 第2点中的:生成的资源 url 应该为 https://ipvb.gitee.io/blog/style.css 才对 ,我觉得他证明了非同名项目，且在字目录中是可以实现个人主页的。上传上去的效果不正确，那就是资源文件的url 不正确。于是我采集了静态网页显示正常的图片的url和jekyll 显示不正常的url.
 静态网页显示正常的url:http://lalalaxiaowifi.gitee.io/pictures/images/g2.jpg
 jekyll 配置不正常显示的url:http://lalalaxiaowifi.gitee.io/images/avatar.jpg 这个不正常的url 在同名项目的根目录下是运行正常的，我把整个Jekyll项目放到了pictures/tree/master/Blog/jekyllBlog 下面，等于说我的项目名叫pictures，使用分支是master，根目录下的Blog/jekyllBlog，他就显示不正常了，但是通过对比两个url，发现放到其他目录下，生成的链接地址都是错误的(原因参考 上面图片的第2点)。因为这个也证明了我之前的一个猜测，个人用户应该只有一个主页。开启一个后，其他的必定会被关闭，个人理解Gitee pages 对应的localhost 就是个人根目录，比如说我的根目录应该就是：http://lalalaxiaowifi.gitee.io，再比如说我的pictures地址就应该http://lalalaxiaowifi.gitee.io/pictures。也确实如此。那么既然如此，那就按照Gitee Pages 提供的再配置一次。</description>
-    </item>
-    
-    <item>
-      <title>MFC 01</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/mfc3%E7%BB%B4%E5%9B%BE%E5%BD%A2%E5%BC%80%E5%8F%91/mfc-01/</link>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/mfc3%E7%BB%B4%E5%9B%BE%E5%BD%A2%E5%BC%80%E5%8F%91/mfc-01/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -1776,6 +1780,15 @@ SQL 在使用 my sql 中就没有其他字段内容。
     </item>
     
     <item>
+      <title>三维图形处理技术</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/mfc3%E7%BB%B4%E5%9B%BE%E5%BD%A2%E5%BC%80%E5%8F%91/%E4%B8%89%E7%BB%B4%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/mfc3%E7%BB%B4%E5%9B%BE%E5%BD%A2%E5%BC%80%E5%8F%91/%E4%B8%89%E7%BB%B4%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>学士学位句子</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E5%AD%A6%E4%BD%8D%E8%8B%B1%E8%AF%AD/%E5%8F%A5%E5%AD%90/%E5%AD%A6%E4%BD%8D%E8%8B%B1%E8%AF%AD%E5%8F%A5%E5%AD%90/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
@@ -1869,7 +1882,11 @@ at length, that is all i want to say,now i want to be stronger ,thanks.</descrip
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%860/</guid>
-      <description></description>
+      <description>在SQL Server 2008中，有系统数据库master、model、msdb、tempdb和用户数据库。下列关于系统数据库和用户数据库的备份策略，最合理的是( )。 (A)	对系统数据库和用户数据库都实行周期性备份 (B)	对系统数据库和用户数据库都实行修改之后即备份 (C)	对master、model、msdb实行修改之后即备份，对用户数据库实行周期性备份，对tempdb不备份 (D)	对系统数据库实行修改之后即备份，对用户数据库实行周期性备份 [参考答案：C] 分值：5
+  下列关于日志备份的说法中，错误的是 (A)	日志备份仅备份日志，不备份数据 (B)	第一次对数据库进行的备份可以是日志备份 (C)	日志备份的时间间隔通常比差异备份短 (D)	日志备份的执行效率通常比差异备份和完整备份高 [参考答案：B] 分值：5
+  GRANT语句用于 ( )。 (A)	拒绝用户权限 (B)	撤销用户权限 (C)	创建数据库用户 (D)	授予用户权限 [参考答案：D] 分值：5
+  关于登录帐号与数据库用户帐号正确的是 ( )。 (A)	同时拥有登录帐号和数据库用户帐号才能访问SQL Server数据库的数据 (B)	拥有登录帐号自然拥有数据库用户帐号 (C)	拥有数据库用户帐号自然拥有登录帐号 (D)	二者没有却别 [参考答案：A] 分值：5
+  创建触发器使用的T-SQL语句是( )。&amp;quot; (A)	DECLARE TRIGGER (B)	SET TRIGGER (C)	CREATE TRIGGER (D)	ALTER TRIGGER [参考答案：C] 分值：5</description>
     </item>
     
     <item>

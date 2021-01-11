@@ -2,7 +2,7 @@
 date = "2021-01-05"
 title = "java8 新特性"
 description = "java 8 java8 新特性"
-tags = [ "Lambda"]
+tags = [ "java8"]
 categories = [
     "技术类"
 ]
@@ -337,3 +337,207 @@ public static int set(Function<Integer,Integer> function){
 set((x)->{return x;});
 ```
 
+## 方法引用
+
+### 方法引用的使用场景
+
+　　我们用Lambda表达式来实现匿名方法。但有些情况下，我们用Lambda表达式仅仅是调用一些已经存在的方法，除了调用动作外，没有其他任何多余的动作，在这种情况下，我们倾向于通过方法名来调用它，而Lambda表达式可以帮助我们实现这一要求，它使得Lambda在调用那些已经拥有方法名的方法的代码更简洁、更容易理解。方法引用可以理解为Lambda表达式的另外一种表现形式。
+
+###  方法引用的分类
+
+| 类型         | 语法               | 对应的Lambda表达式                   |
+| ------------ | ------------------ | ------------------------------------ |
+| 静态方法引用 | 类名::staticMethod | (args) -> 类名.staticMethod(args)    |
+| 实例方法引用 | inst::instMethod   | (args) -> inst.instMethod(args)      |
+| 对象方法引用 | 类名::instMethod   | (inst,args) -> 类名.instMethod(args) |
+| 构建方法引用 | 类名::new          | (args) -> new 类名(args)             |
+
+
+
+## 默认方法
+
+*首先，之前的接口是个双刃剑，好处是面向抽象而不是面向具体编程，缺陷是，当需要修改接口时候，需要修改全部实现该接口的类，目前的 java 8 之前的集合框架没有 foreach 方法，通常能想到的解决办法是在JDK里给相关的接口添加新的方法及实现。然而，对于已经发布的版本，是没法在给接口添加新方法的同时不影响已有的实现。所以引进的默认方法。他们的目的是为了解决接口的修改与现有的实现不兼容的问题。*
+
+方法使用：default 标记。
+
+```
+public interface Vehicle {
+    default void print(){
+        System.out.println("我是一辆车!");
+    }
+}
+```
+
+使用的时候。
+
+```
+class Car implements Vehicle {
+    public void print(){
+        Vehicle.super.print();
+    }
+}
+```
+
+## Stream
+
+Java 8 API添加了一个新的抽象称为流Stream，可以让你以一种声明的方式处理数据。
+
+Stream 使用一种类似用 SQL 语句从数据库查询数据的直观方式来提供一种对 Java 集合运算和表达的高阶抽象。
+
+Stream API可以极大提高Java程序员的生产力，让程序员写出高效率、干净、简洁的代码。
+
+这种风格将要处理的元素集合看作一种流， 流在管道中传输， 并且可以在管道的节点上进行处理， 比如筛选， 排序，聚合等。
+
+元素流在管道中经过中间操作（intermediate operation）的处理，最后由最终操作(terminal operation)得到前面处理的结果。
+
+### 生成流
+
+- **stream()** − 为集合创建串行流。
+- **parallelStream()** − 为集合创建并行流。
+
+### forEach 
+
+迭代流中的每个数据
+
+### map 
+
+map 方法用于映射每个元素到对应的结果
+
+```
+List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
+// 获取对应的平方数
+List<Integer> squaresList = numbers.stream().map( i -> i*i).distinct().collect(Collectors.toList());
+```
+
+### filter 
+
+filter 方法用于通过设置的条件过滤出元素。以下代码片段使用 filter 方法过滤出空字符串：
+
+```
+List<String>strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
+// 获取空字符串的数量
+long count = strings.stream().filter(string -> string.isEmpty()).count();
+```
+
+
+
+## limit
+
+limit 方法用于获取指定数量的流。 以下代码片段使用 limit 方法打印出 10 条数据：
+
+Random random = new Random(); 
+
+random.ints().limit(10).forEach(System.out::println);
+
+------
+
+## sorted
+
+sorted 方法用于对流进行排序。以下代码片段使用 sorted 方法对输出的 10 个随机数进行排序：
+
+Random random = new Random();
+
+ random.ints().limit(10).sorted().forEach(System.out::println);
+
+------
+
+## 并行（parallel）程序
+
+parallelStream 是流并行处理程序的代替方法。以下实例我们使用 parallelStream 来输出空字符串的数量：
+
+List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl"); 
+
+// 获取空字符串的数量 
+
+long count = strings.parallelStream().filter(string -> string.isEmpty()).count();
+
+我们可以很容易的在顺序运行和并行直接切换。
+
+------
+
+## Collectors
+
+Collectors 类实现了很多归约操作，例如将流转换成集合和聚合元素。Collectors 可用于返回列表或字符串：
+
+
+
+List<String>strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
+
+ List<String> filtered = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.toList()); 
+
+ System.out.println("筛选列表: " + filtered); 
+
+String mergedString = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.joining(", ")); 
+
+System.out.println("合并字符串: " + mergedString);
+
+------
+
+## 统计
+
+另外，一些产生统计结果的收集器也非常有用。它们主要用于int、double、long等基本类型上，它们可以用来产生类似如下的统计结果。
+
+List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
+
+ IntSummaryStatistics stats = numbers.stream().mapToInt((x) -> x).summaryStatistics(); 
+
+ System.out.println("列表中最大的数 : " + stats.getMax()); 
+
+System.out.println("列表中最小的数 : " + stats.getMin());
+
+ System.out.println("所有数之和 : " + stats.getSum()); 
+
+System.out.println("平均数 : " + stats.getAverage());
+
+## Nashorn JavaScript
+
+Nashorn 一个 javascript 引擎。
+
+**Nashorn JavaScript Engine 在 Java 15 已经不可用了。**
+
+这已经在 Java 11 标记为：@deprecated (forRemoval = true)
+
+从 JDK 1.8 开始，Nashorn取代Rhino(JDK 1.6, JDK1.7) 成为 Java 的嵌入式 JavaScript 引擎。Nashorn 完全支持 ECMAScript 5.1 规范以及一些扩展。它使用基于 JSR 292 的新语言特性，其中包含在 JDK 7 中引入的 invokedynamic，将 JavaScript 编译成 Java 字节码。
+
+与先前的 Rhino 实现相比，这带来了 2 到 10倍的性能提升。
+
+[教程](https://www.runoob.com/java/java8-nashorn-javascript.html)
+
+## 时间api
+
+###  本地化日期时间 API
+
+LocalDateTime 简化了日期时间的处理，没有时区的问题。
+
+### ZonedDateTime
+
+如果我们需要考虑到时区，就可以使用时区的日期时间API：
+
+## base64标准库
+
+Base64工具类提供了一套静态方法获取下面三种BASE64编解码器：
+
+- **基本：**输出被映射到一组字符A-Za-z0-9+/，编码不添加任何行标，输出的解码仅支持A-Za-z0-9+/。
+- **URL：**输出映射到一组字符A-Za-z0-9+_，输出是URL和文件。
+- **MIME：**输出隐射到MIME友好格式。输出每行不超过76字符，并且使用'\r'并跟随'\n'作为分割。编码输出最后没有行分割。
+
+### 内嵌类
+
+| 序号 | 内嵌类 & 描述                                                |
+| :--- | :----------------------------------------------------------- |
+| 1    | **static class Base64.Decoder**该类实现一个解码器用于，使用 Base64 编码来解码字节数据。 |
+| 2    | **static class Base64.Encoder**该类实现一个编码器，使用 Base64 编码来编码字节数据。 |
+
+### 方法
+
+| 序号 | 方法名 & 描述                                                |
+| :--- | :----------------------------------------------------------- |
+| 1    | **static Base64.Decoder getDecoder()**返回一个 Base64.Decoder ，解码使用基本型 base64 编码方案。 |
+| 2    | **static Base64.Encoder getEncoder()**返回一个 Base64.Encoder ，编码使用基本型 base64 编码方案。 |
+| 3    | **static Base64.Decoder getMimeDecoder()**返回一个 Base64.Decoder ，解码使用 MIME 型 base64 编码方案。 |
+| 4    | **static Base64.Encoder getMimeEncoder()**返回一个 Base64.Encoder ，编码使用 MIME 型 base64 编码方案。 |
+| 5    | **static Base64.Encoder getMimeEncoder(int lineLength, byte[] lineSeparator)**返回一个 Base64.Encoder ，编码使用 MIME 型 base64 编码方案，可以通过参数指定每行的长度及行的分隔符。 |
+| 6    | **static Base64.Decoder getUrlDecoder()**返回一个 Base64.Decoder ，解码使用 URL 和文件名安全型 base64 编码方案。 |
+| 7    | **static Base64.Encoder getUrlEncoder()**返回一个 Base64.Encoder ，编码使用 URL 和文件名安全型 base64 编码方案。 |
+
+**注意：**Base64 类的很多方法从 **java.lang.Object** 类继承。

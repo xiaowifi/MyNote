@@ -3,9 +3,7 @@ date = "2020-11-19"
 title = "学位英语词组表JKL"
 description = "学位英语词组表JKL"
 tags = [ "英语","学位英语","词组","词组JKL"]
-categories = [
-    "杂学"
-]
+       
 series = ["专升本"]
 featured = true
 +++

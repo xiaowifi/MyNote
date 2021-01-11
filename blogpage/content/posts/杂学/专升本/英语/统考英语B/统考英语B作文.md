@@ -3,9 +3,7 @@ date = "2020-10-01"
 title = "统考英语B作文"
 description = "统考英语B作文"
 tags = [ "统考英语B","作文"]
-categories = [
-    "杂学"
-]
+       
 series = ["专升本"]
 featured = true
 +++

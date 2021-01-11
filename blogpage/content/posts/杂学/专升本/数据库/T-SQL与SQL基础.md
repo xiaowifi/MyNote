@@ -3,9 +3,7 @@ date = "2020-10-01"
 title = "T-SQL与SQL基础"
 description = "T-SQL与SQL基础"
 tags = [ "数据库"]
-categories = [
-    "杂学"
-]
+
 series = ["专升本"]
 featured = true
 

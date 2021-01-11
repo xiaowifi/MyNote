@@ -3,9 +3,7 @@ date = "2020-12-17"
 title = "统考英语B重点句型"
 description = "统考英语B重点句型"
 tags = [ "统考英语B","英语","重点句型"]
-categories = [
-    "杂学","英语"
-]
+ 
 series = ["专升本"]
 featured = true
 +++

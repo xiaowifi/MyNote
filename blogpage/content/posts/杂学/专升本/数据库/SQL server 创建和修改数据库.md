@@ -3,9 +3,7 @@ date = "2020-10-01"
 title = "SQL server 创建和修改数据库"
 description = "SQL server 创建和修改数据库"
 tags = [ "数据库"]
-categories = [
-    "杂学"
-]
+
 series = ["专升本"]
 featured = true
 

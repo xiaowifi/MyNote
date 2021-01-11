@@ -3,9 +3,7 @@ date = "2020-12-15"
 title = "统考英语B词汇与结构"
 description = "统考英语B词汇与结构"
 tags = [ "统考英语B","英语","词汇与结构"]
-categories = [
-    "杂学","英语"
-]
+ 
 series = ["专升本"]
 featured = true
 +++

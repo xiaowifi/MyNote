@@ -3,9 +3,7 @@ date = "2020-11-19"
 title = "学位英语词组表QR"
 description = "学位英语词组表QR"
 tags = [ "英语","学位英语","词组","词组QR"]
-categories = [
-    "杂学"
-]
+       
 series = ["专升本"]
 featured = false
 +++

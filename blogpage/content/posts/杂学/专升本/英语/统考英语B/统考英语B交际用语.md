@@ -3,9 +3,7 @@ date = "2020-12-07"
 title = "统考英语B交际用语"
 description = "统考英语B交际用语"
 tags = [ "统考英语B","英语","交际用语"]
-categories = [
-    "杂学","英语"
-]
+
 series = ["专升本"]
 featured = true
 +++

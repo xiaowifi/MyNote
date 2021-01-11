@@ -3,9 +3,7 @@ date = "2020-11-11"
 title = "学位英语词汇表C"
 description = "学位英语词汇表C"
 tags = [ "英语","学位英语","词汇表","词汇C"]
-categories = [
-    "杂学"
-]
+
 series = ["专升本"]
 featured = true
 +++

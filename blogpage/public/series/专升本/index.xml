@@ -824,11 +824,15 @@ absence 缺席,缺乏 词性: n 例子:</description>
     
     <item>
       <title>java EE</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/javaee/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%860/</link>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/javaee/%E5%9F%BA%E4%BA%8Ejavaee%E7%9A%84%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/javaee/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%860/</guid>
-      <description>前言 结束 </description>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/javaee/%E5%9F%BA%E4%BA%8Ejavaee%E7%9A%84%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/</guid>
+      <description>下列哪些表达式所存储的对象可以被servlet或jsp在session里使用 (A)	response.setAttribute(name，value); (B)	getSession().setAttribute(name，value); (C)	request.setAttribute(name，value); (D)	servlet.getServletContext().setAttribute(name，value); [参考答案：D] 分值：5
+  下面哪个jsp隐含对象可以实现多次请求共享（选择两个答案） (A)	applicatio (B)	request (C)	page (D)	get [参考答案：A] 分值：5
+  看下列HTML标签：
+1&amp;lt;html&amp;gt; 2 3 &amp;lt;body&amp;gt; 4 5 &amp;lt;a href=”/servlet/MyFirstServlet”&amp;gt;Make me say Hello World!&amp;lt;/a 6 7 &amp;lt;/body&amp;gt; 8 9&amp;lt;html&amp;gt; 点击超级链接后下列哪一个servlet方法将被调用： 。 (A)	doPost (B)	doGET (C)	doPOST (D)	doGet [参考答案：D] 分值：5
+  关于FORM表单提交的HTTP的GET方法，下列哪个说法是错误的？ (A)	不能向服务器提交无限长度的数据 (B)	不能向服务器提交多值参数 (C)	不能向服务器提交二进制数据 (D)	参数附在URL后面 [参考答案：B] 分值：5</description>
     </item>
     
     <item>
@@ -897,6 +901,15 @@ SQL 在使用 my sql 中就没有其他字段内容。
     </item>
     
     <item>
+      <title>三维图形处理技术</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/mfc3%E7%BB%B4%E5%9B%BE%E5%BD%A2%E5%BC%80%E5%8F%91/%E4%B8%89%E7%BB%B4%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/mfc3%E7%BB%B4%E5%9B%BE%E5%BD%A2%E5%BC%80%E5%8F%91/%E4%B8%89%E7%BB%B4%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>学士学位句子</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E5%AD%A6%E4%BD%8D%E8%8B%B1%E8%AF%AD/%E5%8F%A5%E5%AD%90/%E5%AD%A6%E4%BD%8D%E8%8B%B1%E8%AF%AD%E5%8F%A5%E5%AD%90/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
@@ -960,7 +973,11 @@ at length, that is all i want to say,now i want to be stronger ,thanks.</descrip
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%860/</guid>
-      <description></description>
+      <description>在SQL Server 2008中，有系统数据库master、model、msdb、tempdb和用户数据库。下列关于系统数据库和用户数据库的备份策略，最合理的是( )。 (A)	对系统数据库和用户数据库都实行周期性备份 (B)	对系统数据库和用户数据库都实行修改之后即备份 (C)	对master、model、msdb实行修改之后即备份，对用户数据库实行周期性备份，对tempdb不备份 (D)	对系统数据库实行修改之后即备份，对用户数据库实行周期性备份 [参考答案：C] 分值：5
+  下列关于日志备份的说法中，错误的是 (A)	日志备份仅备份日志，不备份数据 (B)	第一次对数据库进行的备份可以是日志备份 (C)	日志备份的时间间隔通常比差异备份短 (D)	日志备份的执行效率通常比差异备份和完整备份高 [参考答案：B] 分值：5
+  GRANT语句用于 ( )。 (A)	拒绝用户权限 (B)	撤销用户权限 (C)	创建数据库用户 (D)	授予用户权限 [参考答案：D] 分值：5
+  关于登录帐号与数据库用户帐号正确的是 ( )。 (A)	同时拥有登录帐号和数据库用户帐号才能访问SQL Server数据库的数据 (B)	拥有登录帐号自然拥有数据库用户帐号 (C)	拥有数据库用户帐号自然拥有登录帐号 (D)	二者没有却别 [参考答案：A] 分值：5
+  创建触发器使用的T-SQL语句是( )。&amp;quot; (A)	DECLARE TRIGGER (B)	SET TRIGGER (C)	CREATE TRIGGER (D)	ALTER TRIGGER [参考答案：C] 分值：5</description>
     </item>
     
   </channel>

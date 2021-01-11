@@ -3,9 +3,7 @@ date = "2020-12-18"
 title = "统考英语B错题集第一个版本"
 description = "统考英语B错题集第一个版本"
 tags = [ "统考英语B","英语","错题集"]
-categories = [
-    "杂学","英语"
-]
+ 
 series = ["专升本"]
 featured = true
 +++
