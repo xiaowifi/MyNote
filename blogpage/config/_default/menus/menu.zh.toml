@@ -27,6 +27,6 @@
   url = "about/"
   weight = -107
 [[main]]
-  name = "更新日志"
-  url = "logs/"
+  name = "顶呱呱"
+  url = "dgg/"
   weight = -107
