@@ -1,0 +1,13 @@
++++
+date = "2021-2-20"
+title = "日常搬砖模板"
+description = "日常搬砖模板"
+series = ["设计模式"]
+featured = true
+slug = "design_pattern_*_mode"
++++
+![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
+> 顺便推一下[博客主页](http://lalalaxiaowifi.gitee.io/pictures/)
+## 正文
+> 主要详细理解设计模式。感觉这个设计模式蛮重要的。[内容来源](http://c.biancheng.net/view/1330.html)
+
