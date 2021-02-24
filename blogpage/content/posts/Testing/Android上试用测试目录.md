@@ -1,0 +1,25 @@
++++
+date = "2021-2-23"
+title = "Android上使用测试目录"
+description = "Android上使用测试目录"
+series = ["testing"]
+slug = "testing"
+featured = true
++++
+![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
+> [博客主页](http://lalalaxiaowifi.gitee.io/pictures/) <br>
+> [Google提供Android测试教程文档](https://developer.android.google.cn/training/testing/fundamentals) <br>
+> Android使用测试还是蛮重要的，毕竟减少run的时间，虽然run的时候可以摸鱼。嘻嘻。
+
+测试金字塔说明了应用应如何包含三类测试（即小型、中型和大型测试）：
+* 小型测试是指单元测试，用于验证应用的行为，一次验证一个类。
+* 中型测试是指集成测试，用于验证模块内堆栈级别之间的互动或相关模块之间的互动。
+* 大型测试是指端到端测试，用于验证跨越了应用的多个模块的用户操作流程。 
+  
+沿着金字塔逐级向上，从小型测试到大型测试，各类测试的保真度逐级提高，但维护和调试工作所需的执行时间和工作量也逐级增加。因此，您编写的单元测试应多于集成测试，集成测试应多于端到端测试。虽然各类测试的比例可能会因应用的用例不同而异，但我们通常建议各类测试所占比例如下：小型测试占 70%，中型测试占 20%，大型测试占 10%。
+
+
+## 正文
+
+  
+
