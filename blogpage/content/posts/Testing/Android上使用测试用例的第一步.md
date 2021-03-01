@@ -239,7 +239,19 @@ public class MockitInorderTest {
 > Robolectric可以解决此类问题，它的设计思路便是通过实现一套JVM能运行的Android代码，从而做到脱离Android环境进行测试。
 > [robolectric 教程地址](http://robolectric.org/getting-started/) ,ok.懂了。主要看这个调调，其他的先放弃。这整界面相关的单元测试，卧槽深得我心。
 #### 环境配置
+````aidl
+//导入
+testImplementation 'org.robolectric:robolectric:4.4'
+// 环境配置。
+android {
+  testOptions {
+    unitTests {
+      includeAndroidResources = true
+    }
+  }
+}
 
+````
 
 
 
