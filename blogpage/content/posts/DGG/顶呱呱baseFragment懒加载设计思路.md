@@ -66,4 +66,17 @@ dispatchUserVisibleHint(true);
 #### showContent
 > 上面数据初始化成功后，调用显示正常数据。
 
-
+### 界面分层
+结合setLoadSir 这个方法，当然也可以不结合这个方法。因为现在的adapter包含了这类功能。他只是提供了统一的方法调用。在viewModel 中设置MutableLiveData，通过改变监听实现达到，
+````aidl
+ ((MvvmBaseViewModel)viewModel).loadFailData.observe(getActivity(), new Observer<BaseFailData>() {
+            @Override
+            public void onChanged(BaseFailData failData) {
+                showFailure(failData.getCode(),failData.getMessage());
+            }});
+````
+同样的监听还有4个:
+* loadEmptyData 加载空界面样式
+* loadFailData  加载失败界面样式
+* loadMoreEmptyData 加载更多为空的尾部样式
+* loadMoreFailData  加载更多的失败的样式。
