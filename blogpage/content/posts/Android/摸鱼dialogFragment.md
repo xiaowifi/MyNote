@@ -78,7 +78,7 @@ dialog.show(getSupportFragmentManager(), "NormalDialog");
 
 ### 与activity互动
 
-通过上面的笔记可以知道，这个显示和fragment加载还是有点区别的，其他这个调调代码少了很多，且是浮到activity上面的感觉，而fragment是包含在activity里面的。但是又是基于FragmentManager 显示的。![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20200921111932.png)我觉得，activity 可以通过FragmentManager控制整个dialogfragment.这么一想，我fragment里面 是不是也可以控制当前fragment显示与否，而不是通过回调或者通知让activity控制显示与否(这个需求有点少，除非你用fragment去实现多状态布局(比如说：正常逻辑层，数据错误层，空界面，登录过期等等，但是这种逻辑怕是用fragment要被锤爆脑阔吧))。
+通过上面的笔记可以知道，这个显示和fragment加载还是有点区别的，其他这个调调代码少了很多，且是浮到activity上面的感觉，而fragment是包含在activity里面的。但是又是基于FragmentManager 显示的。![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20200921111932.png) 我觉得，activity 可以通过FragmentManager控制整个dialogfragment.这么一想，我fragment里面 是不是也可以控制当前fragment显示与否，而不是通过回调或者通知让activity控制显示与否(这个需求有点少，除非你用fragment去实现多状态布局(比如说：正常逻辑层，数据错误层，空界面，登录过期等等，但是这种逻辑怕是用fragment要被锤爆脑阔吧))。
 
 
 
