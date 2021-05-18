@@ -1,7 +1,7 @@
 # set `baseurl` to your root domain
 # if you set it to "/" share icons won't work properly on production
-baseurl = "http://lalalaxiaowifi.gitee.io/pictures/"  #  修改后需要 使用hogo -D  重新编译，然后提交，本地运行不用 编译。
-#baseurl = "https://example.com/"  #  https://example.com/
+#baseurl = "http://lalalaxiaowifi.gitee.io/pictures/"  #  修改后需要 使用hogo -D  重新编译，然后提交，本地运行不用 编译。
+baseurl = "https://example.com/"  #  https://example.com/
 title = "个人主页"
 author = "luoye@yangfan"
 copyright = "Copyright © 2020-2099"
