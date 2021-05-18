@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mpaas on 个人主页</title>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/series/mpaas/</link>
+    <description>Recent content in Mpaas on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/series/mpaas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mpaas其他组件</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</guid>
+      <description>##导入包
+ mpaas 提供Android studio 插件，在插件中选择使用。
+ 1// ui 库 2 api &amp;#39;com.mpaas.android:antui&amp;#39; AUTabBarItem  需要通过外层布局包裹，这个只是一个文本加图标的组合体。每个view独立，基础使用无法达到Android中 tablayou 切换时候，底部条平滑滚动的效果。因为相对独立，所以可能出现同时选中两个的情况，需要代码逻辑控制。
+ xml 1&amp;lt;com.alipay.mobile.antui.bar.AUTabBarItem 2 android:layout_width=&amp;#34;0dp&amp;#34; 3 android:layout_height=&amp;#34;wrap_content&amp;#34; 4 android:layout_weight=&amp;#34;1&amp;#34; 5 android:clickable=&amp;#34;true&amp;#34; 6 android:text=&amp;#34;标签1&amp;#34; 7 app:topIconSid=&amp;#34;@drawable/tab_icon&amp;#34; /&amp;gt; 自定义属性    属性名 说明 类型     topIconSid 图标 reference   topIconSize 图标大小 dimension   textColor 文字颜色 color，reference    颜色 1&amp;lt;selector xmlns:android=&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&amp;gt; 2 &amp;lt;item android:state_selected=&amp;#34;true&amp;#34; android:color=&amp;#34;@color/AU_COLOR1&amp;#34; /&amp;gt; 3 &amp;lt;item android:state_focused=&amp;#34;true&amp;#34; android:color=&amp;#34;@color/AU_COLOR1&amp;#34; /&amp;gt; 4 &amp;lt;item android:state_pressed=&amp;#34;true&amp;#34; android:color=&amp;#34;@color/AU_COLOR1&amp;#34; /&amp;gt; 5 &amp;lt;item android:color=&amp;#34;@color/AU_COLOR6&amp;#34;/&amp;gt; 6&amp;lt;/selector&amp;gt; 图标 1&amp;lt;selector xmlns:android=&amp;#34;http://schemas.</description>
+    </item>
+    
+    <item>
+      <title>Mpaas其他组件-AUCheckIcon </title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</guid>
+      <description>##导入包
+ mpaas 提供Android studio 插件，在插件中选择使用。
+ 1// ui 库 2 api &amp;#39;com.mpaas.android:antui&amp;#39; 正文  https://help.aliyun.com/document_detail/71740.html?spm=a2c4g.11186623.6.1505.535331de0J0Ddm 基于android.widget.CheckBox。
+ AUCheckIcon  AUCheckIcon 组件用于实现选择框的 IconView。的意思是图标需要通过 IconView类似的设置吗，但是IconView 的设置图标是setIconByName.
+ xml 1 &amp;lt;com.alipay.mobile.antui.common.AUCheckIcon 2 android:id=&amp;#34;@+id/au_check_icon&amp;#34; 3 android:layout_width=&amp;#34;45dp&amp;#34; 4 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt; 设置 1/**选中状态*/ 2public static final int STATE_CHECKED = 0x01; 3/**未选中状态*/ 4public static final int STATE_UNCHECKED = 0x02; 5/**不可取消勾选状态*/ 6public static final int STATE_CANNOT_UNCHECKED = 0x03; 7/**不可勾选状态*/ 8public static final int STATE_CANNOT_CHECKED = 0x04; 9/** 10* 设置 checkIcon 的状态 11* @param state 12*/ 13public void setIconState(int state); 14/** 15* 获取checkIcon的状态 16* @return 17*/ 18public int getIconState() ; 样式  采用checkbox button style 在xml中设置 checked 会有状态切换效果，通过Java 代码设置未发现更改样式。 可能还是和颜色配置有关，通过配置正确的style 可能达到修改的样式效果。</description>
+    </item>
+    
+    <item>
+      <title>Mpaas其他组件-切换栏组件</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</guid>
+      <description>##导入包
+ mpaas 提供Android studio 插件，在插件中选择使用。
+ 1// ui 库 2 api &amp;#39;com.mpaas.android:antui&amp;#39; 切换栏组件  com.alipay.mobile.antui.segement.AUSegment
+ 自定义属性 10.0.20 及以后版本添加了 scroll 属性。
+   属性名 用途 类型     tabCount Tab 数量(如果说这个值定义为2，但是tab数量有3个，只会显示前两个tab)，不设置这个可能不会均分父布局 integer   tab1Text Tab1 文案 string，reference   tab2Text Tab1 文案 string，reference   tab3Text Tab3 文案 string，reference   tab4Text Tab4 文案 string，reference   tabTextArray Tab 文本数组 string，reference   uniformlySpaced 是否自适应 boolean   tabTextColor 文字颜色 reference，color   tabTextSize 文字大小 dimension   buttomLineColor 底部线条颜色 color，reference   scroll 是否支持滚动 boolean   add 显示一个（+）的tab ,默认位于右边，默认值为false，可以自定义图标，只有基础事件，通过getAddIcon() 设置事件等，比如说点击，长按等等。 boolean    style 1&amp;lt;declare-styleable name=&amp;#34;Segment&amp;#34;&amp;gt; 2 &amp;lt;attr name=&amp;#34;tabCount&amp;#34; format=&amp;#34;integer&amp;#34; /&amp;gt; 3 &amp;lt;attr name=&amp;#34;tab1Text&amp;#34; format=&amp;#34;string|reference&amp;#34; /&amp;gt; 4 &amp;lt;attr name=&amp;#34;tab2Text&amp;#34; format=&amp;#34;string|reference&amp;#34; /&amp;gt; 5 &amp;lt;attr name=&amp;#34;tab3Text&amp;#34; format=&amp;#34;string|reference&amp;#34; /&amp;gt; 6 &amp;lt;attr name=&amp;#34;tab4Text&amp;#34; format=&amp;#34;string|reference&amp;#34; /&amp;gt; 7 &amp;lt;attr name=&amp;#34;tabTextArray&amp;#34; format=&amp;#34;string|reference&amp;#34; /&amp;gt; 8 &amp;lt;attr name=&amp;#34;uniformlySpaced&amp;#34; format=&amp;#34;boolean&amp;#34; /&amp;gt; 9 &amp;lt;attr name=&amp;#34;tabTextColor&amp;#34; format=&amp;#34;color&amp;#34; /&amp;gt; 10 &amp;lt;attr name=&amp;#34;tabTextSize&amp;#34; format=&amp;#34;dimension&amp;#34; /&amp;gt; 11 &amp;lt;attr name=&amp;#34;buttomLineColor&amp;#34; format=&amp;#34;color|reference&amp;#34; /&amp;gt; 12 &amp;lt;attr name=&amp;#34;scroll&amp;#34; format=&amp;#34;boolean&amp;#34; /&amp;gt; 13 &amp;lt;attr name=&amp;#34;repeatClick&amp;#34; format=&amp;#34;boolean&amp;#34; /&amp;gt; 14 &amp;lt;attr name=&amp;#34;add&amp;#34; format=&amp;#34;boolean&amp;#34; /&amp;gt; 15 &amp;lt;attr name=&amp;#34;tabSpace&amp;#34; format=&amp;#34;dimension&amp;#34; /&amp;gt; 16 &amp;lt;attr name=&amp;#34;edgeSpace&amp;#34; format=&amp;#34;dimension&amp;#34; /&amp;gt; 17 &amp;lt;/declare-styleable&amp;gt; 参考内容  activity ：com.</description>
+    </item>
+    
+    <item>
+      <title>Mpaas其他组件-刷新</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</guid>
+      <description>##导入包
+ mpaas 提供Android studio 插件，在插件中选择使用。
+ 1// ui 库 2 api &amp;#39;com.mpaas.android:antui&amp;#39; 刷新组件  AURefreshListView 这个本身就是一个listview. AUPullRefreshView 这个是一个容器，需要内部添加。  AURefreshListView xml 使用，本身就是一个listview.不用内部填充listview.
+1 &amp;lt;com.alipay.mobile.antui.load.AURefreshListView 2 android:id=&amp;#34;@+id/refresh_list&amp;#34; 3 android:layout_width=&amp;#34;match_parent&amp;#34; 4 android:layout_height=&amp;#34;match_parent&amp;#34;/&amp;gt; 方法  关闭刷新头和加载更多都需要在ui线程中使用。
+  setLoadingText 这个是下拉刷新未松手的自定义文本。 setLoadingView 提供修改刷新头的背景和刷新头样式，提供两种样式。比如说：AntLoadingView.STYLE_WHITE  1 AntLoadingView 2 public static final java.lang.String STYLE_BLUE = &amp;#34;_BLUE&amp;#34;; 3 public static final java.lang.String STYLE_WHITE = &amp;#34;_WHITE&amp;#34;;  setLoadingView 传入自定义的loadingview. setOnLoadMoreListener 设置加载更多监听。 updateLoadMore(isShowLoad,hasMore) 在ui线程调用 setOnPullRefreshListener 刷新监听 finishRefresh() 关闭刷新。UI 线程调用。 setLoadingView() 和设置加载刷新头样式差不多。  自定义刷新头实例代码  参考AntLoadingView。 加载更多类似。</description>
+    </item>
+    
+    <item>
+      <title>Mpaas其他组件-图标</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</guid>
+      <description>##导入包
+ mpaas 提供Android studio 插件，在插件中选择使用。
+ 1// ui 库 2 api &amp;#39;com.mpaas.android:antui&amp;#39; AUIconView  资源化的图标和阿里提供的图标。两种使用图标方式。
+AUIconView 为 iconfont 矢量图控件，可以同时实现 TextView 及 ImageView 的功能。
+iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 的 TTF 字体文件，定义特殊的 Unicode 码对应一类图片字体。也就是说，iconfont 相当于是加载了一个字体，一个字体对应了多张图片，每个图片有一个 Unicode 码。
+每个 iconfont 集合实际就是一个 TTF 字体文件，因此可以加载多个 TTF 字体文件。每个 TTF 字体文件有一个名称，默认 AntUI 的 TTF 字体文件名称为 auiconfont。
+ 图标资源    资源 ID 对应的示例名称     com.alipay.mobile.antui.R.string.iconfont_more 更多   com.alipay.mobile.antui.R.string.iconfont_cancel 取消   com.</description>
+    </item>
+    
+    <item>
+      <title>Mpaas其他组件-开关组件</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</guid>
+      <description>##导入包
+ mpaas 提供Android studio 插件，在插件中选择使用。
+ 1// ui 库 2 api &amp;#39;com.mpaas.android:antui&amp;#39; 正文  1package com.alipay.mobile.antui.basic; AUSwitch 2AUSwitch 基于Android Switch ，  修改内容  主要修改内容：
+ 1 this.setThumbResource(drawable.au_switch_thumb); 2 this.setTrackResource(drawable.au_switch_track); 3 this.setSwitchMinWidth(DensityUtil.dip2px(this.getContext(), 70.0F)); 4 this.setTextOn(&amp;#34; &amp;#34;); 5 this.setTextOff(&amp;#34; &amp;#34;); 6 this.textOn = this.getResources().getString(string.opened); 7 this.textOff = this.getResources().getString(string.closed); xml 使用 1&amp;lt;com.alipay.mobile.antui.basic.AUSwitch 2 android:id=&amp;#34;@+id/change_switch&amp;#34; 3 android:layout_height=&amp;#34;wrap_content&amp;#34; 4 android:layout_width=&amp;#34;wrap_content&amp;#34; 5 android:layout_marginTop=&amp;#34;8dp&amp;#34; 6 android:checked=&amp;#34;false&amp;#34; 7 android:layout_marginBottom=&amp;#34;8dp&amp;#34; 8/&amp;gt; 自定义图片 1AUSwitch change_switch= view.findViewById(R.id.change_switch); 2change_switch.setThumbResource(R.drawable.keyboard_switch); 3change_switch.setThumbResource(R.drawable.keyboard_switch_press); 效果  有点丑，主要是证明他是可以修改的。需要自己约束好这个调调。可能对于圆角类型的switch 不是太友好。</description>
+    </item>
+    
+    <item>
+      <title>Mpaas其他组件-按钮</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</guid>
+      <description>##导入包
+ mpaas 提供Android studio 插件，在插件中选择使用。
+ 1// ui 库 2 api &amp;#39;com.mpaas.android:antui&amp;#39; AUButton 1&amp;lt;com.alipay.mobile.antui.basic.AUButton 2 style=&amp;#34;@style/mainButtonStyle&amp;#34; 3 android:layout_margin=&amp;#34;12dp&amp;#34; 4 android:clickable=&amp;#34;true&amp;#34; 5 android:text=&amp;#34;主要操作 Normal&amp;#34; /&amp;gt;  基于 android.widget.Button
+ Style 接口    属性名 说明 tag     mainButtonStyle 页面主按钮 main   subButtonStyle 页面次按钮 sub   warnButtonStyle 警告按钮 warn   assMainButtonStyle 辅助主按钮 ass   assButtonStyle 辅助次按钮 ass   listButtonStyle 列表按钮 list    基于style 自定义样式 1&amp;lt;item name=&amp;#34;android:tag&amp;#34;&amp;gt;main&amp;lt;/item&amp;gt; 这个属性一定要重置，否则自定义样式可能不会生效。</description>
+    </item>
+    
+    <item>
+      <title>Mpaas其他组件-换肤</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</guid>
+      <description>##导入包
+ mpaas 提供Android studio 插件，在插件中选择使用。
+ 1// ui 库 2 api &amp;#39;com.mpaas.android:antui&amp;#39; 前言  说回正题，换肤这个功能，在好多app中都用。因为比较急促的开始整mpaas,导致文档没有看全，我也没有搜索到换肤这个调调。 但是在好多mpaas 控件中，这个调调是可以统一设置的。因为涉及到换肤，所以，控件并没有代码设置这一项。卑微，之前换肤切style不是这么写的。 作为一个老搬砖工了，经验害死人呀。 所有控件中不可更改属性都应该优先查找主题中是否支持修改。而不是考虑用父类原生使用，经验告诉我改不了。
+ 换肤  作为大厂的东西，mpaas Android 组件中支持 2中换肤模式，一种是全局设置，一种是界面设置。
+  全局设置 界面设置  内容资料  在demo中的 package com.alipay.mobile.antui.viewdemo; ChangeSkinActivity有详细介绍。
+本笔记也是基于这个activity进行描述扩展。
+ 换肤存储 1 AUThemeManager.setCurrentThemeKey(AUThemeManager.THEMEKEY_DEFAULT); 2 SharedPreferences sharedPreferences = getSharedPreferences(&amp;#34;com.alipay.mobile.antui&amp;#34;, MODE_MULTI_PROCESS); 3 SharedPreferences.Editor editor = sharedPreferences.edit(); 4 editor.putString(&amp;#34;CurrentThemeKey&amp;#34;, AUThemeManager.THEMEKEY_DEFAULT); 5 editor.commit(); 换肤自定义  换肤是基于Java 代码实现，所以所有的子类都应该继承于 AUAbsTheme。ChangeThemeImpl提供了简单的使用方式。
+ key 值来源  AUThemeKey 中包含所以mpaas ui 中支持的换肤的属性。AUAbsTheme中设置主题的key,应该从这个地方来。</description>
+    </item>
+    
+    <item>
+      <title>Mpaas其他组件-操作条组件</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</guid>
+      <description>##导入包
+ mpaas 提供Android studio 插件，在插件中选择使用。
+ 1// ui 库 2 api &amp;#39;com.mpaas.android:antui&amp;#39; AUCardOptionView 1&amp;lt;com.alipay.mobile.antui.basic.AUCardOptionView 2 android:id=&amp;#34;@+id/card_option_view&amp;#34; 3 android:layout_width=&amp;#34;match_parent&amp;#34; 4 android:layout_height=&amp;#34;wrap_content&amp;#34; 5 android:layout_marginTop=&amp;#34;50dp&amp;#34;/&amp;gt; 控件需要代码添加。类型固定，包含，点赞，打赏，评论。 默认是基于父布局均分的。参数私有，无法通过继承等方式增加类型，图标更改应该还是在主题设置中配置。
+1public static final java.lang.String TYPE_PRAISE = &amp;#34;praise&amp;#34;; 2public static final java.lang.String TYPE_REWARD = &amp;#34;reward&amp;#34;; 3public static final java.lang.String TYPE_COMMENT = &amp;#34;comment&amp;#34;; // 创建一个子view。
+1 AUCardOptionView.CardOptionItem optionItem1 = new AUCardOptionView.CardOptionItem(); 2 optionItem1.type = AUCardOptionView.TYPE_PRAISE; 3 optionItem1.hasClicked = false; 参数设置 1// 这个可以使文本保持不变。 比如说点赞过了，但是文本还是点赞两个字。 2optionView.setViewInfo(optionItems,AUCardOptionView.TEXT_NOT_CHANGE); 1// 这个会计数。没有点赞数的时候显示赞，有赞的时候显示数量。 2optionView.setViewInfo(optionItems); 1 optionView.</description>
+    </item>
+    
+    <item>
+      <title>Mpaas其他组件-索引组件</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/</guid>
+      <description>##导入包
+ mpaas 提供Android studio 插件，在插件中选择使用。
+ 1// ui 库 2 api &amp;#39;com.mpaas.android:antui&amp;#39; 3 4 https://help.aliyun.com/document_detail/71741.html?spm=a2c4g.11186623.6.1506.29b84e8a480Z08 正文 1 &amp;lt;com.alipay.mobile.antui.basic.AUBladeView 2 android:layout_width=&amp;#34;24dp&amp;#34; 3 android:layout_height=&amp;#34;wrap_content&amp;#34; 4 app:top1Text=&amp;#34;⊙&amp;#34; 5 app:top2Text=&amp;#34;オ&amp;#34;/&amp;gt; 自定义属性    属性名 说明 类型     top1Text 自定义第一个文本字符 reference   top2Text 自定义第二个文本字符 reference   showSelectPop 是否显示滑动或者点击过程中中间弹出的浮层 boolean    监听 1 /** 2 * 设置字母选中监听 3 */ 4 public void setOnItemClickListener(OnItemClickListener listener) 5 public interface OnItemClickListener { 6 /** 7 * 设置字母选中监听 8 * @param clickChar 点击或者选中的字母 9 */ 10 void onItemClick(String clickChar); 11 /** 12 * 手指抬起的事件，无特殊需求，无需关注此方法 13 */ 14 void onClickUp(); 15 } 分栏   默认加载数据为a到z#。 可以添加两个头，在a 之前。 默认文本应该是12号，#999999的颜色值。   </description>
+    </item>
+    
+    <item>
+      <title>Mpaas阿里系列 AntUI初步采坑</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/dgg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/dgg/</guid>
+      <description>前言 顺便推一下博客主页
+正文  现在公司决定使用这个调调，然后呢，就是我们需要学习使用这个调调。 Mpaas 阿里文档
+   [AntUI]https://help.aliyun.com/document_detail/71733.html?spm=a2c4g.11186623.6.1468.52ca2dedLmEE5H
+ 导入包  mpaas 提供Android studio 插件，在插件中选择使用。但是还是会存在一些使用问题，比如说不知道这个包是干啥的。所以就是这个笔记存在的意义。
+ 1// ui 库 2 api &amp;#39;com.mpaas.android:antui&amp;#39; </description>
+    </item>
+    
+    <item>
+      <title>Mpaas阿里系列Android使用目录</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/dgg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/dgg/</guid>
+      <description>前言 顺便推一下博客主页
+正文  现在公司决定使用这个调调，然后呢，就是我们需要学习使用这个调调。 Mpaas 阿里文档 mpaas 提供Android studio 插件，在插件中选择使用。但是还是会存在一些使用问题，比如说不知道这个包是干啥的。所以就是这个笔记存在的意义。
+ </description>
+    </item>
+    
+    <item>
+      <title>Mpaas阿里系列Android使用目录</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/dgg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/dgg/</guid>
+      <description>前言 顺便推一下博客主页
+正文  现在公司决定使用这个调调，然后呢，就是我们需要学习使用这个调调。 Mpaas 阿里文档 mpaas 提供Android studio 插件，在插件中选择使用。但是还是会存在一些使用问题，比如说不知道这个包是干啥的。所以就是这个笔记存在的意义。
+  这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接   这个能写多少，大概就是我能够狗多久了。加油，还有两年继续狗吧。
+ </description>
+    </item>
+    
+  </channel>
+</rss>

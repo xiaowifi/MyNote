@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>个人主页</title>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</link>
+    <description>Recent content on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright>
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hexo&#43;Gitee pages 搭建个人主页</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <description>前言 顺便推一下博客目录
+之前整过一个Jekyll和静态网页的主页笔记，最近换季，导致感冒拉肚子，又为国庆生等等耽搁了快一个月了，原本打算这个系列在一周内整出来的，结果到现在还有2个TODO未实现。那么本篇主要级hexo.先上文档官网：
+gitee pages 官方文档
+Hexo 使用文档：https://hexo.io/docs/
+这个是用Node.js .
+既然我们用的IDEA,那么node,js也是需要安装的。必须安装。
+正文 如果你的Node.js 已经安装成功了。那么按照hexo 提供的教程走就好了。
+安装Hexo 先安装hexo：https://hexo.io/zh-cn/docs/
+安装2选1就好。
+创建执行HEXO 项目 创建 创建代码还是很简单，找一个空目录在终端中执行：
+1hexo init myblog Myblog 是自目录名称，根据个人爱好写。然后是:
+​	cd myblog//切到myblog 目录：
+最后执行：
+1npm install 然后通过idea 打开该项目就可以进行编辑了。
+配置运行 因为这个项目是基于Node,js 运行的，那么我们直接对整个项目的运行环境进行设置？
+对于一个闲鱼而言，从代码中找到运行项是很简单的。比如说**hexo server ** 我觉得这个就是运行Demo 的关键。
+如果idea 打开这个文件没有运行按钮，就需要对整个项目目录配置为node 的项目比如：
+![image-20201009112924696](/Users/yangfan/Library/Application Support/typora-user-images/image-20201009112924696.png)
+但是通常还是有运行按钮的。运行成功后打开：http://localhost:4000/ 就可以看到初始创建的博客样子了。如果404 明显就是 hexo server 没有运行成功嘛。
+添加一篇文章 我们在运行成功后，发现里面有一篇默认文章。修改网页的一些默认值 https://hexo.io/zh-cn/docs/configuration。这里就不重复了。我们可以在项目的目录下找到：
+这个和运行出来的hello world 内容是差不多的。里面除了正文 还有：
+1--- 2title: 测试Demo1 3--- 这个怎么和Jekyll 的文章配置这么像啊，兄弟。而且没有要求用时间+名字，很舒服。那么我不写这个配置会出现什么情况？
+和Jekyll 一样的嘛，标题都是抓的title。但是时间是抓的生成时间。而且Jekyll标题没有按照格式来的话，是不会显示到目录中的，这个好像可以设置。</description>
+    </item>
+    
+    <item>
+      <title>Hexo&#43;Gitee pages 搭建个人主页进阶</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/hexo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/hexo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</guid>
+      <description>前言 之前整了一些笔记。
+[gitee+picgo 图床上传图片404](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/gitee 图床上传图片404.md)
+[基于html拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/如何基于gitee pages 搭建一个属于自己的主页.md)
+[基于Jekyll拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/2020-09-29-基于Gitee pages+Jekyll拥有一个属于自己的主页.md)
+[Gitee Pages Jekyll如何才能放到子目录和非同名项目中](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/Gitee Pages Jekyll如何才能放到子目录和非同名项目中.md)
+[基于Hexo拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/基于Gitee pages+Hexo拥有一个属于自己的主页.md)
+[基于Hugo拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/基于Gitee pages+Hugo拥有一个属于自己的主页.md)
+都是基于Gitee 的。反正最近很闲，没有多少动力学习Android，其实没有完成的todo 还是蛮多的。但是就想摸鱼。毕竟越是难的东西，花费的精力就越多，像网上哪些多少天就学会什么成为高阶开发什么的，对我完全不适用，除非就真的很简单，但是会简单的也成不了高阶吧。话说回来，Gitee pages 主页就比较简单了，至于为啥药写这么多简单的笔记，主要锻炼自己总结能力和逻辑能力吧。
+顺便推一下博客目录
+正文 话说，之前有一个[基于Hexo拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/基于Gitee pages+Hexo拥有一个属于自己的主页.md) 。这个是推的编译后的文件到同名项目的根目录。而一个人只有一个同名项目，同时在gitee pages上只能开启一个主页。对于我这种脑洞满天飞，且不断作死的baby.我觉得，既然人家文档都提供了，不利用起来那就开整，还是先贴文档。https://gitee.com/help/articles/4136#article-header0
+  编译 Hexo 依据：仓库编译目录下存在package.json，_config.yml文件和scaffolds目录的，会使用hexo generate生成静态文件，由于每次部署编译需要重新克隆编译并进行npm install，所以使用 Hexo 的时间相对 Hugo 和 Jekyll 会长一些。   哦哦，理解一波，这个可以直接提交项目源代码。
+ Hexo 配置文件_config.yml的url和root修改如下：
+1url: https://ipvb.gitee.io/blog 2root: /blog  这个理解一波，就是可以提交到非同名项目下。基于之前Jekyll 使用github 主题导致问题。那么，我们这个hexo就不用别人的主题，直接使用系统提供的。这里解释下，Github 对Github pages 对应的项目名有明确的要求，不像Gitee pages 玩的这么花，如果是放在同名根目录下是没有问题的，如果是放到非同名项目中。那么可能因为主题作者没有适配一些东西，导致资源文件找不到，还是建议放到同名根目录，毕竟个人主页嘛，一个就好。也没有一些莫名其妙的问题。
+源码提交 之前那篇笔记是通过一键部署到同名项目的根目录下的。既然是提交项目源代码，那么就不能用一键部署了咯。那就开整。之前本地安装过环境。就直接创建项目了。
+1hexo init myblog 2npm install 稍微修改写congfig 中的内容。</description>
+    </item>
+    
+    <item>
+      <title>Hugo&#43;Gitee pages 搭建个人主页</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hugo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hugo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <description>前言 之前整过一个静态网页，一个Jekyll，一个hexo.话说，如果我知道的不完整，我怎么才能知道什么才是适合自己的呢？那么，就开整。
+顺便推一下博客目录
+正文 老规矩，还是先贴官方教程:
+Gitee pages 适用文档: https://gitee.com/help/articles/4136#article-header0
+Hugo 使用文档：https://gohugo.io/documentation/
+ Hugo is the world’s fastest static website engine. It’s written in Go (aka Golang) and developed by bep, spf13 and friends.
+ 不说别的，光说上面的这一句话包含的意思，一个Go，一个最快。我就应该先了解这个，了解这个之后，前面几个笔记也不会这么苦逼的写了，直接放弃就好。
+环境 既然是基于Go,那么IDEA 开发环境还是需要的。老规矩，还是先整插件:https://plugins.jetbrains.com/
+https://plugins.jetbrains.com/plugin/9568-go 下载和IDEA版本号相同的插件。
+因为网络问题，GO SDK 在IDEA 中下载缓慢，甚至版本号都拉不到，所以需要自己手动下载安装。
+https://golang.google.cn/dl/
+安装运行 不同的系统环境，安装的方式不同。详情看教程：https://gohugo.io/getting-started/installing 。就因为我没有看这个教程，我的电脑更新Homebrew 已经更新10分钟了。因为安装的方式太多了，所以就不截图介绍了。
+ hugo version 通过这个验证版本号，同时验证安装是否成功。有版本号就成功了，没有应该就是没有成功。
+ 但是一项脑洞到处跑的我，突然想到了 hugo 可能出现在IDEA的插件中我果然在IDEA 插件库中找到了一个。但是本地还是需要一个安装Hugo.但是也不是没有用，起码可以直接运行项目。
+通过Homebrew安装过程中或许会出现:
+ The following directories are not writable by your user:
+/usr/local/sbin</description>
+    </item>
+    
+    <item>
+      <title>Hugo&#43;Gitee pages 搭建个人主页</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Ehogo%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Ehogo%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <description>前言 在对比了Jekyll，hexo和hugo 之后，我决定使用Hugo搭建属于自己的主页。自己写静态网页这个调调就基本上放弃了。因为打算认真的写笔记什么的了。 选择hogo 原因还是蛮简单的，主要是他主题提供了Demo。虽然Jekyll主题可以下载别人项目的源码，但是还是需要去读和修改的。 顺便推一下博客目录
+结束 http://localhost:1313/images/avatar.jpg 谢谢光临，若觉得还行麻烦点一下赞，若觉得写得垃圾，欢迎批评指正。笔者知道自己文笔和表达能力很弱，如果您可以提供点宝贵的意见不胜感激。谢谢。
+今天也可以是元气满满的一天哦。 更新需要审核。更新通常优先更新到gitee上面。
+博客目录</description>
+    </item>
+    
+    <item>
+      <title>Hugo&#43;Gitee pages 搭建个人主页进阶</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/hogo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/hogo&#43;gitee-pages%E8%BF%9B%E9%98%B6/</guid>
+      <description>前言 之前整了一个Gitee page 的笔记。
+[gitee+picgo 图床上传图片404](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/gitee 图床上传图片404.md)
+[基于html拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/如何基于gitee pages 搭建一个属于自己的主页.md)
+[基于Jekyll拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/2020-09-29-基于Gitee pages+Jekyll拥有一个属于自己的主页.md)
+[Gitee Pages Jekyll如何才能放到子目录和非同名项目中](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/Gitee Pages Jekyll如何才能放到子目录和非同名项目中.md)
+[基于Hexo拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/基于Gitee pages+Hexo拥有一个属于自己的主页.md)
+[Hexo+Gitee pages进阶](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/Hexo+Gitee pages进阶.md)
+[基于Hugo拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/基于Gitee pages+Hugo拥有一个属于自己的主页.md)
+因为Jekyll 和Hexo的经验让我写这个笔记的时候索然无味。话说hugo 也是提交的静态网页到同名项目到根目录，然后还配置了baseurl才可以的。
+顺便推一下博客目录
+正文 作为一个杠精，我觉得，既然Jekyll，hexo 都可以上传源码和静态网页到同名项目和非同名项目。那么我Hugo必定可行，只是我没有找到解决方式罢了。通过Jekyll和Hexo的经验，都是编译后提交才显示成功的，而且根目录可以子目录就一定可以，子目录可以根目录也可以。同名项目和非同名项目在Gitee page 上的部署的区别主要在于设置。主题可能影响部署中资源文件使用情况。那么就开整。
+还是直接上教程：https://gitee.com/help/articles/4136#article-header0
+  编译 Hugo 依据：仓库编译目录下存在config.toml|json|yaml文件和content目录的时候，会使用hugo生成静态文件。   这个说明可以部署源码。
+ Hugo 配置文件config.toml的baseURL修改如下
+1baseURL = &amp;#34;https://ipvb.gitee.io/blog&amp;#34;   hugo new site quickstart
+切到项目目录下主题。
+1git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke   修改config 中的theme = &amp;quot;ananke&amp;quot;
+ 本地开启server
+ hugo server -D</description>
+    </item>
+    
+    <item>
+      <title>Jekyll&#43;Gitee pages 搭建个人主页</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <description>前言 顺便推一下博客目录 。之前写过一个基于静态html的笔记。
+正文 Jekyll 既然自己写静态网页对于我这种小白而言太复杂了，那么用博客主页生成工具就可以了，毕竟鲁迅曾经说过&amp;quot;成年人最大的优点就是及时止损&amp;quot;。
+Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
+这个要安装Ruby 环境？ 这丫的感觉一个脚本语言，我觉得我还是用html 比较好，毕竟我这个是会的。
+基于IDEA 安装环境 先整一个ruby教程runoob Ruby 教程 。这个感觉和Python很像嘛。那就开整。这个调调的使用感觉和Node.js 很像啊，不会要Node.js 环境吧。怕是需要看一下Ruby 使用安装环境 。
+我的是mac 环境。
+这个是要Xcode ? 我一个Android 搬砖工，也没有安装这个调调啊，我觉得我的IDEA可以完成这个调调。那么直接IDEA 插件官网。IDEA Ruby 插件  根据自己的IDEA 版本号下载对应的版本就好，版本对不上就安装不了。然后自己将下载下来的插件安装到自己的idea 里面就好。然后就是用IDEA自身功能下载sdk就好。然后创建一个Ruby的空项目，创建一个Ruby文件。配置ruby的运行项中的sdk ：
+如果可以正常运行，那么环境就配置好了。当然也可能是运行项没有配置好，主要是配置sdk.这个必须要配置。
+下载运行Jekyll Demo 现在就是按照官网jekyll 操作指南 下载 Jekyll 和创建环境就好。
+下面来说说遇到的问题，
+ 1和2 需要 在前面加sudo 要不然可能没有目录权限，需要输入密码。 2 是在当前目录下创建一个myblog 目录用于生成文件。 3是进入目录，这个很重要，目录错了会导致运行不了。 jekyll --version 可以查看版本号。如果有说明这个安装成功了的。 bundler: failed to load command: jekyll (/usr/local/bin/jekyll) 这个问题，我从网络上找到的说需要 执行bundle install。 上面的问题是运行bundle exec jekyll serve 导致的，如果没有这个问题，直接打开 http://localhost:4000 会出现这个界面：  通过目录结构:</description>
+    </item>
+    
+    <item>
+      <title>Jekyll&#43;Gitee pages 搭建个人主页进阶</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/</guid>
+      <description>前言 之前写了点gitee pages 相关的笔记。
+[基于html拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/如何基于gitee pages 搭建一个属于自己的主页.md)
+[基于Jekyll拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/2020-09-29-基于Gitee pages+Jekyll拥有一个属于自己的主页.md)
+[基于Hexo拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/基于Gitee pages+Hexo拥有一个属于自己的主页.md)
+[基于Hugo拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/基于Gitee pages+Hugo拥有一个属于自己的主页.md)
+但是都是基于同名的项目实现的，而且都是推到根目录下的。Jekyll 还是推的源码上去，hexo和Hugo都是推的编译后的文件。因为Jekyll，Hexo，Hugo都是用的静态网页，所以静态网页也是可以直接用的。顺便推一下博客目录
+正文 但是，我昨天认真工作(摸鱼的时候)突然想到了一个问题，既然都是生成的静态网页，为啥我直接写的静态网页可以放到非同名项目的子目录下运行，为啥Jekyll，hexo ,hugo 等就不行呢，按道理讲，都是编译生成静态网页啊。先放一个静态网页成功的例子：
+运行效果就先不贴了。那么问题来了，是什么导致gitee pages 上面Jekyll，Hexo，Hugo 生成的静态网页用不起的呢？为啥一定要推到根目录，且一定要同名项目呢？还是关于这个配置，我的理解有问题。先贴一个gitee pages 提供的教程：https://gitee.com/help/articles/4136#article-header0
+ Jekyll、Hugo、Hexo 编译判断依据  编译 Hugo 依据：仓库编译目录下存在config.toml|json|yaml文件和content目录的时候，会使用hugo生成静态文件。 编译 Hexo 依据：仓库编译目录下存在package.json，_config.yml文件和scaffolds目录的，会使用hexo generate生成静态文件，由于每次部署编译需要重新克隆编译并进行npm install，所以使用 Hexo 的时间相对 Hugo 和 Jekyll 会长一些。 当不符合上述1和2条件的时候，就默认使用Jekyll编译。   通过教程上面的这个内容，个人理解，Jekyll ，hugo，hexo 按道理讲都应该支持上传项目源码的啊。为啥我的只有jekyll 上传源码到同名根目录才可以有效果？其他的都不行呢？这个坑留着，后面慢慢解。另外还有一个问题。
+第2点中的:生成的资源 url 应该为 https://ipvb.gitee.io/blog/style.css 才对 ,我觉得他证明了非同名项目，且在字目录中是可以实现个人主页的。上传上去的效果不正确，那就是资源文件的url 不正确。于是我采集了静态网页显示正常的图片的url和jekyll 显示不正常的url.
+静态网页显示正常的url:http://lalalaxiaowifi.gitee.io/pictures/images/g2.jpg
+jekyll 配置不正常显示的url:http://lalalaxiaowifi.gitee.io/images/avatar.jpg 这个不正常的url 在同名项目的根目录下是运行正常的，我把整个Jekyll项目放到了pictures/tree/master/Blog/jekyllBlog 下面，等于说我的项目名叫pictures，使用分支是master，根目录下的Blog/jekyllBlog，他就显示不正常了，但是通过对比两个url，发现放到其他目录下，生成的链接地址都是错误的(原因参考 上面图片的第2点)。因为这个也证明了我之前的一个猜测，个人用户应该只有一个主页。开启一个后，其他的必定会被关闭，个人理解Gitee pages 对应的localhost 就是个人根目录，比如说我的根目录应该就是：http://lalalaxiaowifi.gitee.io，再比如说我的pictures地址就应该http://lalalaxiaowifi.gitee.io/pictures。也确实如此。那么既然如此，那就按照Gitee Pages 提供的再配置一次。</description>
+    </item>
+    
+    <item>
+      <title>picgo&#43;gitee配置图床404</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/gitee-%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87404/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/gitee-%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87404/</guid>
+      <description>前言 之前逛掘金沸点的时候。得到了某些大佬的指点，然后知道了一个叫图床的神器，反正都是写笔记，搞一个图床也没有啥问题，表示非常喜欢md 的笔记风格。
+顺便推一下博客目录
+正文 我是通过 picgo+ gitee 图床的。这个教程很多，都写的蛮好的，就不贴了。今天准备认真工作的时候，发现图床上传不了图片，抛了一个404。具体log 稍后再贴。原因也很简单。gitee 的图床插件有两个。我最开始用的是第一个，也就是第一天使用的时候是没有问题的。
+但是昨天404，我换成了另外一个就好了，今天又变成了第一个了？于是我把第一个禁用了，换成了第2个。
+图片上传404 解决方案 如果安装的插件是第一个出现上传图片404，我遇到的解决方式就是先把第一个禁用了，然后安装第2个。
+我也搜索了不少博客，404 通常是配置的时候没有配置对，像这种插件导致的懵逼问题好像没有，但愿你也没有遇到。拿我的图床举例。我的名字和链接地址上是不一样的，我项目的名字是luoye.yangfan/日常搬砖文档，而链接地址是/lalalaxiaowifi/pictures。在picgo的图床配置中 需要使用的是链接地址中的值。还有token 一定要填正确，一定要有master 分支等等。我还是建议用这个插件。如果还是404那就换一个或者配置有问题。图床项目好像是要求公开的（我没有试私有）。
+404 log  {&amp;quot;name&amp;quot;:&amp;quot;StatusCodeError&amp;quot;,&amp;quot;statusCode&amp;quot;:404,&amp;quot;message&amp;quot;:&amp;quot;404 - &amp;quot;\n\n\n\n &amp;lt;meta http-equiv=\&amp;quot;Content-Type\&amp;quot; content=\&amp;quot;text/html; charset=UTF-8\&amp;quot; /&amp;gt;\n 你所访问的页面不存在 (404)}
+ 因为那个404 有点长就不贴完了。这就是页面没有找到，如果配置没有问题，那就是插件的问题了。
+picgo 如何查看log 查看log 就很简单了，因为mac 通知无法复制，所以我找404log 都找了一会，终于在打开就好了。不知道Windows 版本是长什么样，应该也差不多吧。
+重点 如果不设置为默认图床，那么会上传到一个其他图床https://i.loli.net上面去，我的就上传到这个上面去了，设置为默认的就会直接上传到自己的图床(如果配置没有问题的话);
+结束 谢谢光临，若觉得还行麻烦点一下赞，若觉得写得垃圾，欢迎批评指正。笔者知道自己文笔和表达能力很弱，如果您可以提供点宝贵的意见不胜感激。谢谢。
+今天也可以是元气满满的一天哦。</description>
+    </item>
+    
+    <item>
+      <title>静态网页&#43;Gitee pages 搭建个人主页</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</guid>
+      <description>前言 话说，今天逛沸点的时候，看到一个大佬在推他的个人主页，感觉很有意思。
+这么好的东西，其实我也想要。那么就开整。需要先找到官方文档 ，毕竟官方提供的才是原汁原味的嘛(但是有些人提供的就没有那个味道了)。
+但是呢，东西是一个好东西，可惜我不会。gitee 推荐了3中静态网页方案，Jekyll、Hugo、Hexo ，这个，巧了，我又不会。突然想起大学的老师，老师们好像有教静态网页的吧，巧了，我好像没有去上课。
+但是，作为一个成年人，敌方这么努力的守水晶，我都要想办法推掉它的人，岂是这种小问题能够阻挡的。
+ Jekyll、Hugo、Hexo 究竟是什么？
+Jekyll、Hugo、Hexo 是简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过 Markdown 以及 Liquid 转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll、Hugo、Hexo 也可以运行在 码云（Gitee.com） Pages 上，也就是说，你可以使用码云的服务来搭建你的仓库页面、博客或者网站，而且是完全免费的。
+Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/ Hugo 使用文档：https://gohugo.io/documentation/ Hexo 使用文档：https://hexo.io/docs/
+ 通过gieee提供的教程，我看了下这个这几个教程，
+我觉得作为一个成年人，应该学会及时止损。摸鱼应该比学习这个有意思多了，是吧。但是，静态网页我好像会？
+顺便推一下博客目录
+正文 反正都是摸鱼，只要不学习JAVA，sql,Android,c，ndk 之类的都应该算摸鱼吧，这么一想，瞬间就有动力了。这个摸鱼的概率大一点，还是建议看官方文档 。先按照步骤来。
+ 注册一个gitee 账号https://gitee.com/ (有账号的跳过这一步) 通过自己的账号创建一个公开的项目(个人主页搞私有的，别人访问不到);确定有master 分支 在项目的服务中找到gitee pages 点击，按照步骤一步一步的开始gitee pages 。这个时候你就得到了自己的个人主页的域名了。 在对应的文件夹下面创建一个index.html 文件（这样通过域名访问就不会404了） 最后通过 静态网页或Jekyll、Hugo、Hexo等博客主页生成工具实现自己的主页。 把做好的网页更新上去，然后在项目的服务中找到gitee pages 更新自己的主页。  静态网页 通过gitee pages 的文档我们可以知道，要想基于它创建主页需要下面几点：
+ 静态网页 必须包含index.html  据说，只要不进行网络请求的网页都可以叫静态网页？那可操作性就很大了啊。比如说，可以通过网络上下载静态网页模板，自己魔改。比如说这个是我从模板王上下载的一个个人主页：
+本地是可以打开的。我没有修改的情况下，直接更新到gitee上面，通过gitee给我生成的域名打开。
+Emmmm? 好像可以，如果打开的网页没有更新到，需要清理下浏览器缓存就好了。
+我们来看一下这个网页的结构：
+支持多html结构，css,js 等都可以放到外面。emmmm？vue 那是不是也行？ vue 提供的单页应用是不是也可以？这个就需要自己验证了，毕竟我不会这个。我看了下这个界面的代码，这div 太多了吧。我感觉我不行，我还是试试用博客主页生成工具吧。</description>
+    </item>
+    
+  </channel>
+</rss>

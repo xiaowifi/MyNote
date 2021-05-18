@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TODO on 个人主页</title>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/categories/todo/</link>
+    <description>Recent content in TODO on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright>
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/categories/todo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TODO</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/todo/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/todo/</guid>
+      <description>TODO android  Android intent 保存参数与fragment 子fragment 互用。 fragment 无限套娃，是否可以在activity层判断fragment是否包含显示？ Android 加锁 通过手写array 备份activity 批量移除activity与通过intent 设置tag移除activity的区别。 探讨通过加锁机制，统一loading层延时关闭view。 摸鱼 dialogFragment dissmiss 之后通过fragmentmanger 还能获取到吗？ 通过加锁机制对轮转控件进行加强。  java  java 各种设计模式 JAVA 新特性  SQL  android room Android room+Rxjava  杂学 python python 爬虫教学地址
+ 基于selenium 实现一个自动化测试的那个啥。  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android基础 on 个人主页</title>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/categories/android%E5%9F%BA%E7%A1%80/</link>
+    <description>Recent content in android基础 on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright>
+    <lastBuildDate>Mon, 28 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/categories/android%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fragment生命周期导致数据初始化问题</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/fragment%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</link>
+      <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/fragment%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</guid>
+      <description>前言 话说，activity 和fragment 都是有生命周期的，而且加载也并不是new完对象就加载出来了的，new 一个activity并不多见，但是基于activity new 一个fragment还是很常见的，但是很少有需要在activity中调用fragment方法的时候，但是存在可能性。 因为fragment加载的特性，所以像loading层保证唯一，这样子的就不能直接判断fragmentmanger 中是否包含了，需要一个其他值去判断。而且传参方面，也是这个样子。 比如说我的createPresenter() 方法是当fragment 走oncreate() 的时候创建调用的，但是我上一行代码创建完fragment就直接调用presenter 就会抛空指针异常。
+解决思路 思路1 绑定生命周期 我们知道 fragment.getLifecycle().addObserver(observer) 这个可以添加生命周期监听，那么我们对fragment 添加了监听，等走到对应的生命周期的方法才执行对应的代码就好。这样也就避免了，activity 不知道fragment什么时候加载完成导致调用问题了。 但是这种情况下，如果我fragment中再嵌套一个fragment呢？内部的fragment 生命周期万一也关联到外部的activity调用呢？用多个observer去调出来，就是有点怪怪的。那么只能从代码设计上更改了。
+思路2 更改设计模式 修改绑定生命周期部分 这个思路肯定是不行的，绑定生命周期就是为了优化内存使用的，而且绑定生命周期也对view的加载显示控制提供了生命范围，防止错误的时间，错误的地点导致操作崩溃。
+那就修改功能对应的界面的设计  先说功能吧，对某个数据表进行 折线图，饼图，柱状图等图表的显示，这些图表支持 日周月年的时间切换。先进入某个功能点，确定数据来源，然后选择图表类型，进入下一个界面，最后是选择时间切换。默认加载天的数据。 我就一想，既然每个图表需求显示的view是固定的，那么activity只需要加载一个fragment，由fragment 内部加载不同的图表fragment，图表fragment 只需要显示fragment传入的数据就行。fragment进行数据获取和数据转换，activity进行时间更改转化，然后传入进去。 那么问题就来了，因为activity控制时间，所以第一次的时间需要由activity传入到fragment中，然而，activity并不知道fragment是否加载完成，所以activity需要知道fragment的生命周期，fragment拿到数据知道，也不知道图表fragment是否加载完成，所以也需要拿到生命周期，如果不做延时处理，那么activity就需要拿到两层fragment的生命周期，再传入值。 但是做线程延时，判断生命周期调用，也需要先将 我传入的值存储到两个fragment里面，等到需要的生命周期再显示，这个和我直接通过对象方法传参没有任何区别吧。所以还是生命周期传参导致的问题。 那么就优化设计逻辑，activity 只持有一层图表fragment，图表fragment进行数据拉取和处理显示就好，只是图表层的presenter 需要将所有的功能点的数据全部拉取一遍罢了。当然进行时间切换的时候，也需要判断当前fragment是否加载出来。
+ 总结 感觉，mvp和mvvm 其实也是一种代码规范，感觉通过activity 向fragment对象方法传参就有点违背了这种规范的初衷吧。所以像eventbus 这种传参，就很实用,完全不需要考虑生命周期，当然Android 提供的广播也是可以的。 EventBus GitHub
+activity中注册后，在fragment中就不用再注册监听了，提供方法就直接会调用。因为fragment属于延时加载，所以尽量使用postSticky 。接收：
+1 @Subscribe(threadMode = ThreadMode.MAIN, sticky = true) 2 public void onChangeData(ChartDetailsMessage message){ 3 getPresenter().getDatas(message); 4 } </description>
+    </item>
+    
+    <item>
+      <title>摸鱼Android Fragmentmanger</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-fragmentmanger/</link>
+      <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-fragmentmanger/</guid>
+      <description>前言 话说，搬砖多年，我们的好朋友fragment已经需要适配到AndroidX了，毕竟我之前老是喜欢用V4包下的fragment。但是这个笔记却不是关于更新到Android X的,毕竟如果要整Android X，要改的地方应该有点多，还不知道 Android X和support 包可以共存吗？感觉没法共存，毕竟从activity 到view好像都变了，毕竟第3方包如果没有适配Android X就没法改。自己整是不可能自己整的，毕竟老板没有要求，那我们就永远不适配AndroidX的代码。感觉有点和Android 最新时代已经脱轨了。
+好了，回归正文，我们主要是整fragmentmanager。
+顺便推一下博客主页
+正文 显示fragment吧，这个老朋友了，不需要介绍，app 下的fragment和v4下的fragment调用对应的fragmentmanager就好了。而显示fragment 一般有几种:
+ 通过ViewPager 加载 通过FrameLayout 通过dialogFragment 显示  这个地方主要整:基于FrameLayout 显示fragment。
+显示fragment 代码大概是需要显示成这个样子。
+1public Fragment showFragment(String className, FragmentManager fragmentManager, int id) { 2 Fragment fragment = null; 3 try { 4 5 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction(); 6 //隐藏所有的那个啥。 7 for (Fragment fra : fragmentManager.getFragments()) { 8 fragmentTransaction.hide(fra); 9 } 10 Fragment fragmentByTag = fragmentManager.findFragmentByTag(className); 11 if (fragmentByTag !</description>
+    </item>
+    
+    <item>
+      <title>摸鱼DialogFragment</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/%E6%91%B8%E9%B1%BCdialogfragment/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/%E6%91%B8%E9%B1%BCdialogfragment/</guid>
+      <description>前言 话说dialogfragment。这个调调，我用的还是蛮多的。像popwindow,loading，或者一些dialog如果能够用dialogfragment 实现，我一般会选择用这个调调。毕竟有生命周期，感觉和写fragment没有区别。这就导致我基于dialog 实现自定义dialog的能力比较差，主要还是主题设置，设置好了还是感觉差不多的。当然了popwindow的优点还是dialog 或者dialogfragment 无法比拟的。还有一个原因，我比较喜欢将一些值存储到activity的intent中(这么写，还是要提供完整的注释的，要不然不习惯这种写法的会看得很难受)，感觉dialog 中获取activity 没有fragment中那么方便。但是我看好多UI库都是自己写了一个dialog(比如说QMUI) ?搞得我有点懵逼。但是我看别人的代码，很少用dialogfragment 为啥我看到的代码里面，大家都用dialog 而不是dialogfragment ?这个以后探讨吧。
+顺便推一下博客主页
+正文 话说这个调调DialogFragment和其他控件差不多，也是从28以后移出出去了。看来把代码适配更新到Android X是需要提上日程了。关于基础用法这个网络上很多大佬写过博客的，我觉得没有重复的必要的，和fragment 差不多，还是重要的一点，配置style会影响dialogfragment的显示效果的，状态栏也可以按照需求配置的。
+主题 我所使用的主题。通常是全屏的。这个需要通过自己的需求配置
+1&amp;lt;style name=&amp;#34;Dialog.FullScreen&amp;#34; parent=&amp;#34;AppTheme&amp;#34;&amp;gt; 2 &amp;lt;item name=&amp;#34;android:windowNoTitle&amp;#34;&amp;gt;true&amp;lt;/item&amp;gt; 3 &amp;lt;item name=&amp;#34;android:windowBackground&amp;#34;&amp;gt;@color/transparent&amp;lt;/item&amp;gt; 4 &amp;lt;item name=&amp;#34;android:windowIsFloating&amp;#34;&amp;gt;false&amp;lt;/item&amp;gt; 5 &amp;lt;item name=&amp;#34;android:textColor&amp;#34;&amp;gt;@color/color_333333&amp;lt;/item&amp;gt; 6 &amp;lt;item name=&amp;#34;android:textSize&amp;#34;&amp;gt;14sp&amp;lt;/item&amp;gt; 7 &amp;lt;item name=&amp;#34;android:backgroundDimEnabled&amp;#34;&amp;gt;true&amp;lt;/item&amp;gt; 8&amp;lt;/style&amp;gt; 9 10&amp;lt;style name=&amp;#34;DialogNoDim&amp;#34; parent=&amp;#34;Dialog.FullScreen&amp;#34;&amp;gt; 11 &amp;lt;item name=&amp;#34;android:backgroundDimEnabled&amp;#34;&amp;gt;false&amp;lt;/item&amp;gt; 12 &amp;lt;/style&amp;gt; 使用:
+1@Override 2public void onCreate(@Nullable Bundle savedInstanceState) { 3 super.onCreate(savedInstanceState); 4 setStyle(STYLE_NORMAL, R.style.Dialog_FullScreen); 5} 其他设置：
+1@Nullable 2@Override 3public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) { 4 getDialog().</description>
+    </item>
+    
+    <item>
+      <title>Alibaba旗下android中RecycleView的manger笔记</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/vlayout/alibaba%E6%97%97%E4%B8%8Bandroid%E4%B8%ADrecycleview%E7%9A%84manger%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/vlayout/alibaba%E6%97%97%E4%B8%8Bandroid%E4%B8%ADrecycleview%E7%9A%84manger%E7%AC%94%E8%AE%B0/</guid>
+      <description>》 顺便推一下博客主页
+前言  话说，android 中recycleView 是一个好东西。阿里巴巴的vlayout 其实了解了很久了，只是没有时间上手写笔记。像首页的聚合界面呀。tab相关的呀都可以用这个实现，当然了他只是提供LayoutManager。 但是也不影响。反正都是搬砖嘛。
+阿里巴巴 android vlayout GitHub地址
+ 正文 结束 </description>
+    </item>
+    
+    <item>
+      <title>android上的设计模式</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E4%B8%8A%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E4%B8%8A%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+      <description>》 顺便推一下博客主页
+前言  今天写demo的时候，顺便发现了自己对设计模式感觉搞迷糊了。然后就整理一波设计模式。现在android常用的是mvc，mvp,mvvm。其他设计模式先放过了，先不整，主要是用得少。话说面试的时候，一般都会问自己写代码的设计模式，才出来的时候说mvc,基于大佬的代码复制一套mvp,然后基于jetpack说是mvvm.似乎从来没有仔细理解过这几种设计模式的优缺点，为啥要用这些设计模式等等。 为啥用，因为大家都在用，我不用就落伍了，这可能是我这类搬砖工这么用的原因。我记得有大佬在自己博客上说过类似的话.&amp;quot;设计模式，他是一种思维逻辑，而不是一种简单的代码规范，要体验到诸多设计模式的优点，只有自己用得多了，而不是看的多，用得多了才有自己的感悟，否则一直都是代码规范是没法理解到他的优点的“。 内容资料大多数源于百度百科
+ 正文  android搬砖工，所以基本上从android应用上去理解，如果有理解错误的地方，欢迎指正。
+ mvc  经典MVC模式中，M是指业务模型，V是指用户界面，C则是控制器，使用MVC的目的是将M和V的实现代码分离，从而使同一个程序可以使用不同的表现形式。其中，View的定义比较清晰，就是用户界面。 百度百科MVC
+ 理解一波  这个调调，感觉更适合当初的jsp和H5开发。要说android上使用，前期开发的时候，一般用别人的框架工具之类的，通常是activity 处理业务模型M，作为Vew用户界面，作为控制器处理事件和网络请求数据缓存之类的。 有将数据处理和事件单独拿到一个类中处理的，我就没有遇到过，拿到一个类处理的，人家都说是高贵的MVP开发了。所以那个时候，m在activity里面，v是activity，c是activity，fragment也是这个样子。view层的压力太大了。 这么久导致一个问题，那就是界面层代码太多了，如果网络请求和数据处理没有进行封装，那也太长了，如果不写注释，接盘的大佬也太惨了。 当然了，在这个基础上也不乏有一些大佬是将数据处理单独到一个class里面的，毕竟后台大佬和自己对M的定义不一样，先写界面就需要数据转换了。 android 的databinding 出来之后，就觉得有必要将事件处理提到一个class里面了。这就有了简单搬代码位置的思路。databinding 的事件处理当然也可以在view里面整。
+ MVP  mvp的全称为Model-View-Presenter，Model提供数据，View负责显示，Controller/Presenter负责逻辑的处理。MVP与MVC有着一个重大的区别：在MVP中View并不直接使用Model，它们之间的通信是通过Presenter (MVC中的Controller)来进行的，所有的交互都发生在Presenter内部，而在MVC中View会直接从Model中读取数据而不是通过 Controller。 百度百科MVP
+ 理解一波  这个感觉和mvc的控制层抽离方式很像，毕竟网络请求和数据处理也算控制层中的内容。而p层主要的作用就是写数据控制和事件处理，emmmmmm? 起码我点击事件没有拿到P层和C层过。 个人觉得他的View不直接操作M,这个才是这个MVP的特点，毕竟如果是服务器一套模型，本地一套模型，中间转换层就只要写到P层就好了，写的位置统一了，以后也好改一点。 只要将数据处理好，然后通过接口或者eventBus,或者类似的工具收到就行，这么就导致View 层的逻辑很清晰。因为P层进行数据事件处理，和可能出现的两套数据模型，P就承担了和C层一样的功能了。
+ MVVM(jetpack)  MVVM是Model-View-ViewModel的简写。它本质上就是MVC 的改进版。MVVM 就是将其中的View 的状态和行为抽象化，让我们将视图 UI 和业务逻辑分开.
+ 理解一波  主要还是jetpack 这一套东西太好用了，不用处理生命周期。数据恢复，数据绑定更新。只要按照他的开发规则整，android 开发就简单很多了。不像之前生命周期数据刷新都要代码控制。当然也有大佬写过很严谨的代码，主要萌新可能会有疏漏。 之前的P或者C都是将事件处理和数据，现在改到ViewModel 中了，当然了，viewModel 可以只是处理事件，然后再搞一个子类，单独处理网络请求和数据缓存，然后回调到viewModel 中，因为ViewModel 是进行事件的，所以，数据M应该让View使用就好，由ViewModel持有更新。如果将M数据放到View中和MVC又有什么区别。
+ 结合实际  上面的主要是个人总结的理论东西，然后实际情况，可能有点出入。
+ mvc  如果是view 持有Model，充当C,那就没有必要整了。小项目感觉通常就是这么整的，逻辑不复杂，也不需要太多的事件，不处理太多的数据处理。过于复杂的地方也可以将复杂的逻辑数据化，单独写一个类处理这些东西。单独写的这个类可能和View一起充当C层了。</description>
+    </item>
+    
+    <item>
+      <title>android滚动事件相关-1</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%BB%9A%E5%8A%A8%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%E7%9B%B8%E5%85%B31/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%BB%9A%E5%8A%A8%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%E7%9B%B8%E5%85%B31/</guid>
+      <description>》 顺便推一下博客主页
+前言  现在第3方的或者android自己的写的太好了。导致大多数情况下，滑动处理都不需要自己处理了，比如说吸顶效果。比如说两个滚动view联动。 参考资料
+ 正文  比如说吸顶效果的实现方式有多种，感觉最完美的CoordinatorLayout。
+  CoordinatorLayout是android support design推出的新布局，主要用于作为视图根布局以及协调子控件的行为，而Behavior就是用于直接子控件来协调自身CoordinatorLayout以及和其他子控件的关系，使用Behavior的控件必须是直接从属于CoordinatorLayout。 在传统的事件分发流程中，在子控件处理事件过程中，父控件是可以进行拦截的，但一旦父控件进行拦截，那么这次事件只能由父控件处理，而不能再由子控件处理了。
+  在android5.0之后新的嵌套滑动机制中，引入了：NestScrollChild和NestedScrollingParent两个接口，用于协调子父控件滑动状态，而CoordinatorLayout实现了NestedScrollingParent接口，在实现了NestScrollChild这个接口的子控件在滑动时会调用NestedScrollingParent接口的相关方法，将事件发给父控件，由父控件决定是否消费当前事件，在CoordinatorLayout实现的NestedScrollingParent相关方法中会调用Behavior内部的方法。 我们实现Behavior的方法，就可以嵌入整个CoordinatorLayout所构造的嵌套滑动机制中，可以获取到两个方面的内容：
+  1、某个view监听另一个view的状态变化，例如大小、位置、显示状态等 需要重写layoutDependsOn和onDependentViewChanged方法
+  2、某个view监听CoordinatorLayout内NestedScrollingChild的接口实现类的滑动状态 重写onStartNestedScroll和onNestedPreScroll方法。注意：是监听实现了NestedScrollingChild的接口实现类的滑动状态，这就可以解释为什么不能用ScrollView而用NestScrollView来滑动了。
+ 所以可以定义两种。
+ NestScrollChild和NestedScrollingParent两个接口，用于协调子父控件滑动状态 在CoordinatorLayout中实现Behavior  结束 </description>
+    </item>
+    
+    <item>
+      <title>Databinding笔记整理呀</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/databinding%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E5%91%80/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/databinding%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E5%91%80/</guid>
+      <description>顺便推一下博客主页
+ 前言  由于现在jetpack的流行，这个还是蛮香的，之前databinding才出来的时候，简单了解过。那个时候还没有写本地entity的习惯，数据都是依赖于服务器模型。现在好了，都是本地模型和服务器模型互转。就没有这个问题了， 这个调调还是可以省很多时间精力的。但是这个就得考验设计能力了，不像之前随便搬砖什么的。
+ 正文 开启databinding的使用能力  有一段时间迷糊了，以为需要手动导入包什么的。其实只需要配置一下，gradle就帮忙导入了，不需要在dependencies声明。比如像这个样子:
+ 1// 启用databinding 放到android 下面。 2 android { 3 dataBinding { 4 enabled = true 5 } 6} xml使用  这个调调主要是在xml 中配置数据绑定，事件处理什么的，所以都是操作xml.emmmmmm? 那我viewmodel 不就处理数据了。奈斯.png。还有一个问题，事件还是应该写到界面层吧，但是我决定viewmodel 也可以处理事件来着。 比如说，mvp 的事件就是在p层，但是p层我处理网络请求了，结果事件写到view层，然后事件真实处理就到了界面层。有点晕，M层是啥。 容我捋一捋。mvc中，m是业务逻辑，v是视图也就是界面层，c是中间层进行m和v的联动。mvp中m是业务逻辑数据，v还是视图和界面层，p是数据处理，emmmmm?和C莫得区别吧。百度上说”在MVP中View并不直接使用Model，它们之间的通信是通过Presenter (MVC中的Controller)来进行的，所有的交互都发生在Presenter内部，而在MVC中View会直接从Model中读取数据而不是通过 Controller。“ 我肯定是没有睡醒，现在C和P傻傻分不清楚了。算了，待会开一个笔记整理一波。
+ 因为创建的时候，默认不是创建databinding类型的layout,所以需要手动改一下。 打开布局文件，选中根布局的 ViewGroup，按住 Alt + 回车键，点击 “Convert to data binding layout”，就可以生成 DataBinding 需要的布局规则
+1&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt; 2&amp;lt;layout xmlns:android=&amp;#34;http://schemas.android.com/apk/res/android&amp;#34; 3 xmlns:app=&amp;#34;http://schemas.android.com/apk/res-auto&amp;#34; 4 xmlns:tools=&amp;#34;http://schemas.android.com/tools&amp;#34;&amp;gt; 5 &amp;lt;data&amp;gt; 6 &amp;lt;/data&amp;gt; 7&amp;lt;/layout&amp;gt; 能够在xml中定义什么，完全是看xml支持什么。databinding主要是基于xml 去生成一个class，而不是修改xml.</description>
+    </item>
+    
+    <item>
+      <title>fragment嵌套生命周期走查</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/fragment%E5%B5%8C%E5%A5%97%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%B5%B0%E6%9F%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/fragment%E5%B5%8C%E5%A5%97%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%B5%B0%E6%9F%A5/</guid>
+      <description>》 顺便推一下博客主页
+前言  话说，搬砖过程中fragment+viewpager相当常见。按照道理讲不应该出现这个bug的。主要是太久没有写代码了。emmmmm? 变菜了，能怪我？ 还有一个问题。感觉viewpager+fragment 导致的生命周期就很奇怪，最近有大佬提供的懒加载fragment，so。
+ 正文  话说，viewpager主要是通过adapter设置预加载数量。
+  setOffscreenPageLimit()   然后是通过adapter设置相关的东西
+  FragmentPagerAdapter   我们知道viewpager 默认加载3个，就是当前的和左右一边一个。其他的item都会默认销毁。所以我们的懒加载fragment的实现就尤为重要了。
+ 懒加载fragment  懒加载的实现模式大概就这么一个样子，都很成熟了。
+  记录一个fragment中onCreateView 的创建状态。 在onViewCreated中对!isHidden() &amp;amp;&amp;amp; getUserVisibleHint() 进行事件分发。 实现setUserVisibleHint 相关逻辑。 实现onHiddenChanged 可见不可见逻辑。 实现 判断子类可见与否的逻辑。 onResume 实现第一次可见。   整个大概就这个样子:
+ 1public abstract class BaseLazyFragment extends Fragment { 2 3 /** 4 * mFragmentTag 5 */ 6 public String TAG = &amp;#34;&amp;#34;; 7 /** 8 * mLoadService 9 */ 10 String title; 11 public BaseLazyFragment setShow(String title){ 12 this.</description>
+    </item>
+    
+    <item>
+      <title>重学Viewpager</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/%E9%87%8D%E5%AD%A6viewpager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/%E9%87%8D%E5%AD%A6viewpager/</guid>
+      <description>》 顺便推一下博客主页
+前言  viewpager 通常用于加载Fragment或者banner图，因为其良好的交互效果，被设计大佬广泛使用。默认情景下，viewpager 会加载缓存左右的view。滑出去之后就会删除对应的item。 这么就导致了fragment中layout的重复创建和重复赋值，不停的网络请求，所以才有了懒加载等等相关逻辑，但是viewpager某种意义上就是懒加载逻辑呀。 往往为了解决重复请求，重复加载等等问题，我们通常是设置缓存个数和重写item的删除逻辑，为了更加通透的理解viewpager，所以重学是必要的。
+ 正文 viewPager 结束 </description>
+    </item>
+    
+  </channel>
+</rss>

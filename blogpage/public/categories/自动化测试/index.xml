@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>自动化测试 on 个人主页</title>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
+    <description>Recent content in 自动化测试 on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright>
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>selenium</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/selenium/selenium%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/selenium/selenium%E6%A8%A1%E6%9D%BF/</guid>
+      <description>前言 顺便推一下博客主页
+结束 谢谢光临，若觉得还行麻烦点一下赞，若觉得写得垃圾，欢迎批评指正。笔者知道自己文笔和表达能力很弱，如果您可以提供点宝贵的意见不胜感激。谢谢。
+今天也可以是元气满满的一天哦。 更新需要审核。更新通常优先更新到gitee上面。
+博客主页</description>
+    </item>
+    
+    <item>
+      <title>selenium入门1</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/selenium/selenium%E5%85%A5%E9%97%A81/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/selenium/selenium%E5%85%A5%E9%97%A81/</guid>
+      <description>前言 之前逛github的时候，发现了一个Python调用自动化测试工具的教程。然后发现了一个selenium的宝贝，在这位大佬的Demo中，我发现他可以直接操作浏览器。
+话说 我一个Android 搬砖工，好像也没有必要整这个自动化web。
+顺便推一下博客主页
+正文 先整需求:
+  基本需求，在线学习中，可以自己隔一段时候点一下下一页。
+  进阶一点的是，可以不吃焦点的点下一页。
+  再进阶一点的，可以最小化浏览器，然后还可以点下一页。
+  基于基本需求可以判断界面是否学习完毕，完毕后才点下一页，或者等待了3分钟没有完成直接点下一页。
+  基于上一条补充，先判断当前页有多少个课，如果有多个，先每一个跳转一下到最后一个，等完毕后再下一页。
+主要还是要用到他这个直接操作界面，我也不爬数据，只是监听获取控件。
+  介绍 先整一个官网的教程：https://www.selenium.dev/documentation/zh-cn/
+这个调调可能需要科学上网。上面有一个中文的，主要是我应该用的是JAVA，所以中文的里面没有，但是对应的教程还是有很多博客的，知识这种东西，还是看原滋原味的，然后结合别人的理解，就可以找到自己的理解，这么快一点，如果直接是别人的理解，就不容易生成自己的理解了，扩展会相对差一点，也不是不能扩展。
+这个地方可以切换文档语言。
+这个调调支持的语言还是蛮多的。这就导致了不同的语言，接入方式不一样。那么就直接看这个调调支持些什么:从文档上可以看到，支持很多浏览的自动化操作。包括：
+ 自动打开浏览器，并且打开一个网页。https://www.selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/ 通过id ,class,标签等操作获取到控件。https://www.selenium.dev/documentation/zh-cn/webdriver/web_element/ 支持控件点击等相关事件操作。 可以获取到浏览器的各种信息，长宽高。https://www.selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/ 可以模拟鼠标操作。 可以模拟键盘操作。https://www.selenium.dev/documentation/zh-cn/webdriver/keyboard/ 可以设置等待，https://www.selenium.dev/documentation/zh-cn/webdriver/waits/ 可以设置加载策略。  反正提供的还是蛮多的，更多的看文档就好。文档也不多，浏览式的看完也要不到20分钟。
+既然我应该会JAVA ，那么就直接整JAVA 的调用方式。浏览器也是谷歌浏览器，那么驱动也下载这个调调。
+Java环境 因为我这把JAVA 环境比较好一点，selenium提供 jar和Maven,国内Maven经常下载不了。所以我还是选择jar比较好。
+  org.seleniumhq.selenium
+selenium-java
+3.X
+  通过 https://www.selenium.dev/downloads/ 这个网站可以知道当前最稳定的是：3.141.59 点这个版本号就可以直接下载了。
+然后是浏览器驱动。
+需要使用什么浏览器就下载配置什么浏览器驱动就好了。https://www.selenium.dev/documentation/zh-cn/webdriver/driver_requirements/ ，这个区分浏览器和系统了的。需要配置path.由于官网提供的Demo是谷歌浏览器的，所以还是安装谷歌浏览器的驱动吧，主要是他好像没法自动导包。
+Java项目 我就直接基于idea新建一个JAVA 项目了。主要是考虑到Maven 可能下载不了，所以直接是JAVA 项目，而不是Maven 项目。然后将刚刚下载的jar 整到项目里面去。</description>
+    </item>
+    
+  </channel>
+</rss>

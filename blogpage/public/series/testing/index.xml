@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>testing on 个人主页</title>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/series/testing/</link>
+    <description>Recent content in testing on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/series/testing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android上使用测试目录</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/testing/android%E4%B8%8A%E4%BD%BF%E7%94%A8%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/testing/android%E4%B8%8A%E4%BD%BF%E7%94%A8%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/</guid>
+      <description>博客主页 Google提供Android测试教程文档 Android使用测试还是蛮重要的，毕竟减少run的时间，虽然run的时候可以摸鱼。嘻嘻。
+ 测试金字塔说明了应用应如何包含三类测试（即小型、中型和大型测试）：
+ 小型测试是指单元测试，用于验证应用的行为，一次验证一个类。 中型测试是指集成测试，用于验证模块内堆栈级别之间的互动或相关模块之间的互动。 大型测试是指端到端测试，用于验证跨越了应用的多个模块的用户操作流程。  沿着金字塔逐级向上，从小型测试到大型测试，各类测试的保真度逐级提高，但维护和调试工作所需的执行时间和工作量也逐级增加。因此，您编写的单元测试应多于集成测试，集成测试应多于端到端测试。虽然各类测试的比例可能会因应用的用例不同而异，但我们通常建议各类测试所占比例如下：小型测试占 70%，中型测试占 20%，大型测试占 10%。 简书大佬提供的测试教程
+配置环境 Android在创建项目的时候，会自动导入。
+1 testImplementation &amp;#39;junit:junit:4.+&amp;#39; 2 androidTestImplementation &amp;#39;androidx.test.ext:junit:1.1.1&amp;#39; 3 androidTestImplementation &amp;#39;androidx.test.espresso:espresso-core:3.2.0&amp;#39; 简单使用  简书大佬写的Junit 4详细教程 通过上面的环境可以知道，使用的是Junit 4,所以创建测试用例的时候，应该选择Junit4.
+  创建一个class。 AS也提供了一种快捷方式：选择对应的类-&amp;gt;将光标停留在类名上-&amp;gt;按下ALT + ENTER-&amp;gt;在弹出的弹窗中选择Create Test  可以选择测试工具，和方法体，改名称也行。
+  选中方法的时候会自动创建带运行标记的@Test的方法，如果不选择就需要手动填写。  编写测试，验证流程。 比如我创建一个下面这个class
+1public class TestDemo { 2 public boolean show(){ 3 return false; 4 } 5} 6 生成的测试用例
+1 2public class TestDemoTest { 3 4 @Test 5 public void show() { 6 new TestDemo().</description>
+    </item>
+    
+    <item>
+      <title>Android上使用测试目录</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/testing/testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/testing/testing/</guid>
+      <description> 博客主页 Google提供Android测试教程文档 Android使用测试还是蛮重要的，毕竟减少run的时间，虽然run的时候可以摸鱼。嘻嘻。
+ 测试金字塔说明了应用应如何包含三类测试（即小型、中型和大型测试）：
+ 小型测试是指单元测试，用于验证应用的行为，一次验证一个类。 中型测试是指集成测试，用于验证模块内堆栈级别之间的互动或相关模块之间的互动。 大型测试是指端到端测试，用于验证跨越了应用的多个模块的用户操作流程。  沿着金字塔逐级向上，从小型测试到大型测试，各类测试的保真度逐级提高，但维护和调试工作所需的执行时间和工作量也逐级增加。因此，您编写的单元测试应多于集成测试，集成测试应多于端到端测试。虽然各类测试的比例可能会因应用的用例不同而异，但我们通常建议各类测试所占比例如下：小型测试占 70%，中型测试占 20%，大型测试占 10%。
+正文 </description>
+    </item>
+    
+    <item>
+      <title>Android上使用测试目录</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/testing/android%E6%B5%8B%E8%AF%95%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/testing/android%E6%B5%8B%E8%AF%95%E6%A8%A1%E6%9D%BF/</guid>
+      <description> 博客主页 Google提供Android测试教程文档 Android使用测试还是蛮重要的，毕竟减少run的时间，虽然run的时候可以摸鱼。嘻嘻。
+ 测试金字塔说明了应用应如何包含三类测试（即小型、中型和大型测试）：
+ 小型测试是指单元测试，用于验证应用的行为，一次验证一个类。 中型测试是指集成测试，用于验证模块内堆栈级别之间的互动或相关模块之间的互动。 大型测试是指端到端测试，用于验证跨越了应用的多个模块的用户操作流程。  沿着金字塔逐级向上，从小型测试到大型测试，各类测试的保真度逐级提高，但维护和调试工作所需的执行时间和工作量也逐级增加。因此，您编写的单元测试应多于集成测试，集成测试应多于端到端测试。虽然各类测试的比例可能会因应用的用例不同而异，但我们通常建议各类测试所占比例如下：小型测试占 70%，中型测试占 20%，大型测试占 10%。
+正文 </description>
+    </item>
+    
+  </channel>
+</rss>

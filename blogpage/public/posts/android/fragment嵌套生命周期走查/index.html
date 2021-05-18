@@ -1,0 +1,1913 @@
+
+<!DOCTYPE html>
+<html lang="zh" data-figures="" class="page">
+  <head>
+<title>fragment嵌套生命周期走查 | 个人主页</title>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.76.3" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta property="og:locale" content="zh" />
+
+<meta property="og:type" content="article">
+<meta name="description" content="fragment嵌套生命周期走查">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="">
+<meta name="twitter:title" content="fragment嵌套生命周期走查" />
+<meta property="og:url" content="http://lalalaxiaowifi.gitee.io/pictures/posts/android/fragment%E5%B5%8C%E5%A5%97%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%B5%B0%E6%9F%A5/" />
+<meta property="og:title" content="fragment嵌套生命周期走查" />
+<meta property="og:description" content="fragment嵌套生命周期走查" />
+<meta property="og:image" content="http://lalalaxiaowifi.gitee.io/pictures/images/thumbnail.png" />
+<link rel="apple-touch-icon" sizes="180x180" href='http://lalalaxiaowifi.gitee.io/pictures/icons/apple-touch-icon.png'>
+<link rel="icon" type="image/png" sizes="32x32" href='http://lalalaxiaowifi.gitee.io/pictures/icons/favicon-32x32.png'>
+<link rel="manifest" href='http://lalalaxiaowifi.gitee.io/pictures/icons/site.webmanifest'>
+<link rel="mask-icon" href='http://lalalaxiaowifi.gitee.io/pictures/safari-pinned-tab.svg' color="#002538">
+<meta name="msapplication-TileColor" content="#002538">
+<meta name="theme-color" content="#002538">
+
+<link rel="canonical" href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/fragment%E5%B5%8C%E5%A5%97%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%B5%B0%E6%9F%A5/">
+
+    
+
+    
+    
+    <link rel="preload" href="http://lalalaxiaowifi.gitee.io/pictures/css/styles.19822ef8d57c281b0ee1aa50d42585c2400da8137a121dec28cd58f48a7fec71bf92e0e20f91751c5622f183b719a2663b3c1766d877cd46e764de699307df61.css" integrity = "sha512-GYIu&#43;NV8KBsO4apQ1CWFwkANqBN6Eh3sKM1Y9Ip/7HG/kuDiD5F1HFYi8YO3GaJmOzwXZth3zUbnZN5pkwffYQ==" as="style" crossorigin="anonymous">
+    <link rel="preload" href="http://lalalaxiaowifi.gitee.io/pictures/js/bundle.min.dc1752cbb1c01a107e1e4afce7f618750185cca45821a7b8e3fccc074f8d9260a43990c47c4e3c1644438f24b907d3d3ba050d2aec63b573c3059f25cefbcb80.js" as="script" integrity=
+    "sha512-3BdSy7HAGhB&#43;Hkr85/YYdQGFzKRYIae44/zMB0&#43;NkmCkOZDEfE48FkRDjyS5B9PTugUNKuxjtXPDBZ8lzvvLgA==" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" type="text/css" href="http://lalalaxiaowifi.gitee.io/pictures/css/styles.19822ef8d57c281b0ee1aa50d42585c2400da8137a121dec28cd58f48a7fec71bf92e0e20f91751c5622f183b719a2663b3c1766d877cd46e764de699307df61.css" integrity="sha512-GYIu&#43;NV8KBsO4apQ1CWFwkANqBN6Eh3sKM1Y9Ip/7HG/kuDiD5F1HFYi8YO3GaJmOzwXZth3zUbnZN5pkwffYQ==" crossorigin="anonymous">
+    
+  </head>
+  
+  
+    
+  
+  <body data-code="7" data-lines="false" id="documentTop">
+
+<header class="nav_header" >
+  <nav class="nav">
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/' class="nav_brand nav_item">
+      <img src="http://lalalaxiaowifi.gitee.io/pictures/logos/logo.png" class="logo">
+      <div class="nav_close">
+        <div>
+          <svg class="icon">
+  <use xlink:href="#open-menu"></use>
+</svg>
+          <svg class="icon">
+  <use xlink:href="#closeme"></use>
+</svg>
+        </div>
+      </div>
+    </a>
+    <div class='nav_body nav_body_left'>
+      
+      
+      
+        
+
+  <div class="nav_parent">
+    <a href="http://lalalaxiaowifi.gitee.io/pictures/" class="nav_item">主页 </a>
+  </div>
+  <div class="nav_parent">
+    <a href="http://lalalaxiaowifi.gitee.io/pictures/about/" class="nav_item">About </a>
+  </div>
+  <div class="nav_parent">
+    <a href="http://lalalaxiaowifi.gitee.io/pictures/design_pattern/" class="nav_item">设计模式 </a>
+  </div>
+  <div class="nav_parent">
+    <a href="http://lalalaxiaowifi.gitee.io/pictures/dgg/" class="nav_item">顶呱呱 </a>
+  </div>
+      
+<div class='follow'>站外主页:[
+
+  
+  <a href="https://github.com/xiaowifi" style="padding: 10px">
+   github
+
+
+  </a>
+  
+  <a href="https://gitee.com/lalalaxiaowifi" style="padding: 10px">
+   Gitee
+
+
+  </a>
+  
+  <a href="https://juejin.im/user/1890815728168430" style="padding: 10px">
+   掘金
+
+
+  </a>
+  ]
+
+  <h6>&#12288 &#12288 切换主题 ☞</h6>
+<div class="color_mode">
+  <input type="checkbox" class="color_choice" id="mode">
+</div>
+
+</div>
+
+    </div>
+  </nav>
+</header>
+
+    <main>
+  
+<div class="grid-inverse wrap content">
+  <article class="post_content">
+    <h1 class="post_title">fragment嵌套生命周期走查</h1><div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Jan 1, 0001</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/fragment' class="post_tag button button_translucent">fragment
+    </a>
+</div>
+
+    
+<div class="post_share">
+  分享到:
+  <a href="https://twitter.com/intent/tweet?text=fragment%e5%b5%8c%e5%a5%97%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f%e8%b5%b0%e6%9f%a5&url=http%3a%2f%2flalalaxiaowifi.gitee.io%2fpictures%2fposts%2fandroid%2ffragment%25E5%25B5%258C%25E5%25A5%2597%25E7%2594%259F%25E5%2591%25BD%25E5%2591%25A8%25E6%259C%259F%25E8%25B5%25B0%25E6%259F%25A5%2f&tw_p=tweetbutton" class="twitter" title="分享到 Twitter" target="_blank" rel="nofollow">
+    <svg class="icon">
+  <use xlink:href="#twitter"></use>
+</svg>
+  </a>
+  <a href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flalalaxiaowifi.gitee.io%2fpictures%2fposts%2fandroid%2ffragment%25E5%25B5%258C%25E5%25A5%2597%25E7%2594%259F%25E5%2591%25BD%25E5%2591%25A8%25E6%259C%259F%25E8%25B5%25B0%25E6%259F%25A5%2f&t=fragment%e5%b5%8c%e5%a5%97%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f%e8%b5%b0%e6%9f%a5" class="facebook" title="分享到 Facebook" target="_blank" rel="nofollow">
+    <svg class="icon">
+  <use xlink:href="#facebook"></use>
+</svg>
+  </a>
+  <a href="#linkedinshare" id = "linkedinshare" class="linkedin" title="分享到 LinkedIn" rel="nofollow">
+    <svg class="icon">
+  <use xlink:href="#linkedin"></use>
+</svg>
+  </a>
+  <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/fragment%E5%B5%8C%E5%A5%97%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%B5%B0%E6%9F%A5/" title="复制链接地址" class="link link_yank">
+    <svg class="icon">
+  <use xlink:href="#copy"></use>
+</svg>
+  </a>
+</div>
+
+    
+    <p><img src="https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png" alt="">
+》 顺便推一下<a href="http://lalalaxiaowifi.gitee.io/pictures/">博客主页</a></p>
+<h2 id="前言">前言</h2>
+<blockquote>
+<p>话说，搬砖过程中fragment+viewpager相当常见。按照道理讲不应该出现这个bug的。主要是太久没有写代码了。emmmmm? 变菜了，能怪我？
+还有一个问题。感觉viewpager+fragment 导致的生命周期就很奇怪，最近有大佬提供的懒加载fragment，so。</p>
+</blockquote>
+<h2 id="正文">正文</h2>
+<blockquote>
+<p>话说，viewpager主要是通过adapter设置预加载数量。</p>
+</blockquote>
+<ul>
+<li>setOffscreenPageLimit()</li>
+</ul>
+<blockquote>
+<p>然后是通过adapter设置相关的东西</p>
+</blockquote>
+<ul>
+<li>FragmentPagerAdapter</li>
+</ul>
+<blockquote>
+<p>我们知道viewpager 默认加载3个，就是当前的和左右一边一个。其他的item都会默认销毁。所以我们的懒加载fragment的实现就尤为重要了。</p>
+</blockquote>
+<h3 id="懒加载fragment">懒加载fragment</h3>
+<blockquote>
+<p>懒加载的实现模式大概就这么一个样子，都很成熟了。</p>
+</blockquote>
+<ul>
+<li>记录一个fragment中onCreateView 的创建状态。</li>
+<li>在onViewCreated中对!isHidden() &amp;&amp; getUserVisibleHint() 进行事件分发。</li>
+<li>实现setUserVisibleHint 相关逻辑。</li>
+<li>实现onHiddenChanged 可见不可见逻辑。</li>
+<li>实现 判断子类可见与否的逻辑。</li>
+<li>onResume 实现第一次可见。</li>
+</ul>
+<blockquote>
+<p>整个大概就这个样子:</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">  1</span>public abstract class BaseLazyFragment extends Fragment {
+<span class="ln">  2</span>
+<span class="ln">  3</span>    /**
+<span class="ln">  4</span>     * mFragmentTag
+<span class="ln">  5</span>     */
+<span class="ln">  6</span>    public String TAG = &#34;&#34;;
+<span class="ln">  7</span>    /**
+<span class="ln">  8</span>     * mLoadService
+<span class="ln">  9</span>     */
+<span class="ln"> 10</span>    String title;
+<span class="ln"> 11</span>    public BaseLazyFragment setShow(String title){
+<span class="ln"> 12</span>        this.title=title;
+<span class="ln"> 13</span>        TAG=title;
+<span class="ln"> 14</span>        return this;
+<span class="ln"> 15</span>    }
+<span class="ln"> 16</span>
+<span class="ln"> 17</span>    /**
+<span class="ln"> 18</span>     * Fragment生命周期 onAttach -&gt; onCreate -&gt; onCreatedView -&gt; onActivityCreated
+<span class="ln"> 19</span>     * -&gt; onStart -&gt; onResume -&gt; onPause -&gt; onStop -&gt; onDestroyView -&gt; onDestroy
+<span class="ln"> 20</span>     * -&gt; onDetach 对于 ViewPager + Fragment 的实现我们需要关注的几个生命周期有： onCreatedView +
+<span class="ln"> 21</span>     * onActivityCreated + onResume + onPause + onDestroyView
+<span class="ln"> 22</span>     */
+<span class="ln"> 23</span>
+<span class="ln"> 24</span>    protected View rootView = null;
+<span class="ln"> 25</span>
+<span class="ln"> 26</span>    /**
+<span class="ln"> 27</span>     * 布局是否创建完成
+<span class="ln"> 28</span>     */
+<span class="ln"> 29</span>    protected boolean isViewCreated = false;
+<span class="ln"> 30</span>
+<span class="ln"> 31</span>    /**
+<span class="ln"> 32</span>     * 当前可见状态
+<span class="ln"> 33</span>     */
+<span class="ln"> 34</span>    protected boolean currentVisibleState = false;
+<span class="ln"> 35</span>
+<span class="ln"> 36</span>    /**
+<span class="ln"> 37</span>     * 是否第一次可见
+<span class="ln"> 38</span>     */
+<span class="ln"> 39</span>    protected boolean mIsFirstVisible = true;
+<span class="ln"> 40</span>
+<span class="ln"> 41</span>    @Override
+<span class="ln"> 42</span>    public void onCreate(@Nullable Bundle savedInstanceState) {
+<span class="ln"> 43</span>        super.onCreate(savedInstanceState);
+<span class="ln"> 44</span>        initParameters();
+<span class="ln"> 45</span>        Log.e(TAG, &#34;onCreate: &#34;);
+<span class="ln"> 46</span>    }
+<span class="ln"> 47</span>
+<span class="ln"> 48</span>    /**
+<span class="ln"> 49</span>     * 初始化参数
+<span class="ln"> 50</span>     */
+<span class="ln"> 51</span>    protected void initParameters() {
+<span class="ln"> 52</span>        Log.e(TAG, &#34;initParameters: &#34;);
+<span class="ln"> 53</span>    }
+<span class="ln"> 54</span>
+<span class="ln"> 55</span>    @Override
+<span class="ln"> 56</span>    public void onAttach(@NonNull Context context) {
+<span class="ln"> 57</span>        super.onAttach(context);
+<span class="ln"> 58</span>        Log.e(TAG, &#34;onAttach: &#34;);
+<span class="ln"> 59</span>    }
+<span class="ln"> 60</span>
+<span class="ln"> 61</span>    @Nullable
+<span class="ln"> 62</span>    @Override
+<span class="ln"> 63</span>    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+<span class="ln"> 64</span>        if (null == rootView) {
+<span class="ln"> 65</span>            rootView = inflater.inflate(getLayoutResId(), container, false);
+<span class="ln"> 66</span>        }
+<span class="ln"> 67</span>        isViewCreated = true;
+<span class="ln"> 68</span>        Log.e(TAG, &#34;onCreateView: &#34;);
+<span class="ln"> 69</span>        return rootView;
+<span class="ln"> 70</span>    }
+<span class="ln"> 71</span>
+<span class="ln"> 72</span>    @Override
+<span class="ln"> 73</span>    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+<span class="ln"> 74</span>        super.onViewCreated(view, savedInstanceState);
+<span class="ln"> 75</span>        if (!isHidden() &amp;&amp; getUserVisibleHint()) {
+<span class="ln"> 76</span>            // 可见状态,进行事件分发
+<span class="ln"> 77</span>            dispatchUserVisibleHint(true);
+<span class="ln"> 78</span>        }
+<span class="ln"> 79</span>        Log.e(TAG, &#34;onViewCreated: &#34;);
+<span class="ln"> 80</span>    }
+<span class="ln"> 81</span>
+<span class="ln"> 82</span>    /**
+<span class="ln"> 83</span>     * 修改Fragment的可见性 setUserVisibleHint 被调用有两种情况：
+<span class="ln"> 84</span>     * 1）在切换tab的时候，会先于所有fragment的其他生命周期，先调用这个函数，可以看log 2)
+<span class="ln"> 85</span>     * 对于之前已经调用过setUserVisibleHint方法的fragment后，让fragment从可见到不可见之间状态的变化
+<span class="ln"> 86</span>     */
+<span class="ln"> 87</span>    @Override
+<span class="ln"> 88</span>    public void setUserVisibleHint(boolean isVisibleToUser) {
+<span class="ln"> 89</span>        super.setUserVisibleHint(isVisibleToUser);
+<span class="ln"> 90</span>        // 对于情况1）不予处理，用 isViewCreated 进行判断，如果isViewCreated false，说明它没有被创建
+<span class="ln"> 91</span>        if (isViewCreated) {
+<span class="ln"> 92</span>            // 对于情况2,需要分情况考虑,如果是不可见 -&gt; 可见 2.1
+<span class="ln"> 93</span>            // 如果是可见 -&gt; 不可见 2.2
+<span class="ln"> 94</span>            // 对于2.1）我们需要如何判断呢？首先必须是可见的（isVisibleToUser
+<span class="ln"> 95</span>            // 为true）而且只有当可见状态进行改变的时候才需要切换，否则会出现反复调用的情况
+<span class="ln"> 96</span>            // 从而导致事件分发带来的多次更新
+<span class="ln"> 97</span>            if (isVisibleToUser &amp;&amp; !currentVisibleState) {
+<span class="ln"> 98</span>                // 从不可见 -&gt; 可见
+<span class="ln"> 99</span>                dispatchUserVisibleHint(true);
+<span class="ln">100</span>            } else if (!isVisibleToUser &amp;&amp; currentVisibleState) {
+<span class="ln">101</span>                dispatchUserVisibleHint(false);
+<span class="ln">102</span>            }
+<span class="ln">103</span>        }
+<span class="ln">104</span>        Log.e(TAG, &#34;setUserVisibleHint: &#34;);
+<span class="ln">105</span>    }
+<span class="ln">106</span>
+<span class="ln">107</span>
+<span class="ln">108</span>    /**
+<span class="ln">109</span>     * 用FragmentTransaction来控制fragment的hide和show时，
+<span class="ln">110</span>     * 那么这个方法就会被调用。每当你对某个Fragment使用hide 或者是show的时候，那么这个Fragment就会自动调用这个方法。
+<span class="ln">111</span>     */
+<span class="ln">112</span>
+<span class="ln">113</span>    @Override
+<span class="ln">114</span>    public void onHiddenChanged(boolean hidden) {
+<span class="ln">115</span>        super.onHiddenChanged(hidden);
+<span class="ln">116</span>        // 这里的可见返回为false
+<span class="ln">117</span>        if (hidden) {
+<span class="ln">118</span>            dispatchUserVisibleHint(false);
+<span class="ln">119</span>        } else {
+<span class="ln">120</span>            dispatchUserVisibleHint(true);
+<span class="ln">121</span>        }
+<span class="ln">122</span>        Log.e(TAG, &#34;onHiddenChanged: &#34;);
+<span class="ln">123</span>    }
+<span class="ln">124</span>
+<span class="ln">125</span>    /**
+<span class="ln">126</span>     * 统一处理用户可见事件分发
+<span class="ln">127</span>     */
+<span class="ln">128</span>    public void dispatchUserVisibleHint(boolean isVisible) {
+<span class="ln">129</span>        // 首先考虑一下fragment嵌套fragment的情况(只考虑2层嵌套)
+<span class="ln">130</span>        if (isVisible &amp;&amp; isParentInvisible()) {
+<span class="ln">131</span>            // 父Fragmnet此时不可见,直接return不做处理
+<span class="ln">132</span>            return;
+<span class="ln">133</span>        }
+<span class="ln">134</span>        // 为了代码严谨,如果当前状态与需要设置的状态本来就一致了,就不处理了
+<span class="ln">135</span>        if (currentVisibleState == isVisible) {
+<span class="ln">136</span>            return;
+<span class="ln">137</span>        }
+<span class="ln">138</span>        currentVisibleState = isVisible;
+<span class="ln">139</span>        if (isVisible) {
+<span class="ln">140</span>            if (mIsFirstVisible) {
+<span class="ln">141</span>                mIsFirstVisible = false;
+<span class="ln">142</span>                // 第一次可见,进行全局初始化
+<span class="ln">143</span>                onFragmentFirstVisible();
+<span class="ln">144</span>            }
+<span class="ln">145</span>            onFragmentResume();
+<span class="ln">146</span>            // 分发事件给内嵌的Fragment
+<span class="ln">147</span>            dispatchChildVisibleState(true);
+<span class="ln">148</span>        } else {
+<span class="ln">149</span>            onFragmentPause();
+<span class="ln">150</span>            dispatchChildVisibleState(false);
+<span class="ln">151</span>        }
+<span class="ln">152</span>        Log.e(TAG, &#34;dispatchUserVisibleHint: &#34;);
+<span class="ln">153</span>
+<span class="ln">154</span>    }
+<span class="ln">155</span>
+<span class="ln">156</span>    /**
+<span class="ln">157</span>     * 在双重ViewPager嵌套的情况下，第一次滑到Frgment 嵌套ViewPager(fragment)的场景的时候
+<span class="ln">158</span>     * 此时只会加载外层Fragment的数据，而不会加载内嵌viewPager中的fragment的数据，因此，我们
+<span class="ln">159</span>     * 需要在此增加一个当外层Fragment可见的时候，分发可见事件给自己内嵌的所有Fragment显示
+<span class="ln">160</span>     */
+<span class="ln">161</span>    private void dispatchChildVisibleState(boolean visible) {
+<span class="ln">162</span>
+<span class="ln">163</span>        FragmentManager fragmentManager = getChildFragmentManager();
+<span class="ln">164</span>        List&lt;Fragment&gt; fragments = fragmentManager.getFragments();
+<span class="ln">165</span>        if (null != fragments) {
+<span class="ln">166</span>            for (Fragment fragment : fragments) {
+<span class="ln">167</span>                if (fragment instanceof BaseLazyFragment &amp;&amp; !fragment.isHidden()
+<span class="ln">168</span>                        &amp;&amp; fragment.getUserVisibleHint()) {
+<span class="ln">169</span>                    ((BaseLazyFragment) fragment).dispatchUserVisibleHint(visible);
+<span class="ln">170</span>                }
+<span class="ln">171</span>            }
+<span class="ln">172</span>        }
+<span class="ln">173</span>        Log.e(TAG, &#34;dispatchChildVisibleState: &#34;);
+<span class="ln">174</span>    }
+<span class="ln">175</span>
+<span class="ln">176</span>    /**
+<span class="ln">177</span>     * Fragment真正的Pause,暂停一切网络耗时操作
+<span class="ln">178</span>     */
+<span class="ln">179</span>    protected void onFragmentPause() {
+<span class="ln">180</span>        Log.e(TAG, &#34;onFragmentPause: &#34;);
+<span class="ln">181</span>    }
+<span class="ln">182</span>
+<span class="ln">183</span>    /**
+<span class="ln">184</span>     * Fragment真正的Resume,开始处理网络加载等耗时操作
+<span class="ln">185</span>     */
+<span class="ln">186</span>    protected void onFragmentResume() {
+<span class="ln">187</span>        Log.e(TAG, &#34;onFragmentResume: &#34;);
+<span class="ln">188</span>    }
+<span class="ln">189</span>
+<span class="ln">190</span>    private boolean isParentInvisible() {
+<span class="ln">191</span>        Fragment parentFragment = getParentFragment();
+<span class="ln">192</span>        if (parentFragment instanceof BaseLazyFragment) {
+<span class="ln">193</span>            BaseLazyFragment fragment = (BaseLazyFragment) parentFragment;
+<span class="ln">194</span>            return !fragment.isSupportVisible();
+<span class="ln">195</span>        }
+<span class="ln">196</span>        Log.e(TAG, &#34;isParentInvisible: &#34;);
+<span class="ln">197</span>        return false;
+<span class="ln">198</span>    }
+<span class="ln">199</span>
+<span class="ln">200</span>    private boolean isSupportVisible() {
+<span class="ln">201</span>        return currentVisibleState;
+<span class="ln">202</span>    }
+<span class="ln">203</span>
+<span class="ln">204</span>    /**
+<span class="ln">205</span>     * 在滑动或者跳转的过程中，第一次创建fragment的时候均会调用onResume方法
+<span class="ln">206</span>     */
+<span class="ln">207</span>    @Override
+<span class="ln">208</span>    public void onResume() {
+<span class="ln">209</span>        super.onResume();
+<span class="ln">210</span>        // 如果不是第一次可见
+<span class="ln">211</span>        if (!mIsFirstVisible) {
+<span class="ln">212</span>            // 如果此时进行Activity跳转,会将所有的缓存的fragment进行onResume生命周期的重复
+<span class="ln">213</span>            // 只需要对可见的fragment进行加载,
+<span class="ln">214</span>            if (!isHidden() &amp;&amp; !currentVisibleState &amp;&amp; getUserVisibleHint()) {
+<span class="ln">215</span>
+<span class="ln">216</span>                dispatchUserVisibleHint(true);
+<span class="ln">217</span>            }
+<span class="ln">218</span>        }
+<span class="ln">219</span>        Log.e(TAG, &#34;onResume: &#34;);
+<span class="ln">220</span>
+<span class="ln">221</span>    }
+<span class="ln">222</span>
+<span class="ln">223</span>    /**
+<span class="ln">224</span>     * 只有当当前页面由可见状态转变到不可见状态时才需要调用 dispatchUserVisibleHint currentVisibleState &amp;&amp;
+<span class="ln">225</span>     * getUserVisibleHint() 能够限定是当前可见的 Fragment 当前 Fragment 包含子 Fragment 的时候
+<span class="ln">226</span>     * dispatchUserVisibleHint 内部本身就会通知子 Fragment 不可见 子 fragment 走到这里的时候自身又会调用一遍
+<span class="ln">227</span>     */
+<span class="ln">228</span>    @Override
+<span class="ln">229</span>    public void onPause() {
+<span class="ln">230</span>        super.onPause();
+<span class="ln">231</span>        if (currentVisibleState &amp;&amp; getUserVisibleHint()) {
+<span class="ln">232</span>            dispatchUserVisibleHint(false);
+<span class="ln">233</span>        }
+<span class="ln">234</span>        Log.e(TAG, &#34;onPause: &#34;);
+<span class="ln">235</span>    }
+<span class="ln">236</span>
+<span class="ln">237</span>    @Override
+<span class="ln">238</span>    public void onDestroyView() {
+<span class="ln">239</span>        super.onDestroyView();
+<span class="ln">240</span>        isViewCreated = false;
+<span class="ln">241</span>        Log.e(TAG, &#34;onDestroyView: &#34;);
+<span class="ln">242</span>    }
+<span class="ln">243</span>
+<span class="ln">244</span>    @Override
+<span class="ln">245</span>    public void onDestroy() {
+<span class="ln">246</span>        super.onDestroy();
+<span class="ln">247</span>        Log.e(TAG, &#34;onDestroy: &#34;);
+<span class="ln">248</span>    }
+<span class="ln">249</span>
+<span class="ln">250</span>    @Override
+<span class="ln">251</span>    public void onDetach() {
+<span class="ln">252</span>        super.onDetach();
+<span class="ln">253</span>        Log.e(TAG, &#34;onDetach: &#34;);
+<span class="ln">254</span>    }
+<span class="ln">255</span>
+<span class="ln">256</span>    /**
+<span class="ln">257</span>     * 第一次可见,根据业务进行初始化操作
+<span class="ln">258</span>     */
+<span class="ln">259</span>    protected void onFragmentFirstVisible() {
+<span class="ln">260</span>        initView();
+<span class="ln">261</span>        initData();
+<span class="ln">262</span>        initListener();
+<span class="ln">263</span>        Log.e(TAG, &#34;onFragmentFirstVisible: &#34;);
+<span class="ln">264</span>    }
+<span class="ln">265</span>
+<span class="ln">266</span>    /**
+<span class="ln">267</span>     * 初始化布局
+<span class="ln">268</span>     */
+<span class="ln">269</span>    protected abstract void initView();
+<span class="ln">270</span>
+<span class="ln">271</span>    /**
+<span class="ln">272</span>     * 初始化Data
+<span class="ln">273</span>     */
+<span class="ln">274</span>    protected abstract void initData();
+<span class="ln">275</span>
+<span class="ln">276</span>    /**
+<span class="ln">277</span>     * 初始化Listener
+<span class="ln">278</span>     */
+<span class="ln">279</span>    protected abstract void initListener();
+<span class="ln">280</span>
+<span class="ln">281</span>
+<span class="ln">282</span>    @LayoutRes
+<span class="ln">283</span>    protected abstract int getLayoutResId();
+<span class="ln">284</span>
+<span class="ln">285</span>}
+<span class="ln">286</span>
+</code></pre></div><blockquote>
+<p>重点来了，这个懒加载作用是防止重复加载，这个很重要。所以你viewpager不停的回收创建，是没有办法使用懒加载的。</p>
+</blockquote>
+<h3 id="adapter">adapter</h3>
+<p>我们知道可以设置setOffscreenPageLimit() 设置预加载数量。但是好像也没有啥用，因为他该走删除还是会走删除，因为这个需要搭配 destroyItem一起使用。
+所以destroyItem 就是删除item的罪魁祸首。所以把他注释掉就行？但是这么就会出现一个问题，万一有很多fragment加载进来呢？如果fragment少的话，使用懒加载是没有问题。所以要真正解决这个情况，就需要对viewpager+fragment生命周期详细透彻的了解。同时对adapter支持的方法进行了解了。</p>
+<h4 id="不做任何处理默认展示第0个">不做任何处理默认展示第0个</h4>
+<blockquote>
+<p>当前展示第0个</p>
+</blockquote>
+<ul>
+<li>0: onCreate:</li>
+<li>1: onCreate:</li>
+<li>0: onCreateView:</li>
+<li>0: onViewCreated:</li>
+<li>0: onStart:</li>
+<li>0: onResume:</li>
+<li>1: onCreateView:</li>
+<li>1: onViewCreated:</li>
+<li>1: onStart:</li>
+<li>1: onResume:</li>
+</ul>
+<blockquote>
+<p>很符合设定模式，直接加载两个。</p>
+</blockquote>
+<h4 id="不做任何处理显示第1个">不做任何处理，显示第1个。</h4>
+<blockquote>
+<p>当前展示第1个</p>
+</blockquote>
+<ul>
+<li>1: onCreate:</li>
+<li>0: onCreate:</li>
+<li>2: onCreate:</li>
+<li>1: onCreateView:</li>
+<li>1: onViewCreated:</li>
+<li>1: onStart:</li>
+<li>1: onResume:</li>
+<li>0: onCreateView:</li>
+<li>0: onViewCreated:</li>
+<li>2: onCreateView:</li>
+<li>2: onViewCreated:</li>
+<li>0: onStart:</li>
+<li>0: onResume:</li>
+<li>2: onStart:</li>
+<li>2: onResume:</li>
+</ul>
+<blockquote>
+<p>和上面类似。直接加载第一个到显示，然后是加载左边的创建流程，然后是右边的创建流程，然后是左边的显示流程，然后是右边的显示流程。</p>
+</blockquote>
+<h4 id="向右滑动一个">向右滑动一个</h4>
+<blockquote>
+<p>当前显示1，滑动后显示2</p>
+</blockquote>
+<ul>
+<li>3: onCreate:</li>
+<li>0: onPause:</li>
+<li>0: onDestroyView:</li>
+<li>3: onCreateView:</li>
+<li>3: onViewCreated:</li>
+<li>3: onStart:</li>
+<li>3: onResume:</li>
+</ul>
+<blockquote>
+<p>滑动前显示的是1，因为2是加载出来的，滑动到2，所以0 被销毁了，3被创建了，这很符合逻辑。</p>
+</blockquote>
+<h4 id="滑回去一次">滑回去一次</h4>
+<blockquote>
+<p>当前显示2，滑动后显示1</p>
+</blockquote>
+<ul>
+<li>0: onCreateView:</li>
+<li>0: onViewCreated:</li>
+<li>3: onPause:</li>
+<li>3: onDestroyView:</li>
+<li>0: onStart:</li>
+<li>0: onResume:</li>
+</ul>
+<blockquote>
+<p>从上面可以看出，onCreate对于已经创建的只会执行一次。而onDestroy 没有执行。</p>
+</blockquote>
+<h4 id="关闭界面">关闭界面</h4>
+<blockquote>
+<p>当前显示1，关闭界面</p>
+</blockquote>
+<ul>
+<li>1: onPause:</li>
+<li>2: onPause:</li>
+<li>0: onPause:</li>
+<li>1: onDestroyView:</li>
+<li>2: onDestroyView:</li>
+<li>0: onDestroyView:</li>
+<li>1: onDestroy:</li>
+<li>2: onDestroy:</li>
+<li>0: onDestroy:</li>
+<li>3: onDestroy:</li>
+</ul>
+<blockquote>
+<p>activity界面关闭后，走过创建后的都会走 onDestroy。</p>
+</blockquote>
+<h4 id="设置缓存为fragment个数">设置缓存为fragment个数</h4>
+<ul>
+<li>setOffscreenPageLimit()</li>
+</ul>
+<blockquote>
+<p>生命周期执行。</p>
+</blockquote>
+<ul>
+<li>0: onCreate:</li>
+<li>1: onCreate:</li>
+<li>2: onCreate:</li>
+<li>3: onCreate:</li>
+<li>4: onCreate:</li>
+<li>5: onCreate:</li>
+<li>0: onCreateView:</li>
+<li>0: onViewCreated:</li>
+<li>0: onStart:</li>
+<li>0: onResume:</li>
+<li>1: onCreateView:</li>
+<li>1: onViewCreated:</li>
+<li>2: onCreateView:</li>
+<li>2: onViewCreated:</li>
+<li>3: onCreateView:</li>
+<li>3: onViewCreated:</li>
+<li>4: onCreateView:</li>
+<li>4: onViewCreated:</li>
+<li>5: onCreateView:</li>
+<li>5: onViewCreated:</li>
+<li>1: onStart:</li>
+<li>1: onResume:</li>
+<li>5: onStart:</li>
+<li>5: onResume:</li>
+<li>4: onStart:</li>
+<li>4: onResume:</li>
+<li>2: onStart:</li>
+<li>2: onResume:</li>
+<li>3: onStart:</li>
+<li>3: onResume:</li>
+</ul>
+<blockquote>
+<p>emmmm? 卧槽怎么全部加载出来了，这很符合逻辑嘛。所有的都执行到onResume了 那我滑动一下会出现什么问题？事实证明没有任何的生命周期变动。emmmm?</p>
+</blockquote>
+<h4 id="那我注释掉destroyitem-不设置缓存呢">那我注释掉destroyItem 不设置缓存呢？</h4>
+<blockquote>
+<p>创建肯定还是和上面默认创建一样的。关键在于销毁上。当前第0个，滑动到第一个。</p>
+</blockquote>
+<ul>
+<li>2: onCreate:</li>
+<li>2: onCreateView:</li>
+<li>2: onViewCreated:</li>
+<li>2: onStart:</li>
+<li>2: onResume:</li>
+</ul>
+<blockquote>
+<p>明显就没有上面的0</p>
+</blockquote>
+<ul>
+<li>0: onPause:</li>
+<li>0: onDestroyView:</li>
+</ul>
+<blockquote>
+<p>所以逻辑很正确，创建后不销毁。</p>
+</blockquote>
+<h3 id="懒加载">懒加载？</h3>
+<blockquote>
+<p>众所皆知，懒加载是为了防止重复创建和调用网络请求而生的。而viewpager 默认的加载模式和销毁模式和懒加载是有冲突的。因为viewpager 只是删除了view，没有删除对象。就导致对象存在，view不存在。view中如果包含生命周期绑定，那么懒加载肯定会出现问题的。所以是不能走onDestroyView的，而大多数的fragment监听是在onDestroyView中注销的，泪了。
+那么既然 setOffscreenPageLimit()和destroyItem注释后都是不走onDestroyView。
+懒加载主要处理:</p>
+</blockquote>
+<ul>
+<li>onFragmentPause</li>
+<li>onFragmentResume</li>
+<li>onFragmentFirstVisible</li>
+<li></li>
+</ul>
+<h3 id="外层fragment不用懒加载-子fragment使用viewpager懒加载">外层fragment不用懒加载 子fragment使用viewpager懒加载。</h3>
+<h4 id="情景1">情景1</h4>
+<blockquote>
+<p>外层fragment不是懒加载fragment，包裹fragment是懒加载fragment，使用viewpager 默认加载。默认加载第0个。</p>
+</blockquote>
+<ul>
+<li>0: setUserVisibleHint:</li>
+<li>1: setUserVisibleHint:</li>
+<li>0: setUserVisibleHint:</li>
+<li>0: onAttach:</li>
+<li>0: initParameters:</li>
+<li>0: onCreate:</li>
+<li>1: onAttach:</li>
+<li>1: initParameters:</li>
+<li>1: onCreate:</li>
+<li>0: onCreateView:</li>
+<li>0: isParentInvisible:</li>
+<li>0: onFragmentFirstVisible:</li>
+<li>0: onFragmentResume:</li>
+<li>0: dispatchChildVisibleState:</li>
+<li>0: dispatchUserVisibleHint:</li>
+<li>0: onViewCreated:</li>
+<li>0: onStart:</li>
+<li>0: onResume:</li>
+<li>1: onCreateView:</li>
+<li>1: onViewCreated:</li>
+<li>1: onStart:</li>
+<li>1: onResume:</li>
+</ul>
+<blockquote>
+<p>从上面可以看出，只有加载出来的0，才执行了onFragmentFirstVisible。和onFragmentResume</p>
+</blockquote>
+<blockquote>
+<p>当从0 滑动到1。</p>
+</blockquote>
+<ul>
+<li>2: setUserVisibleHint:</li>
+<li>0: onFragmentPause:</li>
+<li>0: dispatchChildVisibleState:</li>
+<li>0: dispatchUserVisibleHint:</li>
+<li>0: setUserVisibleHint:</li>
+<li>1: isParentInvisible:</li>
+<li>1: onFragmentFirstVisible:</li>
+<li>1: onFragmentResume:</li>
+<li>1: dispatchChildVisibleState:</li>
+<li>1: dispatchUserVisibleHint:</li>
+<li>1: setUserVisibleHint:</li>
+<li>2: onAttach:</li>
+<li>2: initParameters:</li>
+<li>2: onCreate:</li>
+<li>2: onCreateView:</li>
+<li>2: onViewCreated:</li>
+<li>2: onStart:</li>
+<li>2: onResume:</li>
+</ul>
+<blockquote>
+<p>按照逻辑显示的1，调用了onFragmentFirstVisible，onFragmentResume，将0 设置为onFragmentPause</p>
+</blockquote>
+<blockquote>
+<p>将 1滑动到2。</p>
+</blockquote>
+<ul>
+<li>3: setUserVisibleHint:</li>
+<li>1: onFragmentPause:</li>
+<li>1: dispatchChildVisibleState:</li>
+<li>1: dispatchUserVisibleHint:</li>
+<li>1: setUserVisibleHint:</li>
+<li>2: isParentInvisible:</li>
+<li>2: onFragmentFirstVisible:</li>
+<li>2: onFragmentResume:</li>
+<li>2: dispatchChildVisibleState:</li>
+<li>2: dispatchUserVisibleHint:</li>
+<li>2: setUserVisibleHint:</li>
+<li>3: onAttach:</li>
+<li>3: initParameters:</li>
+<li>3: onCreate:</li>
+<li>0: onPause:</li>
+<li>0: onDestroyView:</li>
+<li>3: onCreateView:</li>
+<li>3: onViewCreated:</li>
+<li>3: onStart:</li>
+<li>3: onResume:</li>
+</ul>
+<blockquote>
+<p>可以看出来，关于0的销毁和3的创建是没有区别的。</p>
+</blockquote>
+<blockquote>
+<p>返回到1，将3销毁，将1复活。</p>
+</blockquote>
+<ul>
+<li>0: setUserVisibleHint:</li>
+<li>2: onFragmentPause:</li>
+<li>2: dispatchChildVisibleState:</li>
+<li>2: dispatchUserVisibleHint:</li>
+<li>2: setUserVisibleHint:</li>
+<li>1: isParentInvisible:</li>
+<li>1: onFragmentResume:</li>
+<li>1: dispatchChildVisibleState:</li>
+<li>1: dispatchUserVisibleHint:</li>
+<li>1: setUserVisibleHint:</li>
+<li>0: onCreateView:</li>
+<li>0: onViewCreated:</li>
+<li>3: onPause:</li>
+<li>3: onDestroyView:</li>
+<li>0: onStart:</li>
+<li>0: onResume:</li>
+</ul>
+<blockquote>
+<p>2处于暂停，1处于显示，也没有问题。很符合逻辑。0重新调用onViewCreated。和正常的fragment调用是一样的。所以懒加载也是需要设置fragment的销毁和缓存的。</p>
+</blockquote>
+<h4 id="情景2">情景2</h4>
+<blockquote>
+<p>和情景1类似，直接设置adapter的缓存最大的个数。</p>
+</blockquote>
+<ul>
+<li>0: setUserVisibleHint:</li>
+<li>1: setUserVisibleHint:</li>
+<li>2: setUserVisibleHint:</li>
+<li>3: setUserVisibleHint:</li>
+<li>4: setUserVisibleHint:</li>
+<li>5: setUserVisibleHint:</li>
+<li>0: setUserVisibleHint:</li>
+<li>0: onAttach:</li>
+<li>0: initParameters:</li>
+<li>0: onCreate:</li>
+<li>1: onAttach:</li>
+<li>1: initParameters:</li>
+<li>1: onCreate:</li>
+<li>2: onAttach:</li>
+<li>2: initParameters:</li>
+<li>2: onCreate:</li>
+<li>3: onAttach:</li>
+<li>3: initParameters:</li>
+<li>3: onCreate:</li>
+<li>4: onAttach:</li>
+<li>4: initParameters:</li>
+<li>4: onCreate:</li>
+<li>5: onAttach:</li>
+<li>5: initParameters:</li>
+<li>5: onCreate:</li>
+<li>0: onCreateView:</li>
+<li>0: isParentInvisible:</li>
+<li>0: onFragmentFirstVisible:</li>
+<li>0: onFragmentResume:</li>
+<li>0: dispatchChildVisibleState:</li>
+<li>0: dispatchUserVisibleHint:</li>
+<li>0: onViewCreated:</li>
+<li>0: onStart:</li>
+<li>0: onResume:</li>
+<li>1: onCreateView:</li>
+<li>1: onViewCreated:</li>
+<li>2: onCreateView:</li>
+<li>2: onViewCreated:</li>
+<li>3: onCreateView:</li>
+<li>3: onViewCreated:</li>
+<li>4: onCreateView:</li>
+<li>4: onViewCreated:</li>
+<li>5: onCreateView:</li>
+<li>5: onViewCreated:</li>
+<li>3: onStart:</li>
+<li>3: onResume:</li>
+<li>3: onResume:</li>
+<li>2: onStart:</li>
+<li>2: onResume:</li>
+<li>2: onResume:</li>
+<li>1: onStart:</li>
+<li>1: onResume:</li>
+<li>1: onResume:</li>
+<li>4: onStart:</li>
+<li>4: onResume:</li>
+<li>4: onResume:</li>
+<li>5: onStart:</li>
+<li>5: onResume:</li>
+</ul>
+<blockquote>
+<p>和正常的fragment 设置全部缓存类似，也是直接加载了全部。</p>
+<ul>
+<li>0: onFragmentFirstVisible:</li>
+<li>0: onFragmentResume:</br>
+这个方法调用也很合懒加载的逻辑。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>切换fragment</p>
+</blockquote>
+<ul>
+<li>2: onFragmentPause:</li>
+<li>2: dispatchChildVisibleState:</li>
+<li>2: dispatchUserVisibleHint:</li>
+<li>2: setUserVisibleHint:</li>
+<li>3: isParentInvisible:</li>
+<li>3: onFragmentFirstVisible:</li>
+<li>3: onFragmentResume:</li>
+<li>3: dispatchChildVisibleState:</li>
+<li>3: dispatchUserVisibleHint:</li>
+<li>3: setUserVisibleHint:</li>
+</ul>
+<blockquote>
+<p>只有切换显示到的fragment，调用了onFragmentResume。这个也很符合逻辑，没有调用销毁，和正常的fragment的全部缓存切换类似。</p>
+</blockquote>
+<h4 id="情景3">情景3</h4>
+<blockquote>
+<p>和情景1类型，只是注释掉adapter 中的destroyItem</p>
+</blockquote>
+<blockquote>
+<p>加载0。</p>
+</blockquote>
+<ul>
+<li>0: setUserVisibleHint:</li>
+<li>1: setUserVisibleHint:</li>
+<li>0: setUserVisibleHint:</li>
+<li>0: onAttach:</li>
+<li>0: initParameters:</li>
+<li>0: onCreate:</li>
+<li>1: onAttach:</li>
+<li>1: initParameters:</li>
+<li>1: onCreate:</li>
+<li>0: onCreateView:</li>
+<li>0: isParentInvisible:</li>
+<li>0: onFragmentFirstVisible:</li>
+<li>0: onFragmentResume:</li>
+<li>0: dispatchChildVisibleState:</li>
+<li>0: dispatchUserVisibleHint:</li>
+<li>0: onViewCreated:</li>
+<li>0: onStart:</li>
+<li>0: onResume:</li>
+<li>1: onCreateView:</li>
+<li>1: onViewCreated:</li>
+<li>1: onStart:</li>
+<li>1: onResume:</li>
+</ul>
+<blockquote>
+<p>初始化和不设置参数的时候类似。</p>
+</blockquote>
+<blockquote>
+<p>滑动到1</p>
+</blockquote>
+<ul>
+<li>2: setUserVisibleHint:</li>
+<li>0: onFragmentPause:</li>
+<li>0: dispatchChildVisibleState:</li>
+<li>0: dispatchUserVisibleHint:</li>
+<li>0: setUserVisibleHint:</li>
+<li>1: isParentInvisible:</li>
+<li>1: onFragmentFirstVisible:</li>
+<li>1: onFragmentResume:</li>
+<li>1: dispatchChildVisibleState:</li>
+<li>1: dispatchUserVisibleHint:</li>
+<li>1: setUserVisibleHint:</li>
+<li>2: onAttach:</li>
+<li>2: initParameters:</li>
+<li>2: onCreate:</li>
+<li>2: onCreateView:</li>
+<li>2: onViewCreated:</li>
+<li>2: onStart:</li>
+<li>2: onResume:</li>
+</ul>
+<blockquote>
+<p>创建类似。
+滑动到2，监听0的销毁情况。</p>
+</blockquote>
+<ul>
+<li>3: setUserVisibleHint:</li>
+<li>1: onFragmentPause:</li>
+<li>1: dispatchChildVisibleState:</li>
+<li>1: dispatchUserVisibleHint:</li>
+<li>1: setUserVisibleHint:</li>
+<li>2: isParentInvisible:</li>
+<li>2: onFragmentFirstVisible:</li>
+<li>2: onFragmentResume:</li>
+<li>2: dispatchChildVisibleState:</li>
+<li>2: dispatchUserVisibleHint:</li>
+<li>2: setUserVisibleHint:</li>
+<li>3: onAttach:</li>
+<li>3: initParameters:</li>
+<li>3: onCreate:</li>
+<li>3: onCreateView:</li>
+<li>3: onViewCreated:</li>
+<li>3: onStart:</li>
+<li>3: onResume:</li>
+</ul>
+<blockquote>
+<p>从上面可以看出，因为注释掉销毁方法，所以根本就没有执行销毁逻辑。而创建逻辑是正常的。</p>
+</blockquote>
+<h3 id="套娃">套娃</h3>
+<blockquote>
+<p>因为fragment的套娃加载设计，可能出现4种，</p>
+</blockquote>
+<ul>
+<li>外层使用FrameLayout，内层也使用FrameLayout。</li>
+<li>外层使用FrameLayout，内层也使用viewpager。</li>
+<li>外层使用viewpager,内层也使用FrameLayout。</li>
+<li>外层使用viewpager,内层也使用viewpager。</li>
+</ul>
+<blockquote>
+<p>具体哪种写法好，别问，问就是不知道。<br>
+这种套娃现象很容易出现在多聚合功能的首页上面，比如说主页4个tab,tab内部又是tab  emmmmm? 反正这种界面设计蛮常见的。所以是不建议直接设置viewpager adapter的缓存的为最大的。
+一次性加载全部，可能性能上有点问题，同时启动的时候，请求的东西太多。个人建议直接注释掉销毁代码，当然也可以根据情况，自己写销毁这边的代码。可能根据业务情况，销毁不常用的功能点是很符合逻辑的，粗暴的注释掉销毁也不是不能解决问题，就怕有杠精把所有tab加载一遍，然后提bug。为啥这是bug?我也不知道，萌新搞不懂测试大佬们的想法。
+<br> 反正个人觉得，不常用的功能点，是可以销毁掉的，或者比较吃资源保留着，或者吃资源然后还不常用的直接销毁掉吧，emmmm?数据缓存了解下。</p>
+</blockquote>
+<h4 id="外层使用framelayout内层使用framelayout使用正常fragment">外层使用FrameLayout，内层使用FrameLayout，使用正常fragment</h4>
+<blockquote>
+<p>外层用group,内层是child.外层默认加载第一个，内层默认加载第2个。</p>
+</blockquote>
+<p>Group1: onCreate:
+Group1: onCreateView:
+Group1: onViewCreated:
+child1: onCreate:
+child1: onCreateView:
+child1: onViewCreated:
+Group1: onStart:
+child1: onStart:
+Group1: onResume:
+child1: onResume:</p>
+<blockquote>
+<p>从上面的生命周期调用可以知道，只是加载了外层第0个和内层的第0个。</p>
+</blockquote>
+<p>外层0保持不变，内层切到到1.</p>
+<ul>
+<li>child2: onCreate:</li>
+<li>child2: onCreateView:</li>
+<li>child2: onViewCreated:</li>
+<li>child2: onStart:</li>
+<li>child2: onResume:</li>
+</ul>
+<blockquote>
+<p>内层1个加载出来，内层0因为已经加载出来，所以没有调用生命周期，1显示出来直接覆盖掉0.切到0，生命周期也未变动。</p>
+</blockquote>
+<p>内层保存不变，切换外层，0切换到1</p>
+<ul>
+<li>Group2: onCreate:</li>
+<li>Group2: onCreateView:</li>
+<li>Group2: onViewCreated:</li>
+<li>child1: onCreate:</li>
+<li>child1: onCreateView:</li>
+<li>child1: onViewCreated:</li>
+<li>Group2: onStart:</li>
+<li>child1: onStart:</li>
+<li>Group2: onResume:</li>
+<li>child1: onResume:</li>
+</ul>
+<blockquote>
+<p>这个和外层0创建生命周期走的一致。切换到0的时候，0的生命周期也未变动。</p>
+</blockquote>
+<h5 id="总结">总结</h5>
+<blockquote>
+<p>使用FrameLayout 嵌套FrameLayout ，对于已经加载出来的fragment是通过覆盖，和隐藏已经显示的fragment达到效果的，切换的时候不影响生命周期。只有没有创建的fragment会走创建的生命周期。而退出的时候，会统一走销毁。
+所以不建议直接加载全部的fragment，需要的时候才会创建。因为需要自己实现fragment的添加逻辑，所以可以在添加的时候，选择移除或者隐藏已有的fragment。通常是隐藏fragment。</p>
+</blockquote>
+<p>fragment在FrameLayout中的显示代码示例:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span>public Fragment showFragment(String className, FragmentManager fragmentManager, int id) {
+<span class="ln"> 2</span>        Fragment fragment = null;
+<span class="ln"> 3</span>        try {
+<span class="ln"> 4</span>
+<span class="ln"> 5</span>            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+<span class="ln"> 6</span>            //隐藏所有的那个啥。
+<span class="ln"> 7</span>            for (Fragment fra : fragmentManager.getFragments()) {
+<span class="ln"> 8</span>                fragmentTransaction.hide(fra);
+<span class="ln"> 9</span>            }
+<span class="ln">10</span>            Fragment fragmentByTag = fragmentManager.findFragmentByTag(className);
+<span class="ln">11</span>            if (fragmentByTag != null) {
+<span class="ln">12</span>                fragmentTransaction.show(fragmentByTag);
+<span class="ln">13</span>            } else {
+<span class="ln">14</span>                fragment = (Fragment) Class.forName(className).newInstance();
+<span class="ln">15</span>                fragmentTransaction.add(id, fragment, className);
+<span class="ln">16</span>            }
+<span class="ln">17</span>            //添加到返回栈中
+<span class="ln">18</span>            //  fragmentTransaction.addToBackStack(className);
+<span class="ln">19</span>            fragmentTransaction.commitAllowingStateLoss();
+<span class="ln">20</span>        } catch (InstantiationException e) {
+<span class="ln">21</span>            e.printStackTrace();
+<span class="ln">22</span>        } catch (IllegalAccessException e) {
+<span class="ln">23</span>            e.printStackTrace();
+<span class="ln">24</span>        } catch (ClassNotFoundException e) {
+<span class="ln">25</span>            e.printStackTrace();
+<span class="ln">26</span>        }
+<span class="ln">27</span>        return fragment;
+<span class="ln">28</span>    }
+</code></pre></div><p>但是这么写有一个问题，他并不是上一行代码显示了fragment，下一行代码Fragment fragmentByTag = fragmentManager.findFragmentByTag(className);就可以获取到已经添加进去了。
+所以要操作显示的fragment，可能需要监听fragment的生命周期。监听代码和生命周期监听一样。</p>
+<h4 id="外层使用framelayout内层使用framelayout使用lazyfragment">外层使用FrameLayout，内层使用FrameLayout，使用LazyFragment</h4>
+<p>默认外层加载0，内层加载0，生命周期类似。
+外层保持0，内层切到到1.</p>
+<ul>
+<li>child2: onCreate:</li>
+<li>child1: onFragmentPause:</li>
+<li>child2: onCreateView:</li>
+<li>child2: isParentInvisible:</li>
+<li>child2: onFragmentFirstVisible:</li>
+<li>child2: onFragmentResume:</li>
+<li>child2: onViewCreated:</li>
+<li>child2: onStart:</li>
+<li>child2: onResume:</li>
+</ul>
+<p>外层保持0，内层再切换到0。</p>
+<ul>
+<li>child2: onFragmentPause:</li>
+<li>child1: onFragmentResume:
+内层保持0，外层切换到1。</li>
+<li>Group2: onCreate:</li>
+<li>Group2: onCreateView:</li>
+<li>Group2: onViewCreated:</li>
+<li>Group2-child1: onAttach:</li>
+<li>Group2-child1: initParameters:</li>
+<li>Group2-child1: onCreate:</li>
+<li>Group2-child1: onCreateView:</li>
+<li>Group2-child1: isParentInvisible:</li>
+<li>Group2-child1: onFragmentFirstVisible:</li>
+<li>Group2-child1: onFragmentResume:</li>
+<li>Group2-child1: dispatchChildVisibleState:</li>
+<li>Group2-child1: dispatchUserVisibleHint:</li>
+<li>Group2-child1: onViewCreated:</li>
+<li>Group2: onStart:</li>
+<li>Group2-child1: onStart:</li>
+<li>Group2: onResume:</li>
+<li>Group2-child1: onResume:
+内层保持0，外层切换到0。<br>
+内层切换到1，外层切换到1。<br>
+内层切换到0，外层切换到0 。 <br></li>
+</ul>
+<blockquote>
+<p>基于上面的流程，是没有什么周期变动的。默认使用FrameLayout和fragment对于已经加载的fragment是不进行生命周期调用了。所以外层的fragment的更改无法影响到内层的懒加载fragment。只有内层的懒加载fragment进行切换才有生命周期变动。</p>
+</blockquote>
+<h4 id="外层使用framelayout使用lazyfragment内层使用framelayout使用lazyfragment">外层使用FrameLayout，使用lazyFragment，内层使用FrameLayout，使用LazyFragment</h4>
+<blockquote>
+<p>从上面的实践，我们知道lazyFragment 的模式，会在FrameLayout中对于已经存在的fragment进行方法调用。而创建流程走的生命周期是一致的，而有区别的在于lazyFragment 切换的方法调用。
+<br> 逻辑意义上，父fragment处于隐藏，子fragment也会调用隐藏代码。</p>
+</blockquote>
+<ul>
+<li>Group2: onFragmentPause:</li>
+<li>Group2-child1: onFragmentPause:</li>
+<li>Group2-child1: dispatchChildVisibleState:</li>
+<li>Group2-child1: dispatchUserVisibleHint:</li>
+<li>Group2: dispatchChildVisibleState:</li>
+<li>Group2: dispatchUserVisibleHint:</li>
+<li>Group2: onHiddenChanged:</li>
+<li>Group1: isParentInvisible:</li>
+<li>Group1: onFragmentResume:</li>
+<li>Group1-child1: onFragmentResume:</li>
+<li>Group1-child1: dispatchChildVisibleState:</li>
+<li>Group1-child1: dispatchUserVisibleHint:</li>
+<li>Group1: dispatchChildVisibleState:</li>
+<li>Group1: dispatchUserVisibleHint:</li>
+<li>Group1: onHiddenChanged:</li>
+</ul>
+<blockquote>
+<p>从上面的方法调度可以看出，这个是外层2，切换到1。2调用隐藏方法，2的child也调用了暂停方法。</p>
+</blockquote>
+<h4 id="外层使用framelayoutfragment内层viewpagerfragment">外层使用FrameLayout+fragment，内层viewpager+fragment</h4>
+<blockquote>
+<p>默认创建0的时候，0走创建流程，内部加载0和1，内部切换的时候和单viewpager 切换类似。
+按照FrameLayout 切换逻辑，外层切换是不影响内部的生命周期调用的。
+<br> 通过上面的demo运行，可以得出结论。</p>
+</blockquote>
+<ul>
+<li>无论内部fragment设置全部缓存还是修改adapter中item的删除代码，外层调用将不受影响。</li>
+<li>内部加载lazyFragment在外部切换后会调用对应方法。</li>
+<li>外部使用LazyFragment 和内部使用LazyFragment 存在相同的情景，外部切换会调用显示隐藏对应的方法。 外部也会影响到内部。</li>
+</ul>
+<h4 id="外层使用viewpager内层也使用framelayout">外层使用viewpager,内层也使用FrameLayout。</h4>
+<p>逻辑意义上会出现下面情景：</p>
+<ul>
+<li>外层使用fragment，内层也使用fragment。因为外层存在删除，缓存相关定义，会直接影响内部的创建，因为内部是frameLayou，内部切换不进行生命周期方法调度。但是外部fragment的显示切换和基础设置会影响到内部fragment的创建。建议注释掉adapter 的删除代码。</li>
+<li>无论使用lazyFragment 还是 fragment都存在设置直接影响到子fragment的相关情况。</li>
+</ul>
+<h4 id="外层使用viewpager内层也使用viewpager">外层使用viewpager,内层也使用viewpager。</h4>
+<ul>
+<li>外层的fragment的生命周期 直接影响内部的fragment的生命周期。</li>
+</ul>
+<h3 id="结论">结论</h3>
+<blockquote>
+<p>如果viewpager 存在外层，建议处理缓存个数或者重写adapter的删除逻辑。避免内部的fragment存在重复创建的问题。相对于全部缓存，更加建议使用重写adapter的删除逻辑。因为adapter是需要new对象的，所以对于那些不需要左右滑动切换的功能，建议直接用FrameLayout,而不是adapter。</p>
+</blockquote>
+<h2 id="结束">结束</h2>
+
+    
+      
+    
+  </article>
+<aside class="sidebar">
+  <section class="sidebar_inner">
+    <h2>luoye@yangfan</h2>
+    <div>
+      android,java,git,日常搬砖
+    </div>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/about/' class="button mt-1" role="button">阅读更多</a>
+    <h2 class="mt-4">精选文章</h2>
+    <ul>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%85%B5%E4%B9%A6/%E5%85%B5%E4%B9%A6-%E5%AD%99%E5%AD%90%E5%85%B5%E6%B3%95/" class="nav-link">兵书-孙子兵法</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%85%B5%E4%B9%A6/%E5%85%B5%E4%B9%A6-%E5%AD%99%E8%86%91%E5%85%B5%E6%B3%95/" class="nav-link">兵书-孙膑兵法</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%85%B5%E4%B9%A6/%E5%85%B5%E4%B9%A6-%E7%BA%AA%E6%95%88%E6%96%B0%E4%B9%A6/" class="nav-link">兵书-纪效新书</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%B8%B8%E6%88%8F/%E5%A4%A9%E8%B0%95%E8%81%8C%E4%B8%9A/" class="nav-link">天谕手游职业</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java9%E6%96%B0%E7%89%B9%E6%80%A7/" class="nav-link">java9新特性</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/idea%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%85%B6%E7%BC%93%E5%AD%98%E6%B8%85%E7%90%86/" class="nav-link">idea相关配置及其缓存清理</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java8-%E6%96%B0%E7%89%B9%E6%80%A7/" class="nav-link">java8 新特性</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/propertychangelistener%E5%85%B3%E8%81%94%E5%B1%9E%E6%80%A7%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/" class="nav-link">PropertyChangeListener关联属性的简单介绍</a>
+      </li>
+    </ul>
+    <h2 class="mt-4">最新文章</h2>
+    <ul class="flex-column">
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%85%B5%E4%B9%A6/%E5%85%B5%E4%B9%A6-%E5%AD%99%E5%AD%90%E5%85%B5%E6%B3%95/" class="nav-link">兵书-孙子兵法</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%85%B5%E4%B9%A6/%E5%85%B5%E4%B9%A6-%E5%AD%99%E8%86%91%E5%85%B5%E6%B3%95/" class="nav-link">兵书-孙膑兵法</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%85%B5%E4%B9%A6/%E5%85%B5%E4%B9%A6-%E7%BA%AA%E6%95%88%E6%96%B0%E4%B9%A6/" class="nav-link">兵书-纪效新书</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%B8%B8%E6%88%8F/%E5%A4%A9%E8%B0%95%E8%81%8C%E4%B8%9A/" class="nav-link">天谕手游职业</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java9%E6%96%B0%E7%89%B9%E6%80%A7/" class="nav-link">java9新特性</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/idea%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%85%B6%E7%BC%93%E5%AD%98%E6%B8%85%E7%90%86/" class="nav-link">idea相关配置及其缓存清理</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java8-%E6%96%B0%E7%89%B9%E6%80%A7/" class="nav-link">java8 新特性</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/propertychangelistener%E5%85%B3%E8%81%94%E5%B1%9E%E6%80%A7%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/" class="nav-link">PropertyChangeListener关联属性的简单介绍</a>
+      </li>
+    </ul>
+    <div>
+      <h2 class="mt-4 taxonomy" id="categories-section">分类</h2>
+      <nav class="tags_nav">
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/' class="post_tag button button_translucent">
+          技术类
+          <span class="button_tally">46</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%9D%82%E5%AD%A6/' class="post_tag button button_translucent">
+          杂学
+          <span class="button_tally">10</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
+          ANDROID基础
+          <span class="button_tally">9</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E5%85%B5%E4%B9%A6%E6%8A%84%E5%BD%95/' class="post_tag button button_translucent">
+          兵书抄录
+          <span class="button_tally">3</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/' class="post_tag button button_translucent">
+          自动化测试
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1/' class="post_tag button button_translucent">
+          详细设计
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/android-app/' class="post_tag button button_translucent">
+          ANDROID-APP
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/git/' class="post_tag button button_translucent">
+          GIT
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/todo/' class="post_tag button button_translucent">
+          TODO
+          <span class="button_tally">1</span>
+        </a>
+        
+        
+      </nav>
+    </div>
+    <div>
+      <h2 class="mt-4 taxonomy" id="series-section">专栏</h2>
+      <nav class="tags_nav">
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/' class="post_tag button button_translucent">
+          专升本
+          <span class="button_tally">60</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
+          ANDROID基础
+          <span class="button_tally">29</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E9%A1%B6%E5%91%B1%E5%91%B1/' class="post_tag button button_translucent">
+          顶呱呱
+          <span class="button_tally">20</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/mpaas/' class="post_tag button button_translucent">
+          MPAAS
+          <span class="button_tally">13</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/' class="post_tag button button_translucent">
+          设计模式
+          <span class="button_tally">13</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class="post_tag button button_translucent">
+          个人主页
+          <span class="button_tally">9</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E5%85%B6%E4%BB%96/' class="post_tag button button_translucent">
+          其他
+          <span class="button_tally">9</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E6%A8%A1%E6%9D%BF/' class="post_tag button button_translucent">
+          模板
+          <span class="button_tally">6</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/fragment/' class="post_tag button button_translucent">
+          FRAGMENT
+          <span class="button_tally">4</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/testing/' class="post_tag button button_translucent">
+          TESTING
+          <span class="button_tally">3</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/java%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
+          JAVA基础
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/selenium/' class="post_tag button button_translucent">
+          SELENIUM
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/python/' class="post_tag button button_translucent">
+          PYTHON
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/recycleview/' class="post_tag button button_translucent">
+          RECYCLEVIEW
+          <span class="button_tally">1</span>
+        </a>
+        
+        
+        <br>
+        <div class="post_tags_toggle button">所有专栏</div>
+        <div class="post_tags">
+          <div class="tags_list">
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/' class=" post_tag button button_translucent" data-position=29>ANDROID基础<span class="button_tally">29</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/fragment/' class=" post_tag button button_translucent" data-position=4>FRAGMENT<span class="button_tally">4</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/java%E5%9F%BA%E7%A1%80/' class=" post_tag button button_translucent" data-position=2>JAVA基础<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/mpaas/' class=" post_tag button button_translucent" data-position=13>MPAAS<span class="button_tally">13</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/python/' class=" post_tag button button_translucent" data-position=1>PYTHON<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/recycleview/' class=" post_tag button button_translucent" data-position=1>RECYCLEVIEW<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/selenium/' class=" post_tag button button_translucent" data-position=2>SELENIUM<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/testing/' class=" post_tag button button_translucent" data-position=3>TESTING<span class="button_tally">3</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/viewpager/' class=" post_tag button button_translucent" data-position=1>VIEWPAGER<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/' class=" post_tag button button_translucent" data-position=60>专升本<span class="button_tally">60</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class=" post_tag button button_translucent" data-position=9>个人主页<span class="button_tally">9</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AD%E6%96%87%E5%B8%B8%E8%AF%86/' class=" post_tag button button_translucent" data-position=1>中文常识<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E5%85%B6%E4%BB%96/' class=" post_tag button button_translucent" data-position=9>其他<span class="button_tally">9</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E5%A4%A9%E8%B0%95/' class=" post_tag button button_translucent" data-position=1>天谕<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E5%BA%94%E7%94%A8/' class=" post_tag button button_translucent" data-position=1>应用<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E6%A8%A1%E6%9D%BF/' class=" post_tag button button_translucent" data-position=6>模板<span class="button_tally">6</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/' class=" post_tag button button_translucent" data-position=13>设计模式<span class="button_tally">13</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E9%A1%B6%E5%91%B1%E5%91%B1/' class=" post_tag button button_translucent" data-position=20>顶呱呱<span class="button_tally">20</span>
+            </a>
+            
+            <div class="tags_sort"><span title="sort alphabetically">[A~Z]</span><span title="sort by count">[0~9]</span>
+            </div>
+            <span class="tags_hide"><svg class="icon">
+            <use xlink:href="#closeme"></use>
+          </svg></span>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div>
+      <h2 class="mt-4 taxonomy" id="tags-section">标签</h2>
+      <nav class="tags_nav">
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
+          英语
+          <span class="button_tally">47</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/' class="post_tag button button_translucent">
+          统考英语B
+          <span class="button_tally">25</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%AD%A6%E4%BD%8D%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
+          学位英语
+          <span class="button_tally">20</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class="post_tag button button_translucent">
+          ANDROID
+          <span class="button_tally">19</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class="post_tag button button_translucent">
+          RXJAVA
+          <span class="button_tally">19</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84/' class="post_tag button button_translucent">
+          词组
+          <span class="button_tally">15</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%8B%9F%E8%AF%95%E5%8D%B7/' class="post_tag button button_translucent">
+          模拟试卷
+          <span class="button_tally">10</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee/' class="post_tag button button_translucent">
+          GITEE
+          <span class="button_tally">9</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite/' class="post_tag button button_translucent">
+          SQLITE
+          <span class="button_tally">9</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee-page/' class="post_tag button button_translucent">
+          GITEE-PAGE
+          <span class="button_tally">8</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class="post_tag button button_translucent">
+          个人主页
+          <span class="button_tally">8</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/' class="post_tag button button_translucent">
+          数据库
+          <span class="button_tally">6</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%9D%BF/' class="post_tag button button_translucent">
+          模板
+          <span class="button_tally">6</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/fragment/' class="post_tag button button_translucent">
+          FRAGMENT
+          <span class="button_tally">3</span>
+        </a>
+        
+        
+        <br>
+        <div class="post_tags_toggle button">所有标签</div>
+        <div class="post_tags">
+          <div class="tags_list">
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class=" post_tag button button_translucent" data-position=19>ANDROID<span class="button_tally">19</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/chm/' class=" post_tag button button_translucent" data-position=1>CHM<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/cost%E8%B4%A6%E6%9C%AC/' class=" post_tag button button_translucent" data-position=1>COST账本<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/debug/' class=" post_tag button button_translucent" data-position=1>DEBUG<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/dialogfragment/' class=" post_tag button button_translucent" data-position=1>DIALOGFRAGMENT<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/fragment/' class=" post_tag button button_translucent" data-position=3>FRAGMENT<span class="button_tally">3</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/fragmentmanger/' class=" post_tag button button_translucent" data-position=1>FRAGMENTMANGER<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/git/' class=" post_tag button button_translucent" data-position=1>GIT<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee/' class=" post_tag button button_translucent" data-position=9>GITEE<span class="button_tally">9</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee-page/' class=" post_tag button button_translucent" data-position=8>GITEE-PAGE<span class="button_tally">8</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/hexo/' class=" post_tag button button_translucent" data-position=2>HEXO<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/hugo/' class=" post_tag button button_translucent" data-position=3>HUGO<span class="button_tally">3</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/idea/' class=" post_tag button button_translucent" data-position=1>IDEA<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/index/' class=" post_tag button button_translucent" data-position=1>INDEX<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java/' class=" post_tag button button_translucent" data-position=3>JAVA<span class="button_tally">3</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java-ee/' class=" post_tag button button_translucent" data-position=1>JAVA-EE<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java8/' class=" post_tag button button_translucent" data-position=1>JAVA8<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java9/' class=" post_tag button button_translucent" data-position=1>JAVA9<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java%E5%9F%BA%E7%A1%80/' class=" post_tag button button_translucent" data-position=1>JAVA基础<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/jekyll/' class=" post_tag button button_translucent" data-position=2>JEKYLL<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/junit/' class=" post_tag button button_translucent" data-position=1>JUNIT<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/layoutmanager/' class=" post_tag button button_translucent" data-position=1>LAYOUTMANAGER<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/map/' class=" post_tag button button_translucent" data-position=1>MAP<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/object/' class=" post_tag button button_translucent" data-position=1>OBJECT<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/picgo/' class=" post_tag button button_translucent" data-position=1>PICGO<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/python/' class=" post_tag button button_translucent" data-position=1>PYTHON<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/recycleview/' class=" post_tag button button_translucent" data-position=1>RECYCLEVIEW<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class=" post_tag button button_translucent" data-position=19>RXJAVA<span class="button_tally">19</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/selenium/' class=" post_tag button button_translucent" data-position=2>SELENIUM<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sql/' class=" post_tag button button_translucent" data-position=2>SQL<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite/' class=" post_tag button button_translucent" data-position=9>SQLITE<span class="button_tally">9</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/viewpager/' class=" post_tag button button_translucent" data-position=1>VIEWPAGER<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%8D%E8%A7%84%E5%88%99%E5%8A%A8%E8%AF%8D/' class=" post_tag button button_translucent" data-position=1>不规则动词<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class=" post_tag button button_translucent" data-position=8>个人主页<span class="button_tally">8</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AD%E6%96%87%E5%B8%B8%E8%AF%86/' class=" post_tag button button_translucent" data-position=1>中文常识<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%BA%A4%E9%99%85%E7%94%A8%E8%AF%AD/' class=" post_tag button button_translucent" data-position=2>交际用语<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%BD%9C%E6%96%87/' class=" post_tag button button_translucent" data-position=2>作文<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%BF%AE%E9%A5%B0%E7%AC%A6/' class=" post_tag button button_translucent" data-position=1>修饰符<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%86%85%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/' class=" post_tag button button_translucent" data-position=1>内参考手册<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%89%8D%E7%BC%80/' class=" post_tag button button_translucent" data-position=1>前缀<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%8F%8D%E5%B0%84/' class=" post_tag button button_translucent" data-position=1>反射<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%9B%BE%E5%BA%8A/' class=" post_tag button button_translucent" data-position=1>图床<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%9B%BE%E8%A1%A8/' class=" post_tag button button_translucent" data-position=1>图表<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%AD%A6%E4%BD%8D%E8%8B%B1%E8%AF%AD/' class=" post_tag button button_translucent" data-position=20>学位英语<span class="button_tally">20</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%AE%8C%E5%BD%A2%E5%A1%AB%E7%A9%BA/' class=" post_tag button button_translucent" data-position=1>完形填空<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%B0%8F%E6%8A%84/' class=" post_tag button button_translucent" data-position=1>小抄<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/' class=" post_tag button button_translucent" data-position=6>数据库<span class="button_tally">6</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/' class=" post_tag button button_translucent" data-position=1>数据类型<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%8B%9F%E8%AF%95%E5%8D%B7/' class=" post_tag button button_translucent" data-position=10>模拟试卷<span class="button_tally">10</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%9D%BF/' class=" post_tag button button_translucent" data-position=6>模板<span class="button_tally">6</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%B5%8B%E8%AF%95%E7%BD%91%E7%AB%99/' class=" post_tag button button_translucent" data-position=1>测试网站<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/' class=" post_tag button button_translucent" data-position=25>统考英语B<span class="button_tally">25</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%91%E6%B1%89/' class=" post_tag button button_translucent" data-position=2>英译汉<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%AD/' class=" post_tag button button_translucent" data-position=47>英语<span class="button_tally">47</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%A7%86%E9%A2%91/' class=" post_tag button button_translucent" data-position=2>视频<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/' class=" post_tag button button_translucent" data-position=1>计算机编译原理<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AE%B0%E5%BF%86/' class=" post_tag button button_translucent" data-position=2>记忆<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87/' class=" post_tag button button_translucent" data-position=3>词汇<span class="button_tally">3</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87a/' class=" post_tag button button_translucent" data-position=1>词汇A<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87b/' class=" post_tag button button_translucent" data-position=1>词汇B<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87c/' class=" post_tag button button_translucent" data-position=1>词汇C<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87%E4%B8%8E%E7%BB%93%E6%9E%84/' class=" post_tag button button_translucent" data-position=1>词汇与结构<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87%E8%A1%A8/' class=" post_tag button button_translucent" data-position=3>词汇表<span class="button_tally">3</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84/' class=" post_tag button button_translucent" data-position=15>词组<span class="button_tally">15</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84a/' class=" post_tag button button_translucent" data-position=1>词组A<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84b/' class=" post_tag button button_translucent" data-position=1>词组B<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84c/' class=" post_tag button button_translucent" data-position=1>词组C<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84def/' class=" post_tag button button_translucent" data-position=1>词组DEF<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84g/' class=" post_tag button button_translucent" data-position=1>词组G<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84h/' class=" post_tag button button_translucent" data-position=1>词组H<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84i/' class=" post_tag button button_translucent" data-position=1>词组I<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84jkl/' class=" post_tag button button_translucent" data-position=1>词组JKL<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84mn/' class=" post_tag button button_translucent" data-position=1>词组MN<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84o/' class=" post_tag button button_translucent" data-position=1>词组O<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84p/' class=" post_tag button button_translucent" data-position=1>词组P<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84qr/' class=" post_tag button button_translucent" data-position=1>词组QR<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84s/' class=" post_tag button button_translucent" data-position=1>词组S<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84t/' class=" post_tag button button_translucent" data-position=1>词组T<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84uw/' class=" post_tag button button_translucent" data-position=1>词组UW<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BC%80/' class=" post_tag button button_translucent" data-position=3>词缀<span class="button_tally">3</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BC%80%E5%89%8D%E7%BC%80/' class=" post_tag button button_translucent" data-position=1>词缀前缀<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BC%80%E5%90%8E%E7%BC%80/' class=" post_tag button button_translucent" data-position=1>词缀后缀<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%BE%E7%A8%8B%E8%A1%A8/' class=" post_tag button button_translucent" data-position=1>课程表<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%87%8D%E7%82%B9%E5%8D%95%E8%AF%8D/' class=" post_tag button button_translucent" data-position=1>重点单词<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%87%8D%E7%82%B9%E5%8F%A5%E5%9E%8B/' class=" post_tag button button_translucent" data-position=1>重点句型<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%94%99%E9%A2%98%E9%9B%86/' class=" post_tag button button_translucent" data-position=1>错题集<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3/' class=" post_tag button button_translucent" data-position=2>阅读理解<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E5%88%A4%E6%96%AD%E5%AF%B9%E9%94%99/' class=" post_tag button button_translucent" data-position=1>阅读理解判断对错<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5/' class=" post_tag button button_translucent" data-position=1>静态网页<span class="button_tally">1</span>
+            </a>
+            
+            <div class="tags_sort"><span title="sort alphabetically">[A~Z]</span><span title="sort by count">[0~9]</span>
+            </div>
+            <span class="tags_hide"><svg class="icon">
+            <use xlink:href="#closeme"></use>
+          </svg></span>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+</aside>
+
+</div>
+    </main><svg width="0" height="0" class="hidden">
+  <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
+    <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.001 18.001" id="twitter">
+    <path d="M15.891 4.013c.808-.496 1.343-1.173 1.605-2.034a8.68 8.68 0 0 1-2.351.861c-.703-.756-1.593-1.14-2.66-1.14-1.043 0-1.924.366-2.643 1.078a3.56 3.56 0 0 0-1.076 2.605c0 .309.039.585.117.819-3.076-.105-5.622-1.381-7.628-3.837-.34.601-.51 1.213-.51 1.846 0 1.301.549 2.332 1.645 3.089-.625-.053-1.176-.211-1.645-.47 0 .929.273 1.705.82 2.388a3.623 3.623 0 0 0 2.115 1.291c-.312.08-.641.118-.979.118-.312 0-.533-.026-.664-.083.23.757.664 1.371 1.291 1.841a3.652 3.652 0 0 0 2.152.743C4.148 14.173 2.625 14.69.902 14.69c-.422 0-.721-.006-.902-.038 1.697 1.102 3.586 1.649 5.676 1.649 2.139 0 4.029-.542 5.674-1.626 1.645-1.078 2.859-2.408 3.639-3.974a10.77 10.77 0 0 0 1.172-4.892v-.468a7.788 7.788 0 0 0 1.84-1.921 8.142 8.142 0 0 1-2.11.593z"
+      ></path>
+  </symbol>
+  <symbol aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="mail">
+    <path  d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="calendar">
+    <path d="M452 40h-24V0h-40v40H124V0H84v40H60C26.916 40 0 66.916 0 100v352c0 33.084 26.916 60 60 60h392c33.084 0 60-26.916 60-60V100c0-33.084-26.916-60-60-60zm20 412c0 11.028-8.972 20-20 20H60c-11.028 0-20-8.972-20-20V188h432v264zm0-304H40v-48c0-11.028 8.972-20 20-20h24v40h40V80h264v40h40V80h24c11.028 0 20 8.972 20 20v48z"></path>
+    <path d="M76 230h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 310h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 390h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80-80h40v40h-40z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="github">
+    <path d="M255.968 5.329C114.624 5.329 0 120.401 0 262.353c0 113.536 73.344 209.856 175.104 243.872 12.8 2.368 17.472-5.568 17.472-12.384 0-6.112-.224-22.272-.352-43.712-71.2 15.52-86.24-34.464-86.24-34.464-11.616-29.696-28.416-37.6-28.416-37.6-23.264-15.936 1.728-15.616 1.728-15.616 25.696 1.824 39.2 26.496 39.2 26.496 22.848 39.264 59.936 27.936 74.528 21.344 2.304-16.608 8.928-27.936 16.256-34.368-56.832-6.496-116.608-28.544-116.608-127.008 0-28.064 9.984-51.008 26.368-68.992-2.656-6.496-11.424-32.64 2.496-68 0 0 21.504-6.912 70.4 26.336 20.416-5.696 42.304-8.544 64.096-8.64 21.728.128 43.648 2.944 64.096 8.672 48.864-33.248 70.336-26.336 70.336-26.336 13.952 35.392 5.184 61.504 2.56 68 16.416 17.984 26.304 40.928 26.304 68.992 0 98.72-59.84 120.448-116.864 126.816 9.184 7.936 17.376 23.616 17.376 47.584 0 34.368-.32 62.08-.32 70.496 0 6.88 4.608 14.88 17.6 12.352C438.72 472.145 512 375.857 512 262.353 512 120.401 397.376 5.329 255.968 5.329z"></path>
+  </symbol>
+  <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="rss">
+    <circle cx="3.429" cy="20.571" r="3.429"></circle>
+    <path d="M11.429 24h4.57C15.999 15.179 8.821 8.001 0 8v4.572c6.302.001 11.429 5.126 11.429 11.428z"></path>
+    <path d="M24 24C24 10.766 13.234 0 0 0v4.571c10.714 0 19.43 8.714 19.43 19.429z"></path>
+  </symbol>
+  <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="linkedin">
+    <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h362c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zM181 406h-60V196h60zm0-240h-60v-60h60zm210 240h-60V286c0-16.54-13.46-30-30-30s-30 13.46-30 30v120h-60V196h60v11.309C286.719 202.422 296.93 196 316 196c40.691.043 75 36.547 75 79.688zm0 0"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612" id="arrow">
+    <path d="M604.501 440.509L325.398 134.956c-5.331-5.357-12.423-7.627-19.386-7.27-6.989-.357-14.056 1.913-19.387 7.27L7.499 440.509c-9.999 10.024-9.999 26.298 0 36.323s26.223 10.024 36.222 0l262.293-287.164L568.28 476.832c9.999 10.024 26.222 10.024 36.221 0 9.999-10.023 9.999-26.298 0-36.323z"></path>
+  </symbol>
+  <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="carly">
+    <path d="M504.971 239.029L448 182.059V84c0-46.317-37.682-84-84-84h-44c-13.255 0-24 10.745-24 24s10.745 24 24 24h44c19.851 0 36 16.149 36 36v108c0 6.365 2.529 12.47 7.029 16.971L454.059 256l-47.029 47.029A24.002 24.002 0 0 0 400 320v108c0 19.851-16.149 36-36 36h-44c-13.255 0-24 10.745-24 24s10.745 24 24 24h44c46.318 0 84-37.683 84-84v-98.059l56.971-56.971c9.372-9.372 9.372-24.568 0-33.941zM112 192V84c0-19.851 16.149-36 36-36h44c13.255 0 24-10.745 24-24S205.255 0 192 0h-44c-46.318 0-84 37.683-84 84v98.059l-56.971 56.97c-9.373 9.373-9.373 24.568 0 33.941L64 329.941V428c0 46.317 37.682 84 84 84h44c13.255 0 24-10.745 24-24s-10.745-24-24-24h-44c-19.851 0-36-16.149-36-36V320c0-6.365-2.529-12.47-7.029-16.971L57.941 256l47.029-47.029A24.002 24.002 0 0 0 112 192z"></path>
+  </symbol>
+  <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="copy">
+    <path d="M23 2.75A2.75 2.75 0 0 0 20.25 0H8.75A2.75 2.75 0 0 0 6 2.75v13.5A2.75 2.75 0 0 0 8.75 19h11.5A2.75 2.75 0 0 0 23 16.25zM18.25 14.5h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5zm0-3h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5zm0-3h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5z"></path>
+    <path d="M8.75 20.5a4.255 4.255 0 0 1-4.25-4.25V2.75c0-.086.02-.166.025-.25H3.75A2.752 2.752 0 0 0 1 5.25v16A2.752 2.752 0 0 0 3.75 24h12a2.752 2.752 0 0 0 2.75-2.75v-.75z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" id="closeme">
+    <path d="M284.286 256.002L506.143 34.144c7.811-7.811 7.811-20.475 0-28.285-7.811-7.81-20.475-7.811-28.285 0L256 227.717 34.143 5.859c-7.811-7.811-20.475-7.811-28.285 0-7.81 7.811-7.811 20.475 0 28.285l221.857 221.857L5.858 477.859c-7.811 7.811-7.811 20.475 0 28.285a19.938 19.938 0 0 0 14.143 5.857 19.94 19.94 0 0 0 14.143-5.857L256 284.287l221.857 221.857c3.905 3.905 9.024 5.857 14.143 5.857s10.237-1.952 14.143-5.857c7.811-7.811 7.811-20.475 0-28.285L284.286 256.002z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="open-menu">
+    <path d="M492 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20zm0-160H20C8.954 76 0 84.954 0 96s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20zm0 320H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="instagram">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id=youtube>
+    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+  </symbol>
+</svg>
+<footer class="footer">
+  <div class="footer_inner wrap pale">
+    <img src='http://lalalaxiaowifi.gitee.io/pictures/icons/apple-touch-icon.png' class="icon icon_2 transparent">
+    <p>Copyright &copy;&nbsp;<span class="year">2021</span>&nbsp;个人主页. All Rights Reserved</p><a class="to_top" href="#documentTop">
+  <svg class="icon">
+  <use xlink:href="#arrow"></use>
+</svg>
+</a>
+
+  </div>
+</footer>
+    <script type="text/javascript" src="http://lalalaxiaowifi.gitee.io/pictures/js/bundle.min.dc1752cbb1c01a107e1e4afce7f618750185cca45821a7b8e3fccc074f8d9260a43990c47c4e3c1644438f24b907d3d3ba050d2aec63b573c3059f25cefbcb80.js" integrity="sha512-3BdSy7HAGhB&#43;Hkr85/YYdQGFzKRYIae44/zMB0&#43;NkmCkOZDEfE48FkRDjyS5B9PTugUNKuxjtXPDBZ8lzvvLgA==" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

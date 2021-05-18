@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>顶呱呱 on 个人主页</title>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E9%A1%B6%E5%91%B1%E5%91%B1/</link>
+    <description>Recent content in 顶呱呱 on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/series/%E9%A1%B6%E5%91%B1%E5%91%B1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android相关代码模板</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1android%E7%9B%B8%E5%85%B3%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1android%E7%9B%B8%E5%85%B3%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/</guid>
+      <description>正文  基于DGG Android base 生成，activity,lazyFragment,fragment等等。 https://freemarker.apache.org/docs/index.html
+ 文件  MVVM(DGG)Activity activity模板 MVVM(DGG)Fragment fragment模板，提供lazyfragment模板和fragment模板  Activity生成内容  基于mvvm 的activity viewModel viewRequest layout(databinding 外部层)  fragment相关生成类型  可选lazyFragment和fragment viewModel viewRequest layout(databinding 外部层)  其他  生成的文件中，提供时间和作者注释。现在作者默认为“Android大佬” 命名采用驼峰命名法，资源文件自动转为下划线命名。  存放  mac /Applications/IntelliJ\ IDEA.app/Contents/plugins/android/lib/templates/activities 这个目录是存放activity模板 mac /Applications/IntelliJ\ IDEA.app/Contents/plugins/android/lib/templates/fragments 这个目录是存放fragment模板 Windows 类似。应用安装路径/plugins/android/lib/templates/activities windows 下Android studio 可能没有这个目录，但是IDEA 有这个目录。  打包  暂时不提供打包为插件内容，使用需要手动放置到对应目录。放置后需要重启编辑器。编辑器更新卸载重装后需要手动放置。 Android studio 4.1以上版本 不支持这种方式导入模板。 Android studio 4.1及其以上版本 需要采用 https://github.com/xiaowifi/dgg_android_code_template 这个项目的主模板创建。并且生成jar使用。
+ 联系 yangfan6@dgg.</description>
+    </item>
+    
+    <item>
+      <title>Dagger2了解下</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dagger2%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dagger2%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8B/</guid>
+      <description> 顺便推一下博客主页
+ 正文 </description>
+    </item>
+    
+    <item>
+      <title>Dart基础语法</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dart%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dart%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</guid>
+      <description> 顺便推一下博客主页
+ 正文 </description>
+    </item>
+    
+    <item>
+      <title>Java反射大杂烩</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E4%B9%8Bjava%E5%8F%8D%E5%B0%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E4%B9%8Bjava%E5%8F%8D%E5%B0%84/</guid>
+      <description>顺便推一下博客主页
+ 正文  话说，Java 反射还是蛮重要的，但是感觉这个调调破坏了单例模型。但是用着还是很香的，我记得有大佬写过博客说，不建议使用反射来着，找不到了。以后找到了贴出来。 先说用反射图啥，比如说，我只想知道一个类的变量啊。或者我只有类的名称想要变量啊，或者是我想直接调用方法啊，等等。
+ 利用反射创建fragment  话说，这个可能是Android最常见的反射使用了。使用方式: Class.forName(className).newInstance();
+ 1private void showBottomFragment() { 2 String className = ApprovalDetailsBottomFragment.class.getName(); 3 try { 4 5 FragmentManager fragmentManager = getSupportFragmentManager(); 6 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction(); 7 //隐藏所有的那个啥。 8 for (Fragment fra : fragmentManager.getFragments()) { 9 fragmentTransaction.hide(fra); 10 } 11 Fragment fragmentByTag = fragmentManager.findFragmentByTag(className); 12 if (fragmentByTag != null) { 13 fragmentTransaction.show(fragmentByTag); 14 } else { 15 bottomFragment = (ApprovalDetailsBottomFragment) Class.</description>
+    </item>
+    
+    <item>
+      <title>kotlin在Android上的体验</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/kotlin%E5%9C%A8android%E5%BC%80%E5%8F%91%E4%B8%8A%E7%9A%84%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/kotlin%E5%9C%A8android%E5%BC%80%E5%8F%91%E4%B8%8A%E7%9A%84%E4%BD%93%E9%AA%8C/</guid>
+      <description> 顺便推一下博客主页
+ 正文  之前就整过一个用Java写法写kotlin的项目。感觉嘛，就是没有用到kotlin的优势。虽然现在Java版本感觉挺优雅的(就是很舒服)。但是现在Android中jetpack demo竟然是kotlin写的，那就需要懂kotlin写法了，要不然学习难度会加大的啊。 那么直接开整。其实基础语法都差不多，就整不同点。直接上菜鸟教程。https://www.runoob.com/kotlin/kotlin-tutorial.html
+ 返回值类型 kotlin是写在方法后的。如果没有返回值就可以不写。
+1fun sum(a: Int, b: Int): Int { // Int 参数，返回值 Int 2 return a + b 3} 可变长度传参 vararg 1fun vars(vararg v:Int){ 2 for(vt in v){ 3 print(vt) 4 } 5} 结合lambda 1fun main(args: Array&amp;lt;String&amp;gt;) { 2 val sumLambda: (Int, Int) -&amp;gt; Int = {x,y -&amp;gt; x+y} 3 println(sumLambda(1,2)) // 输出 3 4} </description>
+    </item>
+    
+    <item>
+      <title>关于代码规范和编码规范</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E5%85%B3%E4%BA%8E%E8%AE%BE%E8%AE%A1%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E5%85%B3%E4%BA%8E%E8%AE%BE%E8%AE%A1%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</guid>
+      <description> 顺便推一下博客主页
+ 正文  其实阿里巴巴提供的代码规范已经很规范了。但是由于一直都是 自己整，配合的蛮少的。所以规范这个东西，就是懂几点，实际上使用的很少。 #阿里巴巴Android技术规范 这个目录下还有一个Java 规范，比如比如包括 数据库查询的时候不适用* 查询所有，而是适用真实的字段，当然，如果全部查询用*和全字段的区别，还没有看，感觉没有什么区别，但是 一个表应该还是有不需要查询出来的字段的。比如说描述什么的。
+ 代码注释和格式化   之前写代码并不怎么注意这个问题，最近被大佬点化后，发现，格式化是真的好，代码看起来舒服了不少。 然后就是注释，这个调调也很重要，比如说提供给别人使用，比如说时隔多年再去看一个代码，有注释就自己方便，别人方便吧，导出为Javadoc 也完整，以后装逼使用还是蛮好的。 还有一个问题，当你的注释写的详细了，应用内 重复功能才会减少。   然后就是图片处理   压缩处理还是蛮重要，无论是资源文件还是网络资源。在合适的手机尽量使用最小的内存。这么可以减少应用卡顿和提升应用流畅度的。 网络图片缓存，网络图片一般使用框架都缓存了的。所以图片通常只需要显示的时候压缩后显示。 图片选择也是，需要压缩上传。 资源文件，大图放超高清里面。尽量多分辨率适配呗。 图片渲染格式，在忽略透明度的图片中，尽量使用RGB_565   然后是重复事件   Android中对于重复事件还是蛮多的，比如说点击，同一个时间段内，可能只需要一次。那么就可以使用RXjava 防止重复点击。以最后点击生效。 然后就是toast，这个也可以使用Rxjava ,防止重复显示，当然也可以自定义toast。 loading层，这个对于多个网络请求 使用Rxjava 合并请求。   然后是命名   命名就简单了，资源文件就是 模块+功能+类型   最后就是设计模式了  这个很重要。设计模式尽量多用，才可以提升的快、
+ </description>
+    </item>
+    
+    <item>
+      <title>关于顶呱呱Android应用中baseActivity设计思路</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1baseactivity%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1baseactivity%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/</guid>
+      <description>顺便推一下博客主页
+ 正文  当前项目 基于AndroidX,使用jetpack为基础设计。使用databinding。
+ 变量  viewModel jetpack基础。 viewDataBinding databinding LoadService 对于服务器数据进行界面响应切换模块等。需要手动在需要的代码模块注册。 Context 带生命周期上下文，为当前activity。  方法 onCreate  判断getSupportActionBar 是否为空，为空就隐藏 bar. 设置context 注册路由 ARouter 提供初始化之前方法。initContentViewBefore();可重写 提供初始化databinding方法 performDataBinding(); 提供初始化view方法 initView();需要实现。 提供初始化数据方法 initData();需要实现。 提供view监听设置方法 initListener() 需要实现  onDestroy  viewmodule销毁  getLayoutId  需要实现 传递当前layout id
+ performDataBinding 1 public void performDataBinding() { 2 viewDataBinding = DataBindingUtil.setContentView(this, getLayoutId()); 3 initViewModel(); 4 viewDataBinding.setLifecycleOwner(this); 5 if (getBindingVariable() &amp;gt; 0) { 6 viewDataBinding.</description>
+    </item>
+    
+    <item>
+      <title>关于项目中使用BuildSrc</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E5%85%B3%E4%BA%8E%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8buildsrc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E5%85%B3%E4%BA%8E%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8buildsrc/</guid>
+      <description> 顺便推一下博客主页
+ 正文  2021年2月22日。突然发现发现项目根目录下有一个BuildSrc文件夹，而且没有在setting.gradle中使用。抱着不懂就百度的思想，就开整。 在百度之前，还是简单的看了下里面的内容，好像是gradle 中的配置。之前一般都写在一个base 中，然后导入base ,或者写到一个特定文件中便于统一管理。 但是写到buildScr 中，还是头一次见到，学到了。直接上官网连接。查看buildSrc配置
+  复杂的构建逻辑通常很适合作为自定义任务或二进制插件进行封装。自定义任务和插件实现不应存在于构建脚本中。buildSrc只要不需要在多个独立项目之间共享代码，就可以非常方便地使用该代码。 该目录buildSrc被视为包含的构建。发现目录后，Gradle会自动编译并测试此代码，并将其放入构建脚本的类路径中。对于多项目构建，只能有一个buildSrc目录，该目录必须位于根项目目录中。 buildSrc应该比脚本插件更可取，因为它更易于维护，重构和测试代码。 buildSrc使用适用于Java和Groovy项目的相同源代码约定。它还提供对Gradle API的直接访问。其他依赖项可以在专用的build.gradle下声明buildSrc。
+ </description>
+    </item>
+    
+    <item>
+      <title>基于阿里系列的路由工具ARouter</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E5%9F%BA%E4%BA%8E%E9%98%BF%E9%87%8C%E7%B3%BB%E7%9A%84%E8%B7%AF%E7%94%B1%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E5%9F%BA%E4%BA%8E%E9%98%BF%E9%87%8C%E7%B3%BB%E7%9A%84%E8%B7%AF%E7%94%B1%E5%B7%A5%E5%85%B7/</guid>
+      <description> 顺便推一下博客主页
+ 正文  老规矩，还是先贴官网。基于阿里系列的路由工具ARouter
+ </description>
+    </item>
+    
+    <item>
+      <title>探索 Jetpack 库</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E6%8E%A2%E7%B4%A2-jetpack-%E5%BA%93/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E6%8E%A2%E7%B4%A2-jetpack-%E5%BA%93/</guid>
+      <description>顺便推一下博客主页
+ 正文  还是老规矩，先上官网 官网 ，然后就是 jetpack 支持些什么。支持与包含 ，最后是找到demo地址，然后拉demo源码 学习了。demo地址 这里就需要着重点一下设计模式了。常见的mvc.mvp,mvvm.而 jetpack 就支持了mvvm.当然也不是说，用了jetpack就不能写MVC不能写mvp了。 但是一个项目中最好固定一种设计模式。一套写法是最好的。而mvvm 只要注释写得好，比其他两个更好维护和阅读。 既然是mvvm.和mvp和mvc 还是有区别的，mvp和mvc Google并没有提供对应的组件，一般都是自己封装，需要注意生命周期什么的。但是mvvm,Google 开始提供对应的组件。同时开始优化开发流程和代码可读性了。
+ ViewModel 教程地址 提供数据，这里面可以写的和 P层差不多，获取数据，处理数据什么的。 LiveData 提供数据更新观察能力，和生命周期绑定。和viewModel绑定，而P层大概就是ViewModel+liveDate的集合体。 databinding 主要是负责 界面渲染数据，这个可以少一层，findviewbyid。 然后模块解耦，虽然这个mvvm是一个整体，但是搬砖过程中，难免会遇到 不同模块的子模块有相同的，不解耦的话，就会出现一个东西重复出现调用，虽然可以通过设计模式设置不同的server实现。也可以了解下依赖注入。 最后就是数据缓存 sqlite 和room的使用了。room骚的是 他基本上是一个表一个库，所以需要注意连接池中的连接逻辑，通常只有一个数据库处于连接状态（待确认）。   ViewModel  教程地址 Android 框架可以管理界面控制器（如 Activity 和 Fragment）的生命周期。Android 框架可能会决定销毁或重新创建界面控制器，以响应完全不受您控制的某些用户操作或设备事件。 如果系统销毁或重新创建界面控制器，则存储在其中的任何瞬态界面相关数据都会丢失。例如，应用可能会在它的某个 Activity 中包含用户列表。为配置更改重新创建 Activity 后，新 Activity 必须重新提取用户列表。对于简单的数据，Activity 可以使用 onSaveInstanceState() 方法从 onCreate() 中的捆绑包恢复其数据，但此方法仅适合可以序列化再反序列化的少量数据，而不适合数量可能较大的数据，如用户列表或位图。 另一个问题是，界面控制器经常需要进行可能需要一些时间才能返回的异步调用。界面控制器需要管理这些调用，并确保系统在其销毁后清理这些调用以避免潜在的内存泄漏。此项管理需要大量的维护工作，并且在为配置更改重新创建对象的情况下，会造成资源的浪费，因为对象可能需要重新发出已经发出过的调用。 诸如 Activity 和 Fragment 之类的界面控制器主要用于显示界面数据、对用户操作做出响应或处理操作系统通信（如权限请求）。如果要求界面控制器也负责从数据库或网络加载数据，那么会使类越发膨胀。为界面控制器分配过多的责任可能会导致单个类尝试自己处理应用的所有工作，而不是将工作委托给其他类。以这种方式为界面控制器分配过多的责任也会大大增加测试的难度。 从界面控制器逻辑中分离出视图数据所有权的操作更容易且更高效。
+ 主要还是图片问题，无论是自己绘制的还是网络过来的，虽然可以有多级缓存。但是还是得自己去整一套吧。这个用得少，问题1，他缓存的数据我们应该不用管，然后正常关闭的再打开的数据，应该还是要从本地或者服务器拉去吧、 在配置更改期间会自动保留 ViewModel 对象，以便它们存储的数据立即可供下一个 Activity 或 Fragment 实例使用。这句话，感觉没懂，再配置更改期间是什么意思。 那么懂 “配置更改期间” 这个范围就很重要了。处理配置变更 这个里面对配置变更就有描述:</description>
+    </item>
+    
+    <item>
+      <title>探索 Jetpack 库</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E8%8E%B7%E5%BE%97mvvm%E4%B8%AD%E7%9A%84viewmodel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E8%8E%B7%E5%BE%97mvvm%E4%B8%AD%E7%9A%84viewmodel/</guid>
+      <description>顺便推一下博客主页
+ 正文  莫得啥说的，直接上代码
+ 调用方式
+1 return (VM) new ViewModelProvider(DggBaseActivity.this).get(new ClassNewInstanceUtil().getClass(this)); 工具类代码
+1public class ClassNewInstanceUtil&amp;lt;T&amp;gt; { 2 3 public ClassNewInstanceUtil() { 4 } 5 6 public T createViewModel(Object object){ 7 try { 8 Type superClass = object.getClass().getGenericSuperclass(); 9 assert superClass != null; 10 if (superClass instanceof ParameterizedType){ 11 Type type = ((ParameterizedType) superClass).getActualTypeArguments()[1]; 12 Class&amp;lt;?&amp;gt; clazz = getRawType(type); 13 return (T) clazz.newInstance(); 14 } 15 } catch (Exception e) { 16// e.</description>
+    </item>
+    
+    <item>
+      <title>探索 Jetpack 库</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1basefragment%E6%87%92%E5%8A%A0%E8%BD%BD%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1basefragment%E6%87%92%E5%8A%A0%E8%BD%BD%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/</guid>
+      <description>顺便推一下博客主页
+ 正文  和fragment 类似。
+ 方法 onCreate  提供 initParameters 初始化参数。 ARouter 阿里组件化初始化。  onCreateView  初始化viewdatabinding 获取rootView 设置创建为true isViewCreated 初始化viewmodel  onViewCreated  viewmodel 绑定UI 初始化数据监听 当界面可见的时候，统一进行数据处理  1if (!isHidden() &amp;amp;&amp;amp; getUserVisibleHint()) { 2// 可见状态,进行事件分发 3dispatchUserVisibleHint(true); 4} setUserVisibleHint  修改Fragment的可见性 setUserVisibleHint 被调用有两种情况： 1）在切换tab的时候，会先于所有fragment的其他生命周期，先调用这个函数，可以看log 2) 对于之前已经调用过setUserVisibleHint方法的fragment后，让fragment从可见到不可见之间状态的变化
+ onHiddenChanged 用FragmentTransaction来控制fragment的hide和show时， 那么这个方法就会被调用。每当你对某个Fragment使用hide 或者是show的时候，那么这个Fragment就会自动调用这个方法。
+dispatchUserVisibleHint  父fragment不可见的时候 不做处理 设置状态为不显示的时候不做处理。 如果界面可见，且为第一次可见，onFragmentFirstVisible调用 如果界面可见，可能不是第一可见，onFragmentResume();将次状态定义为真正可见。 dispatchChildVisibleState 将事件分发到内联fragment。 如果界面不可见，onFragmentPause() 定义为真正的不可见。 dispatchChildVisibleState 通知内联fragment 不可见了。  dispatchChildVisibleState  通过父层的fragment可见性 传参，拉去子类的fragment管理器，控制其子fragment是否可见。  isParentInvisible  判断父fragment的可见性</description>
+    </item>
+    
+    <item>
+      <title>探索 Jetpack 库</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1basefragment%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1basefragment%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/</guid>
+      <description> 顺便推一下博客主页
+ 正文  同样基于 jetpack中的mvvm.和baseactivity类似，
+ 方法 onCreate  提供初始化参数方法。initParameters  onCreateView  通过id生成databinding 通过反射生成viewmodel  onViewCreated  绑定UI 初始化view,需要实现 初始化数据 viewModel中的数据livedata监听 初始化数据 需要实现 初始化view监听  setLoadSir  设置多层界面。需要手动调用。
+ 使用工具  LoadSir 界面多状态切换 工具。空界面，错误界面，成功界面等等。  </description>
+    </item>
+    
+    <item>
+      <title>探索 Jetpack 库</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1viewmodel%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1viewmodel%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/</guid>
+      <description> 顺便推一下博客主页
+ 正文  基于jetpack.viewModel 基于livedata 进行数据更新监听。所以数据外层需要使用livedata壳进行包装。
+ 正常的列表数据 1public final MutableLiveData&amp;lt;List&amp;lt;? extends BaseCustomModel&amp;gt;&amp;gt; loadContentList = new MutableLiveData&amp;lt;&amp;gt;(); 正常的单model数据 1 2 public final MutableLiveData&amp;lt;BaseCustomModel&amp;gt; loadContentModel = new MutableLiveData&amp;lt;&amp;gt;(); 3 空数据 包装 1 public final MutableLiveData&amp;lt;Boolean&amp;gt; loadEmptyData = new MutableLiveData&amp;lt;&amp;gt;(); 非正常code 包装 1 public final MutableLiveData&amp;lt;BaseFailData&amp;gt; loadFailData = new MutableLiveData&amp;lt;&amp;gt;(); 加载更多为空包装  可能没有下一页。
+ 1public final MutableLiveData&amp;lt;Boolean&amp;gt; loadMoreEmptyData = new MutableLiveData&amp;lt;&amp;gt;(); 加载更多发生错误 1 public final MutableLiveData&amp;lt;BaseFailData&amp;gt; loadMoreFailData = new MutableLiveData&amp;lt;&amp;gt;(); </description>
+    </item>
+    
+    <item>
+      <title>探索 Jetpack 库</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E6%A8%A1%E6%9D%BF/</guid>
+      <description> 顺便推一下博客主页
+ 正文 </description>
+    </item>
+    
+    <item>
+      <title>探索 Jetpack 库</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1%E5%B8%B8%E7%94%A8%E6%8E%A7%E4%BB%B6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1%E5%B8%B8%E7%94%A8%E6%8E%A7%E4%BB%B6/</guid>
+      <description> 顺便推一下博客主页
+ 正文 标题栏  基于LinearLayout 实现view控制。
+DggTitleBar 自动适配 高度。
+  cpCenterTitle 设置中间标题名称 cpRightTitle 右边标题名称 左边点击返回点击事件自动实现，如果是activity就关闭。  刷新控件 CpsSmartRefreshLayout  基于smart
+ BaseQuickAdapter recyleView adapter </description>
+    </item>
+    
+    <item>
+      <title>探索 Jetpack 库</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E7%9B%B8%E5%85%B3/</guid>
+      <description>顺便推一下博客主页
+ 正文  网络请求相关。
+ 数据回调 采用基于livedata的 LiveEventBus 进行数据传输回调更改。
+loading层控制 采用拦截器机制。
+网络请求相关步骤  创建一个类A，继承于MvvmBaseViewModel。 为A创建一个view接口 为A 创建一个Request B，B继承于BaseModel B 提供一个网络请求方法。提供给A调用，方法传参需要提供网络请求数据，和A的回调。  B中的接口相关  创建模块接口 定义 接口请求返回参数和接口地址，传入参数等等。  1 //获取首页定位列表 2 @GET(&amp;#34;nk/home/get_city_list.do&amp;#34;) 3 Observable&amp;lt;BaseData&amp;lt;LocationCity&amp;gt;&amp;gt; getLocationCityList();  提供一个帮助类，提供一个静态方法，用于提供网络请求实体对象。  1 //获取登录api service 2 public static HomeApi getHomeApi() { 3 return RxHttpUtils.createApi(&amp;#34;home&amp;#34;, ConstantUrl.TEST_Home_URL, HomeApi.class); 4 }  网络请求调用  1 HomeApiHelp 2 .getHomeApi() 3 .getHomeCommodityData(jsonData) 4 .compose(Transformer.switchSchedulers()) 5 .subscribe(new BaseConsumer&amp;lt;List&amp;lt;HomeCommodityEntity&amp;gt;&amp;gt;() { 6 @Override 7 protected void onSuccess(List&amp;lt;HomeCommodityEntity&amp;gt; data) { 8 callBack.</description>
+    </item>
+    
+    <item>
+      <title>探索 Jetpack 库</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE/</guid>
+      <description> 顺便推一下博客主页
+ 路由配置  采用阿里巴巴提供的路由工具 ARouter
+ 配置 对需要跳转的activity 配置
+1@Route(path = &amp;#34;/test/activity&amp;#34;) 跳转 1// 1. 应用内简单的跳转(通过URL跳转在&amp;#39;进阶用法&amp;#39;中) 2ARouter.getInstance().build(&amp;#34;/test/activity&amp;#34;).navigation(); 3 4// 2. 跳转并携带参数 5ARouter.getInstance().build(&amp;#34;/test/activity&amp;#34;) 6 .withLong(&amp;#34;key1&amp;#34;, 666L) 7 .withString(&amp;#34;key3&amp;#34;, &amp;#34;888&amp;#34;) 8 .withObject(&amp;#34;key4&amp;#34;, new Test(&amp;#34;Jack&amp;#34;, &amp;#34;Rose&amp;#34;)) 9 .navigation(); </description>
+    </item>
+    
+    <item>
+      <title>顶呱呱搬砖日常</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dgg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dgg/</guid>
+      <description>前言 顺便推一下博客主页
+正文  2021年2月18日 入职顶呱呱，大概3个月的试用。想着找一个地方继续狗命来着。这个主要是记录下在顶呱呱的技术学习路程吧。
+  这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接   这个能写多少，大概就是我能够狗多久了。加油，还有两年继续狗吧。
+ </description>
+    </item>
+    
+    <item>
+      <title>项目管理</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9B%B8%E5%85%B3/</guid>
+      <description> 顺便推一下博客主页
+ 正文  参考文件。项目管理
+ 项目质量的定义  功能性 可靠性 易用性 效率 维护性 可移植性 正确性 健壮性 安全性 可用性 可理解性 可测试性 可再用性。  数据模型  通常采用数据建模。数据建模的思想在较高的抽象层次（概念层）对应用相关大体数据进行关系建模处理。数据模型用实体关系图描述。
+ 实体关系图 (E-R图)  矩形框表示实体，在框框中写入实体名称 菱形框： 表示联系 椭圆形框表示实体或者联系的属性。 连线 表示联系，联系属性之间采用直线相连，并且在直线上标注联系的类型。需要标注1对1,1对N,n对N.  功能模型  功能建模的思想是用抽象模型的概念，按照软件内部数据传递和变换的关系，自顶向下分解，直到找到满足功能的要求的可实现的软件为止。 功能模型采用数据流程图DFD来描述。
+ 数据流程图 DFD  带背景颜色的矩形框，外部实体 箭头，数据流 圆角矩形或者圆 表示数据交换 缺边矩形框，表示数据存储。  环境图  仅仅包括一个数据处理过程，确定输入输出边界，通常需要完成一个步骤的闭环，从哪里出发，数据应该回到哪里。 还是使用数据流程图 相关控件的定义。
+ 行为模型  主要是对复杂流程中的状态事件或者事件导致多种状态进行描述。 大概样子:  </description>
+    </item>
+    
+  </channel>
+</rss>
