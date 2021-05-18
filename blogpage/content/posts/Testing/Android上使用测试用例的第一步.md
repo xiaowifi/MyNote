@@ -2,7 +2,9 @@
 title = "Android上使用测试目录"
 description = "Android上使用测试目录"
 series = ["testing"]
-featured = true +++
+featured = true 
+
++++
 ![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
 > [博客主页](http://lalalaxiaowifi.gitee.io/pictures/) <br>
 > [Google提供Android测试教程文档](https://developer.android.google.cn/training/testing/fundamentals) <br>
