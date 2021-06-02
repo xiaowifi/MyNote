@@ -15,6 +15,7 @@ featured = true
 > 写笔记嘛，那就都写。
 ## 正文
 ### toast 单例
+
 > toast 自定义1，单例。直接抄一个阿里的toast 单例。
 
 ````aidl
