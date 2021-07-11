@@ -6,7 +6,16 @@
     <description>Recent content on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Fri, 05 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unix基础</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/unix%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/unix%E5%9F%BA%E7%A1%80/</guid>
+      <description>在UNIX下，用来格式化软盘的命令是（fdformat） UNIX中用于文件的复制命令是（ cp ） 当输入vi命令后，进入vi编辑器时，就处于vi的（ 命令方式 ） 在vi编辑器中，由输入方式回到命令方式的办法是按下（ esc ）键。 UNIX操作系统中用来对指定文件进行字节、字数、行数统计的命令是（ wc ） 在vi编辑器中，存盘退出所使用的命令是（ wq ）。 在vi命令方式下要删除光标所在的一个字符，所用的操作命令是（ x ） 在vi命令方式下要删除光标所在行的一整行内容，所用的命令是（ dd ） 在vi 命令方式下，恢复被删除内容的操作命令是（ U ）。 在vi 命令方式下要修改或替换当前光标处的字符可用的命令是（ r ）。 创建文件夹（ mkdir –p /XYZ/XXX/YYY/ZZZ） 一次性创建多个文件夹（ mkdir –p /ABC/A /ABC/B /ABC/C ） 创建目录用mkdir命令。创建目录时要求在上级目录中才能创建。 删除目录用rmdir 命令。删除目录要对空子目录才能删除，且处于上级目录。 UNIX操作系统支持的文件类型是哪些？（ 文件类型有：普通文件，目录文件，设备文件） 请阐述在UNIX下对于文件的权限-rwxrwxrwx分别表示的是什么含义？（该文件是一个普通文件，用户，用户组和其它用户都有读、写、执行的权限。） 1．通配符------主要用来搜索和匹配文件模式。 2。父进程---------由一个命令或程序启动的进程是父进程。 3．子进程---------子进程是父进程的产物。一个父进程可以有多个子进程，但一个子进程只有一个父进程。 4．文本输入模式-------是命令模式下的子模式. 该模式下除  ESC键以外的所有其它键都作为输入字符 添加到被编辑的文本中. 文本输入完成后 必须按ESC键从文本输入模式返回到命令 模式后, 才能继续完成其它操作.   5．命令模式----------进入vi 后的初始模式, 也是 vi 的基本工作模式. 主要包括移动光标, 删除文本, 粘贴文本和查找文本等. 在unix下，文件名的命名长度，最长为（ 255 ）个ASCII字符 在unix下以小圆点开头的文件名是（ 隐藏文件 ） 在unix下，不能作为文件名通配符使用的是（ # ） 在unix下，只有一个小圆点的文件名是（ 当前目录 ）。 在unix下，列出当前目录下的清单所常用的命令是（ ls ）。 在unix下，显示某个文件具体的内容所用的命令是（ cat ）。 在unix下，进程是一个程序或任务的（ 执行过程 ） 在unix下，要终止一个前台正在运行的程序可用（ Ctrl+C ）热键命令。 在unix下查看进程所用的命令是（ ps ） 在unix下，要终止一个后台进程可用（ kill ）命令。 cd的功能是改变文件目录； cp的功能是复制文件 pwd的功能是列出正在工作的目录(Print Working Directory)pwd命令， 用于显示你当前所处的目录名 rm的功能是删除文件 mkdir的功能是创建一个子目录，或一次创建多个子目录。 ls的功能是显示指定目录的内容。 cat的功能是用来显示、创建或者合并文件 rm * .</description>
+    </item>
+    
     <item>
       <title>兵书-孙子兵法</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%85%B5%E4%B9%A6/%E5%85%B5%E4%B9%A6-%E5%AD%99%E5%AD%90%E5%85%B5%E6%B3%95/</link>
@@ -456,20 +465,6 @@ Git 忽略规则优先级 在 .</description>
 结束 谢谢光临，若觉得还行麻烦点一下赞，若觉得写得垃圾，欢迎批评指正。笔者知道自己文笔和表达能力很弱，如果您可以提供点宝贵的意见不胜感激。谢谢。
 今天也可以是元气满满的一天哦。 更新需要审核。更新通常优先更新到gitee上面。
 博客主页</description>
-    </item>
-    
-    <item>
-      <title>更新日志</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/logs/</link>
-      <pubDate>Mon, 21 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/logs/</guid>
-      <description>鸣谢 当前主页，主要用于本人学习总结笔记。不作为商业用途。
-当前主页基于Hugo，由Gitee page 提供服务支持。
-采用主题：Clarity 博客主页
-主页源码
-主页运行位置 感谢Gitee Pages提供静态网页服务。
-更新日志  2020-09-01 具体什么时间忘记了，创建该库 2020-09-20 采用Hugo 编译生成静态网页 2020-12-01 增加统考英语和学位英语模块 2020-12-21 增加更新日志界面 2020-12-21 修改主题中的语言为中文(zh)，用于解决浏览器自动提示翻译成中文导致的问题 2020-12-23 增加git和sqlite 相关笔记  </description>
     </item>
     
     <item>
@@ -1461,6 +1456,21 @@ sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite�
     </item>
     
     <item>
+      <title>Android时间相关view</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3view/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3view/</guid>
+      <description>》 顺便推一下博客主页
+前言  话说，Android 上整时间相关的情况也是蛮多的，比如时间选择器，日期选择器，显示一个时钟，显示一个详细时间，验证码倒计时（计时器）等等。 选择器相关的就不多描述了，一般都是通过wheelVew 做滚动联动或者就是列表做联动，或者就是第3方的控件拖进来，当前属于笔记就不整这些了。 搬砖多年，突然看到基本Android基础书籍，才发现自己好多都忘记了。
+ 正文 模拟时钟 AnalogClock
+详细时间 DigitalClock
+计时器 这个就比较骚了，很少有想到有基础控件的，我看过很多都是handle 去实现，或者梦想点就是Rxjava,区别在于有些大佬杀界面重新进去会复活之前已经刷新过的倒计时，有些大佬不会。
+Chronometer
+结束 </description>
+    </item>
+    
+    <item>
       <title>hexo&#43;Gitee pages 搭建个人主页</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
@@ -1813,16 +1823,6 @@ SQL 在使用 my sql 中就没有其他字段内容。
     </item>
     
     <item>
-      <title>TODO</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/todo/</link>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/todo/</guid>
-      <description>TODO android  Android intent 保存参数与fragment 子fragment 互用。 fragment 无限套娃，是否可以在activity层判断fragment是否包含显示？ Android 加锁 通过手写array 备份activity 批量移除activity与通过intent 设置tag移除activity的区别。 探讨通过加锁机制，统一loading层延时关闭view。 摸鱼 dialogFragment dissmiss 之后通过fragmentmanger 还能获取到吗？ 通过加锁机制对轮转控件进行加强。  java  java 各种设计模式 JAVA 新特性  SQL  android room Android room+Rxjava  杂学 python python 爬虫教学地址
- 基于selenium 实现一个自动化测试的那个啥。  </description>
-    </item>
-    
-    <item>
       <title>三维图形处理技术</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/mfc3%E7%BB%B4%E5%9B%BE%E5%BD%A2%E5%BC%80%E5%8F%91/%E4%B8%89%E7%BB%B4%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%E6%8A%80%E6%9C%AF/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
@@ -1832,6 +1832,17 @@ SQL 在使用 my sql 中就没有其他字段内容。
   在简单光反射模型中，由物体表面上点反射到视点的光强是下述哪几项之和？( )。 （1）环境光的反射光强；（2）理想漫反射光强；（3）镜面反射光强；（4）物体间的反射光强。 (A)	（1）（2）和（3） (B)	（1）（2）（3）和（4） (C)	（1）和（2） (D)	（1）和（3） [参考答案：D] 分值：5 得分： 0 分	系统自动批改于2021年1月14日 15点38分
   主灭点的个数正好等于与投影面相交的坐标轴的个数，显然最多有四个主灭点 (A)	错误 (B)	正确 [参考答案：A] 分值：5 得分： 5 分	系统自动批改于2021年1月14日 15点38分
   双三次Bezier曲面的4条边界都是三次Bezier曲线，其特征网格有( )个顶点。 (A)	20 (B)	12 (C)	16 (D)	9 [参考答案：C] 分值：5 得分： 0 分	系统自动批改于2021年1月14日 15点38分</description>
+    </item>
+    
+    <item>
+      <title>噢，先立点FLAG</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/todo/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/todo/</guid>
+      <description>TODO  噢，先立flag再说。
+ android  Android intent 保存参数与fragment 子fragment 互用。 fragment 无限套娃，是否可以在activity层判断fragment是否包含显示？ Android 加锁 通过手写array 备份activity 批量移除activity与通过intent 设置tag移除activity的区别。 探讨通过加锁机制，统一loading层延时关闭view。 摸鱼 dialogFragment dissmiss 之后通过fragmentmanger 还能获取到吗？ 通过加锁机制对轮转控件进行加强。   2021-07-10
+  基于计时器Chronometer 实现倒计时 基于spinner 实现下拉dialog 画廊视图Gallery activity 属性 intent broadcastReceiver 键盘事件 手势 toast与界面绑定与toast单例效果。 notification alarmManager 图像，paint,canvas,bitmap,bitmapFactory. 绘制2D图像 动画 openGL 3D 图形 soundPool 播放音轨。 文件流 content Provider 线程与消息处理 service wifi              java  java 各种设计模式 JAVA 新特性  SQL  android room Android room+Rxjava  杂学 python python 爬虫教学地址</description>
     </item>
     
     <item>
@@ -1979,6 +1990,24 @@ getBaseContext()     待完成，这个调调有点复杂，容我捋一捋、
     
     <item>
       <title></title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-%E9%9D%A2%E8%AF%95%E4%B9%8B%E5%BF%85%E9%97%AE%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-%E9%9D%A2%E8%AF%95%E4%B9%8B%E5%BF%85%E9%97%AE%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</guid>
+      <description>Android 面试之必问性能优化 对于Android开发者来说，懂得基本的应用开发技能往往是不够，因为不管是工作还是面试，都需要开发者懂得大量的性能优化，这对提升应用的体验是非常重要的。对于Android开发来说，性能优化主要围绕如下方面展开：启动优化、渲染优化、内存优化、网络优化、卡顿检测与优化、耗电优化、安装包体积优化、安全问题等。
+1，启动优化 一个应用的启动快慢是能够直接影响用户的使用体验的，如果启动较慢可能会导致用户卸载放弃该应用程序。
+1.1 冷启动、热启动和温启动的优化 1.1.1 概念 对于Android应用程序来说，根据启动方式可以分为冷启动，热启动和温启动三种。
+ 冷启动：系统不存在App进程（如APP首次启动或APP被完全杀死）时启动App称为冷启动。 热启动：按了Home键或其它情况app被切换到后台，再次启动App的过程。 温启动：温启动包含了冷启动的一些操作，不过App进程依然存在，这代表着它比热启动有更多的开销。  可以看到，热启动是启动最快的，温启动则是介于冷启动和热启动之间的一种启动方式。下而冷启动则是最慢的，因为它会涉及很多进程的创建，下面是冷启动相关的任务流程： 1.1.2 视觉优化 在冷启动模式下，系统会启动三个任务：
+ 加载并启动应用程序。 启动后立即显示应用程序空白的启动窗口。 创建应用程序进程。  一旦系统创建应用程序进程，应用程序进程就会进入下一阶段，并完成如下的一些事情。
+ 创建app对象 启动主线程(main thread) 创建应用入口的Activity对象 填充加载布局View 在屏幕上执行View的绘制过程.measure -&amp;gt; layout -&amp;gt; draw  应用程序进程完成第一次绘制后，系统进程会交换当前显示的背景窗口，将其替换为主活动。此时，用户可以开始使用该应用程序了。因为App应用进程的创建过程是由手机的软硬件决定的，所以我们只能在这个创建过程中进行一些视觉优化。
+1.1.3 启动主题优化 在冷启动的时候，当应用程序进程被创建后，就需要设置启动窗口的主题。目前，大部分的 应用在启动会都会先进入一个闪屏页(LaunchActivity) 来展示应用信息，如果在 Application 初始化了其它第三方的服务，就会出现启动的白屏问题。
+为了更顺滑无缝衔接我们的闪屏页，可以在启动 Activity 的 Theme中设置闪屏页图片，这样启动窗口的图片就会是闪屏页图片，而不是白屏。
+1 &amp;lt;style name=&amp;#34;AppTheme&amp;#34; parent=&amp;#34;Theme.AppCompat.Light.NoActionBar&amp;#34;&amp;gt; 2 &amp;lt;item name=&amp;#34;android:windowBackground&amp;#34;&amp;gt;@drawable/lunch&amp;lt;/item&amp;gt; //闪屏页图片 3 &amp;lt;item name=&amp;#34;android:windowFullscreen&amp;#34;&amp;gt;true&amp;lt;/item&amp;gt; 4 &amp;lt;item name=&amp;#34;android:windowDrawsSystemBarBackgrounds&amp;#34;&amp;gt;false&amp;lt;/item&amp;gt; 5 &amp;lt;/style&amp;gt; 6复制代码 1.2 代码方面的优化 设置主题的方式只能应用在要求不是很高的场景，并且这种优化治标不治本，关键还在于代码的优化。为了进行优化，我们需要掌握一些基本的数据。
+1.2.1 冷启动耗时统计 ADB命令方式 在Android Studio的Terminal中输入以下命令可以查看页面的启动的时间，命令如下：</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E4%B8%AD%E5%85%B3%E4%BA%8E%E9%94%81%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -2024,6 +2053,15 @@ sqlite 查看工具 之前找到了一篇博客对sqlite 表查看写得很详�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/gitee%E5%85%B3%E4%BA%8Ejavadoc%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/debug/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/debug/</guid>
       <description></description>
     </item>
     
@@ -2143,15 +2181,6 @@ rxbinding 使用  因为这个时间可能是需要固定的，不想每个都�
       <description>正文  基于DGG Android base 生成，activity,lazyFragment,fragment等等。 https://freemarker.apache.org/docs/index.html
  文件  MVVM(DGG)Activity activity模板 MVVM(DGG)Fragment fragment模板，提供lazyfragment模板和fragment模板  Activity生成内容  基于mvvm 的activity viewModel viewRequest layout(databinding 外部层)  fragment相关生成类型  可选lazyFragment和fragment viewModel viewRequest layout(databinding 外部层)  其他  生成的文件中，提供时间和作者注释。现在作者默认为“Android大佬” 命名采用驼峰命名法，资源文件自动转为下划线命名。  存放  mac /Applications/IntelliJ\ IDEA.app/Contents/plugins/android/lib/templates/activities 这个目录是存放activity模板 mac /Applications/IntelliJ\ IDEA.app/Contents/plugins/android/lib/templates/fragments 这个目录是存放fragment模板 Windows 类似。应用安装路径/plugins/android/lib/templates/activities windows 下Android studio 可能没有这个目录，但是IDEA 有这个目录。  打包  暂时不提供打包为插件内容，使用需要手动放置到对应目录。放置后需要重启编辑器。编辑器更新卸载重装后需要手动放置。 Android studio 4.1以上版本 不支持这种方式导入模板。 Android studio 4.1及其以上版本 需要采用 https://github.com/xiaowifi/dgg_android_code_template 这个项目的主模板创建。并且生成jar使用。
  联系 yangfan6@dgg.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/contact/</guid>
-      <description>Follow me, @johndoe.</description>
     </item>
     
     <item>
@@ -2438,15 +2467,6 @@ iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 
 正文  现在公司决定使用这个调调，然后呢，就是我们需要学习使用这个调调。 Mpaas 阿里文档 mpaas 提供Android studio 插件，在插件中选择使用。但是还是会存在一些使用问题，比如说不知道这个包是干啥的。所以就是这个笔记存在的意义。
   这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接 这个是超级链接   这个能写多少，大概就是我能够狗多久了。加油，还有两年继续狗吧。
  </description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/projects/</guid>
-      <description>Nothing to see here... Move along!</description>
     </item>
     
     <item>

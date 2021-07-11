@@ -27,10 +27,6 @@
   url = "about/"
   weight = -107
 [[main]]
-  name = "顶呱呱"
-  url = "dgg/"
-  weight = -107
-[[main]]
-  name = "设计模式"
-  url = "design_pattern/"
+  name = "TODO"
+  url = "todo/"
   weight = -107
