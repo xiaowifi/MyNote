@@ -5,7 +5,8 @@ description = "统考英语B词汇与结构"
 tags = [ "统考英语B","英语","词汇与结构"]
  
 series = ["专升本"]
-featured = true
+featured = false
+draft =true 
 +++
 
 

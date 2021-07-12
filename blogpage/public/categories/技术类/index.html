@@ -761,6 +761,292 @@ Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxja
     </div>
   </li>
 
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sql%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2/">sql分组查询</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Dec 29, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sql' class="post_tag button button_translucent">sql
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">当前笔记复制来源于：https://www.cnblogs.com/friday69/p/9389720.html
+ 1.SQL分组查询GroupBy+Group_concat group by 是分组，是分组，是分组，分组并不是去重，而是分组
+将查询结果按一个或多个进行分组，字段值相同的为一组
+GroupBy+Group_concat ： 表示分组之后，根据分组结果，使用 group_contact() 来放置每一组的每字段的值的集合
+1select deparmant, GROUP_CONCAT(`name`) from employee GROUP BY deparmant 根据 department 分组， …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sql%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sql%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/">SQL知识点汇总</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Dec 28, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sql' class="post_tag button button_translucent">sql
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言  最近写Demo的时候，经常发现自己对于sql好多都忘记了。
+ 简单使用  SELECT 查询 后面接查询字段 SELECT DISTINCT 查询 去重 WHERE 多条件查询，用and 连接 and or 多条件查询拼接 order by 对结果进行排序，默认是升序，ORDER BY DESC 降序，ORDER BY 多列（这个多列不是太懂） INSERT INTO 插入数据 UPDATE 更新数据 DELETE 删除数据  进阶  SELECT TOP, LIMIT, ROWNUM 用于规定返回记录的条目数 LIKE like查询 通配符  % 替代0个或者多个字符 '-' 替代一个字符 [charlist] 字符列中的 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sql%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sqlite%E6%9F%A5%E8%AF%A2%E7%8C%9C%E6%83%B3/">androidSqlite查询思路整理</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Dec 23, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 今天有一个大佬的公众号推了一篇，sql查询慢的原因。 为什么大家都说SELECT * 效率低 上面是原文。 由于收集癖的原因，同时怕以后找不到了，就复制下觉得重要的部分到自己的笔记里面。
+复制内容 一、效率低的原因 先看一下最新《阿里java开发手册（泰山版）》中 MySQL 部分描述：
+4 - 1. 【强制】在表查询中，一律不要使用 * 作为查询的字段列表，需要哪些字段必须明确写明。 说明：
+增加查询分析器解析成本。
+增减字段容易与 resultMap 配置不一致。
+无用字段增加网络 消耗，尤其是 text 类型的字段。 开发手册中比较概括的提到了几点原因，让我们深入一些看看：
+1. 不需要的列会增加数据传输时间和网络开销  …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/sqlite%E6%9F%A5%E8%AF%A2%E7%8C%9C%E6%83%B3/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1sqlite%E6%8F%92%E5%85%A5%E5%A4%9A%E4%BA%8E%E5%AD%97%E6%AE%B5%E5%AF%BC%E8%87%B4%E7%9A%84%E6%8F%92%E5%85%A5%E5%A4%B1%E8%B4%A5/">Android sqlite多余字段插入导致插入失败</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Dec 22, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 顺着之前的sqlite写的统一插入语句。然后现在是需要多插入一个信息到一个表，由于来源挺多的，所以直接写到bean 中 顺便推一下博客主页
+正文 直接上错误。 SQLiteDatabase: Error inserting table expenses has no column named showMessage (Sqlite code 1 SQLITE_ERROR): , while compiling: INSERT INTO …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1sqlite%E6%8F%92%E5%85%A5%E5%A4%9A%E4%BA%8E%E5%AD%97%E6%AE%B5%E5%AF%BC%E8%87%B4%E7%9A%84%E6%8F%92%E5%85%A5%E5%A4%B1%E8%B4%A5/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%9B%AE%E5%BD%95/">Android sqlite前言</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 话说现在已经2020年了，在Android 应用端上混混沌沌的搬砖已经3年多快4年了。之前也迷迷糊糊的写了些什么，但是却没有一个好一点的系列文章。大多数同行的评论都是&quot;什么都懂一点，但是什么都不精&quot;，还是蛮想改变这个现状的。所以打算认真写一个系列出来，因为最近在复习sqlite,想从各个大佬的项目中找到自己的不足。所以打算写一个sqlite的理解系列吧。
+sqlite 通用（Android）   Android 系统内嵌了sqlite，所以使用sqlite的时候并不需要导入jar或者aar 文件或者连接池等。
+  Android 中通过 SQLiteDatabase及其子类对表的创建，删除，改名，对内容的增 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%9B%AE%E5%BD%95/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/">Android sqlite增删改查</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 日常搬砖sqlite目录 再目录中提到了一些东西，有兴趣可以点过去看一下，觉得还行麻烦点下赞。
+正文 第一步创建数据库 再目录文档中，引用了官方文档的一段话 SQLiteOpenHelper 类包含一组用于管理数据库的实用 API。当您使用此类获取对数据库的引用时，系统仅在需要时才执行可能需要长时间运行的数据库创建和更新操作，而不是在应用启动期间执行。您仅需调用 getWritableDatabase() 或 getReadableDatabase() 即可。
+  第一步应该是创建数据库文件。通过上面的引用可以知道 我们创建 数据库文件只需要 继承 SQLiteOpenHelper即可。而SQLiteOpenHelper的构造 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E6%94%B9%E6%9F%A5%E5%8F%A6%E7%B1%BB%E5%86%99%E6%B3%95/">Android sqlite增删改查另类写法</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 啊哈，今天又更新了。接上一篇日常搬砖sqlite可用类型与存储类型 。
+顺便推一下日常搬砖sqlite目录
+之前又一篇博客提到了json 对象不仅仅可以通过对象class 解析，也可以解析成map.巧合的是sqlite 添加和更新需要的ContentValues 也是一个类似于map的结构。既然object 与map互转，同理可以解决 object可以和ContentValues 互相转化，是吧。还有一个点 cursor.getType(cursor.getColumnIndex(key)) 可以获取到值的type,所以开整。先总结下可能需要的逻辑。
+  ContentValues 也是一个类似于map的结构。 逻辑 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%A2%9E%E6%94%B9%E6%9F%A5%E5%8F%A6%E7%B1%BB%E5%86%99%E6%B3%95/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E6%9B%B4%E6%96%B0/">Android sqlite更新</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 顺便推一下日常搬砖sqlite目录
+这个目录里面有sqlite 初始化 增删改查等一些东西，我们就接着这个系列讲数据库更新，之前我们数据库更新判断是通过版本号进行的。而且有一个问题哈，如果我有1，2，3，4，5，共5个版本，通过为了分别应对每个版本，onUpgrade这个方法里面要写很长的东西，简单粗暴的方式当然就是用户强制升级到最新版本，那么我们就只需要处理最新版本的事情了，问题是每一次升级不都是当前最新版本吗？开发阶段中，通过数据库版本号升级要写一大堆逻辑，卸载的化数据又没有了。于是比较懒的我就开始思考一个问题，我每次用之前检测一次是否一致不就好了？那么就需要准备需要的理论知识了、
+ 系统仅在需要时才执行可能需要长时间运行 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E6%9B%B4%E6%96%B0/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%BA%A6%E6%9D%9F/">Android sqlite约束</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 顺便推一下日常搬砖sqlite目录 。
+接着上面的写，之前有写到使用sqlite 实现增删改查等简单使用。sqlite是一个关系型数据库，既然是数据库那么它就一定不会这么简单了，是吧，要不然就没有专门做数据库设计的岗位了。当然了在Android上的应用通常可能没有这么复杂。那么简单的约束还是可以了解下的。毕竟我们可能不会做出超出我们逻辑认知的操作。如果想要实现某个功能，那么知道当前工具是否可以是很有必要的吧。
+正文 那么我们就直接上菜，Android 上无论是room 还是greendao，都是基于sqlite提供服务的，他们实现的sqlite 就必定有，是吧。我们知道一个表的设计包括 表名，字段名，字段名对应的类型（必须）， …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%BA%A6%E6%9D%9F/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%8F%AF%E7%94%A8%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/">Android基础数据类型与sqlite存储类型</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B' class="post_tag button button_translucent">数据类型
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite' class="post_tag button button_translucent">sqlite
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 之前又一篇文章上讲到 cursor.getType(cursor.getColumnIndex(key)) 可以获取到对应值的类型，通过cursor 类可以知道，cursor 就提供了4种类型。而ContentValues 定义了不止4总类型，sqlite的插入与更新都可以通过ContentValues 对象进行操作的。目录地址
+ cursor 定义了4种类型 ContentValues 定义了不止4总类型 sqlite 插入更新都可以通过 ContentValues 对象进行 问题1：sqlite 在创建表的时候是否支持所以的ContentValues 定义类型。 问题2:sqlite 支持的类型 对应了cursor中的哪些 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E5%8F%AF%E7%94%A8%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
     <li>
 <ul class="pagination">
   <li class="page-item">
@@ -776,13 +1062,10 @@ Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxja
     <a class="page-link" href="/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/page/2/">2</a>
   </li>
   <li class="page-item">
-    <a class="page-link" href="/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/page/3/">3</a>
-  </li>
-  <li class="page-item">
     <a href="/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 
@@ -793,27 +1076,12 @@ Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxja
   <section class="sidebar_inner">
     <h2>luoye@yangfan</h2>
     <div>
-      android,java,git,日常搬砖
+      只有直面死亡，才能体悟生命的真谛
     </div>
     <a href='http://lalalaxiaowifi.gitee.io/pictures/about/' class="button mt-1" role="button">阅读更多</a>
     <h2 class="mt-4">精选文章</h2>
     <ul>
       <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/unix%E5%9F%BA%E7%A1%80/" class="nav-link">Unix基础</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%85%B5%E4%B9%A6/%E5%85%B5%E4%B9%A6-%E5%AD%99%E5%AD%90%E5%85%B5%E6%B3%95/" class="nav-link">兵书-孙子兵法</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%85%B5%E4%B9%A6/%E5%85%B5%E4%B9%A6-%E5%AD%99%E8%86%91%E5%85%B5%E6%B3%95/" class="nav-link">兵书-孙膑兵法</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%85%B5%E4%B9%A6/%E5%85%B5%E4%B9%A6-%E7%BA%AA%E6%95%88%E6%96%B0%E4%B9%A6/" class="nav-link">兵书-纪效新书</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%B8%B8%E6%88%8F/%E5%A4%A9%E8%B0%95%E8%81%8C%E4%B8%9A/" class="nav-link">天谕手游职业</a>
-      </li>
-      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java9%E6%96%B0%E7%89%B9%E6%80%A7/" class="nav-link">java9新特性</a>
       </li>
       <li>
@@ -821,11 +1089,29 @@ Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxja
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java8-%E6%96%B0%E7%89%B9%E6%80%A7/" class="nav-link">java8 新特性</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/propertychangelistener%E5%85%B3%E8%81%94%E5%B1%9E%E6%80%A7%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/" class="nav-link">PropertyChangeListener关联属性的简单介绍</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava观察者</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81/" class="nav-link">关于JAVA中使用测试</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" class="nav-link">Rxjava使用CompositeDisposable进行统一注销监听</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B6%E4%BB%96%E8%BF%90%E7%AE%97/" class="nav-link">Rxjava其他运算</a>
       </li>
     </ul>
     <h2 class="mt-4">最新文章</h2>
     <ul class="flex-column">
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E6%A8%A1%E6%9D%BF/" class="nav-link">微信读书</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/unix%E5%9F%BA%E7%A1%80/" class="nav-link">Unix基础</a>
       </li>
       <li>
@@ -845,9 +1131,6 @@ Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxja
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/idea%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%85%B6%E7%BC%93%E5%AD%98%E6%B8%85%E7%90%86/" class="nav-link">idea相关配置及其缓存清理</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java8-%E6%96%B0%E7%89%B9%E6%80%A7/" class="nav-link">java8 新特性</a>
       </li>
     </ul>
     <div>
@@ -856,6 +1139,11 @@ Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxja
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/' class="post_tag button button_translucent">
           技术类
           <span class="button_tally">46</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/' class="post_tag button button_translucent">
+          设计模式
+          <span class="button_tally">13</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
@@ -893,6 +1181,11 @@ Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxja
           <span class="button_tally">1</span>
         </a>
         
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/' class="post_tag button button_translucent">
+          微信读书
+          <span class="button_tally">1</span>
+        </a>
+        
         
       </nav>
     </div>
@@ -901,7 +1194,7 @@ Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxja
       <nav class="tags_nav">
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/' class="post_tag button button_translucent">
           专升本
-          <span class="button_tally">60</span>
+          <span class="button_tally">59</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
@@ -916,11 +1209,6 @@ Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxja
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/mpaas/' class="post_tag button button_translucent">
           MPAAS
-          <span class="button_tally">13</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/' class="post_tag button button_translucent">
-          设计模式
           <span class="button_tally">13</span>
         </a>
         
@@ -969,6 +1257,11 @@ Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxja
           <span class="button_tally">1</span>
         </a>
         
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/viewpager/' class="post_tag button button_translucent">
+          VIEWPAGER
+          <span class="button_tally">1</span>
+        </a>
+        
         
         <br>
         <div class="post_tags_toggle button">所有专栏</div>
@@ -1011,7 +1304,7 @@ Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxja
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/' class=" post_tag button button_translucent" data-position=60>专升本<span class="button_tally">60</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/' class=" post_tag button button_translucent" data-position=59>专升本<span class="button_tally">59</span>
             </a>
             
             
@@ -1036,10 +1329,6 @@ Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxja
             
             
             <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E6%A8%A1%E6%9D%BF/' class=" post_tag button button_translucent" data-position=6>模板<span class="button_tally">6</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/' class=" post_tag button button_translucent" data-position=13>设计模式<span class="button_tally">13</span>
             </a>
             
             
@@ -1463,10 +1752,6 @@ Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxja
             
             
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BC%80%E5%90%8E%E7%BC%80/' class=" post_tag button button_translucent" data-position=1>词缀后缀<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%BE%E7%A8%8B%E8%A1%A8/' class=" post_tag button button_translucent" data-position=1>课程表<span class="button_tally">1</span>
             </a>
             
             

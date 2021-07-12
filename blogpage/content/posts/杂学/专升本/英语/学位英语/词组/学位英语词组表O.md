@@ -5,7 +5,8 @@ description = "学位英语词组表O"
 tags = [ "英语","学位英语","词组","词组O"]
        
 series = ["专升本"]
-featured = true
+featured = false
+draft =true 
 +++
 ![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
 # 教材来源

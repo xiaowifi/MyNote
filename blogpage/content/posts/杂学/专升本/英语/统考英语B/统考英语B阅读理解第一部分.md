@@ -5,7 +5,8 @@ description = "统考英语B阅读理解第一部分"
 tags = [ "统考英语B","英语","阅读理解判断对错"]
  
 series = ["专升本"]
-featured = true
+featured = false
+draft =true 
 +++
 
 > T 表示正确，F 表示错误

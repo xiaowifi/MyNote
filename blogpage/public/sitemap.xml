@@ -3,8 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://lalalaxiaowifi.gitee.io/pictures/categories/</loc>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://lalalaxiaowifi.gitee.io/pictures/posts/</loc>
-    <lastmod>2021-06-28T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lalalaxiaowifi.gitee.io/pictures/</loc>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lalalaxiaowifi.gitee.io/pictures/categories/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</loc>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E6%A8%A1%E6%9D%BF/</loc>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -20,16 +40,6 @@
   <url>
     <loc>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/unix%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2021-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://lalalaxiaowifi.gitee.io/pictures/</loc>
-    <lastmod>2021-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://lalalaxiaowifi.gitee.io/pictures/categories/</loc>
-    <lastmod>2021-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -818,11 +828,6 @@
   </url>
   
   <url>
-    <loc>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/2020-10-19%E4%B8%93%E5%8D%87%E6%9C%AC%E8%AF%BE%E7%A8%8B%E8%A1%A8/</loc>
-    <lastmod>2020-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E7%9B%AE%E5%BD%95/</loc>
     <lastmod>2020-10-01T00:00:00+00:00</lastmod>
   </url>
@@ -1143,11 +1148,6 @@
   </url>
   
   <url>
-    <loc>http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%BE%E7%A8%8B%E8%A1%A8/</loc>
-    <lastmod>2020-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5/</loc>
     <lastmod>2020-10-01T00:00:00+00:00</lastmod>
   </url>
@@ -1179,10 +1179,6 @@
   
   <url>
     <loc>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/gitee%E5%85%B3%E4%BA%8Ejavadoc%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
-  </url>
-  
-  <url>
-    <loc>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/debug/</loc>
   </url>
   
   <url>
@@ -1466,7 +1462,7 @@
   </url>
   
   <url>
-    <loc>http://lalalaxiaowifi.gitee.io/pictures/series/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+    <loc>http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
   </url>
   
   <url>

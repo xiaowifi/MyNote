@@ -5,7 +5,8 @@ description = "统考英语B阅读理解涉及单词"
 tags = [ "统考英语B","英语","阅读理解","词汇"]
  
 series = ["专升本"]
-featured = true
+featured = false
+draft =true 
 +++
 
 * story 故事
