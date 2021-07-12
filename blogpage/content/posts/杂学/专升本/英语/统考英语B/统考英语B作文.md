@@ -6,7 +6,7 @@ tags = [ "统考英语B","作文"]
        
 series = ["专升本"]
 featured = false
-draft =true 
+draft = true 
 +++
 
 ## 第六部分 作文全新版

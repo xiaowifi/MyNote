@@ -6,7 +6,7 @@ tags = [ "统考英语B","英语","作文","小抄"]
  
 series = ["专升本"]
 featured = false
-draft =true 
+draft = true 
 +++
 
 ### my hometown (我的家乡)

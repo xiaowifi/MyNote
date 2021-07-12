@@ -6,7 +6,7 @@ tags = [ "统考英语B","英语","阅读理解判断对错"]
  
 series = ["专升本"]
 featured = false
-draft =true 
+draft = true 
 +++
 
 > T 表示正确，F 表示错误

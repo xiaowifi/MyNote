@@ -6,7 +6,7 @@ tags = [ "统考英语B","英语","交际用语","词汇"]
  
 series = ["专升本"]
 featured = false
-draft =true 
+draft = true 
 +++
 > 当前笔记关联 统考英语B交际用语
 
