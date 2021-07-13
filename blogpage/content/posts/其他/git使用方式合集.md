@@ -2,8 +2,10 @@
 date = "2021-2-20"
 title = "git使用方式合集"
 description = "git使用方式合集"
+
 tags = [ "git"]
 featured = true
+
 +++
 ![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
 > 顺便推一下[博客主页](http://lalalaxiaowifi.gitee.io/pictures/)
@@ -105,7 +107,11 @@ github.com已经建立了一个仓库，一个分支，master。现在在本地�
 -d -----删除未被添加到git的路径中的文件
 
 -f -----强制运行
+#### 强制执行
+# git checkout -f  origin/master 强行切换到master 
 
+
+#### 其他 
 git clean -n
 
 git clean -df
