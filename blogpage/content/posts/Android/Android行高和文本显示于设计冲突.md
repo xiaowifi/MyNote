@@ -19,6 +19,8 @@ featured = true
 将上面代码放到 全局的style中就可以达到效果了。
 然后是行距，这个就需要手动算了。
 android:lineSpacingExtra="3dp"
+
+代码可以设置行高的，所以行间距 也可以不自己算了。 
 ## 结束
 
 
