@@ -6,7 +6,8 @@ tags = [ "视频"]
 categories = [
     "详细设计"
 ]
-featured = true
+featured = false
+draft = true 
 +++
 
 ## 前言

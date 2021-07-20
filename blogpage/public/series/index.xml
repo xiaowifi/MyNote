@@ -6,16 +6,7 @@
     <description>Recent content in Series on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Thu, 21 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/series/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>天谕</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E5%A4%A9%E8%B0%95/</link>
-      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/%E5%A4%A9%E8%B0%95/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Mon, 04 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>android基础</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/</link>
@@ -31,33 +22,6 @@
       <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://lalalaxiaowifi.gitee.io/pictures/series/fragment/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>专升本</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/</link>
-      <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>应用</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E5%BA%94%E7%94%A8/</link>
-      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/%E5%BA%94%E7%94%A8/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>中文常识</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AD%E6%96%87%E5%B8%B8%E8%AF%86/</link>
-      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AD%E6%96%87%E5%B8%B8%E8%AF%86/</guid>
       <description></description>
     </item>
     
@@ -80,15 +44,6 @@
     </item>
     
     <item>
-      <title>selenium</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/series/selenium/</link>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/selenium/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>个人主页</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
@@ -103,15 +58,6 @@
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>http://lalalaxiaowifi.gitee.io/pictures/series/%E5%85%B6%E4%BB%96/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>模板</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E6%A8%A1%E6%9D%BF/</link>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/%E6%A8%A1%E6%9D%BF/</guid>
       <description></description>
     </item>
     
@@ -134,15 +80,6 @@
     </item>
     
     <item>
-      <title>testing</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/series/testing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/testing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>viewpager</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/series/viewpager/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -152,11 +89,11 @@
     </item>
     
     <item>
-      <title>设计模式</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+      <title>模板</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E6%A8%A1%E6%9D%BF/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/series/%E6%A8%A1%E6%9D%BF/</guid>
       <description></description>
     </item>
     

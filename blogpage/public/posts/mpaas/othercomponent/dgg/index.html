@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="zh" data-figures="" class="page">
   <head>
-<title>Mpaas其他组件-AUCheckIcon  | 个人主页</title>
+<title>Mpaas其他组件-按钮 | 个人主页</title>
 <meta charset="utf-8">
 <meta name="generator" content="Hugo 0.76.3" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -12,15 +12,15 @@
 <meta property="og:type" content="article">
 <meta name="description" content="##导入包
  mpaas 提供Android studio 插件，在插件中选择使用。
- 1// ui 库 2 api &#39;com.mpaas.android:antui&#39; …">
+ 1// ui 库 2 api &#39;com.mpaas.android:antui&#39; AUButton 1&lt;com.alipay.mobile.antui.basic.AUButton 2 …">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="">
-<meta name="twitter:title" content="Mpaas其他组件-AUCheckIcon " />
+<meta name="twitter:title" content="Mpaas其他组件-按钮" />
 <meta property="og:url" content="http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/" />
-<meta property="og:title" content="Mpaas其他组件-AUCheckIcon " />
+<meta property="og:title" content="Mpaas其他组件-按钮" />
 <meta property="og:description" content="##导入包
  mpaas 提供Android studio 插件，在插件中选择使用。
- 1// ui 库 2 api &#39;com.mpaas.android:antui&#39; …" />
+ 1// ui 库 2 api &#39;com.mpaas.android:antui&#39; AUButton 1&lt;com.alipay.mobile.antui.basic.AUButton 2 …" />
 <meta property="og:image" content="http://lalalaxiaowifi.gitee.io/pictures/images/thumbnail.png" />
 <link rel="apple-touch-icon" sizes="180x180" href='http://lalalaxiaowifi.gitee.io/pictures/icons/apple-touch-icon.png'>
 <link rel="icon" type="image/png" sizes="32x32" href='http://lalalaxiaowifi.gitee.io/pictures/icons/favicon-32x32.png'>
@@ -77,10 +77,7 @@
     <a href="http://lalalaxiaowifi.gitee.io/pictures/about/" class="nav_item">About </a>
   </div>
   <div class="nav_parent">
-    <a href="http://lalalaxiaowifi.gitee.io/pictures/design_pattern/" class="nav_item">设计模式 </a>
-  </div>
-  <div class="nav_parent">
-    <a href="http://lalalaxiaowifi.gitee.io/pictures/dgg/" class="nav_item">顶呱呱 </a>
+    <a href="http://lalalaxiaowifi.gitee.io/pictures/todo/" class="nav_item">TODO </a>
   </div>
       
 <div class='follow'>站外主页:[
@@ -94,12 +91,6 @@
   
   <a href="https://gitee.com/lalalaxiaowifi" style="padding: 10px">
    Gitee
-
-
-  </a>
-  
-  <a href="https://juejin.im/user/1890815728168430" style="padding: 10px">
-   掘金
 
 
   </a>
@@ -120,7 +111,7 @@
   
 <div class="grid-inverse wrap content">
   <article class="post_content">
-    <h1 class="post_title">Mpaas其他组件-AUCheckIcon </h1><div class="post_meta">
+    <h1 class="post_title">Mpaas其他组件-按钮</h1><div class="post_meta">
   <svg class="icon">
   <use xlink:href="#calendar"></use>
 </svg>
@@ -131,12 +122,12 @@
     
 <div class="post_share">
   分享到:
-  <a href="https://twitter.com/intent/tweet?text=Mpaas%e5%85%b6%e4%bb%96%e7%bb%84%e4%bb%b6-AUCheckIcon%20&url=http%3a%2f%2flalalaxiaowifi.gitee.io%2fpictures%2fposts%2fmpaas%2fothercomponent%2fdgg%2f&tw_p=tweetbutton" class="twitter" title="分享到 Twitter" target="_blank" rel="nofollow">
+  <a href="https://twitter.com/intent/tweet?text=Mpaas%e5%85%b6%e4%bb%96%e7%bb%84%e4%bb%b6-%e6%8c%89%e9%92%ae&url=http%3a%2f%2flalalaxiaowifi.gitee.io%2fpictures%2fposts%2fmpaas%2fothercomponent%2fdgg%2f&tw_p=tweetbutton" class="twitter" title="分享到 Twitter" target="_blank" rel="nofollow">
     <svg class="icon">
   <use xlink:href="#twitter"></use>
 </svg>
   </a>
-  <a href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flalalaxiaowifi.gitee.io%2fpictures%2fposts%2fmpaas%2fothercomponent%2fdgg%2f&t=Mpaas%e5%85%b6%e4%bb%96%e7%bb%84%e4%bb%b6-AUCheckIcon%20" class="facebook" title="分享到 Facebook" target="_blank" rel="nofollow">
+  <a href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flalalaxiaowifi.gitee.io%2fpictures%2fposts%2fmpaas%2fothercomponent%2fdgg%2f&t=Mpaas%e5%85%b6%e4%bb%96%e7%bb%84%e4%bb%b6-%e6%8c%89%e9%92%ae" class="facebook" title="分享到 Facebook" target="_blank" rel="nofollow">
     <svg class="icon">
   <use xlink:href="#facebook"></use>
 </svg>
@@ -160,62 +151,68 @@
 </blockquote>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>// ui 库 
 <span class="ln">2</span> api &#39;com.mpaas.android:antui&#39;
-</code></pre></div><h2 id="正文">正文</h2>
-<blockquote>
-<p><a href="https://help.aliyun.com/document_detail/71740.html?spm=a2c4g.11186623.6.1505.535331de0J0Ddm">https://help.aliyun.com/document_detail/71740.html?spm=a2c4g.11186623.6.1505.535331de0J0Ddm</a>
-基于android.widget.CheckBox。</p>
+</code></pre></div><h2 id="aubutton">AUButton</h2>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>&lt;com.alipay.mobile.antui.basic.AUButton
+<span class="ln">2</span>                style=&#34;@style/mainButtonStyle&#34;
+<span class="ln">3</span>                android:layout_margin=&#34;12dp&#34;
+<span class="ln">4</span>                android:clickable=&#34;true&#34;
+<span class="ln">5</span>                android:text=&#34;主要操作 Normal&#34; /&gt;
+</code></pre></div><blockquote>
+<p>基于 android.widget.Button</p>
 </blockquote>
-<h3 id="aucheckicon">AUCheckIcon</h3>
-<blockquote>
-<p>AUCheckIcon 组件用于实现选择框的 IconView。的意思是图标需要通过 IconView类似的设置吗，但是IconView 的设置图标是setIconByName.</p>
-</blockquote>
-<h4 id="xml">xml</h4>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span> &lt;com.alipay.mobile.antui.common.AUCheckIcon
-<span class="ln">2</span>        android:id=&#34;@+id/au_check_icon&#34;
-<span class="ln">3</span>        android:layout_width=&#34;45dp&#34;
-<span class="ln">4</span>        android:layout_height=&#34;45dp&#34;/&gt;
-</code></pre></div><h4 id="设置">设置</h4>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span>/**选中状态*/
-<span class="ln"> 2</span>public static final int STATE_CHECKED = 0x01;
-<span class="ln"> 3</span>/**未选中状态*/
-<span class="ln"> 4</span>public static final int STATE_UNCHECKED = 0x02;
-<span class="ln"> 5</span>/**不可取消勾选状态*/
-<span class="ln"> 6</span>public static final int STATE_CANNOT_UNCHECKED = 0x03;
-<span class="ln"> 7</span>/**不可勾选状态*/
-<span class="ln"> 8</span>public static final int STATE_CANNOT_CHECKED = 0x04;
-<span class="ln"> 9</span>/**
-<span class="ln">10</span>* 设置 checkIcon 的状态
-<span class="ln">11</span>* @param state
-<span class="ln">12</span>*/
-<span class="ln">13</span>public void setIconState(int state);
-<span class="ln">14</span>/**
-<span class="ln">15</span>* 获取checkIcon的状态
-<span class="ln">16</span>* @return
-<span class="ln">17</span>*/
-<span class="ln">18</span>public int getIconState() ;
-</code></pre></div><h4 id="样式">样式</h4>
-<blockquote>
-<p>采用checkbox button style 在xml中设置 checked 会有状态切换效果，通过Java 代码设置未发现更改样式。
-可能还是和颜色配置有关，通过配置正确的style 可能达到修改的样式效果。</p>
-</blockquote>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span> private void initView(int var1, boolean var2) {
-<span class="ln"> 2</span>        if (var2) {
-<span class="ln"> 3</span>            this.setBackgroundResource(drawable.drawable_check_icon);
-<span class="ln"> 4</span>            this.setButtonDrawable(new ColorDrawable(0));
-<span class="ln"> 5</span>        } else {
-<span class="ln"> 6</span>            this.setButtonDrawable(drawable.drawable_check_icon);
-<span class="ln"> 7</span>        }
-<span class="ln"> 8</span>
-<span class="ln"> 9</span>        this.setIconState(var1);
-<span class="ln">10</span>    }
-</code></pre></div><h3 id="aucheckbox">AUCheckBox</h3>
-<blockquote>
-<p>基于android.widget.CheckBox。和CheckBox一样的使用方式。</p>
-</blockquote>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>    &lt;com.alipay.mobile.antui.basic.AUCheckBox
-<span class="ln">2</span>        android:button=&#34;@drawable/check_box_style&#34;
-<span class="ln">3</span>        android:layout_width=&#34;45dp&#34;
-<span class="ln">4</span>        android:layout_height=&#34;45dp&#34;/&gt;
+<h3 id="style-接口">Style 接口</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性名</th>
+<th style="text-align:left">说明</th>
+<th>tag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">mainButtonStyle</td>
+<td style="text-align:left">页面主按钮</td>
+<td>main</td>
+</tr>
+<tr>
+<td style="text-align:left">subButtonStyle</td>
+<td style="text-align:left">页面次按钮</td>
+<td>sub</td>
+</tr>
+<tr>
+<td style="text-align:left">warnButtonStyle</td>
+<td style="text-align:left">警告按钮</td>
+<td>warn</td>
+</tr>
+<tr>
+<td style="text-align:left">assMainButtonStyle</td>
+<td style="text-align:left">辅助主按钮</td>
+<td>ass</td>
+</tr>
+<tr>
+<td style="text-align:left">assButtonStyle</td>
+<td style="text-align:left">辅助次按钮</td>
+<td>ass</td>
+</tr>
+<tr>
+<td style="text-align:left">listButtonStyle</td>
+<td style="text-align:left">列表按钮</td>
+<td>list</td>
+</tr>
+</tbody>
+</table>
+<h4 id="基于style-自定义样式">基于style 自定义样式</h4>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>&lt;item name=&#34;android:tag&#34;&gt;main&lt;/item&gt;
+</code></pre></div><p>这个属性一定要重置，否则自定义样式可能不会生效。</p>
+<p>默认提供下列type.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>public static final java.lang.String BTN_TYPE_MAIN = &#34;main&#34;;
+<span class="ln">2</span>public static final java.lang.String BTN_TYPE_SUB = &#34;sub&#34;;
+<span class="ln">3</span>public static final java.lang.String BTN_TYPE_WARNING = &#34;warning&#34;;
+<span class="ln">4</span>public static final java.lang.String BTN_TYPE_MAIN_GROUP = &#34;mainGroup&#34;;
+<span class="ln">5</span>public static final java.lang.String BTN_TYPE_SUB_GROUP = &#34;subGroup&#34;;
+<span class="ln">6</span>public static final java.lang.String BTN_TYPE_ASS_TRANS = &#34;ass_trans&#34;;
+<span class="ln">7</span>public static final java.lang.String BIN_TYPE_NO_RECT = &#34;no_rect&#34;;
 </code></pre></div>
     
       
@@ -225,24 +222,12 @@
   <section class="sidebar_inner">
     <h2>luoye@yangfan</h2>
     <div>
-      android,java,git,日常搬砖
+      只有直面死亡，才能体悟生命的真谛
     </div>
     <a href='http://lalalaxiaowifi.gitee.io/pictures/about/' class="button mt-1" role="button">阅读更多</a>
     <h2 class="mt-4">精选文章</h2>
     <ul>
       <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%85%B5%E4%B9%A6/%E5%85%B5%E4%B9%A6-%E5%AD%99%E5%AD%90%E5%85%B5%E6%B3%95/" class="nav-link">兵书-孙子兵法</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%85%B5%E4%B9%A6/%E5%85%B5%E4%B9%A6-%E5%AD%99%E8%86%91%E5%85%B5%E6%B3%95/" class="nav-link">兵书-孙膑兵法</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%85%B5%E4%B9%A6/%E5%85%B5%E4%B9%A6-%E7%BA%AA%E6%95%88%E6%96%B0%E4%B9%A6/" class="nav-link">兵书-纪效新书</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%B8%B8%E6%88%8F/%E5%A4%A9%E8%B0%95%E8%81%8C%E4%B8%9A/" class="nav-link">天谕手游职业</a>
-      </li>
-      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java9%E6%96%B0%E7%89%B9%E6%80%A7/" class="nav-link">java9新特性</a>
       </li>
       <li>
@@ -253,23 +238,23 @@
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/propertychangelistener%E5%85%B3%E8%81%94%E5%B1%9E%E6%80%A7%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/" class="nav-link">PropertyChangeListener关联属性的简单介绍</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava观察者</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81/" class="nav-link">关于JAVA中使用测试</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" class="nav-link">Rxjava使用CompositeDisposable进行统一注销监听</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B6%E4%BB%96%E8%BF%90%E7%AE%97/" class="nav-link">Rxjava其他运算</a>
       </li>
     </ul>
     <h2 class="mt-4">最新文章</h2>
     <ul class="flex-column">
       <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%85%B5%E4%B9%A6/%E5%85%B5%E4%B9%A6-%E5%AD%99%E5%AD%90%E5%85%B5%E6%B3%95/" class="nav-link">兵书-孙子兵法</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%85%B5%E4%B9%A6/%E5%85%B5%E4%B9%A6-%E5%AD%99%E8%86%91%E5%85%B5%E6%B3%95/" class="nav-link">兵书-孙膑兵法</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E5%85%B5%E4%B9%A6/%E5%85%B5%E4%B9%A6-%E7%BA%AA%E6%95%88%E6%96%B0%E4%B9%A6/" class="nav-link">兵书-纪效新书</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%B8%B8%E6%88%8F/%E5%A4%A9%E8%B0%95%E8%81%8C%E4%B8%9A/" class="nav-link">天谕手游职业</a>
-      </li>
-      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java9%E6%96%B0%E7%89%B9%E6%80%A7/" class="nav-link">java9新特性</a>
       </li>
       <li>
@@ -280,6 +265,18 @@
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/propertychangelistener%E5%85%B3%E8%81%94%E5%B1%9E%E6%80%A7%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/" class="nav-link">PropertyChangeListener关联属性的简单介绍</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava观察者</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81/" class="nav-link">关于JAVA中使用测试</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" class="nav-link">Rxjava使用CompositeDisposable进行统一注销监听</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B6%E4%BB%96%E8%BF%90%E7%AE%97/" class="nav-link">Rxjava其他运算</a>
       </li>
     </ul>
     <div>
@@ -290,34 +287,19 @@
           <span class="button_tally">46</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%9D%82%E5%AD%A6/' class="post_tag button button_translucent">
-          杂学
-          <span class="button_tally">10</span>
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/' class="post_tag button button_translucent">
+          设计模式
+          <span class="button_tally">12</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
           ANDROID基础
-          <span class="button_tally">9</span>
+          <span class="button_tally">10</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E5%85%B5%E4%B9%A6%E6%8A%84%E5%BD%95/' class="post_tag button button_translucent">
-          兵书抄录
-          <span class="button_tally">3</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/' class="post_tag button button_translucent">
-          自动化测试
-          <span class="button_tally">2</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1/' class="post_tag button button_translucent">
-          详细设计
-          <span class="button_tally">2</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/android-app/' class="post_tag button button_translucent">
-          ANDROID-APP
-          <span class="button_tally">1</span>
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%9D%82%E5%AD%A6/' class="post_tag button button_translucent">
+          杂学
+          <span class="button_tally">4</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/git/' class="post_tag button button_translucent">
@@ -325,8 +307,8 @@
           <span class="button_tally">1</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/todo/' class="post_tag button button_translucent">
-          TODO
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1/' class="post_tag button button_translucent">
+          详细设计
           <span class="button_tally">1</span>
         </a>
         
@@ -336,11 +318,6 @@
     <div>
       <h2 class="mt-4 taxonomy" id="series-section">专栏</h2>
       <nav class="tags_nav">
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/' class="post_tag button button_translucent">
-          专升本
-          <span class="button_tally">60</span>
-        </a>
-        
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
           ANDROID基础
           <span class="button_tally">29</span>
@@ -348,17 +325,12 @@
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E9%A1%B6%E5%91%B1%E5%91%B1/' class="post_tag button button_translucent">
           顶呱呱
-          <span class="button_tally">20</span>
+          <span class="button_tally">19</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/mpaas/' class="post_tag button button_translucent">
           MPAAS
-          <span class="button_tally">13</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/' class="post_tag button button_translucent">
-          设计模式
-          <span class="button_tally">13</span>
+          <span class="button_tally">12</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class="post_tag button button_translucent">
@@ -371,28 +343,18 @@
           <span class="button_tally">9</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E6%A8%A1%E6%9D%BF/' class="post_tag button button_translucent">
-          模板
-          <span class="button_tally">6</span>
-        </a>
-        
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/fragment/' class="post_tag button button_translucent">
           FRAGMENT
           <span class="button_tally">4</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/testing/' class="post_tag button button_translucent">
-          TESTING
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E6%A8%A1%E6%9D%BF/' class="post_tag button button_translucent">
+          模板
           <span class="button_tally">3</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/java%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
           JAVA基础
-          <span class="button_tally">2</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/selenium/' class="post_tag button button_translucent">
-          SELENIUM
           <span class="button_tally">2</span>
         </a>
         
@@ -406,110 +368,17 @@
           <span class="button_tally">1</span>
         </a>
         
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/viewpager/' class="post_tag button button_translucent">
+          VIEWPAGER
+          <span class="button_tally">1</span>
+        </a>
         
-        <br>
-        <div class="post_tags_toggle button">所有专栏</div>
-        <div class="post_tags">
-          <div class="tags_list">
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/android%E5%9F%BA%E7%A1%80/' class=" post_tag button button_translucent" data-position=29>ANDROID基础<span class="button_tally">29</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/fragment/' class=" post_tag button button_translucent" data-position=4>FRAGMENT<span class="button_tally">4</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/java%E5%9F%BA%E7%A1%80/' class=" post_tag button button_translucent" data-position=2>JAVA基础<span class="button_tally">2</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/mpaas/' class=" post_tag button button_translucent" data-position=13>MPAAS<span class="button_tally">13</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/python/' class=" post_tag button button_translucent" data-position=1>PYTHON<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/recycleview/' class=" post_tag button button_translucent" data-position=1>RECYCLEVIEW<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/selenium/' class=" post_tag button button_translucent" data-position=2>SELENIUM<span class="button_tally">2</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/testing/' class=" post_tag button button_translucent" data-position=3>TESTING<span class="button_tally">3</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/viewpager/' class=" post_tag button button_translucent" data-position=1>VIEWPAGER<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%93%E5%8D%87%E6%9C%AC/' class=" post_tag button button_translucent" data-position=60>专升本<span class="button_tally">60</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class=" post_tag button button_translucent" data-position=9>个人主页<span class="button_tally">9</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E4%B8%AD%E6%96%87%E5%B8%B8%E8%AF%86/' class=" post_tag button button_translucent" data-position=1>中文常识<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E5%85%B6%E4%BB%96/' class=" post_tag button button_translucent" data-position=9>其他<span class="button_tally">9</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E5%A4%A9%E8%B0%95/' class=" post_tag button button_translucent" data-position=1>天谕<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E5%BA%94%E7%94%A8/' class=" post_tag button button_translucent" data-position=1>应用<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E6%A8%A1%E6%9D%BF/' class=" post_tag button button_translucent" data-position=6>模板<span class="button_tally">6</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/' class=" post_tag button button_translucent" data-position=13>设计模式<span class="button_tally">13</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E9%A1%B6%E5%91%B1%E5%91%B1/' class=" post_tag button button_translucent" data-position=20>顶呱呱<span class="button_tally">20</span>
-            </a>
-            
-            <div class="tags_sort"><span title="sort alphabetically">[A~Z]</span><span title="sort by count">[0~9]</span>
-            </div>
-            <span class="tags_hide"><svg class="icon">
-            <use xlink:href="#closeme"></use>
-          </svg></span>
-          </div>
-        </div>
+        
       </nav>
     </div>
     <div>
       <h2 class="mt-4 taxonomy" id="tags-section">标签</h2>
       <nav class="tags_nav">
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
-          英语
-          <span class="button_tally">47</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/' class="post_tag button button_translucent">
-          统考英语B
-          <span class="button_tally">25</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%AD%A6%E4%BD%8D%E8%8B%B1%E8%AF%AD/' class="post_tag button button_translucent">
-          学位英语
-          <span class="button_tally">20</span>
-        </a>
-        
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class="post_tag button button_translucent">
           ANDROID
           <span class="button_tally">19</span>
@@ -517,26 +386,11 @@
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class="post_tag button button_translucent">
           RXJAVA
-          <span class="button_tally">19</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84/' class="post_tag button button_translucent">
-          词组
-          <span class="button_tally">15</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%8B%9F%E8%AF%95%E5%8D%B7/' class="post_tag button button_translucent">
-          模拟试卷
-          <span class="button_tally">10</span>
+          <span class="button_tally">18</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee/' class="post_tag button button_translucent">
           GITEE
-          <span class="button_tally">9</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite/' class="post_tag button button_translucent">
-          SQLITE
           <span class="button_tally">9</span>
         </a>
         
@@ -545,24 +399,54 @@
           <span class="button_tally">8</span>
         </a>
         
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite/' class="post_tag button button_translucent">
+          SQLITE
+          <span class="button_tally">8</span>
+        </a>
+        
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class="post_tag button button_translucent">
           个人主页
           <span class="button_tally">8</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/' class="post_tag button button_translucent">
-          数据库
-          <span class="button_tally">6</span>
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/fragment/' class="post_tag button button_translucent">
+          FRAGMENT
+          <span class="button_tally">3</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/hugo/' class="post_tag button button_translucent">
+          HUGO
+          <span class="button_tally">3</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%9D%BF/' class="post_tag button button_translucent">
           模板
-          <span class="button_tally">6</span>
+          <span class="button_tally">3</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/fragment/' class="post_tag button button_translucent">
-          FRAGMENT
-          <span class="button_tally">3</span>
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/hexo/' class="post_tag button button_translucent">
+          HEXO
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java/' class="post_tag button button_translucent">
+          JAVA
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/jekyll/' class="post_tag button button_translucent">
+          JEKYLL
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sql/' class="post_tag button button_translucent">
+          SQL
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/chm/' class="post_tag button button_translucent">
+          CHM
+          <span class="button_tally">1</span>
         </a>
         
         
@@ -576,10 +460,6 @@
             
             
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/chm/' class=" post_tag button button_translucent" data-position=1>CHM<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/cost%E8%B4%A6%E6%9C%AC/' class=" post_tag button button_translucent" data-position=1>COST账本<span class="button_tally">1</span>
             </a>
             
             
@@ -627,11 +507,7 @@
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java/' class=" post_tag button button_translucent" data-position=3>JAVA<span class="button_tally">3</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java-ee/' class=" post_tag button button_translucent" data-position=1>JAVA-EE<span class="button_tally">1</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java/' class=" post_tag button button_translucent" data-position=2>JAVA<span class="button_tally">2</span>
             </a>
             
             
@@ -679,11 +555,7 @@
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class=" post_tag button button_translucent" data-position=19>RXJAVA<span class="button_tally">19</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/selenium/' class=" post_tag button button_translucent" data-position=2>SELENIUM<span class="button_tally">2</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava/' class=" post_tag button button_translucent" data-position=18>RXJAVA<span class="button_tally">18</span>
             </a>
             
             
@@ -691,7 +563,7 @@
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite/' class=" post_tag button button_translucent" data-position=9>SQLITE<span class="button_tally">9</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite/' class=" post_tag button button_translucent" data-position=8>SQLITE<span class="button_tally">8</span>
             </a>
             
             
@@ -699,23 +571,7 @@
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%8D%E8%A7%84%E5%88%99%E5%8A%A8%E8%AF%8D/' class=" post_tag button button_translucent" data-position=1>不规则动词<span class="button_tally">1</span>
-            </a>
-            
-            
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/' class=" post_tag button button_translucent" data-position=8>个人主页<span class="button_tally">8</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AD%E6%96%87%E5%B8%B8%E8%AF%86/' class=" post_tag button button_translucent" data-position=1>中文常识<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%BA%A4%E9%99%85%E7%94%A8%E8%AF%AD/' class=" post_tag button button_translucent" data-position=2>交际用语<span class="button_tally">2</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%BD%9C%E6%96%87/' class=" post_tag button button_translucent" data-position=2>作文<span class="button_tally">2</span>
             </a>
             
             
@@ -727,10 +583,6 @@
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%89%8D%E7%BC%80/' class=" post_tag button button_translucent" data-position=1>前缀<span class="button_tally">1</span>
-            </a>
-            
-            
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%8F%8D%E5%B0%84/' class=" post_tag button button_translucent" data-position=1>反射<span class="button_tally">1</span>
             </a>
             
@@ -739,187 +591,15 @@
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%9B%BE%E8%A1%A8/' class=" post_tag button button_translucent" data-position=1>图表<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%AD%A6%E4%BD%8D%E8%8B%B1%E8%AF%AD/' class=" post_tag button button_translucent" data-position=20>学位英语<span class="button_tally">20</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%AE%8C%E5%BD%A2%E5%A1%AB%E7%A9%BA/' class=" post_tag button button_translucent" data-position=1>完形填空<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%B0%8F%E6%8A%84/' class=" post_tag button button_translucent" data-position=1>小抄<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/' class=" post_tag button button_translucent" data-position=6>数据库<span class="button_tally">6</span>
-            </a>
-            
-            
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/' class=" post_tag button button_translucent" data-position=1>数据类型<span class="button_tally">1</span>
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%8B%9F%E8%AF%95%E5%8D%B7/' class=" post_tag button button_translucent" data-position=10>模拟试卷<span class="button_tally">10</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%9D%BF/' class=" post_tag button button_translucent" data-position=3>模板<span class="button_tally">3</span>
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%9D%BF/' class=" post_tag button button_translucent" data-position=6>模板<span class="button_tally">6</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%B5%8B%E8%AF%95%E7%BD%91%E7%AB%99/' class=" post_tag button button_translucent" data-position=1>测试网站<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/' class=" post_tag button button_translucent" data-position=25>统考英语B<span class="button_tally">25</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%91%E6%B1%89/' class=" post_tag button button_translucent" data-position=2>英译汉<span class="button_tally">2</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%8B%B1%E8%AF%AD/' class=" post_tag button button_translucent" data-position=47>英语<span class="button_tally">47</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%A7%86%E9%A2%91/' class=" post_tag button button_translucent" data-position=2>视频<span class="button_tally">2</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/' class=" post_tag button button_translucent" data-position=1>计算机编译原理<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AE%B0%E5%BF%86/' class=" post_tag button button_translucent" data-position=2>记忆<span class="button_tally">2</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87/' class=" post_tag button button_translucent" data-position=3>词汇<span class="button_tally">3</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87a/' class=" post_tag button button_translucent" data-position=1>词汇A<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87b/' class=" post_tag button button_translucent" data-position=1>词汇B<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87c/' class=" post_tag button button_translucent" data-position=1>词汇C<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87%E4%B8%8E%E7%BB%93%E6%9E%84/' class=" post_tag button button_translucent" data-position=1>词汇与结构<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E6%B1%87%E8%A1%A8/' class=" post_tag button button_translucent" data-position=3>词汇表<span class="button_tally">3</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84/' class=" post_tag button button_translucent" data-position=15>词组<span class="button_tally">15</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84a/' class=" post_tag button button_translucent" data-position=1>词组A<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84b/' class=" post_tag button button_translucent" data-position=1>词组B<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84c/' class=" post_tag button button_translucent" data-position=1>词组C<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84def/' class=" post_tag button button_translucent" data-position=1>词组DEF<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84g/' class=" post_tag button button_translucent" data-position=1>词组G<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84h/' class=" post_tag button button_translucent" data-position=1>词组H<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84i/' class=" post_tag button button_translucent" data-position=1>词组I<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84jkl/' class=" post_tag button button_translucent" data-position=1>词组JKL<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84mn/' class=" post_tag button button_translucent" data-position=1>词组MN<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84o/' class=" post_tag button button_translucent" data-position=1>词组O<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84p/' class=" post_tag button button_translucent" data-position=1>词组P<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84qr/' class=" post_tag button button_translucent" data-position=1>词组QR<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84s/' class=" post_tag button button_translucent" data-position=1>词组S<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84t/' class=" post_tag button button_translucent" data-position=1>词组T<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BB%84uw/' class=" post_tag button button_translucent" data-position=1>词组UW<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BC%80/' class=" post_tag button button_translucent" data-position=3>词缀<span class="button_tally">3</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BC%80%E5%89%8D%E7%BC%80/' class=" post_tag button button_translucent" data-position=1>词缀前缀<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%8D%E7%BC%80%E5%90%8E%E7%BC%80/' class=" post_tag button button_translucent" data-position=1>词缀后缀<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%AF%BE%E7%A8%8B%E8%A1%A8/' class=" post_tag button button_translucent" data-position=1>课程表<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%87%8D%E7%82%B9%E5%8D%95%E8%AF%8D/' class=" post_tag button button_translucent" data-position=1>重点单词<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%87%8D%E7%82%B9%E5%8F%A5%E5%9E%8B/' class=" post_tag button button_translucent" data-position=1>重点句型<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%94%99%E9%A2%98%E9%9B%86/' class=" post_tag button button_translucent" data-position=1>错题集<span class="button_tally">1</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3/' class=" post_tag button button_translucent" data-position=2>阅读理解<span class="button_tally">2</span>
-            </a>
-            
-            
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E5%88%A4%E6%96%AD%E5%AF%B9%E9%94%99/' class=" post_tag button button_translucent" data-position=1>阅读理解判断对错<span class="button_tally">1</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%A7%86%E9%A2%91/' class=" post_tag button button_translucent" data-position=1>视频<span class="button_tally">1</span>
             </a>
             
             

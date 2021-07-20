@@ -5,7 +5,8 @@ description = "统考英语B作文小抄"
 tags = [ "统考英语B","英语","作文","小抄"]
  
 series = ["专升本"]
-featured = true
+featured = false
+draft = true 
 +++
 
 ### my hometown (我的家乡)

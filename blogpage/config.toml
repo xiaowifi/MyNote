@@ -1,22 +1,29 @@
 # set `baseurl` to your root domain
 # if you set it to "/" share icons won't work properly on production
-baseurl = "http://lalalaxiaowifi.gitee.io/pictures/"  #  修改后需要 使用hogo -D  重新编译，然后提交，本地运行不用 编译。
+# hugo 就是编译文件噢，
+#-p, --port=1313       服务监听端口；
+#-w, --watch[=true]      监听站点目录，发现文件变更自动编译；
+#-D, --buildDrafts     包括被标记为draft的文章；
+#-E, --buildExpired    包括已过期的文章；
+#-F, --buildFuture     包括将在未来发布的文章；
+#-b, --baseURL="www.datals.com"  服务监听域名；
+#--log[=false]:           开启日志；
+#--logFile="/var/log/hugo.log":          log输出路径；
+#-t, --theme=""          指定主题；
+#-v, --verbose[=false]: 输出详细信息
+
+baseurl = "http://lalalaxiaowifi.gitee.io/pictures/"  #  修改后需要 使用hogo  重新编译，然后提交，本地运行不用 编译。
 #baseurl = "https://example.com/"  #  https://example.com/
 title = "个人主页"
 author = "luoye@yangfan"
 copyright = "Copyright © 2020-2099"
 # canonifyurls = true
-paginate = 20
+paginate = 30
 theme = "hugo-clarity-luoye"
 
 disqusShortname = "主页"
 
 DefaultContentLanguage = "zh"
-# [languages]
-# config/_default/languages.toml
-
-# [menus]
-# config/_default/menus/menu.xx.toml
 
 [taxonomies]
 category = "categories"
@@ -28,7 +35,7 @@ series = "series"
 [markup.goldmark]
 [markup.goldmark.renderer]
 hardWraps = false
-unsafe = true # change to false to disable inclusion of rawHTML and math functions
+unsafe = true # 更改为 false 以禁用包含 rawhtml 和数学函数
 xhtml = false
 [markup.goldmark.extensions]
 typographer = false
@@ -37,23 +44,21 @@ codeFences = true
 guessSyntax = true
 hl_Lines = "--"
 lineNoStart = 1
-lineNos = true # always set to true # else line numbers won't show at all! even when you toggle them on in the UI
-lineNumbersInTable = false # toggling this on (i.e to true) or deleting this line will break the code blocks functionality. Will
+lineNos = true # 始终设置为 true # 否则根本不显示行号！即使您在 UI 中打开它们
+lineNumbersInTable = false # 将其切换为（即为 true）或删除此行将破坏代码块功能。将要
 noClasses = false
 # style = "monokai"
 tabWidth = 2
 
 [params]
 author = "luoye@yangfan"
-largeTwitterCard = false # set to true if you want to show a large twitter card image. The default is a small twitter card image
-introDescription = "android,java,git,日常搬砖"
-# description = "" # set your site's description here. will be use for home page content meta tags (seo). Alternatively set this description in your homepage content file i.e content/_index.md. Whatever is set in the latter will take precedence
-
+largeTwitterCard = false # 如果要显示大的 Twitter 卡片图像，请设置为 true。默认是一个小的推特卡片图片
+introDescription = "只有直面死亡，才能体悟生命的真谛"
+# description = "" # 在此处设置您网站的描述。将用于主页内容元标记（seo）。或者在您的主​​页内容文件中设置此描述，即 content/_index.md。无论在后者中设置什么都将优先
 
 
 # limit the number of taxonomies links shown on the sidebar of each page by default.
-numberOfTagsShown = 14 # Applies for all other default & custom taxonomies. e.g categories, brands see https://gohugo.io/content-management/taxonomies#what-is-a-taxonomy
-
+numberOfTagsShown = 14 # 适用于所有其他默认和自定义分类法。例如类别，品牌见 https://gohugo.io/content-management/taxonomies#what-is-a-taxonomy
 # will be used on share >> twitter, facebook, linkedin
 fallBackOgImage = "images/thumbnail.png"
 
@@ -79,12 +84,9 @@ figurePositionLabel = "Figure" # the text before image number e.g Figure 1.0
 # Set the collapsed mobile navigation to either appear from the left or the right
 mobileNavigation = "left" # if you prefer right change to 'right'
 
-# some site owners want to decide how they would like their sites to be introduced users. These settings give you as a site owner to decide how the user will view your site for the first time.
-
-# please note that you cannot enforce both modes at the same time. i.e by enforcing one mode, you priotise it over the other (by setting it to true). enforceDarkMode will be commented out
-
-# please also not that mode toggle UI will remain in place. That way, if a user prefers darkmode, they can have their way.
-
+# 一些网站所有者想要决定他们希望如何向他们的网站介绍用户。这些设置使您作为网站所有者可以决定用户首次查看您的网站的方式。
+#请注意，您不能同时强制执行两种模式。即通过强制执行一种模式，您将其优先于另一种模式（通过将其设置为 true）。强制暗模式将被注释掉
+# 也请不要让模式切换 UI 保持原样。这样，如果用户更喜欢暗模式，他们可以随心所欲。
 enforceLightMode = false
 # enforceDarkMode = false
 
@@ -94,15 +96,15 @@ languageMenuName = "🌐"
 # Title separator, default to |.
 # titleSeparator = "|"
 
-# Enable or disable comment globally. Default to true.
+# 全局启用或禁用评论。默认为真。
 # comment = false
 
-# Maximum number of recent posts.
+# 最近帖子的最大数量。
 # numberOfRecentPosts = 8
 
-# Maximum number of featured posts.
+# 精选帖子的最大数量。
 # numberOfFeaturedPosts = 8
 
 # Date format. Checkout https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference for details.
 # dateFormat = "2006-01-02" # Default to "Jan 2, 2006".
-#2020-10-16 16:44:23  新增字段。主要用于单页显示头像等。
+

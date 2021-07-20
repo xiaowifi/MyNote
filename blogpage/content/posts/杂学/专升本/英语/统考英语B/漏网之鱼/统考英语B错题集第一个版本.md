@@ -5,7 +5,8 @@ description = "统考英语B错题集第一个版本"
 tags = [ "统考英语B","英语","错题集"]
  
 series = ["专升本"]
-featured = true
+featured = false
+draft = true 
 +++
 
 
