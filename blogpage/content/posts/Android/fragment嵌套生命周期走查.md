@@ -1,12 +1,12 @@
 +++
 date = "2021-4-12"
-title = "fragment嵌套生命周期走查"
-description = "fragment嵌套生命周期走查"
+title = "fragment嵌套生命周期走查（懒加载有问题）"
+description = "fragment嵌套生命周期走查（懒加载有问题）"
 tags = [ "fragment"]
 categories = [
 "android基础"
 ]
-series = ["fragment"]
+
 featured = true
 +++
 
@@ -606,7 +606,7 @@ public abstract class BaseLazyFragment extends Fragment {
 * 2: dispatchChildVisibleState:
 * 2: dispatchUserVisibleHint:
 * 2: setUserVisibleHint:
-* 3: isParentInvisible:
+* 3:  :
 * 3: onFragmentFirstVisible:
 * 3: onFragmentResume:
 * 3: dispatchChildVisibleState:
