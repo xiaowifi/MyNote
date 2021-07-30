@@ -110,6 +110,8 @@ github.com已经建立了一个仓库，一个分支，master。现在在本地�
 #### 强制执行
 # git checkout -f  origin/master 强行切换到master 
 
+git config push.recurseSubmodules check  项目地址
+
 
 #### 其他 
 git clean -n
