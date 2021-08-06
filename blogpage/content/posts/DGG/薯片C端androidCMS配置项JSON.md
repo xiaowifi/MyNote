@@ -1,8 +1,10 @@
-+++ date = "2021-6-22"
++++ 
+date = "2021-6-22"
 title = "薯片C端androidCMS配置项JSON"
 description = "薯片C端androidCMS配置项JSON"
 
-featured = true +++
+featured = false
++++
 ![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
 》 顺便推一下[博客主页](http://lalalaxiaowifi.gitee.io/pictures/)
 

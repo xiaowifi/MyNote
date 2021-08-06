@@ -1,9 +1,7 @@
 +++
-date = "2020-10-01"
 title = "噢，先立点FLAG"
 slug = "todo"
-description = "噢，先立点FLAG"
-featured = true
+featured = false
 +++
 ## TODO
 > 噢，先立flag再说。

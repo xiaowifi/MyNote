@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>adb on 个人主页</title>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/tags/adb/</link>
+    <description>Recent content in adb on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/tags/adb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>android adb常用功能汇总</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-adb%E5%B8%B8%E7%94%A8%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-adb%E5%B8%B8%E7%94%A8%E6%B1%87%E6%80%BB/</guid>
+      <description>正文 adb 安装apk adb install D:\androidProject\DGGChips\app\d_environment\release\d_environment2021061001.apk
+adb app 启动时长 adb shell am start -W -n com.chips.cpscustomer/com.chips.module_main.ui.start.StartPageActivity</description>
+    </item>
+    
+  </channel>
+</rss>
