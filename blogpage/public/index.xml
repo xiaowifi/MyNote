@@ -6,7 +6,21 @@
     <description>Recent content on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android抄一手冷启动优化呢</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%8A%84%E4%B8%80%E6%89%8B%E5%86%B7%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E5%91%A2/</link>
+      <pubDate>Sun, 08 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%8A%84%E4%B8%80%E6%89%8B%E5%86%B7%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E5%91%A2/</guid>
+      <description>》 顺便推一下博客主页
+前言  Android 启动优化 还是蛮重要的呀，常见的耗时操作一般在于onCreat里面，或者设置界面的layout的时候，或者就是一些初始化SDK,一些IO操作。 现在应用市场开始检测 给予权限前是否有对应的初始化了，这个也促使了一部分启动优化的加速吧。
+ 参考资料：
+ 中国大学 MOOC Android 性能优化：冷启动优化总结 应用宝隐私审核规范  违规使用个人信息。重点整治APP、SDK未向用户告知且未经用户同意，私自使用个人信息，将用户个人信息用于其提供服务之外的目的，特别是私自向其他应用或服务器发送、共享用户个人信息的行为。    正文 app 启动优化大致可以分为下面几个方面。
+ 复杂界面view异步加载，androidx.asynclayoutinflater:asynclayoutinflater进行异步加载 xml 文件。 对于不需要一开始就初始化的内容，在需要的时候进行初始化。 能放到子线程中初始化的内容，尽量放到子线程中初始化。 开始严苛模式（StrictMode） 使用ConstraintLayout 减少布局渲染 IdleHandler 需要在当前线程中处理耗时任务，并且并不需要马上执行的话，可以使用IdleHandler这样该任务可以消息队列空闲时，被处理。 减少代码量。kotlin 可以减少代码量（这个感觉有点迷幻，code 代码过多启动也会变慢，那资源文件过多呢？） 减少JAVA 静态方法和静态变量？这个感觉是一种思路。 减少xml SharedPreferences 这个调调一开始就会加载当前xml 所以内容。 图片加载采用压缩图片，不要加载原图，网络图片也是如此，第3方文件服务器有压缩裁剪服务的。   主要还是前面几条，后面几条感觉和启动优化没有啥关系。
+ 如何获取应用方法启动耗时？  常见的问题就是在方法前后打log。 CPU Profile 或者 Debug.startMethodTracing 进行监控并导出 trace 文件进行分析。不管哪种方式，采集堆栈信息都有两种模式：采样模式和追踪模式。追踪模式会一直抓取数据，对设备性能要求较高。 利用Transform + ASM字节码修改技术动态插入代码 Hook Instrumentation Hook Handler或者Looper的Printer  结束 </description>
+    </item>
+    
     <item>
       <title>java9新特性</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java9%E6%96%B0%E7%89%B9%E6%80%A7/</link>
@@ -940,6 +954,15 @@ sqlite 查看工具 之前找到了一篇博客对sqlite 表查看写得很详�
     </item>
     
     <item>
+      <title></title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/android%E5%9F%BA%E7%A1%80%E5%91%A2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/android%E5%9F%BA%E7%A1%80%E5%91%A2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title> 加载反馈页管理工具</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/%E5%8A%A0%E8%BD%BD%E5%8F%8D%E9%A6%88%E9%A1%B5%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1728,7 +1751,7 @@ loading层控制 采用拦截器机制。
       
       <guid>http://lalalaxiaowifi.gitee.io/pictures/reflection_and_perception/</guid>
       <description> 2021-08-06 打算记录下每天的碎碎念呢，有的是想法，有的是其他的。对自己还是要有B数的，没有那么的强，但愿这个可以整得久一点吧。
- 开始  2021-08-06 23 突然想到了书上所说的反省，所以新增这一栏呢  今天感觉有点懒散，今天去打疫苗的路上，发现自己把背打直了是听不到骨骼响的，但是膝盖疼，明显是缺钙的样子，皮肤上红点变多，所以维生素A和D3，多维元素片还是要磕起走，最近经常忘记了。 最近发现身体变好了点，但是更喜欢听书，而不是读书，而且听过的书不想集中注意力听第2次了。 之前有感觉自己可以跑了的样子，今天试了下，感觉跑起来贼变扭，应该是久了没有运动还是什么的。 感觉自己还是不愿意承担责任的感觉，不是自己的东西，完全游离于责任之外，融入不了团体呢。 今天依旧觉得自己是一个变态，是一个废物，怕治疗好自己呢，但是又期望治疗好自己呢。    </description>
+ 开始  2021-08-06 23 突然想到了书上所说的反省，所以新增这一栏呢  今天感觉有点懒散，今天去打疫苗的路上，发现自己把背打直了是听不到骨骼响的，但是膝盖疼，明显是缺钙的样子，皮肤上红点变多，所以维生素A和D3，多维元素片还是要磕起走，最近经常忘记了。 最近发现身体变好了点，但是更喜欢听书，而不是读书，而且听过的书不想集中注意力听第2次了。 之前有感觉自己可以跑了的样子，今天试了下，感觉跑起来贼变扭，应该是久了没有运动还是什么的。 感觉自己还是不愿意承担责任的感觉，不是自己的东西，完全游离于责任之外，融入不了团体呢。 今天依旧觉得自己是一个变态，是一个废物，怕治疗好自己呢，但是又期望治疗好自己呢。   2021-08-08 22 实时证明不是每天都能有反思或者思考的，比如说周末，我躺了两天。  除了证明每天腰下面垫一个枕头躺一会走路不会听到骨头响，还有就是依靠在床头玩手机脖子疼，喉结压着痛以外，好像莫得任何收获。    </description>
     </item>
     
     <item>
