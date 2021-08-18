@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>阿里相关 on 个人主页</title>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%98%BF%E9%87%8C%E7%9B%B8%E5%85%B3/</link>
+    <description>Recent content in 阿里相关 on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright>
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%98%BF%E9%87%8C%E7%9B%B8%E5%85%B3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>日常搬砖模板</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/ali/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/ali/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E6%A8%A1%E6%9D%BF/</guid>
+      <description>》 顺便推一下博客主页
+前言 结束 </description>
+    </item>
+    
+    <item>
+      <title>手抄一手阿里播放器中手势分发</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/ali/%E6%89%8B%E6%8A%84%E4%B8%80%E6%89%8B%E9%98%BF%E9%87%8C%E6%92%AD%E6%94%BE%E5%99%A8%E4%B8%AD%E6%89%8B%E5%8A%BF%E5%88%86%E5%8F%91/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/ali/%E6%89%8B%E6%8A%84%E4%B8%80%E6%89%8B%E9%98%BF%E9%87%8C%E6%92%AD%E6%94%BE%E5%99%A8%E4%B8%AD%E6%89%8B%E5%8A%BF%E5%88%86%E5%8F%91/</guid>
+      <description>》 顺便推一下博客主页
+前言 阿里云点播服务文档 阿里云点播demo下载 正文 结束 </description>
+    </item>
+    
+    <item>
+      <title>阿里云Android播放器控制层代码分层解析</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/ali/%E9%98%BF%E9%87%8C%E4%BA%91android%E6%92%AD%E6%94%BE%E5%99%A8%E4%BB%A3%E7%A0%81%E5%88%86%E5%B1%82%E8%A7%A3%E6%9E%90/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/ali/%E9%98%BF%E9%87%8C%E4%BA%91android%E6%92%AD%E6%94%BE%E5%99%A8%E4%BB%A3%E7%A0%81%E5%88%86%E5%B1%82%E8%A7%A3%E6%9E%90/</guid>
+      <description>》 顺便推一下博客主页
+前言  虽然搬砖多年，代码复制了很多。然后尝试去理解别人代码，但是整理相关代码设计逻辑还是大姑娘上花轿头一回。
+这次项目基于AndroidX。所以和Android 有一些区别，在拖代码的过程中，就存在需要理解代码了。
+阿里云点播服务文档 阿里云点播demo下载  正文 当前笔记基于阿里云点播Android 播放器 AliyunVodPlayerView 。
+分层  基于RelativeLayout 添加view。按照功能继续view的分解。
+  控制层，用于实现播放器控制效果，包含，全屏，小屏，播放，暂停，进度条，拖拽条，截屏，标题，返回键，倍速，分辨率等功能文本显示。 手势层，用于进行手势分发，比如切换明暗度，声音，进度条拖拽，点击，双击。 视频画面层。这个就是视频播放画面，单纯的视频播放。 引导层，用于第一次操作时候的引导。 播放器封面 提示层，比如网络提示，播放完成，播放错误等等。这个提示层 内部又进行了分发封装。 播放内核内核+视频画布层。  监听回调  这个比较多，大体就是在分层上进行处理。比如说返回事件，在控制层，提示层中都有，而且提示层中，包含错误，播放完成，网络提示，这些都有占位view，所以，实现方式大概就是。 错误层的返回事件回调到提示层的监听中，提示层的监听是单独的接口，播放器实现提示的监听接口，去调用播放器中的返回事件。
+整体思路就是，每一层都有自己的实现，自己的实现去调用上一层的实现。最终同一个功能会归集到一个实现方法上面。
+ view的添加  添加view 就很简单，初始化的时候直接添加到view中
+ 1 private void addSubView(View view) { 2 LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT); 3 //添加到布局中 4 addView(view, params); 5 } 基础控件的隐藏  这个主要是控制层的几秒后自动隐藏，这个内部实现handler，然后自己调用 隐藏方法。
+ 结束 </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -75,6 +75,9 @@
   <div class="nav_parent">
     <a href="http://lalalaxiaowifi.gitee.io/pictures/todo/" class="nav_item">TODO </a>
   </div>
+  <div class="nav_parent">
+    <a href="http://lalalaxiaowifi.gitee.io/pictures/reflection_and_perception/" class="nav_item">碎碎念呢 </a>
+  </div>
       
 <div class='follow'>站外主页:[
 
@@ -108,6 +111,33 @@
 <div class="grid-inverse wrap content">
 
   <ul class="posts" id="posts">
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dgg%E5%85%B3%E4%BA%8E%E5%90%84%E4%B8%AAmodel%E7%8B%AC%E7%AB%8B%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%E8%AE%BE%E8%AE%A1/">DGG关于各个model独立初始化内容设计</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">》 顺便推一下博客主页
+前言  一个项目通常会存在多个module，不同的model可能出现不同的初始化内容，为了防止各个模块相互引用或者不同内容初始化糅合到一起不便于后期维护。所以大佬提供了一种基于Java接口的不同module的初始化设计。
+ 参考内容:
+ IModuleInit 提供接口，其他模块初始化内容实现当前接口 (或许不需要单独初始化的内容可能不需要实现这个调调吧) ModuleLifecycleReflexs 静态类，用于存放其他模块初始化内容的实现类地址。 BaseModuleLifecycleConfig 基于ModuleLifecycleReflexs提供实现类生成 IModuleInit对象，初始化内容。 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dgg%E5%85%B3%E4%BA%8E%E5%90%84%E4%B8%AAmodel%E7%8B%AC%E7%AB%8B%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%E8%AE%BE%E8%AE%A1/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
       <li class="post_item">
   <div class="excerpt">
     <div class="excerpt_header">
@@ -623,6 +653,9 @@ loading层控制 采用拦截器机制。
     <h2 class="mt-4">精选文章</h2>
     <ul>
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%8A%84%E4%B8%80%E6%89%8B%E5%86%B7%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E5%91%A2/" class="nav-link">Android抄一手冷启动优化呢</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java9%E6%96%B0%E7%89%B9%E6%80%A7/" class="nav-link">java9新特性</a>
       </li>
       <li>
@@ -642,14 +675,14 @@ loading层控制 采用拦截器机制。
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" class="nav-link">Rxjava使用CompositeDisposable进行统一注销监听</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B6%E4%BB%96%E8%BF%90%E7%AE%97/" class="nav-link">Rxjava其他运算</a>
       </li>
     </ul>
     <h2 class="mt-4">最新文章</h2>
     <ul class="flex-column">
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%8A%84%E4%B8%80%E6%89%8B%E5%86%B7%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E5%91%A2/" class="nav-link">Android抄一手冷启动优化呢</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java9%E6%96%B0%E7%89%B9%E6%80%A7/" class="nav-link">java9新特性</a>
       </li>
       <li>
@@ -669,9 +702,6 @@ loading层控制 采用拦截器机制。
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" class="nav-link">Rxjava使用CompositeDisposable进行统一注销监听</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%85%B6%E4%BB%96%E8%BF%90%E7%AE%97/" class="nav-link">Rxjava其他运算</a>
       </li>
     </ul>
     <div>
@@ -682,23 +712,33 @@ loading层控制 采用拦截器机制。
           <span class="button_tally">46</span>
         </a>
         
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
+          ANDROID基础
+          <span class="button_tally">21</span>
+        </a>
+        
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/' class="post_tag button button_translucent">
           设计模式
           <span class="button_tally">12</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
-          ANDROID基础
-          <span class="button_tally">10</span>
-        </a>
-        
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%9D%82%E5%AD%A6/' class="post_tag button button_translucent">
           杂学
-          <span class="button_tally">4</span>
+          <span class="button_tally">3</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/flutter/' class="post_tag button button_translucent">
+          FLUTTER
+          <span class="button_tally">1</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/git/' class="post_tag button button_translucent">
           GIT
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/java%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
+          JAVA基础
           <span class="button_tally">1</span>
         </a>
         
@@ -720,7 +760,7 @@ loading层控制 采用拦截器机制。
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E9%A1%B6%E5%91%B1%E5%91%B1/' class="post_tag button button_translucent">
           顶呱呱
-          <span class="button_tally">19</span>
+          <span class="button_tally">20</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/mpaas/' class="post_tag button button_translucent">
@@ -740,16 +780,16 @@ loading层控制 采用拦截器机制。
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/fragment/' class="post_tag button button_translucent">
           FRAGMENT
-          <span class="button_tally">4</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E6%A8%A1%E6%9D%BF/' class="post_tag button button_translucent">
-          模板
           <span class="button_tally">3</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/java%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
           JAVA基础
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E6%A8%A1%E6%9D%BF/' class="post_tag button button_translucent">
+          模板
           <span class="button_tally">2</span>
         </a>
         
@@ -760,6 +800,11 @@ loading层控制 采用拦截器机制。
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/recycleview/' class="post_tag button button_translucent">
           RECYCLEVIEW
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/videoplayer/' class="post_tag button button_translucent">
+          VIDEOPLAYER
           <span class="button_tally">1</span>
         </a>
         
@@ -806,7 +851,7 @@ loading层控制 采用拦截器机制。
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/fragment/' class="post_tag button button_translucent">
           FRAGMENT
-          <span class="button_tally">3</span>
+          <span class="button_tally">4</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/hugo/' class="post_tag button button_translucent">
@@ -814,8 +859,8 @@ loading层控制 采用拦截器机制。
           <span class="button_tally">3</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%9D%BF/' class="post_tag button button_translucent">
-          模板
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%98%BF%E9%87%8C%E7%9B%B8%E5%85%B3/' class="post_tag button button_translucent">
+          阿里相关
           <span class="button_tally">3</span>
         </a>
         
@@ -839,9 +884,9 @@ loading层控制 采用拦截器机制。
           <span class="button_tally">2</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/chm/' class="post_tag button button_translucent">
-          CHM
-          <span class="button_tally">1</span>
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%9D%BF/' class="post_tag button button_translucent">
+          模板
+          <span class="button_tally">2</span>
         </a>
         
         
@@ -849,6 +894,10 @@ loading层控制 采用拦截器机制。
         <div class="post_tags_toggle button">所有标签</div>
         <div class="post_tags">
           <div class="tags_list">
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/adb/' class=" post_tag button button_translucent" data-position=1>ADB<span class="button_tally">1</span>
+            </a>
+            
             
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android/' class=" post_tag button button_translucent" data-position=19>ANDROID<span class="button_tally">19</span>
             </a>
@@ -866,7 +915,7 @@ loading层控制 采用拦截器机制。
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/fragment/' class=" post_tag button button_translucent" data-position=3>FRAGMENT<span class="button_tally">3</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/fragment/' class=" post_tag button button_translucent" data-position=4>FRAGMENT<span class="button_tally">4</span>
             </a>
             
             
@@ -934,6 +983,14 @@ loading层控制 采用拦截器机制。
             </a>
             
             
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/mmkv/' class=" post_tag button button_translucent" data-position=1>MMKV<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/mpaas/' class=" post_tag button button_translucent" data-position=1>MPAAS<span class="button_tally">1</span>
+            </a>
+            
+            
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/object/' class=" post_tag button button_translucent" data-position=1>OBJECT<span class="button_tally">1</span>
             </a>
             
@@ -959,6 +1016,10 @@ loading层控制 采用拦截器机制。
             
             
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sqlite/' class=" post_tag button button_translucent" data-position=8>SQLITE<span class="button_tally">8</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/toast/' class=" post_tag button button_translucent" data-position=1>TOAST<span class="button_tally">1</span>
             </a>
             
             
@@ -990,11 +1051,19 @@ loading层控制 采用拦截器机制。
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%9D%BF/' class=" post_tag button button_translucent" data-position=3>模板<span class="button_tally">3</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%9D%BF/' class=" post_tag button button_translucent" data-position=2>模板<span class="button_tally">2</span>
             </a>
             
             
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%A7%86%E9%A2%91/' class=" post_tag button button_translucent" data-position=1>视频<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/' class=" post_tag button button_translucent" data-position=1>问题汇总<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%98%BF%E9%87%8C%E7%9B%B8%E5%85%B3/' class=" post_tag button button_translucent" data-position=3>阿里相关<span class="button_tally">3</span>
             </a>
             
             

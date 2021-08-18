@@ -5,7 +5,21 @@
     <link>http://lalalaxiaowifi.gitee.io/pictures/series/%E9%A1%B6%E5%91%B1%E5%91%B1/</link>
     <description>Recent content in 顶呱呱 on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>Copyright © 2020-2099</copyright><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/series/%E9%A1%B6%E5%91%B1%E5%91%B1/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2020-2099</copyright>
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/series/%E9%A1%B6%E5%91%B1%E5%91%B1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DGG关于各个model独立初始化内容设计</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dgg%E5%85%B3%E4%BA%8E%E5%90%84%E4%B8%AAmodel%E7%8B%AC%E7%AB%8B%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dgg%E5%85%B3%E4%BA%8E%E5%90%84%E4%B8%AAmodel%E7%8B%AC%E7%AB%8B%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%E8%AE%BE%E8%AE%A1/</guid>
+      <description>》 顺便推一下博客主页
+前言  一个项目通常会存在多个module，不同的model可能出现不同的初始化内容，为了防止各个模块相互引用或者不同内容初始化糅合到一起不便于后期维护。所以大佬提供了一种基于Java接口的不同module的初始化设计。
+ 参考内容:
+ IModuleInit 提供接口，其他模块初始化内容实现当前接口 (或许不需要单独初始化的内容可能不需要实现这个调调吧) ModuleLifecycleReflexs 静态类，用于存放其他模块初始化内容的实现类地址。 BaseModuleLifecycleConfig 基于ModuleLifecycleReflexs提供实现类生成 IModuleInit对象，初始化内容。 ModuleLifecycleConfig 继承BaseModuleLifecycleConfig，便于初始化其他公共内容。  调用 ModuleLifecycleConfig.getInstance().initModuleAhead(this);
+已实现模块    实现 1 for (String moduleName : initModuleNames()) { 2 try { 3 Class&amp;lt;?&amp;gt; clazz = Class.forName(moduleName); 4 IModuleInit init = (IModuleInit) clazz.newInstance(); 5 init.onInitAhead(application); 6 } catch (ClassNotFoundException | InstantiationException 7 | IllegalAccessException e) { 8 e.printStackTrace(); 9 } 10 11 } 结束 </description>
+    </item>
+    
     <item>
       <title>Android相关代码模板</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1android%E7%9B%B8%E5%85%B3%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/</link>

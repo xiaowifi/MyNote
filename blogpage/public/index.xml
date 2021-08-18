@@ -6,7 +6,21 @@
     <description>Recent content on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android抄一手冷启动优化呢</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%8A%84%E4%B8%80%E6%89%8B%E5%86%B7%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E5%91%A2/</link>
+      <pubDate>Sun, 08 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%8A%84%E4%B8%80%E6%89%8B%E5%86%B7%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E5%91%A2/</guid>
+      <description>》 顺便推一下博客主页
+前言  Android 启动优化 还是蛮重要的呀，常见的耗时操作一般在于onCreat里面，或者设置界面的layout的时候，或者就是一些初始化SDK,一些IO操作。 现在应用市场开始检测 给予权限前是否有对应的初始化了，这个也促使了一部分启动优化的加速吧。
+ 参考资料：
+ 中国大学 MOOC Android 性能优化：冷启动优化总结 应用宝隐私审核规范  违规使用个人信息。重点整治APP、SDK未向用户告知且未经用户同意，私自使用个人信息，将用户个人信息用于其提供服务之外的目的，特别是私自向其他应用或服务器发送、共享用户个人信息的行为。    正文 app 启动优化大致可以分为下面几个方面。
+ 复杂界面view异步加载，androidx.asynclayoutinflater:asynclayoutinflater进行异步加载 xml 文件。 对于不需要一开始就初始化的内容，在需要的时候进行初始化。 能放到子线程中初始化的内容，尽量放到子线程中初始化。 开始严苛模式（StrictMode） 使用ConstraintLayout 减少布局渲染 IdleHandler 需要在当前线程中处理耗时任务，并且并不需要马上执行的话，可以使用IdleHandler这样该任务可以消息队列空闲时，被处理。 减少代码量。kotlin 可以减少代码量（这个感觉有点迷幻，code 代码过多启动也会变慢，那资源文件过多呢？） 减少JAVA 静态方法和静态变量？这个感觉是一种思路。 减少xml SharedPreferences 这个调调一开始就会加载当前xml 所以内容。 图片加载采用压缩图片，不要加载原图，网络图片也是如此，第3方文件服务器有压缩裁剪服务的。   主要还是前面几条，后面几条感觉和启动优化没有啥关系。
+ 如何获取应用方法启动耗时？  常见的问题就是在方法前后打log。 CPU Profile 或者 Debug.startMethodTracing 进行监控并导出 trace 文件进行分析。不管哪种方式，采集堆栈信息都有两种模式：采样模式和追踪模式。追踪模式会一直抓取数据，对设备性能要求较高。 利用Transform + ASM字节码修改技术动态插入代码 Hook Instrumentation Hook Handler或者Looper的Printer  结束 </description>
+    </item>
+    
     <item>
       <title>java9新特性</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/java9%E6%96%B0%E7%89%B9%E6%80%A7/</link>
@@ -562,6 +576,32 @@ Chronometer
     </item>
     
     <item>
+      <title>Android行高和文本显示于设计冲突</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E8%A1%8C%E9%AB%98%E5%92%8C%E6%96%87%E6%9C%AC%E6%98%BE%E7%A4%BA%E4%BA%8E%E8%AE%BE%E8%AE%A1%E5%86%B2%E7%AA%81/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E8%A1%8C%E9%AB%98%E5%92%8C%E6%96%87%E6%9C%AC%E6%98%BE%E7%A4%BA%E4%BA%8E%E8%AE%BE%E8%AE%A1%E5%86%B2%E7%AA%81/</guid>
+      <description>》 顺便推一下博客主页
+前言  话说，Android textview 应该算是最常用的控件了。但是现在的设计文本大多数都是内容居中对齐。 但是 textview 却搞事情的有一个内间距。
+ 正文 1 &amp;lt;item name=&amp;#34;android:includeFontPadding&amp;#34;&amp;gt;false&amp;lt;/item&amp;gt; 将上面代码放到 全局的style中就可以达到效果了。 然后是行距，这个就需要手动算了。 android:lineSpacingExtra=&amp;quot;3dp&amp;quot;
+代码可以设置行高的，所以行间距 也可以不自己算了。
+结束 </description>
+    </item>
+    
+    <item>
+      <title>DGG关于各个model独立初始化内容设计</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dgg%E5%85%B3%E4%BA%8E%E5%90%84%E4%B8%AAmodel%E7%8B%AC%E7%AB%8B%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dgg%E5%85%B3%E4%BA%8E%E5%90%84%E4%B8%AAmodel%E7%8B%AC%E7%AB%8B%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%E8%AE%BE%E8%AE%A1/</guid>
+      <description>》 顺便推一下博客主页
+前言  一个项目通常会存在多个module，不同的model可能出现不同的初始化内容，为了防止各个模块相互引用或者不同内容初始化糅合到一起不便于后期维护。所以大佬提供了一种基于Java接口的不同module的初始化设计。
+ 参考内容:
+ IModuleInit 提供接口，其他模块初始化内容实现当前接口 (或许不需要单独初始化的内容可能不需要实现这个调调吧) ModuleLifecycleReflexs 静态类，用于存放其他模块初始化内容的实现类地址。 BaseModuleLifecycleConfig 基于ModuleLifecycleReflexs提供实现类生成 IModuleInit对象，初始化内容。 ModuleLifecycleConfig 继承BaseModuleLifecycleConfig，便于初始化其他公共内容。  调用 ModuleLifecycleConfig.getInstance().initModuleAhead(this);
+已实现模块    实现 1 for (String moduleName : initModuleNames()) { 2 try { 3 Class&amp;lt;?&amp;gt; clazz = Class.forName(moduleName); 4 IModuleInit init = (IModuleInit) clazz.newInstance(); 5 init.onInitAhead(application); 6 } catch (ClassNotFoundException | InstantiationException 7 | IllegalAccessException e) { 8 e.printStackTrace(); 9 } 10 11 } 结束 </description>
+    </item>
+    
+    <item>
       <title>hexo&#43;Gitee pages 搭建个人主页</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
@@ -792,14 +832,13 @@ picgo 如何查看log 查看log 就很简单了，因为mac 通知无法复制�
     </item>
     
     <item>
-      <title>噢，先立点FLAG</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/todo/</link>
+      <title>日常搬砖模板</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/ali/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E6%A8%A1%E6%9D%BF/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/todo/</guid>
-      <description>TODO  噢，先立flag再说。
- android  Android intent 保存参数与fragment 子fragment 互用。 fragment 无限套娃，是否可以在activity层判断fragment是否包含显示？ Android 加锁 通过手写array 备份activity 批量移除activity与通过intent 设置tag移除activity的区别。 探讨通过加锁机制，统一loading层延时关闭view。 摸鱼 dialogFragment dissmiss 之后通过fragmentmanger 还能获取到吗？ 通过加锁机制对轮转控件进行加强。   2021-07-10
-  基于计时器Chronometer 实现倒计时 基于spinner 实现下拉dialog 画廊视图Gallery activity 属性 intent broadcastReceiver 键盘事件 手势 toast与界面绑定与toast单例效果。 notification alarmManager 图像，paint,canvas,bitmap,bitmapFactory. 绘制2D图像 动画 openGL 3D 图形 soundPool 播放音轨。 文件流 content Provider 线程与消息处理 service wifi              java  java 各种设计模式 JAVA 新特性  SQL  android room Android room+Rxjava  杂学 python python 爬虫教学地址</description>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/ali/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E6%A8%A1%E6%9D%BF/</guid>
+      <description>》 顺便推一下博客主页
+前言 结束 </description>
     </item>
     
     <item>
@@ -915,6 +954,27 @@ sqlite 查看工具 之前找到了一篇博客对sqlite 表查看写得很详�
     </item>
     
     <item>
+      <title></title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/android%E5%9F%BA%E7%A1%80%E5%91%A2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/android%E5%9F%BA%E7%A1%80%E5%91%A2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title> 加载反馈页管理工具</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/%E5%8A%A0%E8%BD%BD%E5%8F%8D%E9%A6%88%E9%A1%B5%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/%E5%8A%A0%E8%BD%BD%E5%8F%8D%E9%A6%88%E9%A1%B5%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</guid>
+      <description>》 顺便推一下博客主页
+前言 参考资料.
+ GitHub LoadSir DggBaseActivity DggLazyFragment  正文  LoadSir是一个高效易用，低碳环保，扩展性良好的加载反馈页管理框架，在加载网络或其他数据时候，根据需求切换状态页面， 可添加自定义状态页面，如加载中，加载失败，无数据，网络超时，如占位图，登录失效等常用页面。可配合网络加载框架，结合返回 状态码，错误码，数据进行状态页自动切换，封装使用效果更佳。
+ 初始化 结束 </description>
+    </item>
+    
+    <item>
       <title>Alibaba旗下android中RecycleView的manger笔记</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/vlayout/alibaba%E6%97%97%E4%B8%8Bandroid%E4%B8%ADrecycleview%E7%9A%84manger%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -924,6 +984,27 @@ sqlite 查看工具 之前找到了一篇博客对sqlite 表查看写得很详�
 前言  话说，android 中recycleView 是一个好东西。阿里巴巴的vlayout 其实了解了很久了，只是没有时间上手写笔记。像首页的聚合界面呀。tab相关的呀都可以用这个实现，当然了他只是提供LayoutManager。 但是也不影响。反正都是搬砖嘛。
 阿里巴巴 android vlayout GitHub地址
  正文 结束 </description>
+    </item>
+    
+    <item>
+      <title>android adb常用功能汇总</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-adb%E5%B8%B8%E7%94%A8%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-adb%E5%B8%B8%E7%94%A8%E6%B1%87%E6%80%BB/</guid>
+      <description>正文 adb 安装apk adb install D:\androidProject\DGGChips\app\d_environment\release\d_environment2021061001.apk
+adb app 启动时长 adb shell am start -W -n com.chips.cpscustomer/com.chips.module_main.ui.start.StartPageActivity</description>
+    </item>
+    
+    <item>
+      <title>androidX下的fragment懒加载</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-x-%E4%B8%8B%E7%9A%84fragment-%E6%87%92%E5%8A%A0%E8%BD%BD-/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-x-%E4%B8%8B%E7%9A%84fragment-%E6%87%92%E5%8A%A0%E8%BD%BD-/</guid>
+      <description>前言 fragment懒加载到处都可以搜索到。2021年7月26 在调试本地fragment懒加载的时候，发现未达到效果，搜索懒加载相关代码的时候，偶然发现android X下的懒加载写法。 故记录一波。
+参考资料  Google 在 Androidx 在 FragmentTransaction 中增加了 setMaxLifecycle 方法来控制 Fragment 所能调用的最大的生命周期函数。 在 FragmentPagerAdapter 与 FragmentStatePagerAdapter 新增了含有 behavior 字段的构造函数。如果 behavior 的值为 BEHAVIOR_SET_USER_VISIBLE_HINT，那么当 Fragment 对用户的可见状态发生改变时，setUserVisibleHint 方法会被调用。 如果 behavior 的值为 BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT ，那么当前选中的 Fragment 在 Lifecycle.State#RESUMED 状态 ，其他不可见的 Fragment 会被限制在 Lifecycle.State#STARTED 状态。 参考内容:android X下的fragment 懒加载 ViewPager2 本身就支持对实际可见的 Fragment 才调用 onResume 方法。(所以要用viewpager 2 而不是viewpager,好的，马上改代码)  正文 所以说，基于上面的参考资料。可以通过 setMaxLifecycle在 onResume上面做懒加载？
+结束 </description>
     </item>
     
     <item>
@@ -964,6 +1045,28 @@ rxbinding 使用  因为这个时间可能是需要固定的，不想每个都�
     </item>
     
     <item>
+      <title>android中接口的使用</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E4%B8%AD%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E4%B8%AD%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>》 顺便推一下博客主页
+前言  java 接口用的蛮多的。甚至是基础内容。但是工具的使用的好坏还是看人。
+ 结束 </description>
+    </item>
+    
+    <item>
+      <title>android基于MMKV整一个数据缓存</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E5%9F%BA%E4%BA%8Emmkv%E6%95%B4%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E5%9F%BA%E4%BA%8Emmkv%E6%95%B4%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98/</guid>
+      <description>》 顺便推一下博客主页
+前言  这是一个巨骚的想法，从某些意义上讲，是可以使用的，但是这个主要是作为一种骚想法去实现。 mmkv介绍上说的是 比SharePreferences 性能更好，SharePreferences支持多xml 存储，他也支持。SharePreferences初始化后就存储到内存中了，他不会也是这个样子吧，他本身就是用来替换这个的。 所以不建议使用 mmkv 做接口数据缓存。但是数据库又不想写，骚操作嘛，那就无所谓了。 自从我知道 Java 可以通过某些手段获取到其实现子类之后，骚想法是一个接着一个，但是这个调调尤为突出。 但是真的不建议 这个用来存储接口数据，嗯，真的不建议。
+ 结束 </description>
+    </item>
+    
+    <item>
       <title>android滚动事件相关-1</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%BB%9A%E5%8A%A8%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%E7%9B%B8%E5%85%B31/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -989,6 +1092,18 @@ rxbinding 使用  因为这个时间可能是需要固定的，不想每个都�
       <description>正文  基于DGG Android base 生成，activity,lazyFragment,fragment等等。 https://freemarker.apache.org/docs/index.html
  文件  MVVM(DGG)Activity activity模板 MVVM(DGG)Fragment fragment模板，提供lazyfragment模板和fragment模板  Activity生成内容  基于mvvm 的activity viewModel viewRequest layout(databinding 外部层)  fragment相关生成类型  可选lazyFragment和fragment viewModel viewRequest layout(databinding 外部层)  其他  生成的文件中，提供时间和作者注释。现在作者默认为“Android大佬” 命名采用驼峰命名法，资源文件自动转为下划线命名。  存放  mac /Applications/IntelliJ\ IDEA.app/Contents/plugins/android/lib/templates/activities 这个目录是存放activity模板 mac /Applications/IntelliJ\ IDEA.app/Contents/plugins/android/lib/templates/fragments 这个目录是存放fragment模板 Windows 类似。应用安装路径/plugins/android/lib/templates/activities windows 下Android studio 可能没有这个目录，但是IDEA 有这个目录。  打包  暂时不提供打包为插件内容，使用需要手动放置到对应目录。放置后需要重启编辑器。编辑器更新卸载重装后需要手动放置。 Android studio 4.1以上版本 不支持这种方式导入模板。 Android studio 4.1及其以上版本 需要采用 https://github.com/xiaowifi/dgg_android_code_template 这个项目的主模板创建。并且生成jar使用。
  联系 yangfan6@dgg.</description>
+    </item>
+    
+    <item>
+      <title>Android自定义Toast</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E8%87%AA%E5%AE%9A%E4%B9%89toast/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E8%87%AA%E5%AE%9A%E4%B9%89toast/</guid>
+      <description>》 顺便推一下博客主页
+前言  话说toast 这个调调 在Android上使用蛮频繁的。通常就是通过自己的自定义，如果不自定义的话，可能会提一个 toast重复提示的bug，虽然这个可以通过其他逻辑控制与限制。 写笔记嘛，那就都写。
+ 正文 toast 单例  toast 自定义1，单例。直接抄一个阿里的toast 单例。
+ 1 2public class ToastUtils { 3 4 private static Toast mToast; 5 private static Field mFieldTN; 6 private static Field mFieldTNHandler; 7 8 static { 9 if (Build.VERSION.SDK_INT == 25) { 10 try { 11 mFieldTN = Toast.class.getDeclaredField(&amp;#34;mTN&amp;#34;); 12 mFieldTN.setAccessible(true); 13 mFieldTNHandler = mFieldTN.getType().getDeclaredField(&amp;#34;mHandler&amp;#34;); 14 mFieldTNHandler.setAccessible(true); 15 } catch (Exception e) { 16 e.</description>
     </item>
     
     <item>
@@ -1046,13 +1161,23 @@ rxbinding 使用  因为这个时间可能是需要固定的，不想每个都�
     </item>
     
     <item>
-      <title>fragment嵌套生命周期走查</title>
+      <title>flutter常见问题汇总</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/flutter/flutter%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%BF%AE%E5%A4%8D%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/flutter/flutter%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%BF%AE%E5%A4%8D%E6%B1%87%E6%80%BB/</guid>
+      <description>》 顺便推一下博客主页
+前言  当前问题用于记录flutter 常见问题汇总
+ 正文 Waiting for another flutter command to release the startup lock... 关闭Android Studio 打开flutter安装目录/bin/cache 删除lockfile文件 此时可在命令行再执行flutter相关命令，完美解决</description>
+    </item>
+    
+    <item>
+      <title>fragment嵌套生命周期走查（懒加载有问题）</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/fragment%E5%B5%8C%E5%A5%97%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%B5%B0%E6%9F%A5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/fragment%E5%B5%8C%E5%A5%97%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%B5%B0%E6%9F%A5/</guid>
-      <description>》 顺便推一下博客主页
-前言  话说，搬砖过程中fragment+viewpager相当常见。按照道理讲不应该出现这个bug的。主要是太久没有写代码了。emmmmm? 变菜了，能怪我？ 还有一个问题。感觉viewpager+fragment 导致的生命周期就很奇怪，最近有大佬提供的懒加载fragment，so。
+      <description>前言  话说，搬砖过程中fragment+viewpager相当常见。按照道理讲不应该出现这个bug的。主要是太久没有写代码了。emmmmm? 变菜了，能怪我？ 还有一个问题。感觉viewpager+fragment 导致的生命周期就很奇怪，最近有大佬提供的懒加载fragment，so。
  正文  话说，viewpager主要是通过adapter设置预加载数量。
   setOffscreenPageLimit()   然后是通过adapter设置相关的东西
   FragmentPagerAdapter   我们知道viewpager 默认加载3个，就是当前的和左右一边一个。其他的item都会默认销毁。所以我们的懒加载fragment的实现就尤为重要了。
@@ -1109,6 +1234,19 @@ rxbinding 使用  因为这个时间可能是需要固定的，不想每个都�
  正文  之前就整过一个用Java写法写kotlin的项目。感觉嘛，就是没有用到kotlin的优势。虽然现在Java版本感觉挺优雅的(就是很舒服)。但是现在Android中jetpack demo竟然是kotlin写的，那就需要懂kotlin写法了，要不然学习难度会加大的啊。 那么直接开整。其实基础语法都差不多，就整不同点。直接上菜鸟教程。https://www.runoob.com/kotlin/kotlin-tutorial.html
  返回值类型 kotlin是写在方法后的。如果没有返回值就可以不写。
 1fun sum(a: Int, b: Int): Int { // Int 参数，返回值 Int 2 return a + b 3} 可变长度传参 vararg 1fun vars(vararg v:Int){ 2 for(vt in v){ 3 print(vt) 4 } 5} 结合lambda 1fun main(args: Array&amp;lt;String&amp;gt;) { 2 val sumLambda: (Int, Int) -&amp;gt; Int = {x,y -&amp;gt; x+y} 3 println(sumLambda(1,2)) // 输出 3 4} </description>
+    </item>
+    
+    <item>
+      <title>Mpaas 相关文档汇总</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/mpaas%E7%9B%B8%E5%85%B3%E6%96%87%E6%A1%A3%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/mpaas%E7%9B%B8%E5%85%B3%E6%96%87%E6%A1%A3%E6%B1%87%E6%80%BB/</guid>
+      <description>》 顺便推一下博客主页
+前言  mpaas 主页  正文 工作空间相关  开始配置mpaas 的时候，会从阿里后台下载一个config文件。 android 需要提供正式环境的apk，然后下载一个config 文件。 内容大概都是这个样子的。因为有多个工作空间，所以这个调调，就有多个，当然字段是一样的，就是值不一样。下面内容被删除了部分信息，保留字段了。无法直接使用。
+ 1{ 2	&amp;#34;appId&amp;#34;:&amp;#34;&amp;#34;, 3	&amp;#34;appKey&amp;#34;:&amp;#34;&amp;#34;, 4	&amp;#34;base64Code&amp;#34;:&amp;#34;/9j/4/2/2/wAARCAADAAMDASIAAhEBAxEB/8/8+Tl5ufo6erx8vP09fb3+/8/8+Pn6/9/++iQTI1EMRmCMv9zR2PQM6L/e+DtobnevS3PdGJ0EIA/K394aH6P7paEMAczXk4VzYejvyNQ/yFgWFgUDTzaYzN5i802xmwmBeP7tbaRuGkCFjLwPNXHs7mlqnT4Bp5jQq5digff98FkuWuWNhX/VkdKKy2wtZqzCeumKM3ilNUKqhX576kOI3xem3VgW4yR8b7DnyhjuTq6zrC/gTeE2r29cCiJ0uREAC77pFw8C4uqt3OM7xlA3anZzwNvUNiGKWIT41UAJJmR8FMyGKT914Gl2e7yRWNPAKwh5mXJHTDO9uPBiMq1FsIntwROaWkOO8QfdKh0NabzMgWTkJjbY5uOkYfsuEUeCULcc+TsnkB3cBxDWkdu6OBquTcWkL3PhvXF6DPkKW7dI/sQjbSdVgqdcRvI/kGi69TUvVhPZuidHaAKJUfHzWnN7FP5C6RUgEIUG8KQb7FiBq557uvSoa5qAK82xwXlYbmzeJWyS1gxmJZ3uUhafYTDmZCehwhP4r/cSSW+1EM+SYYPvZiJ0+NEa627Ci7Xqh/U/wAAwqAYBgAAAAA=&amp;#34;, 5	&amp;#34;packageName&amp;#34;:&amp;#34;&amp;#34;, 6	&amp;#34;rootPath&amp;#34;:&amp;#34;mpaas/android/ONEX6D6D335231650-release&amp;#34;, 7	&amp;#34;workspaceId&amp;#34;:&amp;#34;release&amp;#34;, 8	&amp;#34;syncport&amp;#34;:&amp;#34;443&amp;#34;, 9	&amp;#34;syncserver&amp;#34;:&amp;#34;mpaas-mss.aliyuncs.com&amp;#34;, 10	&amp;#34;logGW&amp;#34;:&amp;#34;https://mpaas-mas-loggw.aliyuncs.com&amp;#34;, 11	&amp;#34;pushPort&amp;#34;:&amp;#34;443&amp;#34;, 12	&amp;#34;pushGW&amp;#34;:&amp;#34;mpaas-mps.aliyuncs.com&amp;#34;, 13	&amp;#34;mpaasapi&amp;#34;:&amp;#34;https://cn-hangzhou-component-gw.cloud.alipay.com/mgw.htm&amp;#34;, 14	&amp;#34;rpcGW&amp;#34;:&amp;#34;https://mpaas-mgs.aliyuncs.com/mgw.htm&amp;#34;, 15	&amp;#34;mrtcserver&amp;#34;:&amp;#34;wss://cn-hangzhou-mrtc.cloud.alipay.com/ws&amp;#34;, 16	&amp;#34;mpaasConfigVersion&amp;#34;:&amp;#34;V_1.0&amp;#34;, 17	&amp;#34;mpaasConfigEnv&amp;#34;:&amp;#34;ONEX_CLOUD&amp;#34;, 18	&amp;#34;mpaasConfigPluginExpired&amp;#34;:&amp;#34;&amp;#34;, 19	&amp;#34;mpaasConfigLicense&amp;#34;:&amp;#34;+/QiL/xP2y4+IzktpDZdmF9+/2+nX3jm8WHRUyY+fu8ADt1/++FjnwvB81rXZ0+/+A==&amp;#34; 20} 既然key 都是一样的，所谓的工作空间就有不同的值去约束定义。通常来讲，手动切换这个config文件之后，通过mpaas 插件重新导入之后是可以运行的。 但是万一出现了问题了呢？ 这个就涉及到打log联调等等了。
+不同工作空间值的差异 相同:
+ appId appKey packageName syncport syncserver logGW pushPort pushGW mpaasapi rpcGW mrtcserver mpaasConfigVersion mpaasConfigEnv mpaasConfigPluginExpired  差异:</description>
     </item>
     
     <item>
@@ -1401,6 +1539,41 @@ iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 
     </item>
     
     <item>
+      <title>噢，先立点FLAG</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/todo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/todo/</guid>
+      <description>TODO  噢，先立flag再说。
+ android  Android intent 保存参数与fragment 子fragment 互用。 fragment 无限套娃，是否可以在activity层判断fragment是否包含显示？ Android 加锁 通过手写array 备份activity 批量移除activity与通过intent 设置tag移除activity的区别。 探讨通过加锁机制，统一loading层延时关闭view。 摸鱼 dialogFragment dissmiss 之后通过fragmentmanger 还能获取到吗？ 通过加锁机制对轮转控件进行加强。   2021-07-10
+  基于计时器Chronometer 实现倒计时 基于spinner 实现下拉dialog 画廊视图Gallery activity 属性 intent broadcastReceiver 键盘事件 手势 toast与界面绑定与toast单例效果。 notification alarmManager 图像，paint,canvas,bitmap,bitmapFactory. 绘制2D图像 动画 openGL 3D 图形 soundPool 播放音轨。 文件流 content Provider 线程与消息处理 service wifi              java  java 各种设计模式 JAVA 新特性  SQL  android room Android room+Rxjava  杂学 python python 爬虫教学地址</description>
+    </item>
+    
+    <item>
+      <title>基于各种播放器的一些基础</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/videoplayer/%E5%9F%BA%E4%BA%8E%E5%90%84%E7%A7%8D%E6%92%AD%E6%94%BE%E5%99%A8%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/videoplayer/%E5%9F%BA%E4%BA%8E%E5%90%84%E7%A7%8D%E6%92%AD%E6%94%BE%E5%99%A8%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E7%A1%80/</guid>
+      <description>》 顺便推一下博客主页
+前言  不知不觉搬砖多年了，却还是在搬砖的路上，其实蛮累的，不知道路在哪里，只是知道每天能学习一点就是进步。主要还是人格问题。需要慢慢的从自闭中走出来。身体也需要慢慢的变好，都20多岁了。 话说，播放器相关的写过蛮多的控制层的，但是总结的很少，所以才有了写笔记的想法。虽然身体变好了，但是我可能需要用更多的脑力来计算其他的，而不是单纯的代码。
+ 正文 全局单播放器思考  这个业务逻辑还是蛮多的。比如横竖屏幕的切换，比如点击播放的列表播放器，比如点击播放的列表播放器全屏。 这个为了保证播放进度和避免重复缓存，一般情况下就用通一个mediaPlayer，至于画布和控制层，都可以重新加载，但是画布的加载是异步的，所以这个还是看写法。 写得简单点基本上就是把画布控制层和mediaPlayer封到一个view里面。对当前view 进行唯一处理，通过addView 和removeView 去实现。 因为一个view只会出现一个父类的原因，所以添加前需要把view从父类中移除。
+ 将view 从父类中移除。 1 public void removePlayerParent() { 2 if(null ==playerView){ 3 return; 4 } 5 ViewParent parent = playerView.getParent(); 6 if (parent != null) { 7 RelativeLayout frameLayout = (RelativeLayout) parent; 8 frameLayout.removeView(playerView); 9 playerView.onStop(); 10 playerView.reset(); 11 } 12 } ViewParent 这个对象很骚，因为只有viewGroup 实现了这个接口，而removeView也是相当viewGroup 实现的。所以需要对象转换。 为了防止移除的时候绘制界面，所以便捷的处理方式是暂停播放。当然也可以不暂停播放，看需求。比如切换列表播放item的时候，就需要暂停，横屏切换到竖屏的时候就不需要暂停。
+全屏逻辑  既然我们可以直接将view的父类移除，所以添加逻辑实现全屏是可行的。全屏就存在两个设计，1个是添加到一个dialog中，dialog设置全屏和屏幕适配，返回键等等，另外一种逻辑就是直接添加到activity的根布局中。 按照逻辑讲，应该使用dialogFragment去实现全屏。 但是无论如何都需要旋转屏幕。所以屏幕方法保持不变是可以的，但是旋转屏幕可以通过旋转画布实现和旋转view替代，这个可以减少一些设置导致生命周期错乱问题。虽然都可以逻辑控制，但是这个调调，很容易出现逻辑控制缺省的情况。
+ 添加到activity的根布局中   结束 </description>
+    </item>
+    
+    <item>
+      <title>基于现有网络框架扩展网络请求防止重复工具类</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/%E5%9F%BA%E4%BA%8E%E7%8E%B0%E6%9C%89%E7%BD%91%E7%BB%9C%E6%A1%86%E6%9E%B6%E6%89%A9%E5%B1%95%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E9%98%B2%E6%AD%A2%E9%87%8D%E5%A4%8D%E5%B7%A5%E5%85%B7%E7%B1%BB/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/%E5%9F%BA%E4%BA%8E%E7%8E%B0%E6%9C%89%E7%BD%91%E7%BB%9C%E6%A1%86%E6%9E%B6%E6%89%A9%E5%B1%95%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E9%98%B2%E6%AD%A2%E9%87%8D%E5%A4%8D%E5%B7%A5%E5%85%B7%E7%B1%BB/</guid>
+      <description>》 顺便推一下博客主页
+前言 正文 Java 3大器 过滤器 监听器 拦截器 结束 </description>
+    </item>
+    
+    <item>
       <title>基于阿里系列的路由工具ARouter</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E5%9F%BA%E4%BA%8E%E9%98%BF%E9%87%8C%E7%B3%BB%E7%9A%84%E8%B7%AF%E7%94%B1%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1447,6 +1620,16 @@ iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 
  建造者模式  建造者模式是指，将一个复杂对象的构造与他的表示分离。使同样的够着过程可以创建不同的表示。 Android 很多就实现了建造者模式。比如弹窗。
   产品角色，他包含多个组成部件的复杂对象，由具体建造者来创建其他各个零部件。 抽象建造者builder。包含创建产品各个子部件的抽象方法的接口，通常还包含一个返回复杂产品的方法。 具体建造者，实现builder接口，完成复杂产品的各个部件的具体创建方法。 指挥者director，他调用建造者对象中的部件构造与装配方法完成复杂对象的创建，在指挥者中不涉及具体产品。  应用场景  建造者模式唯一区别于工厂模式的是针对复杂对象的创建，如果是简单对象，通常使用工厂模式创建，如果是创建复杂对象，就可以考虑使用建造者模式。
   相同的方法，不同的执行顺序，产生不同的结果。 多个部件或者零件，都可以装配到一个对象中，但是产生的结果又不相同。 产品类非常复杂，或者产生类中的不同的调用顺序产生不同的作用。 初始化一个对象特别复杂，参数多，而且很多参数都具有默认值。  建造者模式和工厂模式的区别  建造者模式更加注重方法的调用顺序，工厂模式更加注重对象的创建。 创建对象的力度不同，建造者模式创建复杂对象，由各个复杂部件组成，工厂模式创建出来的对象都是一样的。 关注点不一样，工厂模式只需要创建对象，建造者模式需要创建对象，还要知道部件。 建造者模式根据建造过程顺序不一样，生成的对象部件也不一样。 如果建造者创建的产品类只有一个，只需要一个具体的建造者，可以省略到抽象建造者，甚至可以省略调指挥者。  </description>
+    </item>
+    
+    <item>
+      <title>手抄一手阿里播放器中手势分发</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/ali/%E6%89%8B%E6%8A%84%E4%B8%80%E6%89%8B%E9%98%BF%E9%87%8C%E6%92%AD%E6%94%BE%E5%99%A8%E4%B8%AD%E6%89%8B%E5%8A%BF%E5%88%86%E5%8F%91/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/ali/%E6%89%8B%E6%8A%84%E4%B8%80%E6%89%8B%E9%98%BF%E9%87%8C%E6%92%AD%E6%94%BE%E5%99%A8%E4%B8%AD%E6%89%8B%E5%8A%BF%E5%88%86%E5%8F%91/</guid>
+      <description>》 顺便推一下博客主页
+前言 阿里云点播服务文档 阿里云点播demo下载 正文 结束 </description>
     </item>
     
     <item>
@@ -1562,6 +1745,16 @@ loading层控制 采用拦截器机制。
     </item>
     
     <item>
+      <title>每天记录一点点碎碎念呢</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/reflection_and_perception/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/reflection_and_perception/</guid>
+      <description> 2021-08-06 打算记录下每天的碎碎念呢，有的是想法，有的是其他的。对自己还是要有B数的，没有那么的强，但愿这个可以整得久一点吧。
+ 开始  2021-08-06 23 突然想到了书上所说的反省，所以新增这一栏呢  今天感觉有点懒散，今天去打疫苗的路上，发现自己把背打直了是听不到骨骼响的，但是膝盖疼，明显是缺钙的样子，皮肤上红点变多，所以维生素A和D3，多维元素片还是要磕起走，最近经常忘记了。 最近发现身体变好了点，但是更喜欢听书，而不是读书，而且听过的书不想集中注意力听第2次了。 之前有感觉自己可以跑了的样子，今天试了下，感觉跑起来贼变扭，应该是久了没有运动还是什么的。 感觉自己还是不愿意承担责任的感觉，不是自己的东西，完全游离于责任之外，融入不了团体呢。 今天依旧觉得自己是一个变态，是一个废物，怕治疗好自己呢，但是又期望治疗好自己呢。   2021-08-08 22 实时证明不是每天都能有反思或者思考的，比如说周末，我躺了两天。  除了证明每天腰下面垫一个枕头躺一会走路不会听到骨头响，还有就是依靠在床头玩手机脖子疼，喉结压着痛以外，好像莫得任何收获。    </description>
+    </item>
+    
+    <item>
       <title>简单工厂模式</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/designpatterns/design_pattern_simple_factory_mode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1571,6 +1764,18 @@ loading层控制 采用拦截器机制。
  正文  主要详细理解设计模式。感觉这个设计模式蛮重要的。内容来源
  简单工厂模式  这个没有啥可以写的，大概就是 一个静态类通过 不同的参数或者方法 获得不同的东西。和一个工具类中包含多个功能差不多。 这个不配存在于我的设计模式 列表中。
  </description>
+    </item>
+    
+    <item>
+      <title>薯片C端androidCMS配置项JSON</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E8%96%AF%E7%89%87c%E7%AB%AFandroidcms%E9%85%8D%E7%BD%AE%E9%A1%B9json/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E8%96%AF%E7%89%87c%E7%AB%AFandroidcms%E9%85%8D%E7%BD%AE%E9%A1%B9json/</guid>
+      <description>》 顺便推一下博客主页
+前言  cms 导航配置用于实现，app内部跳转，app打开小程序，app打开H5等功能。 通过cms 配置导航参数，用于动态控制界面显示功能效果等。
+ 现支持
+ 原生功能界面 H5界面 Flutter 功能界面 mpaas 小程序 mpaas 离线包  正文 json 1{ 2 &amp;#34;path&amp;#34;: &amp;#34;/common/android/SingleWeb&amp;#34;, 3 &amp;#34;parameter&amp;#34;: { 4 &amp;#34;urlstr&amp;#34;: &amp;#34;http://172.16.133.75:3001/activity/newproduct&amp;#34;, 5 &amp;#34;isHideNav&amp;#34;: 1, 6 &amp;#34;isH5&amp;#34;: &amp;#34;00000001&amp;#34;, 7 &amp;#34;page&amp;#34;: &amp;#34;&amp;#34; 8 }, 9 &amp;#34;isLogin&amp;#34;: &amp;#34;0&amp;#34;, 10 &amp;#34;version&amp;#34;: &amp;#34;1.0.0&amp;#34; 11} 字段解析    字段 用途     path 原生功能界面跳转路由。H5界面 App内部打开的界面，打开H5界面固定参数为:/common/android/SingleWeb   isLogin 是否需要登录   version 版本号，好像莫得用   parameter 参数对象   urlstr app 内部打开H5提供的H5路径   isHideNav app 内部打开H5 是否使用原生标题栏=1 隐藏   isH5 用于存储 将要打开的小程序或者离线包的id   appletsId 用于存储 将要打开的小程序或者离线包的id   page mpaas 小程序或者离线包将要打开的界面，默认直接进入小程序或者离线包主页   title H5功能使用，显示的原生标题的标题名称   isHideBack =1 隐藏原生返回键，   isFlutterEnter 是否是flutter打开的H5 界面   linkType =1，进行逻辑判断跳转小程序，离线包，H5,原生功能界面，=2 app内部打开一个网页，=3 app 内部打开一个带原生标题的网页    </description>
     </item>
     
     <item>
@@ -1634,6 +1839,24 @@ loading层控制 采用拦截器机制。
       <description>》 顺便推一下博客主页
 前言  viewpager 通常用于加载Fragment或者banner图，因为其良好的交互效果，被设计大佬广泛使用。默认情景下，viewpager 会加载缓存左右的view。滑出去之后就会删除对应的item。 这么就导致了fragment中layout的重复创建和重复赋值，不停的网络请求，所以才有了懒加载等等相关逻辑，但是viewpager某种意义上就是懒加载逻辑呀。 往往为了解决重复请求，重复加载等等问题，我们通常是设置缓存个数和重写item的删除逻辑，为了更加通透的理解viewpager，所以重学是必要的。
  正文 viewPager 结束 </description>
+    </item>
+    
+    <item>
+      <title>阿里云Android播放器控制层代码分层解析</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/ali/%E9%98%BF%E9%87%8C%E4%BA%91android%E6%92%AD%E6%94%BE%E5%99%A8%E4%BB%A3%E7%A0%81%E5%88%86%E5%B1%82%E8%A7%A3%E6%9E%90/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/ali/%E9%98%BF%E9%87%8C%E4%BA%91android%E6%92%AD%E6%94%BE%E5%99%A8%E4%BB%A3%E7%A0%81%E5%88%86%E5%B1%82%E8%A7%A3%E6%9E%90/</guid>
+      <description>》 顺便推一下博客主页
+前言  虽然搬砖多年，代码复制了很多。然后尝试去理解别人代码，但是整理相关代码设计逻辑还是大姑娘上花轿头一回。
+这次项目基于AndroidX。所以和Android 有一些区别，在拖代码的过程中，就存在需要理解代码了。
+阿里云点播服务文档 阿里云点播demo下载  正文 当前笔记基于阿里云点播Android 播放器 AliyunVodPlayerView 。
+分层  基于RelativeLayout 添加view。按照功能继续view的分解。
+  控制层，用于实现播放器控制效果，包含，全屏，小屏，播放，暂停，进度条，拖拽条，截屏，标题，返回键，倍速，分辨率等功能文本显示。 手势层，用于进行手势分发，比如切换明暗度，声音，进度条拖拽，点击，双击。 视频画面层。这个就是视频播放画面，单纯的视频播放。 引导层，用于第一次操作时候的引导。 播放器封面 提示层，比如网络提示，播放完成，播放错误等等。这个提示层 内部又进行了分发封装。 播放内核内核+视频画布层。  监听回调  这个比较多，大体就是在分层上进行处理。比如说返回事件，在控制层，提示层中都有，而且提示层中，包含错误，播放完成，网络提示，这些都有占位view，所以，实现方式大概就是。 错误层的返回事件回调到提示层的监听中，提示层的监听是单独的接口，播放器实现提示的监听接口，去调用播放器中的返回事件。
+整体思路就是，每一层都有自己的实现，自己的实现去调用上一层的实现。最终同一个功能会归集到一个实现方法上面。
+ view的添加  添加view 就很简单，初始化的时候直接添加到view中
+ 1 private void addSubView(View view) { 2 LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT); 3 //添加到布局中 4 addView(view, params); 5 } 基础控件的隐藏  这个主要是控制层的几秒后自动隐藏，这个内部实现handler，然后自己调用 隐藏方法。
+ 结束 </description>
     </item>
     
     <item>

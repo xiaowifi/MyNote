@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>videoPlayer on 个人主页</title>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/series/videoplayer/</link>
+    <description>Recent content in videoPlayer on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/series/videoplayer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基于各种播放器的一些基础</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/videoplayer/%E5%9F%BA%E4%BA%8E%E5%90%84%E7%A7%8D%E6%92%AD%E6%94%BE%E5%99%A8%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/videoplayer/%E5%9F%BA%E4%BA%8E%E5%90%84%E7%A7%8D%E6%92%AD%E6%94%BE%E5%99%A8%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E7%A1%80/</guid>
+      <description>》 顺便推一下博客主页
+前言  不知不觉搬砖多年了，却还是在搬砖的路上，其实蛮累的，不知道路在哪里，只是知道每天能学习一点就是进步。主要还是人格问题。需要慢慢的从自闭中走出来。身体也需要慢慢的变好，都20多岁了。 话说，播放器相关的写过蛮多的控制层的，但是总结的很少，所以才有了写笔记的想法。虽然身体变好了，但是我可能需要用更多的脑力来计算其他的，而不是单纯的代码。
+ 正文 全局单播放器思考  这个业务逻辑还是蛮多的。比如横竖屏幕的切换，比如点击播放的列表播放器，比如点击播放的列表播放器全屏。 这个为了保证播放进度和避免重复缓存，一般情况下就用通一个mediaPlayer，至于画布和控制层，都可以重新加载，但是画布的加载是异步的，所以这个还是看写法。 写得简单点基本上就是把画布控制层和mediaPlayer封到一个view里面。对当前view 进行唯一处理，通过addView 和removeView 去实现。 因为一个view只会出现一个父类的原因，所以添加前需要把view从父类中移除。
+ 将view 从父类中移除。 1 public void removePlayerParent() { 2 if(null ==playerView){ 3 return; 4 } 5 ViewParent parent = playerView.getParent(); 6 if (parent != null) { 7 RelativeLayout frameLayout = (RelativeLayout) parent; 8 frameLayout.removeView(playerView); 9 playerView.onStop(); 10 playerView.reset(); 11 } 12 } ViewParent 这个对象很骚，因为只有viewGroup 实现了这个接口，而removeView也是相当viewGroup 实现的。所以需要对象转换。 为了防止移除的时候绘制界面，所以便捷的处理方式是暂停播放。当然也可以不暂停播放，看需求。比如切换列表播放item的时候，就需要暂停，横屏切换到竖屏的时候就不需要暂停。
+全屏逻辑  既然我们可以直接将view的父类移除，所以添加逻辑实现全屏是可行的。全屏就存在两个设计，1个是添加到一个dialog中，dialog设置全屏和屏幕适配，返回键等等，另外一种逻辑就是直接添加到activity的根布局中。 按照逻辑讲，应该使用dialogFragment去实现全屏。 但是无论如何都需要旋转屏幕。所以屏幕方法保持不变是可以的，但是旋转屏幕可以通过旋转画布实现和旋转view替代，这个可以减少一些设置导致生命周期错乱问题。虽然都可以逻辑控制，但是这个调调，很容易出现逻辑控制缺省的情况。
+ 添加到activity的根布局中   结束 </description>
+    </item>
+    
+  </channel>
+</rss>
