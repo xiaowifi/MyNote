@@ -36,13 +36,15 @@ featured = false
 - [ ] 线程与消息处理
 - [ ] service 
 - [ ] wifi
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
+> 2021-08-20 
+- [ ] [基于  从精准化测试看ASM在Android中的强势插入-JaCoco初探 写Demo](https://juejin.cn/post/6998034544079142920?utm_source=gold_browser_extension)
+- [ ] 字节跳动开源 Android PLT hook 方案 bhook
+- [ ] jetpack
+    - [ ] Navigation是Jetpack组件之一 
+- [ ] Compose
+- [ ] android kotlin 
+- [ ] Android kotlin 进阶
+
 - [ ] 
 - [ ] 
 - [ ] 

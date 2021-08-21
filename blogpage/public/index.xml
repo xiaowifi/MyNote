@@ -832,16 +832,6 @@ picgo 如何查看log 查看log 就很简单了，因为mac 通知无法复制�
     </item>
     
     <item>
-      <title>日常搬砖模板</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/ali/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E6%A8%A1%E6%9D%BF/</link>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/ali/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E6%A8%A1%E6%9D%BF/</guid>
-      <description>》 顺便推一下博客主页
-前言 结束 </description>
-    </item>
-    
-    <item>
       <title>静态网页&#43;Gitee pages 搭建个人主页</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
@@ -917,6 +907,41 @@ getBaseContext()     待完成，这个调调有点复杂，容我捋一捋、
     
     <item>
       <title></title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/jetpack/reamme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/jetpack/reamme/</guid>
+      <description>��ǰĿ¼Ϊjetpack ��������ѧϰ��  �ʼ����ã���Ҫ���޸� series��
+ series = [&amp;quot;Jetpack&amp;quot;,&amp;quot; &amp;quot;] categories = [ &amp;quot;android����&amp;quot; ]</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/kotlin/reamme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/kotlin/reamme/</guid>
+      <description>��ǰĿ¼Ϊkotlin ѧϰ  �ʼ����ã���Ҫ���޸� series��
+ date = &amp;quot;2020-10-01&amp;quot; title = &amp;quot;�ճ���שģ��&amp;quot; description = &amp;quot;�ճ���שģ��&amp;quot; series = [&amp;quot;kotlin&amp;quot;,&amp;quot; &amp;quot;] categories = [ &amp;quot;android����&amp;quot; ]
+todo        </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E8%96%AF%E7%89%87c%E7%AB%AFandroid%E7%95%8C%E9%9D%A2%E5%A4%9A%E7%8A%B6%E6%80%81%E5%88%86%E5%B1%82%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E8%96%AF%E7%89%87c%E7%AB%AFandroid%E7%95%8C%E9%9D%A2%E5%A4%9A%E7%8A%B6%E6%80%81%E5%88%86%E5%B1%82%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8/</guid>
+      <description>薯片C端android界面多状态组件（LoadSir）使用 参考资料：  GitHub LoadSir  使用  导入：compile &#39;com.kingja.loadsir:loadsir:1.3.8&#39;
+ 初始化  当前组件支持通过class 填入多个 状态代表的view层，支持设置默认展示层，支持设置每个状态层的回调
+ 薯片自定义layout   错误样式： ErrorCallback EmptyCallback    loading 样式：​	LoadingCallback
+  连接超时：TimeoutCallback
+  默认显示 LoadingCallback
+全部初始化 1LoadSir.beginBuilder() 2 .addCallback(new ErrorCallback()) 3 .addCallback(new LoadingCallback()) 4 .addCallback(new EmptyCallback()) 5 .addCallback(new TimeoutCallback()) 6 .setDefaultCallback(LoadingCallback.class) 7 .commit(); 使用 初始化 1mLoadService = LoadSir.getDefault() 2 .register(viewDataBinding.relativeLoading, (Callback.OnReloadListener) v -&amp;gt; onLoadFailRetry(v));// 注册默认的点击事件。 不控制callBack 显示 1mLoadService.showSuccess();// 显示正文。 控制callBack 显示内容 1mLoadService.</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/room/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96room%E6%9F%A5%E7%9C%8B%E8%A1%A8%E7%BB%93%E6%9E%84/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -955,23 +980,14 @@ sqlite 查看工具 之前找到了一篇博客对sqlite 表查看写得很详�
     
     <item>
       <title></title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/android%E5%9F%BA%E7%A1%80%E5%91%A2/</link>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1-%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/android%E5%9F%BA%E7%A1%80%E5%91%A2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title> 加载反馈页管理工具</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/%E5%8A%A0%E8%BD%BD%E5%8F%8D%E9%A6%88%E9%A1%B5%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/%E5%8A%A0%E8%BD%BD%E5%8F%8D%E9%A6%88%E9%A1%B5%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</guid>
-      <description>》 顺便推一下博客主页
-前言 参考资料.
- GitHub LoadSir DggBaseActivity DggLazyFragment  正文  LoadSir是一个高效易用，低碳环保，扩展性良好的加载反馈页管理框架，在加载网络或其他数据时候，根据需求切换状态页面， 可添加自定义状态页面，如加载中，加载失败，无数据，网络超时，如占位图，登录失效等常用页面。可配合网络加载框架，结合返回 状态码，错误码，数据进行状态页自动切换，封装使用效果更佳。
- 初始化 结束 </description>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1-%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</guid>
+      <description>百度文库参考地址
+摘要 &amp;quot;名称&amp;quot;是一款采用JAVA语言和kotlin语言编写的一款视频播放APP，如今处于信息高速运转的时代，  付费流量的降价和WIFI的普及以及网速的变快，都在不同程度上促进了网络视频的发展，如今的信息时代也逐渐演变为 视频信息时代，而抖音、网络教育、直播等都是如今广受欢迎的视频信息获取平台。大量的信息内容提供商也开始 进入视频信息推广中来，其中不乏以视频创建的公司。本文基于JAVA和kotlin技术和Android Studio 4.1开发工具， 采用java 8和Android X 开发了一个操作简单，功能齐全的&amp;quot; &amp;quot;App。整个app分为几个模块，实现了列表播放，单播放器播放，小视频播放器播放。 所有视频播放器均实现了，播放、暂停、拖动播放、切换亮度、切换音量、屏幕常亮、横竖屏播放切换等等。 通过本APP的开发，达到了学习JAVA、kotlin和熟悉Android应用程序开发流程的目的，也为以后工作中山实现视频相关业务功能打下结实的基础。 本文自爱介绍Android 相关技术时对&amp;quot;名称&amp;quot;app 的整个开发周期进行了详细的描述。 首先，分析了开发当前软件的可信性。 其实，参考市面上流行的视频播放软件，分析了当前APP的功能需求。 然后，进行了APP的概要设计和详细设计。概要设计和详细设计也是本文的重点。 概要设计提供的大体内容。 详细设计提供的大体内容。 为了保证当前APP代码的正确性和功能完整性，本文还介绍了测试相关过程和测试结果。
+关键词 JAVA kotlin android androidX 视频播放器 开发流程
+绪论  java语言特性 kotlin 语言特性 Android 特性 Android studio 介绍 Android sdk 介绍 java sdk 结束 git 介绍 gradle 介绍  APP需求分析  需求分析 可行性分析  APP概要设计  app流程图 设计目的 APP功能模块 APP数据结构设计  app 详细设计  程序设计 功能界面截图  app 测试  测试的意义 测试过程 测试结果  结论 致谢 参考文献 </description>
     </item>
     
     <item>
@@ -1169,21 +1185,6 @@ rxbinding 使用  因为这个时间可能是需要固定的，不想每个都�
       <description>》 顺便推一下博客主页
 前言  当前问题用于记录flutter 常见问题汇总
  正文 Waiting for another flutter command to release the startup lock... 关闭Android Studio 打开flutter安装目录/bin/cache 删除lockfile文件 此时可在命令行再执行flutter相关命令，完美解决</description>
-    </item>
-    
-    <item>
-      <title>fragment嵌套生命周期走查（懒加载有问题）</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/fragment%E5%B5%8C%E5%A5%97%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%B5%B0%E6%9F%A5/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/fragment%E5%B5%8C%E5%A5%97%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%B5%B0%E6%9F%A5/</guid>
-      <description>前言  话说，搬砖过程中fragment+viewpager相当常见。按照道理讲不应该出现这个bug的。主要是太久没有写代码了。emmmmm? 变菜了，能怪我？ 还有一个问题。感觉viewpager+fragment 导致的生命周期就很奇怪，最近有大佬提供的懒加载fragment，so。
- 正文  话说，viewpager主要是通过adapter设置预加载数量。
-  setOffscreenPageLimit()   然后是通过adapter设置相关的东西
-  FragmentPagerAdapter   我们知道viewpager 默认加载3个，就是当前的和左右一边一个。其他的item都会默认销毁。所以我们的懒加载fragment的实现就尤为重要了。
- 懒加载fragment  懒加载的实现模式大概就这么一个样子，都很成熟了。
-  记录一个fragment中onCreateView 的创建状态。 在onViewCreated中对!isHidden() &amp;amp;&amp;amp; getUserVisibleHint() 进行事件分发。 实现setUserVisibleHint 相关逻辑。 实现onHiddenChanged 可见不可见逻辑。 实现 判断子类可见与否的逻辑。 onResume 实现第一次可见。   整个大概就这个样子:
- 1public abstract class BaseLazyFragment extends Fragment { 2 3 /** 4 * mFragmentTag 5 */ 6 public String TAG = &amp;#34;&amp;#34;; 7 /** 8 * mLoadService 9 */ 10 String title; 11 public BaseLazyFragment setShow(String title){ 12 this.</description>
     </item>
     
     <item>
@@ -1546,7 +1547,9 @@ iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 
       <guid>http://lalalaxiaowifi.gitee.io/pictures/todo/</guid>
       <description>TODO  噢，先立flag再说。
  android  Android intent 保存参数与fragment 子fragment 互用。 fragment 无限套娃，是否可以在activity层判断fragment是否包含显示？ Android 加锁 通过手写array 备份activity 批量移除activity与通过intent 设置tag移除activity的区别。 探讨通过加锁机制，统一loading层延时关闭view。 摸鱼 dialogFragment dissmiss 之后通过fragmentmanger 还能获取到吗？ 通过加锁机制对轮转控件进行加强。   2021-07-10
-  基于计时器Chronometer 实现倒计时 基于spinner 实现下拉dialog 画廊视图Gallery activity 属性 intent broadcastReceiver 键盘事件 手势 toast与界面绑定与toast单例效果。 notification alarmManager 图像，paint,canvas,bitmap,bitmapFactory. 绘制2D图像 动画 openGL 3D 图形 soundPool 播放音轨。 文件流 content Provider 线程与消息处理 service wifi              java  java 各种设计模式 JAVA 新特性  SQL  android room Android room+Rxjava  杂学 python python 爬虫教学地址</description>
+  基于计时器Chronometer 实现倒计时 基于spinner 实现下拉dialog 画廊视图Gallery activity 属性 intent broadcastReceiver 键盘事件 手势 toast与界面绑定与toast单例效果。 notification alarmManager 图像，paint,canvas,bitmap,bitmapFactory. 绘制2D图像 动画 openGL 3D 图形 soundPool 播放音轨。 文件流 content Provider 线程与消息处理 service wifi   2021-08-20
+   基于 从精准化测试看ASM在Android中的强势插入-JaCoco初探 写Demo
+  字节跳动开源 Android PLT hook 方案 bhook</description>
     </item>
     
     <item>
@@ -1634,10 +1637,10 @@ iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 
     
     <item>
       <title>探索 Jetpack 库</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E6%8E%A2%E7%B4%A2-jetpack-%E5%BA%93/</link>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/jetpack/%E6%8E%A2%E7%B4%A2-jetpack-%E5%BA%93/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E6%8E%A2%E7%B4%A2-jetpack-%E5%BA%93/</guid>
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/jetpack/%E6%8E%A2%E7%B4%A2-jetpack-%E5%BA%93/</guid>
       <description>顺便推一下博客主页
  正文  还是老规矩，先上官网 官网 ，然后就是 jetpack 支持些什么。支持与包含 ，最后是找到demo地址，然后拉demo源码 学习了。demo地址 这里就需要着重点一下设计模式了。常见的mvc.mvp,mvvm.而 jetpack 就支持了mvvm.当然也不是说，用了jetpack就不能写MVC不能写mvp了。 但是一个项目中最好固定一种设计模式。一套写法是最好的。而mvvm 只要注释写得好，比其他两个更好维护和阅读。 既然是mvvm.和mvp和mvc 还是有区别的，mvp和mvc Google并没有提供对应的组件，一般都是自己封装，需要注意生命周期什么的。但是mvvm,Google 开始提供对应的组件。同时开始优化开发流程和代码可读性了。
  ViewModel 教程地址 提供数据，这里面可以写的和 P层差不多，获取数据，处理数据什么的。 LiveData 提供数据更新观察能力，和生命周期绑定。和viewModel绑定，而P层大概就是ViewModel+liveDate的集合体。 databinding 主要是负责 界面渲染数据，这个可以少一层，findviewbyid。 然后模块解耦，虽然这个mvvm是一个整体，但是搬砖过程中，难免会遇到 不同模块的子模块有相同的，不解耦的话，就会出现一个东西重复出现调用，虽然可以通过设计模式设置不同的server实现。也可以了解下依赖注入。 最后就是数据缓存 sqlite 和room的使用了。room骚的是 他基本上是一个表一个库，所以需要注意连接池中的连接逻辑，通常只有一个数据库处于连接状态（待确认）。   ViewModel  教程地址 Android 框架可以管理界面控制器（如 Activity 和 Fragment）的生命周期。Android 框架可能会决定销毁或重新创建界面控制器，以响应完全不受您控制的某些用户操作或设备事件。 如果系统销毁或重新创建界面控制器，则存储在其中的任何瞬态界面相关数据都会丢失。例如，应用可能会在它的某个 Activity 中包含用户列表。为配置更改重新创建 Activity 后，新 Activity 必须重新提取用户列表。对于简单的数据，Activity 可以使用 onSaveInstanceState() 方法从 onCreate() 中的捆绑包恢复其数据，但此方法仅适合可以序列化再反序列化的少量数据，而不适合数量可能较大的数据，如用户列表或位图。 另一个问题是，界面控制器经常需要进行可能需要一些时间才能返回的异步调用。界面控制器需要管理这些调用，并确保系统在其销毁后清理这些调用以避免潜在的内存泄漏。此项管理需要大量的维护工作，并且在为配置更改重新创建对象的情况下，会造成资源的浪费，因为对象可能需要重新发出已经发出过的调用。 诸如 Activity 和 Fragment 之类的界面控制器主要用于显示界面数据、对用户操作做出响应或处理操作系统通信（如权限请求）。如果要求界面控制器也负责从数据库或网络加载数据，那么会使类越发膨胀。为界面控制器分配过多的责任可能会导致单个类尝试自己处理应用的所有工作，而不是将工作委托给其他类。以这种方式为界面控制器分配过多的责任也会大大增加测试的难度。 从界面控制器逻辑中分离出视图数据所有权的操作更容易且更高效。
@@ -1751,7 +1754,7 @@ loading层控制 采用拦截器机制。
       
       <guid>http://lalalaxiaowifi.gitee.io/pictures/reflection_and_perception/</guid>
       <description> 2021-08-06 打算记录下每天的碎碎念呢，有的是想法，有的是其他的。对自己还是要有B数的，没有那么的强，但愿这个可以整得久一点吧。
- 开始  2021-08-06 23 突然想到了书上所说的反省，所以新增这一栏呢  今天感觉有点懒散，今天去打疫苗的路上，发现自己把背打直了是听不到骨骼响的，但是膝盖疼，明显是缺钙的样子，皮肤上红点变多，所以维生素A和D3，多维元素片还是要磕起走，最近经常忘记了。 最近发现身体变好了点，但是更喜欢听书，而不是读书，而且听过的书不想集中注意力听第2次了。 之前有感觉自己可以跑了的样子，今天试了下，感觉跑起来贼变扭，应该是久了没有运动还是什么的。 感觉自己还是不愿意承担责任的感觉，不是自己的东西，完全游离于责任之外，融入不了团体呢。 今天依旧觉得自己是一个变态，是一个废物，怕治疗好自己呢，但是又期望治疗好自己呢。   2021-08-08 22 实时证明不是每天都能有反思或者思考的，比如说周末，我躺了两天。  除了证明每天腰下面垫一个枕头躺一会走路不会听到骨头响，还有就是依靠在床头玩手机脖子疼，喉结压着痛以外，好像莫得任何收获。    </description>
+ 开始  2021-08-06 23 突然想到了书上所说的反省，所以新增这一栏呢  今天感觉有点懒散，今天去打疫苗的路上，发现自己把背打直了是听不到骨骼响的，但是膝盖疼，明显是缺钙的样子，皮肤上红点变多，所以维生素A和D3，多维元素片还是要磕起走，最近经常忘记了。 最近发现身体变好了点，但是更喜欢听书，而不是读书，而且听过的书不想集中注意力听第2次了。 之前有感觉自己可以跑了的样子，今天试了下，感觉跑起来贼变扭，应该是久了没有运动还是什么的。 感觉自己还是不愿意承担责任的感觉，不是自己的东西，完全游离于责任之外，融入不了团体呢。 今天依旧觉得自己是一个变态，是一个废物，怕治疗好自己呢，但是又期望治疗好自己呢。   2021-08-08 22 实时证明不是每天都能有反思或者思考的，比如说周末，我躺了两天。  除了证明每天腰下面垫一个枕头躺一会走路不会听到骨头响，还有就是依靠在床头玩手机脖子疼，喉结压着痛以外，好像莫得任何收获。   2021-08-20 今天看书的时候正式了一个问题，碎觉是90分钟左右的倍数，具体看人。  L 确实会让人没有精神，没有斗志。 一直处于两个极端，自己自律太差了，今天论文也没有开始写，英语也要考试了，但是都还没有复习。 依旧害怕去医院，怕治好，怕治不好，明明已经在治好的路上了，就是怕。 可能是每个月去医院花的钱太多了，想起类似的话，承受当前的痛苦似乎比努力更简单。 穷真的会降低智障，降低所有东西，唉。    </description>
     </item>
     
     <item>

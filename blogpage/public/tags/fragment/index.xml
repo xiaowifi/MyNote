@@ -48,20 +48,5 @@ activity中注册后，在fragment中就不用再注册监听了，提供方法�
 结束 </description>
     </item>
     
-    <item>
-      <title>fragment嵌套生命周期走查（懒加载有问题）</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/fragment%E5%B5%8C%E5%A5%97%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%B5%B0%E6%9F%A5/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/fragment%E5%B5%8C%E5%A5%97%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%B5%B0%E6%9F%A5/</guid>
-      <description>前言  话说，搬砖过程中fragment+viewpager相当常见。按照道理讲不应该出现这个bug的。主要是太久没有写代码了。emmmmm? 变菜了，能怪我？ 还有一个问题。感觉viewpager+fragment 导致的生命周期就很奇怪，最近有大佬提供的懒加载fragment，so。
- 正文  话说，viewpager主要是通过adapter设置预加载数量。
-  setOffscreenPageLimit()   然后是通过adapter设置相关的东西
-  FragmentPagerAdapter   我们知道viewpager 默认加载3个，就是当前的和左右一边一个。其他的item都会默认销毁。所以我们的懒加载fragment的实现就尤为重要了。
- 懒加载fragment  懒加载的实现模式大概就这么一个样子，都很成熟了。
-  记录一个fragment中onCreateView 的创建状态。 在onViewCreated中对!isHidden() &amp;amp;&amp;amp; getUserVisibleHint() 进行事件分发。 实现setUserVisibleHint 相关逻辑。 实现onHiddenChanged 可见不可见逻辑。 实现 判断子类可见与否的逻辑。 onResume 实现第一次可见。   整个大概就这个样子:
- 1public abstract class BaseLazyFragment extends Fragment { 2 3 /** 4 * mFragmentTag 5 */ 6 public String TAG = &amp;#34;&amp;#34;; 7 /** 8 * mLoadService 9 */ 10 String title; 11 public BaseLazyFragment setShow(String title){ 12 this.</description>
-    </item>
-    
   </channel>
 </rss>
