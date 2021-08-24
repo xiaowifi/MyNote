@@ -59,7 +59,7 @@ Uri builtURI = Uri.parse(BOOK_BASE_URL).buildUpon()
 * PreferenceActivity
 * NavigationView
 * DrawerLayout
-* Snackbar
+* Snackbar 
 * 
 * 
 * 
