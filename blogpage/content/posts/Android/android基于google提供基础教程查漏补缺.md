@@ -81,9 +81,9 @@ Uri builtURI = Uri.parse(BOOK_BASE_URL).buildUpon()
 * typeface 默认文本字体
 * androidx.constraintlayout.utils.widget.MockView
 * fragment.setRetainInstance(true) 用于限制当界面配置发生改变的时候，fragment只会创建一次。
-* 
-* 
-* 
+* databinding  OnRebindCallback 绑定的生命周期监听。
+* recycleview+databinding+OnRebindCallback 用于刷新处理。
+* Collections.addAll()
 * 
 * 
 * 
