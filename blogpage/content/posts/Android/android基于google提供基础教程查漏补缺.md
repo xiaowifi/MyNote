@@ -19,15 +19,15 @@ draft = true
 * textview autoLink=" web" 网站会高亮显示，显示颜色为:colorAccent
 * textview textAlignment 定义文本对齐方式。
 * activity registerForContextMenu 注册菜单。
-* 控件的contentDescription 
-* 图片控件的srcCompat
-* view的主题 popupTheme
+* 控件的 contentDescription 
+* 图片控件的 srcCompat 这个设置src类似，但是对于某些图片，建议使用src compat 
+* view的主题 popupTheme 
 * view的主题 android:theme
 * tools:context
 * tools:showIn
 * 新工具类：ContextCompat compat 这个调调
-* AsyncTask
-* uri
+* AsyncTask 线程
+* uri uri 的使用方式如下：
 ````aidl
 Uri builtURI = Uri.parse(BOOK_BASE_URL).buildUpon()
                     .appendQueryParameter(QUERY_PARAM, queryString)
@@ -35,9 +35,9 @@ Uri builtURI = Uri.parse(BOOK_BASE_URL).buildUpon()
                     .appendQueryParameter(PRINT_TYPE, "books")
                     .build();
 ````
-* HttpURLConnection
-* AsyncTaskLoader
-* ActivityOptions
+* HttpURLConnection http 连接对象。
+* AsyncTaskLoader AsyncTask更好用的版本。
+* ActivityOptions 
 * ObjectAnimator
 * getWindow().setEnterTransition()
 * Transition
@@ -48,7 +48,7 @@ Uri builtURI = Uri.parse(BOOK_BASE_URL).buildUpon()
 * android:tintMode="" 着色模式
 * ItemTouchHelper recycleview 进行拖拽和侧滑删除。
 * adjustViewBounds adjustViewBounds只有在ImageView一边固定，一边为wrap_content的时候才有意义。设置为true的时候，可以让ImageView的比例和原始图片一样，以达到让图片充满的ImageView的效果
-* ShareCompat 
+* ShareCompat 分享工具类。
 * AppCompatDelegate.setDefaultNightMode (AppCompatDelegate.MODE_NIGHT_YES);
 * recreate 重新创建activity。
 * AndroidJUnitRunner Android 单元测试脚本 Android Demo中项目名称包含:Espresso 则表示包含单元测试用例。
@@ -63,6 +63,24 @@ Uri builtURI = Uri.parse(BOOK_BASE_URL).buildUpon()
 * JobService 用来执行一些并非即时执行的后台进程。
 * BroadcastReceiver
 * Intent 静态常量
+* autoSizeTextType 调整大小类型。
+* MotionLayout
+* alpha 0到1 之间的透明度。
+* androidx.cardview.widget.CardView 就是单纯的卡片化view
+* com.google.android.material.tabs.TabLayout
+* Space 空间
+* cropToPadding 如果为 true，图像将被裁剪以适合其填充。
+* listitem
+* showIn
+* ImageFilterView
+* layout_editor_absoluteX
+* layout_editor_absoluteY
+* fontFamily 字体系列的属性。
+* layout_scrollFlags
+* androidx.drawerlayout.widget.DrawerLayout 抽屉布局 
+* typeface 默认文本字体
+* androidx.constraintlayout.utils.widget.MockView
+* fragment.setRetainInstance(true) 用于限制当界面配置发生改变的时候，fragment只会创建一次。
 * 
 * 
 * 
@@ -70,12 +88,6 @@ Uri builtURI = Uri.parse(BOOK_BASE_URL).buildUpon()
 * 
 * 
 * 
-* 
-* 
-* 
-* 
-* 
-* 
-## 结束
+
 
 
