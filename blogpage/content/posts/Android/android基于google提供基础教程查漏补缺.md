@@ -60,9 +60,9 @@ Uri builtURI = Uri.parse(BOOK_BASE_URL).buildUpon()
 * NavigationView
 * DrawerLayout
 * Snackbar 
-* 
-* 
-* 
+* JobService 用来执行一些并非即时执行的后台进程。
+* BroadcastReceiver
+* Intent 静态常量
 * 
 * 
 * 
