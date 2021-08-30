@@ -84,10 +84,11 @@ Uri builtURI = Uri.parse(BOOK_BASE_URL).buildUpon()
 * databinding  OnRebindCallback 绑定的生命周期监听。
 * recycleview+databinding+OnRebindCallback 用于刷新处理。
 * Collections.addAll()
-* 
-* 
-* 
-* 
+* 系统设计inflate 第3个参数的意义。用于是否添加进入view？或者说是否设置layoutparent 
+* 自定义view的构造方法，那个不能删除。两个参数的构造方法不能删除，因为反射实现的逻辑，调用了两个入参的构造方法。
+* 想要保证view不会重复添加，这个和view的添加逻辑有关，在view中存储一个父类对象，如果父类对象不为空的情况下，会直接抛异常。这种常见用于layout 添加到view 或者做大对象内存或者不可中断view的
+  的处理，通常是移出父类，然后再添加。常见问题，recycleview 设置viewHolder 和fragment 设置view的时候，如果事先绑定了view就会抛出上面错误。
+* 布局嵌套能写多少层，这个和jvm 方法压栈有关，递归调用 会重复压栈。
 
 
 
