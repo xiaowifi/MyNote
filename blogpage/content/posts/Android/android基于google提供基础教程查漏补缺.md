@@ -90,6 +90,6 @@ Uri builtURI = Uri.parse(BOOK_BASE_URL).buildUpon()
   的处理，通常是移出父类，然后再添加。常见问题，recycleview 设置viewHolder 和fragment 设置view的时候，如果事先绑定了view就会抛出上面错误。
 * 布局嵌套能写多少层，这个和jvm 方法压栈有关，递归调用 会重复压栈。
 * source insight.
-
+* ConcatAdapter recyclerview 新版本的adapter，主要作用的顺序提供多个adapter。 
 
 
