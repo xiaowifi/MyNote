@@ -91,5 +91,8 @@ Uri builtURI = Uri.parse(BOOK_BASE_URL).buildUpon()
 * 布局嵌套能写多少层，这个和jvm 方法压栈有关，递归调用 会重复压栈。
 * source insight.
 * ConcatAdapter recyclerview 新版本的adapter，主要作用的顺序提供多个adapter。 
-
+* intDef
+* stringDef
+* 注解处理器
+* 注解
 
