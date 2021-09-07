@@ -2,11 +2,9 @@
 date = "2020-12-08"
 title = "统考英语B英译汉词汇"
 description = "统考英语B英译汉词汇"
-tags = [ "统考英语B","英语","英译汉","词汇"]
- 
-series = ["专升本"]
+slug = "study_page_6"
 featured = false
-draft = true 
+draft = false 
 +++
 
 

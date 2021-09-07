@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>通知栏 on 个人主页</title>
+    <link>http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%80%9A%E7%9F%A5%E6%A0%8F/</link>
+    <description>Recent content in 通知栏 on 个人主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-2099</copyright>
+    <lastBuildDate>Sun, 22 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%80%9A%E7%9F%A5%E6%A0%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android通知栏</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E9%80%9A%E7%9F%A5%E6%A0%8F/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E9%80%9A%E7%9F%A5%E6%A0%8F/</guid>
+      <description>》 顺便推一下博客主页
+前言  参考资料：google 通知栏Demo ##正文   demo 竟然没有要通知栏权限。
+ 注册 1 private static final String ACTION_UPDATE_NOTIFICATION = 2 &amp;#34;com.android.example.notifyme.ACTION_UPDATE_NOTIFICATION&amp;#34;; 3 // Notification channel ID. 4 private static final String PRIMARY_CHANNEL_ID = 5 &amp;#34;primary_notification_channel&amp;#34;; 6 // Notification ID. 7 private static final int NOTIFICATION_ID = 0; 8 private NotificationManager mNotifyManager; 9 private NotificationReceiver mReceiver = new NotificationReceiver(); 10 11 mNotifyManager =(NotificationManager) getSystemService(NOTIFICATION_SERVICE); 12 13 // Notification channels are only available in OREO and higher.</description>
+    </item>
+    
+  </channel>
+</rss>

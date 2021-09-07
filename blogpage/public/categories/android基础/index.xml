@@ -6,7 +6,28 @@
     <description>Recent content in android基础 on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Sun, 08 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/categories/android%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/categories/android%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>android相关资料地址汇总</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E5%9C%B0%E5%9D%80%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E5%9C%B0%E5%9D%80%E6%B1%87%E6%80%BB/</guid>
+      <description> 本来没打算搞一个这个调调的。但是太多了，有时候会忘记一部分，所以，记录一下。
+ GitHub Android  GitHub Android   参考资料：gradle  参考资料：gradle  参考资料：android build gradle  参考资料：android build gradle  google maven仓库地址  google maven仓库地址  google Android主页  google Android主页  google Android studio主页  google Android studio主页  google Android jetpack 主页  google Android jetpack 主页  google Android jetpack compose 主页  google Android jetpack compose 主页  google Android 培训主页  google Android 培训主页  Github android jetpack 主页  Github android jetpack 主页  github Android 培训课程主页  github Android 培训课程主页  </description>
+    </item>
+    
+    <item>
+      <title>Android通知栏</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E9%80%9A%E7%9F%A5%E6%A0%8F/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E9%80%9A%E7%9F%A5%E6%A0%8F/</guid>
+      <description>》 顺便推一下博客主页
+前言  参考资料：google 通知栏Demo ##正文   demo 竟然没有要通知栏权限。
+ 注册 1 private static final String ACTION_UPDATE_NOTIFICATION = 2 &amp;#34;com.android.example.notifyme.ACTION_UPDATE_NOTIFICATION&amp;#34;; 3 // Notification channel ID. 4 private static final String PRIMARY_CHANNEL_ID = 5 &amp;#34;primary_notification_channel&amp;#34;; 6 // Notification ID. 7 private static final int NOTIFICATION_ID = 0; 8 private NotificationManager mNotifyManager; 9 private NotificationReceiver mReceiver = new NotificationReceiver(); 10 11 mNotifyManager =(NotificationManager) getSystemService(NOTIFICATION_SERVICE); 12 13 // Notification channels are only available in OREO and higher.</description>
+    </item>
+    
     <item>
       <title>Android抄一手冷启动优化呢</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%8A%84%E4%B8%80%E6%89%8B%E5%86%B7%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E5%91%A2/</link>
@@ -95,6 +116,17 @@ Chronometer
     </item>
     
     <item>
+      <title>记录一次idea和Android Studio互相切换打开项目的问题</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1idea%E5%92%8Candroid-studio%E4%BA%92%E7%9B%B8%E5%88%87%E6%8D%A2%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1idea%E5%92%8Candroid-studio%E4%BA%92%E7%9B%B8%E5%88%87%E6%8D%A2%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>》 顺便推一下博客主页
+前言  参考资料：gradle 参考资料：android build gradle   最近因为经常导Demo的原因，然后Android studio 对有些第三方aar的源码预览不怎么提现良好，所以经常是idea和Android studio 互相切换， 然后就发现，idea 经常让我升级一些gradle 的版本号，不升级就运行不起，但是我在Android studio 中就可以运行呀。 但是根据idea 提示的gradle 版本升级了又不一定下载下来，或者版本太高了。Android 的build tools 的版本不支持这么高的版本号。 于是便有了记录下 build tools 和gradle 对应版本的想法。 主要还是抄 Android build gradle。
+ 对照表 参考资料：android build gradle    插件版本 所需的 Gradle 版本     1.0.0 - 1.1.3 2.2.1 - 2.3   1.2.0 - 1.3.1 2.2.1 - 2.9   1.5.0 2.2.1 - 2.</description>
+    </item>
+    
+    <item>
       <title>Alibaba旗下android中RecycleView的manger笔记</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/vlayout/alibaba%E6%97%97%E4%B8%8Bandroid%E4%B8%ADrecycleview%E7%9A%84manger%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -174,6 +206,26 @@ Chronometer
 前言  话说toast 这个调调 在Android上使用蛮频繁的。通常就是通过自己的自定义，如果不自定义的话，可能会提一个 toast重复提示的bug，虽然这个可以通过其他逻辑控制与限制。 写笔记嘛，那就都写。
  正文 toast 单例  toast 自定义1，单例。直接抄一个阿里的toast 单例。
  1 2public class ToastUtils { 3 4 private static Toast mToast; 5 private static Field mFieldTN; 6 private static Field mFieldTNHandler; 7 8 static { 9 if (Build.VERSION.SDK_INT == 25) { 10 try { 11 mFieldTN = Toast.class.getDeclaredField(&amp;#34;mTN&amp;#34;); 12 mFieldTN.setAccessible(true); 13 mFieldTNHandler = mFieldTN.getType().getDeclaredField(&amp;#34;mHandler&amp;#34;); 14 mFieldTNHandler.setAccessible(true); 15 } catch (Exception e) { 16 e.</description>
+    </item>
+    
+    <item>
+      <title>Coordinatorlayout简单单层吸顶效果</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/coordinatorlayout%E7%AE%80%E5%8D%95%E5%8D%95%E5%B1%82%E5%90%B8%E9%A1%B6%E6%95%88%E6%9E%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/coordinatorlayout%E7%AE%80%E5%8D%95%E5%8D%95%E5%B1%82%E5%90%B8%E9%A1%B6%E6%95%88%E6%9E%9C/</guid>
+      <description>》 顺便推一下博客主页
+前言 1 &amp;lt;androidx.coordinatorlayout.widget.CoordinatorLayout 2 android:id=&amp;#34;@+id/coordinator&amp;#34; 3 android:layout_width=&amp;#34;match_parent&amp;#34; 4 android:layout_height=&amp;#34;match_parent&amp;#34;&amp;gt; 5 6 &amp;lt;!--AppBarLayout继承自LinearLayout--&amp;gt; 7 &amp;lt;androidx.core.widget.NestedScrollView 8 app:layout_behavior=&amp;#34;com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior&amp;#34; 9 android:layout_width=&amp;#34;match_parent&amp;#34; 10 android:layout_height=&amp;#34;match_parent&amp;#34;&amp;gt; 11 &amp;lt;LinearLayout 12 android:orientation=&amp;#34;vertical&amp;#34; 13 android:layout_width=&amp;#34;match_parent&amp;#34; 14 android:layout_height=&amp;#34;match_parent&amp;#34;&amp;gt; 15 &amp;lt;TextView 16 android:background=&amp;#34;#03A9F4&amp;#34; 17 android:layout_marginTop=&amp;#34;10dp&amp;#34; 18 android:layout_width=&amp;#34;match_parent&amp;#34; 19 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt;&amp;lt;TextView 20 android:background=&amp;#34;#03A9F4&amp;#34; 21 android:layout_marginTop=&amp;#34;10dp&amp;#34; 22 android:layout_width=&amp;#34;match_parent&amp;#34; 23 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt;&amp;lt;TextView 24 android:background=&amp;#34;#03A9F4&amp;#34; 25 android:layout_marginTop=&amp;#34;10dp&amp;#34; 26 android:layout_width=&amp;#34;match_parent&amp;#34; 27 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt;&amp;lt;TextView 28 android:background=&amp;#34;#03A9F4&amp;#34; 29 android:layout_marginTop=&amp;#34;10dp&amp;#34; 30 android:layout_width=&amp;#34;match_parent&amp;#34; 31 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt;&amp;lt;TextView 32 android:background=&amp;#34;#03A9F4&amp;#34; 33 android:layout_marginTop=&amp;#34;10dp&amp;#34; 34 android:layout_width=&amp;#34;match_parent&amp;#34; 35 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt;&amp;lt;TextView 36 android:background=&amp;#34;#03A9F4&amp;#34; 37 android:layout_marginTop=&amp;#34;10dp&amp;#34; 38 android:layout_width=&amp;#34;match_parent&amp;#34; 39 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt;&amp;lt;TextView 40 android:background=&amp;#34;#03A9F4&amp;#34; 41 android:layout_marginTop=&amp;#34;10dp&amp;#34; 42 android:layout_width=&amp;#34;match_parent&amp;#34; 43 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt;&amp;lt;TextView 44 android:background=&amp;#34;#03A9F4&amp;#34; 45 android:layout_marginTop=&amp;#34;10dp&amp;#34; 46 android:layout_width=&amp;#34;match_parent&amp;#34; 47 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt;&amp;lt;TextView 48 android:background=&amp;#34;#03A9F4&amp;#34; 49 android:layout_marginTop=&amp;#34;10dp&amp;#34; 50 android:layout_width=&amp;#34;match_parent&amp;#34; 51 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt;&amp;lt;TextView 52 android:background=&amp;#34;#03A9F4&amp;#34; 53 android:layout_marginTop=&amp;#34;10dp&amp;#34; 54 android:layout_width=&amp;#34;match_parent&amp;#34; 55 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt;&amp;lt;TextView 56 android:background=&amp;#34;#03A9F4&amp;#34; 57 android:layout_marginTop=&amp;#34;10dp&amp;#34; 58 android:layout_width=&amp;#34;match_parent&amp;#34; 59 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt;&amp;lt;TextView 60 android:background=&amp;#34;#03A9F4&amp;#34; 61 android:layout_marginTop=&amp;#34;10dp&amp;#34; 62 android:layout_width=&amp;#34;match_parent&amp;#34; 63 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt;&amp;lt;TextView 64 android:background=&amp;#34;#03A9F4&amp;#34; 65 android:layout_marginTop=&amp;#34;10dp&amp;#34; 66 android:layout_width=&amp;#34;match_parent&amp;#34; 67 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt;&amp;lt;TextView 68 android:background=&amp;#34;#03A9F4&amp;#34; 69 android:layout_marginTop=&amp;#34;10dp&amp;#34; 70 android:layout_width=&amp;#34;match_parent&amp;#34; 71 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt;&amp;lt;TextView 72 android:background=&amp;#34;#03A9F4&amp;#34; 73 android:layout_marginTop=&amp;#34;10dp&amp;#34; 74 android:layout_width=&amp;#34;match_parent&amp;#34; 75 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt;&amp;lt;TextView 76 android:background=&amp;#34;#03A9F4&amp;#34; 77 android:layout_marginTop=&amp;#34;10dp&amp;#34; 78 android:layout_width=&amp;#34;match_parent&amp;#34; 79 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt;&amp;lt;TextView 80 android:background=&amp;#34;#03A9F4&amp;#34; 81 android:layout_marginTop=&amp;#34;10dp&amp;#34; 82 android:layout_width=&amp;#34;match_parent&amp;#34; 83 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt;&amp;lt;TextView 84 android:background=&amp;#34;#03A9F4&amp;#34; 85 android:layout_marginTop=&amp;#34;10dp&amp;#34; 86 android:layout_width=&amp;#34;match_parent&amp;#34; 87 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt; 88 &amp;lt;/LinearLayout&amp;gt; 89 &amp;lt;/androidx.</description>
+    </item>
+    
+    <item>
+      <title>Coordinatorlayout简单单层吸顶效果</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/posts/android/coordinatorlayout%E7%AE%80%E5%8D%95%E5%A4%9A%E5%B1%82%E5%90%B8%E9%A1%B6%E6%95%88%E6%9E%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/posts/android/coordinatorlayout%E7%AE%80%E5%8D%95%E5%A4%9A%E5%B1%82%E5%90%B8%E9%A1%B6%E6%95%88%E6%9E%9C/</guid>
+      <description>》 顺便推一下博客主页
+前言 1 &amp;lt;androidx.coordinatorlayout.widget.CoordinatorLayout 2 android:id=&amp;#34;@+id/coordinator&amp;#34; 3 android:layout_width=&amp;#34;match_parent&amp;#34; 4 android:layout_height=&amp;#34;match_parent&amp;#34;&amp;gt; 5 6 &amp;lt;!--AppBarLayout继承自LinearLayout--&amp;gt; 7 &amp;lt;androidx.coordinatorlayout.widget.CoordinatorLayout 8 app:layout_behavior=&amp;#34;com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior&amp;#34; 9 android:layout_width=&amp;#34;match_parent&amp;#34; 10 android:layout_height=&amp;#34;match_parent&amp;#34;&amp;gt; 11 12 &amp;lt;androidx.core.widget.NestedScrollView 13 app:layout_behavior=&amp;#34;com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior&amp;#34; 14 android:layout_width=&amp;#34;match_parent&amp;#34; 15 android:layout_height=&amp;#34;match_parent&amp;#34;&amp;gt; 16 &amp;lt;LinearLayout 17 android:orientation=&amp;#34;vertical&amp;#34; 18 android:layout_width=&amp;#34;match_parent&amp;#34; 19 android:layout_height=&amp;#34;match_parent&amp;#34;&amp;gt; 20 &amp;lt;TextView 21 android:layout_marginTop=&amp;#34;1dp&amp;#34; 22 android:background=&amp;#34;#673AB7&amp;#34; 23 android:gravity=&amp;#34;center&amp;#34; 24 android:text=&amp;#34;!!!!!!!!!!!!!&amp;#34; 25 android:layout_width=&amp;#34;match_parent&amp;#34; 26 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt; &amp;lt;TextView 27 android:layout_marginTop=&amp;#34;1dp&amp;#34; 28 android:background=&amp;#34;#673AB7&amp;#34; 29 android:gravity=&amp;#34;center&amp;#34; 30 android:text=&amp;#34;!!!!!!!!!!!!!&amp;#34; 31 android:layout_width=&amp;#34;match_parent&amp;#34; 32 android:layout_height=&amp;#34;45dp&amp;#34;/&amp;gt; &amp;lt;TextView 33 android:layout_marginTop=&amp;#34;1dp&amp;#34; 34 android:background=&amp;#34;#673AB7&amp;#34; 35 android:gravity=&amp;#34;center&amp;#34; 36 android:text=&amp;#34;!</description>
     </item>
     
     <item>

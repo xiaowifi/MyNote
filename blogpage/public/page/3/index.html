@@ -78,6 +78,9 @@
   <div class="nav_parent">
     <a href="http://lalalaxiaowifi.gitee.io/pictures/reflection_and_perception/" class="nav_item">碎碎念呢 </a>
   </div>
+  <div class="nav_parent">
+    <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/catalogue/" class="nav_item">统考英语B </a>
+  </div>
       
 <div class='follow'>站外主页:[
 
@@ -113,6 +116,825 @@
 <div class="grid-inverse wrap content">
 
   <ul class="posts" id="posts">
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E5%BC%80%E5%90%AFdebug%E4%B9%8B%E8%B7%AF/">Android开启Debug</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android' class="post_tag button button_translucent">android
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/debug' class="post_tag button button_translucent">debug
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 电脑不是太好。现在用的也仅仅是mac air 1.8 GHz 双核Intel Core i5 8 GB 1600 MHz DDR3。电脑情况不是太好，需要经常清理缓存啊，运行代码量稍微大一点的项目就感觉慢。打算明年换一个好一点的。所以我本人是比较倾向于插件化和aar的使用的，fragment 使用比重也很高，毕竟只要写好了模板，debug功能还是比activity 简单些。
+说回正题。Android debug 模式也不多，常用的一般分为：
+ 打印log 打断点 测试代码 让测试复现bug 等  顺便推一下博客目录
+正文 打印log ​	这种情况，一般是检查参数或者接口的时候，如果电脑不怎么行，打log 电脑也不怎么卡，打断点 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E5%BC%80%E5%90%AFdebug%E4%B9%8B%E8%B7%AF/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3view/">Android时间相关view</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">》 顺便推一下博客主页
+前言  话说，Android 上整时间相关的情况也是蛮多的，比如时间选择器，日期选择器，显示一个时钟，显示一个详细时间，验证码倒计时（计时器）等等。 选择器相关的就不多描述了，一般都是通过wheelVew 做滚动联动或者就是列表做联动，或者就是第3方的控件拖进来，当前属于笔记就不整这些了。 搬砖多年，突然看到基本Android基础书籍，才发现自己好多都忘记了。
+ 正文 模拟时钟 AnalogClock
+详细时间 DigitalClock
+计时器 这个就比较骚了，很少有想到有基础控件的，我看过很多都是handle 去实现，或者梦想点就是Rxjava,区别在于有些大佬杀界面重新进去会复活之前已经刷新过的倒计时，有 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3view/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E8%A1%8C%E9%AB%98%E5%92%8C%E6%96%87%E6%9C%AC%E6%98%BE%E7%A4%BA%E4%BA%8E%E8%AE%BE%E8%AE%A1%E5%86%B2%E7%AA%81/">Android行高和文本显示于设计冲突</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">》 顺便推一下博客主页
+前言  话说，Android textview 应该算是最常用的控件了。但是现在的设计文本大多数都是内容居中对齐。 但是 textview 却搞事情的有一个内间距。
+ 正文 1 &lt;item name=&#34;android:includeFontPadding&#34;&gt;false&lt;/item&gt; 将上面代码放到 全局的style中就可以达到效果了。 然后是行距，这个就需要手动算了。 android:lineSpacingExtra=&quot;3dp&quot;
+代码可以设置行高的，所以行间距 也可以不自己算了。
+结束 </p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E8%A1%8C%E9%AB%98%E5%92%8C%E6%96%87%E6%9C%AC%E6%98%BE%E7%A4%BA%E4%BA%8E%E8%AE%BE%E8%AE%A1%E5%86%B2%E7%AA%81/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dgg%E5%85%B3%E4%BA%8E%E5%90%84%E4%B8%AAmodel%E7%8B%AC%E7%AB%8B%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%E8%AE%BE%E8%AE%A1/">DGG关于各个model独立初始化内容设计</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">》 顺便推一下博客主页
+前言  一个项目通常会存在多个module，不同的model可能出现不同的初始化内容，为了防止各个模块相互引用或者不同内容初始化糅合到一起不便于后期维护。所以大佬提供了一种基于Java接口的不同module的初始化设计。
+ 参考内容:
+ IModuleInit 提供接口，其他模块初始化内容实现当前接口 (或许不需要单独初始化的内容可能不需要实现这个调调吧) ModuleLifecycleReflexs 静态类，用于存放其他模块初始化内容的实现类地址。 BaseModuleLifecycleConfig 基于ModuleLifecycleReflexs提供实现类生成 IModuleInit对象，初始化内容。 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dgg%E5%85%B3%E4%BA%8E%E5%90%84%E4%B8%AAmodel%E7%8B%AC%E7%AB%8B%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%E8%AE%BE%E8%AE%A1/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/">hexo&#43;Gitee pages 搭建个人主页</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/hexo' class="post_tag button button_translucent">hexo
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee' class="post_tag button button_translucent">gitee
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee-page' class="post_tag button button_translucent">gitee page
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5' class="post_tag button button_translucent">个人主页
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 顺便推一下博客目录
+之前整过一个Jekyll和静态网页的主页笔记，最近换季，导致感冒拉肚子，又为国庆生等等耽搁了快一个月了，原本打算这个系列在一周内整出来的，结果到现在还有2个TODO未实现。那么本篇主要级hexo.先上文档官网：
+gitee pages 官方文档
+Hexo 使用文档：https://hexo.io/docs/
+这个是用Node.js .
+既然我们用的IDEA,那么node,js也是需要安装的。必须安装。
+正文 如果你的Node.js 已经安装成功了。那么按照hexo 提供的教程走就好了。
+安装Hexo 先安装hexo：https://hexo.io/zh-cn/docs/
+安装2选1就好。
+创建执行HEXO  …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hexo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/hexo&#43;gitee-pages%E8%BF%9B%E9%98%B6/">Hexo&#43;Gitee pages 搭建个人主页进阶</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/hexo' class="post_tag button button_translucent">Hexo
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee' class="post_tag button button_translucent">gitee
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee-page' class="post_tag button button_translucent">gitee page
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5' class="post_tag button button_translucent">个人主页
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 之前整了一些笔记。
+[gitee+picgo 图床上传图片404](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/gitee 图床上传图片404.md)
+[基于html拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/如何基于gitee pages 搭建一个属于自己的主页.md)
+[基于Jekyll拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/2020-09-29-基 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/hexo&#43;gitee-pages%E8%BF%9B%E9%98%B6/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hugo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/">Hugo&#43;Gitee pages 搭建个人主页</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/hugo' class="post_tag button button_translucent">Hugo
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee' class="post_tag button button_translucent">gitee
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee-page' class="post_tag button button_translucent">gitee page
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5' class="post_tag button button_translucent">个人主页
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 之前整过一个静态网页，一个Jekyll，一个hexo.话说，如果我知道的不完整，我怎么才能知道什么才是适合自己的呢？那么，就开整。
+顺便推一下博客目录
+正文 老规矩，还是先贴官方教程:
+Gitee pages 适用文档: https://gitee.com/help/articles/4136#article-header0
+Hugo 使用文档：https://gohugo.io/documentation/
+ Hugo is the world’s fastest static website engine. It’s written in Go (aka Golang) and developed by bep, …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Egitee-pages&#43;hugo%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Ehogo%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/">Hugo&#43;Gitee pages 搭建个人主页</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/hugo' class="post_tag button button_translucent">Hugo
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee' class="post_tag button button_translucent">gitee
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee-page' class="post_tag button button_translucent">gitee page
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5' class="post_tag button button_translucent">个人主页
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 在对比了Jekyll，hexo和hugo 之后，我决定使用Hugo搭建属于自己的主页。自己写静态网页这个调调就基本上放弃了。因为打算认真的写笔记什么的了。 选择hogo 原因还是蛮简单的，主要是他主题提供了Demo。虽然Jekyll主题可以下载别人项目的源码，但是还是需要去读和修改的。 顺便推一下博客目录
+结束 http://localhost:1313/images/avatar.jpg 谢谢光临，若觉得还行麻烦点一下赞，若觉得写得垃圾，欢迎批评指正。笔者知道自己文笔和表达能力很弱，如果您可以提供点宝贵的意见不胜感激。谢谢。
+今天也可以是元气满满的一天哦。 更新需要审核。更新通常优先更新到gitee上面。
+博客目录</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%9F%BA%E4%BA%8Ehogo%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/hogo&#43;gitee-pages%E8%BF%9B%E9%98%B6/">Hugo&#43;Gitee pages 搭建个人主页进阶</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/hugo' class="post_tag button button_translucent">Hugo
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee' class="post_tag button button_translucent">gitee
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee-page' class="post_tag button button_translucent">gitee page
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5' class="post_tag button button_translucent">个人主页
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 之前整了一个Gitee page 的笔记。
+[gitee+picgo 图床上传图片404](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/gitee 图床上传图片404.md)
+[基于html拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/如何基于gitee pages 搭建一个属于自己的主页.md)
+[基于Jekyll拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/hogo&#43;gitee-pages%E8%BF%9B%E9%98%B6/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/java-%E4%BF%AE%E9%A5%B0/">java部分修饰符</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java' class="post_tag button button_translucent">java
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%BF%AE%E9%A5%B0%E7%AC%A6' class="post_tag button button_translucent">修饰符
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 明明刚刚在写另外一篇博客的，然后准备资料的时候发现了一些懵逼的东西。这个明显触及到了我的知识点盲区。主要是有一种很乱的感觉，没错是我菜，见识短浅啊。
+直接上教程runoob Java 教程。本篇主要介绍两个修饰符 final，volatile。当然了runoob java 修饰符 这个教程把修饰符都讲完了。为啥写，主要是缺点笔记。
+还有是为了认真工作嘛。
+如果领导路过不打招呼又在摸鱼影响不好，反正都是在认真工作的样子。。
+那么我们就开始罗列知识点:（具体使用请参考 上面教程）   final 变量：
+final 表示&quot;最后的、最终的&quot;含义，变量一旦赋值后，不能被重新赋值。被 final 修饰的实例变量必须显 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/java-%E4%BF%AE%E9%A5%B0/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/">Jekyll&#43;Gitee pages 搭建个人主页</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/jekyll' class="post_tag button button_translucent">jekyll
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee' class="post_tag button button_translucent">gitee
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee-page' class="post_tag button button_translucent">gitee page
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5' class="post_tag button button_translucent">个人主页
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 顺便推一下博客目录 。之前写过一个基于静态html的笔记。
+正文 Jekyll 既然自己写静态网页对于我这种小白而言太复杂了，那么用博客主页生成工具就可以了，毕竟鲁迅曾经说过&quot;成年人最大的优点就是及时止损&quot;。
+Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/。
+这个要安装Ruby 环境？ 这丫的感觉一个脚本语言，我觉得我还是用html 比较好，毕竟我这个是会的。
+基于IDEA 安装环境 先整一个ruby教程runoob Ruby 教程 。这个感觉和Python很像嘛。那就开整。这个调调的使用感觉和Node.js 很像啊，不会要Node.js 环境吧。怕是需要看 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/2020-09-29-%E5%9F%BA%E4%BA%8Egitee-pages&#43;jekyll%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/">Jekyll&#43;Gitee pages 搭建个人主页进阶</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/jekyll' class="post_tag button button_translucent">jekyll
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee' class="post_tag button button_translucent">gitee
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee-page' class="post_tag button button_translucent">gitee page
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5' class="post_tag button button_translucent">个人主页
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 之前写了点gitee pages 相关的笔记。
+[基于html拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/如何基于gitee pages 搭建一个属于自己的主页.md)
+[基于Jekyll拥有自己的主页](https://gitee.com/lalalaxiaowifi/pictures/blob/master/博客/其他/2020-09-29-基于Gitee pages+Jekyll拥有一个属于自己的主页.md)
+[基于Hexo拥有自己的主 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/gitee-pages-jekyll%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%94%BE%E5%88%B0%E5%AD%90%E7%9B%AE%E5%BD%95%E5%92%8C%E9%9D%9E%E5%90%8C%E5%90%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96objec%E5%92%8Cmap%E4%BA%92%E7%9B%B8%E8%BD%AC%E6%8D%A2/">object与map项目转换</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/map' class="post_tag button button_translucent">map
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/object' class="post_tag button button_translucent">object
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/java' class="post_tag button button_translucent">java
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%8F%8D%E5%B0%84' class="post_tag button button_translucent">反射
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 搬砖生活中，有一种转换叫做序列化和反序列化。但是本文和这个没有多少关系，我们知道JAVA 的对象的存储是分键和值的，emmmm？map 好像也是哦，我们可能会遇到一个判断一个对象中是否包含多个值或者一个json 中只需要某个值的情况，那么是否可以针对简单对象提供一个json 转map的能力呢？emmmm？gson 实现了，比如这个样子：
+1new Gson().fromJson(&#34;&#34;,new TypeToken&lt;Map&lt;String,Object&gt;&gt;(){}.getType()) 但是，这个和本文还是没有关系。我只是顺便引导一下。需要对象转map 的情况通常在与服务器互动过程中。我们定义 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96objec%E5%92%8Cmap%E4%BA%92%E7%9B%B8%E8%BD%AC%E6%8D%A2/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/gitee-%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87404/">picgo&#43;gitee配置图床404</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E5%9B%BE%E5%BA%8A' class="post_tag button button_translucent">图床
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee' class="post_tag button button_translucent">gitee
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/picgo' class="post_tag button button_translucent">picgo
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 之前逛掘金沸点的时候。得到了某些大佬的指点，然后知道了一个叫图床的神器，反正都是写笔记，搞一个图床也没有啥问题，表示非常喜欢md 的笔记风格。
+顺便推一下博客目录
+正文 我是通过 picgo+ gitee 图床的。这个教程很多，都写的蛮好的，就不贴了。今天准备认真工作的时候，发现图床上传不了图片，抛了一个404。具体log 稍后再贴。原因也很简单。gitee 的图床插件有两个。我最开始用的是第一个，也就是第一天使用的时候是没有问题的。
+但是昨天404，我换成了另外一个就好了，今天又变成了第一个了？于是我把第一个禁用了，换成了第2个。
+图片上传404 解决方案 如果安装的插件是第一个出现上传图片404，我遇到的解决方式就是先把第 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/gitee-%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87404/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/python/python%E5%85%A5%E9%97%A8%E6%90%9E%E4%BA%8B/">Python入门搞事</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/python' class="post_tag button button_translucent">python
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 之前无聊逛github的时候，发现了一个Python爬虫的教程库，于是顺手点了一个赞。这里贴一下:https://github.com/wistbean/learn_python3_spider 。今年打算努力下，所以TODO 写了一大堆，然后专升本也要在线学习，晚上去学校上课，还要备考英语，Android 技术方向上又整了一个在线课程，虽然最近没有啥事情，但是总感觉事情整不完，特别是在线学习的这个调调，认真听吧，不好说，挂课吧，不会js,然后之前的也用不起了，手动点吧，一分钟一点，这一天天的就啥事情不用干了。本着能多学一点是一点的态度，我决定通过selenium，看看自己能不能整一个挂课脚本出来。 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/python/python%E5%85%A5%E9%97%A8%E6%90%9E%E4%BA%8B/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/study_page_3/">统考英语B作文</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">第六部分 作文全新版 机考作文大致分以下10类, 精选频率高的8类范文8篇, 议论文12篇, 书信通知等4篇,共计14篇,学会套用 提示: 写作部分满分10分, 即使不能根据要求写出文章, 也不能空白, 写上自己认识的词或句子,都有可能拿到一定的辛苦分. 作文要求80字, 系统会随时告诉你此时字数是多了少,所以一定要写满80字, 最好是写到100字左右. 对于没有基础的考生, 如果遇见完全陌生的考题的话,就套用万能范文,可以拿到4分以上. 注意作文千万不能空白，只要写了就有分数，作文就在下面模板里面，同学们有空多看
+万能模板： 适用所有作文类型，如果基础很差， 看不了太多就把以下6小段掌握。 I think (此处抄写作文题目) …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/study_page_3/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/catalogue/">统考英语B目录</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">模拟题  电子科技大学模拟题1 电子科技大学模拟题2 电子科技大学模拟题3 电子科技大学模拟题4 电子科技大学模拟题5 电子科技大学模拟题6 电子科技大学模拟题7 电子科技大学模拟题8 电子科技大学模拟题9 电子科技大学模拟题10  资料  统考英语B交际英语 统考英语B作文 统考英语B完形填空 统考英语B英汉翻译 统考英语B词汇与结构 统考英语B重点单词 统考英语B重点短语句型 统考英语B阅读理解第2部分 统考英语B阅读理解第一部分  笔记  统考英语B交际英语涉及词汇 统考英语B作文小抄 统考英语B英汉翻译词汇 统考英语B阅读理解涉及单词  </p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E8%8B%B1%E8%AF%AD/%E7%BB%9F%E8%80%83%E8%8B%B1%E8%AF%ADb/catalogue/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1idea%E5%92%8Candroid-studio%E4%BA%92%E7%9B%B8%E5%88%87%E6%8D%A2%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE%E7%9A%84%E9%97%AE%E9%A2%98/">记录一次idea和Android Studio互相切换打开项目的问题</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">》 顺便推一下博客主页
+前言  参考资料：gradle 参考资料：android build gradle   最近因为经常导Demo的原因，然后Android studio 对有些第三方aar的源码预览不怎么提现良好，所以经常是idea和Android studio 互相切换， 然后就发现，idea 经常让我升级一些gradle 的版本号，不升级就运行不起，但是我在Android studio 中就可以运行呀。 但是根据idea 提示的gradle 版本升级了又不一定下载下来，或者版本太高了。Android 的build tools 的版本不支持这么高的版本号。 于是便有了记录下 build tools 和gradle 对应版本的 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1idea%E5%92%8Candroid-studio%E4%BA%92%E7%9B%B8%E5%88%87%E6%8D%A2%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE%E7%9A%84%E9%97%AE%E9%A2%98/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/">静态网页&#43;Gitee pages 搭建个人主页</a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Oct 1, 2020</span>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5' class="post_tag button button_translucent">静态网页
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee' class="post_tag button button_translucent">gitee
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/gitee-page' class="post_tag button button_translucent">gitee page
+    </a>
+    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5' class="post_tag button button_translucent">个人主页
+    </a>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 话说，今天逛沸点的时候，看到一个大佬在推他的个人主页，感觉很有意思。
+这么好的东西，其实我也想要。那么就开整。需要先找到官方文档 ，毕竟官方提供的才是原汁原味的嘛(但是有些人提供的就没有那个味道了)。
+但是呢，东西是一个好东西，可惜我不会。gitee 推荐了3中静态网页方案，Jekyll、Hugo、Hexo ，这个，巧了，我又不会。突然想起大学的老师，老师们好像有教静态网页的吧，巧了，我好像没有去上课。
+但是，作为一个成年人，敌方这么努力的守水晶，我都要想办法推掉它的人，岂是这种小问题能够阻挡的。
+ Jekyll、Hugo、Hexo 究竟是什么？
+Jekyll、Hugo、Hexo 是简单的博客形态的静态站点生产机器。它有一个模 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8Egitee-pages-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%BB%E9%A1%B5/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-context/"></a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Jan 1, 0001</span>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 我去，上午酝酿了半天，吃饭没有保存，白写了这么多字。有点难受。
+说正事吧，Context 这个对象几乎贯穿Android 所有事物。而 像Application，Activity 都是其间接子类。而这么屌的还有很多，这里就不一一列举了，直接上google Android Context 。Context 子类这么多，最常用的也就是 Application 和Activity了，而这两个子类都是有生命周期的。那么这两个子类获取到的Context有什么不同呢？
+  Application 和Activity都有自己的生命周期，那么获取到的Context 的也是有生命周期的。
+  JAVA 继承实现的关系，Application …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-context/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-%E9%9D%A2%E8%AF%95%E4%B9%8B%E5%BF%85%E9%97%AE%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"></a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Jan 1, 0001</span>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">Android 面试之必问性能优化 对于Android开发者来说，懂得基本的应用开发技能往往是不够，因为不管是工作还是面试，都需要开发者懂得大量的性能优化，这对提升应用的体验是非常重要的。对于Android开发来说，性能优化主要围绕如下方面展开：启动优化、渲染优化、内存优化、网络优化、卡顿检测与优化、耗电优化、安装包体积优化、安全问题等。
+1，启动优化 一个应用的启动快慢是能够直接影响用户的使用体验的，如果启动较慢可能会导致用户卸载放弃该应用程序。
+1.1 冷启动、热启动和温启动的优化 1.1.1 概念 对于Android应用程序来说，根据启动方式可以分为冷启动，热启动和温启动三种。
+ 冷启动：系统不存在App进程（如APP首次启动 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-%E9%9D%A2%E8%AF%95%E4%B9%8B%E5%BF%85%E9%97%AE%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E4%B8%AD%E5%85%B3%E4%BA%8E%E9%94%81%E7%9A%84%E4%BD%BF%E7%94%A8/"></a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Jan 1, 0001</span>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 顺便推一下博客目录
+结束 谢谢光临，若觉得还行麻烦点一下赞，若觉得写得垃圾，欢迎批评指正。笔者知道自己文笔和表达能力很弱，如果您可以提供点宝贵的意见不胜感激。谢谢。
+今天也可以是元气满满的一天哦。 更新需要审核。更新通常优先更新到gitee上面。
+博客目录</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E4%B8%AD%E5%85%B3%E4%BA%8E%E9%94%81%E7%9A%84%E4%BD%BF%E7%94%A8/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/jetpack/reamme/"></a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Jan 1, 0001</span>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">��ǰĿ¼Ϊjetpack ��������ѧϰ��  �ʼ����ã���Ҫ���޸� series��
+ series = [&quot;Jetpack&quot;,&quot; &quot;] categories = [ &quot;android����&quot; ]</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/jetpack/reamme/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/kotlin/reamme/"></a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Jan 1, 0001</span>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">��ǰĿ¼Ϊkotlin ѧϰ  �ʼ����ã���Ҫ���޸� series��
+ date = &quot;2020-10-01&quot; title = &quot;�ճ���שģ��&quot; description = &quot;�ճ���שģ��&quot; series = [&quot;kotlin&quot;,&quot; &quot;] categories = [ &quot;android����&quot; ]
+todo        </p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/kotlin/reamme/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E8%96%AF%E7%89%87c%E7%AB%AFandroid%E7%95%8C%E9%9D%A2%E5%A4%9A%E7%8A%B6%E6%80%81%E5%88%86%E5%B1%82%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8/"></a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Jan 1, 0001</span>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">薯片C端android界面多状态组件（LoadSir）使用 参考资料：  GitHub LoadSir  使用  导入：compile 'com.kingja.loadsir:loadsir:1.3.8'
+ 初始化  当前组件支持通过class 填入多个 状态代表的view层，支持设置默认展示层，支持设置每个状态层的回调
+ 薯片自定义layout   错误样式： ErrorCallback EmptyCallback    loading 样式：​	LoadingCallback
+  连接超时：TimeoutCallback
+  默认显示 LoadingCallback
+全部初始化 1LoadSir.beginBuilder() 2 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E8%96%AF%E7%89%87c%E7%AB%AFandroid%E7%95%8C%E9%9D%A2%E5%A4%9A%E7%8A%B6%E6%80%81%E5%88%86%E5%B1%82%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/room/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96room%E6%9F%A5%E7%9C%8B%E8%A1%A8%E7%BB%93%E6%9E%84/"></a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Jan 1, 0001</span>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 顺便推一下日常搬砖sqlite目录 。
+接上面内容。因为room会生根据 Database成一个 impl.java 文件，通过这个class可以看到创建表的sql。通过查看sqlite studio 需要把几个文件都复制到同一个文件夹中才可以查看完整的表，我通过room 创建的数据库有.db，.db-shm,.db-wal这3个后缀名文件，然后通过Stetho 发现我的id 竟然有两个，但是在Demo 上加上 Stetho 发现 Stetho获取的有一个rowid。emmmm？感觉情况完全不一样，所以我决定看看。
+sqlite 查看工具 之前找到了一篇博客对sqlite 表查看写得很详细的。Android Studio查 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/room/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96room%E6%9F%A5%E7%9C%8B%E8%A1%A8%E7%BB%93%E6%9E%84/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/room/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E4%B9%8Broom/"></a>
+      </h3>
+      <div class="post_meta">
+  <svg class="icon">
+  <use xlink:href="#calendar"></use>
+</svg>
+  <span class="post_date">
+    Jan 1, 0001</span>
+</div>
+
+    </div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">前言 欢迎光临。
+顺便推一下日常搬砖sqlite目录 。
+现在还是主要总结一些简单一点的，太复杂了的还是往后排一下，反正我是记得我留了不少的坑等着填，现在先写这个吧，免得分心又拖更了。
+之前有简单的描述了下sqlite的增删改查，google 还是推荐使用room android 的。国内也有很多大佬写的很详细，比如说Android Room 官方指南 这个感觉就很全面详细，我看完我就觉得，这个room 相关的博客我都不用写了，直接复制就好。通过这个大佬的博客呢，我找到了我们的组织 Android 的github 地址。就好比流浪多年的我找到了家的感觉。当然也不是之前不知道，就好比之前不知道家里面有宝贝，突然有一天一个同乡 …</p>
+          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/sqlite/room/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96sqlite%E4%B9%8Broom/" class="excerpt_more button">阅读更多</a>
+        </div>
+      </div>
+    </div>
+  </li>
+
       <li class="post_item">
   <div class="excerpt">
     <div class="excerpt_header">
@@ -155,7 +977,7 @@
       <div class="excerpt_footer">
         <div>
           <p class="pale">百度文库参考地址
-摘要 &quot;名称&quot;是一款采用JAVA语言和kotlin语言编写的一款视频播放APP，如今处于信息高速运转的时代，  付费流量的降价和WIFI的普及以及网速的变快，都在不同程度上促进了网络视频的发展，如今的信息时代也逐渐演变为 视频信息时代，而抖音、网络教育、直播等都是如今广受欢迎的视频信息获取平台。大量的信息内容提供商也开始 进入视频信息推广中来，其中不乏以视频创建的公司。本文基于JAVA和kotlin技术和Android Studio 4.1开发工具， 采用java 8和Android X 开发了一个操作简单，功能齐全的&quot; &quot;App。整个app分为几个模块，实现了列表播放，单播 …</p>
+摘要 视频播放器是一款采用JAVA语言和kotlin语言编写的一款视频播放APP，如今处于信息高速运转的时代， 付费流量的降价和WIFI的普及以及网速的变快，都在不同程度上促进了网络视频的发展，如今的信息时代也逐渐演变为 视频信息时代，而抖音、网络教育、直播等都是如今广受欢迎的视频信息获取平台。大量的信息内容提供商也开始 进入视频信息推广中来，其中不乏以视频创建的公司。本文基于JAVA和kotlin技术和Android Studio 4.1开发工具， 采用java 8和Android X 开发了一个操作简单，功能齐全的&quot; &quot;App。整个app分为几个模块，实现了列表播放，单播放器播放，小视频播放 …</p>
           <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E6%9D%82%E5%AD%A6/%E4%B8%93%E5%8D%87%E6%9C%AC/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1-%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/" class="excerpt_more button">阅读更多</a>
         </div>
       </div>
@@ -193,738 +1015,6 @@
     </div>
   </li>
 
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-adb%E5%B8%B8%E7%94%A8%E6%B1%87%E6%80%BB/">android adb常用功能汇总</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/adb' class="post_tag button button_translucent">adb
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">正文 adb 安装apk adb install D:\androidProject\DGGChips\app\d_environment\release\d_environment2021061001.apk
-adb app 启动时长 adb shell am start -W -n com.chips.cpscustomer/com.chips.module_main.ui.start.StartPageActivity</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-adb%E5%B8%B8%E7%94%A8%E6%B1%87%E6%80%BB/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-x-%E4%B8%8B%E7%9A%84fragment-%E6%87%92%E5%8A%A0%E8%BD%BD-/">androidX下的fragment懒加载</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/fragment' class="post_tag button button_translucent">fragment
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">前言 fragment懒加载到处都可以搜索到。2021年7月26 在调试本地fragment懒加载的时候，发现未达到效果，搜索懒加载相关代码的时候，偶然发现android X下的懒加载写法。 故记录一波。
-参考资料  Google 在 Androidx 在 FragmentTransaction 中增加了 setMaxLifecycle 方法来控制 Fragment 所能调用的最大的生命周期函数。 在 FragmentPagerAdapter 与 FragmentStatePagerAdapter 新增了含有 behavior 字段的构造函数。如果 behavior …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android-x-%E4%B8%8B%E7%9A%84fragment-%E6%87%92%E5%8A%A0%E8%BD%BD-/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E4%B8%8A%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">android上的设计模式</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">》 顺便推一下博客主页
-前言  今天写demo的时候，顺便发现了自己对设计模式感觉搞迷糊了。然后就整理一波设计模式。现在android常用的是mvc，mvp,mvvm。其他设计模式先放过了，先不整，主要是用得少。话说面试的时候，一般都会问自己写代码的设计模式，才出来的时候说mvc,基于大佬的代码复制一套mvp,然后基于jetpack说是mvvm.似乎从来没有仔细理解过这几种设计模式的优缺点，为啥要用这些设计模式等等。 为啥用，因为大家都在用，我不用就落伍了，这可能是我这类搬砖工这么用的原因。我记得有大佬在自己博客上说过类似的话.&quot;设计模式，他是一种思维逻辑，而不是一种简单的代码规范，要体验到诸多设计模式的优点，只有自己用得 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E4%B8%8A%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/android%E4%B8%AD%E5%9F%BA%E4%BA%8Erxjava%E5%AE%9E%E7%8E%B0%E4%BA%8B%E4%BB%B6%E9%87%8D%E5%A4%8D%E6%8E%A7%E5%88%B6/">android中使用Rxjava实现事件重复控制笔记</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/android' class="post_tag button button_translucent">android
-    </a>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/rxjava' class="post_tag button button_translucent">Rxjava
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">》 顺便推一下博客主页
-前言 资料 Rxjava Android 版本 github 地址 Rxjava 地址 Rxjava 官方文档地址 Rxjava javaDoc地址 RxBinding GitHub地址
-QWQ  android搬砖久了，也慢慢习惯了。最近发现自己对重复点击，或者方法重复调用就没有整理过，使用方式也大概是需要处理的地方处理。通常是记一个时间，然后算两个时间。点击事件倒是封装了简单的。方法调用全靠逻辑控制。 IDEA你已经是成熟的编辑器了，该学会自己写代码了。最近搬砖的时候，发现项目中竟然有Rxjava和Rxbinding.emmmmmm?竟然有这个。那么事件重复不就解决了，别问，问就是才入坑。
- 正文 点击事 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/android%E4%B8%AD%E5%9F%BA%E4%BA%8Erxjava%E5%AE%9E%E7%8E%B0%E4%BA%8B%E4%BB%B6%E9%87%8D%E5%A4%8D%E6%8E%A7%E5%88%B6/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E4%B8%AD%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BD%BF%E7%94%A8/">android中接口的使用</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">》 顺便推一下博客主页
-前言  java 接口用的蛮多的。甚至是基础内容。但是工具的使用的好坏还是看人。
- 结束 </p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E4%B8%AD%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BD%BF%E7%94%A8/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E5%9F%BA%E4%BA%8Emmkv%E6%95%B4%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98/">android基于MMKV整一个数据缓存</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/mmkv' class="post_tag button button_translucent">mmkv
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">》 顺便推一下博客主页
-前言  这是一个巨骚的想法，从某些意义上讲，是可以使用的，但是这个主要是作为一种骚想法去实现。 mmkv介绍上说的是 比SharePreferences 性能更好，SharePreferences支持多xml 存储，他也支持。SharePreferences初始化后就存储到内存中了，他不会也是这个样子吧，他本身就是用来替换这个的。 所以不建议使用 mmkv 做接口数据缓存。但是数据库又不想写，骚操作嘛，那就无所谓了。 自从我知道 Java 可以通过某些手段获取到其实现子类之后，骚想法是一个接着一个，但是这个调调尤为突出。 但是真的不建议 这个用来存储接口数据，嗯，真的不建议。
- 结束 </p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E5%9F%BA%E4%BA%8Emmkv%E6%95%B4%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%BB%9A%E5%8A%A8%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%E7%9B%B8%E5%85%B31/">android滚动事件相关-1</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">》 顺便推一下博客主页
-前言  现在第3方的或者android自己的写的太好了。导致大多数情况下，滑动处理都不需要自己处理了，比如说吸顶效果。比如说两个滚动view联动。 参考资料
- 正文  比如说吸顶效果的实现方式有多种，感觉最完美的CoordinatorLayout。
-  CoordinatorLayout是android support design推出的新布局，主要用于作为视图根布局以及协调子控件的行为，而Behavior就是用于直接子控件来协调自身CoordinatorLayout以及和其他子控件的关系，使用Behavior的控件必须是直接从属于CoordinatorLayout。 在传统的事件分发流程中，在子控件处理事件 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%BB%9A%E5%8A%A8%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%E7%9B%B8%E5%85%B31/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1android%E7%9B%B8%E5%85%B3%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/">Android相关代码模板</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">正文  基于DGG Android base 生成，activity,lazyFragment,fragment等等。 https://freemarker.apache.org/docs/index.html
- 文件  MVVM(DGG)Activity activity模板 MVVM(DGG)Fragment fragment模板，提供lazyfragment模板和fragment模板  Activity生成内容  基于mvvm 的activity viewModel viewRequest layout(databinding 外部层)  fragment相关生成类型  可选lazyFragment和fragment …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E9%A1%B6%E5%91%B1%E5%91%B1android%E7%9B%B8%E5%85%B3%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E8%87%AA%E5%AE%9A%E4%B9%89toast/">Android自定义Toast</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/toast' class="post_tag button button_translucent">toast
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">》 顺便推一下博客主页
-前言  话说toast 这个调调 在Android上使用蛮频繁的。通常就是通过自己的自定义，如果不自定义的话，可能会提一个 toast重复提示的bug，虽然这个可以通过其他逻辑控制与限制。 写笔记嘛，那就都写。
- 正文 toast 单例  toast 自定义1，单例。直接抄一个阿里的toast 单例。
- 1 2public class ToastUtils { 3 4 private static Toast mToast; 5 private static Field mFieldTN; 6 private static Field mFieldTNHandler; 7 8 static { 9 if …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E8%87%AA%E5%AE%9A%E4%B9%89toast/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/coordinatorlayout%E7%AE%80%E5%8D%95%E5%8D%95%E5%B1%82%E5%90%B8%E9%A1%B6%E6%95%88%E6%9E%9C/">Coordinatorlayout简单单层吸顶效果</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%9D%BF' class="post_tag button button_translucent">模板
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">》 顺便推一下博客主页
-前言 1 &lt;androidx.coordinatorlayout.widget.CoordinatorLayout 2 android:id=&#34;@+id/coordinator&#34; 3 android:layout_width=&#34;match_parent&#34; 4 android:layout_height=&#34;match_parent&#34;&gt; 5 6 &lt;!--AppBarLayout继承自LinearLayout--&gt; 7 &lt;androidx.core.widget.NestedScrollView 8 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/coordinatorlayout%E7%AE%80%E5%8D%95%E5%8D%95%E5%B1%82%E5%90%B8%E9%A1%B6%E6%95%88%E6%9E%9C/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/coordinatorlayout%E7%AE%80%E5%8D%95%E5%A4%9A%E5%B1%82%E5%90%B8%E9%A1%B6%E6%95%88%E6%9E%9C/">Coordinatorlayout简单单层吸顶效果</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%9D%BF' class="post_tag button button_translucent">模板
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">》 顺便推一下博客主页
-前言 1 &lt;androidx.coordinatorlayout.widget.CoordinatorLayout 2 android:id=&#34;@+id/coordinator&#34; 3 android:layout_width=&#34;match_parent&#34; 4 android:layout_height=&#34;match_parent&#34;&gt; 5 6 &lt;!--AppBarLayout继承自LinearLayout--&gt; 7 &lt;androidx.coordinatorlayout.widget.CoordinatorLayout 8 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/coordinatorlayout%E7%AE%80%E5%8D%95%E5%A4%9A%E5%B1%82%E5%90%B8%E9%A1%B6%E6%95%88%E6%9E%9C/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dagger2%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8B/">Dagger2了解下</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale"> 顺便推一下博客主页
- 正文 </p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dagger2%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8B/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dart%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">Dart基础语法</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale"> 顺便推一下博客主页
- 正文 </p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/dart%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/databinding%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E5%91%80/">Databinding笔记整理呀</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">顺便推一下博客主页
- 前言  由于现在jetpack的流行，这个还是蛮香的，之前databinding才出来的时候，简单了解过。那个时候还没有写本地entity的习惯，数据都是依赖于服务器模型。现在好了，都是本地模型和服务器模型互转。就没有这个问题了， 这个调调还是可以省很多时间精力的。但是这个就得考验设计能力了，不像之前随便搬砖什么的。
- 正文 开启databinding的使用能力  有一段时间迷糊了，以为需要手动导入包什么的。其实只需要配置一下，gradle就帮忙导入了，不需要在dependencies声明。比如像这个样子:
- 1// 启用databinding 放到android 下面。 2 android { 3 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/databinding%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E5%91%80/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/flutter/flutter%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%BF%AE%E5%A4%8D%E6%B1%87%E6%80%BB/">flutter常见问题汇总</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB' class="post_tag button button_translucent">问题汇总
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">》 顺便推一下博客主页
-前言  当前问题用于记录flutter 常见问题汇总
- 正文 Waiting for another flutter command to release the startup lock... 关闭Android Studio 打开flutter安装目录/bin/cache 删除lockfile文件 此时可在命令行再执行flutter相关命令，完美解决</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/flutter/flutter%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%BF%AE%E5%A4%8D%E6%B1%87%E6%80%BB/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/git%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F%E5%90%88%E9%9B%86/">git使用方式合集</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/git' class="post_tag button button_translucent">git
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">顺便推一下博客主页
- git 基础配置 下载git软件: 运行git是在任意目录或桌面下,右键选择git base here 任意目录下打开git输入：
-1//初始化个人信息 21.git config --global user.name &#34;你的名字或昵称&#34;	//初始化个人信息 32.git config --global user.email &#34;你的邮箱&#34;	&lt;&lt;第一次提交,把现有项目提交到git仓库： 在当前文件夹下:
-11:git init //初始化git仓库 22:git remote add origin xxxxxx.git	//与远程仓库链接 33:git add .	// …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/git%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F%E5%90%88%E9%9B%86/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/git%E5%AD%90%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/">git子模块的使用</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">》 顺便推一下博客主页
-前言  git子模块的使用
- 正文  这个调调主要是为了解决模块来着不同地方，但是要合在一起使用，而且模块代码属于开发迭代的时候，如果每次打包使用
- 结束 </p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/git%E5%AD%90%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E4%B9%8Bjava%E5%8F%8D%E5%B0%84/">Java反射大杂烩</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">顺便推一下博客主页
- 正文  话说，Java 反射还是蛮重要的，但是感觉这个调调破坏了单例模型。但是用着还是很香的，我记得有大佬写过博客说，不建议使用反射来着，找不到了。以后找到了贴出来。 先说用反射图啥，比如说，我只想知道一个类的变量啊。或者我只有类的名称想要变量啊，或者是我想直接调用方法啊，等等。
- 利用反射创建fragment  话说，这个可能是Android最常见的反射使用了。使用方式: Class.forName(className).newInstance();
- 1private void showBottomFragment() { 2 String className = …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E4%B9%8Bjava%E5%8F%8D%E5%B0%84/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/kotlin%E5%9C%A8android%E5%BC%80%E5%8F%91%E4%B8%8A%E7%9A%84%E4%BD%93%E9%AA%8C/">kotlin在Android上的体验</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale"> 顺便推一下博客主页
- 正文  之前就整过一个用Java写法写kotlin的项目。感觉嘛，就是没有用到kotlin的优势。虽然现在Java版本感觉挺优雅的(就是很舒服)。但是现在Android中jetpack demo竟然是kotlin写的，那就需要懂kotlin写法了，要不然学习难度会加大的啊。 那么直接开整。其实基础语法都差不多，就整不同点。直接上菜鸟教程。https://www.runoob.com/kotlin/kotlin-tutorial.html
- 返回值类型 kotlin是写在方法后的。如果没有返回值就可以不写。
-1fun sum(a: Int, b: Int): Int { // Int 参数，返回值 Int 2 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/kotlin%E5%9C%A8android%E5%BC%80%E5%8F%91%E4%B8%8A%E7%9A%84%E4%BD%93%E9%AA%8C/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/mpaas%E7%9B%B8%E5%85%B3%E6%96%87%E6%A1%A3%E6%B1%87%E6%80%BB/">Mpaas 相关文档汇总</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-    <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/mpaas' class="post_tag button button_translucent">mpaas
-    </a>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">》 顺便推一下博客主页
-前言  mpaas 主页  正文 工作空间相关  开始配置mpaas 的时候，会从阿里后台下载一个config文件。 android 需要提供正式环境的apk，然后下载一个config 文件。 内容大概都是这个样子的。因为有多个工作空间，所以这个调调，就有多个，当然字段是一样的，就是值不一样。下面内容被删除了部分信息，保留字段了。无法直接使用。
- 1{ 2	&#34;appId&#34;:&#34;&#34;, 3	&#34;appKey&#34;:&#34;&#34;, 4 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/dgg/mpaas%E7%9B%B8%E5%85%B3%E6%96%87%E6%A1%A3%E6%B1%87%E6%80%BB/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/">Mpaas其他组件</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">##导入包
- mpaas 提供Android studio 插件，在插件中选择使用。
- 1// ui 库 2 api &#39;com.mpaas.android:antui&#39; AUTabBarItem  需要通过外层布局包裹，这个只是一个文本加图标的组合体。每个view独立，基础使用无法达到Android中 tablayou 切换时候，底部条平滑滚动的效果。因为相对独立，所以可能出现同时选中两个的情况，需要代码逻辑控制。
- xml 1&lt;com.alipay.mobile.antui.bar.AUTabBarItem 2 android:layout_width=&#34;0dp&#34; 3 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/">Mpaas其他组件-AUCheckIcon </a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">##导入包
- mpaas 提供Android studio 插件，在插件中选择使用。
- 1// ui 库 2 api &#39;com.mpaas.android:antui&#39; 正文  https://help.aliyun.com/document_detail/71740.html?spm=a2c4g.11186623.6.1505.535331de0J0Ddm 基于android.widget.CheckBox。
- AUCheckIcon  AUCheckIcon 组件用于实现选择框的 IconView。的意思是图标需要通过 IconView类似的设置吗，但是IconView 的设置图标是setIconByName. …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/">Mpaas其他组件-切换栏组件</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">##导入包
- mpaas 提供Android studio 插件，在插件中选择使用。
- 1// ui 库 2 api &#39;com.mpaas.android:antui&#39; 切换栏组件  com.alipay.mobile.antui.segement.AUSegment
- 自定义属性 10.0.20 及以后版本添加了 scroll 属性。
-   属性名 用途 类型     tabCount Tab 数量(如果说这个值定义为2，但是tab数量有3个，只会显示前两个tab)，不设置这个可能不会均分父布局 integer   tab1Text Tab1 文案 string，reference   tab2Text Tab1  …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/">Mpaas其他组件-刷新</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">##导入包
- mpaas 提供Android studio 插件，在插件中选择使用。
- 1// ui 库 2 api &#39;com.mpaas.android:antui&#39; 刷新组件  AURefreshListView 这个本身就是一个listview. AUPullRefreshView 这个是一个容器，需要内部添加。  AURefreshListView xml 使用，本身就是一个listview.不用内部填充listview.
-1 &lt;com.alipay.mobile.antui.load.AURefreshListView 2 android:id=&#34;@+id/refresh_list&#34; …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/">Mpaas其他组件-图标</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">##导入包
- mpaas 提供Android studio 插件，在插件中选择使用。
- 1// ui 库 2 api &#39;com.mpaas.android:antui&#39; AUIconView  资源化的图标和阿里提供的图标。两种使用图标方式。
-AUIconView 为 iconfont 矢量图控件，可以同时实现 TextView 及 ImageView 的功能。
-iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 的 TTF 字体文件，定义特殊的 Unicode 码对应一类图片字体。也就是说，iconfont 相当于是加载了一个字体，一个字体对应了多张图片， …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/">Mpaas其他组件-开关组件</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">##导入包
- mpaas 提供Android studio 插件，在插件中选择使用。
- 1// ui 库 2 api &#39;com.mpaas.android:antui&#39; 正文  1package com.alipay.mobile.antui.basic; AUSwitch 2AUSwitch 基于Android Switch ，  修改内容  主要修改内容：
- 1 this.setThumbResource(drawable.au_switch_thumb); 2 this.setTrackResource(drawable.au_switch_track); 3 …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/">Mpaas其他组件-按钮</a>
-      </h3>
-      <div class="post_meta">
-  <svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg>
-  <span class="post_date">
-    Jan 1, 0001</span>
-</div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">##导入包
- mpaas 提供Android studio 插件，在插件中选择使用。
- 1// ui 库 2 api &#39;com.mpaas.android:antui&#39; AUButton 1&lt;com.alipay.mobile.antui.basic.AUButton 2 style=&#34;@style/mainButtonStyle&#34; 3 android:layout_margin=&#34;12dp&#34; 4 android:clickable=&#34;true&#34; 5 android:text=&#34;主要操作 Normal&#34; /&gt; …</p>
-          <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/mpaas/othercomponent/dgg/" class="excerpt_more button">阅读更多</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
     <li>
 <ul class="pagination">
   <li class="page-item">
@@ -945,14 +1035,17 @@ iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 
   <li class="page-item">
     <a class="page-link" href="/pictures/page/4/">4</a>
   </li>
+  <li class="page-item disabled">
+    <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
+  </li>
   <li class="page-item">
-    <a class="page-link" href="/pictures/page/5/">5</a>
+    <a class="page-link" href="/pictures/page/6/">6</a>
   </li>
   <li class="page-item">
     <a href="/pictures/page/4/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/pictures/page/5/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/pictures/page/6/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 
@@ -969,6 +1062,12 @@ iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 
     <h2 class="mt-4">精选文章</h2>
     <ul>
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E5%9C%B0%E5%9D%80%E6%B1%87%E6%80%BB/" class="nav-link">android相关资料地址汇总</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E9%80%9A%E7%9F%A5%E6%A0%8F/" class="nav-link">Android通知栏</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%8A%84%E4%B8%80%E6%89%8B%E5%86%B7%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E5%91%A2/" class="nav-link">Android抄一手冷启动优化呢</a>
       </li>
       <li>
@@ -985,17 +1084,17 @@ iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava观察者</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81/" class="nav-link">关于JAVA中使用测试</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" class="nav-link">Rxjava使用CompositeDisposable进行统一注销监听</a>
       </li>
     </ul>
     <h2 class="mt-4">最新文章</h2>
     <ul class="flex-column">
       <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E5%9C%B0%E5%9D%80%E6%B1%87%E6%80%BB/" class="nav-link">android相关资料地址汇总</a>
+      </li>
+      <li>
+        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E9%80%9A%E7%9F%A5%E6%A0%8F/" class="nav-link">Android通知栏</a>
+      </li>
+      <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/android%E6%8A%84%E4%B8%80%E6%89%8B%E5%86%B7%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E5%91%A2/" class="nav-link">Android抄一手冷启动优化呢</a>
       </li>
       <li>
@@ -1012,12 +1111,6 @@ iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 
       </li>
       <li>
         <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E5%88%9B%E5%BB%BA%E8%A7%82%E5%AF%9F%E8%80%85/" class="nav-link">Rxjava观察者</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/%E5%85%B6%E4%BB%96/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81/" class="nav-link">关于JAVA中使用测试</a>
-      </li>
-      <li>
-        <a href="http://lalalaxiaowifi.gitee.io/pictures/posts/android/rxjava/rxjava%E4%B8%ADcompositedisposable%E8%BF%9B%E8%A1%8C%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%B3%A8%E9%94%80/" class="nav-link">Rxjava使用CompositeDisposable进行统一注销监听</a>
       </li>
     </ul>
     <div>
@@ -1030,17 +1123,12 @@ iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/android%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
           ANDROID基础
-          <span class="button_tally">19</span>
+          <span class="button_tally">24</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/' class="post_tag button button_translucent">
           设计模式
           <span class="button_tally">12</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%9D%82%E5%AD%A6/' class="post_tag button button_translucent">
-          杂学
-          <span class="button_tally">3</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/flutter/' class="post_tag button button_translucent">
@@ -1055,6 +1143,11 @@ iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/java%E5%9F%BA%E7%A1%80/' class="post_tag button button_translucent">
           JAVA基础
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/categories/%E6%9D%82%E5%AD%A6/' class="post_tag button button_translucent">
+          杂学
           <span class="button_tally">1</span>
         </a>
         
@@ -1104,9 +1197,9 @@ iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 
           <span class="button_tally">2</span>
         </a>
         
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/%E6%A8%A1%E6%9D%BF/' class="post_tag button button_translucent">
-          模板
-          <span class="button_tally">2</span>
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/series/gradle/' class="post_tag button button_translucent">
+          GRADLE
+          <span class="button_tally">1</span>
         </a>
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/series/jetpack/' class="post_tag button button_translucent">
@@ -1180,6 +1273,11 @@ iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 
           <span class="button_tally">3</span>
         </a>
         
+        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/coordinatorlayout/' class="post_tag button button_translucent">
+          COORDINATORLAYOUT
+          <span class="button_tally">2</span>
+        </a>
+        
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/hexo/' class="post_tag button button_translucent">
           HEXO
           <span class="button_tally">2</span>
@@ -1197,11 +1295,6 @@ iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 
         
         <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/sql/' class="post_tag button button_translucent">
           SQL
-          <span class="button_tally">2</span>
-        </a>
-        
-        <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%9D%BF/' class="post_tag button button_translucent">
-          模板
           <span class="button_tally">2</span>
         </a>
         
@@ -1225,6 +1318,10 @@ iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 
             
             
             <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/chm/' class=" post_tag button button_translucent" data-position=1>CHM<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/coordinatorlayout/' class=" post_tag button button_translucent" data-position=2>COORDINATORLAYOUT<span class="button_tally">2</span>
             </a>
             
             
@@ -1372,11 +1469,11 @@ iconfont 图片控件（可当做 TextView 来使用）实际是通过 TextView 
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%9D%BF/' class=" post_tag button button_translucent" data-position=2>模板<span class="button_tally">2</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%A7%86%E9%A2%91/' class=" post_tag button button_translucent" data-position=1>视频<span class="button_tally">1</span>
             </a>
             
             
-            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E8%A7%86%E9%A2%91/' class=" post_tag button button_translucent" data-position=1>视频<span class="button_tally">1</span>
+            <a href='http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%80%9A%E7%9F%A5%E6%A0%8F/' class=" post_tag button button_translucent" data-position=1>通知栏<span class="button_tally">1</span>
             </a>
             
             

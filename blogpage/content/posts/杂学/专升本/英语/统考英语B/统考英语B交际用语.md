@@ -2,11 +2,9 @@
 date = "2020-12-07"
 title = "统考英语B交际用语"
 description = "统考英语B交际用语"
-tags = [ "统考英语B","英语","交际用语"]
-
-series = ["专升本"]
+slug = "study_page_1"
 featured = false
-draft = true 
+draft = false 
 +++
     
 > 交际用语答题要领总结:讲礼貌，多委婉，受帮助，要礼貌，遇坏事，先道歉。最长选项就是答案原则，有比较恐怖或者不认识的单词或者搞不清楚意思的选项就是答案。

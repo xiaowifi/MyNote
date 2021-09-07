@@ -34,3 +34,7 @@
   name = "碎碎念呢"
   url = "reflection_and_perception/"
   weight = -107
+[[main]]
+  name = "统考英语B"
+  url = "/posts/杂学/专升本/英语/统考英语B/catalogue/"
+  weight = -107

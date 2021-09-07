@@ -2,11 +2,9 @@
 date = "2020-12-15"
 title = "统考英语B词汇与结构"
 description = "统考英语B词汇与结构"
-tags = [ "统考英语B","英语","词汇与结构"]
- 
-series = ["专升本"]
+slug = "study_page_7"
 featured = false
-draft = true 
+draft = false  
 +++
 
 

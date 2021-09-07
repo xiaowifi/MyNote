@@ -2,11 +2,9 @@
 date = "2020-10-01"
 title = "统考英语B作文"
 description = "统考英语B作文"
-tags = [ "统考英语B","作文"]
-       
-series = ["专升本"]
+slug = "study_page_3"
 featured = false
-draft = true 
+draft = false 
 +++
 
 ## 第六部分 作文全新版

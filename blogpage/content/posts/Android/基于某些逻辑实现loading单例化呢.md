@@ -5,7 +5,7 @@ description = "基于某些逻辑实现loading单例化呢"
 categories = [
 "android基础"
 ]
-featured = ture
+featured = true
 draft = true 
 +++
 ## 前言

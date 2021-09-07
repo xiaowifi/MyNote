@@ -2,11 +2,11 @@
 date = "2021-5-11"
 title = "Coordinatorlayout简单单层吸顶效果"
 description = "Coordinatorlayout简单单层吸顶效果"
-tags = [ "模板"]
+tags = [ "Coordinatorlayout"]
 categories = [
-    "杂学"
+    "android基础"
 ]
-series = ["模板"]
+
 featured = true
 +++
 ![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)

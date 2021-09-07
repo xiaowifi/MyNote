@@ -2,11 +2,9 @@
 date = "2020-12-17"
 title = "统考英语B重点句型"
 description = "统考英语B重点句型"
-tags = [ "统考英语B","英语","重点句型"]
- 
-series = ["专升本"]
+slug = "study_page_9"
 featured = false
-draft = true 
+draft = false 
 +++
 
 

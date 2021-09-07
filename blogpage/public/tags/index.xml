@@ -6,7 +6,16 @@
     <description>Recent content in Tags on 个人主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-2099</copyright>
-    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://lalalaxiaowifi.gitee.io/pictures/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>通知栏</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%80%9A%E7%9F%A5%E6%A0%8F/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/tags/%E9%80%9A%E7%9F%A5%E6%A0%8F/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>java9</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/tags/java9/</link>
@@ -296,6 +305,15 @@
     </item>
     
     <item>
+      <title>Coordinatorlayout</title>
+      <link>http://lalalaxiaowifi.gitee.io/pictures/tags/coordinatorlayout/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lalalaxiaowifi.gitee.io/pictures/tags/coordinatorlayout/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>git</title>
       <link>http://lalalaxiaowifi.gitee.io/pictures/tags/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -364,15 +382,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://lalalaxiaowifi.gitee.io/pictures/tags/viewpager/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>模板</title>
-      <link>http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%9D%BF/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://lalalaxiaowifi.gitee.io/pictures/tags/%E6%A8%A1%E6%9D%BF/</guid>
       <description></description>
     </item>
     
