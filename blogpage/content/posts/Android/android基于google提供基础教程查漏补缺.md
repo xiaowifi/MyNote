@@ -95,4 +95,11 @@ Uri builtURI = Uri.parse(BOOK_BASE_URL).buildUpon()
 * stringDef
 * 注解处理器
 * 注解
-
+* proxy 动态代理技术
+* httpUrl （类）可以解析IP 这个调调 是不是可以判断是否是本地文件。
+* okhttp 3 并发请求数为64，同一个域名的网络请求是 5（Dispatcher 类）
+* 
+* 
+* 
+* 
+* 
