@@ -9,7 +9,7 @@ categories = [
 featured = true
 +++
 > 主要针对mac   idea.vmoptions 进行设置
-
+> 'C:\Users\Administrator\AppData\Roaming\Google\AndroidStudio4.2\studio64.exe.vmoptions   
 # 配置
 通过idea 会根据电脑 自动设置一个 缓存之类下设置。
 
