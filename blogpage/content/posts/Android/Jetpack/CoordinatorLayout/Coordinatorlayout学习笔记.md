@@ -37,7 +37,7 @@ featured = true
     * statusBarBackground
     * layout_anchor 此视图应相对于的定位点视图的id。
     * layout_keyline 
-    * layout_anchorGravity
+    * layout_anchorGravity 相对定位view的相对位置。
     * layout_insetEdge
     * layout_dodgeInsetEdges
 

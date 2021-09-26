@@ -2,9 +2,9 @@
 > 笔记配置，主要是修改 series。
 
 date = "2020-10-01"
-title = "日常搬砖模板"
-description = "日常搬砖模板"
-series = ["kotlin"," "]
+title = "kotlin 学习目录"
+description = "kotlin 学习目录"
+series = ["kotlin"]
 categories = [
 "android基础"
 ]
