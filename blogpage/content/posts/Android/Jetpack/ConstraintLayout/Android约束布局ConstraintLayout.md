@@ -17,7 +17,7 @@ draft = true
 
 * [constraintlayout github地址](https://github.com/androidx/constraintlayout)
 
-* [参考资料：ConstraintLayout使用汇总]((https://segmentfault.com/a/1190000014876944))
+* [参考资料：ConstraintLayout使用汇总](https://segmentfault.com/a/1190000014876944)
 
 * [google Android 官网 constraintLayout](https://developer.android.com/training/constraint-layout)
 

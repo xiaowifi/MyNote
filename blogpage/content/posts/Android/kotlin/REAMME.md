@@ -1,12 +1,12 @@
-## µ±Ç°Ä¿Â¼Îªkotlin Ñ§Ï°
-> ±Ê¼ÇÅäÖÃ£¬Ö÷ÒªÊÇÐÞ¸Ä series¡£
+## ï¿½ï¿½Ç°Ä¿Â¼Îªkotlin Ñ§Ï°
+> ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Þ¸ï¿½ seriesï¿½ï¿½
 
 date = "2020-10-01"
 title = "kotlin Ñ§Ï°Ä¿Â¼"
 description = "kotlin Ñ§Ï°Ä¿Â¼"
 series = ["kotlin"]
 categories = [
-"android»ù´¡"
+"androidï¿½ï¿½ï¿½ï¿½"
 ]
 ## todo 
 
@@ -15,3 +15,5 @@ categories = [
 - [ ] 
 - [ ] 
 - [ ] 
+
+
