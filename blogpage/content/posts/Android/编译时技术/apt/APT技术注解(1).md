@@ -17,7 +17,7 @@ draft = true
 >或者在某些情景中限制用户输入。增加框架的兼容性。
 > [java 8中移出apt相关](http://openjdk.java.net/jeps/117)
 >  新版中使用 插件化注解处理(Pluggable Annotation Processing)APIJSR 269
->
+> 反射的成本比较较高
 # 正文
 * 注解的作用域：
     * 
