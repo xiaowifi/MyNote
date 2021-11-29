@@ -44,7 +44,17 @@ featured = false
 - [ ] Compose
 - [ ] android kotlin 
 - [ ] Android kotlin 进阶
-
+> 2021年11月29日
+- [ ] Scroller
+- [ ] OverScroller
+- [ ] VelocityTracker
+- [ ] Interpolator
+- [ ] NestedScrollingChildHelper
+- [ ] NestedScrollingParentHelper
+- [ ] ViewConfiguration
+- [ ] 
+- [ ] 
+- [ ] 
 - [ ] 
 - [ ] 
 - [ ] 
