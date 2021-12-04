@@ -20,6 +20,8 @@
     * 针对子控件进行摆放是比较消耗性能的。
         * 子控件的刷新。
         * 父布局高宽变化。
+        * detach 针对子view的操作。比remove和add 更加轻量级。 
+        * attach 
 
 * onInterceptTouchEvent
   > 由于有最小滑动 距离，所以在这里 将最小滑动距离 认定为点击事件。
