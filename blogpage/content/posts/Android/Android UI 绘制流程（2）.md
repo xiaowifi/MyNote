@@ -27,6 +27,7 @@
   > 所以说，这个调调 优先于onTouchEvent 执行。
 * onTouchEvent
   > 这个里面做滑动处理。
+  > 为了做惯性滑动。在当前方法中获取到滚动到加速度。 VelocityTracker.obtain();
 * scrollBy 滚动
   > scrollBy 属于增量滚动。基于现在的位置。滚动的是画布。 滚动的是canvas，子view 还是在原来的位置上，只是看起来是滚动了的，所以对viewGroup而言，滚动后需要对子view 进行重新摆放。
   > scrollTo 是滚动到屏幕都绝对位置。
