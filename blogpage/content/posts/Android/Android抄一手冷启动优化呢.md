@@ -37,7 +37,17 @@ app 启动优化大致可以分为下面几个方面。
 * 利用Transform + ASM字节码修改技术动态插入代码
 * Hook Instrumentation
 * Hook Handler或者Looper的Printer
-
+* 系统log  activityManger 可以打印相关时间。
+* adb 获取启动时间。
+* debug.startMethodTrcing 方法耗时 监听
+* 为啥Android APP启动会创建一个默认窗口，为了更好的交互，给用户点击效果。
+* 温启动，就是一直返回到第一个界面，但是进程还在的那个时间段，UI没有了。
+### 黑白屏 优化
+* 在style 中对启动界面中的取消预览(空白窗口) 设置为true    android:windowDisablePreview 
+* 第2种，设置窗体为透明色：windowIsTranslucent true 
+* 设置window 设置为某种图片
+* 在清单文件先设置样式主题，然后在onCreate 中重新设置主题。
+* 预览界面替换。
 ## 结束
 
 
