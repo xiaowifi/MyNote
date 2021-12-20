@@ -21,12 +21,25 @@
     * 
 
 
-
-
-
-
-
-
+## 图片压缩算法
+> 鲁班压缩 
+* libjpeg-tubo C库
+* 哈夫曼算法--是一种变长编码算法，广泛用于数据压缩。
+* Android 原生提供压缩 bitmap.compress(bitmap.compressFormat.JPEG,10,ByteArrayOutPutStream),0到10.
+* bitmap 主要是做2D 图像显示。
+* Android 图形处理库是skia 
+* skia 基于 jpeg 
+* bitmap 图片内存在native 层
+* 颜色指 转化为 RGBA  ![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20211220212231.png)
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
 
 
 
