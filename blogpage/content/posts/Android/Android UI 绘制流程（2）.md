@@ -34,7 +34,8 @@
   > scrollBy 属于增量滚动。基于现在的位置。滚动的是画布。 滚动的是canvas，子view 还是在原来的位置上，只是看起来是滚动了的，所以对viewGroup而言，滚动后需要对子view 进行重新摆放。
   > scrollTo 是滚动到屏幕都绝对位置。
 * SparseArray 
-
+* generateLayoutParams 主要是负责 给子控件 提供 layoutParams ，所以这个优先于onMeasure 调用。
+* 自定义属性使用完成 后 需要回收。 TypedArray.recycle();
 
 
 
