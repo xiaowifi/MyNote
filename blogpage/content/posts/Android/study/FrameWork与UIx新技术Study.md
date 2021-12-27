@@ -10,7 +10,7 @@
 * - [X] 2021年12月13日 Android 设备唯一ID 和屏幕适配 
 * - [x] 2021年12月21日 JetPack组件LifeCycle与LiveData源码解析以及手写实现-Zee
 * - [ ] 2021年12月23日 Navigation与Fragment不得不说的故事 Navigation与Fragment不得不说的故事
-* - [ ]  
+* - [ ] 2021年12月27日 SVG 渲染 中国地图。
 * - [ ]  
 * - [ ]  
 * - [ ]  
