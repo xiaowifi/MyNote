@@ -14,25 +14,49 @@
  
 ### 导航图
 > xml 文件
-
+* startDestination="显示的第一个fragment的id"
 * fragment 标签 对应一个fragment.class  
-    * id fragment的id
-    * name 包名+类名称
-    * layout 指定的xml 文件地址
-    * label 名称
- 
+  * id fragment的id
+  * name 包名+类名称
+  * layout 指定的xml 文件地址 存在一个问题，如果我这个地方设置的和fragment的不一样，显示fragment的还是配置的。
+  * label 名称
+  * action 事件，用于打开fragment 
+    * id 
+    * destination 目的fragment 的id 
+    * enterAnim 进场动画
+    * exitAnim 退出动画
+  * argument fragment启动参数。放到fragment中。
+  * deepLink url=""  
 ### NavHost 
 > activity xml中 包裹 一个 fragment 标签
 * fragment 
-  * name=
+  * name="androidx.navigation.fragment.NavHostFragment"
+  * navGraph="导航图"
+  * defaultNavHost="true" 代表回退栈由NavHost 进行管理。默认是false 
+
+> JAVA 代码中，Navigation.findNavController(this,fragment的id) 获取到 NavController
+#### action 跳转
+Navigation.findNavController(getView).navigate(action的id,bundle);
+bundle 会存放到fragment argument 中。
+#### 配合 BottomNavigationView
+* 需要一个 menu,menu item 中的id是 需要跳转fragment中的id
+* 在BottomNavigationView 中设置menu
+  * setOnNavigationItemSelectedListener 可以做点击事件拦截。如果需要登录。可以通过NavController 自己跳转。
+  * 多次点击会有回退栈的问题，因为action 写到了fragment里面，所以所有action都需要标记进去。
+  * 可以对action 放到导航图直接子类中，用于解决fragment存在相同的action 
+* NavigationUI 绑定 NavController 
+#### 深层链接 
+* 外部进入app
+* app内部web 访问app
+* app导航访问app 
+
+#### BottomNavigationView  
  
  
- 
- 
- 
- 
- 
- 
+## 原理 
+###  HavHostFragment
+> 在onCreate 中创建了一个 NavHostController 
+> 
  
  
  
