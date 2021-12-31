@@ -11,8 +11,7 @@
 * - [x] 2021年12月21日 JetPack组件LifeCycle与LiveData源码解析以及手写实现-Zee
 * - [x] 2021年12月23日 Navigation与Fragment不得不说的故事 Navigation与Fragment不得不说的故事
 * - [x] 2021年12月27日 SVG 渲染 中国地图。
-* - [x] 2021年12月28日 属性动画源码详解，ObjectAnimator与ValueAnimator源码讲解
-* - [ ]  
+* - [ ] 2021年12月31日 QQ气泡 
 * - [ ]  
 * - [ ]  
 * - [ ]  
