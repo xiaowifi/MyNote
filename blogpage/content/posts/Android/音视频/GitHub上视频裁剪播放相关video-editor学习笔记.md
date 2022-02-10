@@ -17,4 +17,4 @@
 * [MasayukiSuda](https://github.com/MasayukiSuda/Mp4Composer-android) 该库使用 Android MediaCodec API 生成 Mp4 电影并应用过滤器、缩放、修剪、转码、裁剪、时间缩放、静音和旋转 Mp4。
 
 ### Tourenathan
-* [Tourenathan-G5organisation](https://github.com/Tourenathan-G5organisation/SiliCompressor) 视频图像压缩库 
+* [Tourenathan-G5organisation](https://github.com/Tourenathan-G5organisation/SiliCompressor) 视频图像压缩库
