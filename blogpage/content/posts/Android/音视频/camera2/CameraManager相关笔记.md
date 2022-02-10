@@ -1,0 +1,10 @@
+## 参考资料
+* [CameraManger官方文档](https://developer.android.google.cn/reference/android/hardware/camera2/CameraManager)
+* [CSDN](https://blog.csdn.net/afei__/article/details/85342160)
+* []()
+* []()
+## 前言
+当前class 主要实现几个功能。
+* 查询摄像头信息。
+* 打开摄像头
+* 操作对应摄像头的闪光等。
