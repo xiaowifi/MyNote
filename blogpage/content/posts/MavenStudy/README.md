@@ -1,1 +1,2 @@
-当前目主要是做第3方maven 相关的学习的笔记位置。
+> 当前文档 主要是Google 提供的相机api 相关笔记。整理。
+> [google提供Camera2和CameraXDemo地址](https://github.com/android/camera-samples)
