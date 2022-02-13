@@ -1,7 +1,7 @@
-* [ffmpeg github地址](https://github.com/FFmpeg/FFmpeg)
+* [ffmpeg github鍦板潃](https://github.com/FFmpeg/FFmpeg)
 * [FFmpegAndroid](https://github.com/xufuji456/FFmpegAndroid)
-  > 大佬还在维护，也是基于ffmpeg打包封装 
-* [一个简单的基于ffmpeg 的封装工具](https://github.com/yangjie10930/EpMedia)
+  > 澶т浆杩樺湪缁存姢锛屼篃鏄熀浜巉fmpeg鎵撳寘灏佽 
+* [涓�涓畝鍗曠殑鍩轰簬ffmpeg 鐨勫皝瑁呭伐鍏穄(https://github.com/yangjie10930/EpMedia)
 * []()
 * []()
 * []()

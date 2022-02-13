@@ -1,14 +1,14 @@
-* gradle ÊÇÒ»¿î»ùÓÚapacheµÄantºÍmaven ¸ÅÄîµÄÏîÄ¿×Ô¶¯»¯¿ªÔ´¹¹½¨¹¤¾ß£¬gradleµÄºËÐÄÊÇ»ùÓÚJAVA ÊµÏÖµÄ£¬¿ÉÒÔ°ÑËûµ±×öÒ»¸öÇáÁ¿¼¶µÄJAVA Ó¦ÓÃ³ÌÐò¡£
-    * ÓÐÀà
-    * ÓÐÉúÃüÖÜÆÚ
-    * ÓÐ±Õ°ü
-* gradle Ê¹ÓÃgroovy£¬java,kotlin µÈÓïÑÔ±àÐ´×Ô¶¨Òå½Å±¾£¬È¡´úantºÍmaven Ê¹ÓÃxml·½Ê½£¬¼ò»¯ÁËÏîÄ¿ÅäÖÃºÍÁé»îÁËÅäÖÃ¡£
-* gradle Ê¹ÓÃ·¶Î§
-    * ×é¼þ»¯
-    * ²å¼þ»¯
-    * ÈÈÐÞ¸´
-    * ¹¹½¨ÏµÍ³
-    * ±àÒëÊ±¼¼Êõ
+* gradle æ˜¯ä¸€æ¬¾åŸºäºŽapacheçš„antå’Œmaven æ¦‚å¿µçš„é¡¹ç›®è‡ªåŠ¨åŒ–å¼€æºæž„å»ºå·¥å…·ï¼Œgradleçš„æ ¸å¿ƒæ˜¯åŸºäºŽJAVA å®žçŽ°çš„ï¼Œå¯ä»¥æŠŠä»–å½“åšä¸€ä¸ªè½»é‡çº§çš„JAVA åº”ç”¨ç¨‹åºã€‚
+    * æœ‰ç±»
+    * æœ‰ç”Ÿå‘½å‘¨æœŸ
+    * æœ‰é—­åŒ…
+* gradle ä½¿ç”¨groovyï¼Œjava,kotlin ç­‰è¯­è¨€ç¼–å†™è‡ªå®šä¹‰è„šæœ¬ï¼Œå–ä»£antå’Œmaven ä½¿ç”¨xmlæ–¹å¼ï¼Œç®€åŒ–äº†é¡¹ç›®é…ç½®å’Œçµæ´»äº†é…ç½®ã€‚
+* gradle ä½¿ç”¨èŒƒå›´
+    * ç»„ä»¶åŒ–
+    * æ’ä»¶åŒ–
+    * çƒ­ä¿®å¤
+    * æž„å»ºç³»ç»Ÿ
+    * ç¼–è¯‘æ—¶æŠ€æœ¯
 * 
 * 
 * 

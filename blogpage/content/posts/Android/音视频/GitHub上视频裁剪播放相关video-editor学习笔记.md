@@ -1,20 +1,20 @@
-### ²Î¿¼×ÊÁÏ
-* [Android-Video-Editor](https://github.com/LLhon/Android-Video-Editor) Õâ¸öµ÷µ÷Ö÷ÒªÊÇºÏ²¢ÁËÏÂÃæ¼¸¸ö¡£
-* [CJT2325](https://github.com/CJT2325/CameraView) ·ÂÎ¢ĞÅÅÄÕÕÂ¼ÖÆ¿Ø¼ş 
-* [ta893115871](https://github.com/ta893115871/VideoEdit) ·ÂÕÕÎ¢ĞÅµÄÊÓÆµ±à¼­¿â 
-* [MasayukiSuda](https://github.com/MasayukiSuda/Mp4Composer-android) ¸Ã¿âÊ¹ÓÃ Android MediaCodec API Éú³É Mp4 µçÓ°²¢Ó¦ÓÃ¹ıÂËÆ÷¡¢Ëõ·Å¡¢ĞŞ¼ô¡¢×ªÂë¡¢²Ã¼ô¡¢Ê±¼äËõ·Å¡¢¾²ÒôºÍĞı×ª Mp4¡£
-* [Tourenathan-G5organisation](https://github.com/Tourenathan-G5organisation/SiliCompressor) ÊÓÆµÍ¼ÏñÑ¹Ëõ¿â 
+### å‚è€ƒèµ„æ–™
+* [Android-Video-Editor](https://github.com/LLhon/Android-Video-Editor) è¿™ä¸ªè°ƒè°ƒä¸»è¦æ˜¯åˆå¹¶äº†ä¸‹é¢å‡ ä¸ªã€‚
+* [CJT2325](https://github.com/CJT2325/CameraView) ä»¿å¾®ä¿¡æ‹ç…§å½•åˆ¶æ§ä»¶ 
+* [ta893115871](https://github.com/ta893115871/VideoEdit) ä»¿ç…§å¾®ä¿¡çš„è§†é¢‘ç¼–è¾‘åº“ 
+* [MasayukiSuda](https://github.com/MasayukiSuda/Mp4Composer-android) è¯¥åº“ä½¿ç”¨ Android MediaCodec API ç”Ÿæˆ Mp4 ç”µå½±å¹¶åº”ç”¨è¿‡æ»¤å™¨ã€ç¼©æ”¾ã€ä¿®å‰ªã€è½¬ç ã€è£å‰ªã€æ—¶é—´ç¼©æ”¾ã€é™éŸ³å’Œæ—‹è½¬ Mp4ã€‚
+* [Tourenathan-G5organisation](https://github.com/Tourenathan-G5organisation/SiliCompressor) è§†é¢‘å›¾åƒå‹ç¼©åº“ 
 
-## ÕıÎÄ
+## æ­£æ–‡
 ### Android-Video-Editor 
-* [Android-Video-Editor](https://github.com/LLhon/Android-Video-Editor) Õâ¸öµ÷µ÷Ö÷ÒªÊÇºÏ²¢ÁËÏÂÃæ¼¸¸ö¡£
+* [Android-Video-Editor](https://github.com/LLhon/Android-Video-Editor) è¿™ä¸ªè°ƒè°ƒä¸»è¦æ˜¯åˆå¹¶äº†ä¸‹é¢å‡ ä¸ªã€‚
 ### CameraView 
-* [CJT2325](https://github.com/CJT2325/CameraView) ·ÂÎ¢ĞÅÅÄÕÕÂ¼ÖÆ¿Ø¼ş 
-* setWillNotDraw ÔÚĞ´×Ô¶¨Òå²¼¾ÖÊ±£¬Èç¹ûĞèÒªµ÷ÓÃonDraw()½øĞĞ»æÖÆ£¬ÔòĞèÒªÔÚ³õÊ¼»¯Ê±ºò£¬µ÷ÓÃsetWillNotDraw(false)  
+* [CJT2325](https://github.com/CJT2325/CameraView) ä»¿å¾®ä¿¡æ‹ç…§å½•åˆ¶æ§ä»¶ 
+* setWillNotDraw åœ¨å†™è‡ªå®šä¹‰å¸ƒå±€æ—¶ï¼Œå¦‚æœéœ€è¦è°ƒç”¨onDraw()è¿›è¡Œç»˜åˆ¶ï¼Œåˆ™éœ€è¦åœ¨åˆå§‹åŒ–æ—¶å€™ï¼Œè°ƒç”¨setWillNotDraw(false)  
 ### VideoEdit 
-* [ta893115871](https://github.com/ta893115871/VideoEdit) ·ÂÕÕÎ¢ĞÅµÄÊÓÆµ±à¼­¿â
+* [ta893115871](https://github.com/ta893115871/VideoEdit) ä»¿ç…§å¾®ä¿¡çš„è§†é¢‘ç¼–è¾‘åº“
 ### Mp4Composer 
-* [MasayukiSuda](https://github.com/MasayukiSuda/Mp4Composer-android) ¸Ã¿âÊ¹ÓÃ Android MediaCodec API Éú³É Mp4 µçÓ°²¢Ó¦ÓÃ¹ıÂËÆ÷¡¢Ëõ·Å¡¢ĞŞ¼ô¡¢×ªÂë¡¢²Ã¼ô¡¢Ê±¼äËõ·Å¡¢¾²ÒôºÍĞı×ª Mp4¡£
+* [MasayukiSuda](https://github.com/MasayukiSuda/Mp4Composer-android) è¯¥åº“ä½¿ç”¨ Android MediaCodec API ç”Ÿæˆ Mp4 ç”µå½±å¹¶åº”ç”¨è¿‡æ»¤å™¨ã€ç¼©æ”¾ã€ä¿®å‰ªã€è½¬ç ã€è£å‰ªã€æ—¶é—´ç¼©æ”¾ã€é™éŸ³å’Œæ—‹è½¬ Mp4ã€‚
 
 ### Tourenathan
-* [Tourenathan-G5organisation](https://github.com/Tourenathan-G5organisation/SiliCompressor) ÊÓÆµÍ¼ÏñÑ¹Ëõ¿â
+* [Tourenathan-G5organisation](https://github.com/Tourenathan-G5organisation/SiliCompressor) è§†é¢‘å›¾åƒå‹ç¼©åº“

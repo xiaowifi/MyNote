@@ -1,17 +1,17 @@
-> Ñ§Ï°¼ÇÂ¼
-* - [x] 2021Äê11ÔÂ29ÈÕ VIP01-2020-6.29-UIµÄ»æÖÆÁ÷³ÌÉîÈëÔ´Âë½âÎö-David 
-* - [x] 2021Äê12ÔÂ01ÈÕ VIP02-2020-7.2-UIµÄ»æÖÆ£¬²¼¾Ö£¬²âÁ¿Ô´ÂëÏê½â-Zee
-* - [x] 2021Äê12ÔÂ02ÈÕ VIP02-2020-7.4-ÊÖÐ´flowLayout
-* - [x] 2021Äê12ÔÂ02ÈÕ VIP02-2020-7.6-recyclerview 1
-* - [X] 2021Äê12ÔÂ02ÈÕ VIP02-2020-7.6-recyclerview »¬¶¯¼«ÏÞÖµ¡£µÚÒ»¿Î¡£
-* - [X] 2021Äê12ÔÂ6ÈÕ ÊÂ¼þ·Ö·¢ 
-* - [x] 2021Äê12ÔÂ7ÈÕ Scoped storage Ïà¹Ø  
-* - [X] 2021Äê12ÔÂ13ÈÕ RÏÂ ·ÖÇø´æ´¢¿ò¼Ü   
-* - [X] 2021Äê12ÔÂ13ÈÕ Android Éè±¸Î¨Ò»ID ºÍÆÁÄ»ÊÊÅä 
-* - [x] 2021Äê12ÔÂ21ÈÕ JetPack×é¼þLifeCycleÓëLiveDataÔ´Âë½âÎöÒÔ¼°ÊÖÐ´ÊµÏÖ-Zee
-* - [x] 2021Äê12ÔÂ23ÈÕ NavigationÓëFragment²»µÃ²»ËµµÄ¹ÊÊÂ NavigationÓëFragment²»µÃ²»ËµµÄ¹ÊÊÂ
-* - [x] 2021Äê12ÔÂ27ÈÕ SVG äÖÈ¾ ÖÐ¹úµØÍ¼¡£
-* - [ ] 2021Äê12ÔÂ31ÈÕ QQÆøÅÝ 
+> å­¦ä¹ è®°å½•
+* - [x] 2021å¹´11æœˆ29æ—¥ VIP01-2020-6.29-UIçš„ç»˜åˆ¶æµç¨‹æ·±å…¥æºç è§£æž-David 
+* - [x] 2021å¹´12æœˆ01æ—¥ VIP02-2020-7.2-UIçš„ç»˜åˆ¶ï¼Œå¸ƒå±€ï¼Œæµ‹é‡æºç è¯¦è§£-Zee
+* - [x] 2021å¹´12æœˆ02æ—¥ VIP02-2020-7.4-æ‰‹å†™flowLayout
+* - [x] 2021å¹´12æœˆ02æ—¥ VIP02-2020-7.6-recyclerview 1
+* - [X] 2021å¹´12æœˆ02æ—¥ VIP02-2020-7.6-recyclerview æ»‘åŠ¨æžé™å€¼ã€‚ç¬¬ä¸€è¯¾ã€‚
+* - [X] 2021å¹´12æœˆ6æ—¥ äº‹ä»¶åˆ†å‘ 
+* - [x] 2021å¹´12æœˆ7æ—¥ Scoped storage ç›¸å…³  
+* - [X] 2021å¹´12æœˆ13æ—¥ Rä¸‹ åˆ†åŒºå­˜å‚¨æ¡†æž¶   
+* - [X] 2021å¹´12æœˆ13æ—¥ Android è®¾å¤‡å”¯ä¸€ID å’Œå±å¹•é€‚é… 
+* - [x] 2021å¹´12æœˆ21æ—¥ JetPackç»„ä»¶LifeCycleä¸ŽLiveDataæºç è§£æžä»¥åŠæ‰‹å†™å®žçŽ°-Zee
+* - [x] 2021å¹´12æœˆ23æ—¥ Navigationä¸ŽFragmentä¸å¾—ä¸è¯´çš„æ•…äº‹ Navigationä¸ŽFragmentä¸å¾—ä¸è¯´çš„æ•…äº‹
+* - [x] 2021å¹´12æœˆ27æ—¥ SVG æ¸²æŸ“ ä¸­å›½åœ°å›¾ã€‚
+* - [ ] 2021å¹´12æœˆ31æ—¥ QQæ°”æ³¡ 
 * - [ ]  
 * - [ ]  
 * - [ ]  

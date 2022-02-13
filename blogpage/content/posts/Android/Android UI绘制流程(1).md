@@ -1,43 +1,43 @@
-## app Æô¶¯Á÷³Ì
-* activityThread£¨handler £© main  ³ÌĞòÈë¿Ú¡£
-* Ò»¸öÓ¦ÓÃ£¬¾ÍÊÇÒ»¸ö½ø³Ì¡£
-* applicationThread activityTread Í¨¹ıËü»ñÈ¡AMS
-* instrumenttation ÓÃÓÚÆô¶¯activity»òÕß ApplicationµÈ°üº¬ÉúÃüÖÜÆÚ·½·¨µÄµ÷ÓÃ¡£
-![app Æô¶¯Á÷³ÌÍ¼](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/App%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B.jpg)
+## app å¯åŠ¨æµç¨‹
+* activityThreadï¼ˆhandler ï¼‰ main  ç¨‹åºå…¥å£ã€‚
+* ä¸€ä¸ªåº”ç”¨ï¼Œå°±æ˜¯ä¸€ä¸ªè¿›ç¨‹ã€‚
+* applicationThread activityTread é€šè¿‡å®ƒè·å–AMS
+* instrumenttation ç”¨äºå¯åŠ¨activityæˆ–è€… Applicationç­‰åŒ…å«ç”Ÿå‘½å‘¨æœŸæ–¹æ³•çš„è°ƒç”¨ã€‚
+![app å¯åŠ¨æµç¨‹å›¾](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/App%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B.jpg)
 
-* activityStackSupervisor activityµÄ¶ÑÕ»¡£
-* activityRecord activity ĞÅÏ¢´æ´¢Àà¡£
-* clientTransaction activity Æô¶¯ÊÂÎñ¡£
+* activityStackSupervisor activityçš„å †æ ˆã€‚
+* activityRecord activity ä¿¡æ¯å­˜å‚¨ç±»ã€‚
+* clientTransaction activity å¯åŠ¨äº‹åŠ¡ã€‚
 * launchActivityItem  
 
-## activity Æô¶¯Á÷³Ì
+## activity å¯åŠ¨æµç¨‹
 
-## View »æÖÆÁ÷³Ì
-![activity½âÎö xml Á÷³ÌÍ¼](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/Activity%E7%9A%84XML%E8%A7%A3%E6%9E%90%E5%B8%83%E5%B1%80.jpg)
-![UI¾ßÌå»æÖÆÁ÷³ÌÍ¼](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/UI%E7%9A%84%E5%85%B7%E4%BD%93%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B.jpg)
-* phoneWindow ÏÔÊ¾´°¿ÚÎ¨Ò»µÄÊµÏÖÀà¡£
-    * DecorView ´°¿ÚµÄ¶¥²ãÊÓÍ¼¡£
-* AppcompatDelegateImpl  appCompatActivity µÄ´°¿Ú
-* setContentView Ö÷Òª×÷ÓÃÊÇ½âÎöxml ÎÄ¼ş£¬²¢ÇÒÌí¼Óµ½´°¿ÚµÄ¸ùviewÉÏ¡£
-    * Í¬Ê±½»¸øviewRootImpl ½øĞĞ¹ÜÀí¡£
-* windowMangerImpl ´°¿Ú¹ÜÀíÆ÷µÄÊµÏÖÀà¡£ÓÃÓÚViewµÄÌí¼Óµ½´°¿ÚÉÏ¡£
+## View ç»˜åˆ¶æµç¨‹
+![activityè§£æ xml æµç¨‹å›¾](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/Activity%E7%9A%84XML%E8%A7%A3%E6%9E%90%E5%B8%83%E5%B1%80.jpg)
+![UIå…·ä½“ç»˜åˆ¶æµç¨‹å›¾](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/UI%E7%9A%84%E5%85%B7%E4%BD%93%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B.jpg)
+* phoneWindow æ˜¾ç¤ºçª—å£å”¯ä¸€çš„å®ç°ç±»ã€‚
+    * DecorView çª—å£çš„é¡¶å±‚è§†å›¾ã€‚
+* AppcompatDelegateImpl  appCompatActivity çš„çª—å£
+* setContentView ä¸»è¦ä½œç”¨æ˜¯è§£æxml æ–‡ä»¶ï¼Œå¹¶ä¸”æ·»åŠ åˆ°çª—å£çš„æ ¹viewä¸Šã€‚
+    * åŒæ—¶äº¤ç»™viewRootImpl è¿›è¡Œç®¡ç†ã€‚
+* windowMangerImpl çª—å£ç®¡ç†å™¨çš„å®ç°ç±»ã€‚ç”¨äºViewçš„æ·»åŠ åˆ°çª—å£ä¸Šã€‚
 * windowMangerGlobal 
-* requestLayout ÖØĞÂ²âÁ¿»æÖÆview¡£
-* measure()  ²âÁ¿¡£
-* onDraw() »æÖÆ¡£
-* ½çÃæµÄ²âÁ¿ »æÖÆ¶¼ÊÇÔÚResume ÖĞÖ´ĞĞµÄ¡£
-* Ë¢ĞÂÂÊºÍÖ¡ËÙÂÊ Ö÷ÒªºÍÆÁÄ»ºÍCPU/GPU
-    * ÆÁÄ» ÏÔÊ¾Êı¾İ¡£60HZ(1ÃëÄÚ60´ÎË¢ĞÂ=Ë¢ĞÂÂÊ)
-    * CPU/GUP Éú³ÉÏÔÊ¾Êı¾İ¡£120FPS(Ö¡ËÙÂÊ) 120FPS 1Ãë³ö120ÕÅÏÔÊ¾Í¼¡£
-* project buffer ÎªÁË½â¾ö Ë¢ĞÂÂÊºÍÖ¡ËÙÂÊ²»Í¬²½µÄÎÊÌâ¡£
-    * VSync ´¹Ö±Í¬²½ 16ms = 60FPS  Ö÷ÒªÊÇÈ¥µ×²ãÈ¥ÄÃÉÏÒ»Ö¡¼ÆËã³öÀ´µÄÊ±¼ä¡£
-    * choreographer Ö÷ÒªÅäºÏÊµÏÖ ´¹Ö±Í¬²½¡£ÓÃÓÚ¿ØÖÆÍ¬²½ĞÅÏ¢ÇëÇóºÍÍÆ¶¯»æÖÆÆô¶¯¡£
-    * framebuffer Ö¡»º´æ£¬ÊÇLinux ÏµÍ³»úÖÆ¡£
-    * ½ÓÊÕµ½ĞÅºÅ²Å½øĞĞ¼ÆËã¡£
-    * choreographer Î¬»¤ÁËÒ»¸öhandler 
-    * mFrameScheduled Í¬Ò»Ö¡Ö»»á»æÖÆÒ»´Î¡£
-    * SurfaceFlinger  ¶ÀÁ¢½ø³Ì£¬ÓÉinit.rc ½øĞĞÆô¶¯£¬ºÍams Æô¶¯²î²»¶à¡£
-* surface ÊµÌå-·â×°»æÖÆÏà¹ØµÄÊı¾İ¡£    
+* requestLayout é‡æ–°æµ‹é‡ç»˜åˆ¶viewã€‚
+* measure()  æµ‹é‡ã€‚
+* onDraw() ç»˜åˆ¶ã€‚
+* ç•Œé¢çš„æµ‹é‡ ç»˜åˆ¶éƒ½æ˜¯åœ¨Resume ä¸­æ‰§è¡Œçš„ã€‚
+* åˆ·æ–°ç‡å’Œå¸§é€Ÿç‡ ä¸»è¦å’Œå±å¹•å’ŒCPU/GPU
+    * å±å¹• æ˜¾ç¤ºæ•°æ®ã€‚60HZ(1ç§’å†…60æ¬¡åˆ·æ–°=åˆ·æ–°ç‡)
+    * CPU/GUP ç”Ÿæˆæ˜¾ç¤ºæ•°æ®ã€‚120FPS(å¸§é€Ÿç‡) 120FPS 1ç§’å‡º120å¼ æ˜¾ç¤ºå›¾ã€‚
+* project buffer ä¸ºäº†è§£å†³ åˆ·æ–°ç‡å’Œå¸§é€Ÿç‡ä¸åŒæ­¥çš„é—®é¢˜ã€‚
+    * VSync å‚ç›´åŒæ­¥ 16ms = 60FPS  ä¸»è¦æ˜¯å»åº•å±‚å»æ‹¿ä¸Šä¸€å¸§è®¡ç®—å‡ºæ¥çš„æ—¶é—´ã€‚
+    * choreographer ä¸»è¦é…åˆå®ç° å‚ç›´åŒæ­¥ã€‚ç”¨äºæ§åˆ¶åŒæ­¥ä¿¡æ¯è¯·æ±‚å’Œæ¨åŠ¨ç»˜åˆ¶å¯åŠ¨ã€‚
+    * framebuffer å¸§ç¼“å­˜ï¼Œæ˜¯Linux ç³»ç»Ÿæœºåˆ¶ã€‚
+    * æ¥æ”¶åˆ°ä¿¡å·æ‰è¿›è¡Œè®¡ç®—ã€‚
+    * choreographer ç»´æŠ¤äº†ä¸€ä¸ªhandler 
+    * mFrameScheduled åŒä¸€å¸§åªä¼šç»˜åˆ¶ä¸€æ¬¡ã€‚
+    * SurfaceFlinger  ç‹¬ç«‹è¿›ç¨‹ï¼Œç”±init.rc è¿›è¡Œå¯åŠ¨ï¼Œå’Œams å¯åŠ¨å·®ä¸å¤šã€‚
+* surface å®ä½“-å°è£…ç»˜åˆ¶ç›¸å…³çš„æ•°æ®ã€‚    
 ## 
 
 

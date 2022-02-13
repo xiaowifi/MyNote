@@ -1,42 +1,42 @@
-> Android ¹Ç¼ÜÆÁ ÔÚÊµÏÖÉÏ»ù±¾ÉÏ¶¼ÊÇ View ²ã×ö¶¯»­ÊµÏÖ¡£µ±Êı¾İ»ØÀ´Ö®ºó£¬»áÒÆ³ı¹Ç¼ÜÆÁÄ»£¬Í¬Ê±¹Ø±Õ¶¯»­¡£
+> Android éª¨æ¶å± åœ¨å®ç°ä¸ŠåŸºæœ¬ä¸Šéƒ½æ˜¯ View å±‚åšåŠ¨ç”»å®ç°ã€‚å½“æ•°æ®å›æ¥ä¹‹åï¼Œä¼šç§»é™¤éª¨æ¶å±å¹•ï¼ŒåŒæ—¶å…³é—­åŠ¨ç”»ã€‚
 
-[facebook view¶¯»­](https://github.com/facebook/shimmer-android)
-Õâ¸ö¶¯»­×ö¹Ç¼ÜÆÁÄ»·Ç³£ºÏÊÊ¡£µ¼°ü¡£
+[facebook viewåŠ¨ç”»](https://github.com/facebook/shimmer-android)
+è¿™ä¸ªåŠ¨ç”»åšéª¨æ¶å±å¹•éå¸¸åˆé€‚ã€‚å¯¼åŒ…ã€‚
 ````aidl
  implementation 'com.facebook.shimmer:shimmer:0.5.0'
 ````
 ### ShimmerFrameLayout
- Õâ¸öÊÇ±ØĞë´æÔÚµÄ¸ù²¼¾Ö¡£Ìá¹©ÏÂÁĞÄÜÁ¦¡£
-* ÊÇ·ñÏÔÊ¾¹Ç¼ÜÆÁ¶¯»­
-* ¿ªÆô¹Ç¼ÜÆÁ¶¯»­
-* ¹Ø±Õ¹Ç¼ÜÆÁ¶¯»­
-* ÊÇ·ñ´¦ÓÚ¶¯»­ÖĞ
+ è¿™ä¸ªæ˜¯å¿…é¡»å­˜åœ¨çš„æ ¹å¸ƒå±€ã€‚æä¾›ä¸‹åˆ—èƒ½åŠ›ã€‚
+* æ˜¯å¦æ˜¾ç¤ºéª¨æ¶å±åŠ¨ç”»
+* å¼€å¯éª¨æ¶å±åŠ¨ç”»
+* å…³é—­éª¨æ¶å±åŠ¨ç”»
+* æ˜¯å¦å¤„äºåŠ¨ç”»ä¸­
 ### Shimmer
-¶¯»­µÄÊôĞÔ´æ´¢Àà¡£Ö÷ÒªÌá¹©Á½¸ö Builder
+åŠ¨ç”»çš„å±æ€§å­˜å‚¨ç±»ã€‚ä¸»è¦æä¾›ä¸¤ä¸ª Builder
 * AlphaHighlightBuilder 
 * ColorHighlightBuilder 
 
-»ù´¡ÊôĞÔ£º
-* ĞÎ×´ shape ÏßĞÔºÍĞÎ×´¡£
-* ·½Ïò direction 
-    * ×óµ½ÓÒ
-    * ÉÏµ½ÏÂ 
-    * ÓÒµ½×ó
-    * ÏÂµ½ÉÏ 
-* fixedWidth  ÉèÖÃ¹Ì¶¨¿í¶È 
-* fixedHeight ¹Ì¶¨¸ß¶È 
-* widthRatio ¿í±ÈÀı 
-* heightRatio ¸ß±ÈÀı 
-* intensity ¶¯»­Ç¿¶È£¬Ô½´óÇ¿¶ÈÔ½Ç¿ 
-* dropoff ±ä»»ËÙ¶È 
-* tilt ÇãĞ±½Ç¶È 
-* alpha Í¸Ã÷¶È 0µ½1 
-* setClipToChildren ÊÇ·ñÏÔÊ¾µ½×Óview 
-* setAutoStart ¶¯»­ÊÇ·ñ×Ô¶¯Æô¶¯ 
-* setRepeatCount ÉèÖÃÖØ¸´ÆµÂÊ Ä¬ÈÏ-1 
-* setRepeatMode ÖØ¸´·½Ê½ 
-* setRepeatDelay ÖØ¸´µÈ´ıÊ±¼ä
-* setDuration ¶¯»­Ê±¼ä 
+åŸºç¡€å±æ€§ï¼š
+* å½¢çŠ¶ shape çº¿æ€§å’Œå½¢çŠ¶ã€‚
+* æ–¹å‘ direction 
+    * å·¦åˆ°å³
+    * ä¸Šåˆ°ä¸‹ 
+    * å³åˆ°å·¦
+    * ä¸‹åˆ°ä¸Š 
+* fixedWidth  è®¾ç½®å›ºå®šå®½åº¦ 
+* fixedHeight å›ºå®šé«˜åº¦ 
+* widthRatio å®½æ¯”ä¾‹ 
+* heightRatio é«˜æ¯”ä¾‹ 
+* intensity åŠ¨ç”»å¼ºåº¦ï¼Œè¶Šå¤§å¼ºåº¦è¶Šå¼º 
+* dropoff å˜æ¢é€Ÿåº¦ 
+* tilt å€¾æ–œè§’åº¦ 
+* alpha é€æ˜åº¦ 0åˆ°1 
+* setClipToChildren æ˜¯å¦æ˜¾ç¤ºåˆ°å­view 
+* setAutoStart åŠ¨ç”»æ˜¯å¦è‡ªåŠ¨å¯åŠ¨ 
+* setRepeatCount è®¾ç½®é‡å¤é¢‘ç‡ é»˜è®¤-1 
+* setRepeatMode é‡å¤æ–¹å¼ 
+* setRepeatDelay é‡å¤ç­‰å¾…æ—¶é—´
+* setDuration åŠ¨ç”»æ—¶é—´ 
 
 ### ShimmerDrawable
-¶¯»­µÄÕæÕıÊµÏÖÀà 
+åŠ¨ç”»çš„çœŸæ­£å®ç°ç±» 

@@ -1,35 +1,35 @@
-> groovy,java,kotlin���ǻ��� jvm����� �������������ԡ�
-> groovy��kotlin�����Լ�֧�ֵ�DSL�﷨��
-> ������������Ҳ�йٷ��̡̳�
-> [GroovySDK����](https://groovy.apache.org/download.html)
-* groovy ����
-    * ͬʱ֧�־�̬���ͺͶ�̬���͡�
-    * ֧�����������
-    * ֧��DSL�﷨
-    * �����﷨�б��͹�������
-    * ���ֱ������ԭ��֧��
-    * �������ʽ����֧��
-    * �����޷��ν�JAVA 
-    * ֧��ʹ������JAVA �⣬��������һ������չ��
-* �ű����ջ�����JAVA 
-* �ű��Ͳ��������ࡣ
-* �쳣��ǿ��try
-* ��̬�������Է��� this.
-* �հ�
-* MOPЭ�飨Ԫ��̣�
-* def �ؼ��� ���͡�
-* final ֻ������ �����޸���ֵ���༭�����ᱨ������������ʱ��ͻᱨ����
-* �Զ�װ��Ϊ��װ���͡�
-* ' ����string '
-* "���� �������ñ���ʽ�����հ���string "
-* """ �������Ի��е�string   """ ��֧�ֱհ�����
-* ��̬�����ƶ����͡�������ͬ���������á�
-### ѧϰ02
-* ͨ��.@�ֶ����� ֱ�ӻ�ȡֵ������get set
-* ͨ��."�ֶ�����" ����ֱ�ӵ��� ��Ӧ��get ������
-* ���캯��֧�־�������
-* ������֧�־�������
-* ����֧��Ĭ��ֵ����ô���캯��Ҳ֧������Ĭ��ֵ��
+> groovy,java,kotlin都是基于 jvm虚拟机 开发的适配语言。
+> groovy和kotlin都有自己支持的DSL语法。
+> 官网下载里面也有官方教程。
+> [GroovySDK下载](https://groovy.apache.org/download.html)
+* groovy 特性
+    * 同时支持静态类型和动态类型。
+    * 支持运算符重载
+    * 支持DSL语法
+    * 本地语法列表和关联数组
+    * 各种标记语言原生支持
+    * 正则表达式本地支持
+    * 可以无缝衔接JAVA 
+    * 支持使用现有JAVA 库，并且做了一定的扩展。
+* 脚本最终会编译成JAVA 
+* 脚本就不依赖于类。
+* 异常不强行try
+* 静态方法可以返回 this.
+* 闭包
+* MOP协议（元编程）
+* def 关键字 类型。
+* final 只读变量 不可修改其值，编辑器不会报错，但是运行时候就会报错。
+* 自动装箱为包装类型。
+* ' 包裹string '
+* "包裹 可以设置表达式方法闭包的string "
+* """ 包裹可以换行的string   """ 不支持闭包调用
+* 动态运行推断类型。可用于同名方法调用。
+### 学习02
+* 通过.@字段名称 直接获取值，不走get set
+* 通过."字段名称" 可以直接调用 对应的get 方法。
+* 构造函数支持具名参数
+* 方法不支持具名参数
+* 方法支持默认值。那么构造函数也支持设置默认值？
 * 
 * 
 * 

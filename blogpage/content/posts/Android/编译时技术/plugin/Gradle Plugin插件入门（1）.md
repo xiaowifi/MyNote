@@ -1,2 +1,2 @@
-²Î¿¼ÎÄÏ×
-* [gradle pluginÈëÃÅÖ¸ÄÏ](https://www.jianshu.com/p/ffd6153ace1d)
+å‚è€ƒæ–‡çŒ®
+* [gradle pluginå…¥é—¨æŒ‡å—](https://www.jianshu.com/p/ffd6153ace1d)

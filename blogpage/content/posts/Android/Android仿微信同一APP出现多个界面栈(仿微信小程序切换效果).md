@@ -1,5 +1,5 @@
-## ²Î¿¼ÎÄÏ×
-* [·ÂÎ¢ĞÅĞ¡³ÌĞòÇĞ»»Ğ§¹û](https://juejin.cn/post/7055466828365037575?utm_source=gold_browser_extension)
-* [ÔÚ½üÆÚÈÎÎñÁĞ±íÏÔÊ¾µ¥¸öAPPµÄ¶à¸öActivity](https://www.jianshu.com/p/7f6f98da691e)
-* [´úÂë²Ö¿âµØÖ·]()
-## ÕıÎÄ
+## å‚è€ƒæ–‡çŒ®
+* [ä»¿å¾®ä¿¡å°ç¨‹åºåˆ‡æ¢æ•ˆæœ](https://juejin.cn/post/7055466828365037575?utm_source=gold_browser_extension)
+* [åœ¨è¿‘æœŸä»»åŠ¡åˆ—è¡¨æ˜¾ç¤ºå•ä¸ªAPPçš„å¤šä¸ªActivity](https://www.jianshu.com/p/7f6f98da691e)
+* [ä»£ç ä»“åº“åœ°å€]()
+## æ­£æ–‡

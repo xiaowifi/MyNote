@@ -1,2 +1,2 @@
-> µ±Ç°ÎÄµµ Ö÷ÒªÊÇGoogle Ìá¹©µÄÏà»úapi Ïà¹Ø±Ê¼Ç¡£ÕûÀí¡£
-> [googleÌá¹©Camera2ºÍCameraXDemoµØÖ·](https://github.com/android/camera-samples)
+> å½“å‰æ–‡æ¡£ ä¸»è¦æ˜¯Google æä¾›çš„ç›¸æœºapi ç›¸å…³ç¬”è®°ã€‚æ•´ç†ã€‚
+> [googleæä¾›Camera2å’ŒCameraXDemoåœ°å€](https://github.com/android/camera-samples)

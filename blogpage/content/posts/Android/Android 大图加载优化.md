@@ -1,36 +1,36 @@
-ÏÔÊ¾´óÍ¼ºËĞÄ
-* ·Ö¿é¼ÓÔØ
-* ÄÚ´æ¸´ÓÃ 
-## ÊµÏÖ
-* Í¨¹ırect È·¶¨´æ´¢ÏÔÊ¾·¶Î§¡£
-* Í¨¹ıbitmap options Í¼Æ¬ĞÅÏ¢
-    * options.inJustDecodeBounds=true // ÉèÖÃ¿ÉÒÔ²»¶ÁÈ¡µ½ÄÚ´æÖĞ»ñÈ¡Í¼Æ¬¿í¸ß¡£ÓÃÍêÁËÖ®ºóÒªÉèÖÃÎªfalse
-    * options.inMutable=true ¿ªÆôÄÚ´æ¸´ÓÃ¡£
-    * options.inPreferredConfig=bitmap.config.* ÉèÖÃÍ¼Æ¬µÄ×é³ÉÄ£Ê½¡£
-* Í¨¹ı gestureDetector »ñÈ¡ÊÖÊÆ
-* Í¨¹ıScroller ×ö»¬¶¯´¦Àí¡£
-* Í¨¹ı onTouch ÊµÏÖÊÖÊÆµÈĞÅÏ¢µÄÅĞ¶Ï£¬½øĞĞ¹ö¶¯µÈ¡£
-* Matrix bitmap ½øĞĞËõ·Å¡£
-* Í¨¹ıinputStream ÉèÖÃÍ¼Æ¬ ÊäÈëÁ÷¡£Õâ¸öÀ©Õ¹ĞÔ¸ü¸ß£¬ÒòÎªÒª×öÄÚ´æ¸´ÓÃºÍ·Ö¿é¼ÓÔØ¡£
-    * »ñÈ¡ÆÁÄ»¿í¸ß options.outWidth/outHeight
-    * »ñÈ¡ÇøÓò½âÂë£ºBitmapRegionDecoder decoder
-    * requestLayout() ÖØĞÂ»æÖÆ¡£
-    * onMeasure() ¼ÆËã ĞèÏÔÊ¾µÄ¿í¸ß¡£ºÍËõ·Å±ÈÀı¡£
-    * onDraw() ½øĞĞ»æÖÆ
-    * ÄÚ´æ¸´ÓÃ options.inBitmap=mBitmap;
+æ˜¾ç¤ºå¤§å›¾æ ¸å¿ƒ
+* åˆ†å—åŠ è½½
+* å†…å­˜å¤ç”¨ 
+## å®ç°
+* é€šè¿‡rect ç¡®å®šå­˜å‚¨æ˜¾ç¤ºèŒƒå›´ã€‚
+* é€šè¿‡bitmap options å›¾ç‰‡ä¿¡æ¯
+    * options.inJustDecodeBounds=true // è®¾ç½®å¯ä»¥ä¸è¯»å–åˆ°å†…å­˜ä¸­è·å–å›¾ç‰‡å®½é«˜ã€‚ç”¨å®Œäº†ä¹‹åè¦è®¾ç½®ä¸ºfalse
+    * options.inMutable=true å¼€å¯å†…å­˜å¤ç”¨ã€‚
+    * options.inPreferredConfig=bitmap.config.* è®¾ç½®å›¾ç‰‡çš„ç»„æˆæ¨¡å¼ã€‚
+* é€šè¿‡ gestureDetector è·å–æ‰‹åŠ¿
+* é€šè¿‡Scroller åšæ»‘åŠ¨å¤„ç†ã€‚
+* é€šè¿‡ onTouch å®ç°æ‰‹åŠ¿ç­‰ä¿¡æ¯çš„åˆ¤æ–­ï¼Œè¿›è¡Œæ»šåŠ¨ç­‰ã€‚
+* Matrix bitmap è¿›è¡Œç¼©æ”¾ã€‚
+* é€šè¿‡inputStream è®¾ç½®å›¾ç‰‡ è¾“å…¥æµã€‚è¿™ä¸ªæ‰©å±•æ€§æ›´é«˜ï¼Œå› ä¸ºè¦åšå†…å­˜å¤ç”¨å’Œåˆ†å—åŠ è½½ã€‚
+    * è·å–å±å¹•å®½é«˜ options.outWidth/outHeight
+    * è·å–åŒºåŸŸè§£ç ï¼šBitmapRegionDecoder decoder
+    * requestLayout() é‡æ–°ç»˜åˆ¶ã€‚
+    * onMeasure() è®¡ç®— éœ€æ˜¾ç¤ºçš„å®½é«˜ã€‚å’Œç¼©æ”¾æ¯”ä¾‹ã€‚
+    * onDraw() è¿›è¡Œç»˜åˆ¶
+    * å†…å­˜å¤ç”¨ options.inBitmap=mBitmap;
     * 
 
 
-## Í¼Æ¬Ñ¹ËõËã·¨
-> Â³°àÑ¹Ëõ 
-* libjpeg-tubo C¿â
-* ¹ş·òÂüËã·¨--ÊÇÒ»ÖÖ±ä³¤±àÂëËã·¨£¬¹ã·ºÓÃÓÚÊı¾İÑ¹Ëõ¡£
-* Android Ô­ÉúÌá¹©Ñ¹Ëõ bitmap.compress(bitmap.compressFormat.JPEG,10,ByteArrayOutPutStream),0µ½10.
-* bitmap Ö÷ÒªÊÇ×ö2D Í¼ÏñÏÔÊ¾¡£
-* Android Í¼ĞÎ´¦Àí¿âÊÇskia 
-* skia »ùÓÚ jpeg 
-* bitmap Í¼Æ¬ÄÚ´æÔÚnative ²ã
-* ÑÕÉ«Ö¸ ×ª»¯Îª RGBA  ![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20211220212231.png)
+## å›¾ç‰‡å‹ç¼©ç®—æ³•
+> é²ç­å‹ç¼© 
+* libjpeg-tubo Cåº“
+* å“ˆå¤«æ›¼ç®—æ³•--æ˜¯ä¸€ç§å˜é•¿ç¼–ç ç®—æ³•ï¼Œå¹¿æ³›ç”¨äºæ•°æ®å‹ç¼©ã€‚
+* Android åŸç”Ÿæä¾›å‹ç¼© bitmap.compress(bitmap.compressFormat.JPEG,10,ByteArrayOutPutStream),0åˆ°10.
+* bitmap ä¸»è¦æ˜¯åš2D å›¾åƒæ˜¾ç¤ºã€‚
+* Android å›¾å½¢å¤„ç†åº“æ˜¯skia 
+* skia åŸºäº jpeg 
+* bitmap å›¾ç‰‡å†…å­˜åœ¨native å±‚
+* é¢œè‰²æŒ‡ è½¬åŒ–ä¸º RGBA  ![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20211220212231.png)
 * 
 * 
 * 

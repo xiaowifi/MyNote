@@ -1,16 +1,16 @@
-### Ç°ÑÔ 
-²Î¿¼ÄÚÈİ£º
-* [google camerax ÖĞÎÄµØÖ·](https://developer.android.google.cn/training/camerax) 
-* [Google Android Ïà»úGithub DemoµØÖ·](https://github.com/android/camera-samples) 
-## ÕıÎÄ
-> ±¾ÎÄÖ÷ÒªÊÇgithubÖĞµÄDemo¡£* [Google Android Ïà»úGithub DemoµØÖ·](https://github.com/android/camera-samples) 
-### È¨ÏŞÉêÇë
-ActivityResultContracts£¿ Õâ¸öµ÷µ÷ÊÇÉ¶£¿ 
+### å‰è¨€ 
+å‚è€ƒå†…å®¹ï¼š
+* [google camerax ä¸­æ–‡åœ°å€](https://developer.android.google.cn/training/camerax) 
+* [Google Android ç›¸æœºGithub Demoåœ°å€](https://github.com/android/camera-samples) 
+## æ­£æ–‡
+> æœ¬æ–‡ä¸»è¦æ˜¯githubä¸­çš„Demoã€‚* [Google Android ç›¸æœºGithub Demoåœ°å€](https://github.com/android/camera-samples) 
+### æƒé™ç”³è¯·
+ActivityResultContractsï¼Ÿ è¿™ä¸ªè°ƒè°ƒæ˜¯å•¥ï¼Ÿ 
 ````aidl
     implementation 'androidx.activity:activity-ktx:1.4.0'
     implementation "androidx.fragment:fragment-ktx:1.4.0"
 ````
-### maven °üµ¼Èë
+### maven åŒ…å¯¼å…¥
 ````aidl
  // CameraX dependencies (first release for video is: "1.1.0-alpha10")
     def camerax_version = "1.1.0-alpha12"
@@ -28,11 +28,11 @@ ActivityResultContracts£¿ Õâ¸öµ÷µ÷ÊÇÉ¶£¿
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 ````
-### Ïà»úÅäÖÃ
-* [ImageCaptureÏà»úÅäÖÃ](https://developer.android.google.cn/training/camerax/configuration)
+### ç›¸æœºé…ç½®
+* [ImageCaptureç›¸æœºé…ç½®](https://developer.android.google.cn/training/camerax/configuration)
 
 
-### ÉãÏñÍ·Ô¤ÀÀ
-* ¹Ù·½½¨ÒéÊ¹ÓÃ [PreviewView](https://developer.android.google.cn/training/camerax/preview)
+### æ‘„åƒå¤´é¢„è§ˆ
+* å®˜æ–¹å»ºè®®ä½¿ç”¨ [PreviewView](https://developer.android.google.cn/training/camerax/preview)
 
-### Í¼Æ¬ÅÄÉã
+### å›¾ç‰‡æ‹æ‘„

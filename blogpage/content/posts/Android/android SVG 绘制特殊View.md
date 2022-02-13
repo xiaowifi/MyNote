@@ -1,12 +1,12 @@
-> svg ¿ÉÒÔ×ªÎª path ×ø±ê¡£
-* ¶¨ÒåÒ»¸öÊäÈëÁ÷ ¼ÓÔØ svg ÎÄ¼ş£¬²»ÄÜÊÇ×ªÎªxmlµÄsvg¡£inputStream
-* ¶¨ÒåÒ»¸öpath ´æ´¢¶ÔÏó¡£path,ÑÕÉ«µÈĞèÒª´æ´¢µÄ¶ÔÏó¡£
-* DocumentBuilderFactory »ñÈ¡DocumentBuilder ¶ÔÏó
-* Í¨¹ıDocumentBuilder»ñÈ¡µ½ document 
-* document.getDocumentElement »ñÈ¡ËùÓĞ½Úµã¡£
-* PathParser.createPathFromPathData() ½«stringÀàĞÍµÄpath ×ª»¯Îªpath ¶ÔÏó¡£
-* path.computeBounds()// »ñÈ¡Â·¾¶ÉÏµÄ±ß½ç¡£
-* region ¿ÉÒÔÉèÖÃpath£¬È»ºóÍ¨¹ı region.contains ÅĞ¶Ïµã»÷Î»ÖÃÊÇ·ñÔÚÇøÓòÄÚ²¿¡£
+> svg å¯ä»¥è½¬ä¸º path åæ ‡ã€‚
+* å®šä¹‰ä¸€ä¸ªè¾“å…¥æµ åŠ è½½ svg æ–‡ä»¶ï¼Œä¸èƒ½æ˜¯è½¬ä¸ºxmlçš„svgã€‚inputStream
+* å®šä¹‰ä¸€ä¸ªpath å­˜å‚¨å¯¹è±¡ã€‚path,é¢œè‰²ç­‰éœ€è¦å­˜å‚¨çš„å¯¹è±¡ã€‚
+* DocumentBuilderFactory è·å–DocumentBuilder å¯¹è±¡
+* é€šè¿‡DocumentBuilderè·å–åˆ° document 
+* document.getDocumentElement è·å–æ‰€æœ‰èŠ‚ç‚¹ã€‚
+* PathParser.createPathFromPathData() å°†stringç±»å‹çš„path è½¬åŒ–ä¸ºpath å¯¹è±¡ã€‚
+* path.computeBounds()// è·å–è·¯å¾„ä¸Šçš„è¾¹ç•Œã€‚
+* region å¯ä»¥è®¾ç½®pathï¼Œç„¶åé€šè¿‡ region.contains åˆ¤æ–­ç‚¹å‡»ä½ç½®æ˜¯å¦åœ¨åŒºåŸŸå†…éƒ¨ã€‚
 
 
 
