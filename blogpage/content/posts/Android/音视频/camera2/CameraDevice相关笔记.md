@@ -53,7 +53,93 @@
 > 创建适用于零快门延迟静态捕捉的请求。这意味着在不影响预览帧速率的情况下最大限度地提高图像质量。 AEAWBAF 应处于自动模式。这适用于应用程序操作的 ZSL。对于设备操作的 ZSL，如果可用，请使用 {@link CaptureRequestCONTROL_ENABLE_ZSL}。支持 {@link CameraMetadataREQUEST_AVAILABLE_CAPABILITIES_PRIVATE_REPROCESSING PRIVATE_REPROCESSING} 功能或 {@link CameraMetadataREQUEST_AVAILABLE_CAPABILITIES_YUV_REPROCESSING YUV_REPROCESSING} 功能的相机设备保证支持此模板。
 * TEMPLATE_MANUAL 
 > 用于直接应用程序控制捕获参数的基本模板。禁用所有自动控制（自动曝光、自动白平衡、自动对焦），并将后处理参数设置为预览质量。手动捕获参数（曝光、灵敏度等）设置为合理的默认值，但应根据预期用例由应用程序覆盖。支持 {@link CameraMetadataREQUEST_AVAILABLE_CAPABILITIES_MANUAL_SENSOR MANUAL_SENSOR} 功能的相机设备保证支持此模板。
+## 正文
+主要是介绍 如何获取到相机对象。
+### Code
 
+> 逻辑上讲，硬件操作需要在子线程中进行，所以这个调调需要初始化一个子线程和一个handler.同时当界面生命周期结束的时候，关闭线程。
+
+````aidl
+// 开启线程。
+ cameraThread = new HandlerThread("cameraThread");
+ cameraThread.start();
+ cameraHandler = new Handler(cameraThread.getLooper());
+ // 关闭线程
+  cameraThread.quitSafely();
+  try {
+        cameraThread.join();
+    }catch (Exception e){
+    }
+````
+
+#### 开始获取 cameraManger
+
+````aidl
+cameraManager = (CameraManager) getContext().getSystemService(Context.CAMERA_SERVICE);
+````
+
+#### 开始相机可用添加监听
+
+````aidl
+cameraManager.registerAvailabilityCallback(new CameraManager.AvailabilityCallback() {
+            @Override
+            public void onCameraAvailable(@NonNull String cameraId) {
+                super.onCameraAvailable(cameraId);
+                Log.e(TAG, "onCameraAvailable 可用的相机: "+cameraId);
+            }
+
+            @Override
+            public void onCameraUnavailable(@NonNull String cameraId) {
+                super.onCameraUnavailable(cameraId);
+                Log.e(TAG, "onCameraUnavailable相机不可用: "+cameraId );
+            }
+
+            @Override
+            public void onCameraAccessPrioritiesChanged() {
+                super.onCameraAccessPrioritiesChanged();
+                Log.e(TAG, "onCameraAccessPrioritiesChanged 关于相机访问优先级已更改: " );
+            }
+        },cameraHandler);
+````
+
+#### 添加闪光灯监听
+
+````aidl
+        cameraManager.registerTorchCallback(new CameraManager.TorchCallback() {
+            @Override
+            public void onTorchModeUnavailable(@NonNull String cameraId) {
+                super.onTorchModeUnavailable(cameraId);
+                Log.e(TAG, "onTorchModeUnavailable闪光灯不可用 : "+cameraId );
+            }
+
+            @Override
+            public void onTorchModeChanged(@NonNull String cameraId, boolean enabled) {
+                super.onTorchModeChanged(cameraId, enabled);
+                Log.e(TAG, "onTorchModeChanged 闪光灯模式已经更改 : "+cameraId+"  "+enabled );
+            }
+        },cameraHandler);
+````
+#### 获取到相机设备
+````aidl
+                    cameraManager.openCamera("0", new CameraDevice.StateCallback() {
+                        @Override
+                        public void onOpened(@NonNull CameraDevice cameraDevice) {
+                            //todo CameraDevice 这个就是相机设备对象，然后进行预览和session对象设置。
+                            Log.e(TAG, "onOpened 打开相机: "+cameraDevice.getId() );
+                        }
+
+                        @Override
+                        public void onDisconnected(@NonNull CameraDevice cameraDevice) {
+                            Log.e(TAG, "onDisconnected 相机断开: "+cameraDevice.getId() );
+                        }
+
+                        @Override
+                        public void onError(@NonNull CameraDevice cameraDevice, int i) {
+                            Log.e(TAG, "onDisconnected 发生了错误: "+cameraDevice.getId()+"  "+i );
+                        }
+                    },cameraHandler);
+
+````
 
 
 
