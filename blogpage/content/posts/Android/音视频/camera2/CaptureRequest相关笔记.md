@@ -24,10 +24,12 @@ mSession.setRepeatingRequest(builder.build(),mCaptureCallback , cameraHandler);
 ````
 #### 色彩矫正模式 COLOR_CORRECTION_MODE
  The mode control selects how the image data is converted from the sensor's native color into linear sRGB color
-<br> 模式控制选择如何将图像数据从传感器的原始颜色转换为线性 sRGB 颜色
+ 模式控制选择如何将图像数据从传感器的原始颜色转换为线性 sRGB 颜色
+
 #### 色彩校正变换 COLOR_CORRECTION_TRANSFORM
  值在规范化范围 <code>[0, 1.0]<code>) 内，否则可能会发生裁剪 <br>
  用于从传感器 RGB 颜色空间转换为输出线性 sRGB 颜色空间的颜色变换矩阵。<p> <p>当请求 {@link CaptureRequestCOLOR_CORRECTION_MODE android.colorCorrection.mode} 不是时，此矩阵由相机设备设置TRANSFORM_MATRIX，或者当 {@link CaptureRequestCOLOR_CORRECTION_MODE android.colorCorrection.mode} 为 TRANSFORM_MATRIX 时直接由应用程序在请求中。<p> <p>在后一种情况下，相机设备可能会舍入矩阵以解决精度问题；最终的舍入矩阵应在此矩阵结果元数据中报告。转换应将输出颜色值的大小保持在 <code>[0, 1.0]<code> 内（假设输入颜色值在规范化范围 <code>[0, 1.0]<code> 内），否则可能会发生剪切.<p> <p>每个矩阵元素的有效范围因设备而异，但保证[-1.5, 3.0]内的值不会被裁剪。<p>
+
 #### 色彩校正增益 COLOR_CORRECTION_GAINS
  应用于白平衡的 Bayer 原始颜色通道的增益。<p> <p>当请求 {@link CaptureRequestCOLOR_CORRECTION_MODE android.colorCorrection.mode} 不是 TRANSFORM_MATRIX 时，这些每通道增益由相机设备设置，或直接由当 {@link CaptureRequestCOLOR_CORRECTION_MODE android.colorCorrection.mode} 为 TRANSFORM_MATRIX 时，请求中的应用程序。<p> <p>结果元数据中的增益是相机设备实际应用于当前帧的增益。<p> < p>增益的有效范围因设备而异，但保证[1.0, 3.0]之间的增益不会被削波。即使给定的设备允许增益低于 1.0，通常也不建议这样做，因为这会产生颜色伪影
 #### 色彩校正像差模式 COLOR_CORRECTION_ABERRATION_MODE
@@ -121,7 +123,7 @@ JPEG 图像的方向。<p> <p>相对于相机方向的顺时针旋转角度（�
 #### 传感器测试模式模式 SENSOR_TEST_PATTERN_MODE
 
 #### 着色模式 SHADING_MODE
-应用于图像数据的镜头阴影校正质量。<p> <p>当设置为关闭模式时，相机设备将不应用镜头阴影校正，如果 <code>{ @link CaptureRequestSTATISTICS_LENS_SHADING_MAP_MODE android.statistics.lensShadingMapMode} == ON<code>。例如，对于大小为 <code>[ 4, 3 ]<code> 的镜头着色图，这种情况的输出 {@link CaptureResultSTATISTICS_LENS_SHADING_CORRECTION_MAP android.statistics.lensShadingCorrectionMap} 将是如下所示的恒等图：<p> <pre ><代码>[ 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0 , 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0 ] <code><pre> <p>当设置为其他模式时，相机设备将应用镜头阴影校正。应用程序可以通过将{@link CaptureRequestSTATISTICS_LENS_SHADING_MAP_MODE android.statistics.lensShadingMapMode}设置为ON来请求镜头着色图数据，然后相机设备将在{@link CaptureResultSTATISTICS_LENS_SHADING_CORRECTION_MAP android.statistics.lensShadingCorrectionMap}中提供镜头着色图数据；返回的着色贴图数据将是相机设备为此捕获请求应用的数据。<p> <p>着色贴图数据可能取决于自动曝光 (AE) 和 AWB 统计数据，因此贴图数据的可靠性可能会受到 AE 和 AWB 算法的影响。当 AE 和 AWB 处于 AUTO 模式时（{@link CaptureRequestCONTROL_AE_MODE android.control.aeMode} <code>!=<code> OFF 和 {@link CaptureRequestCONTROL_AWB_MODE android.control.awbMode} <code>!=<code> OFF），为获得最佳效果，建议应用程序在使用返回的着色贴图数据之前等待 AE 和 AWB 收敛。
+应用于图像数据的镜头阴影校正质量。<p> <p>当设置为关闭模式时，相机设备将不应用镜头阴影校正，如果 <code>{ @link CaptureRequestSTATISTICS_LENS_SHADING_MAP_MODE android.statistics.lensShadingMapMode} == ON<code>。例如，对于大小为 <code>[ 4, 3 ]<code> 的镜头着色图，这种情况的输出 {@link CaptureResultSTATISTICS_LENS_SHADING_CORRECTION_MAP android.statistics.lensShadingCorrectionMap} 将是如下所示的恒等图.当设置为其他模式时，相机设备将应用镜头阴影校正。应用程序可以通过将{@link CaptureRequestSTATISTICS_LENS_SHADING_MAP_MODE android.statistics.lensShadingMapMode}设置为ON来请求镜头着色图数据，然后相机设备将在{@link CaptureResultSTATISTICS_LENS_SHADING_CORRECTION_MAP android.statistics.lensShadingCorrectionMap}中提供镜头着色图数据；返回的着色贴图数据将是相机设备为此捕获请求应用的数据。<p> <p>着色贴图数据可能取决于自动曝光 (AE) 和 AWB 统计数据，因此贴图数据的可靠性可能会受到 AE 和 AWB 算法的影响。当 AE 和 AWB 处于 AUTO 模式时（{@link CaptureRequestCONTROL_AE_MODE android.control.aeMode} <code>!=<code> OFF 和 {@link CaptureRequestCONTROL_AWB_MODE android.control.awbMode} <code>!=<code> OFF），为获得最佳效果，建议应用程序在使用返回的着色贴图数据之前等待 AE 和 AWB 收敛。
 #### 统计人脸检测模式 STATISTICS_FACE_DETECT_MODE
 人脸检测单元的操作模式。<p> <p>是否启用人脸检测，以及是否应仅输出基本字段或完整字段集
 #### 统计热像素图模式 STATISTICS_HOT_PIXEL_MAP_MODE
@@ -143,7 +145,7 @@ JPEG 图像的方向。<p> <p>相对于相机方向的顺时针旋转角度（�
 #### TONEMAP_GAMMA
 当 {@link CaptureRequestTONEMAP_MODE android.tonemap.mode} 为 GAMMA_VALUE<p> <p>色调映射曲线将使用以下公式定义： OUT = pow(IN, 1.0 gamma) 其中 IN 和 OUT 是输入像素值缩放到 [0.0, 1.0] 范围内，pow 是幂函数，gamma 是此键指定的 gamma 值。<p> <p>相同的曲线将应用于所有颜色通道。相机设备可以将输入伽马值裁剪到其支持的范围。实际应用的值将在捕获结果中返回。<p> <p>伽马值的有效范围因设备而异，但保证[1.0, 5.0]内的值不会被裁剪
 #### 色调映射预设曲线 TONEMAP_PRESET_CURVE
-当 {@link CaptureRequestTONEMAP_MODE android.tonemap.mode} 为 PRESET_CURVE<p> <p>色调映射曲线将由指定标准定义时使用的色调映射曲线。<p> <p>sRGB（约 16 个控制点）：<p > <p><img alt="sRGB 色调映射曲线"  <p>Rec. 709（约16个控制点）：<p> <p><img alt="Rec. 709tonemapping curve" src="referenceimagescamera2metadataandroid.tonemap.curveRedrec709_tonemap.png" ><p> <p>注意上图显示了一个16个控制点逼近预设曲线。相机设备可能会对曲线应用不同的近似值
+当 {@link CaptureRequestTONEMAP_MODE android.tonemap.mode} 为 PRESET_CURVE<p> <p>色调映射曲线将由指定标准定义时使用的色调映射曲线。<p> <p>sRGB（约 16 个控制点）：<p > <p>
 #### LED_TRANSMIT
 他的 LED 名义上用于向用户指示相机已开启，并且可能正在将图像流式传输回应用处理器。在某些极少数情况下，当视频在本地处理并且未传输到任何不受信任的应用程序时，操作系统可能会禁用此功能。<p> <p>特别是，当数据可以传输时，LED <em>必须<em>始终亮起关闭设备。每当数据本地存储在设备上时，LED <em>应该<em>始终亮起。<p> <p>如果受信任的应用程序正在使用不违反上述规定
 ####  BLACK_LEVEL_LOCK
