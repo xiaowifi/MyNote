@@ -22,6 +22,21 @@
 ### gradle 生命周期
 > 每一个module都有一个build.gradle,rootProject 就是根目录的build.gradle,project就是当前build.gradle 本身
 > gradle 钩子 在 settings.java 和 project 中都包含。
+> * gradle 的钩子会对当前工程及其子工程都生效。
+> * project 的钩子会对当前工程生效。
+> * rootProject 表示是根工程的钩子。
+````aidl
+// 可以获取到子工程的 生命周期。不建议用。
+rootProject.getSubprojects().each {
+    it.afterEvaluate {
+        
+    }
+    it.beforeEvaluate {
+        
+    }
+}
+````
+
 #### 钩子gradle.buildStarted()
 > 这个钩子在setting.gradle 中回调不到。在build.gradle 也回调不到。
 #### initialization
@@ -46,6 +61,7 @@ gradle.projectsLoaded {
 > 那等于说 可以写方法 在配置阶段执行。
 ##### 钩子 gradle.beforeProject()
 ##### 钩子 project.beforeEvaluate()
+> 当前在root 中不生效。
 ##### 执行 build.gradle 文件
 > 确定任务子集和配置 task
 ##### 钩子 gradle.afterProject()
@@ -58,8 +74,53 @@ gradle.projectsLoaded {
 ##### task 中都actions
 ##### gradle.taskGraph.afterTask()
 ##### 钩子 gradle.buildFinish()
+##### gradle 添加监听
+> 因为 gradle 生命周期是整个项目，所以 能监听到project的生命周期不过分吧。
+`````aidl
+gradle.addBuildListener(new BuildListener() {
+    @Override
+    void buildStarted(Gradle gradle) {
 
+    }
+
+    @Override
+    void settingsEvaluated(Settings settings) {
+
+    }
+
+    @Override
+    void projectsLoaded(Gradle gradle) {
+
+    }
+
+    @Override
+    void projectsEvaluated(Gradle gradle) {
+
+    }
+
+    @Override
+    void buildFinished(BuildResult result) {
+
+    }
+})
+//     * <li>{@link org.gradle.BuildListener}
+//     * <li>{@link org.gradle.api.execution.TaskExecutionGraphListener}
+//     * <li>{@link org.gradle.api.ProjectEvaluationListener}
+//     * <li>{@link org.gradle.api.execution.TaskExecutionListener}
+//     * <li>{@link org.gradle.api.execution.TaskActionListener}
+//     * <li>{@link org.gradle.api.logging.StandardOutputListener}
+//     * <li>{@link org.gradle.api.tasks.testing.TestListener}
+//     * <li>{@link org.gradle.api.tasks.testing.TestOutputListener}
+//     * <li>{@link org.gradle.api.artifacts.DependencyResolutionListener}
+gradle.addListener()
+`````
 ### task 任务
+* 定义task 任务的时候  @TaskAction 用于标记 执行task 时候执行的方法，当然可以定义多个方法，当多个方法同时包含 @TaskAction 注解的时候，无法指定其执行顺序。
+* @intput 用于标记输入
+* @outputFile 表示任务的输出文件
+* intputs,outputs 表示默认的输入输出
+* group 定义 自定义task 的group
+* @optional 表示输入输出项为可选。
 #### 简单的task 任务
 ````aidl
 task taskDemo{
@@ -76,6 +137,7 @@ task taskDemo{
 > dependsOn 用于标记在什么任务后执行。如果是在多个任务后都执行的话。传递数组。数组执行顺序 在没有指定依赖顺序的时候是按照名称顺序去执行的。
 > 因为task DefaultTask ,DefaultTask是 AbstractTask的子类 所以task 中很多方法 也可以直接使用 比如 taskDemo.mustRunAfter(taskDemo2) 也可以指定依赖关系。
 > task.finalizedBy task 用于指定某个任务执行完成后 再执行什么任务。  
+> 因为task 包含优化，当输入输出没有发生变更的时候，将不会执行task,所以可以对输入输出进行设置为每次都执行。如：outputs.upToDateWhen{false}
 ````aidl
 task taskDemo{
     // 配置代码
@@ -118,8 +180,61 @@ task mytask(type:MyTask){
     
 }
 ````
+#### 钩子函数和task
+> 根据build.gradle 的生命周期 规则。想要将一个task 依赖某个别人的task，成为别人的输入或者输出。就需要在对应的节点上挂钩子。
+> 结合上面的的task 依赖会更好。通过 tasks.getByName() 在对应的生命周期以后才不会为null 
+````aidl
+// 比如说 这个是压缩 文件 将packageDebug task 的输出压缩成一个zip 
+afterEvaluate {
+    tasks.getByName("packageDebug")
+    task zip(type:Zip){
+        archiveName("output.zip")
+        destinationDir file("${buildDir}/luoye")
+        from tasks.getByName("packageDebug").outputs.files
+    }
+}
+````
+### Project
+* 根目录的project 在子project中就是rootProject,project 默认就是当前build.gradle
+* buildscript 是针对 project 的配置。所以这个里面的方法先执行。
+````aidl
+// 针对 APP module 进行配置。
+project(':app'){
 
+}
+// 针对所有project 进行配置
+project.allprojects {
 
+}
+//配置此项目的所有子项目。
+project.subprojects {
+
+}
+// 拿到所有的子project
+project.subprojects.each {
+
+}
+````
+#### 属性扩展
+```aidl
+// 默认给project 进行属性扩展
+project.ext{
+    username="q"
+    emal="qqqq.ccc"
+}
+ext.www="www"
+
+project.ext.username
+project.username
+
+```
+### 插件
+#### 脚本插件
+````aidl
+apply from:'一个本地相对路径或者绝对路径，或者一个网络文件地址'
+````
+#### 定义class 
+* 需要实现 Plugin<project>。通过 apply 获取到当前的project对象。通过在监听中创建task 
 ### gradlew 执行脚本  
 * gradlew wrapper 配置版本统一管理，会生成几个文件和目录。
     * gradlew 使用gradlew 就是使用的是这个文件，如果配置了gradle 环境就直接使用gradle 了。
