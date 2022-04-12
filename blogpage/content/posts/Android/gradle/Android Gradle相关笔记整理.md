@@ -235,6 +235,53 @@ apply from:'一个本地相对路径或者绝对路径，或者一个网络文�
 ````
 #### 定义class 
 * 需要实现 Plugin<project>。通过 apply 获取到当前的project对象。通过在监听中创建task 
+### 依赖管理
+> gradlew:app:dependencies --configuration releaseRuntimeClasspath 查看依赖管理，当配置风味之后，似乎需要变更一下风味内容。<br>
+> gradlew:app:dependencies 查看所有依赖项。<br>
+> repositories <br>
+> org.gradle.api.artifacts.dsl.RepositoryHandler 
+* google() Google 的官方仓库
+* mavenLocal() 本地的仓库
+* maven(){} 从某个地址上获取maven 
+* ivy{} 和maven 类似
+#### 依赖项配置
+* [Google Android 依赖管理](https://developer.android.google.cn/studio/build/dependencies)
+> dependencies <br>
+> org.gradle.api.artifacts.dsl.DependencyHandler
+* configurations 可以自定义依赖项的配置。 类似于implementation 的功能
+* implementation 导入到maven 不会进行传递。当前使用了某些功能，当别的module 使用的时候无法找到当前内容。当APP 大量使用AIP的时候构建效率非常低。
+* api 会对依赖项进行检查，然后疯狂向下传递。
+* compileOnly 不会进行打包进入apk 
+* androidx.legacy:legacy-support-v4:1.0.0 (*) 这种表示依赖已经有了，将不会再重复依赖。
+* com.squareup.okio:okio:1.7.0 -> 2.9.0 表示1.7.0 被2.9.0 所替代。
+* jar gradle 不能排除。
+* 在导入maven 设置 transitive 设置依赖项是是否传递。true 传递，FALSE 不传递依赖。
+* 在导入maven 中设置 exclude 进行排除依赖。
+* 在导入maven 中设置 farce true 强行指定版本。
+* 在build.gradle 中配置 configuration 可以对排除项进行全局配置。
+* configurations.all{ resolutionStorategy{force 强行指定某个版本}}
+### android productFlavors
+* compileSdkVersion 编译时候使用的版本
+* minSdkVersion 最小 apk 支持版本   
+* targetSdkVersion 开发的时候使用的sdk  
+* applicationIdSuffix 添加后缀。
+* buildToolsVersion　编译工具的版本
+* manifestPlaceholders=["key":"v"]
+#### ProductFlavors
+> 这个必须要有一个或者多个 flavorDimensions “channel”,"维度“
+* dimension 指定 flavorDimensions
+* minifyEnabled  是否启用混淆 
+* shrinkResources false 清理无效资源。
+    * 这个是清理 没有被使用的资源文件 
+* initWith 
+* zipAlignEnabled 
+* 
+* 
+* 
+* 
+* 
+* 
+### maven 发布
 ### gradlew 执行脚本  
 * gradlew wrapper 配置版本统一管理，会生成几个文件和目录。
     * gradlew 使用gradlew 就是使用的是这个文件，如果配置了gradle 环境就直接使用gradle 了。
