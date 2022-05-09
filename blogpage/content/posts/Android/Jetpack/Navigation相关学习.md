@@ -55,8 +55,12 @@ bundle 会存放到fragment argument 中。
  
 ## 原理 
 ###  HavHostFragment
-> 在onCreate 中创建了一个 NavHostController 
-> 
+> HavHostFragment是fragment的子类。 在onCreate 中创建了一个 NavHostController。
+* 创建NavController 的时候，添加了两个导航器 NavGraohNavigator(xml 文件被实例化到这个里面了)和 ActivityNavigator 
+* 在onCreate 中对于navController 添加了一个 dialogFragmentNavigator 和一个fragmentNavigator
+  ![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/%20image/20220509170942.png)
+## 优化
+
  
  
  
