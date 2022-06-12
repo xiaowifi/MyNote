@@ -8,8 +8,6 @@
 
 Camera2架构图：
 
-
-
 ![img](https:////upload-images.jianshu.io/upload_images/9551499-252bae74ce31068a.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/930/format/webp)
 
 camera2架构.jpg

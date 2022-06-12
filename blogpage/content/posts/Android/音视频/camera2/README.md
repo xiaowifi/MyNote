@@ -4,21 +4,13 @@
 * [google camera2 gitHub Demo地址](https://github.com/android/camera-samples)
 ## 前言
 android.hardware.camera2 包为连接到 Android 设备的各个相机设备提供了一个接口。它取代了不推荐使用的Camera类。
-
 此包将相机设备建模为管道，它接收用于捕获单个帧的输入请求，根据请求捕获单个图像，然后输出一个捕获结果元数据包，以及一组用于请求的输出图像缓冲区。请求按顺序处理，多个请求可以同时进行。由于摄像头设备是具有多个阶段的管道，因此需要在运行中处理多个请求才能在大多数 Android 设备上保持全帧率。
-
 要枚举、查询和打开可用的摄像头设备，请获取一个 [CameraManager](https://developer.android.google.cn/reference/android/hardware/camera2/CameraManager) 实例。
-
 个人CameraDevices提供一组静态属性信息，描述硬件设备以及设备的可用设置和输出参数。此信息通过 CameraCharacteristics对象提供，并可通过getCameraCharacteristics(String)
-
 要从相机设备捕获或流式传输图像，应用程序必须首先创建一个camera capture session 带有一组输出 Surfaces 的用于相机设备的 createCaptureSession(SessionConfiguration). 每个 Surface 都必须预先配置appropriate size and format（如果适用）以匹配相机设备可用的尺寸和格式。目标 Surface 可以从各种类中获得，包括SurfaceView、 SurfaceTexture通过 Surface(SurfaceTexture)、 MediaCodec、MediaRecorder、 Allocation和ImageReader。
-
 通常，相机预览图像被发送到SurfaceView或TextureView（通过其 SurfaceTexture）。DngCreator可以使用ImageReader和JPEG格式捕获 JPEG 图像或 RAW 缓冲区RAW_SENSOR。在 RenderScript、OpenGL ES 中或直接在托管或本机代码中对相机数据进行应用程序驱动的处理，最好分别通过AllocationYUV Type、SurfaceTexture和格式ImageReader来完成。YUV_420_888
-
 然后，应用程序需要构建一个CaptureRequest，它定义了相机设备捕获单个图像所需的所有捕获参数。该请求还列出了哪些配置的输出表面应用作此捕获的目标。CameraDevice 有一个 factory method用于为给定用例创建一个request builder，它针对运行应用程序的 Android 设备进行了优化。
-
 设置请求后，可以将其交给活动捕获会话以供一次性使用capture或无休止地repeating使用。这两种方法还有一个变体，它接受请求列表以用作突发捕获/重复突发。重复请求的优先级低于捕获，因此在capture()配置重复请求时提交的请求将在当前重复（突发）捕获的任何新实例开始捕获之前被捕获。
-
 处理请求后，相机设备将生成一个TotalCaptureResult对象，其中包含有关相机设备在捕获时的状态以及最终使用的设置的信息。如果需要舍入或解决矛盾的参数，这些可能与请求有所不同。相机设备还将向Surfaces请求中包含的每个输出发送一帧图像数据。这些是相对于输出 CaptureResult 异步生成的，有时会晚得多。
 ## 正文
 > 从上面的翻译可以大致，知道，相机这个硬件调用大致需要下面这些类。
