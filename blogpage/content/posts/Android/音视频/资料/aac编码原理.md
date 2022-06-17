@@ -118,9 +118,9 @@ ADIF的格式：
 
 ADIF Header头信息如下：
 
-![img](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/format,png.png)
+![format,png](https://s2.loli.net/2022/06/17/kwsbhZHCEVxGS4K.png)
 
- 
+
 
 ADTS的格式：
 
@@ -134,11 +134,7 @@ ADTS header 的固定头和可变头信息：
 
 固定头意思就是一旦音频文件形成，所有帧的信息头字段意义都是一样的，但是可变头说的是每个帧这里面字段都有不一样的地方，不要理解为可有可无的意思。
 
- 
-
-![img](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/format,png-20220108120200592.png)
-
- 
+![format,png-20220108120200592](https://s2.loli.net/2022/06/17/GIXQl7t2e4nFJHS.png)
 
 ADTS帧头各个字段和含义：
 
@@ -234,15 +230,13 @@ ADTS的raw_data_block基本码流组件，头部有3位标志位id_syn_ele,指�
 
 **用MediaInfo工具可以查看AAC音频的基本信息**
 
-![img](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/format,png-20220108120212288.png)
+![format,png-20220108120212288](https://s2.loli.net/2022/06/17/Xyq2jMeKD7kaGNp.png)
 
  
 
 **AAC Audio ES Viewer工具可以详细分析每一个字节**
 
- 
-
-![img](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/format,png-20220108120217951.png)
+![format,png-20220108120217951](https://s2.loli.net/2022/06/17/ZJuE63y1SgWdeij.png)
 
 **分析各个字段含义**
 
@@ -394,21 +388,17 @@ raw_data_block()
 
 \1. 先定义ADTS头的结构体
 
- 
-
-![img](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/format,png-20220108120230259.png)
+![format,png-20220108120230259](https://s2.loli.net/2022/06/17/EyhsNmDBPgAQTHI.png)
 
 \2. 读取文件流的第一个ADTS音频帧的头部数据，并解析里面的长度；
 
- 
-
-![img](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/format,png-20220108120238318.png)
+![format,png-20220108120238318](https://s2.loli.net/2022/06/17/UTKcb8xEB7CaAqZ.png)
 
 \3. 再根据长度读取里面的音频裸数据；
 
- 
+ ![format,png-20220108120248211](https://s2.loli.net/2022/06/17/xRyEfVskXGeTPvL.png)
 
-![img](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/format,png-20220108120248211.png)
+
 
 \4. 不断循环即可完成头部数据的解析和其裸数据的读取；
 
