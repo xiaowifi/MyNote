@@ -6,4 +6,6 @@
 > gitHub 仿抖音效果APP
 ### ycScrollPager 
 > gitHub 仿抖音列表播放
+### Mp4Composer
+> gitHub上的一个视频裁剪库。
 
