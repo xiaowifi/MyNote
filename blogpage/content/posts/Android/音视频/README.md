@@ -1,5 +1,5 @@
 > Android 音视频学习涉及范围
-
+* [ ] 腾讯超级播放器
 * [ ] VideoView
 * [ ] mediaPlayer
 * [ ] SurfaceView+TextureView
