@@ -31,8 +31,6 @@
 
 京东动画实现
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android">
@@ -47,11 +45,6 @@
         android:duration="100" />
 </animation-list>
 ```
-
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
 ```
 protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +56,6 @@ protected void onCreate(@Nullable Bundle savedInstanceState) {
     }
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 可以说，图片资源决定了这种方式可以实现怎样的动画
 
@@ -83,7 +75,7 @@ protected void onCreate(@Nullable Bundle savedInstanceState) {
 
 alpha_anim.xml 动画实现
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -93,13 +85,7 @@ alpha_anim.xml 动画实现
     android:interpolator="@android:anim/accelerate_decelerate_interpolator"
     android:toAlpha="0.0" />
 ```
-
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
 scale.xml 动画实现
-
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <scale xmlns:android="http://schemas.android.com/apk/res/android"
@@ -112,7 +98,6 @@ scale.xml 动画实现
     android:toYScale="1.0"/>
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 然后，在Activity中
 
@@ -125,8 +110,6 @@ img.startAnimation(animation);
 这样就可以实现ImageView alpha 透明变化的动画效果。
 
 也可以使用set 标签将多个动画组合（代码源自Android SDK API）
-
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -159,7 +142,7 @@ img.startAnimation(animation);
 </set>
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 可以看到组合动画是可以嵌套使用的。
 
@@ -185,7 +168,6 @@ pivotY 也是相同的原理，只不过变成的纵向的位置。如果还是�
 
 有时候，动画的属性值可能需要动态的调整，这个时候使用xml 就不合适了，需要使用java代码实现
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```
 private void RotateAnimation() {
@@ -213,7 +195,6 @@ private void RotateAnimation() {
     }
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 这里animation.setFillAfter决定了动画在播放结束时是否保持最终的状态；animation.setRepeatCount和animation.setRepeatMode 决定了动画的重复次数及重复方式，具体细节可查看源码理解。
 
@@ -231,8 +212,6 @@ private void RotateAnimation() {
 
 首先我们来看看如何用属性动画实现上面补间动画的效果
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
 ```
     private void RotateAnimation() {
         ObjectAnimator anim = ObjectAnimator.ofFloat(myView, "rotation", 0f, 360f);
@@ -249,7 +228,6 @@ private void RotateAnimation() {
     }
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
  
 
@@ -259,7 +237,6 @@ private void RotateAnimation() {
 
 当然属性动画也是可以组合实现的
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```
   ObjectAnimator alphaAnim = ObjectAnimator.ofFloat(myView, "alpha", 1.0f, 0.5f, 0.8f, 1.0f);
@@ -275,7 +252,6 @@ private void RotateAnimation() {
                 set.start();
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 可以看到这些动画可以同时播放，或者是按序播放。
 
@@ -319,7 +295,6 @@ TimeInterpolator 决定了动画从初始值过渡到结束值的节奏。个人
 
 前面说了，TypeEvaluator决定了动画如何从初始值过渡到结束值。这个TypeEvaluator是个接口，我们可以实现这个接口。
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```
 public class PointSinEvaluator implements TypeEvaluator {
@@ -337,13 +312,11 @@ public class PointSinEvaluator implements TypeEvaluator {
 }
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 PointSinEvaluator 继承了TypeEvaluator类，并实现了他唯一的方法evaluate；这个方法有三个参数，第一个参数fraction 代表当前动画完成的百分比，这个值是如何变化的后面还会提到；第二个和第三个参数代表动画的初始值和结束值。这里我们的逻辑很简单，x的值随着fraction 不断变化，并最终达到结束值；y的值就是当前x值所对应的sin(x) 值，然后用x 和 y 产生一个新的点（Point对象）返回。
 
 这样我们就可以使用这个PointSinEvaluator 生成属性动画的实例了。
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```
         Point startP = new Point(RADIUS, RADIUS);//初始值（起点）
@@ -360,7 +333,6 @@ PointSinEvaluator 继承了TypeEvaluator类，并实现了他唯一的方法eval
         });
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 这样我们就完成了动画轨迹的定义，现在只要调用valueAnimator.start() 方法，就会绘制出一个正弦曲线的轨迹。
 
@@ -370,7 +342,6 @@ PointSinEvaluator 继承了TypeEvaluator类，并实现了他唯一的方法eval
 
 之前我们说过，使用ObjectAnimator 可以对任意对象的任意属性进行动画操作，这句话是不太严谨的，这个任意属性还需要有get 和 set 方法。
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```
 public class PointAnimView extends View {
@@ -386,11 +357,9 @@ public class PointAnimView extends View {
 }
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 这里在我们的自定义view中，定义了两个属性color 和 radius，并实现了他们各自的get set 方法，这样我们就可以使用属性动画的特点实现小球颜色变化的动画和半径变化的动画。
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```
  ObjectAnimator animColor = ObjectAnimator.ofObject(this, "color", new ArgbEvaluator(), Color.GREEN,
@@ -411,7 +380,6 @@ public class PointAnimView extends View {
         });
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 这里，我们使用ObjectAnimator 实现对color 属性的值按照ArgbEvaluator 这个类的规律在给定的颜色值之间变化，这个ArgbEvaluator 和我们之前定义的PointSinEvaluator一样，都是决定动画如何从初始值过渡到结束值的，只不过这个类是系统自带的，我们直接拿来用就可以，他可以实现各种颜色间的自由过渡。
 
@@ -431,7 +399,6 @@ public class PointAnimView extends View {
 
 PointAnimView 源码
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```
 public class PointAnimView extends View {
@@ -609,7 +576,6 @@ public class PointAnimView extends View {
 }
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
  
 
@@ -631,7 +597,6 @@ Interpolator的概念其实我们并不陌生，在补间动画中我们就使�
 
 这里提一下，属性动画当然也可以使用xml文件的方式实现，但是属性动画的属性值一般会牵扯到对象具体的属性，更多是通过代码动态获取，所以xml文件的实现会有些不方便。
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```
 <set android:ordering="sequentially">
@@ -654,7 +619,6 @@ Interpolator的概念其实我们并不陌生，在补间动画中我们就使�
 </set>
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 使用方式：
 
