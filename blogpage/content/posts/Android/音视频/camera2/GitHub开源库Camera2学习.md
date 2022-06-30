@@ -17,6 +17,9 @@
 > 但愿我再次温习这个调调的时候，[我的blog](https://gitee.com/lalalaxiaowifi/pictures/tree/bolg/blogpage/content/posts/Android) 中已经把内存相关的写好了吧。
 > 最近在听费曼学习法，这个调调也贼猛，可惜我的笔记依旧还没有开始写。但愿[我的读书笔记](https://gitee.com/lalalaxiaowifi/pictures/tree/bolg/blogpage/content/posts/%E8%AF%BB%E4%B9%A6)
 > 可以得以完善吧。毕竟他还没有开始动，还只是一个计划，遥不可及。这里不得不感叹人是有限的。
+## 类关系图
+> 再次感谢 IDEA 插件 Diagram。毕竟我PlantUML 的使用是一个垃圾。
+![](https://s2.loli.net/2022/06/30/XYBqbSHQewlVWjt.png)
 ## 包分析 
 * CameraApp 这个调调主要是初始化性能检测工具的。
 * Config 配置
@@ -52,7 +55,129 @@
 * SubPrefListAdapter  recyclerView 的adapter  
 >  这些好像都是 PreferenceFragment 使用的。是吧，又是一个TODO  
 ### exif
-### manager
+> 这个没有看懂，我觉得我需要一张类关系图。算了，类图搞出来也不行，关系太绕了，sorry啊
+* ByteBufferInputStream InputStream子类
+* CountedDataInputStream FilterInputStream 子类 
+* ExifData 
+* ExifInterface
+* ExifInvalidFormatException
+* ExifModifier
+* ExifOutputStream
+* ExifParser
+* ExifReader
+* ExifTag
+* IfdData
+* IfdId
+* JpegHeader
+* OrderedDataOutputStream
+* Rational 
+### manager 
+* CameraSession 
+* CameraSettings
+* CameraToolKit
+* Controller
+* DeviceManager
+* DualDeviceManager
+* FocusOverlayManager
+* ModuleManager
+* RequestManager
+* Session 
+* SingleDeviceManager
+* StateManager
+* VideoSession
 ### module 
+* CameraFragment 真正控制显示的fragment。
+* SettingFragment PreferenceFragment的子类，做设置用的。
+* CameraModule 其他module的父类，主要是定义统一的功能
+* DualCameraModule 双摄像头模式 CameraModule子类 
+* PhotoModule 拍照模式 CameraModule子类
+* ProfessionalModule 专业模式 CameraModule子类
+* VideoModule 视频录制 CameraModule子类
 ### UI 
+* AppBaseUI
+* CameraBaseMenu
+* CameraBaseUI
+* CameraMenu
+* CameraSubMenu
+* CameraSubMenu
+* CoverView
+* DualCameraUI
+* FocusView
+* GestureTextureView
+* IndicatorView
+* PhotoUI
+* ProfessionalUI
+* ShutterButton
+* VideoUI
 ### utils
+* CameraDialog  基于 DialogFragment+ AlertDialog的dialog，第一次见这种写法 
+  ````
+   @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(getTitle());
+        builder.setMessage(getMessage());
+        builder.setCancelable(false);
+        if (getOKButtonMsg() != null) {
+            builder.setPositiveButton(getOKButtonMsg(), this);
+        }
+        if (getNoButtonMsg() != null) {
+            builder.setNegativeButton(getNoButtonMsg(), this);
+        }
+        return builder.create();
+    }
+  ````
+* CameraUtil 
+    * sortCamera2Size 对于相机支持尺寸进行排序。
+    * getDefaultPictureSize 获取支持的默认的图片预览大小 
+    * getPreviewSizeByRatio 通过比例获取支持的预览大小 
+    * getDefaultVideoSize 获取支持的视频大小 
+    * getPictureSizeList 获取相机支持的图片大小列表。
+    * getPreviewSizeList 获取相机支持的预览的大小 
+    * getVideoSizeList 获取视频大小列表
+    * getPreviewUiSize
+    * getJpgRotation
+    * getDisplaySize
+    * getVirtualKeyHeight 获取虚拟键高度
+    * getBottomBarHeight
+    * getDefaultPreviewSizeIndex
+    * getOutputFormat
+    * hardwareLevel2Sting
+    * capabilities2String
+    * format2String 将ImageFormat定义的转换为人类语言。
+* CoordinateTransformer 屏幕坐标和摄像头坐标相互转换。
+* FileSaver  文件存储工具类
+* JobExecutor 线程池 
+* MediaFunc 
+    * getOutputMediaFile 获取输出的视频文件，没有创建 
+    * getThumb 获取封面？
+  ````aidl
+
+   public static Bitmap getThumb(Context context) {
+        String selection = MediaStore.Images.Media.DATA + " like ?";
+        String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)
+                .getPath() + "/" + SAVE_PATH;
+        String[] selectionArgs = {path + "%"};
+        Uri originalUri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
+        ContentResolver cr = context.getContentResolver();
+        Cursor cursor = cr.query(originalUri, null, selection, selectionArgs,
+                MediaStore.Images.Media.DATE_TAKEN + " desc");
+        Bitmap bitmap = null;
+        if (cursor != null && cursor.moveToFirst()) {
+            long thumbNailsId = cursor.getLong(cursor.getColumnIndex("_ID"));
+            //generate uri
+            mCurrentUri = Uri.parse("content://media/external/images/media/");
+            mCurrentUri = ContentUris.withAppendedId(mCurrentUri, thumbNailsId);
+            bitmap = MediaStore.Images.Thumbnails.getThumbnail(cr,
+                    thumbNailsId, MediaStore.Images.Thumbnails.MICRO_KIND, null);
+        }
+        cursor.close();
+        return bitmap;
+    }
+  
+  ````
+* Permission 通过 ActivityCompat.requestPermissions() 申请权限
+* PermissionDialog 申请权限的弹窗 
+* Storage 将图片文件或者视频文件存储到Android 系统图库中 
+* SupportInfoDialog 弹窗 
+* XmlInflater PreferenceFragment内容的解析 
