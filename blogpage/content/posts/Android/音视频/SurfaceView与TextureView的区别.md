@@ -1,4 +1,4 @@
-> 
+>  想了下，感觉这个调调 做音视频的可能多一点。还是把放音视频里面吧。
 ## 资料
 * [SurfaceView与TextureView详解](https://www.51cto.com/article/679096.html)
 * [TextureView 的血与泪](https://zhuanlan.zhihu.com/p/147322501?from_voters_page=true)

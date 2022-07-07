@@ -2,8 +2,9 @@
 ## 资料
 * [Google mediaFormat 官网](https://developer.android.com/reference/android/media/MediaFormat)
 # 正文
-> 这个调调系统版本不一样，里面的key 也不一样。
+> 这个调调系统版本不一样，里面的key 也不一样。先用翻译翻译一波，然后添加自己的理解。要不然太生硬了。苦逼。
 ## 视频
+> 这个调调 对应着 MediaFormat 中的miniType,是否存在一种可能，如果没有的类型，系统就不支持。嘻嘻。
 *  MIMETYPE_VIDEO_VP8 = "video/x-vnd.on2.vp8"; vp8 格式
 *  MIMETYPE_VIDEO_VP9 = "video/x-vnd.on2.vp9"; vp9 格式
 *  MIMETYPE_VIDEO_AV1 = "video/av01";AV1 是一种新兴的开源免版税视频压缩格式，由开放多媒体联盟 (AOMedia) 行业联盟于 2018 年初联合开发并最终确定。AV1 开发的主要目标是在保持实际解码复杂性和硬件可行性的同时，在最先进的编解码器上实现显着的压缩增益
@@ -16,6 +17,7 @@
 *  MIMETYPE_VIDEO_DOLBY_VISION = "video/dolby-vision";
 *  MIMETYPE_VIDEO_SCRAMBLED = "video/scrambled";
 ## 音频 
+> 这个调调 对应着 MediaFormat 中的miniType,是否存在一种可能，如果没有的类型，系统就不支持。嘻嘻。
 *  MIMETYPE_AUDIO_AMR_NB = "audio/3gpp";AMR
 *  MIMETYPE_AUDIO_AMR_WB = "audio/amr-wb";
 *  MIMETYPE_AUDIO_MPEG = "audio/mpeg";
@@ -34,6 +36,7 @@
 *  MIMETYPE_AUDIO_AC4 = "audio/ac4";
 *  MIMETYPE_AUDIO_SCRAMBLED = "audio/scrambled";
 ## 其他
+> 这个调调 对应着 MediaFormat 中的miniType,是否存在一种可能，如果没有的类型，系统就不支持。嘻嘻。
 *  MIMETYPE_IMAGE_ANDROID_HEIC = "image/vnd.android.heic"; 
    > 静态图片
 *  MIMETYPE_TEXT_VTT = "text/vtt";
