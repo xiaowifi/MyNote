@@ -133,12 +133,12 @@
 | [MediaCodec.OutputFrame](https://developer.android.com/reference/android/media/MediaCodec.OutputFrame) | A single output frame and its associated metadata.           |
 | [MediaCodec.ParameterDescriptor](https://developer.android.com/reference/android/media/MediaCodec.ParameterDescriptor) | Contains description of a parameter.                         |
 | [MediaCodec.QueueRequest](https://developer.android.com/reference/android/media/MediaCodec.QueueRequest) | Builder-like class for queue requests.                       |
-| [MediaCodecInfo](https://developer.android.com/reference/android/media/MediaCodecInfo) | Provides information about a given media codec available on the device. |
-| [MediaCodecInfo.AudioCapabilities](https://developer.android.com/reference/android/media/MediaCodecInfo.AudioCapabilities) | A class that supports querying the audio capabilities of a codec. |
-| [MediaCodecInfo.CodecCapabilities](https://developer.android.com/reference/android/media/MediaCodecInfo.CodecCapabilities) | Encapsulates the capabilities of a given codec component.    |
-| [MediaCodecInfo.CodecProfileLevel](https://developer.android.com/reference/android/media/MediaCodecInfo.CodecProfileLevel) | Encapsulates the profiles available for a codec component.   |
-| [MediaCodecInfo.EncoderCapabilities](https://developer.android.com/reference/android/media/MediaCodecInfo.EncoderCapabilities) | A class that supports querying the encoding capabilities of a codec. |
-| [MediaCodecInfo.VideoCapabilities](https://developer.android.com/reference/android/media/MediaCodecInfo.VideoCapabilities) | A class that supports querying the video capabilities of a codec. |
+| [MediaCodecInfo](https://developer.android.com/reference/android/media/MediaCodecInfo) | 获取设备支持的编解码信息，通过这个可以获取到下面的几个class的信息 [demo](./MediaCodecInfo.md) |
+| [MediaCodecInfo.AudioCapabilities](https://developer.android.com/reference/android/media/MediaCodecInfo.AudioCapabilities) | [demo](./MediaCodecInfo.md) A class that supports querying the audio capabilities of a codec. |
+| [MediaCodecInfo.CodecCapabilities](https://developer.android.com/reference/android/media/MediaCodecInfo.CodecCapabilities) | [demo](./MediaCodecInfo.md)Encapsulates the capabilities of a given codec component.    |
+| [MediaCodecInfo.CodecProfileLevel](https://developer.android.com/reference/android/media/MediaCodecInfo.CodecProfileLevel) |[demo](./MediaCodecInfo.md) Encapsulates the profiles available for a codec component.   |
+| [MediaCodecInfo.EncoderCapabilities](https://developer.android.com/reference/android/media/MediaCodecInfo.EncoderCapabilities) | [demo](./MediaCodecInfo.md) A class that supports querying the encoding capabilities of a codec. |
+| [MediaCodecInfo.VideoCapabilities](https://developer.android.com/reference/android/media/MediaCodecInfo.VideoCapabilities) | [demo](./MediaCodecInfo.md) A class that supports querying the video capabilities of a codec. |
 | [MediaCodecInfo.VideoCapabilities.PerformancePoint](https://developer.android.com/reference/android/media/MediaCodecInfo.VideoCapabilities.PerformancePoint) | Video performance points are a set of standard performance points defined by number of pixels, pixel rate and frame rate. |
 | [MediaCodecList](https://developer.android.com/reference/android/media/MediaCodecList) | Allows you to enumerate available codecs, each specified as a `MediaCodecInfo` object, find a codec supporting a given format and query the capabilities of a given codec. |
 | [MediaCommunicationManager](https://developer.android.com/reference/android/media/MediaCommunicationManager) | Provides support for interacting with `MediaSession2s` that applications have published to express their ongoing media playback state. |
@@ -164,7 +164,7 @@
 | [MediaExtractor.MetricsConstants](https://developer.android.com/reference/android/media/MediaExtractor.MetricsConstants) |                                                              |
 | [MediaFeature](https://developer.android.com/reference/android/media/MediaFeature) | MediaFeature defines various media features, e.g. hdr type.  |
 | [MediaFeature.HdrType](https://developer.android.com/reference/android/media/MediaFeature.HdrType) | Defines tye type of HDR(high dynamic range) video.           |
-| [MediaFormat](https://developer.android.com/reference/android/media/MediaFormat) | Encapsulates the information describing the format of media data, be it audio or video, as well as optional feature metadata. |
+| [MediaFormat](https://developer.android.com/reference/android/media/MediaFormat) | 定义了支持的音视频的常量和字段，同时用于音视频编解码的的信息存储 [常量笔记](./Android支持音视频格式文件MediaFormat解析.md) [方法笔记](MediaFormat翻译.md) |
 | [MediaMetadata](https://developer.android.com/reference/android/media/MediaMetadata) | Contains metadata about an item, such as the title, artist, etc. |
 | [MediaMetadata.Builder](https://developer.android.com/reference/android/media/MediaMetadata.Builder) | Use to build MediaMetadata objects.                          |
 | [MediaMetadataEditor](https://developer.android.com/reference/android/media/MediaMetadataEditor) | *This class was deprecated in API level 21. Use `MediaMetadata` instead together with `MediaSession`.* |
