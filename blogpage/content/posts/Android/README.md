@@ -37,3 +37,9 @@ https://dl.trojan-cdn.com/trojan/
 * gradlew app:dependencies --configuration ReleaseRuntimeClasspath
 * gradlew sample:dependencies --configuration ReleaseRuntimeClasspath
 * gradlew sample:dependencies --configuration debugRuntimeClasspath
+## 目录
+````aidl
+“./”：代表目前所在的目录。
+" . ./"代表上一层目录。
+“/”：代表根目录
+````
