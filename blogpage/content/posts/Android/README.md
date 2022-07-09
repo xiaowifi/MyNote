@@ -33,3 +33,7 @@
 ## 梯子软件下载地址
 https://dl.trojan-cdn.com/trojan/ 
 ## 投屏 scrcpy
+## maven 树
+* gradlew app:dependencies --configuration ReleaseRuntimeClasspath
+* gradlew sample:dependencies --configuration ReleaseRuntimeClasspath
+* gradlew sample:dependencies --configuration debugRuntimeClasspath

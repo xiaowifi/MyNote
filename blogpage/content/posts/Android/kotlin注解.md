@@ -3,3 +3,5 @@
 #正文
 ### @JvmStatic
 ### @WorkerThread
+### @Throws(IOException::class)
+> 抛出一个异常 
