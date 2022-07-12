@@ -8,46 +8,44 @@
 # 正文
 > 这个调调的Demo 在[k4l-video-trimmer](https://github.com/titansgroup/k4l-video-trimmer) 和[VideoTrimmer](https://github.com/AndroidDeveloperLB/VideoTrimmer) 
 > 中被使用，用于裁剪视频。
-## 设计
-### androidtest
-> 没有看懂，主要导入了‘org.mp4parser:1.0.4.2’
-### isoparser
-### muxer
-### streaming
-### examples
-#### 导包
-* org.mp4parser.isoparser
-* org.mp4parser.muxer
-* org.mp4parser.streaming
-* xom.xom
-* commons-codec.commons-codec
-* commons-io.commons-io
-* commons-lang.commons-lang
-* org.eclipse.jetty.jetty-server
-* commons-collections.commons-collections
-#### 目录描述
-##### java
-* com.google.code.mp4parser.example.GetHeight 获取视频的宽高
-* PrintStructure 打印文件的结构信息
-* AacExample aac和H264合并成一个mp4
-* Ac3Example ac3 合并成一个mp4
-* BillH264Example H264和一个aac 合并成一个mp4
-* DTSMuxExample dtshd 合并成一个mp4 
-* Ec3Example EC3TrackImpl的使用
-* H264Example H264TrackImpl的使用
-* MjpegTest  感觉像是合并封面 
-* MuxAacH264SMPTE 这个调调没有看懂 TtmlTrackImpl的使用 
-* Avc1ToAvc3Example 
-* ChangeInplaceExample
-* DavidAppend 将多个视频合并在一起
-* DumpAmf0TrackToPropertyFile 
-* MetaDataTool 
-* ReadExample 
-##### resources
-> 资源文件
-## API调用视频裁剪
+## 导包
+````aidl
+    implementation 'org.mp4parser:isoparser:1.9.56'
+    implementation 'org.mp4parser:muxer:1.9.56'
+    implementation 'org.mp4parser:streaming:1.9.56'
+````
+## API 
 * Movie 逻辑上所有的视频源都需要转换成这个对象
 * FileDataSourceViaHeapImpl 这个调调作为解析文件的载体，可以通过某些方式转换为   Movie
 * MovieCreator   通过FileDataSourceViaHeapImpl对象生成 Movie
+### Track
+> Track 是所有轨道的父类。很多功能性行轨道继承于AbstractTrack。然而WrappingTrack 则是继承于Track 
 * Track 承载轨道的载体   
-* CroppedTrack  裁剪轨道
+* CroppedTrack  裁剪轨道 低版本没有这个调调
+* ClippedTrack 这个也是裁剪高版本才有
+* AppendTrack 多个轨道进行拼接，没有试不同轨道是否能够拼接，同时没有试不同的大小的都视频轨道进行拼接，
+* Mp4TrackImpl 这个Demo 是合并m4s的，但是报错了，排期看
+* AACTrackImpl demo 上是将指定的aac 文件转换成这个调调。
+* H264TrackImpl demo 上直接加载H264 
+* AC3TrackImpl 一种音频格式 
+* AbstractH26XTrack H264TrackImpl和H263TrackImpl,H265TrackImpl的父类
+* Amf0Track 
+* DTSTrackImpl 
+* EC3TrackImpl
+* MP3TrackImpl
+* ReplaceSampleTrack
+* TextTrackImpl
+* CencDecryptingTrackImpl
+* OneJpegPerIframe 
+* TtmlTrackImpl
+* WebVttTrack
+
+## 知识点
+###  m4s
+> 什么是一 .m4s 文件？
+> M4S 文件是使用 MPEG-DASH 视频流技术流式传输的视频片段。它包含表示视频片段的二进制数据。作为视频第一段的 M4S 文件还包含初始化数据，允许媒体播放器识别并开始播放视频。
+> MPEG-DASH 是一种自适应比特率流技术，它允许用户使用HTTP在 Internet 上流式传输高质量视频。使用 MPEG-DASH 流式传输的视频被分成多个片段，这些片段以各种不同的比特率提供。通过将视频分成多个片段并以不同的比特率提供这些片段，Web 客户端可以流畅地流式传输长视频，而不会停止或重新缓冲。
+> 当用户下载使用 MPEG-DASH 流式传输的视频时，该视频将保存为一系列 M4S 文件。每个 M4S 文件都包含流式视频的特定片段。例如，使用 youtube-dl 下载流式 YouTube 视频的用户可能会看到保存为一系列 M4S 文件的视频。
+> 注意： M4S 文件通常不包含音频数据。
+### ac3 一种音频格式 
+### Amf0 
