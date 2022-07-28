@@ -229,9 +229,272 @@ ffplay rtmp://up.v.test.com/live
 
 ## 音视频文件转Mp4
 
+在互联网常见的格式中，跨平台最好的应该是mp4,很多系统默认都默认支持mp4.
 
+mp4格式标准为ISO-14496 Part 12、ISO-1449 Part 14。首先描述几个概念：
+
+* mp4 文件由许多个box 与FullBox 组成
+* 每个Box 右Header和Data 两部分
+  * fullBox 是box 的扩展，在box 结构的基础上，在Header 中增加8位version 标识和24位flags标识。
+  * Header 包含了整个box 的长度的大小和类型，当size 等于0时，代表这个box 是一个文件的最后一个box,当size 等于1的时候，说明box 长度需要更多的位来描述，在后面会定义一个64位Largesize 用来描述box 长度，当type为UUID时，说明这个box中的数据是用户自定义的扩展类型。
+  * data 为box 的实际数据，可以是纯数据，也可以是更多的子box
+  * 当一个box 中的data是一系列的子box 时，这个box 又可以称为Container(容器)box
+
+mp4 常用参考标准。标记V的box 为必要box,否则为可选box:
+
+![image-20220728092957612](assets/image-20220728092957612.png)
+
+![image-20220728093117682](assets/image-20220728093117682.png)
+
+![image-20220728093150959](assets/image-20220728093150959.png)
+
+通常而言，在mp4 文件中，box 的结构与上述描述一版没有太大的差别，因为Mp4的标准中描述的moov和mdat 的存放位置前后没有进行强制要求。如果需要mp4文件被快速打开，则需要将moov存放在mdat的前面，如果放在后面，则需要将mp4 文件下载完成后才可以进行播放。
+
+### moov 容器
+
+moov 容器定义了一个Mp4 文件中的数据信息，类型是moov，是一个容器atom，其至少必须包含以下3种atom 中的一种。
+
+*  mvhd 标签，movie header atom 存放未压缩过的影片信息的头容器。
+* cmov 标签 compressed movie atom 压缩过的电影信息容器，此容器不常用
+* rmra 标签 reference movieatom 参考电影信息容器，此容器也不常用
+
+当然也可以包含其他容器信息，如果影片的剪辑信息 clipping atom(clip),一个或几个 tackAtom(trak),一个color table atom (ctab),user data Atom (udta)等。
+
+其中 mvhd 定义了多媒体问题的time scale,duration 以及display characteristics,track 是多媒体文件中可以独立操作的媒体单位，例如一个音频流或者一个视频流就是一个track.
+
+moov 参数：
+
+![image-20220728094713896](assets/image-20220728094713896.png)
+
+
+
+#### 解析mvhd 子容器
+
+mvhd 参数：
+
+![image-20220728094840602](assets/image-20220728094840602.png)
+
+mvhd 参考值：
+
+![image-20220728094905904](assets/image-20220728094905904.png)
+
+#### 解析trak 子容器
+
+trak 容器中定义了媒体文件中的track 的信息，一个媒体文件中可以包含多个trak,每个trak 都是独立的。具有自己的时间和空间占用信息，每个trak 容器都有与他关联的media 容器描述信息。
+
+*  包含媒体数据点引用和描述（media track）
+
+* 包含modifier track 信息
+
+  *  流媒体协议等打包信息（hint track）,hint track 可以引用或者复制对应的媒体采用数据
+
+hint track 和modiffier track 必须保证完整性，同时要至少一个media track 一起存在。
+> 一个trak 容器中要求必须要有一个track header atom(tkhd),一个 media atom (mdia) 其他atom 都是可选的。例如以下：
+>
+> * track 剪辑容器 track clipping atom (clip)
+> * track 画板容器 track matte atom (matt)
+> * edit 容器 edit atom (edts)
+> * track 参考容器 track reference atom (tref)
+> * track 配置加载容器 track load settings atom (load)
+> * track 输出映射容器 track input map atom (imap)
+> * 用户数据容器 user data atom (udta)
+
+track 数据通用参考表
+
+![image-20220728102645384](assets/image-20220728102645384.png)
+
+#### 解析tkhd 容器
+
+tkhd 参数
+
+![image-20220728103704182](assets/image-20220728103704182.png)
+
+视频的tkhd 参数值
+
+![image-20220728103734312](assets/image-20220728103734312.png)
+
+音频的tkhd 参数值
+
+![image-20220728103805391](assets/image-20220728103805391.png)
+
+音频与视频的trak 的tkhd 的大小相同，里面的内容会随着音频的trak 类型的不同而有所不同。
+
+#### 解析mdia 容器
+
+media atom 的类型是mdia.其必须包含如下容器。
+
+* 一个媒体头：media header atom (mdhd)
+* 一个句柄参考 handler reference (hdlr)
+* 一个媒体信息  media infomation (minf) 和用户数据 user data atom (udta)
+
+mdia 容器参数：
+
+![image-20220728104911206](assets/image-20220728104911206.png)
+
+#### 解析mdhd 容器
+
+mdhd 容器被被包含在各个track 总，描述了mieda 的header.其中包含以下 信息：
+
+![image-20220728105116619](assets/image-20220728105116619.png)
+
+根据iso 14496-part 12 标准中的描述可以知道，当版本字段为0时候，解析与当前版本字段为1的时候稍微不同。mdhd 参数值：
+
+![image-20220728105416230](assets/image-20220728105416230.png)
+
+音频时长可以根据duration/timeScale 的方式来计算。
+
+#### 解析Hdlr 容器
+
+Hdlr 容器描述了媒体流的播放过程，该容器中包含以下内容：
+
+![image-20220728110844261](assets/image-20220728110844261.png)
+
+hdlr 参数值：
+
+![image-20220728110916817](assets/image-20220728110916817.png)
+
+
+
+#### 解析minf 容器
+
+minf 容器中包含了很多重要的子容器，例如音视频采样等信息相关的容器，minf 容器中的信息作为音视频的映射存在。
+
+*  视频信息头 video media information header (wmhd 子容器)
+* 音频信息头 sound media information header (smhd 子容器)
+* 数据信息 data information (dinf  子容器)
+* 采样表 sample tab （stbl 子容器）
+
+#### 解析 vmhd 容器
+
+wmhd 容器内容格式如下：
+
+![image-20220728141150464](assets/image-20220728141150464.png)
+
+vmhd 参数值：
+
+![image-20220728141204215](assets/image-20220728141204215.png)
+
+#### 解析 smhd 容器
+
+参数：
+
+![image-20220728141255732](assets/image-20220728141255732.png)
+
+参数值：
+
+![image-20220728141318378](assets/image-20220728141318378.png)
+
+#### 解析dinf容器
+
+dinf 容器是一个用于描述数据信息的容器，其定义的是音视频数据信息，这是一个容器，他包含子容器 dref.dinf 参数：
+
+![image-20220728141919665](assets/image-20220728141919665.png)
+
+#### 解析stbl 容器
+
+stbl 容器又称为采样参数列表容器，sample tab atom ,改容器包含转换媒体时间到实际的sample 信息，也说明就解释sample 的信息，例如视频数据是否需要解压缩，解压缩算法是什么等等。其所包含的子容器具体如下：
+
+* 采用描述容器sample description atom  (stsd)
+* 采样时间容器 time to sample atom (stts)
+* 采样同步容器  sync sample atom (stss)
+* chunk 采样容器 sample to chunk atom (stsc)
+* 采样大小容器 sample size atom (stsz)
+* chunk 偏移容器 chunk offset atom (stco)
+* shadow 同步容器 shadow sync atom (stsh)
+
+stbl 包含track 中的media sample 的所有时间和数据索引，利用这个容器中的sample信息，就可以定位sample的媒体时间，决定其类型，大小，以及如何在其他容器中找到临近的sample,如果 sample table atom 所在的track 没有引用任何数据，那么他就不是一个有用的media track,不需要包含任何子atom 
+
+如果sample table atom 所在的track 引用了数据，那么其必须包含以下atom.
+
+* 采样描述容器
+* 采样大小容器
+* chunk 采用容器
+* chunk 偏移容器。
+
+所有的子表都有相同的sample 数目。stbl 是必不可少的一个atom ,而且必须包含字少一个条目，因为他包含了数据引用 atom 检索 media sample 的目录信息，没有sample description 就不可能计算出media sample 存储到我这，sync sample atom是可选的，如果没有，则表明所有sample 都是 sync sample。
+
+#### 解析edts 容器
+
+edts 容器定义了创建 movie 媒体文件中一个tarck 的一部分媒体，所有的edts 数据都在一个表里，包含没一部分的时间偏移量和长度，没有该表，那么这个track 就会立即开始播放，一个空的edts 数据用来定位到track 的起始时间偏移位置。如下图所示：
+
+![image-20220728144345700](assets/image-20220728144345700.png)
+
+### mp4 分析工具
+
+可以用来分析mp4 封装格式的工具比较多，除了ffmpeg 之外，还有一些常用的工具，如Elecard streamEye,mp4box,mp4info 等。
+
+#### elecard streamEye 
+
+这个调调是一个非常强大的视频信息查看工具，能够查看帧的排列信息，将I 帧，P帧，B帧以不同的颜色的柱状展示出来，而柱的长短将根据帧的大小展示，包含流信息，宏快信息，文件头信息，图像的信息，以及文件信息等。
+
+#### mp4 box
+
+mp4box 是一个gpac 项目中的一个组件，可以通过mp4box 针对媒体文件进行合成，拆解等操心。
+
+#### mp4info
+
+可视化分析工具，可以将mp4 文件中的box 解析出来，并且将数据展示出来。
+
+### mp4 在ffmpeg 中的demuxer
+
+ffmpeg 解封装 mp4 常用参数
+
+![image-20220728145401646](assets/image-20220728145401646.png)
+
+在解析mp4 文件的时候，通过ffmpeg 解析时，也可以通过参数 ignore_editlist 忽略 editlist atom 对mp4 进行解析，关于mp4 的demuxer 操作通常使用默认配置即可。
+
+通过查看ffmpeg 的helpe 信息
+
+````
+ffmpeg-h demuxer=mp4
+````
+
+mp4 的demuxer 与moc,3gp,m4a,3g2,mj2的demuxer 相同。
+
+### mp4 在ffmpeg 中的muxer
+
+ffmpeg 封装mp4 常用参数：
+
+![image-20220728145824944](assets/image-20220728145824944.png)
+
+通过上图可以看出，mp4的muxer 支持的参数比较复杂，例如支持在制品关键帧处切片，支持设置moov 容器大小的最大值，支持设置encrypt 加密等。
+
+#### faststart 参数的使用案例
+
+正常情况下，ffmpeg 生成moov 是在mdat 写完之后再写入，可以通过 参数fastatart 将moov 容器移动到mdat的前面。
+
+````
+./ffmpeg -i input.flv -c copy -f mp4 output.mp4
+````
+
+``````
+./ffmpeg -i input.flv 0c copy -f mp4 -movflags faststart output.mp4 
+``````
+
+至于顺序为啥这么重要：
+
+> 通常而言，在mp4 文件中，box 的结构与上述描述一版没有太大的差别，因为Mp4的标准中描述的moov和mdat 的存放位置前后没有进行强制要求。如果需要mp4文件被快速打开，则需要将moov存放在mdat的前面，如果放在后面，则需要将mp4 文件下载完成后才可以进行播放。
+
+#### dash参数的使用案例“没懂”
+
+当使用生成的dash格式的时候，里面使用了一种特殊的mp4 格式，可以通过dash 参数来生成。"没懂"
+
+````
+./ffmpeg -i input.flv -c copy -f mp4 -movflags dash output.mp4
+````
+
+#### isml 参数的使用
+
+ismv 作为微软发布的一个流媒体格式，通过参数 isml 可以发布isml 直播流，将ismv 推流至IIS 服务器，可以通过 isml 进行发布：
+
+````
+./ffmpeg -re -i input.mp4 -c copy -movflags isml frag_keyframe -f ismv stream  
+````
+
+生成的文件格式的原理类似于 HLS,使用xml 格式化进行索引。索引内容中主要包含音视频流的关键信息，例如视频的宽高以及码率等关键信息。
 
 ## 视频文件转FLV
+
 ## 视频文件转M3U8
 ## 视频文件切片
 ## 音频文件音视频流抽取
