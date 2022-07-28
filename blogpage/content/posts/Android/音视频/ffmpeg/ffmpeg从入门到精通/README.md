@@ -495,6 +495,107 @@ ismv 作为微软发布的一个流媒体格式，通过参数 isml 可以发布
 
 ## 视频文件转FLV
 
+在网络的直播与点播场景中，flv 也是一种常见的格式，flv 是adobe 发布的一种可以作为直播也可以作为点播的封装格式。其封装格式非常简单，均以flvtag 的形式存在。每一个tag都是独立存在的。
+
+### flv 格式标准介绍
+
+FLV 文件格式分为两部分，一部分为FLV文件头，另外一部分为FLV 文件内容。
+
+#### FLV 文件头格式：
+
+![image-20220728202318661](assets/image-20220728202318661.png)
+
+通过上图 可以看出 FLV文件头格式中签名字段占用3个字节，最终组成的3个字符分别为“FLV”,然后是文件的版本，常见的为1，接下来的一个字节前5位为0，接着音频展示设置为1，然后下一位是0 ，再下一位为视频展示为1，如果说一个音视频都展示的FLV 文件，那么这个字节会设置为00000101,然后是4字节的数据为FLV文件头数据点偏移位置。
+
+#### FLV 文件内容格式
+
+![image-20220728202851395](assets/image-20220728202851395.png)
+
+通过上图 可以看到FLV 文件的内容的格式主要为FLVTAG,FLVTAG 分为两个部分，分别是TAGHeader部分和TAGBody 部分。
+
+#### FLVTAG 格式解析
+
+![image-20220728203035305](assets/image-20220728203035305.png)
+
+从上图 可以看到FLVTAG 的header 部分信息如下。
+
+* 保留占位用2位，最大11b
+* 滤镜位占位用1位，最大为1b
+* TAG 类型占用5位，与保留位，滤镜位共用一个字节。一版默认将保留位与滤镜位设置0.
+* 数据大小占用24位 3字节。最大为16777215字节
+* 时间戳大小占用24位，3字节，最大为16777315毫秒，约等于16777秒，279分钟，4.66小时。
+* 扩展时间戳大小占用8位，1字节，最大为255，使得时间戳最大为1193个小时，以天为单位大约为49.7天。
+* 流id 占用24位，3字节。最大为0xffffff,不过默认一直存储为0
+
+紧接着在FLVTAG header 之后存储为TAG 的data,大小为FLVTAG 的head而中的DataSize 中存储的大小，存储数据分为 视频数据、音频数据、脚本数据。
+
+#### videoTAG 数据解析
+
+如果从FLVTAG 的header 中读取到的tagType 为0x09,则为视频数据的TAG,FLV 支持多种视频格式。
+
+![image-20220728204114012](assets/image-20220728204114012.png)
+
+#### AudioTag 数据格式解析
+
+从FLVTAG 的header 中解析到TagType 为0x08,这个TAG 为音频。与视频TAG 类似，音频TAG 里面课余i封装的音频编码也可以有很多种。
+
+![image-20220728204314874](assets/image-20220728204314874.png)
+
+#### ScriptData 格式解析
+
+当FLVTAG 读取到TagType 类型为0x12 时，这个数据为ScriptData 类型。Script-Data 常见的展示方式是FLV的metadata。里面存储的数据格式一版为AMF 数据。
+
+![image-20220728204512594](assets/image-20220728204512594.png)
+
+### ffmpeg 转FLV 参数
+
+ffmpeg 的FLV 封装格式参数：
+
+![image-20220728204634138](assets/image-20220728204634138.png)
+
+通过上图可以看出，在生成FLV 文件时候，写入视频，音频数据等均需要写入Sequence header 数据，如果FLV视频流中没有Sequence Header 那么视频很可能就不会显示出来，如果音频中没有就可能不会播放出来。所以需要将ffmpeg 中的参数fivflags 值设置为aac_seq_header_detect,其将写入音频aac的Sequence Header.
+
+### ffmpeg 文件转为FLV 简单示例
+
+FLV 封装中可以支持的视频编码主要包含如下内容
+
+* Sorenson H.263
+* screen video
+* On2 VP6
+* 带Alpha 通道的 On2 VP6
+* screen video 2
+* H.264 (AVC)
+
+FLV 中封装支持的音频主要包含如下内容。
+
+* 限行PCM 
+* ADPCM 音频格式
+* MP3
+* 线性PCM 
+* Nellymoser 16KHz mono
+* nellymoser 8kHz mono 
+* nellymoser
+* G.711 A-law
+* G.711 mu-law
+* 保留
+* AAC
+* speex
+* mp3 8kHz
+
+如果 封装FLV 时，内部的音频或者视频不符合标准时候，那么他们肯定是封装不进FLV 的，还会报错
+
+为了解决这类问题，可以进行转码，转换为支持的格式。
+
+### Ffmpeg 生成带有关键索引的FLV 
+
+
+
+
+
+
+
+
+
 ## 视频文件转M3U8
 ## 视频文件切片
 ## 音频文件音视频流抽取
