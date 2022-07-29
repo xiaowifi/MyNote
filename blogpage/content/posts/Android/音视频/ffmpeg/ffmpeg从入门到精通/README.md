@@ -588,16 +588,241 @@ FLV 中封装支持的音频主要包含如下内容。
 
 ### Ffmpeg 生成带有关键索引的FLV 
 
+在网络视频点播文件为FLV格式文件时，人们常用yamdi 工具先对flv 文件进行一次转换，主要是将flv 文件中的关键帧建立一个索引，并将索引写入到matadata 头中，这个步骤用ffmpeg 同样可以实现。使用add_keyframe_index 即可：
 
+````
+./ffmpeg -i input.mp4 -c copy -f flv -flvflags add_keyframe_index output.flv
+````
 
+### FLV 文件格式分析工具
 
+当我们生成的flv 出现问题的时候，或者需要分析flv 内容的时候。可以使用flvparse 进行flv 格式分析，还可以使用flvanalyzer，也可以使用ffmpeg 打印信息：
 
-
-
-
+````
+ffprobe -v trace -i output.flv
+````
 
 ## 视频文件转M3U8
+
+m3u8是一种常见的流媒体格式，主要是以文件列表的形式存在，既支持直播又支持点播，尤其是在Android，iOS等移动端 最为常用。
+
+* EXTM3U m3u8文件必须包含的标签，并且必须在文件的第一行，所有的m3u8文件中必须包含这个标签
+* EXT-X-VERSION m3u8 文件的版本，常见的3，每个版本 支持的标签不一致
+* EXT-X-TARGETDURATION 每一个分片都有一个自己的duration,这个标签是最大的那个分片的浮点数四舍五入后的整数值。
+* EXT-X-MEDIA-SEQUENCE m3u8 直播时的直播切片序列。分片必须是动态改变的，序列不能相同，并且序列必须是增序。当M3U8列表中没有出现EXT-X-ENDLIST 标签时，无论包含多少个分片，播放分片都是从倒数第3个片开始播放，如果不满3个就不播放，如果播放器特殊定制了就可以不遵守这个原则，如果前后片不连续时播放还可能出错，那么需要使用EXT-X-DISCONTINUITY 标签来解决这个错误，以播放当前分片的duration 刷新m3u8 列表，然后做出对应的加载动作。如果播放列表在刷新后与之前列表相同，那么在播放前分片duration 一半的时间内再刷新一次。
+* EXTINF 作为每一个分片的duration.分片存储路径可以为相对路径，也可以为绝对路径，也可以为互联网的url
+* EXT-X-ENDLIST  如果出现当前标签，则表示m3u8 已经停止更新，并且播放到这个标签后结束。m3u8 作为点播的时，在m3u8文件中保留所有切片信息最后使用EXT-X-ENDLIST 结尾。
+* EXT-X-STREAM-INF 这个标签主要是出现在多级M3U8 文件中。如多码率，但是需要跟一些其他属性。
+  * BANDWIDTH 值为最高码率值，当播放EXT-X-STREAM-INF 下的最大码率，这个值是必须包含的属性
+  * AVERAGE-BANDWIDTH，平均码率，可选参数
+  * CODECS 用于声明下面对应m3u8 里面音频编码核视频编码信息。
+  * RESOLUTION 宽高描述信息，可选
+  * FRAME-RATE m3u8中视频的帧率，可选
+
+### ffmpeg转HLS 参数
+
+ffmpeg 中自带HLS 的封装参数，使用HLS 格式即可进行HLS 的封装。
+
+![image-20220729102839948](assets/image-20220729102839948.png)
+
+#### 简单示例
+
+````
+./ffmpeg -re -i input.mp4 -c copy -f hls -bsf:v h264_mp4toannexb output.m3u8
+````
+
+因为默认是HLS 直播。所以生成的M3U8文件内容会随着切片的产生而更新。bsf:v h264_mp4toannexb 这个参数作用是将Mp4中的H264转换为H264 annexb 标准编码。annexB 标准编码常见于实时传输流中，如果源文件为FLV,TS 等可作为直播的传输流的视频，则不需要这个参数。
+
+#### start_number 参数
+
+设置m3u8列表中的第一片的序列数。设置的是 EXT-X-MEDIA-SEQUENCE。
+
+````
+./ffmpeg -re -i input.mp4 -c copy -f hls -bsf：v h264_mp4toannexb -start_number 300 output.m3u8
+````
+
+上面命令是将一个mp4 转换为m3u8并且设置 EXT-X-MEDIA-SEQUENCE 为300
+
+#### hls_time 参数
+
+这个主要设置m3u8列表中duration，该切片规则采用的方式是从关键帧出开始切片，所以时间上不是很均匀，如果先转码再进行切片则会比较规律。
+
+````
+./ffmpeg -re -i input.mp4 -c copy -f hls -bsf:v h264_mp4toannexb -hls_time 10 output.m3u8
+````
+
+上面命令是将一个mp4 转换为 m3u8文件，同时切片时长大约在10秒左右
+
+#### hls_list_size 参数
+
+这个参数主要设置切片个数。
+
+````
+./ffmpeg -re -i input.mp4 -c copy -f hls -bsf:v h264_mp4toannexb -hls_list-size 3 output.m3u8
+````
+
+上面命令是将一个mp4 转换为 m3u8 文件，同时设置切片个数为3个
+
+#### hls_wrap 参数
+
+这个参数用于设置m3u8列表中ts 设置刷新回滚参数。
+
+````
+./ffmpeg -re -i input -c copy -f hls -bsf:v h264_mp4toannexb -hls_wrap 3 output.m3u8
+````
+
+当序列为2的时候就会变成0。感觉不建议用
+
+#### hls_base_url 参数
+
+这个调调设置基本路径参数，因为ffmpeg 在生成m3u8 时写入到ts切片默认为与m3u8生成的路径相同。但是实际上ts 所存储的路径上即可以为本地绝对路径，也可以为当前相对路径，网络路径，因此这个参数可以达到这种路径的效果。
+
+````
+./ffmpeg -re -i input.mp4 -c copy -f hls -hls_base_url http:111 -bsf:v h264_mp4toammexb output.m3u8
+````
+
+#### hls_segment_filenname 参数
+
+这个是切片文件的命名规则，如果不设置ts 切片的文件命名将和m3u8的文件名模板相同。
+
+````
+./ffmpeg -re -i input.mp4 -c copy -f hls -hls_segemnt_filename test_output-%d.ts -bsf:v h264_mp4toannexb out_put.m3u8
+````
+
+#### hls_flags 参数
+
+当前参数包含了一些子参数，子参数包含了正常文件索引，删除过期切片，整数显示 duration，列表开始插入discontinuity 标签，m3u8 结束不追加endlist 标签等等。
+
+##### delete_segments 子参数 （感觉没有懂）
+
+当前参数用于删除已经不在m3u8列表中的旧文件，需要注意的ffmpeg 删除切片时，会将hls_list_size 大小的2倍作为删除的依据。
+
+````
+./ffmpeg -re -i input.mp4 -c copy -f hls -hls_flags delete_segments -hls_list_size 4 -bsf:v h264_mp4toannexb output.m3u8 
+````
+
+##### round_durations 子参数
+
+可以实现切片信息的duration 为整型。参考上面 这个值是四舍五入的取值模式。
+
+````
+./ffmpeg -re -i input.mp4 -c copy -f hls -hls_flags round_durations -bsf:v h264_mp4toannexb output.m3u8
+````
+
+##### discont_start 子参数
+
+用于在生成m3u8的时候在切片信息的前边插入 discontinuity 标签。
+
+> 如果前后片不连续时播放还可能出错，那么需要使用EXT-X-DISCONTINUITY 标签来解决这个错误，以播放当前分片的duration 刷新m3u8 列表，然后做出对应的加载动作。如果播放列表在刷新后与之前列表相同，那么在播放前分片duration 一半的时间内再刷新一次。
+
+````
+./ffmpeg -re -i input.mp4 -c copy -f hls -hls_flags discont_start -bsf:v h263_mp4toannexb output.m3u8 
+````
+
+##### omit_endlist 子参数
+
+> 如果出现当前endlist 标签，则表示m3u8 已经停止更新，并且播放到这个标签后结束。m3u8 作为点播的时，在m3u8文件中保留所有切片信息最后使用EXT-X-ENDLIST 结尾。
+
+ffmpeg 会默认写入endlist 标签，使用这个参数可以控制在m3u8结束时不写入endlist 标签。
+
+````
+./ffmpeg -re -i input.mp4 -c copy -f hls -hls_flags onit_endlist -bsf:v h264_mp4toannexb output.mp4
+````
+
+##### split_by_time 子参数
+
+生成m3u8时根据hls_time 设定的数值最为秒 参看对于ts 进行切片。并不一定要遇到关键帧。上文中设置hls_time 生成的duration 有时候远远大于 设定值，且有波动，使用split_by_time 即可解决这个问题。
+
+````
+./ffmpeg -re -i input.ts -c copy -f hls -hls time 2 -hls_flags split_by_time output.m3u8
+````
+
+> split_by_time 参数必须与hls_time 配合使用，而且可能会影响首画面的体验。因为第一帧不是关键帧I 
+
+#### use_localtime 参数
+
+使用当前参数 可以以本地系统时间为切片文件名。
+
+````
+./ffmpeg -re -i input.mp4 -c copy -f hls -user_localtime 1 -bsf:v h264_mp4toannexb output.m3u8
+````
+
+#### method 参数
+
+用于设置 HLS 将m3u9及ts 文件上传至Http 服务器。
+
+````
+./ffmpeg -i input.mp4 -c copy -f hls -hls_time 3 -hls_list_size 0 -method put -t 20 http:127.0.0.1/test/output.m3u8
+````
+
 ## 视频文件切片
+
+视频文件切片与HLS 基本类似。但是HLS 切片在标准中只支持TS 格式的切片。并且是直播与点播切片，即可以使用segment 方式进行切片，也可以使用 ss加t 参数进行切片。
+
+### ffmpeg 切片 segment 参数
+
+![image-20220729162331174](assets/image-20220729162331174.png)
+
+### ffmpeg 切片segment 举例
+
+#### segment_format 指定切片文件的格式
+
+通过使用segment_format 来指定切片文件格式。HLS 切片的格式主要为mpegts 文件格式，那么在segment 中 可以根据 segment_format 来指定切片文件的格式。
+
+````
+./ffmepg -re -i input.mp4 -c copy -f segment -segment_format mp4 test_out_put-%d.mp4
+````
+
+上述命令是将一个mp4 文件 切为mp4 切片，切出来的切片文件的时间戳与上一个mp4的结束时间戳是连续的。
+
+#### segment_list与 segment_list_type指定切片索引列表
+
+使用segment 切割文件时，不仅仅可以切割mp4,同样可以切割ts 或者FLV 等文件，生成的文件索引列表名称也可以指定名称，当然列表不仅仅是m3u8.也可以说其他格式。
+
+##### 生成ffconcat 格式索引文件
+
+`````
+ ./ffmoeg -re -i input.mp4 -c copy -f segment -segment_format mp4 -segment_list_type ffconcat -segment_list outpit.lst test_output-%d.mp4
+`````
+
+这条命令将生成 ffconcat 格式的索引文件名 output.lst.这个文件将会生成一个mp4 切片的文件列表。这种格式常见于虚拟轮播等场景。
+
+##### 生成FLAT格式索引
+
+````
+./ffmpeg -re -i input.mp4 -c copy -f segment segment_format mp4 -segment_list_type flat -segment_list filelist.txt test-%d.mp4
+````
+
+这条命令将生成一个mp4切片的文本文件列表。
+
+##### 生成scv 格式索引文件
+
+````
+./ffmpeg -re -i input.mp5 -c copy -f segment -segment_format mp4 -segment_list_type csv -segment_list filelist.csv test-%d.mp4
+````
+
+这条命令会生成csv 格式的列表文件，列表文件中内容分为3个字段，文件名，文件开始时间和文件结束时间。
+
+csv 文件可以用类似于操作数据集的方式进行操作，也可以根据csv 生成视图图像。
+
+##### 生成m3u8格式索引文件
+
+````
+./ffmpeg -re -i input.mp4 -c copy -f segment -segment_format mp4 -segment_list_type m3u8 0segment_list output.m3u8 test-%d.mp4
+````
+
+这个调调 内容生成的切片竟然是mp4.
+
+#### reset_timestamps 使切片时间戳归0
+
+
+
+
+
+
+
+
+
 ## 音频文件音视频流抽取
 ## FFmpeg 转封装 系统资源使用情况
 ## FFmpeg 软编码与H264
