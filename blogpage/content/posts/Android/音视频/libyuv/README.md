@@ -1,0 +1,1 @@
+libyuv是Google开源的实现各种YUV与RGB之间相互转换、旋转、缩放的库。它是跨平台的，可在Windows、Linux、Mac、Android等操作系统，x86、x64、arm架构上进行编译运行，支持SSE、AVX、NEON等SIMD指令加速
