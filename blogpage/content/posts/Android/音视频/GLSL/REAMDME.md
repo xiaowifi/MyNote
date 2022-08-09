@@ -1,0 +1,1 @@
+> OpenGL的着色器语言，开发人员利用这种语言编写程序运行在GPU（Graphic Processor Unit，图形图像处理单元，可以理解为是一种高并发的运算器）上以进行图像的处理或渲染。GLSL着色器代码分为两个部分，即Vertex Shader（顶点着色器）与Fragment Shader（片元着色器）两部分，分别完成各自在OpenGL渲染管线中的功能.
