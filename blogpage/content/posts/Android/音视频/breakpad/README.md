@@ -1,0 +1,1 @@
+> breakpad 用来收集Native层的崩溃
