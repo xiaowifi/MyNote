@@ -894,7 +894,8 @@ Android 播放器增加后期处理过程流程图：
 ## Android平台工具
 * [android adb 常用汇总](../../android adb常用汇总.md)
 * [内存分析工具Memory Analyzer Tool(MAT).md](../../性能优化/内存/内存分析工具Memory Analyzer Tool(MAT).md)
-
+* [Native层的内存泄露检测.md](../../性能优化/内存/Native层的内存泄露检测.md)
+* [android NDK工具常用汇总.md](../../android NDK工具常用汇总.md)
 ## 通过 Ne10的交叉编译输入理解ndk-build
 
 
