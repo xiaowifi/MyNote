@@ -23,12 +23,40 @@ JAVA代码通过JAVA原生接口JNI框架调用原生库中的函数。AS编译�
 ## 常用的NDK 编译
 
 ### Cmake
-
+as创建的native 项目默认的就是这种编译方式，但是大多数项目都是ndk-build。
+我们通过as 创建一个简单的项目。发现c代码写在了main 下的cpp 目录中。
+同时同时创建了一个Cmakelists.txt 的配置文件，单纯。在app 的build.gradle 中
+````java
+externalNativeBuild {
+        cmake {
+            path file('src/main/cpp/CMakeLists.txt')
+            version '3.10.2'
+        }
+    }
+````
+上面代码 指向了cmakeLists.txt的地址，和ndk版本号。
+````java
+ externalNativeBuild {
+            cmake {
+                cppFlags ''
+            }
+        }
+````
+这个调调是配置其他内容的。
 ### ndk-build
 
-> 大多数项目都是ndk-bulid 编译的。所以要看到ndk-build 尤其重要。
+> 大多数项目都是ndk-bulid 编译的。所以要看到ndk-build 尤其重要。问题是这个调调如何运行编译啊？
+
+不推荐使用 ndk-build 来构建，因为这样构建源码后，是无法使用方法跳转、方法提示等功能的！如果要改代码，就等于文本编辑器写代码。相反 CMake 是支持这些的，因此更有助于提高开发效率。所以这里就不详细说明 ndk-build 的使用步骤了，如果是新建项目就使用 CMake，如果是使用 ndk-build 的老项目，可以按照以下步骤转为 CMake。
 
 ndk-build脚本使用ndk的基于make的构建系统构建项目。我们针对ndk-build使用android.mk和application.mk配置。
+
+#### 编译
+
+* 通过 cmd切换到包含jni的目录
+* 执行ndk的路径/ndk-build。如>F:\SDK\Android\Sdk\ndk-bundle\ndk-build，就会生成so 文件。
+
+> 所以这个调调。得用其他编辑器编写啊。
 
 #### android.mk
 
@@ -63,4 +91,5 @@ Android.mk 的语法支持将源文件分组为‘模块’，模块是静态库
   
 
 #### application.mk
+### 独立工具链
 
