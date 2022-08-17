@@ -43,6 +43,14 @@ externalNativeBuild {
         }
 ````
 这个调调是配置其他内容的。
+#### 问题：Cmake 需要编译出.so 文件吗？
+
+不需要，这个和我们使用module的方式有关，如果直接导入module,编译APP的时候，就会通过cmakelists.txt 中的配置生成对应的so 文件，如果通过maven 引用module,编译成aar 的时候，会自动生成so 文件。
+
+例如：
+
+![image-20220817191723171](assets/image-20220817191723171.png)
+
 ### ndk-build
 
 > 大多数项目都是ndk-bulid 编译的。所以要看到ndk-build 尤其重要。问题是这个调调如何运行编译啊？
@@ -56,7 +64,21 @@ ndk-build脚本使用ndk的基于make的构建系统构建项目。我们针对n
 * 通过 cmd切换到包含jni的目录
 * 执行ndk的路径/ndk-build。如>F:\SDK\Android\Sdk\ndk-bundle\ndk-build，就会生成so 文件。
 
-> 所以这个调调。得用其他编辑器编写啊。
+> Android studio 识别不了这种模式， 所以这个调调。得用其他编辑器编写啊。
+
+#####  module 中没有jni 的so 文件
+
+解决方式：
+
+````
+ sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+````
+
+这样打包出来的aar 就有jni的so 文件了
 
 #### android.mk
 

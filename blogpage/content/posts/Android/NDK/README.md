@@ -1,6 +1,7 @@
 ## 资料
 * [android NDK工具常用汇总.md](../android NDK工具常用汇总.md)
 * [静态注册与动态注册](https://blog.csdn.net/qq_42186263/article/details/114322784)
+* [android Cmake详解CmakeLists.txt](https://blog.csdn.net/weixin_42252757/article/details/119317296)
 # 正文
 ## Native工程
 ### 在build.gradle 
