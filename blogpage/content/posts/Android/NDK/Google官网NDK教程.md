@@ -51,6 +51,12 @@ externalNativeBuild {
 
 ![image-20220817191723171](assets/image-20220817191723171.png)
 
+````
+  implementation(fileTree("libs")) //通过这个调调　导入aar和lib
+````
+
+
+
 ### ndk-build
 
 > 大多数项目都是ndk-bulid 编译的。所以要看到ndk-build 尤其重要。问题是这个调调如何运行编译啊？
