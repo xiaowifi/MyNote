@@ -32,6 +32,10 @@
 * 周五答疑表 https://docs.qq.com/sheet/DWVNCQlZFQ1VLeUxS?u=397f91f460354b7fa48b768747496f55&tab=BB08J2
 ## 梯子软件下载地址
 https://dl.trojan-cdn.com/trojan/ 
+
+````
+https://s.trojanflare.com/clashx/437faa09-f750-4d38-8cb3-c378691c980b
+````
 ## 投屏 scrcpy
 ## maven 树
 * gradlew app:dependencies --configuration ReleaseRuntimeClasspath
