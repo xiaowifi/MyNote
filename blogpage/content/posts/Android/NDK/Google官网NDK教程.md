@@ -69,7 +69,7 @@ ndk-build脚本使用ndk的基于make的构建系统构建项目。我们针对n
 
 * 通过 cmd切换到包含jni的目录
 * 执行ndk的路径/ndk-build。如>F:\SDK\Android\Sdk\ndk-bundle\ndk-build，就会生成so 文件。
-
+* 在mac上： /Users/yangfan/sdk/ndk/25.0.8775105/ndk-build
 > Android studio 识别不了这种模式， 所以这个调调。得用其他编辑器编写啊。
 
 #####  module 中没有jni 的so 文件
