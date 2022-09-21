@@ -16,6 +16,6 @@
 ````java
         // 这个过期了。
         Build.CPU_ABI
-        // 用下面这个         
+        // 用下面这个  ，这个返回的是这个手机兼容的 so 类型。       
         Build.SUPPORTED_ABIS;
 ````
