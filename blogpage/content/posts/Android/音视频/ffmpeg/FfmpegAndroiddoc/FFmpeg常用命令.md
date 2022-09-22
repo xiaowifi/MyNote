@@ -119,10 +119,11 @@ ffmpeg -i input.mp4 -map 0:1 -vn out.mp3<br>
 ## 3、视频常见操作
 ### 3.1 视频剪切
 基本剪切，指定起始时间、剪切时长：<br>
-ffmpeg -i input.mp4 -ss 10 -t 20 -codec copy cut.mp4<br>
+ffmpeg -y -i input.mp4 -ss 10 -t 20 -codec copy cut.mp4 <br>
 精确剪切，包含多音轨，-map 0代表所有track流进行剪切，-accurate_seek代表精确seek：<br>
 ffmpeg -i input.mp4 -ss 10 -accurate_seek -t 20 -map 0 -codec copy cut.mp4<br>
-
+// -vcodec copy 和 -acodec copy表示所要使用的视频和音频的编码格式，这里指定为copy表示原样拷贝<br>
+ffmpeg -i input.mp4 -ss 10 -accurate_seek -t 20 -map 0 -vcodec copy -acodec copy  cut.mp4<br>
 ### 3.2 视频转码
 使用-vcodec指定视频编码，-acodec指定音频编码，-s 640x480指定视频分辨率，<br>
 -b 200k指定码率，-r 20指定帧率，这样达到视频压缩效果：<br>
@@ -194,6 +195,87 @@ ffmpeg -i in.mp4 -vf lutyuv='u=128:v=128' out.mp4
 # 二、ffplay命令行
 ffplay主要用于播放视频，也可以播放网络流，示例如下：<br>
 ffplay -i beyond.mp4<br>
+
+
+## 翻转
+左右翻转
+ffmpeg -i yourFilePath\原视频.mp4 -vf "hflip" yourFilePath\左右翻转.mp4
+
+###上下翻转
+ffmpeg -i yourFilePath\原视频.mp4 -vf "vflip" yourFilePath\上下翻转.mp4
+
+2.倍速
+###2倍速
+ffmpeg -i yourFilePath\原视频.mp4 -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a]" -map "[v]" -map "[a]" yourFilePath\2倍速.mp4
+###0.5倍速
+ffmpeg -i yourFilePath\原视频.mp4 -filter_complex "[0:v]setpts=2.0*PTS[v];[0:a]atempo=0.5[a]" -map "[v]" -map "[a]" yourFilePath\0.5倍速.mp4
+
+
+##3.去掉声音
+
+
+ffmpeg -i yourFilePath\原视频.mp4 -vcodec copy -an yourFilePath\去掉声音.mp4
+
+##4.压缩
+ffmpeg -i yourFilePath\原视频.mp4 -b:v 700k yourFilePath\压缩后.mp4
+
+##5.缩放(宽:高)
+###原视频1280*720
+
+###缩小
+ffmpeg -i yourFilePath\原视频.mp4 -vf scale=640:360 yourFilePath\缩小后.mp4
+###放大
+ffmpeg -i yourFilePath\原视频.mp4 -vf scale=2560:1440 yourFilePath\放大后.mp4
+
+##6.添加水印
+
+
+### 图片水印
+ffmpeg -i yourFilePath\666.mp4 -vf "movie=zcm.png [watermark]; [in][watermark] overlay=10:10 [out]" yourFilePath\添加水印图片后.mp4
+
+### 文字水印(中文有乱码问题)
+ffmpeg -i yourFilePath\原视频.mp4 -vf "drawtext=fontfile=simsun.ttc:text='中国人不':x=100:y=100:fontsize=24:fontcolor=red:alpha=0.5" yourFilePath\文字水印2.mp4
+
+#linux
+ffmpeg -i /opt/tmp/原视频.mp4 -vf drawtext=fontfile=/usr/share/fonts/dejavu/DejaVuSansCondensed.ttf:text='chinese not cheat chinese':x=100:y=100:fontsize=24:fontcolor=red:alpha=0.5 /opt/tmp/blue.mp4
+
+
+##7.加边框
+ffmpeg -i yourFilePath\原视频.mp4 -y -q:v 1 -vf drawbox=x=0:y=0:w=iw:h=ih:c=yellow:t=10 yourFilePath\加边框后.mp4
+
+##8.去掉水印
+ffmpeg -i logo.mp4 -filter_complex "delogo=x=100:y=100:w=100:h=100:show=1" delogo.mp4
+
+## 9.倒放
+ffmpeg -i yourFilePath\原视频.mp4 -vf reverse -y yourFilePath\倒放.mp4
+
+## 10.镜像
+### 左右镜像
+ffmpeg -i yourFilePath\原视频.mp4 -filter_complex "[0:v]pad=w=2*iw[main];[0:v]hflip[overlay];[main][overlay]overlay=x=w" yourFilePath\左右镜像.mp4
+
+
+## 11.
+### 画中画
+### 右上角
+ffmpeg -i yourFilePath\原视频.mp4 -i yourFilePath\ring.png -filter_complex overlay=W-w:20 -max_muxing_queue_size 1024 yourFilePath\画中画.mp4
+
+## 12.提取声音
+
+ffmpeg -i ./1.mp4 -f mp3 -vn ./1.mp3
+
+## 13.视频旋转
+
+ffmpeg -i in.mov -vf "transpose=1" out.mov
+transpose为不同值时所代表的不同意义:
+
+0: 逆时针和垂直翻转90度(默认)
+1: 顺时针旋转90度
+2: 逆时针方向90度
+3: 顺时针和垂直翻转90度
+旋转180度怎么办?如下：
+
+ffmpeg -i in.mov -vf "transpose=2,transpose=2" out.mov
+
 
 # 三、ffprobe命令行
 ffprobe主要用于检测多媒体信息，包括时长、视频分辨率、帧率、音频采样率、声道数、每个stream流信息等等。<br>
