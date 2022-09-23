@@ -47,3 +47,9 @@ https://s.trojanflare.com/clashx/437faa09-f750-4d38-8cb3-c378691c980b
 " . ./"代表上一层目录。
 “/”：代表根目录
 ````
+
+## token
+薯片电脑：
+````java
+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
+````
