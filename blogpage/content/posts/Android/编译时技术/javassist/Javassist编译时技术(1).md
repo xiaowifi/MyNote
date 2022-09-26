@@ -6,4 +6,6 @@
 ## 资料
 * [javassist github](https://github.com/jboss-javassist/javassist)
 * [javassist demo](https://www.w3cschool.cn/article/35230124.html)
-
+````html
+implementation 'org.javassist:javassist:3.20.0-GA'
+````
