@@ -14,6 +14,7 @@ draft = true
 > 区分与静态代理。
 > * 需要实现 InvocationHandler 实现 invoke方法。
 
+retrofit 就是基于注解然后动态代理调用okhttp
 ## 结束
 
 
