@@ -8,4 +8,5 @@
 ## 资料
 * [Robust 美团热更新](https://github.com/Meituan-Dianping/Robust/blob/master/README-zh.md)
 * [javassist github](https://github.com/jboss-javassist/javassist)
+* [Android热补丁之Robust原理解析](http://w4lle.com/2017/03/31/robust-0/)
 # 正文
