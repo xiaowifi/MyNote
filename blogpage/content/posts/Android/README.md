@@ -53,3 +53,8 @@ https://s.trojanflare.com/clashx/437faa09-f750-4d38-8cb3-c378691c980b
 ````java
 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
 ````
+## idea
+★★★全家桶一键激活★★★
+https://wwp.lanzout.com/b03j3ofvg
+密码:bi3f
+win/mac/linux全部在内 下载解压打开对应的文件夹
