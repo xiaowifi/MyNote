@@ -1,4 +1,5 @@
-package com.maniu.sandboxmaniu;
+````
+        package com.maniu.sandboxmaniu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
-//    沙箱 影响外置卡   公共目录   沙箱模式
+    //    沙箱 影响外置卡   公共目录   沙箱模式
     public void create(View view) {
         File file = new File(Environment.getExternalStorageState(), "demo.txt");
         Log.i("david", "create: "+file.exists());
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-//external.db  没有办法创建文件
+    //external.db  没有办法创建文件
 //   文件 文件夹
     public void createSAF(View view) {
         Uri uri =  MediaStore.Files.getContentUri("external");
@@ -103,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         }
         Toast.makeText(this, "添加图片成功", Toast.LENGTH_SHORT).show();
     }
-//数据 Android
+    //数据 Android
     public void query(View view) {
 //              图片名字   uri
         Uri external = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
@@ -116,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
             cursor.close();
         }
     }
-//通过名字----》uri  ----》 修改    uri是最重要的
+    //通过名字----》uri  ----》 修改    uri是最重要的
     public void updateImage(View view) {
         ContentValues contentValues = new ContentValues();
         contentValues.put(MediaStore.Images.ImageColumns.DISPLAY_NAME, "码牛学院.jpg" );
@@ -178,3 +179,4 @@ public class MainActivity extends AppCompatActivity {
         }.start();
     }
 }
+````
