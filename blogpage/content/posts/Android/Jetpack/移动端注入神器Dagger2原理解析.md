@@ -611,3 +611,9 @@ public final class DaggerAComponent implements AComponent {
 
 #### Module中用subcomponents属性指定该Subcomponent
 
+
+
+# 结束 
+
+在使用上，还是蛮复杂的。但是单纯的从功能上而言，这种解耦方式适合。对于大项目模块划分得非常细的那种，就很适合这种模式，学习这个主要是要去理解Android 的hint。但是小项目，使用这个的意义不是太大的感觉，毕竟我理解得也不是太深刻，也有自己的思维局限性。而且代码解耦程度越高，说明对业务的分析理解就越详细。
+
