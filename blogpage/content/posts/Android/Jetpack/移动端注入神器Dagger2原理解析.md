@@ -3,9 +3,8 @@
 Hint 使用的是dagger2实现。主要是用于IOC注入：
 IOC注入是将原来由程序代码中主动获取的资源转变为由第三方获取，并使原来主动的代码转换为被动接收的方式，以达到解耦的效果。称为控制反转。
 
-
 ## 资料
-
+* [dagger2](https://github.com/google/dagger)
 * [神兵利器Dagger2一站式全解（详细总结）](https://blog.csdn.net/valada/article/details/106225715)
 
 # 正文
