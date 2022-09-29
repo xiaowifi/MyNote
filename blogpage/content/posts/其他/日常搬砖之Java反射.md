@@ -1,12 +1,4 @@
-+++
-date = "2021-2-22"
-title = "Java反射大杂烩"
-description = "Java反射大杂烩"
-series = ["顶呱呱"]
-featured = true
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
-> 顺便推一下[博客主页](http://lalalaxiaowifi.gitee.io/pictures/) 
+
 ## 正文
 > 话说，Java 反射还是蛮重要的，但是感觉这个调调破坏了单例模型。但是用着还是很香的，我记得有大佬写过博客说，不建议使用反射来着，找不到了。以后找到了贴出来。
 > 先说用反射图啥，比如说，我只想知道一个类的变量啊。或者我只有类的名称想要变量啊，或者是我想直接调用方法啊，等等。

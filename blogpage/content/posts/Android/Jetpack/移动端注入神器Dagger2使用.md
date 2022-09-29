@@ -8,6 +8,9 @@ dagger2 是Google 提供的dagger的2.0 以上版本。，
 * [dagger2 文档](https://dagger.dev/dev-guide/)  
 * [Component的继承体系、局部单例](https://www.jianshu.com/p/f610a5606575)
 * [神兵利器Dagger2一站式全解（详细总结）](https://blog.csdn.net/valada/article/details/106225715)
+* [在Android中使用dagger2](https://developer.android.com/training/dependency-injection/dagger-android)
+* [android 依赖注入](https://developer.android.com/training/dependency-injection)
+
 * 导包:
 ````html
  implementation 'com.google.dagger:dagger:2.4'
