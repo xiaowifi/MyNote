@@ -512,7 +512,7 @@ cannot be provided without an @Inject constructor or from an @Provides- or @Prod
 
 那么应该怎么实现两个component 注册到同一个class 呢？分成两个component 一般都是业务的拆分导致的，最为粗暴的方式就是避免这种情况，直接整一个新的。但是如果避免不了呢？事实，dagger基于@Subcomponent提供几种思路
 
-#### Subcomponent 显示暴露另外一个component
+#### 方案一：Subcomponent 显示暴露另外一个component
 
 ````
 @Subcomponent(modules = {BModule.class})
@@ -612,7 +612,190 @@ public final class DaggerAComponent implements AComponent {
 
 我们和之前的DaggerAComponent进行对比：发现DaggerAComponent 中没有了注册函数，而注册函数被放到了BComponentImpl 中。
 
-#### Module中用subcomponents属性指定该Subcomponent
+#### 方案二：容器中提供子容器的实现
+
+代码示例：
+
+```
+public class TestClass {
+    class AEntity{}
+    class BEntity{}
+    @Module()
+    class AEntityModule{
+        @Provides
+        public AEntity getEntity(){
+            return new AEntity();
+        }
+    }
+    @Module()
+    class BEntityModule{
+        @Provides
+        public BEntity getEntity(){
+            return new BEntity();
+        }
+    }
+    @Component(modules = {AEntityModule.class})
+    interface AComponent{
+        BComponent.Builder getBuilder();
+    }
+    @Subcomponent(modules = {BEntityModule.class})
+    interface BComponent{
+        void inject(TestClass testClass);
+        @Subcomponent.Builder
+        interface Builder {
+            BComponent build();
+            Builder requestModule(BEntityModule module);
+        }
+    }
+    @Inject AEntity entity;
+    @Inject BEntity bEntity;
+
+    public TestClass() {
+        DaggerTestClass_AComponent.builder().aEntityModule(new 		AEntityModule()).build().getBuilder().requestModule(new BEntityModule()).build().inject(this);
+        Log.e("demo5", "TestClass: "+entity.hashCode() );
+        Log.e("demo5", "TestClass: "+bEntity.hashCode() );
+    }
+}
+```
+
+通过上面的代码我们可以看到，在BComponent中我们保留了注入class但是提供了一个BComponent的build.而且BComponent的class 标记是@Subcomponent。在调用上和方案1的区别在于：
+
+```java
+DaggerTestClass_AComponent.builder().aEntityModule(new AEntityModule()).build().getBuilder().requestModule(new BEntityModule()).build().inject(this);
+```
+
+方案1中：
+
+```
+DaggerAComponent.builder().aModule(new AModule()).build().getBComponent().inject(this);
+```
+
+。通过这两个调用的对比，可以发现方案2 是可以对于BComponent提供自定义module的。感觉方案1和方案2都是差不多的，都是在容器中提供一个一个子容器的实现的调用。而且这个和之前的blog有一点区别就是并没有对于module中使用 subcomponents，我的dagger 版本中并没有这个调调，但是上诉代码还是可以注入。
+
+#### 方案三：使用dependencies注解
+
+代码示例：
+
+```
+public class TestClass {
+    class AEntity {
+    }
+
+    class BEntity {
+    }
+
+    @Module
+    class AEntityModule {
+        @Provides
+        public AEntity getEntity() {
+            return new AEntity();
+        }
+    }
+
+    @Module
+    class BEntityModule {
+        @Provides
+        public BEntity getEntity() {
+            return new BEntity();
+        }
+    }
+
+    @Component(modules = {AEntityModule.class},dependencies = {BComponent.class})
+    interface AComponent {
+        void inject(TestClass testClass);
+    }
+
+    @Component(modules = {BEntityModule.class})
+    interface BComponent {
+        BEntity getEntity();
+    }
+
+    @Inject
+    AEntity entity;
+    @Inject
+    BEntity bEntity;
+
+    public TestClass() {
+        DaggerTestClass_AComponent.builder().aEntityModule(new AEntityModule())
+                .bComponent(DaggerTestClass_BComponent.builder().
+                        bEntityModule(new BEntityModule())
+                        .build())
+                .build().inject(this);
+        Log.e("demo5", "TestClass: " + entity.hashCode());
+        Log.e("demo5", "TestClass: " + bEntity.hashCode());
+    }
+}
+```
+
+我们可以看到，BComponent和上面两个方案相比使用的不再是Subcomponent而是之前的Component。但是提供一个BEntityModule的返回对象的函数：
+
+```
+BEntity getBEntity();
+```
+
+同时AComponent上添加了@Component(modules = {AEntityModule.class},dependencies = {BComponent.class})。
+
+在使用和赋值的时候：
+
+```
+DaggerTestClass_AComponent.builder().aEntityModule(new AEntityModule())
+        .bComponent(DaggerTestClass_BComponent.builder().
+                bEntityModule(new BEntityModule())
+                .build())
+        .build().inject(this);
+```
+
+module和 component必须赋值。
+
+### 同一个object不同的参数
+
+比如某个业务诉求上要求返回两个对象，但是两个对象的参数或者信息不一样，或者直接返回的对象的示例的实现不一样。这种情况下，我们就可以使用@name 注解去标记。代码示例：
+
+```
+public class TestClass {
+    class User{
+       public String name;
+        public User(String name) {
+            this.name = name;
+        }
+    }
+    @Module
+    class UserModule{
+        @Named("user1")
+        @Provides
+        User User1(){return new User("张三");}
+        @Named("user2")
+        @Provides
+        User User2(){return new User("张四");}
+    }
+    @Component(modules = {UserModule.class})
+    interface UserComponent{
+        void inject(TestClass testClass);
+    }
+    @Named("user1")
+    @Inject
+    User user;
+    @Named("user2")
+    @Inject
+    User user2;
+
+    public TestClass() {
+        DaggerTestClass_UserComponent.builder().userModule(new UserModule()).build().inject(this);
+        Log.e("demo8", "TestClass: "+user.name );
+        Log.e("demo8", "TestClass: "+user2.name );
+    }
+}
+```
+
+这个主要是Provider和@Inject上添加@named 
+
+
+
+### 全局单例
+
+### 自定义注解
+
+
 
 ##  多模块Dagger2的使用
 
