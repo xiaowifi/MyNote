@@ -156,7 +156,71 @@ public class MyApplication extends Application {
 
 ### hilt接口注入
 
-我们对于某些功能进行抽离的时候，往往需要抽离出一个接口，然后提供不同的实现。而hilt 就可以直接将实现类注入进去，减少了我们使用设计模式的情景。@binds 
+我们对于某些功能进行抽离的时候，往往需要抽离出一个接口，然后提供不同的实现。而hilt 就可以直接将实现类注入进去，减少了我们使用设计模式的情景。@binds 。
+
+#### 代码示例
+
+```
+// 定于的接口
+public interface HiltInterFace {
+    void run();
+}
+// 接口的实现 
+public class MyHiltInterFace implements HiltInterFace {
+    @Inject
+    public MyHiltInterFace() {
+    }
+
+    @Override
+    public void run() {
+        Log.e(MyHiltInterFace.class.getName(), "run: " );
+    }
+}
+// module 的定义
+@InstallIn(ActivityComponent.class)
+@Module
+public abstract class MyHiltModule {
+    @Binds
+    public abstract HiltInterFace bindHiltInterFace(MyHiltInterFace face);
+}
+// 使用
+@AndroidEntryPoint
+public class MainActivity extends AppCompatActivity {
+    @Inject
+    HiltInterFace face;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        face.run();
+
+    }
+}
+
+```
+
+通过对比可以知道，这个和对象的注入差不多，不同的地方在于接口的实现类的构造函数上添加了注解：
+
+```
+@Inject
+public MyHiltInterFace() {
+}
+```
+
+同时在module中的函数注解由providers变成了binds,同时通过函数的入参提供了实现类的对象。当然了整个的class 也是abstract。
+
+```
+@Binds
+public abstract HiltInterFace bindHiltInterFace(MyHiltInterFace face);
+```
+
+因为标记了构造函数，所以实现类就无法实现通过构造函数传入变量了，而hilt 提供了@ApplicationContext和ActivityContext提供上下文。
 
 #### 一个接口多个实现类
+
+### 在多模块中使用Hilt
+
+### 尝试解读hilt 原理
+
+我们看到hilt 并没有要求我们写component，在activity中，activity的父类也发生了变更。transform目录。
 
