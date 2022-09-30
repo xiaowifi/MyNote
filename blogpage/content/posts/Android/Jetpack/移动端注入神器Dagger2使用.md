@@ -11,6 +11,8 @@ dagger2 是Google 提供的dagger的2.0 以上版本。，
 * [在Android中使用dagger2](https://developer.android.com/training/dependency-injection/dagger-android)
 * [android 依赖注入](https://developer.android.com/training/dependency-injection)
 
+* [在多模块中使用dagger](https://developer.android.com/training/dependency-injection/dagger-multi-module)
+
 * 导包:
 ````html
  implementation 'com.google.dagger:dagger:2.4'
@@ -20,6 +22,9 @@ dagger2 是Google 提供的dagger的2.0 以上版本。，
 * 注入的位置不能用多态。
 * 默认对象是不是同一个，为了使得对象使用同一个，而不使用单例可以使用 @singleton 
 * 通过@singleton 的单例是有生命周期的，绑定到那个class就和当前生命周期绑定。如果要app 单例就将component 做成单例去注入。同时因为doubleCheck的get函数的原因，所以说线程安全。
+* 生成的class 在build-generated-（ap-generated-sourecs)-(bulidType)-out-包名 目录下
+* 因为这个是通过注解处理器生成的代码。应该不存在多module使用上的问题。
+
 ## 简单使用
 IOC注入是将原来由程序代码中主动获取的资源转变为由第三方获取，并使原来主动的代码转换为被动接收的方式，以达到解耦的效果。称为控制反转。
 <br>
@@ -31,8 +36,11 @@ IOC注入是将原来由程序代码中主动获取的资源转变为由第三�
 * 我这个对象一个class或者整个什么周期只会存在一个或是少量几个。
 
 我们将需求分析一下，只需要申明那需要注解，不关心对象怎么来的可以调用工厂，不想去创建，我可以生成对应的代码主动给你，前提是你总得调用我的代码吧，和databinding 或者viewbinding类似，域内唯一可以参考viewModel。
-当然了dagger比databinding或者viewbinding更早。基于这个逻辑，dagger 便出现了。
+当然了dagger比databinding或者viewbinding更早。
+
+基于这个逻辑，dagger 便出现了。
 dagger 将上述的需求分为以下几个角色:
+
 * 用于标记赋值的变量：@inject
 * 用于提供对象@module
 * 用于生成工厂的代码 @providers  
@@ -747,7 +755,7 @@ DaggerTestClass_AComponent.builder().aEntityModule(new AEntityModule())
 
 module和 component必须赋值。
 
-### 同一个object不同的参数
+### 多个构造函数导致的依赖迷失@named
 
 比如某个业务诉求上要求返回两个对象，但是两个对象的参数或者信息不一样，或者直接返回的对象的示例的实现不一样。这种情况下，我们就可以使用@name 注解去标记。代码示例：
 
@@ -787,21 +795,233 @@ public class TestClass {
 }
 ```
 
-这个主要是Provider和@Inject上添加@named 
+这个主要是Provider和@Inject上添加@named。在某个博客上看到，这种情况叫做依赖注入迷失。当然了这种情况还有下面另外一种解决方案 @Qualifier
 
+### 多个构造函数导致的依赖迷失@Qualifier
 
+当我们去查看Named的源码的时候发现，他也是基于@Qualifier
 
-### 全局单例
+```
+@Qualifier
+@Documented
+@Retention(RUNTIME)
+public @interface Named {
+
+    /** The name. */
+    String value() default "";
+}
+```
+
+所以，我们是不是可以自己搞一个类似的，只需要把类名称改了？
+
+示例代码：
+
+```
+public class TestClass {
+    @Qualifier
+    @Documented
+    @Retention(RUNTIME)
+    public @interface User1 {
+
+        /** The name. */
+        String value() default "";
+    }
+    @Qualifier
+    @Documented
+    @Retention(RUNTIME)
+    public @interface User2 {
+
+        /** The name. */
+        String value() default "";
+    }
+    class User{
+       public String name;
+        public User(String name) {
+            this.name = name;
+        }
+    }
+    @Module
+    class UserModule{
+        @User1
+        @Provides
+        User User1(){return new User("张三");}
+        @User2
+        @Provides
+        User User2(){return new User("张四");}
+    }
+    @Component(modules = {UserModule.class})
+    interface UserComponent{
+        void inject(TestClass testClass);
+    }
+    @User1
+    @Inject
+    User user;
+    @User2
+    @Inject
+    User user2;
+
+    public TestClass() {
+        DaggerTestClass_UserComponent.builder().userModule(new UserModule()).build().inject(this);
+        Log.e("demo8", "TestClass: "+user.name );
+        Log.e("demo8", "TestClass: "+user2.name );
+    }
+}
+```
 
 ### 自定义注解
 
+通过上面的内容，我们发现竟然可以基于@Qualifier自定义注解去设置类似于别名的内容。那么我们还可以定义什么不同的注解呢？最新版本中没有发现自定义@Singleton的意义，之前是component的组合模式下会报错，但是我Demo这个版本没有报错。
 
+```
+@Scope
+@Documented
+@Retention(RUNTIME)
+public @interface Singleton {}
+```
 
-##  多模块Dagger2的使用
+示例代码：
 
+```
+public class TestClass {
+    @Scope
+    @Documented
+    @Retention(RUNTIME)
+    public @interface UserScope {
+    }
 
+    class User {
+        public String name;
+        public User(String name) {
+            this.name = name;
+        }
+    }
+    @UserScope
+    @Module
+    class UserModule {
+        @UserScope
+        @Provides
+        User User1() {
+            return new User("张三");
+        }
+    }
+    @UserScope
+    @Component(modules = {UserModule.class})
+    interface UserComponent {
+        void inject(TestClass testClass);
+    }
+    @Inject
+    User user;
+    @Inject
+    User user2;
+
+    public TestClass() {
+        DaggerTestClass_UserComponent.builder().userModule(new UserModule()).build().inject(this);
+        Log.e("Demo10", "TestClass: "+user.hashCode());
+        Log.e("Demo10", "TestClass: "+user2.hashCode());
+    }
+}
+```
+
+可以从上面的代码中可以看到我们自定义的局部单例的注解和dagger 提供的注解@Singleton的使用是相同的。
+
+```
+@Scope
+@Documented
+@Retention(RUNTIME)
+public @interface UserScope {
+}
+```
+
+### 外部提供参数+Lazy+Provider
+
+因为我们module 可以自己设置进去，所以外部传参可以放module 的构造函数中。
+
+示例代码：
+
+```
+public class TestClass {
+    class User{
+       public String name;
+        public User(String name) {
+            this.name = name;
+        }
+    }
+    @Module
+    class UserModule{
+        String name;
+
+        public UserModule(String name) {
+            this.name = name;
+        }
+
+        @Provides
+        User User1(){return new User(name);}
+
+    }
+    @Component(modules = {UserModule.class})
+    interface UserComponent{
+        void inject(TestClass testClass);
+    }
+
+    @Inject
+    User user;
+    @Inject
+    Lazy<User> user0;
+    @Inject
+    Lazy<User> user1;
+    @Inject
+    Provider<User> user2;
+    public TestClass() {
+        DaggerTestClass_UserComponent.builder().userModule(new UserModule("李四")).build().inject(this);
+      Log.e("demo8", "TestClass:user  "+user.hashCode() );
+        Log.e("demo8", "TestClass:user  "+user.hashCode() );
+        Log.e("demo8", "TestClass: Lazy user0 "+user0.get().hashCode() );
+        Log.e("demo8", "TestClass: Lazy user0 "+user0.get().hashCode() );
+        Log.e("demo8", "TestClass: Lazy user1 "+user1.get().hashCode() );
+        Log.e("demo8", "TestClass:Provider user2 "+user2.get().hashCode() );
+        Log.e("demo8", "TestClass:Provider user2 "+user2.get().hashCode() );
+    }
+}
+```
+
+运行结果：
+
+````
+E/demo8: TestClass:user  64817157
+E/demo8: TestClass:user  64817157
+E/demo8: TestClass: Lazy user0 107749466
+E/demo8: TestClass: Lazy user0 107749466
+E/demo8: TestClass: Lazy user1 226583179
+E/demo8: TestClass:Provider user2 245333864
+E/demo8: TestClass:Provider user2 86712193
+````
+
+我们可以看到，初始化后就立即注入的user的hashCode 多次打印是没有变化的。
+
+同一个Lazy的User0的hashcode 是一样的，不同的Lazy的hashCode 的值是不一样的。
+
+但是同一个Provider每次执行get获取到的User的hashCode 不一致。
+
+想要理解正常注入，Lazy，Provider3个的区别。那么我们需要去查看dagger 生成的代码。
+
+```
+ @Override
+  public void injectMembers(TestClass instance) {
+    if (instance == null) {
+      throw new NullPointerException("Cannot inject members into a null reference");
+    }
+    instance.user = userAndUser2AndUser0AndUser1Provider.get();
+    instance.user0 = DoubleCheck.lazy(userAndUser2AndUser0AndUser1Provider);
+    instance.user1 = DoubleCheck.lazy(userAndUser2AndUser0AndUser1Provider);
+    instance.user2 = userAndUser2AndUser0AndUser1Provider;
+  }
+```
+
+结合上面的局部单例的Demo，我们可以知道DoubleCheck的get函数维护了单例对象，所以同一个Lazy获取到的值是一样的，不同的Lazy 不同是因为调用lazy函数就会创建一个 DoubleCheck 对象，所以不同的Lazy 返回的值不同。
+
+那么为啥Provier 每次调用get函数返回的值都不同呢？是因为他直接调用了我们提供的module的函数，而我们module中提供的对象每次都是通过构造函数创建出来的，所以说一样的。
 
 # 结束 
 
-在使用上，还是蛮复杂的。但是单纯的从功能上而言，这种解耦方式适合。对于大项目模块划分得非常细的那种，就很适合这种模式，学习这个主要是要去理解Android 的hint。但是小项目，使用这个的意义不是太大的感觉，毕竟我理解得也不是太深刻，也有自己的思维局限性。而且代码解耦程度越高，说明对业务的分析理解就越详细。
+在使用上，还是蛮复杂的。但是单纯的从功能上而言，这种解耦方式适合那种对于大项目模块划分得非常细的那种，那种就很适合这种模式，学习这个主要是要去理解Android 的hint。但是小项目，使用这个的意义不是太大的感觉，毕竟我理解得也不是太深刻，也有自己的思维局限性。而且代码解耦程度越高，说明对业务的分析理解就越详细。其实打算写理解的，主要是用得少，感觉理解是多么的苍白。
 
