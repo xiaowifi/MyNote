@@ -520,7 +520,7 @@ public class InjectionViewModuleActivity extends AppCompatActivity {
 
 
 
-### hilt接口注入
+### 使用 @Binds 注入接口实例
 
 我们对于某些功能进行抽离的时候，往往需要抽离出一个接口，然后提供不同的实现。而hilt 就可以直接将实现类注入进去，减少了我们使用设计模式的情景。@binds 。
 
@@ -583,4 +583,8 @@ public abstract HiltInterFace bindHiltInterFace(MyHiltInterFace face);
 因为标记了构造函数，所以实现类就无法实现通过构造函数传入变量了，而hilt 提供了@ApplicationContext和ActivityContext提供上下文。
 
 #### 一个接口多个实现类
+
+### 使用 @Provides 注入实例
+
+### 在 Hilt 不支持的类中注入依赖项@EntryPoint
 
