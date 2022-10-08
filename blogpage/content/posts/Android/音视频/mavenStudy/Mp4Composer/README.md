@@ -2,17 +2,20 @@
 ## 资料
 * [gitHub 地址](https://github.com/MasayukiSuda/Mp4Composer-android) 
 # 正文 
-## 问题 
+## 解读学习
+通过大致的了解，我们可以很清晰的知道，他主要是基于MediaMuxer和MediaExtractor 进行音视频的拆分与组合。所以，我们将学习的难易程度进行分级学习。
 
+* [视频静音]((一)视频静音实现.md) 这个功能相对简单，主要是将视频中的音频轨丢弃，然后将老视频的视频轨通过IO流复制到新的视频的视频轨中。MediaMuxer负责生成mp4文件
+
+
+
+
+## 问题
 ````aidl
 {track-id=1, level=2048, mime=video/avc, frame-count=441, profile=8, language=```, color-standard=1, display-width=1920, csd-1=java.nio.HeapByteBuffer[pos=0 lim=8 cap=8], color-transfer=3, durationUs=14939866, display-height=1080, width=1920, color-range=2, rotation-degrees=90, max-input-size=275773, frame-rate=30, height=1080, csd-0=java.nio.HeapByteBuffer[pos=0 lim=20 cap=20]}
 {max-bitrate=192000, sample-rate=48000, track-id=2, durationUs=14912000, mime=audio/mp4a-latm, profile=2, channel-count=2, bitrate=192000, language=```, aac-profile=2, max-input-size=577, csd-0=java.nio.HeapByteBuffer[pos=0 lim=2 cap=2]}
 
 ````
-
-
-
-
 
 | 方法             | 描述                                                         |
 | ---------------- | ------------------------------------------------------------ |
@@ -27,3 +30,4 @@
 | 翻转水平         | 在导出的视频上水平翻转。默认`flipHorizontal = false`。       |
 | 视频格式MimeType | 导出视频的视频格式的 mime 类型。默认自动。支持 HEVC、AVC、MPEG4、H263。检查[这个](https://github.com/MasayukiSuda/Mp4Composer-android/blob/master/mp4compose/src/main/java/com/daasuu/mp4compose/VideoFormatMimeType.java)。 |
 | 时间尺度         | 设置时间刻度。默认值为 1f。应在 0.125 (-8X) 到 8.0 (8X) 范围内 |
+
