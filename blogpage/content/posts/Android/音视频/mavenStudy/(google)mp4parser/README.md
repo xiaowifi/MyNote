@@ -8,6 +8,12 @@
 # 正文
 > 这个调调的Demo 在[k4l-video-trimmer](https://github.com/titansgroup/k4l-video-trimmer) 和[VideoTrimmer](https://github.com/AndroidDeveloperLB/VideoTrimmer) 
 > 中被使用，用于裁剪视频。
+
+整体实现逻辑：
+* 将文件处理成自定义对象。movie 
+* 然后在movie中处理轨道信息
+* 将需要的文件流输出到指定的文件中
+
 ## 导包
 ````aidl
     implementation 'org.mp4parser:isoparser:1.9.56'
