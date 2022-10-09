@@ -1,18 +1,12 @@
-### MediaMuxer API 简介
+## 资料
+* [google Android media 官网](https://developer.android.com/reference/android/media/package-summary)
+* [MediaExtractor解析和封装mp4](https://www.cnblogs.com/renhui/p/7474096.html)
+* [google MediaExtractor官网](https://developer.android.com/reference/android/media/MediaExtractor)
 
-##### MediaExtractor 是什么？
-
+# 正文
+## MediaExtractor 
+MediaExtractor 是Android 系统中对于音视频轨道进行分解处理的一个工具。
 顾名思义，MediaExtractor 可以从数据源中**提取**经过编码的媒体数据。MediaExtractor 不仅可以解析本地媒体文件，还可以解析网络媒体资源。
-
-##### MediaMuxer 是什么？
-
-同样，名字已经说明了一切。MediaMuxer 可以将多个流混合**封装**起来，支持 MP4、Webm 和 3GP 文件作为输出，而且从 Android N 开始，已经支持在 MP4 中混合 B 帧了。
-
-##### 这次的任务是什么？
-
-这次的任务是从一个 MP4 文件中只提取视频数据，并封装为一个新的 MP4 文件。外在表现就是将一个**有声视频**，转换为一个**无声视频**。
-
- MediaExtractor 的作用就是将音频和视频分离。
 
 主要是以下几个步骤：
 
@@ -73,10 +67,20 @@ while (true) {
 ```
 mediaExtractor.release();
 ```
+### MediaExtractor 是否可以直接解析H264或者aac 文件？
+答案是否定的。
+直接设置一个h264和aac 文件会报错：java.io.IOException: Failed to instantiate extractor.
 
-
+### MediaExtractor 常用函数
+* selectTrack 切换到想要的轨道
+* readSampleData 读取当前帧的数据   
+* advance() 读取下一帧。  
+* unselectTrack 取消追踪。传入的是track的id。通常和selectTrack，
+* getSampleTime 获取当前帧的时间，呈现时间（以微秒为单位）
 
 ## MediaMuxer
+MediaMuxer 是Android 系统中对于音视频合成的一个工具
+同样，名字已经说明了一切。MediaMuxer 可以将多个流混合**封装**起来，支持 MP4、Webm 和 3GP 文件作为输出，而且从 Android N 开始，已经支持在 MP4 中混合 B 帧了。
 
 MediaMuxer 的作用是生成音频或视频文件；还可以把音频与视频混合成一个音视频文件。
 
@@ -131,10 +135,7 @@ mediaMuxer.release();
 ```
 
 
-
-## 实例
-
-从 MP4 文件中分离出视频生成无声视频文件。
+## 从 MP4 文件中分离出视频生成无声视频文件
 
 ```
 /**
@@ -202,5 +203,83 @@ private void extractVideo() {
     }
 }
 ```
+## 将一个aac和avc的视频拆分出来并且分别存储
+````java
+public class VideoTrackSave {
+    String videopath="";
 
-分离音频、合成音视频
+    public VideoTrackSave(String videopath) {
+        this.videopath = videopath;
+    }
+
+    public Map<String,String> run() throws IOException {
+        MediaExtractor mediaExtractor = new MediaExtractor();
+        mediaExtractor.setDataSource(videopath);
+        int trackCount = mediaExtractor.getTrackCount();
+        Map<String,String> map=new HashMap<>();
+        for (int i = 0; i < trackCount; ++i) {
+            MediaFormat format = mediaExtractor.getTrackFormat(i);
+            Log.e(TAG.TAG, "run: " + new Gson().toJson(format));
+            if (format.getString(MediaFormat.KEY_MIME).startsWith("video")) {
+                mediaExtractor.selectTrack(i);
+                map.put("video",saveH264(mediaExtractor,format,i));
+
+            }else if (format.getString(MediaFormat.KEY_MIME).startsWith("audio")){
+                mediaExtractor.selectTrack(i);
+               map.put("audio", saveAAC(mediaExtractor,format,i));
+            }
+        }
+        mediaExtractor.release();
+        return map;
+    }
+
+    private String  saveAAC(MediaExtractor mediaExtractor, MediaFormat mediaFormat,int videoIndex) throws IOException{
+        // 开启缓冲区。把文件写入
+        long millis = System.currentTimeMillis();
+        ByteBuffer byteBuffer = ByteBuffer.allocate(mediaFormat.getInteger(MediaFormat.KEY_MAX_INPUT_SIZE));
+        String path=Environment.getExternalStorageDirectory()+"/audio_"+millis+".aac";
+        FileOutputStream stream=new FileOutputStream(path,true);
+        // 一帧 一帧的读取到另外一个视频轨里面。
+        while (true) {
+            // 将样本数据存储到字节缓存区
+            int readSampleSize = mediaExtractor.readSampleData(byteBuffer, 0);
+            // 如果没有可获取的样本，退出循环
+            if (readSampleSize < 0) {
+                mediaExtractor.unselectTrack(videoIndex);
+                break;
+            }
+            stream.write(byteBuffer.array());
+            // 读取下一帧数据
+            mediaExtractor.advance();
+        }
+        stream.close();
+        Log.e(TAG.TAG, "saveAAC: 文件存储完成" );
+        return path;
+    }
+
+    private String saveH264(MediaExtractor mediaExtractor, MediaFormat mediaFormat,int videoIndex) throws IOException{
+        // 开启缓冲区。把文件写入
+        long millis = System.currentTimeMillis();
+        ByteBuffer byteBuffer = ByteBuffer.allocate(mediaFormat.getInteger(MediaFormat.KEY_MAX_INPUT_SIZE));
+        String path= Environment.getExternalStorageDirectory()+"/video_"+millis+".h264";
+        FileOutputStream stream=new FileOutputStream(path,true);
+        // 一帧 一帧的读取到另外一个视频轨里面。
+        while (true) {
+            // 将样本数据存储到字节缓存区
+            int readSampleSize = mediaExtractor.readSampleData(byteBuffer, 0);
+            // 如果没有可获取的样本，退出循环
+            if (readSampleSize < 0) {
+                mediaExtractor.unselectTrack(videoIndex);
+                break;
+            }
+            stream.write(byteBuffer.array());
+            // 读取下一帧数据
+            mediaExtractor.advance();
+        }
+        stream.close();
+        Log.e(TAG.TAG, "saveH264: 文件存储完成" );
+        return path;
+    }
+}
+
+````
