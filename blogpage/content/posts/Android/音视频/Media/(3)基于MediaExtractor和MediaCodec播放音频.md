@@ -2,7 +2,7 @@
 * [google Android media 官网](https://developer.android.com/reference/android/media/package-summary)
 * [google MediaExtractor官网](https://developer.android.com/reference/android/media/MediaExtractor)
 * [google MediaCodec ](https://developer.android.com/reference/android/media/MediaCodec)
-* [使用MediaCodec解码使用SurfaceView显示视频](http://t.zoukankan.com/CoderTian-p-6221944.html)
+* [Android MediaCodec解码音频，AudioTrack播放音频，PCM数据写入文件](https://www.codenong.com/cs106611303/)
 # 正文
 通过上篇笔记[Android媒体处理MediaMuxer与MediaExtractor]((1)Android媒体处理MediaMuxer与MediaExtractor.md) 我们可以知道，可以通过MediaExtractor获取到音频轨的数据。
 而音频也是编码后的数据，如果需要调用硬件播放音频，那么需要将编码后的数据如AAC转换为PCM,然后进行播放。
