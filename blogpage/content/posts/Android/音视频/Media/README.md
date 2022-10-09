@@ -276,3 +276,6 @@
 | [ResourceBusyException](https://developer.android.com/reference/android/media/ResourceBusyException) | Exception thrown when an operation on a MediaDrm object is attempted and hardware resources are not available, due to being in use. |
 | [UnsupportedSchemeException](https://developer.android.com/reference/android/media/UnsupportedSchemeException) | Exception thrown when an attempt is made to construct a MediaDrm object using a crypto scheme UUID that is not supported by the device |
 
+## 学习blog
+* [(1)Android媒体处理MediaMuxer与MediaExtractor.md]((1)Android媒体处理MediaMuxer与MediaExtractor.md) 系统API 合成视频和获取视频信息 
+* [基于MediaExtractor获取视频轨道然后播放视频]((2)基于MediaExtractor获取视频轨道然后播放视频.md)
