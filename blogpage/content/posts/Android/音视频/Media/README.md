@@ -278,4 +278,4 @@
 
 ## 学习blog
 * [(1)Android媒体处理MediaMuxer与MediaExtractor.md]((1)Android媒体处理MediaMuxer与MediaExtractor.md) 系统API 合成视频和获取视频信息 
-* [基于MediaExtractor获取视频轨道然后播放视频]((2)基于MediaExtractor获取视频轨道然后播放视频.md)
+* [(2)基于MediaExtractor和MediaCodec播放视频.md]((2)基于MediaExtractor和MediaCodec播放视频.md)
