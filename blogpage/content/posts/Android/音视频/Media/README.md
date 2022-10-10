@@ -280,5 +280,5 @@
 * [Android媒体处理MediaMuxer与MediaExtractor.md]((1)Android媒体处理MediaMuxer与MediaExtractor.md) 系统API 合成视频和获取视频信息
 * [基于MediaExtractor和MediaCodec播放视频.md]((2)基于MediaExtractor和MediaCodec播放视频.md) 播放视频轨
 * [AudioTrack播放PCM音频](AudioTrack播放PCM音频.md) 播放音频轨
-* [基于MediaCodec播放一个aac文件]((4)基于MediaCodec播放一个aac文件.md)
 * [基于MediaCodec播放一个H264文件]((5)基于MediaCodec播放一个H264文件.md)
+* [基于MediaCodec播放一个aac文件]((4)基于MediaCodec播放一个aac文件.md)
