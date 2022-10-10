@@ -55,5 +55,89 @@ AudioTrack 实例可以在两种模式下运行：静态或流式传输。
         }
         }
 ````
-## 读取 
+## 读取
+```java
+        // 选中视频轨道
+        mediaExtractor.selectTrack(track);
+        MediaCodec.BufferInfo bufferInfo = new MediaCodec.BufferInfo();
+        // 因为不是每一帧都是按照顺序并且可用的，所以。
+        ByteBuffer[] inputBuffers = audioMediaCodec.getInputBuffers();
+        audioMediaCodec.getOutputBuffers();
+        boolean first = false;
+        long startWhen = 0;
+        while (true) {
+            // 将样本数据存储到字节缓存区
+            int inputIndex = audioMediaCodec.dequeueInputBuffer(10000);
+            if (inputIndex >= 0) {
+                ByteBuffer inputBuffer = inputBuffers[inputIndex];
+                int readSampleSize = mediaExtractor.readSampleData(inputBuffer, 0);
+                // 如果没有可获取的样本，退出循环
+                if (readSampleSize < 0) {
+                    mediaExtractor.unselectTrack(track);
+                    break;
+                }
+                audioMediaCodec.queueInputBuffer(inputIndex, 0, readSampleSize, mediaExtractor.getSampleTime(), 0);
+                // 读取下一帧数据
+                mediaExtractor.advance();
+            }
+            //
+            int outIndex = audioMediaCodec.dequeueOutputBuffer(bufferInfo, 10000);
+
+            switch (outIndex) {
+                case MediaCodec.INFO_OUTPUT_BUFFERS_CHANGED:
+                    Log.e(TAG.TAG, "INFO_OUTPUT_BUFFERS_CHANGED");
+                    audioMediaCodec.getOutputBuffers();
+                    break;
+
+                case MediaCodec.INFO_OUTPUT_FORMAT_CHANGED:
+                    Log.e(TAG.TAG, "INFO_OUTPUT_FORMAT_CHANGED format : " + audioMediaCodec.getOutputFormat());
+                    break;
+
+                case MediaCodec.INFO_TRY_AGAIN_LATER:
+                Log.e(TAG.TAG, "INFO_TRY_AGAIN_LATER");
+                    break;
+                default:
+                    if (!first) {
+                        startWhen = System.currentTimeMillis();
+                        first = true;
+                    }
+                    ByteBuffer outputBuffer;
+                    byte [] pcmData;
+                    while (outIndex>=0){
+                        outputBuffer=audioMediaCodec.getOutputBuffer(outIndex);
+                        pcmData=new byte[bufferInfo.size];
+                        if (outputBuffer!=null){
+                            outputBuffer.get(pcmData);
+                            outputBuffer.clear();
+                        }
+                        // 播放PCM数据
+                        audioTrack.write(pcmData,0,bufferInfo.size);
+                        // 释放
+                        audioMediaCodec.releaseOutputBuffer(outIndex, false);
+                        // 重新获取
+                        outIndex=audioMediaCodec.dequeueOutputBuffer(bufferInfo,10000);
+                    }
+
+                    break;
+            }
+
+            // 所有解码帧都已渲染，现在可以停止播放
+            if ((bufferInfo.flags & MediaCodec.BUFFER_FLAG_END_OF_STREAM) != 0) {
+                Log.d(TAG.TAG, "OutputBuffer BUFFER_FLAG_END_OF_STREAM");
+                break;
+            }
+
+        }
+        // 释放资源
+        audioMediaCodec.stop();
+        audioMediaCodec.release();
+        mediaExtractor.release();
+        audioTrack.stop();
+    }
+
+```
+## 总结
+这个Demo 更接近于转码后存放，因为播放的时候需要控制时间，而不是一股脑的全部丢给播放器。而且这个和视频解码的逻辑是差不多的，个人感觉和输出成bitmap 流程一致。
+都是需要拿到解码后的数据，然后丢给一个指定的输出设备。
+
 
