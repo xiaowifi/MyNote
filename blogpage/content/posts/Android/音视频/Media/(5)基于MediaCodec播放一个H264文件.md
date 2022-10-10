@@ -146,5 +146,5 @@ public class H264Player implements Runnable{
 通过代码对比，我们我们知道，这个和直接通过MediaExtractor读取一帧数据的区别主要集中到以下几点：
 * 需要获取miniType，mediaFormat
 * 所以需要自己解析sps和pps(代码上虽然没有实现，但是还是需要获取，嘻嘻)
-* 需要自己获取一帧的数据
+* 需要自己获取一帧的数据，这个就需要知道为啥（开始位置+2),和(buf[i]==0x00&&buf[i+1]==0x00&&buf[i+2]==0x00&&buf[i+3]==0x01)了
 
