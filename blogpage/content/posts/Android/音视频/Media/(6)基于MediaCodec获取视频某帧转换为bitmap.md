@@ -1,4 +1,11 @@
+## 资料
+* [google Android media 官网](https://developer.android.com/reference/android/media/package-summary)
+* [google MediaExtractor官网](https://developer.android.com/reference/android/media/MediaExtractor)
+* [google MediaCodec ](https://developer.android.com/reference/android/media/MediaCodec)
 # 正文
+我们知道视频轨读取出来的每一帧都是压缩数据，所以说，我们需要对其解码。在之前自己播放的过程中，我们传入了一个Surface作为解码后的视频的输出。
+而bitmap 则不需要一个输出。所以我们需要拿到解码后的数据，然后自己处理，整改流程和播放流程一致。唯一的区别就在于需要把解码后的数据获取出来进行转换。
+这个流程在视频的时候有用，我们需要获取到本地视频的某个时间段的帧序列，然后展示出来。
 ## 自己封装版本
 ```java
 public class VideoGetImage implements Runnable {
@@ -412,4 +419,5 @@ public class VideoToFrames {
 ````
 # 结论
 通过这个和通过mediaCodec 解码视频的代码是查不到的。区别在于没有设置Surface，同时有主动获取到一个Image对象，然后将Image通过YUV匹配规则转换为一个bitmap.
-yuv对象转bitmap 不建议这么写，libYuv 写得更改。
+yuv对象转bitmap 不建议这么写，libYuv 写得更改。<br>
+在视频裁剪的具体业务上，建议直接获取到I帧，或者设置时间间隔。将解码后的byte 存放起来。是否需要再显示的时候再转码成bitmap，还是说渲染到时候通过自定义个View 渲染YUV数据都是可行的。

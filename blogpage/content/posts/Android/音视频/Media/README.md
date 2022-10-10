@@ -277,8 +277,8 @@
 | [UnsupportedSchemeException](https://developer.android.com/reference/android/media/UnsupportedSchemeException) | Exception thrown when an attempt is made to construct a MediaDrm object using a crypto scheme UUID that is not supported by the device |
 
 ## 学习blog
-* [(1)Android媒体处理MediaMuxer与MediaExtractor.md]((1)Android媒体处理MediaMuxer与MediaExtractor.md) 系统API 合成视频和获取视频信息 
-* [(2)基于MediaExtractor和MediaCodec播放视频.md]((2)基于MediaExtractor和MediaCodec播放视频.md) 播放视频轨
-* [(3)基于MediaExtractor和MediaCodec播放音频.md]((3)基于MediaExtractor和MediaCodec播放音频.md)
-* [(4)基于MediaCodec播放一个aac文件]((4)基于MediaCodec播放一个aac文件.md)
-* [(5)基于MediaCodec播放一个H264文件]((5)基于MediaCodec播放一个H264文件.md)
+* [Android媒体处理MediaMuxer与MediaExtractor.md]((1)Android媒体处理MediaMuxer与MediaExtractor.md) 系统API 合成视频和获取视频信息
+* [基于MediaExtractor和MediaCodec播放视频.md]((2)基于MediaExtractor和MediaCodec播放视频.md) 播放视频轨
+* [AudioTrack播放PCM音频](AudioTrack播放PCM音频.md) 播放音频轨
+* [基于MediaCodec播放一个aac文件]((4)基于MediaCodec播放一个aac文件.md)
+* [基于MediaCodec播放一个H264文件]((5)基于MediaCodec播放一个H264文件.md)
