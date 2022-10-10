@@ -7,6 +7,11 @@
 通过上篇笔记[Android媒体处理MediaMuxer与MediaExtractor]((1)Android媒体处理MediaMuxer与MediaExtractor.md) 我们可以知道，可以通过MediaExtractor获取到视频轨的数据。
 因为视频是被编码器编码后的数据，所以，当我们获取到每一帧数据的时候，这个数据是被压缩了的，所以我们需要将压缩的数据还原为YUV数据，然后渲染到SurfaceView 中。
 这个功能似乎和mediaPlayer 一样。我们通过这种模式去尝试理解视频播放器的整体机制。
+
+解码流程：
+
+![image-20221010153304068](assets/image-20221010153304068.png)
+
 ## 获得一个生命周期可用的Surface
 ````java
     surface1.getHolder().addCallback(new SurfaceHolder.Callback() {
@@ -155,6 +160,7 @@ public class VideoPlayer implements Runnable {
                 if (videoMediaCodec == null) {
                     track = i;
                     videoMediaCodec = MediaCodec.createDecoderByType(format.getString(MediaFormat.KEY_MIME));
+                    // 第3个参数是加密的算法 
                     videoMediaCodec.configure(format, surface, null, 0);
                     videoMediaCodec.start();
                 }
@@ -176,13 +182,14 @@ public class VideoPlayer implements Runnable {
         // 选中视频轨道
         mediaExtractor.selectTrack(track);
         MediaCodec.BufferInfo bufferInfo = new MediaCodec.BufferInfo();
-        // 因为不是每一帧都是按照顺序并且可用的，所以。
+        // 获取所有的可用的解码器列表。这个调调是全手机设备都公用的。
         ByteBuffer[] inputBuffers = videoMediaCodec.getInputBuffers();
         videoMediaCodec.getOutputBuffers();
         boolean first = false;
         long startWhen = 0;
         while (true) {
             // 将样本数据存储到字节缓存区
+            // 获取一个可用的解码器，的下标，超时时间为10000
             int inputIndex = videoMediaCodec.dequeueInputBuffer(10000);
             if (inputIndex >= 0) {
                 ByteBuffer inputBuffer = inputBuffers[inputIndex];
@@ -254,3 +261,4 @@ public class VideoPlayer implements Runnable {
 
 类似的问题还有很多，我们只是通过这种代码去尝试还原一个播放器的大致流程，去理解别人的播放器的实现。只有这样，我们才可以去对于播放器无法播放问题进行兼容等处理。
 
+为啥mediaCodec没有提供回调监听？是因为存在跨设备的情况，CPU 调用了DSP芯片

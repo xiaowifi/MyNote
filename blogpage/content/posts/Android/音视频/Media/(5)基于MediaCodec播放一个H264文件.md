@@ -79,6 +79,7 @@ public class H264Player implements Runnable{
                 ByteBuffer byteBuffer=inputBuffers[inIndex];
                 byteBuffer.clear();
                 byteBuffer.put(buf,startIndex,nextFrameStart-startIndex);
+                // 第3个参数是当前帧的时间，我们拿不到就设置为0
                 videoMediaCodec.queueInputBuffer(inIndex,0,nextFrameStart-startIndex,0,0);
                 startIndex=nextFrameStart;
             }else {
@@ -113,6 +114,7 @@ public class H264Player implements Runnable{
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    // 渲染到view,true 表述渲染，false 就不自动渲染。
                     videoMediaCodec.releaseOutputBuffer(outIndex, true);
                     break;
             }
@@ -147,4 +149,10 @@ public class H264Player implements Runnable{
 * 需要获取miniType，mediaFormat
 * 所以需要自己解析sps和pps(代码上虽然没有实现，但是还是需要获取，嘻嘻)
 * 需要自己获取一帧的数据，这个就需要知道为啥（开始位置+2),和(buf[i]==0x00&&buf[i+1]==0x00&&buf[i+2]==0x00&&buf[i+3]==0x01)了
+
+### 为啥要这么判断(buf[i]==0x00&&buf[i+1]==0x00&&buf[i+2]==0x00&&buf[i+3]==0x01)
+
+因为H264每一帧的分隔符就是00 00 00 01。
+
+我们知道数据源在内存中的体现形式就是二进制存储。0x00就是16进制的0,
 
