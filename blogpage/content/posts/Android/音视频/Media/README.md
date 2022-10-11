@@ -282,4 +282,5 @@
 * [AudioTrack播放PCM音频](AudioTrack播放PCM音频.md) 播放音频轨
 * [基于MediaCodec播放一个H264文件]((5)基于MediaCodec播放一个H264文件.md)
 * [MediaCodec+MediaProjectionManager屏幕录制并且生成一个h264文件](屏幕录制生成一个h264文件.md)  
+* [基于Camera录制一个H264文件](基于Camera录制一个H264文件.md)  
 * [基于MediaCodec播放一个aac文件]((4)基于MediaCodec播放一个aac文件.md)
