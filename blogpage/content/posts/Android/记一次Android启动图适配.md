@@ -83,7 +83,7 @@ emmmmm? 这个是一张图片。<br>
 我在[Android 屏幕适配——smallestWidth适配](https://www.jianshu.com/p/c1dd77050e68) 中看到了这句话：
 
 ```
-Data type is double. System default value is 360
+Data type is double. System default value is 360 
 ```
 那么，这个值是否会影响我们的屏幕适配呢？我autoSize 适配的时候，写的367，而base_dp=360，在模拟器就会闪。当两个值是一样的时候就不会闪。
 
