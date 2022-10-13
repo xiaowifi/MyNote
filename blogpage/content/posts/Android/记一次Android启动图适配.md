@@ -3,6 +3,7 @@
 * [Android 屏幕适配——smallestWidth适配](https://www.jianshu.com/p/c1dd77050e68)
 * [AndroidAutoSize ](https://github.com/JessYanCoding/AndroidAutoSize)
 * [Activity config  ](https://developer.android.com/guide/topics/manifest/activity-element#config)
+* [骚年你的屏幕适配方式该升级了!-SmallestWidth 限定符适配方案](https://www.jianshu.com/p/2aded8bb6ede)
 # 正文
 之前版本的启动图内容很简单，主题色背景，中间一个小logo。为了防止logo 变形，我们采用layer-list。logo 采用svg,然后再item 中固定宽高。
 然后用item 一个绘制背景，一个绘制logo。这种效果还行，起码没有收反馈说，这个有啥问题。layer-list 作为window的背景被设置到了主题上 <br>
