@@ -1,3 +1,3 @@
-> 这个主要是整task 相关
-## 资料
+> 杩欎釜涓昏鏄暣task 鐩稿叧
+## 璧勬枡
 * [gradle TASK](https://docs.gradle.org/current/dsl/org.gradle.api.Task.html#org.gradle.api.Task)
