@@ -11,7 +11,7 @@
 # 正文
 ## 创建对应的module
 我们知道注解是包含位置和生命周期的。而在注解处理器的开发过程中，需要申明当前注解处理器需要处理什么注解。
-为了在注解处理器和代码调用上均可访问到相同的注解处理器。我们需要创建几个module 
+为了在注解处理器和代码调用上均可访问到相同的注解处理器。我们需要创建几个module，注解处理器的module 应该是一个JAVA lib 工程 
 ### 注解module
 这个module 很单纯，主要是提供注解。所以这个只需要是是一个JAVA lib 工程即可。
 ### 注解处理器的module
@@ -25,15 +25,40 @@
 #### 日志打印
 因为他是处于编译时，所以Android 的log是无法使用的，如何打印呢？
 ````java
+        System.out.println("System init ");
+        processingEnv.getMessager().printMessage(Diagnostic.Kind.NOTE,"init");
+````
+#### 设置需要处理的注解 
+```java
+@Override
+    public Set<String> getSupportedAnnotationTypes() {
+        Set<String> set=new HashSet<>();
+        set.add(BindView.class.getCanonicalName());
+        return set;
+    }
+```
+#### 其他设置
+* 初始化：init
+* 设置支持版本：
+````java
+   @Override
+    public SourceVersion getSupportedSourceVersion() {
+        return SourceVersion.latestSupported();
+    }
 
 ````
+#### 生成代码
+apt 
+
 ### 使用 
 在需要使用的地方使用。
 ### 导包
 ````java
-    implementation project(path: ':bindView')
-    annotationProcessor project(path: ':bindViewAnnotation')
+        implementation project(path: ':ButterKnife')
+        annotationProcessor project(path: ':ButterKnifeAnnotation')
 ````
 ## 结束
+老是遇到一个问题，处理器的注释不打印。网络上说处理器的module应该是JAVA lib,但是我创建的时候就是java lib。我以为和gradle 和build tools 版本号相关。
+但是我重新创建了一个工程他又行了，人都麻了。需要注意的一点是，需要JAVA 版本经量保持统一。
 
 
