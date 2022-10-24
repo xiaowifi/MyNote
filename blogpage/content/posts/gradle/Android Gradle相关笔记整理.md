@@ -2,6 +2,7 @@
 * [android studio build.gradle](https://developer.android.google.cn/studio/build/dependencies) 
 * [gradle 官网](https://docs.gradle.org/current/userguide/userguide.html)
 * [gradle Android](https://docs.gradle.org/current/samples/sample_building_android_apps.html)  
+* [andorid gradle-api ](https://developer.android.com/reference/tools/gradle-api)  
 * 如何查看源码，使用kotlin 或者将插件包导入到项目如 compileOnly 'com.android.tools.build:gradle:4.0.0'
 ## 内容
 * gradle 是一款基于apache的ant和maven 概念的项目自动化开源构建工具，gradle的核心是基于JAVA 实现的，可以把他当做一个轻量级的JAVA 应用程序。
