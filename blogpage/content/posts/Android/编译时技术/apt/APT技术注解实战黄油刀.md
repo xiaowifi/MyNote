@@ -8,6 +8,7 @@
 ## 资料
 * [auto.service apt服务](https://github.com/google/auto/tree/master/service)
 * [javapoet java文件生成帮助类](https://github.com/square/javapoet)
+* [javapoet详解](https://blog.csdn.net/qq_34681580/article/details/121483450)
 # 正文
 ## 创建对应的module
 我们知道注解是包含位置和生命周期的。而在注解处理器的开发过程中，需要申明当前注解处理器需要处理什么注解。
@@ -47,11 +48,97 @@
     }
 
 ````
-#### 生成代码
-apt 
+#### 完整代码
+````kotlin
 
-### 使用 
-在需要使用的地方使用。
+@AutoService(Processor.class)
+public class ButterKnifeAnnotation extends AbstractProcessor {
+    private Filer filer;
+    @Override
+    public synchronized void init(ProcessingEnvironment processingEnv) {
+        super.init(processingEnv);
+        System.out.println("System init ");
+        processingEnv.getMessager().printMessage(Diagnostic.Kind.NOTE, "init");
+        filer = processingEnv.getFiler();
+    }
+
+    @Override
+    public SourceVersion getSupportedSourceVersion() {
+        return SourceVersion.latestSupported();
+    }
+
+    @Override
+    public Set<String> getSupportedAnnotationTypes() {
+        Set<String> set = new HashSet<>();
+        set.add(BindView.class.getCanonicalName());
+        return set;
+    }
+
+    @Override
+    public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
+        //todo 处理逻辑，并且生成一个文件
+        Set<? extends Element> elementsAnnotatedWith = roundEnv.getElementsAnnotatedWith(BindView.class);
+        Map<String, List<VariableElement>> map = new HashMap<>();
+        //把一个class中的节点整到一个列表中。
+        for (Element element : elementsAnnotatedWith) {
+            VariableElement variableElement = (VariableElement) element;
+            String activityName = variableElement.getEnclosingElement().getSimpleName().toString();
+            //Class<? extends Element> aClass = variableElement.getEnclosingElement().getClass();
+            if (!map.containsKey(activityName)){
+                map.put(activityName,new ArrayList<VariableElement>());
+            }
+            map.get(activityName).add(variableElement);
+        }
+        if (map.size()<=0){
+            return false;
+        }
+        // 说明有注解使用。
+        Writer writer=null;
+        Iterator<String> iterator = map.keySet().iterator();
+        while (iterator.hasNext()){
+            // 获取到activity的名称
+            String activityName = iterator.next();
+            // 获取到当前class的所有标记节点
+            List<VariableElement> variableElements = map.get(activityName);
+            TypeElement enclosingElement = (TypeElement) variableElements.get(0).getEnclosingElement();
+            // 获取到当前class的包名
+            String packageName = processingEnv.getElementUtils().getPackageOf(enclosingElement).toString();
+            // 开始写文件
+            try {
+                JavaFileObject sourceFile=filer.createSourceFile(packageName+"."+activityName+"_viewBinding");
+                writer=sourceFile.openWriter();
+                writer.write("package "+packageName+";\n");
+                writer.write("import com.nuoye.butterknife.IBinder;\n");
+                writer.write("public class "+activityName+"_viewBinding implements IBinder<"+packageName+"."+activityName+">{\n");
+                writer.write("@Override\n");
+                writer.write("public void bind("+packageName+"."+activityName+" target){\n");
+                // 处理函数的内容。
+                for (VariableElement variableElement: variableElements){
+                    String variableName = variableElement.getSimpleName().toString();
+                    int id= variableElement.getAnnotation(BindView.class).value();
+                    TypeMirror typeMirror = variableElement.asType();
+                    writer.write("target."+variableName+"=("+typeMirror+")target.findViewById("+id+");\n");
+                }
+                writer.write("     }");
+                writer.write("}");
+            }catch (Exception e){
+                System.out.println(e.getMessage());
+            }finally {
+                if (writer!=null){
+                    try {
+                        writer.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+        return true;
+    }
+}
+````
+#### javapoet 写法 
+> //todo 这个调调太复杂了，放弃了。OJBK 
 ### 导包
 ````java
         implementation project(path: ':ButterKnife')
