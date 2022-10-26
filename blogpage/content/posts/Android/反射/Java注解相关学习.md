@@ -105,8 +105,126 @@ public void demo(){
 
 ````
 ### 获取标记的注解
-注解
 
+#### 获取class上标记的注解
+````java
+public class ClassAnnotationDemo {
+    public static void main(String[] args) {
+        Annotation[] annotations = User.class.getAnnotations();
+        for (Annotation annotation: annotations){
+            System.out.println(annotation);
+            //@ClassAnnotationDemo$MyClass(value=MyClass)
+            //@ClassAnnotationDemo$MyUser(value=MyClass, id=[1, 2, 3])
+            // 基于上面的那个日志内容。我们可以知道，已经获取到的了注解了，只需要强转为需要的class就可以调用对应的函数了。
+            if (annotation instanceof MyClass){
+                System.out.println(((MyClass)annotation).value());
+            }else if (annotation instanceof MyUser){
+                MyUser user= (MyUser) annotation;
+                System.out.println(user.id());
+                System.out.println(user.value());
+            }
+        }
+        // 如果可以确定，这个class上标记了某个注解，可以直接获取。
+        MyUser annotation = User.class.getAnnotation(MyUser.class);
+        System.out.println(annotation.value());
+    }
+    @MyClass
+    @MyUser
+    public static class User{
+
+    }
+    @Target(ElementType.TYPE)
+    @Retention(RetentionPolicy.RUNTIME)
+    public static @interface MyClass{
+        String value() default "MyClass";
+    }
+    @Target(ElementType.TYPE)
+    @Retention(RetentionPolicy.RUNTIME)
+    public static @interface MyUser{
+        String value() default "MyClass";
+        int [] id() default {1,2,3};
+    }
+}
+
+````
+#### 获取函数上的注解
+````java
+public class MethodAnnotationDemo {
+  @MethodMain
+  public static void main(String[] args) {
+    //  这种方式直接获取到了所有的函数。
+    Method[] methods = MethodAnnotationDemo.class.getMethods();
+    for (Method method:methods){
+      System.out.println(method);
+    }
+    // 直接同函数名和入参获取。
+    try {
+      Method main = MethodAnnotationDemo.class.getMethod("main", String[].class);
+      System.out.println(main);
+      // 获取注解
+      MethodMain annotation = main.getAnnotation(MethodMain.class);
+      System.out.println(annotation.value());
+      // 获取demo,私有函数需要这么获取。
+      Method demo = MethodAnnotationDemo.class.getDeclaredMethod("demo");
+      MethodMain methodMain = demo.getAnnotation(MethodMain.class);
+      System.out.println(methodMain.value());
+    } catch (NoSuchMethodException e) {
+      throw new RuntimeException(e);
+    }
+  }
+  @MethodMain(value = "demo")
+  private void demo(){
+
+  }
+
+  @Target(ElementType.METHOD)
+  @Retention(RetentionPolicy.RUNTIME)
+  public static @interface MethodMain{
+    String value() default "main";
+  }
+}
+
+````
+#### 获取变量上的注解
+````java
+public class FieldAnnotationDemo {
+    @MyField(name = "a")
+    public static int a;
+    @MyField(name = "b")
+    private static int b;
+    @MyField(name = "c")
+    public int c;
+    @MyField(name = "d")
+    private int d;
+    public static void main(String[] args) throws NoSuchFieldException {
+        Field[] fields = FieldAnnotationDemo.class.getFields();
+        for (Field field: fields){
+            System.out.println(field);
+        }
+        System.out.println("--getDeclaredFields---");
+        Field[] declaredFields = FieldAnnotationDemo.class.getDeclaredFields();
+        for (Field field: declaredFields){
+            System.out.println(field);
+        }
+        //public static int FieldAnnotationDemo.a
+        //public int FieldAnnotationDemo.c
+        //--getDeclaredFields---
+        //public static int FieldAnnotationDemo.a
+        //private static int FieldAnnotationDemo.b
+        //public int FieldAnnotationDemo.c
+        //private int FieldAnnotationDemo.d
+        // 通过日志我们可以看出，getDeclaredFields 可以获取到这个类中所有的变量。
+        Field field = FieldAnnotationDemo.class.getDeclaredField("a");
+        MyField annotation = field.getAnnotation(MyField.class);
+        System.out.println(annotation.name());
+    }
+    @Retention(RetentionPolicy.RUNTIME)
+    @Target(ElementType.FIELD)
+    public static @interface MyField{
+        String name() default "name";
+    }
+}
+````
 
 
 
