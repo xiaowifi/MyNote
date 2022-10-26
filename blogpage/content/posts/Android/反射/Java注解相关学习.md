@@ -70,6 +70,33 @@
 
     }
 ````
+#### 注解的泛型
+````java
+//用于标记到注解上
+@Target(ElementType.ANNOTATION_TYPE)
+// 运行时候生效
+@Retention(RetentionPolicy.RUNTIME)
+public @interface EventBase {
+    String listenerSetter();
+}
+
+// 使用
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+@EventBase(listenerSetter ="")
+public @interface OnClick {
+  int [] ids() default {-1};
+  String name() default "";
+}
+
+//使用注解
+@OnClick(ids = {R.id.accelerate,R.id.aligned},name = "name")
+public void demo(){
+
+}
+}
+
+````
 
 
 
