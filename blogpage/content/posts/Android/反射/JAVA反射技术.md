@@ -1,17 +1,4 @@
-+++
-date = "2020-10-01"
-title = "JAVA反射基础"
-description = "JAVA反射基础"
 
-categories = [
-    "android基础"
-]
-featured = false
-draft = true 
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
-》 顺便推一下[博客主页](http://lalalaxiaowifi.gitee.io/pictures/)
-## 前言
 > 反射是通过class 进行反射的。通过反射技术可以拿到对应的class，创建对应对象或者
 > 通过hook技术 调用某些方法。
 > 反射是java的查看、检测、修改自身的一种行为。
@@ -98,7 +85,7 @@ draft = true
 * getAnnotatedSuperclass
 * getAnnotatedInterfaces
 
-### 获取成员变量
+
 
 
 
