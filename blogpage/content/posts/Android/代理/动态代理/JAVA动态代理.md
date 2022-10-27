@@ -172,6 +172,14 @@ public class ProxyIOCDemo {
 *  proxyClassCache = new WeakCache<>(new KeyFactory(), new ProxyClassFactory()); 所以上面调用get 是调用的是ProxyClassFactory的apply()函数。而在apply()
    函数中就有ProxyGenerator.generateProxyClass() 创建一个class。然后调用Native函数 defineClass0 去把这个生成的class加载进来。
 * newProxyInstance 会拿到构造函数，然后去反射出对象。
+
+## 动态代理应用场景
+* 权限集中申请
+* 日志集中打印
+* 跨进程通信
+* 屏蔽底层实现
+* 对于无法编辑操作的类进行功能增强
+
 # 结束
 
 
