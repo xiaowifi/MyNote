@@ -25,7 +25,7 @@ implementation 'org.javassist:javassist:3.20.0-GA'
 gradle 是支持groovy和Kotlin的，而groovy 可以直接调用JAVA 代码。所以创建工程类型是JAVA，groovy或者Kotlin是没有多少区别的。
 而且buildSrc 就是一个插件，是否需要使用Module 看需求，如果项目中包含了BuildSrc插件就不需要重新创建一个module 了，但是呢？建议使用groovy module，毕竟很多特性可以直接用。
 用JAVA 或者Kotlin 就需要写很多人家帮忙写好的代码了。
-[gradle 插件创建笔记](../../../gradle/创建一个插件.md)
+[gradle 插件创建笔记](../../../gradle/plugin/创建一个插件.md)
 ## 在插件中创建一个transform
 我们需要自定义一个transform,这个transform 属于Android build api里面的内容。所以我们需要遵循他提供的规则。
 * 定义名称，这个名称是这个transform的工作空间，会在build 下的transform中创建一个这个目录。
