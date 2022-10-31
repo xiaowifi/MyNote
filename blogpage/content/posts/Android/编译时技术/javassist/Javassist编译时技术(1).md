@@ -6,6 +6,8 @@
 ## 资料
 * [javassist github](https://github.com/jboss-javassist/javassist)
 * [javassist demo](https://www.w3cschool.cn/article/35230124.html)
+* [javassist 教程](https://www.javassist.org/tutorial/tutorial.html)
+* [javassist API地址](http://www.javassist.org/html/index.html)
 ````html
 implementation 'org.javassist:javassist:3.20.0-GA'
 ````
@@ -217,5 +219,9 @@ public class ModifyTransform extends Transform {
 ```groovy
  project.android.registerTransform(new ModifyTransform(project))
 ```
-
+java 代码的注册和Groovy注册不同。
+````java
+ BaseExtension ext = project.getExtensions().findByType(BaseExtension.class);
+        ext.registerTransform(new MyJavaSsistTransfrom());
+````
 
