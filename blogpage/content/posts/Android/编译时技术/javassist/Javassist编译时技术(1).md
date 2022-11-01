@@ -224,4 +224,55 @@ java 代码的注册和Groovy注册不同。
  BaseExtension ext = project.getExtensions().findByType(BaseExtension.class);
         ext.registerTransform(new MyJavaSsistTransfrom());
 ````
+## javassist 使用
+当我们操作某个类的函数的时候，需要将类加载出来，修改成功后再写成文件。我们是修改的Android 相关的代码，那么就需要把sdk导入到类加载的容器中。
+### 加载Android 源码
+````java
+  BaseExtension ext = project.getExtensions().findByType(BaseExtension.class);
+        List<File> bootClasspath = ext.getBootClasspath();
+        System.out.println("开始导入Android源码");
+        try {
+            for (File file: bootClasspath){
+                System.out.println(file.getAbsolutePath());
+                classPool.appendClassPath(file.getAbsolutePath());
+            }
+        }catch (Exception e){
 
+        }
+````
+### 方法内添加代码块
+````java
+ ctClass.defrost();
+        System.out.println(ctClass.getClass().getName());
+        if (className.contains("MainActivity")){
+            CtClass baseActivity = classPool.get("com.nuoye.chipsjavassistdemo.MyBaseActivity");
+            //重新设置其父类。
+            ctClass.setSuperclass(baseActivity);
+            // 表示是main activity
+            CtMethod[] methods = ctClass.getDeclaredMethods();
+            for (CtMethod method: methods){
+                System.out.println("method  "+ method.getName());
+                if (method.getName().equals("Debug")){
+                    method.setBody("int a = 5;");
+                    method.insertBefore("System.out.println(1111111111);");
+                    method.insertAfter("System.out.println(222222222222222);");
+                    method.insertAfter("showLog();");
+                    method.insertAfter("showLog();");
+                }else if (method.getName().equals("onCreate")){
+                    method.insertAfter("showLog();");
+                    method.insertAfter("android.widget.TextView textView=new android.widget.TextView(this);");
+                }
+
+            }
+        }
+        //Debug
+        ctClass.writeFile(path);
+        ctClass.detach();
+````
+### 更改其父类 
+````java
+  CtClass baseActivity = classPool.get("com.nuoye.chipsjavassistdemo.MyBaseActivity");
+            //重新设置其父类。
+            ctClass.setSuperclass(baseActivity);
+````
+同时也可以添加接口。
