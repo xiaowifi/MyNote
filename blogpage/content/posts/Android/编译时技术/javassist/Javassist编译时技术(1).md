@@ -226,6 +226,16 @@ java 代码的注册和Groovy注册不同。
 ````
 ## javassist 使用
 当我们操作某个类的函数的时候，需要将类加载出来，修改成功后再写成文件。我们是修改的Android 相关的代码，那么就需要把sdk导入到类加载的容器中。
+javassist能够对于一个class 完成我们编写代码时候的所有操作，和javapoet差不多。
+与javapoet不同的是javapoet 是创建一个java 文件，但是javassist 则是创建class 与编辑class。包含但不限于以下功能。
+* 文件重命名
+* 创建class 
+* 修改class 的父类
+* 添加接口
+* 添加函数
+* 修改函数
+* 添加成员变量
+* 添加构造函数等等。
 ### 加载Android 源码
 ````java
   BaseExtension ext = project.getExtensions().findByType(BaseExtension.class);
