@@ -224,6 +224,10 @@ java 代码的注册和Groovy注册不同。
  BaseExtension ext = project.getExtensions().findByType(BaseExtension.class);
         ext.registerTransform(new MyJavaSsistTransfrom());
 ````
+//如果确定是Android app 可以使用：AppExtension
+````java
+   AppExtension appExtension = project.getExtensions().getByType(AppExtension.class);
+````
 ## javassist 使用
 当我们操作某个类的函数的时候，需要将类加载出来，修改成功后再写成文件。我们是修改的Android 相关的代码，那么就需要把sdk导入到类加载的容器中。
 javassist能够对于一个class 完成我们编写代码时候的所有操作，和javapoet差不多。
