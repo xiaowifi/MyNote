@@ -10,3 +10,4 @@ BlockingQueue 阻塞队列。
 * LinkedTransferQueue 无界阻塞链表 
 * PriorityBlockingQueue 无界阻塞排序队列
 * SynchronousQueue 长度为1的阻塞队列。
+* TransferQueue 接口 
