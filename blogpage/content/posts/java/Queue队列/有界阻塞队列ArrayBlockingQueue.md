@@ -4,3 +4,61 @@ ArrayBlockingQueue 有界队列，阻塞式,初始化时必须指定队列大小
 
 ## 资料
 # 正文 ArrayBlockingQueue
+````java
+public class ArrayBlockingQueueDemo {
+    public static void main(String[] args) {
+        final BlockingQueue queue = new ArrayBlockingQueue(3);
+        for(int i=0;i<3;i++){
+            new Thread(){
+                public void run(){
+                    while(true){
+                        try {
+                            Thread.sleep((long) (Math.random()*100));
+                            System.out.println(Thread.currentThread().getName() + "准备放数据!");
+                            queue.put(1);
+                            System.out.println(Thread.currentThread().getName() + "已经放了数据，" +
+                                    "队列目前有" + queue.size() + "个数据");
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                }
+
+            }.start();
+        }
+
+        new Thread(){
+            public void run(){
+                while(true){
+                    try {
+                        //将此处的睡眠时间分别改为100和1000，观察运行结果
+                        Thread.sleep(1000);
+                        System.out.println(Thread.currentThread().getName() + "准备取数据!");
+                        queue.take();
+                        System.out.println(Thread.currentThread().getName() + "已经取走数据，" +
+                                "队列目前有" + queue.size() + "个数据");
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+        }.start();
+    }
+
+}
+````
+输出：可以看到，当满了的时候，只有获取了才能添加。
+````java
+Thread-1准备放数据!
+Thread-1已经放了数据，队列目前有1个数据
+Thread-2准备放数据!
+Thread-2已经放了数据，队列目前有2个数据
+Thread-2准备放数据!
+Thread-2已经放了数据，队列目前有3个数据
+Thread-1准备放数据!
+Thread-0准备放数据!
+Thread-2准备放数据!
+Thread-3准备取数据!
+````
