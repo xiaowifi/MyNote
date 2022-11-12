@@ -9,6 +9,7 @@
 * [groovy_dsl参考](https://docs.gradle.org/current/dsl/index.html)
 * [从 Groovy 迁移到 Kotlin](https://docs.gradle.org/current/userguide/migrating_from_groovy_to_kotlin_dsl.html)
 # 正文 
+
 大致修改步骤:
 * 创建同名不同后缀的gradle 文件 
 * 删除掉Groovy版本的文件或者拷贝到其他位置。
