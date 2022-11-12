@@ -1,24 +1,9 @@
-+++
-title = "关于主页"
-slug = "about"
-+++
 
 ### 用途
 当前主页，主要用于本人学习总结笔记。不作为商业用途。
 
-当前主页基于Hugo，由Gitee page 提供服务支持。
-
-采用主题：Clarity
-[博客主页](http://lalalaxiaowifi.gitee.io/pictures/) 
-
-[主页源码](https://gitee.com/lalalaxiaowifi/pictures/tree/master/blogpage)
-
-[主页运行位置](https://gitee.com/lalalaxiaowifi/pictures/tree/master/blogpage/public)
-
-感谢Gitee Pages提供静态网页服务。
-
 ### 发布
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20200921111932.png) 个人觉得还行的技术类型的笔记会推到掘金等平台。其他笔记就算了。
+![20200921111932](about.assets/20200921111932.png)个人觉得还行的技术类型的笔记会推到掘金等平台。其他笔记就算了。
 
 ### 关于作者
 
