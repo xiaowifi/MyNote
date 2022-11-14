@@ -179,6 +179,18 @@ gradlew app:dependencies --configuration releaseRuntimeClasspath
 
 我们的common 作为子module 无法被加载到APP中，即使他存在，因为groupid 不一致的原因，无法被想象那样被识别。目前最简单的就是将common也发布成maven。那么是否还有其他的思路呢？
 
+我们分析一下maven 的获取方式，1是groupId，artifactId，version 分别对应：
+
+![image-20221114152144691](assets/image-20221114152144691.png)
+
+所以说，只要我们groupid 正确，因为我们是直接应用源码，所以没有version 所以我们在common 中添加一个：
+
+```
+group = "Host"
+```
+
+就可以指向我们的源码了，如果添加version 的话，就会再找一层目录，就会找不到，这种思路只能适合与这个maven 只在这个工程使用。换一个工程maven就得重新发了。
+
 # 结束
 
-最终，我们其实还没有完整的解决这个问题，因为common 作为子模块，如果更改的多了，发布maven的话，需要发版的频率一定比业务module频繁。
+最终，我们其实没有完整的解决这个问题，因为common 作为子模块，如果更改的多了，发布maven的话，需要发版的频率一定比业务module频繁。通常而言，只能使用快照。但是使用快照对于maven 文件服务器的压力是较大的。所以通过对于common 添加group 直接解决一个问题，就是这个maven 只能添加到group 定义的这个工程。
