@@ -1,4 +1,5 @@
 ### 资料 
+* [google android adb](https://developer.android.com/studio/command-line/adb)
 ## 正文
 
 ADB 工具是Android SDK目录的platform-tools 目录下的一个命令行工具。建议配置环境变量。
