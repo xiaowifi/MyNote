@@ -1,11 +1,4 @@
-+++
-date = "2021-6-11"
-title = "android adb常用功能汇总"
-description = "android adb常用功能汇总"
-tags = [ "adb"]
-
-featured = true
-+++
+### 资料 
 ## 正文
 
 ADB 工具是Android SDK目录的platform-tools 目录下的一个命令行工具。建议配置环境变量。
