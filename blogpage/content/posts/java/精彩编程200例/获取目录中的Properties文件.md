@@ -14,3 +14,8 @@ Properties pps = new Properties();
             e.printStackTrace();
         }
 ````
+如果可以获取到Android 插件对象的话，这个也可以。
+````aidl
+ /*  AppExtension appExtension = project.getExtensions().getByType(AppExtension.class);
+        System.out.println(appExtension.getSdkDirectory().getAbsolutePath());*/
+````
