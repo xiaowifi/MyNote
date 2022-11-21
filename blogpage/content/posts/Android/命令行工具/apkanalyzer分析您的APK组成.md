@@ -55,4 +55,12 @@ subject 是要查询的内容，可以是整改apk 也可以是APK 的一部分�
 | `resources names --config config --type type [--package package] apk-file` | 输出属于某个配置和类型的资源名称列表。`type` 选项是资源类型，如 `string`。 如果要指定资源表软件包名称，请添加 `--package` 选项，否则系统将使用第一个定义的软件包。 |
 | `resources xml --file path apk-file`                         | 以简单易懂的形式输出 XML 二进制文件。 添加 `file` 选项可指定文件的路径。 |
 
+## JAVA 执行
+> 因为这个调调bat脚本，所以需要全路径去执行。
+
+````aidl
+        File root=new File("F:\\SDK\\Android\\Sdk\\cmdline-tools\\8.0\\bin");
+        Process process = Runtime.getRuntime().exec("cmd /c apkanalyzer.bat manifest version-name "+apkPath,null,root);
+````
+而且需要设置 ：cmd /c 
 # 总结 
