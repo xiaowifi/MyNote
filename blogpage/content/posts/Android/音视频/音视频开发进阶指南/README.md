@@ -892,7 +892,7 @@ Android 播放器增加后期处理过程流程图：
 #### 拉流数据统计
 
 ## Android平台工具
-* [android adb 常用汇总](../../android adb常用汇总.md)
+* [android adb 常用汇总](../../命令行工具/android%20adb常用汇总.md)
 * [内存分析工具Memory Analyzer Tool(MAT).md](../../性能优化/内存/内存分析工具Memory Analyzer Tool(MAT).md)
 * [Native层的内存泄露检测.md](../../性能优化/内存/Native层的内存泄露检测.md)
 * [android NDK工具常用汇总.md](../../android NDK工具常用汇总.md)
