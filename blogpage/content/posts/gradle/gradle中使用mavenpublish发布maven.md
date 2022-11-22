@@ -1,6 +1,7 @@
 # 前言
 ## 资料
 * [maven发布插件](https://docs.gradle.org/current/userguide/publishing_maven.html#header)
+* https://developer.android.com/studio/build/maven-publish-plugin
 # 正文
 至于为啥要将maven改变为maven-publish，是因为maven的传递方式需要编译这个项目，rootProject 中包含的所有project。
 但是 maven-publish 只会编译当前的project.所以性能较好。
