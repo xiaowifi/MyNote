@@ -151,3 +151,13 @@ adb shell top -t -m 5
 ````
 
 top命令是查看进程占用cpu的情况的指令。top 指令加上 -t表示查看线程占用CPU的情况。-m 表示仅查看CPU占用最高的5个线程。
+
+#### keytool
+需要先切换到keytool 目录下。jdk 目录
+````aidl
+C:\Program Files\Java\jdk1.8.0_221\bin
+````
+然后执行命令 
+````aidl
+keytool -exportcert -list -v -keystore C:\android_projects\test.jks
+````
