@@ -260,3 +260,58 @@ class AndroidJunkCodeExt {
 
 通过这篇资料就可以很好的理解了上面的如何获取到入参的问题了。
 
+如果理解了这个调调后，我们就可以理解：
+
+````
+AndroidJunkCodeExt(NamedDomainObjectContainer<JunkCodeConfig> variantConfig) {
+        this.variantConfig = variantConfig
+    }
+````
+
+和创建代码之间的关系了：
+
+````
+def generateJunkCodeExt = project.extensions.create("androidJunkCode", AndroidJunkCodeExt, project.container(JunkCodeConfig))
+````
+
+project.extensions.create() 这个函数，第三个及其以后的入参其实是构造函数的入参。至于为啥这么写和Groovy语言特性和动态性有关，project.container(JunkCodeConfig)这个则是生成了一个NamedDomainObjectContainer<JunkCodeConfig>。
+
+### AndroidJunkCodeTask 
+
+这个调调是整个plugin的核心，我们上面的所有内容都是为了这个task的执行做铺垫。
+
+````
+class AndroidJunkCodeTask extends DefaultTask {}
+````
+
+这个task 继承于 DefaultTask。在gradle中几乎所有的操作都是通过一个个task串联起来的。通过task任务的顺序不同，然后去执行不同业务诉求。主要还是文件生成。比如class，清单文件，资源文件等等。
+
+## 疑问回顾
+
+### androidJunkCode 配置如何生成及其参数和获取？
+
+这个还是NamedDomainObjectContainer 的使用问题，当我们明白这个类的使用及其作用后就明白了。
+
+### 为什么需要判断是否有 applicationVariants?
+
+其中一个原因是他基于变体判断是否注入垃圾代码。同时为了控制代码的严谨性。如果说 com.android.application 中存在是否有这个，好像默认都有。
+
+###  project.extensions.create() ？
+
+这个和NamedDomainObjectContainer 是一个道理，这个涉及到Groovy语言是通过反射去动态出来的。所以后面那个参数是构造函数的入参，如果构造函数和这个不一致也会报错。
+
+###  junkCodeNamespace 的意义
+
+这个变量的意义在于，apk 在打包后，并不会出现多个R文件，所以这直接指向一个R文件，这减少了module 再次编译的过程。
+
+### sourceSet.manifest.srcFile()
+
+因为他会再编译时候生成一个清单文件，就需要把这个目录下的清单文件添加到variant 里面。这个就是他技术方案的局限性。他是拿到一个没有清单文件的module ，然后把自己的清单文件搞进去。这个需要了解 variant 相关代码了。
+
+### 这个task 的插入时机？
+
+dependsOn 用于标记在什么任务后执行。variant.registerJavaGeneratingTask() 这个是注册一个生成JAVA 的task。
+
+### 总结
+
+写到现在，还是很迷糊，主要问题还是对于variant 的很多内容不了解。同时对于Android编译时流程不是太熟悉。
