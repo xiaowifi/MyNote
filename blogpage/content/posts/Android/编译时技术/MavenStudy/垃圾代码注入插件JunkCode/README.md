@@ -314,4 +314,4 @@ dependsOn 用于标记在什么任务后执行。variant.registerJavaGeneratingT
 
 ### 总结
 
-写到现在，还是很迷糊，主要问题还是对于variant 的很多内容不了解。同时对于Android编译时流程不是太熟悉。
+写到现在，还是很迷糊，主要问题还是对于variant 的很多内容不了解。同时对于Android编译时流程不是太熟悉。只是知其然不知其所以然。
