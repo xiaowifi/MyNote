@@ -18,6 +18,28 @@ uploadArchives{
     }
 }
 ````
+### 通过task 创建 
+`````aidl
+tasks.create("localUploadArchives", Upload.class) {
+    configuration = project.configurations.archives
+    group = 'upload'
+    repositories.mavenDeployer {
+        pom.version = '0.0.1.SNAPSHOT'
+        pom.artifactId = 'plugin'
+        pom.groupId = 'com.chips.code'
+        pom.name = "ChipsCodePlugin"
+        // 如果是aar 就是arr 可以不设置。
+        pom.packaging = 'jar'
+        def releasesRepoUrl = project_maven_root_path+"\\releases"
+        def snapshotsRepoUrl = project_maven_root_path+"\\snapshots"
+        def url = pom.version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+        repository(url: uri(url)) {
+            //// maven授权信息
+            authentication(userName: "userName", password: "password")
+        }
+    }
+}
+`````
 ## maven-publish
 ````java
 apply plugin: 'maven-publish'
