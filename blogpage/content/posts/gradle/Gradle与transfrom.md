@@ -96,7 +96,7 @@ public abstract class Transform {
 }
 ```
 
-复制
+
 
 ### **1.4 ContentType 内容类型**
 
@@ -130,7 +130,7 @@ public enum ExtendedContentType implements ContentType {
 }
 ```
 
-复制
+
 
 ```
 QualifiedContent.java
@@ -144,7 +144,7 @@ enum DefaultContentType implements ContentType {
 }
 ```
 
-复制
+
 
 在 TransformManager 中，预定义了一部分内容类型集合，常用的是 CONTENT_CLASS 操作 Class。
 
@@ -155,7 +155,7 @@ public static final Set<ContentType> CONTENT_JARS = ImmutableSet.of(CLASSES, RES
 public static final Set<ContentType> CONTENT_RESOURCES = ImmutableSet.of(RESOURCES);
 ```
 
-复制
+
 
 ### **1.5 ScopeType 作用域**
 
@@ -163,8 +163,8 @@ ScopeType 也是一个枚举类接口，表示输入内容的范畴。在 AGP �
 
 Transform 需要在两个位置定义输入内容范围：
 
-- **1、SetgetScopes() 消费型输入内容范畴：** 此范围的内容会被消费，因此当前 Transform 必须将修改后的内容复制到 Transform 的中间目录中，否则无法将内容传递到下一个 Transform 处理；
-- **2、SetgetReferencedScopes() 指定引用型输入内容范畴：** 默认是空集合，此范围的内容不会被消费，因此不需要复制传递到下一个 Transform，也不允许修改。
+- **1、SetgetScopes() 消费型输入内容范畴：** 此范围的内容会被消费，因此当前 Transform 必须将修改后的内容到 Transform 的中间目录中，否则无法将内容传递到下一个 Transform 处理；
+- **2、SetgetReferencedScopes() 指定引用型输入内容范畴：** 默认是空集合，此范围的内容不会被消费，因此不需要传递到下一个 Transform，也不允许修改。
 
 ```
 InternalScope.java
@@ -180,7 +180,7 @@ public enum InternalScope implements QualifiedContent.ScopeType {
 }
 ```
 
-复制
+
 
 ```
 QualifiedContent.java
@@ -199,7 +199,7 @@ enum Scope implements ScopeType {
 }
 ```
 
-复制
+
 
 在 TransformManager 中，预定义了一部分作用域集合，常用的是 SCOPE_FULL_PROJECT 所有模块。**需要注意，Library 模块注册的 Transform 只能使用 Scope.PROJECT。**
 
@@ -209,7 +209,7 @@ public static final Set<ScopeType> PROJECT_ONLY = ImmutableSet.of(Scope.PROJECT)
 public static final Set<ScopeType> SCOPE_FULL_PROJECT = ImmutableSet.of(Scope.PROJECT, Scope.SUB_PROJECTS, Scope.EXTERNAL_LIBRARIES);
 ```
 
-复制
+
 
 ### **1.6 transform 方法**
 
@@ -237,7 +237,7 @@ public interface TransformInvocation {
 }
 ```
 
-复制
+
 
 - **isIncremental()：** 当前 Transform 任务是否增量构建；
 - **getInputs()：** 获取 TransformInput 对象，它是消费型输入内容，对应于 Transform#getScopes() 定义的范围；
@@ -269,7 +269,7 @@ public interface TransformOutputProvider {
 }
 ```
 
-复制
+
 
 获取输入内容对应的输出路径：
 
@@ -287,7 +287,7 @@ for (input in transformInvocation.inputs) {
 }
 ```
 
-复制
+
 
 ### **1.7 Transform 增量模式**
 
@@ -306,13 +306,13 @@ for (input in transformInvocation.inputs) {
 com.android.build.api.transform.Status.java
 public enum Status {
 
-    // 未修改，不需要处理，也不需要复制操作
+    // 未修改，不需要处理，也不需要操作
     NOTCHANGED,
     
-    // 新增，正常处理并复制给下一个任务
+    // 新增，正常处理并给下一个任务
     ADDED,
     
-    // 已修改，正常处理并复制给下一个任务
+    // 已修改，正常处理并给下一个任务
     CHANGED,
   
     // 已删除，需同步移除 OutputProvider 指定的目标文件
@@ -320,7 +320,7 @@ public enum Status {
 }
 ```
 
-复制
+
 
 ### **1.8 注册 Transform**
 
@@ -340,7 +340,7 @@ abstract class BaseExtension {
 }
 ```
 
-复制
+
 
 注册 Transform：
 
@@ -351,7 +351,7 @@ val androidExtension = project.extensions.getByType(BaseExtension::class.java)
 androidExtension.registerTransform(ToastTransform(project)/* 支持增加依赖*/)
 ```
 
-复制
+
 
 > **提示：** 为了提高编译效率，可以判断 Variant 为 release 类型才注册 Transform，也可以通过重写 Transform#applyToVariant() 来决定是否执行 Transform。
 
@@ -428,7 +428,7 @@ protected void doCreateTasksForVariant(ComponentInfo<LibraryVariantBuilderImpl, 
 }
 ```
 
-复制
+
 
 网上很多朋友提到 “自定义 Transform 的执行时机早于系统内置 Transform”，但从 AGP 7.1.0 源码看，并不存在系统 Transform。猜测是新版本 AGP 将这部分 “系统内置 Transform” 修改为由 Task 直接实现，毕竟 从 AGP 7.0 开始 Transform 标记为过时了。
 
@@ -450,7 +450,7 @@ abstract class BaseExtension {
 }
 ```
 
-复制
+
 
 - **2、创建 TransformTask 的执行链：** TransformTask 属于 Android 构建构成的一部分，所有 Android Task 的创建入口都从 BasePlugin#createAndroidTasks() 开始。其中会为所有 Variant 变体创建相关的 Task，经过一系列调用后，会通过抽象方法 TaskManager#doCreateTaskForVariant() 分派到 ApplicationTaskManager 和 LibraryTaskManager 两个子类中，以区分 App 模块和 Library 模块。
 
@@ -474,7 +474,7 @@ BasePlugin#createAndroidTasks()
 }
 ```
 
-复制
+
 
 ### **2.3 TransformTask 的命名格式**
 
@@ -508,7 +508,7 @@ static String getTaskNamePrefix(Transform transform) {
 }
 ```
 
-复制
+
 
 ### **2.4 TransformTask 的输入输出**
 
@@ -531,7 +531,7 @@ public abstract class TransformTask extends StreamBasedTask {
 }
 ```
 
-复制
+
 
 ### **2.5 执行 transform() 方法**
 
@@ -555,7 +555,7 @@ void transform(final IncrementalTaskInputs incrementalTaskInputs) {
 }
 ```
 
-复制
+
 
 ### **2.6 Library 模块限制**
 
@@ -573,13 +573,13 @@ if (!difference.isEmpty()) {
 }
 ```
 
-复制
+
 
 ------
 
 ## **3. 自定义 Transform 模板**
 
-上一节我们探讨了 Transform 的基本工作机制，第 3 节和第 4 节我们来实现一个 Transform Demo。Transform 的核心代码在 transform() 方法中，我们要做的就是遍历输入文件，再把修改后的文件复制到目标路径中，对于 JarInputs 还有一次解压和压缩。更进一步，再考虑增量编译的情况。
+上一节我们探讨了 Transform 的基本工作机制，第 3 节和第 4 节我们来实现一个 Transform Demo。Transform 的核心代码在 transform() 方法中，我们要做的就是遍历输入文件，再把修改后的文件到目标路径中，对于 JarInputs 还有一次解压和压缩。更进一步，再考虑增量编译的情况。
 
 因此，整个 Transform 的核心过程是有固定套路，模板流程图如下：
 
@@ -745,7 +745,7 @@ abstract class BaseCustomTransform(private val debug: Boolean) : Transform() {
 }
 ```
 
-复制
+
 
 ------
 
@@ -778,11 +778,11 @@ class ToastPlugin : Plugin<Project> {
 }
 ```
 
-复制
+
 
 ### **4.2 步骤 2：拷贝 Transform 模板类**
 
-将我们实现的 BaseCustomTransform 模板类复制到工程下，再实现一个子类：
+将我们实现的 BaseCustomTransform 模板类到工程下，再实现一个子类：
 
 ```
 ToastTransform.kt
@@ -815,7 +815,7 @@ internal class ToastTransform(val project: Project) : BaseCustomTransform(true) 
 }
 ```
 
-复制
+
 
 **其中，provideFunction() 是模板代码，参数分别表示源 Class 文件的输入流和目标 Class 文件输出流。子类要做的事，就是从输入流读取 Class 信息，修改后写入到输出流。**
 
@@ -852,7 +852,7 @@ override fun provideFunction() = { ios: InputStream, zos: OutputStream ->
 }
 ```
 
-复制
+
 
 ### **4.4 步骤 4：应用插件**
 
@@ -861,7 +861,7 @@ sample 模块 build.gradle
 apply plugin: 'com.pengxr.toastplugin'
 ```
 
-复制
+
 
 ### **4.5 步骤 5：声明 @Hello 注解**
 
@@ -877,7 +877,7 @@ class HelloActivity : AppCompatActivity() {
 }
 ```
 
-复制
+
 
 ### **4.6 步骤 6：运行**
 
@@ -906,7 +906,7 @@ BUILD SUCCESSFUL in 3m 18s
 Build Analyzer results available
 ```
 
-复制
+
 
 ------
 
@@ -959,7 +959,7 @@ abstract class CountLoc implements TransformAction<TransformParameters.None> {
 }
 ```
 
-复制
+
 
 ## **6. 总结**
 
