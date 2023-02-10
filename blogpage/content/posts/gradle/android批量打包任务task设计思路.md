@@ -24,7 +24,10 @@ gradlew assembleAli assembHuawei
 * 思路2，看脚本命令中 应该如何指定输出目录
 * 思路3，更改productFlavor 里面的输出目录及其名称。
 ### 具体实现
+新增控制逻辑，然后再：
+````aidl
 
+````
 
 ## 方案2，JAVA 代码直接找到task,然后执行task 
 网络上说的基于这个对象创建：GradleConnector，这个对象去执行task.有点懵。
