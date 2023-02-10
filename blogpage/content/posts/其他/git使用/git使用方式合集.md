@@ -136,3 +136,7 @@ fatal: The remote end hung up unexpectedly
 Everything up-to-date
 解决方式哦：
 git config --global http.postBuffer 524288000
+#### git status 
+2023年2月10日  工程分支合并后，提示有没有合并到文件。使用这个命令，直接执行可以查看到文件更新状态。
+#### git diff
+查看文件更改状态 
