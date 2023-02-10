@@ -26,7 +26,7 @@ gradlew assembleAli assembHuawei
 ### 具体实现
 新增控制逻辑，然后再：
 ````aidl
-
+ variant.getPackageApplicationProvider().get().outputDirectory = new File("../out_apk")
 ````
 
 ## 方案2，JAVA 代码直接找到task,然后执行task 
