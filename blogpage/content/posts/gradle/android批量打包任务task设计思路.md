@@ -28,6 +28,22 @@ gradlew assembleAli assembHuawei
 ````aidl
  variant.getPackageApplicationProvider().get().outputDirectory = new File("../out_apk")
 ````
-
+逻辑上：
+````aidl
+cmd /c gradlew assembleAli 
+````
+然后设置gradlew 所在位置。
+````aidl
+ Process exec = runtime.exec(script +"",null,new File("E:\\StudyDemo\\MyApplication"));
+````
+这个调调，会重新配置工程。 
 ## 方案2，JAVA 代码直接找到task,然后执行task 
-网络上说的基于这个对象创建：GradleConnector，这个对象去执行task.有点懵。
+网络上说的基于这个对象创建：GradleConnector，这个对象去执行task.有点懵。但是这种方案不会重新配置项目。
+````aidl
+ ProjectConnection connection = GradleConnector.newConnector()
+                .useInstallation(project.getGradle().getGradleHomeDir())
+                .forProjectDirectory(project.getRootDir())
+                .connect();
+// 执行task                 
+connection.newBuild().forTasks("assemble").setStandardOutput(System.out).run(); 
+````
