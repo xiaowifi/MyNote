@@ -47,3 +47,13 @@ cmd /c gradlew assembleAli
 // 执行task                 
 connection.newBuild().forTasks("assemble").setStandardOutput(System.out).run(); 
 ````
+useBuildDistribution函数使用默认配置。maven库需要选择等等。
+````aidl
+ connection = GradleConnector.newConnector()
+                .useInstallation(appProject.getGradle().getGradleHomeDir())
+                .forProjectDirectory(appProject.getRootDir())
+                .useGradleVersion(appProject.getGradle().getGradleVersion())
+                .useGradleUserHomeDir(appProject.getGradle().getGradleUserHomeDir())
+                .useBuildDistribution()
+                .connect();
+````
