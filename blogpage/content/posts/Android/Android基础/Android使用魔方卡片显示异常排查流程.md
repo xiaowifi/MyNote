@@ -40,5 +40,5 @@ emmmm ? 我看你在为难我玛卡巴卡.png。那么懂屏幕适配的时机�
 
 
 屏幕适配方案：我们采用的是字节跳动开源的[AndroidAutoSize](https://github.com/JessYanCoding/AndroidAutoSize)。
-* <u>***由于修改的 density 在整个项目中是全局的，所以只要一次修改，项目中的所有地方都会受益***<u> 
-* <u>***自动运行 只需要声明一个 ContentProvider，在它的 onCreate 方法中启动框架即可，在 App 启动时，系统会在 App 的主进程中自动实例化你声明的这个 ContentProvider，并调用它的 onCreate 方法，执行时机比 Application#onCreate 还靠前，可以做一些初始化的工作***<u> 
+* 由于修改的 density 在整个项目中是全局的，所以只要一次修改，项目中的所有地方都会受益
+* 自动运行 只需要声明一个 ContentProvider，在它的 onCreate 方法中启动框架即可，在 App 启动时，系统会在 App 的主进程中自动实例化你声明的这个 ContentProvider，并调用它的 onCreate 方法，执行时机比 Application#onCreate 还靠前，可以做一些初始化的工作
