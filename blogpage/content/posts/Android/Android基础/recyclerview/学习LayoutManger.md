@@ -53,7 +53,7 @@ recyclerView.onTouchEvent------> recyclerView 的dispatchToOnItemTouchListeners 
 熟悉基于Recycleview 就知道，这个调调其实是处理拖拽效果的。
 
 ### ScrollVectorProvider
-
+* [google ScrollVectorProvider ](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView.SmoothScroller.ScrollVectorProvider?hl=en)
 
 
 ## GridLayoutManager
