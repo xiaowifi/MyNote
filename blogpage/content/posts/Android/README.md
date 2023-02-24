@@ -5,6 +5,7 @@
 * [android 应用安全学习](https://github.com/r0ysue/AndroidSecurityStudy)
 * [Android开发学习总结](https://github.com/aserbao/AserbaosAndroid)
 * [阿里P7移动架构师学习路线](https://github.com/Timdk857/Android-Architecture-knowledge-2-)
+* [android 源码解析](https://github.com/LittleFriendsGroup/AndroidSdkSourceAnalysis)
 ### GitHub Android
 * [GitHub Android ](https://github.com/android)
 ### 参考资料：gradle
