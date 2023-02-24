@@ -1,5 +1,10 @@
 > 当前文件夹主要是存储 Android 相关技术栈
 ## 常用地址汇总
+### 资料
+* [android 学习笔记](https://github.com/GcsSloop/AndroidNote)
+* [android 应用安全学习](https://github.com/r0ysue/AndroidSecurityStudy)
+* [Android开发学习总结](https://github.com/aserbao/AserbaosAndroid)
+* [阿里P7移动架构师学习路线](https://github.com/Timdk857/Android-Architecture-knowledge-2-)
 ### GitHub Android
 * [GitHub Android ](https://github.com/android)
 ### 参考资料：gradle
