@@ -58,6 +58,6 @@
 ### ac3 一种音频格式 
 ### Amf0 
 ### RandomAccessFile 
-[RandomAccessFile的使用](../../../../java/io/RandomAccessFile的使用.md)
+[RandomAccessFile的使用](../../../../javaBlog/io/RandomAccessFile的使用.md)
 ### FileChannel 
-[FileChannel的使用](../../../../java/io/FileChannel的使用.md)
+[FileChannel的使用](../../../../javaBlog/io/FileChannel的使用.md)
