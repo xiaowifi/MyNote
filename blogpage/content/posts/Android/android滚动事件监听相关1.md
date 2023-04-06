@@ -1,14 +1,4 @@
-+++
-date = "2021-5-11"
-title = "android滚动事件相关-1"
-description = "android滚动事件相关-1"
-categories = [
-"android基础"
-]
-featured = true
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
-》 顺便推一下[博客主页](http://lalalaxiaowifi.gitee.io/pictures/)
+
 ## 前言
 > 现在第3方的或者android自己的写的太好了。导致大多数情况下，滑动处理都不需要自己处理了，比如说吸顶效果。比如说两个滚动view联动。
 [参考资料](https://www.jianshu.com/p/5ffb37226e72/)

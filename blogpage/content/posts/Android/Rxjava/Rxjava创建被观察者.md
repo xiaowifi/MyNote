@@ -1,15 +1,4 @@
-+++
-date = "2020-12-31"
-title = "Rxjava创建被观察者Observable"
-description = "Rxjava创建被观察者Observable"
-tags = [ "android","Rxjava"]
-categories = [
-    "技术类"
-]
-series = ["android基础"]
-featured = true
-thumbnail = "https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/20201230114639.png"
-+++
+
 # 前言
 本Demo 主要是针对 Rxjava  Android 版本进行实践<br>
 [Rxjava Android 版本 github 地址](https://github.com/ReactiveX/RxAndroid) <br>

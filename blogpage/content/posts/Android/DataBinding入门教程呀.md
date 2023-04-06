@@ -1,14 +1,4 @@
-+++
-date = "2021-3-8"
-title = "Databinding笔记整理呀"
-description = "Databinding笔记整理呀"
-categories = [
-"android基础"
-]
-featured = true
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
->顺便推一下[博客主页](http://lalalaxiaowifi.gitee.io/pictures/) 
+
 ### 前言
 > 由于现在jetpack的流行，这个还是蛮香的，之前databinding才出来的时候，简单了解过。那个时候还没有写本地entity的习惯，数据都是依赖于服务器模型。现在好了，都是本地模型和服务器模型互转。就没有这个问题了，
 > 这个调调还是可以省很多时间精力的。但是这个就得考验设计能力了，不像之前随便搬砖什么的。

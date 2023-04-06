@@ -1,15 +1,4 @@
-+++
-date = "2021-5-27"
-title = "Android自定义Toast"
-description = "Android自定义Toast"
-tags = [ "toast"]
-categories = [
-"android基础"
-]
-featured = true
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
-》 顺便推一下[博客主页](http://lalalaxiaowifi.gitee.io/pictures/)
+
 ## 前言
 > 话说toast 这个调调 在Android上使用蛮频繁的。通常就是通过自己的自定义，如果不自定义的话，可能会提一个 toast重复提示的bug，虽然这个可以通过其他逻辑控制与限制。
 > 写笔记嘛，那就都写。

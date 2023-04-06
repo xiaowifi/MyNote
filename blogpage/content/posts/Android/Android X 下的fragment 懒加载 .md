@@ -1,14 +1,3 @@
-+++ 
-date = "2021-7-27"
-title = "androidX下的fragment懒加载"
-description = "androidX下的fragment懒加载"
-tags = [ "fragment"]
-categories = [
-"android基础"
-]
-featured = true 
-draft = false
-+++
 
 ## 前言
 

@@ -1,14 +1,4 @@
-+++
-date = "2021-11-29"
-title = "Android下Scroller的学习（1）"
-description = "Android下Scroller的学习（1）"
-tags = [ "Scroller"]
-categories = [
-"android基础"
-]
-featured = true
-draft = false
-+++
+
 ## 前言
 > 话说，最近在封装adapter。发现了smart刷新中也包含了空，loading，和尾部。我人没了。感觉造了一个假轮子。
 > 于是，痛定思痛，adapter 添加一个刷新头不就好了吗？我真是一个小机灵鬼。

@@ -14,7 +14,7 @@
 
   
 
-顺便推一下[博客目录](https://gitee.com/lalalaxiaowifi/pictures) 
+
 
 
 

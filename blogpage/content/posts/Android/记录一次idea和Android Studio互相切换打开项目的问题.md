@@ -1,16 +1,4 @@
-+++
-date = "2020-10-01"
-title = "记录一次idea和Android Studio互相切换打开项目的问题"
-description = "记录一次idea和Android Studio互相切换打开项目的问题"
-categories = [
-"android基础"
-]
-series = ["Gradle"]
-featured = true
-draft = false 
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
-》 顺便推一下[博客主页](http://lalalaxiaowifi.gitee.io/pictures/)
+
 ## 前言
 * [参考资料：gradle](https://gradle.org/)
 * [参考资料：android build gradle](https://developer.android.com/studio/releases/gradle-plugin?hl=zh-cn)

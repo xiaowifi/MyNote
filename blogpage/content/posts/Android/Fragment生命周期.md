@@ -1,16 +1,4 @@
-+++
-date = "2020-12-28"
-title = "fragment生命周期导致数据初始化问题"
-description = "fragment生命周期导致数据初始化问题"
-tags = [ "fragment"]
-categories = [
-    "android基础"
-]
-series = ["fragment"]
-featured = true
 
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
 # 前言
 话说，activity 和fragment 都是有生命周期的，而且加载也并不是new完对象就加载出来了的，new 一个activity并不多见，但是基于activity new 一个fragment还是很常见的，但是很少有需要在activity中调用fragment方法的时候，但是存在可能性。
 因为fragment加载的特性，所以像loading层保证唯一，这样子的就不能直接判断fragmentmanger 中是否包含了，需要一个其他值去判断。而且传参方面，也是这个样子。

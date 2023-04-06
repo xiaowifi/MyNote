@@ -1,16 +1,4 @@
-+++
-date = "2021-08-22"
-title = "Android通知栏"
-description = "Android通知栏"
-tags = [ "通知栏"]
-categories = [
-    "Android基础"
-]
-featured = true
-draft = false 
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
-》 顺便推一下[博客主页](http://lalalaxiaowifi.gitee.io/pictures/)
+
 ## 前言
 * [参考资料：google 通知栏Demo](https://github.com/google-developer-training/android-fundamentals-apps-v2/blob/master/NotifyMe/app/src/main/java/com/android/example/notifyme/MainActivity.java)
 ##正文

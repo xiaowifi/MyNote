@@ -1,15 +1,4 @@
-+++
-date = "2021-08-08"
-title = "Android抄一手冷启动优化呢"
-description = "Android抄一手冷启动优化呢"
-categories = [
-"android基础"
-]
-featured = true
 
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
-》 顺便推一下[博客主页](http://lalalaxiaowifi.gitee.io/pictures/)
 ## 前言
 > Android 启动优化 还是蛮重要的呀，常见的耗时操作一般在于onCreat里面，或者设置界面的layout的时候，或者就是一些初始化SDK,一些IO操作。
 > 现在应用市场开始检测 给予权限前是否有对应的初始化了，这个也促使了一部分启动优化的加速吧。

@@ -1,16 +1,4 @@
-+++
-date = "2021-4-15"
-title = "重学Viewpager"
-description = "重学Viewpager"
-tags = [ "viewpager"]
-categories = [
-"android基础"
-]
-series = ["viewpager"]
-featured = true
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
-》 顺便推一下[博客主页](http://lalalaxiaowifi.gitee.io/pictures/)
+
 ## 前言
 > viewpager 通常用于加载Fragment或者banner图，因为其良好的交互效果，被设计大佬广泛使用。默认情景下，viewpager 会加载缓存左右的view。滑出去之后就会删除对应的item。
 > 这么就导致了fragment中layout的重复创建和重复赋值，不停的网络请求，所以才有了懒加载等等相关逻辑，但是viewpager某种意义上就是懒加载逻辑呀。

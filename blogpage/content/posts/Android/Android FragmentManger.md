@@ -1,24 +1,9 @@
-+++
-date = "2020-10-20"
-title = "摸鱼Android Fragmentmanger"
-description = "Android Fragmentmanger"
-tags = [ "fragment","fragmentManger"]
-categories = [
-    "android基础"
-]
-series = ["fragment"]
-featured = true
-
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
 
 ## 前言
 
 话说，搬砖多年，我们的好朋友fragment已经需要适配到AndroidX了，毕竟我之前老是喜欢用V4包下的fragment。但是这个笔记却不是关于更新到Android X的,毕竟如果要整Android X，要改的地方应该有点多，还不知道 Android X和support 包可以共存吗？感觉没法共存，毕竟从activity 到view好像都变了，毕竟第3方包如果没有适配Android X就没法改。自己整是不可能自己整的，毕竟老板没有要求，那我们就永远不适配AndroidX的代码。感觉有点和Android 最新时代已经脱轨了。
 
 好了，回归正文，我们主要是整fragmentmanager。
-
-顺便推一下[博客主页](http://lalalaxiaowifi.gitee.io/pictures/) 
 
 ## 正文
 

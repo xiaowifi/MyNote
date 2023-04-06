@@ -1,13 +1,4 @@
-+++
-date = "2021-8-19"
-title = "基于某些逻辑实现loading单例化呢"
-description = "基于某些逻辑实现loading单例化呢"
-categories = [
-"android基础"
-]
-featured = true
-draft = true 
-+++
+
 ## 前言
 > 网络加载遮罩层的使用还是蛮常见的，比如防止各种重复点击，比如防止数据没有加载下来用户就进行操作了。
 > 但是无论是dialog还是fragment.或者的PopupWindow 都是基于context，所以在一定程度上限制了loading层的单例化。
