@@ -1,6 +1,4 @@
 
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
-> 顺便推一下[博客主页](http://lalalaxiaowifi.gitee.io/pictures/) 
 ## 正文
 > 2021年2月22日。突然发现发现项目根目录下有一个BuildSrc文件夹，而且没有在setting.gradle中使用。抱着不懂就百度的思想，就开整。
 > 在百度之前，还是简单的看了下里面的内容，好像是gradle 中的配置。之前一般都写在一个base 中，然后导入base ,或者写到一个特定文件中便于统一管理。

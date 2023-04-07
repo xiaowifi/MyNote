@@ -6,7 +6,6 @@ featured = false
 draft = true 
 
 +++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
 > [博客主页](http://lalalaxiaowifi.gitee.io/pictures/) <br>
 > [Google提供Android测试教程文档](https://developer.android.google.cn/training/testing/fundamentals) <br>
 > Android使用测试还是蛮重要的，毕竟减少run的时间，虽然run的时候可以摸鱼。嘻嘻。

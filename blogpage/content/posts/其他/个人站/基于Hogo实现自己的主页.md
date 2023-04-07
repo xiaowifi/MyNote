@@ -1,15 +1,3 @@
-+++
-date = "2020-10-01"
-title = "Hugo+Gitee pages 搭建个人主页"
-description = "Hugo+Gitee pages 搭建个人主页"
-tags = [ "Hugo","gitee","gitee page","个人主页"]
-categories = [
-    "技术类"
-]
-series = ["个人主页","其他"]
-featured = true
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
 
 ## 前言
 在对比了Jekyll，hexo和hugo 之后，我决定使用Hugo搭建属于自己的主页。自己写静态网页这个调调就基本上放弃了。因为打算认真的写笔记什么的了。

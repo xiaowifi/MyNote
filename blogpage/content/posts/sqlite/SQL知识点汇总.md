@@ -1,15 +1,4 @@
-+++
-date = "2020-12-28"
-title = "SQL知识点汇总"
-description = "SQL知识点汇总"
-tags = [ "sql"]
-categories = [
-    "技术类"
-]
-series = ["android基础"]
-featured = true
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
+
 # 前言
 > 最近写Demo的时候，经常发现自己对于sql好多都忘记了。
 

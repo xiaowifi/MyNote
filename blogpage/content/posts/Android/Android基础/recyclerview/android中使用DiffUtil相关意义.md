@@ -8,7 +8,6 @@ categories = [
 featured = false
 draft = true 
 +++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
 》 顺便推一下[博客主页](http://lalalaxiaowifi.gitee.io/pictures/)
 ## 前言
 > 最近在进行项目的技术性优化改造。比如post请求添加缓存，刷新优化等等，刷新机制不再使用无脑的刷新整个item了，需要做到局部刷新，而缓存机制的添加，使得本身就体现不怎么良好的刷新情景雪上

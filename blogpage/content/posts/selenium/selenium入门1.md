@@ -1,16 +1,3 @@
-+++
-date = "2020-10-01"
-title = "selenium入门1"
-description = "selenium入门1"
-tags = [ "selenium"]
-categories = [
-    "自动化测试"
-]
-series = ["selenium"]
-featured = false
-draft = true 
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
 
 ## 前言
 

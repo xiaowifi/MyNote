@@ -1,15 +1,3 @@
-+++
-date = "2020-10-01"
-title = "Hugo+Gitee pages 搭建个人主页进阶"
-description = "Hugo+Gitee pages 搭建个人主页进阶"
-tags = [ "Hugo","gitee","gitee page","个人主页"]
-categories = [
-    "技术类"
-]
-series = ["个人主页","其他"]
-featured = true
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
 
 ## 前言
 

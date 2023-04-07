@@ -1,14 +1,4 @@
-+++
-date = "2021-2-20"
-title = "git使用方式合集"
-description = "git使用方式合集"
 
-tags = [ "git"]
-featured = true
-
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
-> 顺便推一下[博客主页](http://lalalaxiaowifi.gitee.io/pictures/)
 ## git 
 ### 基础配置
 下载git软件:

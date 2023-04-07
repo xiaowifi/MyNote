@@ -1,14 +1,3 @@
-+++
-date = "2020-12-22"
-title = "Android sqlite多余字段插入导致插入失败"
-tags = ["sqlite"]
-categories = [
-    "技术类"
-]
-series = ["android基础"]
-featured = true
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
 
 ## 前言
 顺着之前的sqlite写的统一插入语句。然后现在是需要多插入一个信息到一个表，由于来源挺多的，所以直接写到bean 中

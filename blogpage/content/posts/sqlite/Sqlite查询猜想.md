@@ -1,14 +1,4 @@
-+++
-date = "2020-12-23"
-title = "androidSqlite查询思路整理"
-tags = ["sqlite"]
-categories = [
-    "技术类"
-]
-series = ["android基础"]
-featured = true
-+++
-![](https://gitee.com/lalalaxiaowifi/pictures/raw/master/image/%E6%97%A5%E5%B8%B8%E6%90%AC%E7%A0%96%E5%A4%B4.png)
+
 ## 前言
 今天有一个大佬的公众号推了一篇，sql查询慢的原因。
 [为什么大家都说SELECT * 效率低](https://mp.weixin.qq.com/s/IK9lGoxwS4NiKIZg1FLInQ)
