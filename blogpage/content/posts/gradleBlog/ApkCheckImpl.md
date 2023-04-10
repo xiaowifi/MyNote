@@ -1,3 +1,4 @@
+````aidl
 package com.chips.cpsmerchant.plugin;
 
 import java.io.BufferedReader;
@@ -118,3 +119,5 @@ public class ApkCheckImpl {
         return success;
     }
 }
+
+````
