@@ -115,12 +115,12 @@ public class ProxyIOCDemo {
     public static class MySayHello implements SayHello {
         @Override
         public void say() {
-            System.out.println("小哥哥快来玩呀");
+            System.out.println("1111");
         }
 
         @Override
         public void hello() {
-            System.out.println("大爷快来玩啊");
+            System.out.println("22222");
         }
     }
 
@@ -163,7 +163,7 @@ public class ProxyIOCDemo {
 * 调用函数的时候，最终会调用到InvocationHandler的invoke 中。
 * 动态代理主要作用就是在函数的执行前后插入自己的逻辑。
 ## 动态代理的原理 
-结合上面的那个信息我们知道，动态创建一个class是调用了ProxyGenerator.generateProxyClass。而且动态代理就一句话。所以我们直接从newProxyInstance函数入手。
+结合上面的那个信息我们知道，动态创建一个class是调用了ProxyGenerator.generateProxyClass。而且动态代理就一句话。所以我们直接从newProxyInstance函数入手。所以static标记的函数他是属于class就无法被动态代理操作。
 *  Class<?> cl = getProxyClass0(loader, intfs); 我们可以看到他调用了这句话，查找或生成指定的代理类。
 * getProxyClass0 中有几行注释:
     >如果由给定加载器实现定义的代理类
@@ -172,7 +172,7 @@ public class ProxyIOCDemo {
 *  proxyClassCache = new WeakCache<>(new KeyFactory(), new ProxyClassFactory()); 所以上面调用get 是调用的是ProxyClassFactory的apply()函数。而在apply()
    函数中就有ProxyGenerator.generateProxyClass() 创建一个class。然后调用Native函数 defineClass0 去把这个生成的class加载进来。
 * newProxyInstance 会拿到构造函数，然后去反射出对象。
-
+* 动态代理的对象需要实现一个接口。如果没有接口，就代理不成功，
 ## 动态代理应用场景
 * 权限集中申请
 * 日志集中打印
@@ -180,6 +180,25 @@ public class ProxyIOCDemo {
 * 屏蔽底层实现
 * 对于无法编辑操作的类进行功能增强
 
-# 结束
+## 动态代理与泛型
 
+在Android，很多源码与框架源码都是基于泛型去实现的。
+
+## 使用第3方框架实现动态代理
+
+通过JAVA基础的动态代理模式和机制我们知道。他基于同样的实现接口，然后传入实际对象去生成一个类，然后在前后实现自己的逻辑。这一切都是基于一个逻辑，那就是面相接口编程，但是有些时候，需要反逻辑，那就是不基于接口编程，那么是否就不能实现动态代理了呢？
+
+### 使用CGLIB实现动态代理
+
+[github:cglib](https://github.com/cglib/cglib)
+
+### 使用byte-buddy实现动态代理
+
+[github:byte-buddy](https://github.com/raphw/byte-buddy)  这是 cglib 的升级版本
+
+### 使用jOOR 实现动态代理
+
+https://github.com/jOOQ/jOOR
+
+# 结束
 
